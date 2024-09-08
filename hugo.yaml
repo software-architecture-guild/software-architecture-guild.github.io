@@ -8,12 +8,38 @@ module:
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
       disable: false
 markup:
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      attribute:
+        block: true
 menu:
   primary:
-    - name: Docs
+    - name: Guide
       url: /docs/
       identifier: docs
       weight: 10
+
+
+
+params:
+  footer:
+    copyright: '© :YEAR: Software Architecture Giuld. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
+    version: true # include git commit info in footer
+
+  social:
+    github: 'software-architecture-guild'
+
+  docs:
+    title: 'Software Architecture Guild'
+    pathName: docs
+
+    sidebarIcons: true
+    titleIcon: true
+    descriptions: true
+
+    intLinkTooltip: true
