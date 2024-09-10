@@ -1,6 +1,7 @@
 baseURL: 'https://software-architecture-guild.github.io/'
 languageCode: en-us
 title: 'Software Architecture Guild'
+theme: 'lotusdocs'
 module:
   imports:
 #    - path: github.com/colinwilson/lotusdocs
