@@ -3,8 +3,8 @@ languageCode: en-us
 title: 'Software Architecture Guild'
 module:
   imports:
-    - path: github.com/colinwilson/lotusdocs
-      disable: false
+#    - path: github.com/colinwilson/lotusdocs
+#      disable: false
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
       disable: false
 markup:
