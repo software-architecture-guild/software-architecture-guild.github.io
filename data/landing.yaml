@@ -32,7 +32,7 @@ hero:
     btnText: "Get Started"
     url: "docs/introduction/purpose"
   cta2Button:
-    icon: construction
+    icon: group
     btnText: "About us"
     url: "docs/introduction/about_us"
 
