@@ -20,19 +20,19 @@ In summary, software architecture is about **strategic decisions** that balance 
 
 There are two primary principles you need to learn:
 
-* **Everything in Software Architecture is a Trade-off** : Every architectural decision involves balancing costs and benefits, such as performance vs. scalability or flexibility vs. simplicity.
-* **Why is More Important Than How** : Understanding the reasons behind architectural decisions is critical for long-term success. The “how” (implementation details) may change over time, but the “why” must remain aligned with system and business objectives.
+* **Everything in Software Architecture is a Trade-off**: Every architectural decision involves balancing costs and benefits, such as performance vs. scalability or flexibility vs. simplicity.
+* **Why is More Important Than How**: Understanding the reasons behind architectural decisions is critical for long-term success. The “how” (implementation details) may change over time, but the “why” must remain aligned with system and business objectives.
 
 ### Architecture Characteristics
 
-Architecture characteristics, known as **non-functional requirements** or **quality attributes** , define a system's performance under various conditions. These characteristics are often more critical than functional requirements, influencing long-term system viability, performance, and maintainability.
+Architecture characteristics, known as **non-functional requirements** or **quality attributes**, define a system's performance under various conditions. These characteristics are often more critical than functional requirements, influencing long-term system viability, performance, and maintainability.
 
 Common architecture characteristics include:
 
-* **Performance** : The system’s ability to promptly respond to user inputs or process data.
-* **Scalability** : How well the system handles increasing loads by scaling up (improving hardware) or scaling out (adding more servers or nodes).
-* **Security** : The system’s ability to protect sensitive information and maintain integrity, confidentiality, and availability.
-* **Availability** : Ensuring the system remains operational and accessible with minimal downtime.
+* **Performance**: The system’s ability to promptly respond to user inputs or process data.
+* **Scalability**: How well the system handles increasing loads by scaling up (improving hardware) or scaling out (adding more servers or nodes).
+* **Security**: The system’s ability to protect sensitive information and maintain integrity, confidentiality, and availability.
+* **Availability**: Ensuring the system remains operational and accessible with minimal downtime.
 
 These characteristics must be identified and prioritized early in the design process, as they significantly influence architectural decisions. For example, designing for high availability may require redundancy and failover mechanisms, while optimizing for performance might necessitate caching or asynchronous processing.
 
@@ -44,9 +44,9 @@ An architect’s role is to balance these characteristics against each other and
 
 Vital elements of architectural thinking include:
 
-* **Managing complexity** : Simplifying the system's design where possible while ensuring it can handle future requirements.
-* **Future-proofing decisions** : Architects must make decisions anticipating the system’s need to evolve, ensuring flexibility and adaptability to changing technologies and business needs.
-* **Navigating trade-offs** : Every architectural decision comes with costs and benefits, and architects must weigh these trade-offs. For example, prioritizing scalability may introduce complexity, while optimizing for simplicity might limit flexibility.
+* **Managing complexity**: Simplifying the system's design where possible while ensuring it can handle future requirements.
+* **Future-proofing decisions**: Architects must make decisions anticipating the system’s need to evolve, ensuring flexibility and adaptability to changing technologies and business needs.
+* **Navigating trade-offs**: Every architectural decision comes with costs and benefits, and architects must weigh these trade-offs. For example, prioritizing scalability may introduce complexity, while optimizing for simplicity might limit flexibility.
 
 **Communication** is another critical aspect of architectural thinking. Architects must explain and justify their decisions to technical teams and business stakeholders, ensuring everyone understands the rationale behind the choices and how they align with broader business goals.
 
@@ -72,9 +72,9 @@ Another critical concept to understand is the boundary where architecture ends a
 The benefits of modularity include:
 
 * **Easier Maintenance**: A modular structure allows changes or updates to be made to individual modules without affecting the entire system.
-* **Improved Scalability** : Modular systems allow for the independent scaling of components. For instance, only the modules requiring additional resources must be scaled rather than the entire system.
-* **Faster Development** : Teams can work on different modules simultaneously, reducing bottlenecks and improving development speed.
-* **Testability** : Modular components can be tested in isolation, making pinpointing issues and validating behavior easier.
+* **Improved Scalability**: Modular systems allow for the independent scaling of components. For instance, only the modules requiring additional resources must be scaled rather than the entire system.
+* **Faster Development**: Teams can work on different modules simultaneously, reducing bottlenecks and improving development speed.
+* **Testability**: Modular components can be tested in isolation, making pinpointing issues and validating behavior easier.
 
 In modular systems, the **separation of concerns** is a guiding principle, ensuring that each module addresses a distinct functionality or domain. This structure increases the system's flexibility, allowing it to more easily adapt to new requirements or changes.
 
@@ -103,4 +103,4 @@ Component size, or **granularity** , is an important factor in architecture. Sma
   * **Chapter 1: Introduction**\
     The definition of software architecture and the principles of architecture are explained here
   * **Part 1: Foundations**\
-    It establishes the foundational concepts of software architecture, focusing on high-level, strategic decisions that shape a system's structure. It emphasizes the importance of **modularity** and **component-based thinking** , where systems are broken down into cohesive, loosely coupled components to enhance flexibility, scalability, and maintainability. The section also highlights **architecture characteristics** (non-functional requirements) such as performance, scalability, and security, which are crucial to the system’s long-term success. The distinction between architecture and design is clarified, with architecture guiding the overall structure, while design focuses on implementation details. Ultimately, Part 1 stresses the importance of **trade-offs** in architectural decision-making, balancing technical requirements with business goals to create adaptable, future-proof systems.
+    It establishes the foundational concepts of software architecture, focusing on high-level, strategic decisions that shape a system's structure. It emphasizes the importance of **modularity** and **component-based thinking**, where systems are broken down into cohesive, loosely coupled components to enhance flexibility, scalability, and maintainability. The section also highlights **architecture characteristics** (non-functional requirements) such as performance, scalability, and security, which are crucial to the system’s long-term success. The distinction between architecture and design is clarified, with architecture guiding the overall structure, while design focuses on implementation details. Ultimately, Part 1 stresses the importance of **trade-offs** in architectural decision-making, balancing technical requirements with business goals to create adaptable, future-proof systems.
