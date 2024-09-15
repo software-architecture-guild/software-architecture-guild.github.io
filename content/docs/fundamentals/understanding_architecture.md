@@ -38,6 +38,8 @@ These characteristics must be identified and prioritized early in the design pro
 
 An architect’s role is to balance these characteristics against each other and the overall system goals, often making trade-offs between characteristics like performance and security. These decisions should be governed and measured throughout the system's lifecycle to align with business and technical objectives.
 
+---
+
 ### Architectural Thinking
 
 **Architectural thinking** is a mindset that emphasizes strategic decision-making, forward-thinking, and balancing trade-offs. Architects must look beyond immediate technical concerns and consider the long-term impact of their choices on the system’s evolution and alignment with business goals.
@@ -57,6 +59,8 @@ Trade-offs are an essential part of the architectural decision-making process. T
 For example, optimizing for **performance** might lead to higher resource usage, while focusing on **security** might slow down the system due to added encryption or authentication layers. Similarly, a system designed to handle millions of users might be more complex and more challenging to maintain than one optimized for simplicity but designed for a smaller user base.
 
 Architects must continually assess these trade-offs to ensure the system meets current business needs while remaining adaptable to future changes.
+
+---
 
 ### Architecture vs Design
 
@@ -90,6 +94,8 @@ In a component-based architecture, systems are designed to have **high cohesion 
 These principles make component-based architectures more **flexible** and **scalable**. This approach supports easier upgrades, testing, and replacement of individual components without impacting the entire system. It also allows for better separation of concerns, where each component handles a specific part of the system's functionality.
 
 Component size, or **granularity** , is an important factor in architecture. Smaller components offer greater flexibility and scalability but may increase complexity in managing inter-component communication. Larger components can be simpler to manage but may lack the agility needed for modern, distributed systems such as **microservices** architectures.
+
+---
 
 ### Recommended Reading
 
