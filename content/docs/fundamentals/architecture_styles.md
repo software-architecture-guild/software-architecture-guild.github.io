@@ -12,6 +12,8 @@ toc: true
 
 An architecture style defines the blueprint for how a system's components are organized and how they interact. It establishes a framework for addressing system requirements such as scalability, performance, maintainability, and flexibility. Choosing an architectural style is a strategic decision that impacts the system’s long-term success, as each style brings specific trade-offs and benefits tailored to different types of applications and use cases. There are varieties of architectural styles, which could be categorized into **monolithic** and **distributed** architectures. Each style has strengths, weaknesses, and use cases, offering architects different ways to structure their systems.
 
+---
+
 ### Monolithic Architectures
 
 Monolithic architecture refers to a design where all system components are tightly integrated and operate as a single, cohesive unit. In a monolithic system, all functionalities—such as the user interface, business logic, and data management—reside within the same codebase and are deployed together. Monolithic systems are simpler to develop and deploy initially but often become difficult to scale and modify as they grow in complexity.
@@ -27,6 +29,8 @@ In this style, data flows through a sequence of processing stages, where each st
 #### Microkernel Architecture
 
 This style consists of a core system (the microkernel) that provides minimal functionality, with additional features implemented as plug-ins. It is ideal for highly customizable systems, like product platforms, but can lead to challenges in managing plug-in dependencies and integration.
+
+---
 
 ### Distributed Architecture
 
@@ -51,6 +55,8 @@ In this architecture, a central orchestrator controls the interaction and coordi
 #### Microservices Architecture
 
 Microservices divide the system into small, independently deployable services, each responsible for a specific functionality. These services communicate over APIs or messaging systems and can be scaled independently. Microservices offer high flexibility and scalability but come with increased operational complexity, including challenges with distributed data management and latency.
+
+---
 
 ### Choosing the Right Architecture
 
@@ -121,6 +127,8 @@ Choosing an architecture that balances short-term development speed and long-ter
 #### Conclusion
 
 Choosing the right architecture involves balancing many factors, including system requirements, team expertise, scalability needs, operational complexity, and long-term maintainability. Each architecture style—whether **monolithic** or **distributed** - comes with its strengths and weaknesses, and the right choice depends on the project's specific context. Architects must carefully evaluate trade-offs and consider immediate project goals and long-term system evolution to make informed, strategic decisions that align with technical and business objectives.
+
+---
 
 ### Recommended Reading
 
