@@ -24,6 +24,10 @@ menu:
       url: /docs/
       identifier: docs
       weight: 10
+    - name: Community
+      url: "https://github.com/orgs/software-architecture-guild/discussions"
+      identifier: community
+      weight: 20
 
 
 
@@ -46,4 +50,4 @@ params:
     intLinkTooltip: true
 
   flexsearch:
-    enabled: false
+    enabled: true
