@@ -8,7 +8,7 @@ lastmod: "2024-09-11T08:35:02+02:00"
 draft: false
 toc: true
 ---
-### Why visualizing is important?
+## Why visualizing is important?
 
 Visualizing software architecture is essential for several reasons, each contributing to the success of the system's design, development, and ongoing maintenance. At its core, visualization transforms complex and abstract architectural concepts into concrete, understandable representations, significantly impacting the project's efficiency, communication, and overall quality.
 
@@ -20,7 +20,7 @@ Visualizing software architecture is essential for several reasons, each contrib
 
 ---
 
-### Key Elements of Architecture Visualization
+## Key Elements of Architecture Visualization
 
 Three primary elements form the foundation of any software architecture: components, connectors, and configurations. These elements represent the system’s internal structure and dictate how its various parts interact and work together to achieve its goals.
 
@@ -60,7 +60,7 @@ Architects can create multiple visual representations of the architecture to giv
 
 ---
 
-### Views and Viewpoints
+## Views and Viewpoints
 
 In software architecture, **views and viewpoints** are essential tools that allow architects to create structured representations of a system, helping to manage its complexity and address various stakeholders' concerns. Focusing on specific aspects, views, and viewpoints enables clear communication and understanding, especially when dealing with large, intricate systems.
 
@@ -94,7 +94,7 @@ This approach allows architects to create detailed, well-structured descriptions
 
 ---
 
-### Perspectives
+## Perspectives
 
 In software architecture, **perspectives** are used to ensure that critical quality attributes, such as security, performance, or scalability, are consistently considered throughout the design of a system. Unlike viewpoints, which focus on specific aspects of the architecture (such as functionality or data flow), perspectives address **cross-cutting concerns** that impact the entire system. They help architects ensure that important qualities are systematically integrated into the architecture across multiple views.
 
@@ -131,7 +131,7 @@ These perspectives form a crucial part of architectural design, ensuring that es
 
 ---
 
-### Recommended Reading
+## Recommended Reading
 
 #### Articles
 

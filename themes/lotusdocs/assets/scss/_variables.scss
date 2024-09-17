@@ -76,24 +76,6 @@ $feature-text-white:        $white;
 $text-color-white:          $body-bg;
 $bg-white-color:            $white;
 
-$heading-font-sizes: (
-    "h1": 42px,
-    "h2": 36px,
-    "h3": 30px,
-    "h4": 24px,
-    "h5": 20px,
-    "h6": 16px,
-);
-
-$display-font-sizes: (
-    "display-1": 80px,
-    "display-2": 72px,
-    "display-3": 64px,
-    "display-4": 56px,
-    "display-5": 48px,
-    "display-6": 40px,
-);
-
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -699,12 +681,12 @@ $line-height-base:            1.5;
 $line-height-sm:              1.25;
 $line-height-lg:              2;
 
-$h1-font-size:                42px;
-$h2-font-size:                36px;
-$h3-font-size:                30px;
-$h4-font-size:                24px;
-$h5-font-size:                20px;
-$h6-font-size:                16px;
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 1.6;
+$h3-font-size:                $font-size-base * 1.25;
+$h4-font-size:                $font-size-base * 1.1;
+$h5-font-size:                $font-size-base * 1.05;
+$h6-font-size:                $font-size-base;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -729,12 +711,12 @@ $headings-color:              null;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 80px,
-  2: 72px,
-  3: 64px,
-  4: 56px,
-  5: 48px,
-  6: 40px
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
 );
 
 $display-font-weight: 300;

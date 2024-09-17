@@ -8,13 +8,13 @@ lastmod: "2024-09-11T08:35:43+02:00"
 draft: false
 toc: true
 ---
-### What Are Architectural Katas?
+## What Are Architectural Katas?
 
 **Architectural Katas** is a collaborative, hands-on event designed to help software architects and developers sharpen their architecture design skills in a fun and engaging way. The term "kata" is borrowed from martial arts, referring to a series of practice movements designed to build proficiency. In this context, **Architectural Katas** refers to a structured exercise where participants design software architectures for complex, real-world scenarios.
 
 The main goal of an Architectural Kata is to simulate the challenges architects face when building systems. It encourages participants to think critically about design trade-offs, scalability, and maintainability while working within a set of constraints. It also provides an opportunity for participants to work in teams, share ideas, and get feedback from experienced mentors and peers.
 
-### Our Journey in O'Reilly Architectural Katas
+## Our Journey in O'Reilly Architectural Katas
 
 **September 2023** marked an exciting milestone for our team as we participated in the **Architectural Katas** competition. Our mission was to design the architecture for **"Road Warrior"**, an innovative online trip management dashboard. This platform aims to provide travelers with a comprehensive solution to seamlessly organize and manage their reservations. You can view the [original requirements here](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/requirements/original_requirements.md).
 
@@ -33,10 +33,10 @@ In the initial round, our submission was among the **top five** selected by the 
 
 We are thrilled to share that our hard work and dedication paid off—we **won** the competition!
 
-#### Explore Our Work
+## Explore Our Work
 
 Feel free to explore our **[Architectural Description](https://github.com/Profitero-Data-Alchemists/katas-2023))** in detail. While achieving such a high level of detail in real-world projects can be challenging, this exercise was invaluable in demonstrating the effectiveness of combining **Viewpoints and Perspectives** with the **C4 model**.
 
-#### All winners
+## All winners
 
 For more examples of software architecture descriptions, visit [The Architecture Kata Log](https://github.com/TheKataLog)

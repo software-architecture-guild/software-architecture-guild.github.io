@@ -8,7 +8,7 @@ lastmod: "2024-09-11T08:34:36+02:00"
 draft: false
 toc: true
 ---
-### What is Software Architecture?
+## What is Software Architecture?
 
 Software architecture refers to the high-level structure of a system, defining its components, their relationships, and how they interact to meet functional and non-functional requirements. Architecture goes beyond code or technical components—it involves making strategic decisions that set the direction for the entire system and align with broader business goals.
 
@@ -40,7 +40,7 @@ An architect’s role is to balance these characteristics against each other and
 
 ---
 
-### Architectural Thinking
+## Architectural Thinking
 
 **Architectural thinking** is a mindset that emphasizes strategic decision-making, forward-thinking, and balancing trade-offs. Architects must look beyond immediate technical concerns and consider the long-term impact of their choices on the system’s evolution and alignment with business goals.
 
@@ -52,7 +52,7 @@ Vital elements of architectural thinking include:
 
 **Communication** is another critical aspect of architectural thinking. Architects must explain and justify their decisions to technical teams and business stakeholders, ensuring everyone understands the rationale behind the choices and how they align with broader business goals.
 
-### Trade-offs in Architecture
+## Trade-offs in Architecture
 
 Trade-offs are an essential part of the architectural decision-making process. The book emphasizes that no single decision is perfect; each architectural choice involves balancing competing priorities like cost, time, performance, and scalability.
 
@@ -62,7 +62,7 @@ Architects must continually assess these trade-offs to ensure the system meets c
 
 ---
 
-### Architecture vs Design
+## Architecture vs Design
 
 Another critical concept to understand is the boundary where architecture ends and design begins:
 
@@ -97,7 +97,7 @@ Component size, or **granularity** , is an important factor in architecture. Sma
 
 ---
 
-### Recommended Reading
+## Recommended Reading
 
 #### Articles
 
