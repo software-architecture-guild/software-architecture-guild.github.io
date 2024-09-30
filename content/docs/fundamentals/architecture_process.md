@@ -151,7 +151,7 @@ Proactively managing **architecture risk** is essential to preventing critical i
 1. **Identify potential risks**: Use techniques such as architecture reviews, stakeholder interviews, and prototyping to uncover risks related to performance, scalability, and security.
 2. **Assess risk impact and likelihood**: Evaluate each risk based on how likely it is to occur and its potential impact on the system. Prioritize high-impact, high-likelihood risks.
 3. **Develop mitigation strategies**: Create strategies to reduce or eliminate risks. This may involve simplifying the architecture, choosing more mature technologies, or building redundancy into the system.
-4. **Continuously monitor risks** : Risk management is an ongoing process. Continuously assess risks throughout the system’s lifecycle to ensure new risks are identified and mitigated early.
+4. **Continuously monitor risks**: Risk management is an ongoing process. Continuously assess risks throughout the system’s lifecycle to ensure new risks are identified and mitigated early.
 
 By identifying and addressing risks early in the process, architects can prevent costly or critical issues from arising later in the project lifecycle.
 

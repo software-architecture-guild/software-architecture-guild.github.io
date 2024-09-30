@@ -86,7 +86,7 @@ In modular systems, the **separation of concerns** is a guiding principle, ensur
 
 **Component-based thinking** is a critical concept in software architecture. It focuses on dividing a system into independent, self-contained units of functionality known as components. Components encapsulate specific responsibilities and can be independently deployed, tested, and scaled.
 
-In a component-based architecture, systems are designed to have **high cohesion and low coupling** :
+In a component-based architecture, systems are designed to have **high cohesion and low coupling**:
 
 * **High cohesion** means that a component focuses on a single, well-defined functionality, which makes it easier to maintain, extend, and understand.
 * **Low coupling** ensures that components interact with minimal dependencies between them, enabling changes to one component without causing a ripple effect across the entire system.

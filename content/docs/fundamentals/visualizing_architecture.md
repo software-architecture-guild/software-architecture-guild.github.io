@@ -15,7 +15,7 @@ Visualizing software architecture is essential for several reasons, each contrib
 1. **Managing Complexity**: Modern software systems are incredibly complex, often composed of multiple interconnected components, services, and subsystems. Visualization breaks this complexity into manageable pieces, making comprehending how various elements work together easier. By representing the system in diagrams and models, architects can focus on specific aspects without being overwhelmed by the entirety of the system.
 2. **Improving Communication**: Software architecture involves multiple stakeholders, from developers and engineers to business executives and clients, each with their concerns. Visualizations help bridge the gap between these diverse groups, offering a common language that all parties can understand. Clear architectural diagrams facilitate better communication, ensuring everyone is on the same page regarding system design, functionality, and requirements.
 3. **Facilitating Decision-Making**: Architectural decisions often involve trade-offs between performance, security, scalability, and other quality attributes. Visualizing the architecture enables architects to map out these trade-offs and explore different scenarios. This approach allows decision-makers to evaluate the impact of particular choices and ensures that all critical aspects are considered before finalizing the design.
-4. **Ensuring Alignment with Stakeholder Needs** : Different stakeholders have varying priorities and concerns. Visualization helps ensure that the system’s architecture addresses these concerns by providing multiple views tailored to specific needs, such as security, deployment, or functionality. This targeted approach helps prevent misunderstandings and ensures that all stakeholder requirements are considered early in the design process.
+4. **Ensuring Alignment with Stakeholder Needs**: Different stakeholders have varying priorities and concerns. Visualization helps ensure that the system’s architecture addresses these concerns by providing multiple views tailored to specific needs, such as security, deployment, or functionality. This targeted approach helps prevent misunderstandings and ensures that all stakeholder requirements are considered early in the design process.
 5. **Supporting Future Evolution**: Systems evolve due to changing requirements, new technologies, or business needs. A well-visualized architecture offers a roadmap for future changes by clearly outlining the system’s structure and dependencies. It allows architects and developers to predict the impact of modifications, making it easier to adapt the system while maintaining its integrity and performance.
 
 ---
@@ -106,19 +106,19 @@ An **architectural perspective** provides a structured approach to incorporating
 
 The **"Software Systems Architecture"** framework outlines several critical perspectives architects can apply to achieve specific quality attributes. These include:
 
-1. **Security** :
+1. **Security**:
    * Focuses on ensuring that the system reliably controls access to sensitive resources. It encompasses managing users’ access rights, protecting data confidentiality, and ensuring integrity and accountability. This perspective applies to any system where user identity and resource access are significant concerns.
-2. **Performance and Scalability** :
+2. **Performance and Scalability**:
    * Ensures the system can handle its required workload efficiently and scale to meet future demands. This perspective focuses on optimizing system performance and ensuring that the architecture can support increased volumes of data or users without degradation.
-3. **Availability and Resilience** :
+3. **Availability and Resilience**:
    * Focuses on keeping the system operational, even during failures. This perspective emphasizes building a fault-tolerant system, ensuring it remains available to users and can recover from potential disruptions.
-4. **Evolution** :
+4. **Evolution**:
    * Addresses the system's ability to adapt and change over time. This perspective ensures the system can evolve with changing requirements, technologies, or environments while balancing the costs and risks of such flexibility.
-5. **Development Resource** :
+5. **Development Resource**:
    * Focuses on ensuring the system can be built, deployed, and maintained within time, budget, and available personnel constraints. It ensures that development resources are efficiently managed throughout the project lifecycle.
-6. **Internationalization** :
+6. **Internationalization**:
    * Ensures the system can operate across different languages, regions, and cultural settings. This perspective is particularly important for global applications catering to diverse users.
-7. **Location** :
+7. **Location**:
    * Addresses challenges arising from system components' physical distribution, such as network latency or geographic constraints. This perspective is critical for distributed systems where the location of components can impact performance and reliability.
 
 #### Benefits of Applying Perspectives
@@ -135,18 +135,13 @@ These perspectives form a crucial part of architectural design, ensuring that es
 
 #### Articles
 
-* Rozanski, Nick and Woods, Eoin.*["Viewpoints in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.\
+* Rozanski, Nick and Woods, Eoin.*["Viewpoints in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.
   This article offers a comprehensive explanation of viewpoints in software architecture, defining their role in addressing stakeholder concerns and providing guidance on how to apply them effectively in structuring system architecture. It includes detailed descriptions of key viewpoints such as Functional, Information, and Deployment.
-* Rozanski, Nick and Woods, Eoin. *["Perspectives in Software Systems Architecture"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.\
+* Rozanski, Nick and Woods, Eoin. *["Perspectives in Software Systems Architecture"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.
   This article explores the role of perspectives in addressing cross-cutting concerns like security, performance, and scalability in software architecture. It explains how perspectives complement viewpoints by ensuring that crucial quality attributes are applied across all system architecture aspects.
 
 #### Books
 
 * Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
-  * **Part II - The Process of Software Architecture**\
-    It covers the **software architecture process**, focusing on how architects define, design, and maintain architecture throughout a project’s lifecycle. It highlights the importance of addressing both **problem- and solution-focused concerns**, engaging with **stakeholders**, and using **scenarios** to explore requirements and validate decisions. Using **architectural styles, patterns**, and **models** ensures the system structure is communicated. The process includes creating thorough **architectural descriptions** and **evaluating** the architecture to ensure it meets functional and non-functional needs. This section emphasizes an iterative, stakeholder-driven approach to architecture.
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Chapter 19: Architecture Decisions**\
-    It highlights the importance of documenting architecture decisions using Architecture Decision Records (ADRs). It emphasizes balancing trade-offs, managing constraints, and avoiding anti-patterns like decision paralysis. A structured decision-making process ensures well-informed, adaptable choices that support long-term system goals.
-  * **Chapter 20 - Analyzing Architecture Risk**\
-    It covers architecture risk analysis, emphasizing proactive risk identification and mitigation. Techniques like prototyping and incremental delivery help manage risks while avoiding anti-patterns like risk blindness, ensuring system resilience and adaptability.
+  * **Part I - Architecture Fundamentals**
+    Part I introduces the core concepts of **software architecture** , including components, connectors, and configurations, as well as the importance of addressing **stakeholder concerns** . It explains how **viewpoints and views** are used to manage architectural complexity by providing multiple perspectives on the system. The section also covers **architectural perspectives** like security and performance, which influence various views, and defines the key responsibilities of the software architect in guiding the system's development.

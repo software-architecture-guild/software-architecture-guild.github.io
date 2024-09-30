@@ -35,7 +35,7 @@ We are thrilled to share that our hard work and dedication paid off—we **won**
 
 ## Explore Our Work
 
-Feel free to explore our **[Architectural Description](https://github.com/Profitero-Data-Alchemists/katas-2023))** in detail. While achieving such a high level of detail in real-world projects can be challenging, this exercise was invaluable in demonstrating the effectiveness of combining **Viewpoints and Perspectives** with the **C4 model**.
+Feel free to explore our **[Architectural Description](https://github.com/Profitero-Data-Alchemists/katas-2023)** in detail. While achieving such a high level of detail in real-world projects can be challenging, this exercise was invaluable in demonstrating the effectiveness of combining **Viewpoints and Perspectives** with the **C4 model**.
 
 ## All winners
 
