@@ -33,7 +33,7 @@ A real team is more than just a group of people working together. Katzenbach and
 
    * **Example**: If a customer service team misses its performance targets, each member shares the responsibility, regardless of individual contributions.
 
-### **Types of Teams**
+### Types of Teams
 
 The book identifies different types of teams based on their roles and functions within an organization. These include:
 
@@ -47,7 +47,7 @@ The book identifies different types of teams based on their roles and functions 
    This category includes **management teams** at various levels, such as senior leadership teams or departmental leadership teams. These teams focus on **overseeing operations, setting direction, and ensuring the organization runs smoothly**.
    * **Key challenge**: Teams that run things face unique obstacles, such as dealing with hierarchical boundaries, managing multiple priorities, and handling long-term strategic decisions. Members of management teams often have strong individual responsibilities, making it harder to function as a collective team.
 
-### **The Difference Between Teams and Non-Teams**
+### The Difference Between Teams and Non-Teams
 
 Katzenbach and Smith emphasize that not every group is a team, even if they call themselves one. Groups often fail to become real teams because they lack the discipline to follow the key elements of team performance. The authors differentiate teams from other groupings, such as:
 
@@ -61,7 +61,7 @@ Katzenbach and Smith emphasize that not every group is a team, even if they call
    Potential teams are groups on their way to becoming real teams but have not fully developed the discipline needed. They might have a common purpose and some performance goals, but they lack total commitment or haven’t yet established the mutual accountability required to perform at a high level.
    * **Example**: A task force with a defined mission but struggling with alignment on performance goals is a potential team.
 
-### **Key Characteristics that Define a Real Team**
+### Key Characteristics that Define a Real Team
 
 * **Small Size**: Teams are typically **small groups**, usually composed of fewer than 20 people. Small teams allow for closer collaboration, more efficient communication, and easier coordination of efforts.
 * **Complementary Skills**: Each team member brings a unique set of skills that complement the others, creating a well-rounded group capable of addressing various aspects of the task or project.

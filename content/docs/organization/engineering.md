@@ -36,7 +36,7 @@ Another key concept is the **value stream**. A value stream represents a product
 
 * **How do we identify value streams?** This is typically done through **Value Stream Mapping**, which helps visualize and analyze the workflow.
 * **How do we organize value streams?** The answer lies in the **Team Topologies framework**, which guides structuring teams to align with value streams.
-* **How do we operationalize value streams?** Several Agile frameworks, such as **Scrum@Scale** , **SAFe** , **LeSS** and **Nexus** , offer methods to manage and operationalize value streams effectively.
+* **How do we implement value streams?** Several Agile frameworks, such as **Scrum@Scale** , **SAFe** , **LeSS** and **Nexus** , offer methods to manage and operationalize value streams effectively.
 
 ### What is Conway’s Law?
 
