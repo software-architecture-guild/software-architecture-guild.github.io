@@ -15,23 +15,19 @@ A real team is more than just a group of people working together. Katzenbach and
 1. **Common Purpose**:
    A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
 
-   * **Example**: A product development team working together to launch a new product that meets specific market demands has a clear purpose that binds the team.
 2. **Specific Performance Goals**:
    In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
 
-   * **Example**: A sales team that aims to increase revenue by 10% in the next quarter has a clear performance objective that drives its actions.
 3. **Complementary Skills**:
    Teams must have the **right mix of skills** to achieve their goals. These skills should be complementary, meaning that team members bring different strengths to the table, such as technical expertise, problem-solving abilities, and interpersonal skills. Teams that lack complementary skills struggle to perform at a high level.
 
-   * **Example**: A software development team might consist of programmers, project managers, and designers, each contributing different but necessary skills to complete a project successfully.
 4. **A Common Working Approach**:
    Teams need to establish a clear, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
 
-   * **Example**: To streamline the process of launching a campaign, a marketing team might decide to use specific collaboration tools, set weekly meetings, and clearly define roles.
 5. **Mutual Accountability**:
    In a real team, members are **mutually accountable** to each other for the team’s performance. This goes beyond individual accountability and requires that every team member feels responsible for their tasks and the team's overall success. Mutual accountability fosters trust and encourages collaboration.
 
-   * **Example**: If a customer service team misses its performance targets, each member shares the responsibility, regardless of individual contributions.
+**Example**: The architecture team at a tech company is working on building aligned architecture for the product with a focus on modernization (**common purpose**). They set a goal to reduce the system run rate by 15% while improving the system scalability by the end of the quarter (**specific performance goals**). Each member has it's own zone of responsibility - Infrastructure, Data Platform, Presentation Layers, System Security, etc. - allowing them to cover all critical aspects (**complementary skills**). They follow an agile approach using the Kanban framework with bi-weekly reviews and reiterations on planning sessions (**common working approach**). The team is mutually accountable for the final architecture's performance, with everyone taking responsibility for both successes and challenges (**mutual accountability**).```
 
 ### Types of Teams
 
