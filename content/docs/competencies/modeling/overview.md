@@ -1,15 +1,13 @@
 ---
-weight: 210
-title: "Modeling"
-description: ""
+weight: 610
+title: "Overview"
+description: "Give justification for the importance of the skills listed in the chapter."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
 draft: true
 toc: true
 ---
-
-# Overview
 
 In the world of software architecture, technical expertise is just one part of
 the role. As systems become increasingly complex, a software architect's ability
@@ -47,38 +45,11 @@ established frameworks empower architects to communicate complex ideas clearly,
 ensuring their designs are understood, supported, and ultimately, built
 successfully.
 
-# Architecture Frameworks
+## Recommended Reading
 
-- What is an architectural framework?
-- Difference between architeture framework and diagramming tool.
-- What is the difference between them?
-- Choosing guidance.
+#### Books
 
-# Diagramming
-
-# Capturing change
-
-# Documenting
-
-# Articles
-
-- [C4 architectural framework](https://c4model.com/) Description of the C4
-  architectural framework.
-- [C4 diagramming approach](https://c4model.com/diagrams) Descrition of the
-  "zoom-in" approach that can be easily used with other architectural
-  frameworks.
-
-# Books
-
-- [Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781663728357/)
-  Chapter 21: Diagramming and Presenting Architecture. General Guidance on
-  diagramming process and overview of existing diagramming tools.
-- [Software Systems Architecture](https://www.viewpoints-and-perspectives.info/)
-  Chapter 3: Viewpoints and Views, Chapter 4: Architectural Perspectives.
-  Overview of different viewpoint types.
-- [Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781663728357/)
-  Chapter 19: Architecture Decisions. Guide to documenting architectural
-  decisions and overview of common anti-patterns.
-- [Communication Patterns](https://www.oreilly.com/library/view/communication-patterns/9781098140533/)
-  Part III. Communicating Knowledge. In-depth guide on the documentation process
-  and knowledge sharing.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+  * **Chapter 21: Diagramming and Presenting Architecture**\
+  General Guidance on diagramming process and overview of existing diagramming
+  tools and frameworks.
