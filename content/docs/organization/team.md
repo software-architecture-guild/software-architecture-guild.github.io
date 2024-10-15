@@ -8,24 +8,16 @@ lastmod: "2024-10-01T16:42:31+02:00"
 draft: false
 toc: true
 ---
+
 ## What makes a Team?
 
 A real team is more than just a group of people working together. Katzenbach and Smith outline several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee:
 
-1. **Common Purpose**:
-   A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
-
-2. **Specific Performance Goals**:
-   In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
-
-3. **Complementary Skills**:
-   Teams must have the **right mix of skills** to achieve their goals. These skills should be complementary, meaning that team members bring different strengths to the table, such as technical expertise, problem-solving abilities, and interpersonal skills. Teams that lack complementary skills struggle to perform at a high level.
-
-4. **A Common Working Approach**:
-   Teams need to establish a clear, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
-
-5. **Mutual Accountability**:
-   In a real team, members are **mutually accountable** to each other for the team’s performance. This goes beyond individual accountability and requires that every team member feels responsible for their tasks and the team's overall success. Mutual accountability fosters trust and encourages collaboration.
+1. **Common Purpose**: A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
+2. **Specific Performance Goals**: In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
+3. **Complementary Skills**: Teams must have the **right mix of skills** to achieve their goals. These skills should be complementary, meaning that team members bring different strengths to the table, such as technical expertise, problem-solving abilities, and interpersonal skills. Teams that lack complementary skills struggle to perform at a high level.
+4. **A Common Working Approach**: Teams need to establish a clear, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
+5. **Mutual Accountability**: In a real team, members are **mutually accountable** to each other for the team’s performance. This goes beyond individual accountability and requires that every team member feels responsible for their tasks and the team's overall success. Mutual accountability fosters trust and encourages collaboration.
 
 **Example**: The architecture team at a tech company is working on building aligned architecture for the product with a focus on modernization (**common purpose**). They set a goal to reduce the system run rate by 15% while improving the system scalability by the end of the quarter (**specific performance goals**). Each member has it's own zone of responsibility - Infrastructure, Data Platform, Presentation Layers, System Security, etc. - allowing them to cover all critical aspects (**complementary skills**). They follow an agile approach using the Kanban framework with bi-weekly reviews and reiterations on planning sessions (**common working approach**). The team is mutually accountable for the final architecture's performance, with everyone taking responsibility for both successes and challenges (**mutual accountability**).```
 
@@ -33,36 +25,30 @@ A real team is more than just a group of people working together. Katzenbach and
 
 The book identifies different types of teams based on their roles and functions within an organization. These include:
 
-1. **Teams That Recommend Things**:
-   These teams are typically task forces, advisory groups, or committees. Their primary function is to **analyze problems, develop recommendations, and offer solutions**. Examples include strategy teams or problem-solving task forces. These teams face the challenge of influencing others since they usually don’t have direct implementation responsibilities.
+1. **Teams That Recommend Things**: These teams are typically task forces, advisory groups, or committees. Their primary function is to **analyze problems, develop recommendations, and offer solutions**. Examples include strategy teams or problem-solving task forces. These teams face the challenge of influencing others since they usually don’t have direct implementation responsibilities.
    * **Key challenge**: The critical moment for these teams is when they hand off their recommendations to those responsible for execution. Their effectiveness depends on how actionable their recommendations are and how well they communicate their findings to decision-makers.
-2. **Teams That Make or Do Things**:
-   These are the operational teams, such as manufacturing, sales, or customer service. Their goal is to execute specific tasks or produce tangible results. These teams are often responsible for ongoing operations and are focused on achieving specific outcomes, such as product quality, customer satisfaction, or sales targets.
+2. **Teams That Make or Do Things**: These are the operational teams, such as manufacturing, sales, or customer service. Their goal is to execute specific tasks or produce tangible results. These teams are often responsible for ongoing operations and are focused on achieving specific outcomes, such as product quality, customer satisfaction, or sales targets.
    * **Key challenge**: These teams often must balance their workload and improve processes. They must be able to manage themselves effectively, including resolving conflicts, developing new skills, and continually improving their performance.
-3. **Teams That Run Things**:
-   This category includes **management teams** at various levels, such as senior leadership teams or departmental leadership teams. These teams focus on **overseeing operations, setting direction, and ensuring the organization runs smoothly**.
+3. **Teams That Run Things**: This category includes **management teams** at various levels, such as senior leadership teams or departmental leadership teams. These teams focus on **overseeing operations, setting direction, and ensuring the organization runs smoothly**.
    * **Key challenge**: Teams that run things face unique obstacles, such as dealing with hierarchical boundaries, managing multiple priorities, and handling long-term strategic decisions. Members of management teams often have strong individual responsibilities, making it harder to function as a collective team.
 
 ### The Difference Between Teams and Non-Teams
 
 Katzenbach and Smith emphasize that not every group is a team, even if they call themselves one. Groups often fail to become real teams because they lack the discipline to follow the key elements of team performance. The authors differentiate teams from other groupings, such as:
 
-1. **Working Groups**:
-   These are collections of individuals who come together to share information or coordinate activities but do not have a collective purpose or shared performance goals. In working groups, individual members focus on their own areas of responsibility and performance, with little or no emphasis on mutual accountability or collaboration.
+1. **Working Groups**: These are collections of individuals who come together to share information or coordinate activities but do not have a collective purpose or shared performance goals. In working groups, individual members focus on their own areas of responsibility and performance, with little or no emphasis on mutual accountability or collaboration.
    * **Example**: A meeting of managers from different departments to update each other on their respective areas is a working group, not a team.
-2. **Pseudo-Teams**:
-   These groups may be labeled as teams but **lack the essential characteristics** of a true team. Members may meet regularly and share some responsibilities but do not fully commit to a common purpose or hold each other mutually accountable for performance. As a result, they never achieve the performance potential of a real team.
+2. **Pseudo-Teams**: These groups may be labeled as teams but **lack the essential characteristics** of a true team. Members may meet regularly and share some responsibilities but do not fully commit to a common purpose or hold each other mutually accountable for performance. As a result, they never achieve the performance potential of a real team.
    * **Example**: A group formed to tackle a company-wide initiative but that lacks clear goals or commitment from its members can be considered a pseudo-team.
-3. **Potential Teams**:
-   Potential teams are groups on their way to becoming real teams but have not fully developed the discipline needed. They might have a common purpose and some performance goals, but they lack total commitment or haven’t yet established the mutual accountability required to perform at a high level.
+3. **Potential Teams**: Potential teams are groups on their way to becoming real teams but have not fully developed the discipline needed. They might have a common purpose and some performance goals, but they lack total commitment or haven’t yet established the mutual accountability required to perform at a high level.
    * **Example**: A task force with a defined mission but struggling with alignment on performance goals is a potential team.
 
 ### Key Characteristics that Define a Real Team
 
-* **Small Size**: Teams are typically **small groups**, usually composed of fewer than 20 people. Small teams allow for closer collaboration, more efficient communication, and easier coordination of efforts.
-* **Complementary Skills**: Each team member brings a unique set of skills that complement the others, creating a well-rounded group capable of addressing various aspects of the task or project.
-* **Performance Focus**: Real teams focus on **specific, measurable outcomes**, not just on teamwork for its own sake. Achieving performance goals is their primary objective.
-* **Discipline**: Teams must **consistently apply a disciplined approach** to their work, including a focus on goals, clear roles, and mutual accountability. Without this discipline, even well-intentioned groups can fall short of their potential.
+1. **Small Size**: Teams are typically **small groups**, usually composed of fewer than 20 people. Small teams allow for closer collaboration, more efficient communication, and easier coordination of efforts.
+2. **Complementary Skills**: Each team member brings a unique set of skills that complement the others, creating a well-rounded group capable of addressing various aspects of the task or project.
+3. **Performance Focus**: Real teams focus on **specific, measurable outcomes**, not just on teamwork for its own sake. Achieving performance goals is their primary objective.
+4. **Discipline**: Teams must **consistently apply a disciplined approach** to their work, including a focus on goals, clear roles, and mutual accountability. Without this discipline, even well-intentioned groups can fall short of their potential.
 
 ### Building a team
 
@@ -136,61 +122,35 @@ Kanban is built on several foundational principles that guide its implementation
 
 Implementing Kanban involves several key steps and practices that help teams transition to this method effectively:
 
-##### Visualizing Work
+1. **Visualizing Work**: The first step in implementation is creating a Kanban board. This board serves as a visual representation of work items and their statuses, allowing teams to see the flow of work and identify bottlenecks easily. The board typically consists of columns representing different workflow stages, with cards (representing work items) moving through these stages.
 
-The first step in implementation is creating a Kanban board. This board serves as a visual representation of work items and their statuses, allowing teams to see the flow of work and identify bottlenecks easily. The board typically consists of columns representing different workflow stages, with cards (representing work items) moving through these stages.
+2. **Limiting Work in Progress (WiP)**: By setting WiP limits, teams can prevent overloading their capacity and focus on completing tasks before taking on new ones. This pull system ensures that work is only initiated when there is available capacity, promoting efficiency and reducing lead times.
 
-##### Limiting Work in Progress (WiP)
+3. **Managing Flow**: Monitoring the flow of work is critical to identifying and addressing issues that impede progress. Teams should regularly assess their processes, look for bottlenecks or blockers, and adapt to ensure a smooth workflow.
 
-By setting WiP limits, teams can prevent overloading their capacity and focus on completing tasks before taking on new ones. This pull system ensures that work is only initiated when there is available capacity, promoting efficiency and reducing lead times.
+4. **Making Policies Explicit**: Documenting and displaying policies related to workflows helps create transparency and clarity. This includes defining what constitutes “done,” establishing criteria for moving work items between stages, and setting rules for prioritizing tasks.
 
-##### Managing Flow
+5. **Implementing Feedback Loops**: Regular feedback is essential for continuous improvement. Teams should establish cadences for meetings to discuss performance metrics, address concerns, and collaboratively identify areas for improvement. This could include daily stand-ups, retrospectives, and planning sessions.
 
-Monitoring the flow of work is critical to identifying and addressing issues that impede progress. Teams should regularly assess their processes, look for bottlenecks or blockers, and adapt to ensure a smooth workflow.
-
-##### Making Policies Explicit
-
-Documenting and displaying policies related to workflows helps create transparency and clarity. This includes defining what constitutes “done,” establishing criteria for moving work items between stages, and setting rules for prioritizing tasks.
-
-##### Implementing Feedback Loops
-
-Regular feedback is essential for continuous improvement. Teams should establish cadences for meetings to discuss performance metrics, address concerns, and collaboratively identify areas for improvement. This could include daily stand-ups, retrospectives, and planning sessions.
-
-##### Evolving Experimentally
-
-Kanban encourages teams to adopt an experimental mindset, allowing them to test new practices and refine existing ones based on the outcomes. This iterative approach fosters a culture of innovation and resilience.
+6. **Evolving Experimentally**: Kanban encourages teams to adopt an experimental mindset, allowing them to test new practices and refine existing ones based on the outcomes. This iterative approach fosters a culture of innovation and resilience.
 
 ### Events and Meetings Structure
 
 A structured approach to events and meetings is integral to the Kanban method, helping teams maintain communication, evaluate progress, and promote continuous improvement. Here are the key meetings commonly associated with Kanban:
 
-##### 1. Strategy Review
+1. **Strategy Review**: The Strategy Review meeting is focused on selecting the services to be provided and defining the concept of “fit for purpose” for those services. It helps teams sense how the external environment changes, allowing them to adapt their service offerings and provide clear direction for future efforts.
 
-The Strategy Review meeting is focused on selecting the services to be provided and defining the concept of “fit for purpose” for those services. It helps teams sense how the external environment changes, allowing them to adapt their service offerings and provide clear direction for future efforts.
+2. **Operations Review**: The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery while ensuring alignment with customer expectations and facilitates discussions on improving overall service efficiency.
 
-##### 2. Operations Review
+3. **Risk Review**: The Risk Review is dedicated to understanding and responding to the risks associated with effective service delivery. This meeting typically involves identifying blockers and clustering them to proactively address potential issues, ensuring teams can navigate challenges effectively.
 
-The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery while ensuring alignment with customer expectations and facilitates discussions on improving overall service efficiency.
+4. **Service Delivery Review**: The Service Delivery Review focuses on examining and improving the effectiveness of a specific service. This meeting looks at performance metrics, customer feedback, and potential enhancements to ensure that the service continues to meet or exceed expectations.
 
-##### 3. Risk Review
+5. **Replenishment Meeting**: The Replenishment Meeting is essential for moving items over the commitment point and into the workflow system. It oversees the preparation of options for future selections, ensuring that the backlog remains aligned with the team’s capacity and priorities.
 
-The Risk Review is dedicated to understanding and responding to the risks associated with effective service delivery. This meeting typically involves identifying blockers and clustering them to proactively address potential issues, ensuring teams can navigate challenges effectively.
+6. **Kanban Meeting**: Often held daily, the Kanban Meeting is a coordination and self-organization session for those collaborating to deliver the service. Utilizing a stand-up format encourages a short, energetic meeting focused on completing work items and addressing any blockers that may impede progress.
 
-##### 4. Service Delivery Review
-
-The Service Delivery Review focuses on examining and improving the effectiveness of a specific service. This meeting looks at performance metrics, customer feedback, and potential enhancements to ensure that the service continues to meet or exceed expectations.
-
-##### 5. Replenishment Meeting
-
-The Replenishment Meeting is essential for moving items over the commitment point and into the workflow system. It oversees the preparation of options for future selections, ensuring that the backlog remains aligned with the team’s capacity and priorities.
-
-##### 6. Kanban Meeting
-
-Often held daily, the Kanban Meeting is a coordination and self-organization session for those collaborating to deliver the service. Utilizing a stand-up format encourages a short, energetic meeting focused on completing work items and addressing any blockers that may impede progress.
-
-##### 7. Delivery Planning Meeting
-
-The Delivery Planning Meeting is designed to monitor and plan deliveries to customers. This meeting helps teams align their efforts with customer needs, ensuring that the right products and services are delivered on time and following customer expectations.
+7. **Delivery Planning Meeting**: The Delivery Planning Meeting is designed to monitor and plan deliveries to customers. This meeting helps teams align their efforts with customer needs, ensuring that the right products and services are delivered on time and following customer expectations.
 
 ### Conclusion
 
@@ -263,11 +223,9 @@ Scrum is a powerful framework that enables teams to deliver high-quality product
 #### Books
 
 * Katzenbach, J. R., & Smith, D. K. [The wisdom of teams: Creating the high-performance organization](https://hbsp.harvard.edu/product/15042-PDF-ENG). Harvard Business School Press, 1993.
-
-  * **Part I**
+  * **Part I** \
     Part 1 explains the importance of teams in organizations, emphasizing that teams outperform individuals when tasks require diverse skills and collaboration. It introduces the basic elements of a successful team, including a common purpose, performance goals, complementary skills, and mutual accountability. The section also highlights the challenges teams face and outlines the difference between true teams and non-team groups, like working groups or pseudo-teams.
-  * **Part II**
+  * **Part II** \
     Part 2 focuses on how groups evolve into real teams by progressing along the "team performance curve." It discusses the stages of team development, from working groups to high-performance teams, emphasizing the importance of moving from individual accountability to collective performance. The section also explores the critical role of team leaders, who must facilitate collaboration rather than dominate, and offers strategies for overcoming common obstacles that teams face during their development.
 * Anderson, David J., and Carmichael, Andy. [Essential Kanban Condensed](https://kanbanbooks.com/essential-kanban-condensed/). Kanban University Press, 2016.
-
-  Essential Kanban Condensed by David J. Anderson and Andy Carmichael provides a concise overview of the Kanban method, emphasizing its application in managing and improving knowledge work. The book outlines the Kanban method's core values, foundational principles, and essential practices, such as visualizing work, limiting work in progress (WiP), and fostering a culture of continuous improvement. Additionally, it offers practical guidance for implementing Kanban effectively within organizations, promoting transparency, collaboration, and adaptability to enhance overall efficiency.
+  * Essential Kanban Condensed by David J. Anderson and Andy Carmichael provides a concise overview of the Kanban method, emphasizing its application in managing and improving knowledge work. The book outlines the Kanban method's core values, foundational principles, and essential practices, such as visualizing work, limiting work in progress (WiP), and fostering a culture of continuous improvement. Additionally, it offers practical guidance for implementing Kanban effectively within organizations, promoting transparency, collaboration, and adaptability to enhance overall efficiency.

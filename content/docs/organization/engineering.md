@@ -199,10 +199,10 @@ Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity an
 
 ##### Benefits of Scrum@Scale:
 
-* **Agility at Scale**: The ability to scale Scrum without losing the core agile principles of transparency, inspection, and adaptation.
-* **Decentralized Decision-Making**: Empowers teams to make decisions that directly impact their work, improving speed and reducing bottlenecks.
-* **Flexibility**: Scrum@Scale can be customized to the unique needs of an organization, allowing for a tailored implementation.
-* **Coordination and Alignment**: Ensures that multiple teams can work together in a coordinated fashion to deliver value to customers.
+1. **Agility at Scale**: The ability to scale Scrum without losing the core agile principles of transparency, inspection, and adaptation.
+2. **Decentralized Decision-Making**: Empowers teams to make decisions that directly impact their work, improving speed and reducing bottlenecks.
+3. **Flexibility**: Scrum@Scale can be customized to the unique needs of an organization, allowing for a tailored implementation.
+4. **Coordination and Alignment**: Ensures that multiple teams can work together in a coordinated fashion to deliver value to customers.
 
 ##### Comparison with Other Scaled Frameworks:
 
@@ -253,15 +253,15 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
 
 ##### Benefits of SAFe:
 
-* **Alignment Across the Organization**: SAFe creates alignment between business strategy, execution, and teams, ensuring everyone is focused on the same goals and objectives.
-* **Improved Time to Market**: SAFe reduces the time it takes to deliver value to customers by promoting faster decision-making, efficient processes, and frequent feedback loops.
-* **Increased Productivity**: SAFe helps eliminate silos and improve communication, leading to increased collaboration and productivity across teams.
-* **Scalable Agility**: SAFe is designed to scale, whether you have a small number of teams or a large enterprise with hundreds of teams, without losing the core benefits of agility.
+1. **Alignment Across the Organization**: SAFe creates alignment between business strategy, execution, and teams, ensuring everyone is focused on the same goals and objectives.
+2. **Improved Time to Market**: SAFe reduces the time it takes to deliver value to customers by promoting faster decision-making, efficient processes, and frequent feedback loops.
+3. **Increased Productivity**: SAFe helps eliminate silos and improve communication, leading to increased collaboration and productivity across teams.
+4. **Scalable Agility**: SAFe is designed to scale, whether you have a small number of teams or a large enterprise with hundreds of teams, without losing the core benefits of agility.
 
 ##### Challenges and Criticisms:
 
-* **Complexity**: Some critics argue that SAFe is too complex, especially for organizations starting with Agile. Its comprehensive nature can feel overwhelming compared to lighter frameworks like LeSS or Scrum@Scale.
-* **Top-Down Approach**: Critics of SAFe sometimes feel it is too hierarchical or prescriptive, potentially stifling innovation or team autonomy. In contrast, other scaling frameworks encourage more decentralized decision-making.
+1. **Complexity**: Some critics argue that SAFe is too complex, especially for organizations starting with Agile. Its comprehensive nature can feel overwhelming compared to lighter frameworks like LeSS or Scrum@Scale.
+2. **Top-Down Approach**: Critics of SAFe sometimes feel it is too hierarchical or prescriptive, potentially stifling innovation or team autonomy. In contrast, other scaling frameworks encourage more decentralized decision-making.
 
 ### LeSS
 
@@ -429,18 +429,18 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 #### Books
 
 * Skelton, M., & Pais, M. (2019). [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://teamtopologies.com/book). IT Revolution Press.
-  * **Part I: Teams as the Means of Delivery**
-    Part I emphasizes that traditional organizational charts are inadequate for optimizing software delivery and stresses the importance of aligning team structures with communication patterns. **Conway’s Law** highlights that systems mirror organizational structures, so teams should be organized to match the desired software architecture. Stream-aligned teams take responsibility for delivering end-to-end value, enabling faster, more efficient workflows and reducing cognitive load.
-  * **Part II: Team Topologies That Work for Flow**
-    Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
-  * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery**
-    Part III introduces three modes of team interaction—**collaboration**, **X-as-a-service**, and **facilitating**—to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
+  * **Part I: Teams as the Means of Delivery** \
+   Part I emphasizes that traditional organizational charts are inadequate for optimizing software delivery and stresses the importance of aligning team structures with communication patterns. **Conway’s Law** highlights that systems mirror organizational structures, so teams should be organized to match the desired software architecture. Stream-aligned teams take responsibility for delivering end-to-end value, enabling faster, more efficient workflows and reducing cognitive load.
+  * **Part II: Team Topologies That Work for Flow** \
+  Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
+  * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery** \
+  Part III introduces three modes of team interaction—**collaboration**, **X-as-a-service**, and **facilitating**—to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
 * Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.
-  * **Chapter 3: Introducing the Flow Framework**
-    This chapter introduces the concept of value streams, emphasizing the shift from project management to managing value streams. It outlines how the Flow Framework focuses on managing and measuring the flow of value through these streams.
-  * **Chapter 4: Capturing Flow Metrics**
-    This chapter dives deeper into value streams by introducing flow metrics that help track the performance of value streams. It explains how businesses can measure and optimize the flow of value from development to delivery.
-  * **Chapter 5: Connecting to Business Results**
-    This chapter explores the relationship between value streams and business outcomes, tying value streams to business metrics such as value, cost, quality, and employee happiness.
-  * **Chapter 9: Value Stream Management**
-    This chapter is dedicated to value stream management and how organizations can continuously improve work flow across value streams, ensuring they deliver maximum business value.
+  * **Chapter 3: Introducing the Flow Framework** \
+  This chapter introduces the concept of value streams, emphasizing the shift from project management to managing value streams. It outlines how the Flow Framework focuses on managing and measuring the flow of value through these streams.
+  * **Chapter 4: Capturing Flow Metrics** \
+  This chapter dives deeper into value streams by introducing flow metrics that help track the performance of value streams. It explains how businesses can measure and optimize the flow of value from development to delivery.
+  * **Chapter 5: Connecting to Business Results** \
+  This chapter explores the relationship between value streams and business outcomes, tying value streams to business metrics such as value, cost, quality, and employee happiness.
+  * **Chapter 9: Value Stream Management** \
+  This chapter is dedicated to value stream management and how organizations can continuously improve work flow across value streams, ensuring they deliver maximum business value.

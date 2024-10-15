@@ -18,45 +18,45 @@ While no single company structure is universally applicable, every organization 
 
 ### Basic elements
 
-* **Roles and Responsibilities**
+* **Roles and Responsibilities** \
   At its core, company structure involves identifying roles and assigning responsibilities to the right people. Each team member must understand their role and the scope of their duties to ensure tasks are completed efficiently. Clearly defining these roles early on prevents duplication of efforts, reduces confusion, and helps employees focus on what they do best.
 
-* **Departments and Functions**
+* **Departments and Functions** \
   Larger businesses tend to have various departments, such as marketing, sales, finance, operations, and customer service. Each department serves a specific function and works toward achieving the company’s overall goals. The larger the company, the more formalized these functions become. Small businesses often combine several functions into fewer roles due to limited resources.
   Creating clear lines between these departments is essential for communication and efficiency. Cross-functional collaboration is important, but without a clear structure, projects can stagnate, and accountability can be blurred.
 
-* **Hierarchy and Reporting Lines**
+* **Hierarchy and Reporting Lines** \
   The hierarchy of an organization determines who reports to whom. This can range from a simple structure in small companies where everyone reports directly to the founder to more complex structures in large corporations with multiple levels of management.
   Excessive hierarchy can lead to inefficiencies and slow decision-making, while too little hierarchy can confuse authority and responsibilities. A lean management structure, where decision-making authority is distributed effectively but not over-centralized, helps maintain balance.
 
 ### Structure Types
 
-* **Hierarchical Structure**
+* **Hierarchical Structure** \
   The traditional hierarchical structure is often seen in larger, established businesses. This structure places decision-making power at the top, with responsibilities flowing downward through various levels of management. This model works well for organizations with straightforward, repetitive tasks that benefit from tight oversight.
   However, hierarchical structures provide clarity but can become rigid and slow to respond to market changes.
 
-* **Flat Structure**
+* **Flat Structure** \
   In contrast, a flat structure reduces management levels between employees and executives. This approach encourages more direct communication, empowers employees to take initiative, and can speed up decision-making. Flat structures are often more agile and better suited to smaller companies or startups where innovation and adaptability are key.
   However, flat structures can lead to confusion over decision-making authority, especially as the company grows and roles become more complex.
 
-* **Matrix Structure**
+* **Matrix Structure** \
   In a matrix structure, employees report to more than one manager — typically, they are part of a functional department and assigned to specific projects or teams. This system allows for greater flexibility and collaboration across departments but can create conflicts when competing priorities between departments and projects.
   Careful consideration of the matrix structure is essential, as while it fosters teamwork, it can also blur accountability and create complexity in reporting.
 
 ### Additional Considerations
 
-* **The Role of Systems**
+* **The Role of Systems** \
   A business is a collection of processes and systems that must work together seamlessly. A well-structured company integrates these systems to support the overall workflow without bottlenecks.
   For example, a clear structure for customer service ensures that issues are resolved efficiently by routing inquiries to the right teams. Similarly, a well-organized finance department ensures that cash flow is managed and resources are allocated efficiently. Systems help make processes repeatable and scalable, which is critical as the company grows.
 
-* **Adapting the Structure**
+* **Adapting the Structure** \
   The proper structure for a company at its founding will not necessarily be the appropriate structure as it grows. Startups typically begin with a highly flexible structure, where team members wear many hats and decision-making is fluid. As the company scales, however, more formal structures must be implemented to manage complexity, distribute workloads, and ensure long-term sustainability.
   Business owners and managers should regularly assess and adjust the company structure based on the business's evolving needs. This is essential to determining what’s working well and identifying bottlenecks or inefficiencies that can be addressed by reorganizing roles or departments.
 
-* **Building Flexibility**
+* **Building Flexibility** \
   While structure is necessary for organizing a business, companies should remain flexible. The business environment constantly changes, and rigid structures can prevent a company from adapting quickly. A balanced approach is needed where a company has enough structure to ensure smooth operations but remains agile enough to pivot when market conditions demand.
 
-* **Empowerment and Autonomy**
+* **Empowerment and Autonomy** \
   An essential aspect of a company structure is giving employees the autonomy to make decisions within their roles. Empowering employees to take ownership of their tasks without excessive oversight can lead to more significant innovation, faster problem-solving, and higher employee satisfaction.
 
 ---
@@ -218,9 +218,9 @@ A **breakdown at any level** can result in misalignment, leading to inefficienci
 
 The process of **cascading strategy** ensures that every department, team, and individual within an organization understands how their work contributes to the overarching goals. This requires clear communication and goal-setting at each level:
 
-1. **Strategic goals** must be broken down into specific, measurable targets for each department (tactical level).
-2. **Tactical goals** are then translated into specific tasks, responsibilities, and key performance indicators (KPIs) for frontline employees (operational level).
-3. **Feedback loops**: Regular communication between levels ensures alignment, enabling teams to adjust tactics or operations in response to changing market conditions or internal challenges.
+* **Strategic goals** must be broken down into specific, measurable targets for each department (tactical level).
+* **Tactical goals** are then translated into specific tasks, responsibilities, and key performance indicators (KPIs) for frontline employees (operational level).
+* **Feedback loops**: Regular communication between levels ensures alignment, enabling teams to adjust tactics or operations in response to changing market conditions or internal challenges.
 
 **Example**: If a software company sets a strategic goal to improve customer satisfaction by 20% over two years, this goal will cascade down. The customer service department (tactical) will develop initiatives such as implementing a new CRM system. In contrast, at the operational level, customer service agents will receive daily tasks to resolve tickets faster and improve service quality.
 
@@ -232,11 +232,11 @@ Culture goes beyond workplace atmosphere. It’s about creating a sense of safet
 
 ### Key Elements
 
-1. **Build Safety**
+* **Build Safety** \
    Safety is the first critical skill in fostering a great culture. It involves creating an environment where people feel connected and comfortable enough to speak up, experiment, and take risks together. In successful groups, individuals share small, consistent behaviors — eye contact, listening, and mutual respect — that signal, “You are safe here.” These cues lay the foundation for trust and cohesion.
-2. **Share Vulnerability**
+* **Share Vulnerability** \
    Contrary to popular belief, strong cultures aren’t built on displays of strength but openness and vulnerability. Teams that thrive do so by allowing leaders and employees to share their struggles or weaknesses, inviting reciprocal honesty and cooperation. The willingness to be vulnerable creates deeper bonds and encourages collaboration, as it communicates that the team can only succeed by helping one another.
-3. **Establish Purpose**
+* **Establish Purpose** \
    A clear sense of purpose drives a powerful culture. Successful organizations communicate this purpose through repeated narratives and behaviors that keep everyone focused on shared goals. Having a mission statement is not enough; it must be consistently reinforced through the group’s everyday actions. The sense of belonging to something larger than oneself motivates individuals to go beyond the minimum and contribute to the organization’s long-term success.
 
 ### The Impact of Culture on Performance
@@ -247,9 +247,9 @@ Strong cultures are not built on individual talent alone. Instead, they thrive o
 
 Organizations can take actionable steps to build and maintain a strong culture:
 
-1. **Create spaces for honest feedback**: Encourage an environment where employees feel safe giving and receiving feedback without fear of retaliation.
-2. **Foster rituals that reinforce belonging**: Simple habits like regular check-ins, acknowledging efforts, and celebrating small wins can powerfully affect group cohesion.
-3. **Emphasize learning over winning**: Frame failures as learning experiences and normalize asking for help, which can help foster a more resilient and collaborative culture.
+* **Create spaces for honest feedback**: Encourage an environment where employees feel safe giving and receiving feedback without fear of retaliation.
+* **Foster rituals that reinforce belonging**: Simple habits like regular check-ins, acknowledging efforts, and celebrating small wins can powerfully affect group cohesion.
+* **Emphasize learning over winning**: Frame failures as learning experiences and normalize asking for help, which can help foster a more resilient and collaborative culture.
 
 ## Recommended Reading
 
