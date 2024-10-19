@@ -198,3 +198,21 @@ of the project. For example, the C4, 4+1 may be suitable for smaller projects,
 while TOGAF may be more appropriate for large, complex organizations.
 Ultimately, the goal is to select a framework that helps you effectively design,
 document, and communicate your software architecture.
+
+# Recommended Reading
+
+#### Articles
+
+* Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.
+  Detailed description of the C4 architecture framework.
+* Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*.
+  Detailed description of the "4+1" architecture framework.
+* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/architecture/togaf8-doc/arch/)*.
+  Detailed description of the "TOGAF" architecture framework.
+
+#### Books
+
+* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+  * **Chapter 3: Viewpoints and Views, Chapter 4: Architectural Perspectives**\
+    Provides an overview of Architectural Viewpoints and Perspectives available
+    in the Framework.
