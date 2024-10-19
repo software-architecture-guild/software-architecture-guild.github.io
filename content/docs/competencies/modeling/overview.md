@@ -34,7 +34,7 @@ between different parts of the architecture as they are presented, is critical
 to avoid confusion. Whether showing a system's overall topology or diving into
 finer details, ensuring the audience understands how each part fits within the
 whole is key to **effective communication**. Architects must also employ **frameworks**
-such as **[UML](https://developer.ibm.com/articles/an-introduction-to-uml/)**, **[C4](https://c4model.com/)**, or **[ArchiMate](https://www.archimatetool.com/)** to create standardized, interpretable models.
+such as **[UML](https://developer.ibm.com/articles/an-introduction-to-uml/)**, **[C4](https://c4model.com/)**, or **[ArchiMate](https://www.archimatetool.com/blog/2018/09/25/why-archimate/)** to create standardized, interpretable models.
 These frameworks provide a common language for design, allowing architects to
 present ideas in ways that are easily recognizable and understood across teams
 and organizations.
