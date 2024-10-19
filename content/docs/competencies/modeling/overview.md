@@ -5,7 +5,7 @@ description: "Give justification for the importance of the skills listed in the 
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
