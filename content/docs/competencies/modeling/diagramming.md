@@ -9,6 +9,29 @@ draft: false
 toc: true
 ---
 
+# TODO:
+
+Link to archimate
+https://pubs.opengroup.org/architecture/archimate3-doc/
+
+C4+Viewpoints + Perspectives
+TOGAF + Archimate
+
+TODO: extend C4+viewpoints
+new structure:
+
+Integrating Architectural Frameworks with Diagramming Approaches.
+> Out of the box support: TOGAF + Archimate (tool)
+> Custom design: Example combining Viewpoints and Perspectives + C4 (approach) e.g. from Katas.
+
+And move to the last paragraph.
+
+Align order to editorial writing approach.
+
+Modeling = framework
+Representing = diagramming approach
+
+
 ## Introduction to Visual Communication in Software Architecture
 
 Visual literacy is an essential skill for software architects, allowing them to
@@ -137,7 +160,7 @@ include the following features:
 
 Incorporating these capabilities will enhance the effectiveness of the C4 model and viewpoints framework, ensuring architecture visualizations remain intuitive and accessible for all stakeholders.
 
-## Diagramming Tools Overview
+## Diagramming Tools Options
 
 When selecting architecture diagramming tools, we can classify them into two
 categories: architecture-specific and general-purpose tools. Each category

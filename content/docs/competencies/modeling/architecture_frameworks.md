@@ -9,6 +9,20 @@ draft: false
 toc: true
 ---
 
+# TODO
+
+all headers should start from size 2 (3, 4 are the same, the difference is
+presence in TOC)
+C4 framework overview - use original images, keep references to respect the
+license
+C4 separate article.
+Viewpoints separate article
+  In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
+  what should there be, what shouldn't there be.
+TODO: move "choosing" and merge with introduction.
+Update the link to TOGAF 10: 
+
+
 # Introduction
 
 In today's fast-paced software development environment, the use of an
@@ -207,7 +221,7 @@ document, and communicate your software architecture.
   Detailed description of the C4 architecture framework.
 * Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*.
   Detailed description of the "4+1" architecture framework.
-* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/architecture/togaf8-doc/arch/)*.
+* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.
   Detailed description of the "TOGAF" architecture framework.
 
 #### Books
