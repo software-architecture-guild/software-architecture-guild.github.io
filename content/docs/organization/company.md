@@ -5,7 +5,7 @@ description: "This article explains what an enterprise should look like."
 icon: "article"
 date: "2024-10-01T16:48:43+02:00"
 lastmod: "2024-10-01T16:48:43+02:00"
-draft: true
+draft: false
 toc: true
 ---
 ## Structure
