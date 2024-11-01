@@ -16,7 +16,7 @@ The main goal of an Architectural Kata is to simulate the challenges architects 
 
 ## Our Journey in O'Reilly Architectural Katas
 
-**September 2023** marked an exciting milestone for our team as we participated in the **Architectural Katas** competition. Our mission was to design the architecture for **"Road Warrior"**, an innovative online trip management dashboard. This platform aims to provide travelers with a comprehensive solution to seamlessly organize and manage their reservations. You can view the [original requirements here](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/requirements/original_requirements.md).
+**September 2023** marked an exciting milestone for our team as we participated in the **[Architectural Katas](https://www.oreilly.com/live-events/architectural-katas/0636920458487/)** competition. Our mission was to design the architecture for **"Road Warrior"**, an innovative online trip management dashboard. This platform aims to provide travelers with a comprehensive solution to seamlessly organize and manage their reservations. You can view the [original requirements here](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/requirements/original_requirements.md).
 
 #### The Challenge
 

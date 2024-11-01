@@ -14,6 +14,8 @@ The **Architecture Definition Process** is an iterative and structured approach 
 
 Each process step is crucial to successfully defining, developing, and managing the architecture, ensuring it evolves as needed. Each step is detailed below to provide a comprehensive understanding of the architecture definition process.
 
+<img align="center" src="../../../images/fundamentals/architecture-process.drawio.png" alt="Architecture Process" />
+
 ---
 
 ## Step 1: Identifying and Engaging Stakeholders
