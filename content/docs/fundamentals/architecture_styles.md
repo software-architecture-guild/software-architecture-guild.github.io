@@ -22,19 +22,19 @@ Monolithic architecture refers to a design where all system components are tight
 
 A traditional style that organizes the system into horizontal layers, such as presentation, business logic, and data access. Each layer has a distinct role and communicates only with adjacent layers. While it promotes separation of concerns, it can become rigid and difficult to scale as complexity increases.
 
-<img align="center" src="../../../images/fundamentals/layered.jpg" alt="Layered Architecture" />
+<img align="center" src="../../../images/fundamentals/layered.drawio.png" alt="Layered Architecture" />
 
 ### Pipeline Architecture
 
 In this style, data flows through a sequence of processing stages, where each stage performs specific operations before passing the data to the next stage. It is ideal for tasks requiring sequential processing, such as media streaming or batch data processing, but can face challenges in scaling efficiently.
 
-<img align="center" src="../../../images/fundamentals/pipeline.jpg" alt="Pipeline Architecture" />
+<img align="center" src="../../../images/fundamentals/pipeline.drawio.png" alt="Pipeline Architecture" />
 
 ### Microkernel Architecture
 
 This style consists of a core system (the microkernel) that provides minimal functionality, with additional features implemented as plug-ins. It is ideal for highly customizable systems, like product platforms, but can lead to challenges in managing plug-in dependencies and integration.
 
-<img align="center" src="../../../images/fundamentals/micro-kernel.jpg" alt="Microkernel Architecture" />
+<img align="center" src="../../../images/fundamentals/micro-kernel.drawio.png" alt="Microkernel Architecture" />
 
 ---
 
@@ -46,31 +46,31 @@ Distributed architecture involves splitting the system into smaller, independent
 
 SOA consists of larger, integrated services that communicate over a network. It is widely used in large enterprises to promote reuse and standardization. SOA supports scalability but can become a "monolithic SOA" if not properly managed.
 
-<img align="center" src="../../../images/fundamentals/service-based.jpg" alt="Service-Oriented Architecture (SOA)" />
+<img align="center" src="../../../images/fundamentals/service-based.drawio.png" alt="Service-Oriented Architecture (SOA)" />
 
 ### Event-Driven Architecture
 
 This style decouples components by allowing them to communicate asynchronously through events. When one component emits an event, other components react to it. It is ideal for systems requiring scalability and flexibility but can introduce challenges in managing event flows and ensuring consistency.
 
-<img align="center" src="../../../images/fundamentals/event-driven.jpg" alt="Event-Driven Architecture" />
+<img align="center" src="../../../images/fundamentals/event-driven.drawio.png" alt="Event-Driven Architecture" />
 
 ### Space-Based Architecture
 
 Space-based architecture distributes workloads across multiple nodes to handle large amounts of data and high concurrency. It is used in systems requiring high scalability and availability, such as online services with heavy traffic. However, managing data distribution and synchronization can be complex.
 
-<img align="center" src="../../../images/fundamentals/space-based.jpg" alt="Space-Based Architecture" />
+<img align="center" src="../../../images/fundamentals/space-based.drawio.png" alt="Space-Based Architecture" />
 
 ### Orchestration-Driven Architecture
 
 In this architecture, a central orchestrator controls the interaction and coordination between services. This style provides strong control and visibility into workflows but can introduce bottlenecks at the orchestrator level, limiting scalability.
 
-<img align="center" src="../../../images/fundamentals//orchestration-driven.jpg" alt="Orchestration-Driven Architecture" />
+<img align="center" src="../../../images/fundamentals/orchestration-driven.drawio.png" alt="Orchestration-Driven Architecture" />
 
 ### Microservices Architecture
 
 Microservices divide the system into small, independently deployable services, each responsible for a specific functionality. These services communicate over APIs or messaging systems and can be scaled independently. Microservices offer high flexibility and scalability but come with increased operational complexity, including challenges with distributed data management and latency.
 
-<img align="center" src="../../../images/fundamentals/microservices.jpg" alt="Microservices Architecture" />
+<img align="center" src="../../../images/fundamentals/microservices.drawio.png" alt="Microservices Architecture" />
 
 ---
 
@@ -151,5 +151,5 @@ Choosing the right architecture involves balancing many factors, including syste
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Part 2: Architecture Styles**\
+  * **Part 2: Architecture Styles**
     It focuses on various architectural styles, providing an overview of how different approaches can be used to structure software systems. It categorizes these styles into **monolithic** (e.g., layered, pipeline, and microkernel) and **distributed** (e.g., microservices, event-driven, service-oriented, and space-based) architectures. The section highlights the strengths, weaknesses, and trade-offs of each style, offering guidance on selecting the most appropriate architecture based on system requirements, scalability, complexity, and long-term maintainability. The emphasis is on making informed decisions that align with business and technical needs.

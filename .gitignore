@@ -3,3 +3,5 @@
 resources/_gen/
 .hugo_build.lock
 .idea
+*.bkp
+backup
