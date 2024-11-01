@@ -151,5 +151,5 @@ Choosing the right architecture involves balancing many factors, including syste
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Part 2: Architecture Styles**
+  * **Part 2: Architecture Styles**\
     It focuses on various architectural styles, providing an overview of how different approaches can be used to structure software systems. It categorizes these styles into **monolithic** (e.g., layered, pipeline, and microkernel) and **distributed** (e.g., microservices, event-driven, service-oriented, and space-based) architectures. The section highlights the strengths, weaknesses, and trade-offs of each style, offering guidance on selecting the most appropriate architecture based on system requirements, scalability, complexity, and long-term maintainability. The emphasis is on making informed decisions that align with business and technical needs.
