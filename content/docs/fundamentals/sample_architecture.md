@@ -16,13 +16,14 @@ The main goal of an Architectural Kata is to simulate the challenges architects 
 
 ## Our Journey in O'Reilly Architectural Katas
 
-**September 2023** marked an exciting milestone for our team as we participated in the **Architectural Katas** competition. Our mission was to design the architecture for **"Road Warrior"**, an innovative online trip management dashboard. This platform aims to provide travelers with a comprehensive solution to seamlessly organize and manage their reservations. You can view the [original requirements here](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/requirements/original_requirements.md).
+**September 2023** marked an exciting milestone for our team as we participated in the **[Architectural Katas](https://www.oreilly.com/live-events/architectural-katas/0636920458487/)** competition. Our mission was to design the architecture for **"Road Warrior"**, an innovative online trip management dashboard. This platform aims to provide travelers with a comprehensive solution to seamlessly organize and manage their reservations. You can view the [original requirements here](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/requirements/original_requirements.md).
 
 #### The Challenge
 
 We were given **seven days** to develop a detailed architectural description and submit our proposal. We utilized **Viewpoints and Perspectives** as our architectural framework and employed the **C4 model** for our diagramming needs to tackle this.
 
 #### The Competition
+<img align="right" src="../../../images/fundamentals/katas-first-place-badge.png" style="max-height: 250px; max-width: 250px; margin-left: 40px" alt="Katas Badge" />
 
 In the initial round, our submission was among the **top five** selected by the judges. This achievement gave us the opportunity to advance to the next phase, where we had a few days to prepare a comprehensive presentation and record a **five-minute video**. These materials were essential to explain and advocate for our architectural design to the judging panel.
 
