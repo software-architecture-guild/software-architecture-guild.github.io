@@ -155,5 +155,5 @@ These perspectives form a crucial part of architectural design, ensuring that es
 #### Books
 
 * Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
-  * **Part I - Architecture Fundamentals**
+  * **Part I - Architecture Fundamentals**\
     Part I introduces the core concepts of **software architecture** , including components, connectors, and configurations, as well as the importance of addressing **stakeholder concerns** . It explains how **viewpoints and views** are used to manage architectural complexity by providing multiple perspectives on the system. The section also covers **architectural perspectives** like security and performance, which influence various views, and defines the key responsibilities of the software architect in guiding the system's development.
