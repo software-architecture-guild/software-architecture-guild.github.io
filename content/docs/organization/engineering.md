@@ -26,6 +26,10 @@ To address these challenges, companies began experimenting with **feature teams*
 
 The **functional team** and **component team** approaches have advantages. Still, they also have significant downsides, particularly in dependencies and the coordination required to deliver features to customers efficiently. **Feature teams** attempt to solve these problems but often face hurdles in complex, large-scale microservices environments.
 
+<center>
+   <img align="center" src="../../../images/organization/engineering.intro.drawio.png" alt="Engineering Intro" width="75%" height="75%"/>
+</center>
+
 ---
 
 ## Department Structure
@@ -45,6 +49,10 @@ Another key concept is the **value stream**. A value stream represents a product
 > **Organizations that design systems are constrained to produce designs that are copies of the communication structures of these organizations.**
 
 In simpler terms, how teams communicate and collaborate significantly shapes the design of the systems they create. A company's organizational structure directly influences the architecture and structure of the software or systems it produces.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conways Law" width="75%" height="75%"/>
+</center>
 
 ##### Key Insights from Conway's Law:
 
@@ -81,9 +89,13 @@ A **Value Stream** is the end-to-end sequence of activities required to deliver 
 
 * **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
 * **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
-* **Visibility and Metrics**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
+* **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
 * **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
 * **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" width="75%" height="75%"/>
+</center>
 
 ##### What is Value Stream Mapping?
 
@@ -95,7 +107,7 @@ When applied to identify value streams, Value Stream Mapping helps organizations
 
 ##### Independent Service Heuristics (ISH) Method for Identifying Value Streams
 
-The **Independent Service Heuristics (ISH)** method is a practical approach designed to help organizations identify good value streams and team boundaries to improve flow and efficiency. It is a complementary tool to **Domain-Driven Design (DDD)** and is particularly effective for evaluating and discovering service boundaries without needing deep engineering expertise.
+The **[Independent Service Heuristics (ISH)](https://teamtopologies.com/key-concepts-content/finding-good-stream-boundaries-with-independent-service-heuristics)** method is a practical approach designed to help organizations identify good value streams and team boundaries to improve flow and efficiency. It is a complementary tool to **Domain-Driven Design (DDD)** and is particularly effective for evaluating and discovering service boundaries without needing deep engineering expertise.
 
 ##### Key Steps in the ISH Method:
 
@@ -116,9 +128,13 @@ The ISH method helps define **stream-aligned teams** responsible for delivering 
 
 ### What Are Team Topologies?
 
-**Team Topologies** is a framework developed by Matthew Skelton and Manuel Pais that provides a structured approach to organizing teams to maximize the flow of value and improve collaboration. It focuses on designing team structures that support fast and efficient software delivery while minimizing complexity and reducing cognitive load on teams. Team Topologies helps organizations create teams aligned with business goals and deliver value quickly and continuously.
+**[Team Topologies](https://teamtopologies.com/)** is a framework developed by Matthew Skelton and Manuel Pais that provides a structured approach to organizing teams to maximize the flow of value and improve collaboration. It focuses on designing team structures that support fast and efficient software delivery while minimizing complexity and reducing cognitive load on teams. Team Topologies helps organizations create teams aligned with business goals and deliver value quickly and continuously.
 
 The model defines **four fundamental team types** and **three modes of team interaction**, which help ensure that teams are designed and interact to support the flow of work through the organization.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.teams_topologies.drawio.png" alt="Teams topologies" width="75%" height="75%"/>
+</center>
 
 ##### The Four Fundamental Team Types:
 
@@ -173,16 +189,20 @@ Here’s how Team Topologies is related to value streams:
 
 Agile frameworks help organizations scale and implement Agile methodologies across multiple teams and departments while maintaining flexibility, collaboration, and customer focus. Here are four popular Agile frameworks:
 
-1. **Scrum@Scale**: Scrum@Scale is designed to help organizations scale Scrum while preserving the framework's core principles. It introduces two key cycles—the Scrum Master Cycle and the Product Owner Cycle—that work together to coordinate multiple teams. The framework emphasizes decentralized decision-making and flexibility, allowing teams to scale without adding unnecessary complexity.
-2. **SAFe (Scaled Agile Framework)**: SAFe integrates Agile, Lean, and DevOps practices to help large enterprises scale Agile across multiple teams, programs, and portfolios. It offers four configurations (Essential, Large Solution, Portfolio, and Full SAFe) to adapt to different levels of organizational complexity. SAFe introduces additional roles, such as the Release Train Engineer, and a structured approach to align business strategy with Agile execution.
-3. **LeSS (Large-Scale Scrum)**: LeSS is a lightweight framework designed to scale Scrum for up to eight teams working on the same product. It emphasizes simplicity by minimizing extra roles and processes, keeping the focus on maintaining Scrum's core values. LeSS encourages cross-functional feature teams and continuous collaboration to deliver an integrated product increment.
-4. **Nexus**: Nexus scales Scrum for 3 to 9 teams working on a single product, focusing on managing cross-team dependencies and integration. It introduces the Nexus Integration Team and Nexus Daily Scrums to ensure that work across teams is continuously integrated into a cohesive product. Nexus adds minimal complexity to the existing Scrum framework, making it a lightweight option for scaling.
+1. **[Scrum@Scale](https://www.scrumatscale.com/scrum-at-scale-guide-online/)**: Scrum@Scale is designed to help organizations scale Scrum while preserving the framework's core principles. It introduces two key cycles—the Scrum Master Cycle and the Product Owner Cycle—that work together to coordinate multiple teams. The framework emphasizes decentralized decision-making and flexibility, allowing teams to scale without adding unnecessary complexity.
+2. **[SAFe (Scaled Agile Framework)](https://scaledagileframework.com/)**: SAFe integrates Agile, Lean, and DevOps practices to help large enterprises scale Agile across multiple teams, programs, and portfolios. It offers four configurations (Essential, Large Solution, Portfolio, and Full SAFe) to adapt to different levels of organizational complexity. SAFe introduces additional roles, such as the Release Train Engineer, and a structured approach to align business strategy with Agile execution.
+3. **[LeSS (Large-Scale Scrum)](https://less.works/less/framework)**: LeSS is a lightweight framework designed to scale Scrum for up to eight teams working on the same product. It emphasizes simplicity by minimizing extra roles and processes, keeping the focus on maintaining Scrum's core values. LeSS encourages cross-functional feature teams and continuous collaboration to deliver an integrated product increment.
+4. **[Nexus](https://www.scrum.org/resources/nexus-guide)**: Nexus scales Scrum for 3 to 9 teams working on a single product, focusing on managing cross-team dependencies and integration. It introduces the Nexus Integration Team and Nexus Daily Scrums to ensure that work across teams is continuously integrated into a cohesive product. Nexus adds minimal complexity to the existing Scrum framework, making it a lightweight option for scaling.
 
 ### Scrum@Scale
 
-**Scrum@Scale** is a framework designed to help organizations scale Scrum across multiple teams, departments, or the entire enterprise while maintaining the core principles of Scrum. It was created by Jeff Sutherland, one of the co-creators of Scrum, to address the challenges faced by organizations that are growing their agile practices beyond a single team.
+**[Scrum@Scale](https://www.scrumatscale.com/scrum-at-scale-guide-online/)** is a framework designed to help organizations scale Scrum across multiple teams, departments, or the entire enterprise while maintaining the core principles of Scrum. It was created by Jeff Sutherland, one of the co-creators of Scrum, to address the challenges faced by organizations that are growing their agile practices beyond a single team.
 
 Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity and flexibility, focusing on decentralized decision-making, and ensuring that organizations can grow without losing the ability to innovate or deliver high-quality products quickly.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.scrum_of_scrums.drawio.png" alt="Scrum@Scale" width="75%" height="75%"/>
+</center>
 
 ##### Key Concepts of Scrum@Scale:
 
@@ -212,9 +232,13 @@ In summary, Scrum@Scale provides a framework for organizations to expand agile p
 
 ### SAFe
 
-**SAFe (Scaled Agile Framework)** is a popular framework designed to help large organizations scale agile practices across multiple teams, departments, and enterprises. SAFe combines principles from Agile, Lean, and DevOps to improve productivity, quality, and employee engagement while enabling fast and continuous value delivery at scale.
+**[SAFe (Scaled Agile Framework)](https://scaledagileframework.com/)** is a popular framework designed to help large organizations scale agile practices across multiple teams, departments, and enterprises. SAFe combines principles from Agile, Lean, and DevOps to improve productivity, quality, and employee engagement while enabling fast and continuous value delivery at scale.
 
 Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive framework that provides a structured approach for scaling agile methodologies like Scrum or Kanban from the team level to enterprise-wide levels.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.safe.drawio.png" alt="SAFe" width="75%" height="75%"/>
+</center>
 
 ##### Key Components of SAFe:
 
@@ -265,9 +289,13 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
 
 ### LeSS
 
-**LeSS (Large-Scale Scrum)** is a framework for scaling Scrum across multiple teams working together on a single product. It was developed by Craig Larman and Bas Vodde and aims to maintain Scrum's simplicity and principles while scaling it to larger organizations or teams. Unlike other scaling frameworks, LeSS focuses on keeping Scrum lightweight and minimizing additional roles, processes, and artifacts.
+**[LeSS (Large-Scale Scrum)](https://less.works/less/framework)** is a framework for scaling Scrum across multiple teams working together on a single product. It was developed by Craig Larman and Bas Vodde and aims to maintain Scrum's simplicity and principles while scaling it to larger organizations or teams. Unlike other scaling frameworks, LeSS focuses on keeping Scrum lightweight and minimizing additional roles, processes, and artifacts.
 
 LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer-centricity.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" width="75%" height="75%"/>
+</center>
 
 ##### Key Principles of LeSS:
 
@@ -340,9 +368,13 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
 
 ### Nexus
 
-**Nexus** is a lightweight framework designed to scale Scrum for multiple teams working together on a single product. Developed by Ken Schwaber and Scrum.org, Nexus extends Scrum's practices, roles, and events to manage cross-team dependencies and collaboration while maintaining the simplicity and core principles of Scrum.
+**[Nexus](https://www.scrum.org/resources/nexus-guide)** is a lightweight framework designed to scale Scrum for multiple teams working together on a single product. Developed by Ken Schwaber and Scrum.org, Nexus extends Scrum's practices, roles, and events to manage cross-team dependencies and collaboration while maintaining the simplicity and core principles of Scrum.
 
 Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 to 9 Scrum teams working together to deliver an integrated product increment. It introduces minimal additional roles and events, focusing on integrating work produced by different teams into a single, potentially shippable product at the end of each sprint.
+
+<center>
+   <img align="center" src="../../../images/organization/engineering.nexus.drawio.png" alt="Nexus" width="75%" height="75%"/>
+</center>
 
 ##### Key Concepts of Nexus:
 
@@ -429,18 +461,18 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 #### Books
 
 * Skelton, M., & Pais, M. (2019). [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://teamtopologies.com/book). IT Revolution Press.
-  * **Part I: Teams as the Means of Delivery** \
-   Part I emphasizes that traditional organizational charts are inadequate for optimizing software delivery and stresses the importance of aligning team structures with communication patterns. **Conway’s Law** highlights that systems mirror organizational structures, so teams should be organized to match the desired software architecture. Stream-aligned teams take responsibility for delivering end-to-end value, enabling faster, more efficient workflows and reducing cognitive load.
-  * **Part II: Team Topologies That Work for Flow** \
-  Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
-  * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery** \
-  Part III introduces three modes of team interaction—**collaboration**, **X-as-a-service**, and **facilitating**—to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
+  * **Part I: Teams as the Means of Delivery**
+    Part I emphasizes that traditional organizational charts are inadequate for optimizing software delivery and stresses the importance of aligning team structures with communication patterns. **Conway’s Law** highlights that systems mirror organizational structures, so teams should be organized to match the desired software architecture. Stream-aligned teams take responsibility for delivering end-to-end value, enabling faster, more efficient workflows and reducing cognitive load.
+  * **Part II: Team Topologies That Work for Flow**
+    Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
+  * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery**
+    Part III introduces three modes of team interaction — **collaboration**, **X-as-a-service**, and **facilitating** — to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
 * Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.
-  * **Chapter 3: Introducing the Flow Framework** \
-  This chapter introduces the concept of value streams, emphasizing the shift from project management to managing value streams. It outlines how the Flow Framework focuses on managing and measuring the flow of value through these streams.
-  * **Chapter 4: Capturing Flow Metrics** \
-  This chapter dives deeper into value streams by introducing flow metrics that help track the performance of value streams. It explains how businesses can measure and optimize the flow of value from development to delivery.
-  * **Chapter 5: Connecting to Business Results** \
-  This chapter explores the relationship between value streams and business outcomes, tying value streams to business metrics such as value, cost, quality, and employee happiness.
-  * **Chapter 9: Value Stream Management** \
-  This chapter is dedicated to value stream management and how organizations can continuously improve work flow across value streams, ensuring they deliver maximum business value.
+  * **Chapter 3: Introducing the Flow Framework**
+    This chapter introduces the concept of value streams, emphasizing the shift from project management to managing value streams. It outlines how the Flow Framework focuses on managing and measuring the flow of value through these streams.
+  * **Chapter 4: Capturing Flow Metrics**
+    This chapter dives deeper into value streams by introducing flow metrics that help track the performance of value streams. It explains how businesses can measure and optimize the flow of value from development to delivery.
+  * **Chapter 5: Connecting to Business Results**
+    This chapter explores the relationship between value streams and business outcomes, tying value streams to business metrics such as value, cost, quality, and employee happiness.
+  * **Chapter 9: Value Stream Management**
+    This chapter is dedicated to value stream management and how organizations can continuously improve work flow across value streams, ensuring they deliver maximum business value.
