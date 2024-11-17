@@ -31,6 +31,10 @@ When classifying software architects by **Scope**, we can distinguish them based
 
 Here are the key types of architects based on **Scope**:
 
+<center>
+   <img align="center" src="../../../images/role/classification.scope.drawio.png" alt="Scope" width="75%" height="75%"/>
+</center>
+
 ### Enterprise
 
 * **Focus:** Organization-Wide Strategy and Integration
@@ -65,6 +69,10 @@ Here are the key types of architects based on **Scope**:
 
 When categorizing software architects by **Specialization**, we focus on their technical expertise in specific domains within software architecture. This dimension highlights the distinct areas where architects apply their deep knowledge, from designing user-facing applications to managing complex data systems and ensuring efficient platform operations. Here are the main types of architects based on **Specialization**:
 
+<center>
+   <img align="center" src="../../../images/role/classification.specialization.drawio.png" alt="Specialization" width="75%" height="75%"/>
+</center>
+
 ### Application
 
 * **Focus:** Frontend and Backend Systems, Software Applications
@@ -77,13 +85,14 @@ When categorizing software architects by **Specialization**, we focus on their t
 
 ### Data
 
-* **Focus:** Data Models, Pipelines, Analytics, Data Governance
+* **Focus:** Data Models, Pipelines, BI Analytics, Data Governance, Machine Learning
 * **Description:** Data architects specialize in designing and managing an organization's data infrastructure. They are responsible for creating data models that structure data effectively, designing data pipelines for processing and analysis, and ensuring data governance practices are in place to maintain data quality, security, and compliance. Data architects help organizations leverage their data assets, enabling analytics, reporting, and data-driven decision-making. They also address issues related to data storage, integration, and accessibility across various platforms.
 * **Key Responsibilities:**
   * **Data Modeling:** Develop logical and physical data models to organize data efficiently and facilitate easy access.
   * **Data Pipelines:** Design systems for data ingestion, transformation, and processing, ensuring data flows smoothly from source to destination.
-  * **Analytics and Reporting:** Build architectures that support data analysis, reporting, and visualization to help derive insights from large datasets.
+  * **BI Analytics and Reporting:** Build architectures that support data analysis, reporting, and visualization to help derive insights from large datasets.
   * **Data Governance:** Implement practices to maintain data quality, security, and compliance across the organization’s data landscape.
+* **Machine Learning (ML) architects**, a specialized type of data architect, are responsible for designing data processing systems that include machine learning models. They focus on implementing MLOps practices to build, deploy, and maintain ML models in production environments. ML architects ensure that these models are seamlessly integrated into data pipelines and are optimized for scalability, reliability, and operational efficiency. They collaborate with data scientists, engineers, and stakeholders to design workflows that support end-to-end machine learning lifecycle management, including continuous integration, automated retraining, and performance monitoring of ML systems.
 
 ### Platform
 
@@ -98,6 +107,10 @@ When categorizing software architects by **Specialization**, we focus on their t
 ## By Seniority
 
 When classifying software architects based on **Seniority**, we look at their level of experience, leadership responsibilities, and career progression. This dimension reflects how architects advance from more technically focused roles to strategic leadership positions that involve guiding teams and shaping the organization’s overall technology direction. Here are the key types of architects by **Seniority**:
+
+<center>
+   <img align="center" src="../../../images/role/classification.seniority.drawio.png" alt="Seniority" width="75%" height="75%"/>
+</center>
 
 ### Associate / Junior
 
@@ -151,6 +164,12 @@ When classifying software architects based on **Seniority**, we look at their le
   * Ensure all technology initiatives align with and support the broader business goals.
 
 ## Roles
+
+A typical CTO organization consists of an Engineering Team, an Architecture Team, an Infrastructure Team, and a Technical Support Team. The architecture team is usually led by the chief architect, who manages other architects in the organization. Matrix structure is also possible when the direct manager is the Engineering Manager.
+
+<center>
+   <img align="center" src="../../../images/role/classification.roles.drawio.png" alt="Seniority" width="75%" height="75%"/>
+</center>
 
 ### System Architect
 
