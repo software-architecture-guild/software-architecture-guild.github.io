@@ -195,7 +195,7 @@ Implementing Scrum involves several key roles, events, and artifacts that help t
 
 ##### Scrum Events
 
-Scrum is structured around five key events that provide a framework for teams to plan, execute, and review their work:
+Scrum is structured around six key events that provide a framework for teams to plan, execute, and review their work:
 
 1. **Backlog refinement**: Backlog refinement is the continuous process of clarifying, prioritizing, and breaking down backlog items to ensure they are ready for development, aligning the team's work with product goals and upcoming sprint needs. Although not a formal Scrum event, many teams hold regular backlog refinement sessions—often mid-sprint—to collaboratively review and prepare backlog items for the next sprint. This ongoing activity keeps the backlog organized, actionable, and focused on delivering value.
 2. **Sprint**: A Sprint is a time-boxed period, typically lasting between one and four weeks, during which the team works to complete a set of backlog items. Each Sprint begins with a Sprint Planning meeting and ends with a Sprint Review and Retrospective.
