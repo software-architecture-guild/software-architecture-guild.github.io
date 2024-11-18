@@ -43,6 +43,10 @@ A classic example of this distinction involves a space pen that works in zero gr
 
 The lean product development process has six iterative steps that help teams work methodically toward product-market fit. Each step involves testing with customers and refining ideas based on feedback.
 
+<center>
+   <img align="center" src="../../../images/organization/product.process.drawio.png" alt="SAFe" width="75%" height="75%"/>
+</center>
+
 ##### Step 1: Determine Your Target Customers
 
 Understanding your target customers is the first step. Customers can be identified through demographic, psychographic, and behavioral segmentation. Creating detailed personas—representative archetypes of your ideal customers—helps ensure every decision is made with their needs in mind.

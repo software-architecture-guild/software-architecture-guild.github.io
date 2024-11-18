@@ -8,10 +8,13 @@ lastmod: "2024-10-01T16:42:31+02:00"
 draft: false
 toc: true
 ---
-
 ## What makes a Team?
 
-A real team is more than just a group of people working together. Katzenbach and Smith outline several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee:
+A real team is more than just a group of people working together. Katzenbach and Smith outline several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
+
+<center>
+   <img align="center" src="../../../images/organization/team.attributes.drawio.png" alt="Team attributes" width="75%" height="75%"/>
+</center>
 
 1. **Common Purpose**: A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
 2. **Specific Performance Goals**: In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
@@ -53,6 +56,10 @@ Katzenbach and Smith emphasize that not every group is a team, even if they call
 ### Building a team
 
 Tuckman’s model, developed in 1965 by psychologist Bruce Tuckman, describes five stages that teams go through as they form and develop. The Tuckman model remains highly relevant in today’s collaborative environments, including corporate, academic, and community settings.
+
+<center>
+   <img align="center" src="../../../images/organization/team.building.drawio.png" alt="Team building" width="75%" height="75%"/>
+</center>
 
 1. **Forming**: Team members meet and begin to understand their roles and objectives. This stage involves introductions, goal clarification, and initial team planning in project teams.
 2. **Storming**: Conflicts emerge as personalities clash and power dynamics are established. Team members may disagree on strategies, roles, or project timelines. This phase often leads to improved communication and a deeper understanding of team dynamics.
@@ -123,33 +130,26 @@ Kanban is built on several foundational principles that guide its implementation
 Implementing Kanban involves several key steps and practices that help teams transition to this method effectively:
 
 1. **Visualizing Work**: The first step in implementation is creating a Kanban board. This board serves as a visual representation of work items and their statuses, allowing teams to see the flow of work and identify bottlenecks easily. The board typically consists of columns representing different workflow stages, with cards (representing work items) moving through these stages.
-
 2. **Limiting Work in Progress (WiP)**: By setting WiP limits, teams can prevent overloading their capacity and focus on completing tasks before taking on new ones. This pull system ensures that work is only initiated when there is available capacity, promoting efficiency and reducing lead times.
-
 3. **Managing Flow**: Monitoring the flow of work is critical to identifying and addressing issues that impede progress. Teams should regularly assess their processes, look for bottlenecks or blockers, and adapt to ensure a smooth workflow.
-
 4. **Making Policies Explicit**: Documenting and displaying policies related to workflows helps create transparency and clarity. This includes defining what constitutes “done,” establishing criteria for moving work items between stages, and setting rules for prioritizing tasks.
-
 5. **Implementing Feedback Loops**: Regular feedback is essential for continuous improvement. Teams should establish cadences for meetings to discuss performance metrics, address concerns, and collaboratively identify areas for improvement. This could include daily stand-ups, retrospectives, and planning sessions.
-
 6. **Evolving Experimentally**: Kanban encourages teams to adopt an experimental mindset, allowing them to test new practices and refine existing ones based on the outcomes. This iterative approach fosters a culture of innovation and resilience.
 
 ### Events and Meetings Structure
 
 A structured approach to events and meetings is integral to the Kanban method, helping teams maintain communication, evaluate progress, and promote continuous improvement. Here are the key meetings commonly associated with Kanban:
 
+<center>
+   <img align="center" src="../../../images/organization/team.kanban.drawio.png" alt="Kanban" width="75%" height="50%"/>
+</center>
+
 1. **Strategy Review**: The Strategy Review meeting is focused on selecting the services to be provided and defining the concept of “fit for purpose” for those services. It helps teams sense how the external environment changes, allowing them to adapt their service offerings and provide clear direction for future efforts.
-
 2. **Operations Review**: The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery while ensuring alignment with customer expectations and facilitates discussions on improving overall service efficiency.
-
 3. **Risk Review**: The Risk Review is dedicated to understanding and responding to the risks associated with effective service delivery. This meeting typically involves identifying blockers and clustering them to proactively address potential issues, ensuring teams can navigate challenges effectively.
-
 4. **Service Delivery Review**: The Service Delivery Review focuses on examining and improving the effectiveness of a specific service. This meeting looks at performance metrics, customer feedback, and potential enhancements to ensure that the service continues to meet or exceed expectations.
-
 5. **Replenishment Meeting**: The Replenishment Meeting is essential for moving items over the commitment point and into the workflow system. It oversees the preparation of options for future selections, ensuring that the backlog remains aligned with the team’s capacity and priorities.
-
 6. **Kanban Meeting**: Often held daily, the Kanban Meeting is a coordination and self-organization session for those collaborating to deliver the service. Utilizing a stand-up format encourages a short, energetic meeting focused on completing work items and addressing any blockers that may impede progress.
-
 7. **Delivery Planning Meeting**: The Delivery Planning Meeting is designed to monitor and plan deliveries to customers. This meeting helps teams align their efforts with customer needs, ensuring that the right products and services are delivered on time and following customer expectations.
 
 ### Conclusion
@@ -183,6 +183,10 @@ Scrum is built on several principles that guide its practices and processes:
 
 Implementing Scrum involves several key roles, events, and artifacts that help teams organize their work effectively:
 
+<center>
+   <img align="center" src="../../../images/organization/team.scrum.drawio.png" alt="Scrum" width="75%" height="50%"/>
+</center>
+
 ##### Key Roles in Scrum
 
 1. **Scrum Master**: The Scrum Master is a facilitator who helps the team understand and apply Scrum practices. They remove impediments, coach team members, and ensure the Scrum framework is followed.
@@ -191,21 +195,24 @@ Implementing Scrum involves several key roles, events, and artifacts that help t
 
 ##### Scrum Events
 
-Scrum is structured around five key events that provide a framework for teams to plan, execute, and review their work:
+Scrum is structured around six key events that provide a framework for teams to plan, execute, and review their work:
 
-1. **Sprint**: A Sprint is a time-boxed period, typically lasting between one and four weeks, during which the team works to complete a set of backlog items. Each Sprint begins with a Sprint Planning meeting and ends with a Sprint Review and Retrospective.
-2. **Sprint Planning**: This meeting kicks off the Sprint, where the team collaboratively selects items from the product backlog to work on during the Sprint. The team defines the Sprint Goal and creates a plan for delivering the selected items.
-3. **Daily Scrum**: Also known as the daily stand-up, this 15-minute meeting allows team members to synchronize their work, discuss progress, and identify any impediments. It promotes transparency and keeps the team focused on the Sprint Goal.
-4. **Sprint Review**: At the end of each Sprint, the team presents the completed work to stakeholders during the Sprint Review. This event provides an opportunity for feedback, ensuring that the product aligns with customer expectations and market needs.
-5. **Sprint Retrospective**: After the Sprint Review, the team holds a Retrospective to reflect on their performance during the Sprint. They discuss what went well and what could be improved and identify actionable steps for enhancing their processes in the next Sprint.
+1. **Backlog refinement**: Backlog refinement is the continuous process of clarifying, prioritizing, and breaking down backlog items to ensure they are ready for development, aligning the team's work with product goals and upcoming sprint needs. Although not a formal Scrum event, many teams hold regular backlog refinement sessions—often mid-sprint—to collaboratively review and prepare backlog items for the next sprint. This ongoing activity keeps the backlog organized, actionable, and focused on delivering value.
+2. **Sprint**: A Sprint is a time-boxed period, typically lasting between one and four weeks, during which the team works to complete a set of backlog items. Each Sprint begins with a Sprint Planning meeting and ends with a Sprint Review and Retrospective.
+3. **Sprint Planning**: This meeting kicks off the Sprint, where the team collaboratively selects items from the product backlog to work on during the Sprint. The team defines the Sprint Goal and creates a plan for delivering the selected items.
+4. **Daily Scrum**: Also known as the daily stand-up, this 15-minute meeting allows team members to synchronize their work, discuss progress, and identify any impediments. It promotes transparency and keeps the team focused on the Sprint Goal.
+5. **Sprint Review**: At the end of each Sprint, the team presents the completed work to stakeholders during the Sprint Review. This event provides an opportunity for feedback, ensuring that the product aligns with customer expectations and market needs.
+6. **Sprint Retrospective**: After the Sprint Review, the team holds a Retrospective to reflect on their performance during the Sprint. They discuss what went well and what could be improved and identify actionable steps for enhancing their processes in the next Sprint.
 
-##### Scrum Artifacts
+##### Scrum Techniques
 
-Scrum utilizes specific artifacts to provide transparency and facilitate communication:
+Scrum utilizes specific techniques to provide transparency and facilitate communication:
 
 1. **Product Backlog**: The Product Backlog is an ordered list of all desired work on the project. It serves as a single source of truth for the team and is continuously refined to ensure it reflects the current priorities and requirements.
 2. **Sprint Backlog**: The Sprint Backlog is a subset of the Product Backlog that the team commits to completing during a Sprint. It includes the selected items and the plan for delivering them.
 3. **Increment**: The Increment represents the sum of all completed work items at the end of a Sprint. Each Increment should meet the Definition of Done, ensuring that it is potentially shippable and provides value to the customer.
+4. **Definition of Ready (DoR)**: The Definition of Ready is a checklist or set of prerequisites that a Product Backlog Item or user story must satisfy before being accepted into a Sprint. It ensures that the work is well-defined, actionable, and sufficiently prepared for the development team to begin implementation without ambiguity.
+5. **Definition of Done (DoD)**: The Definition of Done is a formalized set of criteria agreed upon by the Scrum Team that determines when a Product Backlog Item, user story, or product increment is considered complete. It ensures that the work is of sufficient quality, meets all specified requirements, and is potentially shippable or usable by the end user.
 
 ### Conclusion
 
@@ -223,9 +230,9 @@ Scrum is a powerful framework that enables teams to deliver high-quality product
 #### Books
 
 * Katzenbach, J. R., & Smith, D. K. [The wisdom of teams: Creating the high-performance organization](https://hbsp.harvard.edu/product/15042-PDF-ENG). Harvard Business School Press, 1993.
-  * **Part I** \
+  * **Part I**\
     Part 1 explains the importance of teams in organizations, emphasizing that teams outperform individuals when tasks require diverse skills and collaboration. It introduces the basic elements of a successful team, including a common purpose, performance goals, complementary skills, and mutual accountability. The section also highlights the challenges teams face and outlines the difference between true teams and non-team groups, like working groups or pseudo-teams.
-  * **Part II** \
+  * **Part II**\
     Part 2 focuses on how groups evolve into real teams by progressing along the "team performance curve." It discusses the stages of team development, from working groups to high-performance teams, emphasizing the importance of moving from individual accountability to collective performance. The section also explores the critical role of team leaders, who must facilitate collaboration rather than dominate, and offers strategies for overcoming common obstacles that teams face during their development.
 * Anderson, David J., and Carmichael, Andy. [Essential Kanban Condensed](https://kanbanbooks.com/essential-kanban-condensed/). Kanban University Press, 2016.
   * Essential Kanban Condensed by David J. Anderson and Andy Carmichael provides a concise overview of the Kanban method, emphasizing its application in managing and improving knowledge work. The book outlines the Kanban method's core values, foundational principles, and essential practices, such as visualizing work, limiting work in progress (WiP), and fostering a culture of continuous improvement. Additionally, it offers practical guidance for implementing Kanban effectively within organizations, promoting transparency, collaboration, and adaptability to enhance overall efficiency.
