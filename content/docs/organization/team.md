@@ -204,13 +204,15 @@ Scrum is structured around six key events that provide a framework for teams to 
 5. **Sprint Review**: At the end of each Sprint, the team presents the completed work to stakeholders during the Sprint Review. This event provides an opportunity for feedback, ensuring that the product aligns with customer expectations and market needs.
 6. **Sprint Retrospective**: After the Sprint Review, the team holds a Retrospective to reflect on their performance during the Sprint. They discuss what went well and what could be improved and identify actionable steps for enhancing their processes in the next Sprint.
 
-##### Scrum Artifacts
+##### Scrum Techniques
 
-Scrum utilizes specific artifacts to provide transparency and facilitate communication:
+Scrum utilizes specific techniques to provide transparency and facilitate communication:
 
 1. **Product Backlog**: The Product Backlog is an ordered list of all desired work on the project. It serves as a single source of truth for the team and is continuously refined to ensure it reflects the current priorities and requirements.
 2. **Sprint Backlog**: The Sprint Backlog is a subset of the Product Backlog that the team commits to completing during a Sprint. It includes the selected items and the plan for delivering them.
 3. **Increment**: The Increment represents the sum of all completed work items at the end of a Sprint. Each Increment should meet the Definition of Done, ensuring that it is potentially shippable and provides value to the customer.
+4. **Definition of Ready (DoR)**: The Definition of Ready is a checklist or set of prerequisites that a Product Backlog Item or user story must satisfy before being accepted into a Sprint. It ensures that the work is well-defined, actionable, and sufficiently prepared for the development team to begin implementation without ambiguity.
+5. **Definition of Done (DoD)**: The Definition of Done is a formalized set of criteria agreed upon by the Scrum Team that determines when a Product Backlog Item, user story, or product increment is considered complete. It ensures that the work is of sufficient quality, meets all specified requirements, and is potentially shippable or usable by the end user.
 
 ### Conclusion
 
