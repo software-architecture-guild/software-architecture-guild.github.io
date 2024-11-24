@@ -67,32 +67,96 @@ requirements.
 The framework offers the following list of viewpoints:
 
 ### The Context Viewpoint
+
 * Purpose: Describes the relationships, dependencies, and interactions between the system and its environment.
 * Key Stakeholders: System architects, analysts, and project managers who need to understand the system's boundaries and interactions with external entities.
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/context_viewpoint_level_2.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+
 
 ### The Functional Viewpoint
 * Purpose: Defines the system's main components and their interactions.
 * Key Stakeholders: System architects, analysts, and developers who need to understand the system's behavior and functionality.
 
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/functional_viewpoint_user_profile.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+
 ### The Information Viewpoint
 * Purpose: Describes the system's data, its structure, and how it is managed.
 * Key Stakeholders: Data architects, analysts, and developers who need to understand the system's data requirements and how it is stored, processed, and protected.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/information_viewpoint_data_model.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
 ### The Concurrency Viewpoint
 * Purpose: Addresses the system's concurrency aspects, such as parallelism and synchronization.
 * Key Stakeholders: System architects, developers, and performance engineers who need to understand how the system will handle concurrent access and avoid performance bottlenecks.
 
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/concurrency_viewpoint_messaging_actors.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+
 ### The Development Viewpoint
 * Purpose: Supports the system's construction, including development processes, tools, and standards.
 * Key Stakeholders: Development teams, project managers, and quality assurance engineers who need to understand the system's development lifecycle and ensure quality.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/development_viewpoint_level_1.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
 ### The Deployment Viewpoint
 * Purpose: Defines the system's runtime environment and how it is deployed.
 * Key Stakeholders: System architects, infrastructure engineers, and operations teams who need to understand the system's hardware and software requirements and how it will be deployed and managed.
 
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/deployment_viewpoint_environment.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+
 ### The Operational Viewpoint
 * Purpose: Addresses the system's operational aspects, such as support, maintenance, and security.
 * Key Stakeholders: Operations teams, support staff, and security personnel who need to understand the system's operational requirements and how it will be maintained and secured.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/operational_viewpoint_level_1.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
 ## Perspectives
 
