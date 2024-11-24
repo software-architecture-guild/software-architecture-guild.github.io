@@ -1,6 +1,6 @@
 ---
 weight: 620
-title: "C4 Framework"
+title: "C4 Model"
 description: ""
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
@@ -10,9 +10,6 @@ toc: true
 ---
 
 ## TODO
-
-- C4 framework overview - use original images, keep references to respect the
-  license
 
 The **C4 model** is a hierarchical framework designed for visualizing the
 architecture of software systems. It emphasizes **clarity and simplicity**, making
