@@ -1,5 +1,5 @@
 ---
-weight: 620
+weight: 621
 title: "Viewpoints and Perspectives"
 description: ""
 icon: "document_scanner"
@@ -8,6 +8,11 @@ lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
 ---
+
+## TODO
+
+- In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
+  what should there be, what shouldn't there be.
 
 The **Viewpoints and Perspectives** is another architectural framework. It is
 lightweight, versatile adaptable, as it is unbound by any specific tool

@@ -1,6 +1,6 @@
 ---
-weight: 600
-title: "Overview"
+weight: 610
+title: "Architecture Viewpoints Overview"
 description: ""
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
@@ -8,13 +8,6 @@ lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
 ---
-
-## TODO
-
-- C4 framework overview - use original images, keep references to respect the
-  license
-- In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
-  what should there be, what shouldn't there be.
 
 ## Introduction
 
@@ -27,6 +20,8 @@ together. It helps in establishing a common language and understanding among
 stakeholders, from developers to project managers, thus minimizing ambiguity and
 aligning everyone towards shared goals.
 Definition of Architectural Framework
+
+
 
 An architectural framework is a comprehensive set of principles, guidelines, and
 best practices that inform the design, development, and documentation of
@@ -41,6 +36,14 @@ frameworks emphasize thorough documentation and well-defined processes,
 providing a comprehensive structure that can be beneficial in large, complex
 projects. The choice between these frameworks often depends on the project's
 size, complexity, and the team's familiarity with formal methodologies.
+
+The choice of architectural framework depends on the specific needs and context
+of the project. For example, the C4, 4+1 may be suitable for smaller projects,
+while TOGAF may be more appropriate for large, complex organizations.
+Ultimately, the goal is to select a framework that helps you effectively design,
+document, and communicate your software architecture.
+
+## Well Known Frameworks
 
 The C4, Viewpoints and Perspective, 4+1, TOGAF are popular architectural
 frameworks used in software development.
@@ -61,11 +64,8 @@ frameworks used in software development.
   systems. It is particularly useful for large organizations that need to manage
   complex IT landscapes.
 
-The choice of architectural framework depends on the specific needs and context
-of the project. For example, the C4, 4+1 may be suitable for smaller projects,
-while TOGAF may be more appropriate for large, complex organizations.
-Ultimately, the goal is to select a framework that helps you effectively design,
-document, and communicate your software architecture.
+## Choosing the Framework
+
 
 ## Recommended Reading
 
