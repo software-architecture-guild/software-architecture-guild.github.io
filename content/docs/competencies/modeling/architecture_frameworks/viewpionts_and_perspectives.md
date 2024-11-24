@@ -1,6 +1,6 @@
 ---
 weight: 620
-title: "Architecture Frameworks"
+title: "Viewpoints and Perspectives"
 description: ""
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
@@ -9,96 +9,13 @@ draft: false
 toc: true
 ---
 
-## TODO
-
-- C4 framework overview - use original images, keep references to respect the
-  license
-- C4 separate article.
-- Viewpoints separate article
-- In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
-  what should there be, what shouldn't there be.
-- TODO: move "choosing" and merge with introduction.
-
-## Introduction
-
-In today's fast-paced software development environment, the use of an
-architectural framework is crucial for ensuring clear communication,
-collaboration, and consistency across teams. An architectural framework provides
-a structured approach to documenting and visualizing complex software systems,
-making it easier to understand how different components interact and fit
-together. It helps in establishing a common language and understanding among
-stakeholders, from developers to project managers, thus minimizing ambiguity and
-aligning everyone towards shared goals.
-Definition of Architectural Framework
-
-An architectural framework is a comprehensive set of principles, guidelines, and
-best practices that inform the design, development, and documentation of
-software systems. It serves as a blueprint that dictates how different
-components of a system should interact, and how they should be organized and
-managed.
-
-Architectural frameworks exist along a spectrum from lightweight to strict (or
-mature) frameworks. Lightweight frameworks prioritize flexibility and agility,
-often focusing on minimal documentation and rapid iteration. In contrast, strict
-frameworks emphasize thorough documentation and well-defined processes,
-providing a comprehensive structure that can be beneficial in large, complex
-projects. The choice between these frameworks often depends on the project's
-size, complexity, and the team's familiarity with formal methodologies.
-
-## C4 Framework Overview
-
-The C4 model is a hierarchical framework designed for visualizing the
-architecture of software systems. It emphasizes clarity and simplicity, making
-it accessible for both technical and non-technical stakeholders. The framework
-consists of a set of diagram types that represent different levels of
-abstraction, enabling users to convey the architecture of a system effectively.
-It is tool-agnostic, allowing various tools to be employed for creating the
-diagrams.
-
-One of the significant benefits of the C4 model is its "zoom-in" approach,
-allowing stakeholders to navigate from high-level diagrams to more detailed
-ones. For example, an element depicted in the context diagram can be further
-elaborated in a container diagram, and each container can be broken down into
-its components in subsequent diagrams. This hierarchical representation not only
-facilitates a deeper understanding of each element but also ensures that each
-diagram serves a specific purpose while contributing to the overall narrative of
-the system architecture.
-
-### Diagram Types
-
-- Context Diagram: Provides a high-level overview of the system and its
-  interactions with external entities. This diagram sets the stage for
-  understanding how the system fits into its broader environment.
-- Container Diagram: Breaks down the system into its major containers,
-  illustrating relationships between them. This level of detail allows
-  stakeholders to see how different parts of the system interact.
-- Component Diagram: Offers a detailed view of the components within a specific
-  container and their interactions. This helps in understanding the internal
-  structure of the container and how components collaborate to fulfill system
-  requirements.
-- Code Diagram: Focuses on the implementation level, typically showing classes
-  or modules within a component. This diagram is particularly useful for
-  developers to grasp the details of the code structure.
-
-### Static vs. Dynamic Diagrams
-
-In addition to the various diagram types, it’s essential to understand the
-distinction between static and dynamic diagrams. Static diagrams illustrate the
-structure of a system at a specific point in time, detailing its components and
-their relationships. Dynamic diagrams, on the other hand, depict how the system
-behaves over time, showcasing interactions and processes as they occur. This
-differentiation helps stakeholders appreciate both the architectural layout and
-the functional behavior of the system.
-
-## Viewpoints and Perspectives Framework Overview
-
 The **Viewpoints and Perspectives** is another architectural framework. It is
 lightweight, versatile adaptable, as it is unbound by any specific tool
 depencencies. At the same time various diagramming tools can be used to support
 the work in this framework style, promoting efficient collaboration and
 customization.
 
-### The Need for Multiple Views
+## The Need for Multiple Views
 
 When designing complex software systems, it's crucial to avoid the trap of
 representing the entire architecture in a single, **monolithic model**. Such an
@@ -109,7 +26,7 @@ descried by into multiple, **interconnected views**, each focusing on a specific
 aspect of the system. This allows for a **better understanding**, management of
 complexity, and **effective communication** with various stakeholders.
 
-### General Overview
+## General Overview
 
 The framework of viewpoints and perspectives provides a structured and
 comprehensive approach to capturing and representing software architecture.
@@ -119,7 +36,7 @@ desired **quality requirements**. This collaborative approach promotes better
 communication, understanding, and decision-making throughout the development
 process.
 
-### Definitions
+## Definitions
 
 The framework gives a few definitions, crucial to it's understanding and
 application:
@@ -140,97 +57,68 @@ focus differs. Viewpoints primarily define the structure and content of views,
 while perspectives focus on ensuring the architecture meets specific quality
 requirements.
 
-### Viewpoints
+## Viewpoints
 
 The framework offers the following list of viewpoints:
 
-#### The Context Viewpoint
+### The Context Viewpoint
 * Purpose: Describes the relationships, dependencies, and interactions between the system and its environment.
 * Key Stakeholders: System architects, analysts, and project managers who need to understand the system's boundaries and interactions with external entities.
 
-#### The Functional Viewpoint
+### The Functional Viewpoint
 * Purpose: Defines the system's main components and their interactions.
 * Key Stakeholders: System architects, analysts, and developers who need to understand the system's behavior and functionality.
 
-#### The Information Viewpoint
+### The Information Viewpoint
 * Purpose: Describes the system's data, its structure, and how it is managed.
 * Key Stakeholders: Data architects, analysts, and developers who need to understand the system's data requirements and how it is stored, processed, and protected.
 
-#### The Concurrency Viewpoint
+### The Concurrency Viewpoint
 * Purpose: Addresses the system's concurrency aspects, such as parallelism and synchronization.
 * Key Stakeholders: System architects, developers, and performance engineers who need to understand how the system will handle concurrent access and avoid performance bottlenecks.
 
-#### The Development Viewpoint
+### The Development Viewpoint
 * Purpose: Supports the system's construction, including development processes, tools, and standards.
 * Key Stakeholders: Development teams, project managers, and quality assurance engineers who need to understand the system's development lifecycle and ensure quality.
 
-#### The Deployment Viewpoint
+### The Deployment Viewpoint
 * Purpose: Defines the system's runtime environment and how it is deployed.
 * Key Stakeholders: System architects, infrastructure engineers, and operations teams who need to understand the system's hardware and software requirements and how it will be deployed and managed.
 
-#### The Operational Viewpoint
+### The Operational Viewpoint
 * Purpose: Addresses the system's operational aspects, such as support, maintenance, and security.
 * Key Stakeholders: Operations teams, support staff, and security personnel who need to understand the system's operational requirements and how it will be maintained and secured.
 
-### Perspectives
+## Perspectives
 
-#### Security
+### Security
 * Purpose: Ensures controlled access to sensitive system resources.
 * Key Stakeholders: Security architects, analysts, and developers who need to understand the system's security requirements and how to protect it from unauthorized access and attacks.
 
-#### Performance and Scalability
+### Performance and Scalability
 * Purpose: Addresses the system's performance requirements and ability to handle increasing workloads.
 * Key Stakeholders: Performance engineers, architects, and operations teams who need to ensure that the system meets its performance targets and can scale to handle future growth.
 
-#### Availability and Resilience
+### Availability and Resilience
 * Purpose: Ensures system availability and ability to cope with failures.
 * Key Stakeholders: Operations teams, architects, and reliability engineers who need to understand the system's availability requirements and how to ensure its resilience to failures.
 
-#### Evolution
+### Evolution
 * Purpose: Ensures the system can adapt to changes.
 * Key Stakeholders: System architects, analysts, and project managers who need to understand the system's future needs and how it can be adapted to accommodate changes.
 
-#### Regulation
+### Regulation
 * Purpose: Ensures compliance with laws, regulations, and standards.
 * Key Stakeholders: Legal counsel, compliance officers, and system architects who need to understand the system's regulatory requirements and how to ensure compliance.
 
-### Conclusion
+## Conclusion
 
 The framework provides a comprehencive overview of the architecture from
 different aspects using various predefined viewponts and perspectives. By
 utilising them architects can promote better communication, understanding, and
 decision-making throughout the development process.
 
-## Choosing the Architecture Framework
-
-The 4+1, TOGAF, are other popular architectural frameworks used in
-software development.
-
-- The 4+1 view model is a well-established framework that focuses on four
-  primary views: logical, process, physical, and development, along with
-  scenario-based use cases to capture system behavior. It provides a structured
-  approach to understanding and documenting complex software systems.
-- TOGAF is a comprehensive framework for enterprise architecture that provides a
-  set of guidelines and tools for designing, planning, and implementing IT
-  systems. It is particularly useful for large organizations that need to manage
-  complex IT landscapes.
-
-The choice of architectural framework depends on the specific needs and context
-of the project. For example, the C4, 4+1 may be suitable for smaller projects,
-while TOGAF may be more appropriate for large, complex organizations.
-Ultimately, the goal is to select a framework that helps you effectively design,
-document, and communicate your software architecture.
-
 ## Recommended Reading
-
-##### Articles
-
-* Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.
-  Detailed description of the C4 architecture framework.
-* Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*.
-  Detailed description of the "4+1" architecture framework.
-* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.
-  Detailed description of the "TOGAF" architecture framework.
 
 ##### Books
 
