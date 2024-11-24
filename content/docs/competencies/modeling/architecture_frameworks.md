@@ -11,17 +11,13 @@ toc: true
 
 ## TODO
 
-- all headers should start from size 2 (3, 4 are the same, the difference is
-  presence in TOC)
 - C4 framework overview - use original images, keep references to respect the
   license
 - C4 separate article.
 - Viewpoints separate article
-  In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
+- In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
   what should there be, what shouldn't there be.
 - TODO: move "choosing" and merge with introduction.
-- Update the link to TOGAF 10: 
-
 
 ## Introduction
 
@@ -51,10 +47,22 @@ size, complexity, and the team's familiarity with formal methodologies.
 
 ## C4 Framework Overview
 
-The C4 model is a hierarchical framework designed for visualizing the architecture of software systems. It emphasizes clarity and simplicity, making it accessible for both technical and non-technical stakeholders. The framework consists of a set of diagram types that represent different levels of abstraction, enabling users to convey the architecture of a system effectively. It is tool-agnostic, allowing various tools to be employed for creating the diagrams.
-Diagram Types
+The C4 model is a hierarchical framework designed for visualizing the
+architecture of software systems. It emphasizes clarity and simplicity, making
+it accessible for both technical and non-technical stakeholders. The framework
+consists of a set of diagram types that represent different levels of
+abstraction, enabling users to convey the architecture of a system effectively.
+It is tool-agnostic, allowing various tools to be employed for creating the
+diagrams.
 
-One of the significant benefits of the C4 model is its "zoom-in" approach, allowing stakeholders to navigate from high-level diagrams to more detailed ones. For example, an element depicted in the context diagram can be further elaborated in a container diagram, and each container can be broken down into its components in subsequent diagrams. This hierarchical representation not only facilitates a deeper understanding of each element but also ensures that each diagram serves a specific purpose while contributing to the overall narrative of the system architecture.
+One of the significant benefits of the C4 model is its "zoom-in" approach,
+allowing stakeholders to navigate from high-level diagrams to more detailed
+ones. For example, an element depicted in the context diagram can be further
+elaborated in a container diagram, and each container can be broken down into
+its components in subsequent diagrams. This hierarchical representation not only
+facilitates a deeper understanding of each element but also ensures that each
+diagram serves a specific purpose while contributing to the overall narrative of
+the system architecture.
 
 ### Diagram Types
 
