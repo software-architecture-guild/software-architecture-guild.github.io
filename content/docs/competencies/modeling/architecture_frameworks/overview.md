@@ -1,6 +1,6 @@
 ---
 weight: 610
-title: "Architecture Viewpoints Overview"
+title: "Architecture Frameworks Overview"
 description: ""
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
@@ -57,9 +57,6 @@ frameworks used in software development.
   set of guidelines and tools for designing, planning, and implementing IT
   systems. It is particularly useful for large organizations that need to manage
   **complex IT landscapes**.
-
-## Choosing the Framework
-
 
 ## Recommended Reading
 
