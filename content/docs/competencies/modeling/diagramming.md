@@ -28,83 +28,13 @@ And move to the last paragraph.
 
 Align order to editorial writing approach.
 
-Modeling = framework
-Representing = diagramming approach
+## Diagramming tools and Architecture frameworks
 
+TODO: explain the difference, specifically;
+Modeling = framework = domain language
+Representing = diagramming approach = tool for visualising
 
-### Introduction to Visual Communication in Software Architecture
-
-Visual literacy is an essential skill for software architects, allowing them to
-communicate complex system designs effectively. Many architectural decisions are
-difficult to convey through text alone, making visuals crucial for expressing
-technical details. That explains the need for clear, **purposeful** diagrams that
-balance detailed information with accessibility, ensuring that these visuals
-serve their intended audience. By mastering visual communication, architects can
-improve **collaboration** and **decision-making** across diverse teams.
-
-### Key Concepts and Patterns for Effective Visual Communication
-
-#### Know Your Audience
-
-The effectiveness of a diagram depends on understanding who will be viewing it.
-Different audiences - developers, architects, product owners - require various
-**levels of technical detail**. For instance, while a UML diagram might be suitable
-for developers, a high-level C4 context diagram may be more appropriate for
-non-technical stakeholders. **Tailoring the diagram’s complexity** to the
-audience's technical knowledge is essential for effective communication.
-
-#### Levels of Abstraction
-
-Levels of abstraction help **manage complexity** by dividing a system’s components
-into digestible layers. Diagrams should avoid mixing high-level overviews with
-low-level details, as this can confuse the audience. The C4 model is an
-excellent example of how to separate abstractions into system context,
-container, and component views, each **focusing on a specific aspect** of the
-architecture. This **separation** makes it easier for audiences to understand the
-system at different levels.
-
-#### Representational Consistency
-
-Maintaining consistency across diagrams ensures that audiences can follow the
-relationships between various system components. By using **uniform** symbols,
-labels, and notations, architects can guide the viewer through different
-abstraction levels, **reducing the cognitive load**. Consistent representation also
-aids in connecting high-level architectural concepts with detailed
-implementation specifics, making the overall system easier to comprehend.
-
-#### Balancing Clarity and Accessibility
-
-Effective diagrams strike a **balance** between **clarity** and the **amount of
-information** presented. Too much detail can overwhelm the viewer, while too
-little can obscure key points. When using **colors**, it’s important to note
-that relying on them as the primary means of conveying information can lead to
-maintenance challenges. Colors may not be consistently available across
-different contexts, such as printed materials or digital displays, making it
-hard to maintain clear color coding throughout. Therefore, colors should be used
-as an **auxiliary source** of information, supplementing more robust forms of
-communication like **labels and symbols**. This approach ensures that diagrams
-remain informative regardless of the medium or setting.
-
-#### Ensuring Tool Support for Visual Accessibility
-
-Visualization tools should support features that help create **accessible**
-diagrams. These tools should allow for color contrast adjustments and provide
-options for differentiating elements using patterns or labels instead of relying
-solely on color. Accessibility checks should be integrated to ensure that
-diagrams can be **understood by all** audience members, including those with
-visual impairments. By utilizing these features, architects can create diagrams
-that are universally accessible.
-
-#### Consistency Across Diagrams
-
-Ensuring **consistency** across diagrams is critical for maintaining a coherent
-narrative through different abstraction levels. Tools that support shared
-**templates**, standardized labeling, and uniform styles help create a consistent
-look across all diagrams. This allows the audience to **easily follow** the
-relationships between different components without confusion, making complex
-systems more understandable.
-
-### Choosing the Right Tooling for Diagramming
+## Choosing the Right Tooling for Diagramming
 
 Choosing the right **diagramming tool** is essential for creating effective,
 maintainable diagrams. The following features should be considered when
@@ -138,17 +68,36 @@ selecting a tool:
 Selecting a tool that offers these features ensures that diagrams are not only
 effective but also easy to manage throughout a project’s lifecycle.
 
-### C4 + Viewpoints and Perspectives
+## C4 + Viewpoints and Perspectives
 
-The integration of the C4 modeling language with the viewpoints and perspectives framework enhances software architecture visualization by clearly depicting components and addressing stakeholder concerns. This approach is particularly effective because both frameworks are tool agnostic, allowing representations to be adapted to various tools and contexts. This synergy fosters understanding and collaboration, supporting informed architectural decisions that balance technical and stakeholder priorities.
+The integration of the C4 modeling language with the viewpoints and perspectives
+framework enhances software architecture visualization by clearly depicting
+components and addressing stakeholder concerns. This approach is particularly
+effective because both frameworks are tool agnostic, allowing representations to
+be adapted to various tools and contexts. This synergy fosters understanding and
+collaboration, supporting informed architectural decisions that balance
+technical and stakeholder priorities.
 
-#### Practical Application
+### Practical Application
 
-The "zooming in" feature of the C4 model is instrumental in isolating specific levels of detail, making it an effective tool for managing architectural complexity. This approach is particularly valuable in diagrams with naturally nested components, such as functional, deployment, and informational diagrams. For instance, a high-level context diagram may illustrate the system's external interactions and stakeholders. From this overview, the diagram can zoom in to reveal containers that represent applications or services, detailing their interactions and responsibilities.
+The "zooming in" feature of the C4 model is instrumental in isolating specific
+levels of detail, making it an effective tool for managing architectural
+complexity. This approach is particularly valuable in diagrams with naturally
+nested components, such as functional, deployment, and informational diagrams.
+For instance, a high-level context diagram may illustrate the system's external
+interactions and stakeholders. From this overview, the diagram can zoom in to
+reveal containers that represent applications or services, detailing their
+interactions and responsibilities.
 
-As the diagram unfolds to show more detail, individual components within each container can be highlighted, illustrating how they collaborate to fulfill system functions. This iterative process enables stakeholders to engage with the architecture at varying levels of abstraction, facilitating discussions that are relevant to their interests. By using the zooming feature, complex information can be communicated in a manageable way, ensuring that all stakeholders remain informed and aligned throughout the development process.
+As the diagram unfolds to show more detail, individual components within each
+container can be highlighted, illustrating how they collaborate to fulfill
+system functions. This iterative process enables stakeholders to engage with the
+architecture at varying levels of abstraction, facilitating discussions that are
+relevant to their interests. By using the zooming feature, complex information
+can be communicated in a manageable way, ensuring that all stakeholders remain
+informed and aligned throughout the development process.
 
-#### Required Tooling Support
+### Required Tooling Support
 
 To effectively implement the C4 + viewpoints approach, diagramming tools must
 include the following features:
@@ -158,9 +107,11 @@ include the following features:
 - **Hyperlinking**: Enables connections between different levels of detail,
   facilitating navigation from high-level views to detailed component diagrams.
 
-Incorporating these capabilities will enhance the effectiveness of the C4 model and viewpoints framework, ensuring architecture visualizations remain intuitive and accessible for all stakeholders.
+Incorporating these capabilities will enhance the effectiveness of the C4 model
+and viewpoints framework, ensuring architecture visualizations remain intuitive
+and accessible for all stakeholders.
 
-### Diagramming Tools Options
+## Diagramming Tools Options
 
 When selecting architecture diagramming tools, we can classify them into two
 categories: architecture-specific and general-purpose tools. Each category
