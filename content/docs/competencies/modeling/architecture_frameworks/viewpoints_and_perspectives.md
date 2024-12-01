@@ -224,7 +224,7 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 This is a list of most frequently used perspectives. Other perspectives can be
 found in the original book.
 
-### Security
+### Security Perspective
 
 * **Purpose**: Ensure that the system is protected against unauthorized access,
   breaches, and other security threats.
@@ -235,7 +235,9 @@ found in the original book.
 * **What is irrelevant**: Non-security-related functional requirements or
   aesthetic UI details.
 
-### Performance and Scalability
+Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master/security_perspective)
+
+### Performance and Scalability Perspective
 
 * **Purpose**: Ensure the system meets performance targets and scales
   effectively under increased load.
@@ -246,7 +248,7 @@ found in the original book.
 * **What is irrelevant**: Detailed functional workflows unrelated to performance
   or scalability.
 
-### Availability and Persistence
+### Availability and Persistence Perspective
 
 * **Purpose**: Ensure the system is consistently accessible and reliably stores
   critical data.
@@ -257,7 +259,7 @@ found in the original book.
 * **What is irrelevant**: Transient debugging or testing configurations that do
   not contribute to reliability.
 
-### Evolution
+### Evolution Perspective
 
 * **Purpose**: Ensure the system can adapt to changing requirements,
   technologies, and business needs.
@@ -268,7 +270,7 @@ found in the original book.
 * **What is irrelevant**: Overly specific implementation details tied to current
   technologies that hinder adaptability.
 
-### Regulation
+### Regulation Perspective
 
 * **Purpose**: Ensure the system complies with relevant legal, industry, and
   organizational standards.
