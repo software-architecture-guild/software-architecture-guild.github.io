@@ -238,7 +238,9 @@
                         color: var(--sidebar-primary);
                     }
                 }
-
+                .sibebar-icon {
+                    background-color: var(--sidebar-icon-bg);
+                }
                 .sidebar-submenu {
                     display: none;
                     ul {
