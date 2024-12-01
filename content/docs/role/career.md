@@ -1,7 +1,7 @@
 ---
 weight: 590
 title: "Career"
-description: "Developing a Career Path as a Software Architect"
+description: "This article explores how to develop a career path as a Software Architect."
 icon: "article"
 date: "2024-10-27T15:41:57+01:00"
 lastmod: "2024-10-27T15:41:57+01:00"

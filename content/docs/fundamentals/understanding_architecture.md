@@ -1,7 +1,7 @@
 ---
 weight: 310
 title: "Understanding Architecture"
-description: "Build a foundational understanding of Architecture and how it differs from design."
+description: "This article will help you to develop a foundational understanding of Architecture and its distinction from design."
 icon: "article"
 date: "2024-09-11T08:34:36+02:00"
 lastmod: "2024-09-11T08:34:36+02:00"

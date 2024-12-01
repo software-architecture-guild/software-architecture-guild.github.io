@@ -1,7 +1,7 @@
 ---
 weight: 340
 title: "Architecture Process"
-description: "Learn how the architecture process looks to produce an architecture."
+description: "This article explains how the architectural process works to produce architecture."
 icon: "schema"
 date: "2024-09-11T08:35:09+02:00"
 lastmod: "2024-09-11T08:35:09+02:00"

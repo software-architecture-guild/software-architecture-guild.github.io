@@ -1,7 +1,7 @@
 ---
 weight: 520
 title: "Classification"
-description: "Describes what kinds of Architects exist."
+description: "This article explains the different types of Architects."
 icon: "article"
 date: "2024-10-26T11:26:00+02:00"
 lastmod: "2024-10-26T11:26:00+02:00"
