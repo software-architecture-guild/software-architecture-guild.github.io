@@ -1,7 +1,7 @@
 ---
 weight: 630
 title: "Diagramming"
-description: ""
+description: "Explain how diagramming approaches complement architectural frameworks. Provide choosing guidance."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 610
 title: "Architecture Frameworks Overview"
-description: ""
+description: "Justify the need and explain benefits of using architectural frameworks"
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

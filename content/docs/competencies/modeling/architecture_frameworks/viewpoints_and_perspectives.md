@@ -1,7 +1,7 @@
 ---
 weight: 621
 title: "Viewpoints and Perspectives"
-description: ""
+description: "Provide overview of Viewpoints and Perspectives Architectural Framework"
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

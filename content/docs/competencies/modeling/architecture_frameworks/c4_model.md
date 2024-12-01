@@ -1,7 +1,7 @@
 ---
 weight: 620
 title: "C4 Model"
-description: ""
+description: "Provide overview of C4 Model as an Architectural Framework"
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
