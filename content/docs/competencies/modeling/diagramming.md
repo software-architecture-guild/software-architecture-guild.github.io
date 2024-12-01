@@ -86,6 +86,13 @@ even the most complex solutions. The C4 model does not dictate a specific tool,
 so **multiple diagramming options** are available to best match the needs of the
 solution.
 
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/context_viewpoint_level_2.jpg"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+
 An example of such an approach can be found in
 [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master/context_viewpoint).
 The frameworks (Viewpoints) approach to describing the solution is used, while
