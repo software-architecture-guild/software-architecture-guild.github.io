@@ -9,6 +9,9 @@ draft: false
 toc: true
 ---
 
+- In the article use images from Katas. Describe in 1-2 paragraphs: purpose,
+  what should there be, what shouldn't there be.
+
 The **Viewpoints and Perspectives** is another architectural framework. It is
 lightweight, versatile adaptable, as it is unbound by any specific tool
 depencencies. At the same time various diagramming tools can be used to support
@@ -63,13 +66,10 @@ The framework offers the following list of viewpoints:
 
 ### The Context Viewpoint
 
-* **Purpose**: To show the system's scope and boundaries by describing its
-  interactions with external entities.
-* **Key Stakeholders**: Business owners, end users, external system owners (to
-  ensure clear interfaces and boundaries).
+* **Purpose**: To show the system's scope and boundaries by describing its interactions with external entities.
+* **Key Stakeholders**: Business owners, end users, external system owners (to ensure clear interfaces and boundaries).
 * **Concerns**:
-  - Key external entities interacting with the system (e.g., users, other
-    systems).
+  - Key external entities interacting with the system (e.g., users, other systems).
   - High-level descriptions of interfaces and data exchanged.
   - Overall environment and dependencies.
 * **What is irrelevant**:
@@ -88,8 +88,7 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 
 ### The Functional Viewpoint
 
-* **Purpose**: To describe the system's functional structure and how its
-  functions work together to fulfill requirements.
+* **Purpose**: To describe the system's functional structure and how its functions work together to fulfill requirements.
 * **Key Stakeholders**: Product owners, system designers, test engineers.
 * **Concerns**:
   - Functional decomposition into modules or components.
@@ -110,8 +109,7 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 
 ### The Information Viewpoint
 
-* **Purpose**: To define the structure, semantics, and usage of the system’s
-  information.
+* **Purpose**: To define the structure, semantics, and usage of the system’s information.
 * **Key Stakeholders**: Data architects, developers, business analysts.
 * **Concerns**:
   - Data models (conceptual, logical, or physical).
@@ -132,8 +130,7 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 
 ### The Concurrency Viewpoint
 
-* **Purpose**: To describe how the system handles multiple tasks and processes
-  simultaneously.
+* **Purpose**: To describe how the system handles multiple tasks and processes simultaneously.
 * **Key Stakeholders**: System architects, developers, performance engineers.
 * **Concerns**:
   - Processes, threads, or tasks and their interactions.
@@ -154,14 +151,13 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 
 ### The Development Viewpoint
 
-* **Purpose**: To describe the software's modular structure and its organization
-  for efficient development.
+* **Purpose**: To describe the software's modular structure and its organization for efficient development.
 * **Key Stakeholders**: Developers, build engineers.
 * **Concerns**:
   - Modules, packages, or components and their dependencies.
   - Layered architecture or build-time structure.
   - Source control and integration guidelines.
-* **What is irrelevant**:
+What **is irrelevant**:
   - Runtime behavior or deployment information.
   - Detailed user interactions or workflows.
 
@@ -176,15 +172,13 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 
 ### The Deployment Viewpoint
 
-* **Purpose**: To show how the system is deployed across hardware and other
-  platforms.
-* **Key Stakeholders**: Infrastructure engineers, operations teams, performance
-  engineers.
+* **Purpose**: To show how the system is deployed across hardware and other platforms.
+* **Key Stakeholders**: Infrastructure engineers, operations teams, performance engineers.
 * **Concerns**:
   - Hardware or cloud resources and their configurations.
   - Deployment of software components to nodes or devices.
   - Communication pathways and their performance constraints.
-* **What is irrelevant**:
+What **is irrelevant**:
   - Detailed internal behaviors of software components.
   - Design-time or source-level module structures.
 
@@ -200,8 +194,7 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 ### The Operational Viewpoint
 
 * **Purpose**: To describe the system’s operational and maintenance processes.
-* **Key Stakeholders**: Support teams, operations engineers, system
-  administrators.
+* **Key Stakeholders**: Support teams, operations engineers, system administrators.
 * **Concerns**:
   - Monitoring, logging, and alerting mechanisms.
   - Backup, recovery, and failover strategies.
@@ -226,58 +219,38 @@ found in the original book.
 
 ### Security
 
-* **Purpose**: Ensure that the system is protected against unauthorized access,
-  breaches, and other security threats.
-* **Key Stakeholders**: Security architects, developers, system administrators,
-  compliance officers.
-* **Concerns**: Threat models, access controls, encryption protocols, security
-  policies, and mitigation strategies.
-* **What is irrelevant**: Non-security-related functional requirements or
-  aesthetic UI details.
+* **Purpose**: Ensure that the system is protected against unauthorized access, breaches, and other security threats.
+* **Key Stakeholders**: Security architects, developers, system administrators, compliance officers.
+* **Concerns**: Threat models, access controls, encryption protocols, security policies, and mitigation strategies.
+* **What is irrelevant**: Non-security-related functional requirements or aesthetic UI details.
 
 ### Performance and Scalability
 
-* **Purpose**: Ensure the system meets performance targets and scales
-  effectively under increased load.
-* **Key Stakeholders**: Performance engineers, developers, infrastructure
-  architects, product managers.
-* **Concerns**: Response times, throughput, resource utilization, load
-  distribution, and scaling mechanisms.
-* **What is irrelevant**: Detailed functional workflows unrelated to performance
-  or scalability.
+* **Purpose**: Ensure the system meets performance targets and scales effectively under increased load.
+* **Key Stakeholders**: Performance engineers, developers, infrastructure architects, product managers.
+* **Concerns**: Response times, throughput, resource utilization, load distribution, and scaling mechanisms.
+* **What is irrelevant**: Detailed functional workflows unrelated to performance or scalability.
 
 ### Availability and Persistence
 
-* **Purpose**: Ensure the system is consistently accessible and reliably stores
-  critical data.
-* **Key Stakeholders**: System administrators, database architects,
-  infrastructure engineers, business continuity planners.
-* **Concerns**: Redundancy strategies, failover mechanisms, backup plans, and
-  data replication.
-* **What is irrelevant**: Transient debugging or testing configurations that do
-  not contribute to reliability.
+* **Purpose**: Ensure the system is consistently accessible and reliably stores critical data.
+* **Key Stakeholders**: System administrators, database architects, infrastructure engineers, business continuity planners.
+* **Concerns**: Redundancy strategies, failover mechanisms, backup plans, and data replication.
+* **What is irrelevant**: Transient debugging or testing configurations that do not contribute to reliability.
 
 ### Evolution
 
-* **Purpose**: Ensure the system can adapt to changing requirements,
-  technologies, and business needs.
-* **Key Stakeholders**: Solution architects, developers, product managers,
-  enterprise architects.
-* **Concerns**: Dependency diagrams, modular designs, upgrade plans, and
-  mechanisms for change management.
-* **What is irrelevant**: Overly specific implementation details tied to current
-  technologies that hinder adaptability.
+* **Purpose**: Ensure the system can adapt to changing requirements, technologies, and business needs.
+* **Key Stakeholders**: Solution architects, developers, product managers, enterprise architects.
+* **Concerns**: Dependency diagrams, modular designs, upgrade plans, and mechanisms for change management.
+* **What is irrelevant**: Overly specific implementation details tied to current technologies that hinder adaptability.
 
 ### Regulation
 
-* **Purpose**: Ensure the system complies with relevant legal, industry, and
-  organizational standards.
-* **Key Stakeholders**: Compliance officers, legal teams, auditors, product
-  managers.
-* **Concerns**: Regulatory requirements, audit trails, adherence to data privacy
-  standards, and certification needs.
-* **What is irrelevant**: Internal operational processes or technical details
-  not tied to compliance requirements.
+* **Purpose**: Ensure the system complies with relevant legal, industry, and organizational standards.
+* **Key Stakeholders**: Compliance officers, legal teams, auditors, product managers.
+* **Concerns**: Regulatory requirements, audit trails, adherence to data privacy standards, and certification needs.
+* **What is irrelevant**: Internal operational processes or technical details not tied to compliance requirements.
 
 ### Conclusion
 
