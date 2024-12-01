@@ -11,149 +11,174 @@ toc: true
 
 ## TODO:
 
-Link to archimate
 https://pubs.opengroup.org/architecture/archimate3-doc/
 
-C4+Viewpoints + Perspectives
-TOGAF + Archimate
 
-TODO: extend C4+viewpoints
-new structure:
+## The Power of Diagramming
 
-Integrating Architectural Frameworks with Diagramming Approaches.
-> Out of the box support: TOGAF + Archimate (tool)
-> Custom design: Example combining Viewpoints and Perspectives + C4 (approach) e.g. from Katas.
+Diagrams simplify **complex systems**, turning abstract ideas into clear visuals
+that everyone—**technical** and **non-technical** alike—can understand. They
+improve **communication**, support **decision-making**, and provide a **shared
+understanding** across teams, reducing ambiguity and errors. For architects,
+diagrams serve as both a communication tool and a **record of design
+decisions**, making the evolution of the architecture clearer and easier to
+track.
 
-And move to the last paragraph.
+Using **standard frameworks** in diagrams ensures **consistency**, aiding
+**collaboration** and speeding up development by presenting the architecture in
+an accessible and organized manner.
 
-Align order to editorial writing approach.
+## Difference Between an Architectural Framework and Diagramming Approach
 
-## Diagramming tools and Architecture frameworks
+**Architectural frameworks** provide a **semantical** and **logical model** for
+describing a system's structure, components, and relationships. They define the
+key concepts, terms, and abstractions that represent the system’s architecture.
+On the other hand, **diagramming approaches** focus on **capturing**,
+**visualizing**, and **representing** the knowledge described by an
+architectural framework. While frameworks offer the logical foundation and rules
+for system design, diagramming approaches focus on effectively communicating
+  that design through visuals, turning abstract concepts into understandable
+  representations.
 
-TODO: explain the difference, specifically;
-Modeling = framework = domain language
-Representing = diagramming approach = tool for visualising
+Another distinction is between the **diagramming language** (e.g., **C4**,
+**[Archimate](https://pubs.opengroup.org/architecture/archimate3-doc/)**) and
+the tools used to create diagrams. The language defines the structure for visual
+representation, while the tools implement it. For mature diagramming approaches,
+the distinction between language and tool is minimal, as the tools are
+specifically built to support the framework. However, for lightweight
+diagramming frameworks, this distinction is more significant, as they tend to be
+more **tool-agnostic** and can be applied across a variety of platforms.
+
+
+## Real-World Pairings: Tools and Frameworks in Action
+
+Architects often face the challenge of selecting the **right diagramming tools**
+for their projects. **Frameworks** need a way to be expressed, which is where
+**diagramming approaches** come into play. These approaches are sometimes
+predefined by the framework itself, while in other cases, the architect must
+select or customize an approach to best represent the framework’s concepts. The
+**diagramming approach** captures and visualizes the framework’s concepts in a
+coherent, understandable way, ensuring clear communication of the solution’s
+**logical structure**.
+
+### TOGAF and Arhcimate
+
+A common **out-of-the-box pairing** is **TOGAF** with **Archimate**.
+**[TOGAF](https://pubs.opengroup.org/togaf-standard/)** (The Open Group
+Architecture Framework) provides a comprehensive methodology for enterprise
+architecture, and **Archimate** is a visual language specifically designed to
+complement this framework. Archimate helps express the key concepts and
+relationships defined by TOGAF in a visual form. The tool
+"[Archi](https://www.archimatetool.com/)" is commonly endorsed for Archimate
+modeling, though other tools can be used as well, such as Bizzdesign and
+Sparx Systems, which support the Archimate standard.
+
+Many examples can be found on ether [Archimate](https://www.archimatetool.com/)
+or [TOGAF](https://www.opengroup.org/togaf) documentation site.
+
+### C4 Model and "Viewpoints and Perspectives"
+
+For some frameworks, such as the **Viewpoints and Perspectives framework**, no
+specific tool or framework has a significant advantage, so various pairings are
+viable. For example, **C4** provides a **feature-rich visual component set** and
+a "**zoom in**" approach, which allows architects to visualize and comprehend
+even the most complex solutions. The C4 model does not dictate a specific tool,
+so **multiple diagramming options** are available to best match the needs of the
+solution.
+
+An example of such an approach can be found in
+[O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master/context_viewpoint).
+The frameworks (Viewpoints) approach to describing the solution is used, while
+still following C4 notation for nesting and encapsulation of the complexity.
 
 ## Choosing the Right Tooling for Diagramming
 
-Choosing the right **diagramming tool** is essential for creating effective,
+### Key Features to Consider
+
+Choosing the right **diagramming tool** is essential for creating **effective**,
 maintainable diagrams. The following features should be considered when
 selecting a tool:
+
 - **Flexibility** and support for **Multiple Diagram Types**: The tool should
-  offer flexibility to create various diagrams like UML, C4, flowcharts, or data
-  flow diagrams based on the project needs.
-- **Accessibility Options**: The tool must provide color contrast adjustments,
-  pattern options, and checks for visual accessibility to ensure that the
-  diagrams can be interpreted in different contexts without relying on color.
-- **Templates and Consistency**: Built-in templates and standardized styles help
-  ensure that the diagrams maintain a consistent look across various abstraction
-  levels.
-- **Layers support**: Ability to quickly enable and disable visibility of
-  certain elements in groups provides and easy way to manage additional
+  offer flexibility to create various diagrams like **UML**, **C4**, flowcharts,
+  or data flow diagrams based on the project needs.
+- **Accessibility Options**: The tool must provide **color contrast
+  adjustments**, **pattern options**, and checks for **visual accessibility** to
+  ensure that the diagrams can be interpreted in different contexts without
+  relying on color.
+- **Templates** and **Consistency**: Built-in templates and standardized styles
+  help ensure that the diagrams maintain a consistent look across various
+  abstraction levels.
+- **Layers Support**: Ability to quickly enable and disable visibility of
+  certain elements in groups provides an easy way to manage additional
   information and avoid the overhead of maintaining multiple versions of
-  diagrams with multiple levels of details.
-- **Collaboration Features**: Real-time collaboration and **version control**
-  capabilities allow multiple stakeholders to **contribute** to and review diagrams
-  simultaneously, ensuring that everyone stays aligned.
-- **Integration with Other Tools**: The tool should integrate with other platforms
-  like version control systems and documentation tools for **easy updates** and
-  collaboration.
-- **Exporting and Sharing**: The ability to export diagrams in multiple formats
-  (e.g., PNG, SVG, PDF) is critical for sharing across different mediums, from
-  reports to presentations.
+  diagrams with multiple levels of detail.
+- **Collaboration Features**: **Real-time collaboration** and **version
+  control** capabilities allow multiple stakeholders to contribute to and review
+  diagrams simultaneously, ensuring that everyone stays aligned.
+- **Integration with Other Tools**: The tool should integrate with other
+  platforms like **version control systems** and **documentation tools** for
+  easy updates and collaboration.
+- **Exporting and Sharing**: The ability to **export diagrams** in multiple
+  formats (e.g., PNG, SVG, PDF) is critical for sharing across different
+  mediums, from reports to presentations.
 - **Ease of Use**: The interface should be intuitive and user-friendly, allowing
-  architects to create, update, and maintain diagrams with **maximum
-  efficiency**.
+  architects to create, update, and maintain diagrams with maximum efficiency.
 
 Selecting a tool that offers these features ensures that diagrams are not only
 effective but also easy to manage throughout a project’s lifecycle.
 
-## C4 + Viewpoints and Perspectives
+### Generic vs Specific Tools
 
-The integration of the C4 modeling language with the viewpoints and perspectives
-framework enhances software architecture visualization by clearly depicting
-components and addressing stakeholder concerns. This approach is particularly
-effective because both frameworks are tool agnostic, allowing representations to
-be adapted to various tools and contexts. This synergy fosters understanding and
-collaboration, supporting informed architectural decisions that balance
-technical and stakeholder priorities.
+When selecting **architecture diagramming tools**, we can classify them into two
+categories: **architecture-specific tools** and **general-purpose tools**. Each
+category offers distinct benefits that cater to different needs.
 
-### Practical Application
+**Architecture-specific Tools**
 
-The "zooming in" feature of the C4 model is instrumental in isolating specific
-levels of detail, making it an effective tool for managing architectural
-complexity. This approach is particularly valuable in diagrams with naturally
-nested components, such as functional, deployment, and informational diagrams.
-For instance, a high-level context diagram may illustrate the system's external
-interactions and stakeholders. From this overview, the diagram can zoom in to
-reveal containers that represent applications or services, detailing their
-interactions and responsibilities.
+These tools are tailored for creating, analyzing, and documenting **software
+architectures**. They typically support structured notations such as **UML** and
+**ArchiMate**, which enforce **architectural standards** and offer **advanced
+analysis** features. Architecture-specific tools provide **consistency**,
+enforce standards, and facilitate **in-depth modeling** of complex systems.
 
-As the diagram unfolds to show more detail, individual components within each
-container can be highlighted, illustrating how they collaborate to fulfill
-system functions. This iterative process enables stakeholders to engage with the
-architecture at varying levels of abstraction, facilitating discussions that are
-relevant to their interests. By using the zooming feature, complex information
-can be communicated in a manageable way, ensuring that all stakeholders remain
-informed and aligned throughout the development process.
+**General-purpose Tools**
 
-### Required Tooling Support
+These tools are versatile and can be used for a wide range of diagramming needs.
+While they don’t offer the deep **architectural analysis** of specialized tools,
+**general-purpose tools** are **easy to use**, provide flexibility in diagram
+types, and facilitate **collaboration** across teams.
 
-To effectively implement the C4 + viewpoints approach, diagramming tools must
-include the following features:
+### Popular Examples
 
-- **Free Box Drawing**: Allows the demarcation of different groups of elements
-  that become a single item on a higher leve.
-- **Hyperlinking**: Enables connections between different levels of detail,
-  facilitating navigation from high-level views to detailed component diagrams.
+Here are some notable examples of tools that can be used for diagramming.
 
-Incorporating these capabilities will enhance the effectiveness of the C4 model
-and viewpoints framework, ensuring architecture visualizations remain intuitive
-and accessible for all stakeholders.
-
-## Diagramming Tools Options
-
-When selecting architecture diagramming tools, we can classify them into two
-categories: architecture-specific and general-purpose tools. Each category
-offers distinct benefits.
-
-**Architecture-specific** tools focus on modeling, documenting, and analyzing
-software architecture. They are designed for professional architects and support
-established notations like UML and ArchiMate. These tools excel in providing
-structured templates, **enforcing architectural standards**, and supporting **advanced
-analysis**.
-
-**General-purpose** tools are **flexible** and suitable for a wide range of
-diagram types. While they may not provide the same depth of architectural
-analysis, they are **easier to use** for various audiences and offer features
-like freeform drawing, templates, and broad **collaboration capabilities**.
-
-**Architecture-specific Tools:**
-
-- [Archimate (Open Group)](https://www.archimatetool.com/) – Archimate is a
-  modeling tool built around the ArchiMate standard, enabling architects to
+**Architecture-specific Tools**
+- **[Archimate (Open Group)](https://www.archimatetool.com/)** – Archimate is a
+  modeling tool built around the **ArchiMate standard**, enabling architects to
   represent layered architecture with structured views. It supports detailed
-  templates and integrates with enterprise tools for advanced analysis.
-- [PlantUML](https://plantuml.com/) – A text-based UML diagram generator,
-  PlantUML creates diagrams from plain text descriptions, making it ideal for
-  integrating architecture designs with version control systems like Git. Its
-  flexibility supports fast updates and precise UML representations.
-- [Sparx Systems Enterprise Architect](https://sparxsystems.com/products/ea/) –
-  This tool provides comprehensive multi-diagram support (UML, BPMN, ArchiMate)
-  for modeling complex architectures. It integrates with development tools and
-  offers deep analysis features for large-scale projects.
+  templates and integrates with enterprise tools for **advanced analysis**.
+- **[PlantUML](https://plantuml.com/)** – A **text-based UML** diagram
+  generator, PlantUML creates diagrams from plain text descriptions. It’s
+  especially useful for integrating architecture designs with **version control
+  systems** like Git, offering flexibility and quick updates.
+- **[Sparx Systems Enterprise Architect](https://sparxsystems.com/products/ea/)** -
+  This tool supports multiple diagramming types, including **UML**, **BPMN**,
+  and **ArchiMate**. It’s ideal for modeling large and complex architectures,
+  and it integrates well with development environments, making it suitable for
+  **enterprise-scale projects**.
 
-**General-purpose Tools:**
+**General-purpose Tools**
 
-- [Miro](https://miro.com/) – Miro offers an intuitive, collaborative
-  whiteboard with a variety of architecture diagram templates, making it ideal
-  for real-time brainstorming. It integrates seamlessly with productivity tools
-  like Jira, Confluence, and Slack.
-- [Lucidchart](https://www.lucidchart.com/pages/) – Lucidchart is known for its
-  ease of use and real-time collaboration, offering a wide selection of
-  templates including UML. It integrates well with Slack, Google Workspace, and
-  is highly accessible for various teams.
-- [Microsoft Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software) –
-  Visio provides a large template library and supports UML, making it suitable
-  for creating detailed architecture diagrams. It’s fully integrated with
-  Microsoft Office 365, allowing smooth collaboration across teams.
+- **[Miro](https://miro.com/)** – Miro provides an intuitive, collaborative
+  **whiteboard** for creating architecture diagrams. It’s excellent for
+  **brainstorming** and collaborative work, integrating seamlessly with
+  platforms like **Jira** and **Confluence** for **team alignment**.
+- **[Lucidchart](https://www.lucidchart.com/pages/)** – **Lucidchart** is known
+  for its ease of use and robust **collaboration** features. It offers a variety
+    of templates, including **UML**, and integrates well with **Google
+    Workspace**, making it suitable for teams across different industries.
+- **[Microsoft Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software)** –
+  Visio has a broad template library, including **UML** and other **architecture
+  notations**. Integrated with **Microsoft Office 365**, it’s highly accessible
+  for teams working within the **Microsoft ecosystem**.
