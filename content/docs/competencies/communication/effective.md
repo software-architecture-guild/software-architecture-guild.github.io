@@ -92,7 +92,7 @@ In a technical presentation:
 
 In written documentation:
 
-* Build**ethos** by using authoritative sources and ensuring accuracy.
+* Build **ethos** by using authoritative sources and ensuring accuracy.
 * Include **pathos** by addressing the end user’s needs or frustrations.
 * Organize content logically with headings, bullet points, and data visualizations to enhance **logos**.
 
@@ -100,9 +100,9 @@ In written documentation:
 
 In team meetings or discussions:
 
-* Establish**ethos** by demonstrating expertise and openness to collaboration.
+* Establish **ethos** by demonstrating expertise and openness to collaboration.
 * Use **pathos** to show empathy for differing viewpoints or concerns.
-* Employ**logos** by proposing data-driven solutions and structured plans.
+* Employ **logos** by proposing data-driven solutions and structured plans.
 
 ---
 

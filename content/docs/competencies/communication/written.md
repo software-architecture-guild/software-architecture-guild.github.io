@@ -104,12 +104,12 @@ Refining your writing ensures that it is clear, accurate, and effective.
 
 Avoiding common antipatterns is just as important as following best practices. Here are vital antipatterns to watch out for:
 
-* **Unstructured Writing**: Documents with long, unbroken paragraphs or no clear organization overwhelm readers, making it challenging to extract key points.
+* **Unstructured Writing**: Poorly organized documents can overwhelm readers, making it difficult to identify and understand key points.
 * **Writing for the Wrong Audience**: Misaligning content with the reader’s expertise or expectations, such as using jargon with non-technical audiences or oversimplifying for technical readers, leads to miscommunication.
 * **Jargon Overload**: Overusing unexplained technical terminology creates barriers to understanding, especially in mixed-audience communications.
 * **Wordiness**: Including redundant information or overly long explanations frustrates readers and dilutes the core message.
 * **Missing Context**: Jumping straight into details without providing background or explaining relevance confuses readers and reduces the communication's impact.
-* **Dense Text**: Presenting information in large, unbroken paragraphs with no formatting or visuals overwhelms readers and makes it harder to retain information.
+* **Dense Text**: Presenting information in large, unbroken paragraphs with **no formatting or visuals** overwhelms readers and makes it harder to retain information.
 
 ---
 

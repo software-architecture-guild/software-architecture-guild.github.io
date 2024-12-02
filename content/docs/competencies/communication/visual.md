@@ -59,7 +59,7 @@ Simplicity is key in visual communication. A cluttered or overcomplicated diagra
 Separate diagrams by abstraction levels to avoid mixing high-level and low-level details in the same visual. For example:
 
 * Use a **context diagram** to provide an overview of the system’s interactions.
-* Follow with**container and component diagrams** for detailed breakdowns.
+* Follow with **container and component diagrams** for detailed breakdowns.
   Mixing these levels can confuse viewers and dilute the clarity of the message.
 
 ---
