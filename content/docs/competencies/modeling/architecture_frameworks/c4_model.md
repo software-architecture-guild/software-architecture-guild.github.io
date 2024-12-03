@@ -1,15 +1,13 @@
 ---
 weight: 620
 title: "C4 Model"
-description: "Provide overview of C4 Model as an Architectural Framework"
+description: "This article provides overview of C4 Model as an Architectural Framework"
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
 ---
-
-## TODO
 
 The **C4 model** is a hierarchical framework designed for visualizing the
 architecture of software systems. It emphasizes **clarity and simplicity**, making
@@ -50,10 +48,14 @@ Each bulding block is composed from smaller blocks.
 <br>
 Source: https://c4model.com/
 
-## Diagram Types
+---
 
-Framework defines multiple diagram types, linked tightly to the abstractions
-defined above:
+## Default Diagrams
+
+Framework defines four basic diagram types, corresponding to the abstractions
+defined above. The diagrams are nested, which helps tackle the complexity of the
+system.
+
 <img
   align="center"
   src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/SystemContext.png"
@@ -63,7 +65,11 @@ defined above:
 <br>
 Source: https://c4model.com/
 
-**Context Diagram:** Provides a high-level overview of the system and its
+---
+
+### Context Diagram
+
+Provides a high-level overview of the system and its
 interactions with external entities. This diagram sets the stage for
 understanding how the system fits into its broader environment.
 
@@ -76,7 +82,11 @@ understanding how the system fits into its broader environment.
 <br>
 Source: https://c4model.com/
 
-**Container Diagram:** Breaks down the system into its major containers,
+---
+
+### Container Diagram
+
+Breaks down the system into its major containers,
 illustrating relationships between them. This level of detail allows
 stakeholders to see how different parts of the system interact.
 
@@ -89,7 +99,11 @@ stakeholders to see how different parts of the system interact.
 <br>
 Source: https://c4model.com/
 
-**Component Diagram:** Offers a detailed view of the components within a specific
+---
+
+### Component Diagram
+
+Offers a detailed view of the components within a specific
 container and their interactions. This helps in understanding the internal
 structure of the container and how components collaborate to fulfill system
 requirements.
@@ -103,20 +117,82 @@ requirements.
 <br>
 Source: https://c4model.com/
 
-**Code Diagram:** Focuses on the implementation level, typically showing classes
+---
+
+### Code Diagram
+
+Focuses on the implementation level, typically showing classes
 or modules within a component. This diagram is particularly useful for
 developers to grasp the details of the code structure.
 
-## Static vs. Dynamic Diagrams
+---
 
-In addition to the various diagram types, it’s essential to understand the
-**distinction between static and dynamic diagrams**. **Static diagrams** illustrate the
-**structure of a system** at a specific point in time, detailing its components and
-their relationships. **Dynamic diagrams**, on the other hand, depict **how the system
-behaves over time**, showcasing interactions and processes as they occur. This
-differentiation helps stakeholders appreciate both the **architectural layout and
-the functional behavior** of the system. C4 Model also defines the dynamic
-diagram type along with other custom types.
+## Adapting to Real World Usecases
+
+The default diagrams create a foundation for describing the software system's
+structure. However in order to address different aspects of the architecture,
+some adjustments are needed. For the most popular usecases the C4 Model defines
+additional diagrams.
+
+---
+
+### System Landscape Diagram
+
+The **System Landscape** diagram extends the C4 Model by representing the **broader
+ecosystem** of interconnected systems. Unlike the Context diagram, which focuses
+on a single system and its external interactions, this diagram captures **multiple
+systems** across a portfolio, their relationships, and the high-level data flows
+between them, providing a **wider organizational perspective**.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/SystemLandscape.png"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: https://c4model.com/
+
+---
+
+### Dynamic Diagram
+
+The **Dynamic** diagram focuses on illustrating the **runtime behavior** of the
+system by detailing the interactions and **sequence** of events between
+components. Unlike the static structure of Container and Component diagrams,
+this diagram emphasizes how elements collaborate during specific **use cases or
+processes**, making it useful for understanding workflows and runtime scenarios.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/DynamicComponents.png"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: https://c4model.com/
+
+---
+
+### Deplyment Diagram
+
+The **Deployment** diagram adds a **physical** perspective to the C4 Model by showing
+how software elements are deployed across **hardware or infrastructure** nodes.
+Unlike the Container and Component diagrams, which describe logical
+architecture, the Deployment diagram provides details about **environments,
+servers, containers**, and their connections, highlighting the operational aspect
+of the system.
+
+<img
+  align="center"
+  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/Deployment.png"
+  alt="Architecture Process"
+  width="75%"
+  height="75%"/>
+<br>
+Source: https://c4model.com/
+
+---
 
 ## Recommended Reading
 
