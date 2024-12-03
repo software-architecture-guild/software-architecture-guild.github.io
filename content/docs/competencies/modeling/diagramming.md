@@ -1,7 +1,7 @@
 ---
 weight: 630
 title: "Diagramming"
-description: "Explain how diagramming approaches complement architectural frameworks. Provide choosing guidance."
+description: "This article explains how diagramming approaches complement architectural frameworks and provide tool choosing guidance."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
@@ -9,15 +9,10 @@ draft: false
 toc: true
 ---
 
-## TODO:
-
-https://pubs.opengroup.org/architecture/archimate3-doc/
-
-
-## The Power of Diagramming
+## Power of Diagramming
 
 Diagrams simplify **complex systems**, turning abstract ideas into clear visuals
-that everyone—**technical** and **non-technical** alike—can understand. They
+that everyone - **technical** and **non-technical** alike - can understand. They
 improve **communication**, support **decision-making**, and provide a **shared
 understanding** across teams, reducing ambiguity and errors. For architects,
 diagrams serve as both a communication tool and a **record of design
@@ -28,7 +23,7 @@ Using **standard frameworks** in diagrams ensures **consistency**, aiding
 **collaboration** and speeding up development by presenting the architecture in
 an accessible and organized manner.
 
-## Difference Between an Architectural Framework and Diagramming Approach
+## Framework vs Diagramming Approach
 
 **Architectural frameworks** provide a **semantical** and **logical model** for
 describing a system's structure, components, and relationships. They define the
@@ -50,7 +45,7 @@ diagramming frameworks, this distinction is more significant, as they tend to be
 more **tool-agnostic** and can be applied across a variety of platforms.
 
 
-## Real-World Pairings: Tools and Frameworks in Action
+## Tool and Framework Pairings
 
 Architects often face the challenge of selecting the **right diagramming tools**
 for their projects. **Frameworks** need a way to be expressed, which is where
@@ -61,7 +56,7 @@ select or customize an approach to best represent the framework’s concepts. Th
 coherent, understandable way, ensuring clear communication of the solution’s
 **logical structure**.
 
-### TOGAF and Arhcimate
+### TOGAF + Arhcimate
 
 A common **out-of-the-box pairing** is **TOGAF** with **Archimate**.
 **[TOGAF](https://pubs.opengroup.org/togaf-standard/)** (The Open Group
@@ -76,7 +71,7 @@ Sparx Systems, which support the Archimate standard.
 Many examples can be found on ether [Archimate](https://www.archimatetool.com/)
 or [TOGAF](https://www.opengroup.org/togaf) documentation site.
 
-### C4 Model and "Viewpoints and Perspectives"
+### C4 Model + Viewpoints and Perspectives
 
 For some frameworks, such as the **Viewpoints and Perspectives framework**, no
 specific tool or framework has a significant advantage, so various pairings are
@@ -98,9 +93,9 @@ An example of such an approach can be found in
 The frameworks (Viewpoints) approach to describing the solution is used, while
 still following C4 notation for nesting and encapsulation of the complexity.
 
-## Choosing the Right Tooling for Diagramming
+## Choosing Diagramming Tools
 
-### Key Features to Consider
+### Key Features
 
 Choosing the right **diagramming tool** is essential for creating **effective**,
 maintainable diagrams. The following features should be considered when

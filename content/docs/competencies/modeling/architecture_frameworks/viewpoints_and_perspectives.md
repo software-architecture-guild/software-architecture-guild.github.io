@@ -63,6 +63,15 @@ The framework offers the following list of viewpoints:
 
 ### The Context Viewpoint
 
+The **Context** viewpoint defines the **scope** and boundaries of the system,
+illustrating its **interactions** with external actors such as users, systems,
+and environments. It provides a high-level overview to clarify what the system
+is responsible for and what lies beyond its control. This viewpoint helps align
+the **system’s purpose** with business objectives and ensures that stakeholders
+share a common understanding of its role within a broader ecosystem. It serves
+as a foundation for other viewpoints, offering essential insights into
+**external dependencies** and how they influence system design and operation.
+
 * **Purpose**: To show the system's scope and boundaries by describing its
   interactions with external entities.
 * **Key Stakeholders**: Business owners, end users, external system owners (to
@@ -85,8 +94,19 @@ The framework offers the following list of viewpoints:
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
 
 ### The Functional Viewpoint
+
+The **Functional** viewpoint focuses on the system's **functions** and
+**capabilities**, describing how they interact to achieve the system's goals. It
+captures the **functional structure** and provides details about key processes
+and their coordination. By mapping out the **logical flow** of operations, this
+viewpoint clarifies how user needs are met through well-defined workflows. It
+helps identify critical functions, dependencies, and opportunities for
+optimization, serving as a key reference for system requirements and design
+decisions. This viewpoint is essential for ensuring that the system aligns with
+user expectations and business requirements.
 
 * **Purpose**: To describe the system's functional structure and how its
   functions work together to fulfill requirements.
@@ -108,7 +128,19 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ### The Information Viewpoint
+
+The **Information** viewpoint addresses the **organization, storage, and flow of
+data** within the system. It focuses on how data is structured, its
+relationships, and how it is exchanged between components, providing insight
+into the logical data architecture. This viewpoint supports the development
+of robust data models and ensures consistency in data handling across the
+system. It highlights the lifecycle of critical data entities, enabling
+designers to optimize **data integrity** and performance. Additionally, it
+provides a basis for identifying risks related to potential bottlenecks in data
+processing pipelines.
 
 * **Purpose**: To define the structure, semantics, and usage of the system’s
   information.
@@ -130,7 +162,19 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ### The Concurrency Viewpoint
+
+The **Concurrency** viewpoint describes the **runtime interactions** between
+system components, focusing on services, jobs, and their communication.
+It helps in identifying synchronization needs and avoiding issues like
+**deadlocks** and **resource contention**. By representing how components
+collaborate under different workloads, this viewpoint ensures that the system
+can handle concurrent operations efficiently. It highlights the dynamic behavior
+of the system, aiding in the design of mechanisms like **task orchestration** and
+**thread management**. Additionally, it provides insights into potential points
+of failure related to **race conditions** or excessive resource utilization.
 
 * **Purpose**: To describe how the system handles multiple tasks and processes
   simultaneously.
@@ -152,7 +196,19 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ### The Development Viewpoint
+
+The **Development** viewpoint focuses on the software architecture as seen
+by the developers, covering the structure of modules, libraries and other
+artifacts with their build pipelines. It aids in understanding **implementation
+dependencies** and managing the development process effectively. This viewpoint
+provides a blueprint for module organization, design, testing, implementation
+processes. It also highlights the relationships between components, enabling
+teams to identify potential impacts of changes and improve overall
+maintainability. By addressing **technical debt** and development workflows,
+this viewpoint ensures a smoother implementation phase.
 
 * **Purpose**: To describe the software's modular structure and its organization
   for efficient development.
@@ -174,7 +230,20 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ### The Deployment Viewpoint
+
+The **Deployment** viewpoint describes the **physical environment** where the
+system operates, detailing hardware, networks, and operational configurations.
+It ensures that the system can be efficiently **hosted and maintained**. This
+viewpoint helps identify **resource requirements**, such as processing power and
+storage, while addressing constraints related to **scalability** and
+**availability**. It illustrates the mapping of software components onto
+physical infrastructure, facilitating decisions about hosting, failover
+mechanisms, and **disaster recovery** strategies. By considering real-world
+deployment conditions, it ensures the system's operational readiness and
+resilience.
 
 * **Purpose**: To show how the system is deployed across hardware and other
   platforms.
@@ -197,7 +266,19 @@ Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:/
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ### The Operational Viewpoint
+
+The **Operational** viewpoint focuses on the system’s day-to-day **management
+and maintenance**, covering aspects such as monitoring, troubleshooting, and
+updates. It ensures that the system operates smoothly post-deployment. This
+viewpoint emphasizes the tools, processes, and metrics needed to support
+reliable operations. By addressing potential operational challenges, it
+clarifies the processes maintenance, operation, configuration, migration. It
+also highlights the responsibilities of different roles, ensuring that
+operational teams are **equipped to handle incidents** effectively and adapt to
+changing environment.
 
 * **Purpose**: To describe the system’s operational and maintenance processes.
 * **Key Stakeholders**: Support teams, operations engineers, system
@@ -219,12 +300,21 @@ What **is irrelevant**:
 <br>
 Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
 
+---
+
 ## Perspectives
 
 This is a list of most frequently used perspectives. Other perspectives can be
 found in the original book.
 
 ### Security Perspective
+
+The **Security** perspective ensures that a software system is protected against
+**unauthorized access**, **malicious attacks**, and **data breaches**. Its purpose is to
+safeguard sensitive information and maintain the **integrity, confidentiality,
+and availability** of the system. This perspective involves identifying potential
+risks, implementing defenses such as encryption and access controls, and
+preparing incident response plans.
 
 * **Purpose**: Ensure that the system is protected against unauthorized access,
   breaches, and other security threats.
@@ -237,7 +327,15 @@ found in the original book.
 
 Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master/security_perspective)
 
+---
+
 ### Performance and Scalability Perspective
+
+The **Performance and Scalability** perspective focuses on ensuring that a
+system meets its **performance goals** under normal and peak conditions and can
+**handle growth** in users, data, or processing demands. Key aspects include
+measuring response times, optimizing resource utilization, and designing for
+scalability.
 
 * **Purpose**: Ensure the system meets performance targets and scales
   effectively under increased load.
@@ -248,7 +346,15 @@ Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:
 * **What is irrelevant**: Detailed functional workflows unrelated to performance
   or scalability.
 
+---
+
 ### Availability and Persistence Perspective
+
+The **Availability and Persistence** perspective ensures that a system is
+reliably accessible and consistently maintains its critical data over time. By
+addressing factors such as **redundancy, failover mechanisms**, and data
+backups, this perspective minimizes downtime and protects against catastrophic
+failures.
 
 * **Purpose**: Ensure the system is consistently accessible and reliably stores
   critical data.
@@ -259,7 +365,14 @@ Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:
 * **What is irrelevant**: Transient debugging or testing configurations that do
   not contribute to reliability.
 
+---
+
 ### Evolution Perspective
+
+The **Evolution** perspective ensures that a system can **adapt to changing
+requirements**, technologies, and business environments. This perspective involves
+planning for modularity, managing dependencies, and **accommodating iterative
+updates** to the architecture.
 
 * **Purpose**: Ensure the system can adapt to changing requirements,
   technologies, and business needs.
@@ -270,7 +383,15 @@ Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:
 * **What is irrelevant**: Overly specific implementation details tied to current
   technologies that hinder adaptability.
 
+---
+
 ### Regulation Perspective
+
+The **Regulation** perspective ensures that a system complies with **legal,
+regulations**, and organizational standards, including privacy, data protection,
+and security requirements. This perspective involves identifying relevant
+regulations, designing features to meet them, and providing audit trails for
+**accountability**.
 
 * **Purpose**: Ensure the system complies with relevant legal, industry, and
   organizational standards.
@@ -280,6 +401,8 @@ Example: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https:
   standards, and certification needs.
 * **What is irrelevant**: Internal operational processes or technical details
   not tied to compliance requirements.
+
+---
 
 ### Conclusion
 
