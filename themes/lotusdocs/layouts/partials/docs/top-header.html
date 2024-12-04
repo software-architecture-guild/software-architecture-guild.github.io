@@ -72,7 +72,7 @@
                 </span>
             </button>
             {{ end -}}
-            {{ if .Site.IsMultiLingual }}
+            {{ if hugo.IsMultilingual }}
                 <button type="button" class="ps-2 btn btn-link btn-default" data-bs-toggle="modal" data-bs-target="#lang-selector-popup">
                     {{ site.Language.Lang | upper }}
                 </button>
