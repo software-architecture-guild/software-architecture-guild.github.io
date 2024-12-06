@@ -8,7 +8,6 @@ lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
 ---
-
 The **C4 model** is a hierarchical framework designed for visualizing the
 architecture of software systems. It emphasizes **clarity and simplicity**, making
 it accessible for both technical and non-technical stakeholders. The framework
@@ -30,6 +29,7 @@ the system architecture.
 
 The framework defines elements of an architecture as a set of hierarchical
 building blocks, namely:
+
 - **Software system**, highest level of abstraction, brinding value to the end
   user
 - **Container** - runtime boundary around an executable code or data stoaage,
@@ -39,14 +39,14 @@ building blocks, namely:
   entities from the programming language.
 
 Each bulding block is composed from smaller blocks.
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/abstractions.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.abstractions.png" alt="C4 Abstractions" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/abstractions">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -56,15 +56,6 @@ Framework defines four basic diagram types, corresponding to the abstractions
 defined above. The diagrams are nested, which helps tackle the complexity of the
 system.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/SystemContext.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
-
 ---
 
 ### Context Diagram
@@ -73,14 +64,13 @@ Provides a high-level overview of the system and its
 interactions with external entities. This diagram sets the stage for
 understanding how the system fits into its broader environment.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/Containers.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_context.png" alt="C4 System Context" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/system-context">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -90,14 +80,13 @@ Breaks down the system into its major containers,
 illustrating relationships between them. This level of detail allows
 stakeholders to see how different parts of the system interact.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/Containers.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_context.png" alt="C4 Containers" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/container">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -108,14 +97,13 @@ container and their interactions. This helps in understanding the internal
 structure of the container and how components collaborate to fulfill system
 requirements.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/Code.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.components.png" alt="C4 Components" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/component">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -124,6 +112,14 @@ Source: https://c4model.com/
 Focuses on the implementation level, typically showing classes
 or modules within a component. This diagram is particularly useful for
 developers to grasp the details of the code structure.
+
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.code.png" alt="C4 Code" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/code">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -144,14 +140,13 @@ on a single system and its external interactions, this diagram captures **multip
 systems** across a portfolio, their relationships, and the high-level data flows
 between them, providing a **wider organizational perspective**.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/SystemLandscape.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_landscape.png" alt="C4 System Landscape" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/system-landscape">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -163,14 +158,13 @@ components. Unlike the static structure of Container and Component diagrams,
 this diagram emphasizes how elements collaborate during specific **use cases or
 processes**, making it useful for understanding workflows and runtime scenarios.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/DynamicComponents.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.dynamic_components.png" alt="C4 Dynamic Components" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/dynamic">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 
@@ -183,14 +177,13 @@ architecture, the Deployment diagram provides details about **environments,
 servers, containers**, and their connections, highlighting the operational aspect
 of the system.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/c4_model/Deployment.png"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: https://c4model.com/
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.deployment.png" alt="C4 Deployment" width="75%" height="75%"/>
+  <br>
+  <a href="https://c4model.com/diagrams/deployment">
+    <small>Source: https://c4model.com/</small>
+  </a>
+</center>
 
 ---
 

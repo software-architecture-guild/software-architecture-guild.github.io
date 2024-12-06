@@ -40,6 +40,7 @@ process.
 
 The framework gives a few definitions, crucial to it's understanding and
 application:
+
 * **Architectural View**: A view is a representation of one or more structural
   aspects of an architecture, illustrating how the architecture addresses
   specific concerns of stakeholders. For example, a functional view might depict
@@ -77,22 +78,21 @@ as a foundation for other viewpoints, offering essential insights into
 * **Key Stakeholders**: Business owners, end users, external system owners (to
   ensure clear interfaces and boundaries).
 * **Concerns**:
-  - Key external entities interacting with the system (e.g., users, other
+  * Key external entities interacting with the system (e.g., users, other
     systems).
-  - High-level descriptions of interfaces and data exchanged.
-  - Overall environment and dependencies.
+  * High-level descriptions of interfaces and data exchanged.
+  * Overall environment and dependencies.
 * **What is irrelevant**:
-  - Internal details of the system (e.g., components, detailed data flows).
-  - Overly detailed protocol specifications.
+  * Internal details of the system (e.g., components, detailed data flows).
+  * Overly detailed protocol specifications.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/context_viewpoint_level_2.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.context_viewpoint_level_2.jpg" alt="Viewpoints & Perspectives Context" width="75%" height="75%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#context-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -112,21 +112,20 @@ user expectations and business requirements.
   functions work together to fulfill requirements.
 * **Key Stakeholders**: Product owners, system designers, test engineers.
 * **Concerns**:
-  - Functional decomposition into modules or components.
-  - Interactions between functional components.
-  - Functional requirements and responsibilities.
+  * Functional decomposition into modules or components.
+  * Interactions between functional components.
+  * Functional requirements and responsibilities.
 * **What is irrelevant**:
-  - Deployment details (e.g., servers hosting components).
-  - User interface specifics (unless a critical part of the function).
+  * Deployment details (e.g., servers hosting components).
+  * User interface specifics (unless a critical part of the function).
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/functional_viewpoint_user_profile.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.functional_viewpoint_user_profile.jpg" alt="Viewpoints & Perspectives Functional" width="75%" height="75%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#functional-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -146,21 +145,20 @@ processing pipelines.
   information.
 * **Key Stakeholders**: Data architects, developers, business analysts.
 * **Concerns**:
-  - Data models (conceptual, logical, or physical).
-  - Relationships between data entities.
-  - Data lifecycles and flow between components.
+  * Data models (conceptual, logical, or physical).
+  * Relationships between data entities.
+  * Data lifecycles and flow between components.
 * **What is irrelevant**:
-  - Behavioral or functional information.
-  - Storage technology specifics (unless critical to the architecture).
+  * Behavioral or functional information.
+  * Storage technology specifics (unless critical to the architecture).
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/information_viewpoint_data_model.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.information_viewpoint_data_model.jpg" alt="Viewpoints & Perspectives Functional" width="50%" height="50%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/information_viewpoint/README.md#here-you-can-find-more-details-about-proposed-data-model">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -180,21 +178,20 @@ of failure related to **race conditions** or excessive resource utilization.
   simultaneously.
 * **Key Stakeholders**: System architects, developers, performance engineers.
 * **Concerns**:
-  - Processes, threads, or tasks and their interactions.
-  - Synchronization mechanisms (e.g., locks, queues).
-  - High-level process flows and resource sharing.
+  * Processes, threads, or tasks and their interactions.
+  * Synchronization mechanisms (e.g., locks, queues).
+  * High-level process flows and resource sharing.
 * **What is irrelevant**:
-  - Low-level implementation code.
-  - Non-concurrent components or workflows.
+  * Low-level implementation code.
+  * Non-concurrent components or workflows.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/concurrency_viewpoint_messaging_actors.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.concurrency_viewpoint_messaging_actors.jpg" alt="Viewpoints & Perspectives Concurrency" width="75%" height="75%"/>
+  <br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#concurrency-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -214,21 +211,20 @@ this viewpoint ensures a smoother implementation phase.
   for efficient development.
 * **Key Stakeholders**: Developers, build engineers.
 * **Concerns**:
-  - Modules, packages, or components and their dependencies.
-  - Layered architecture or build-time structure.
-  - Source control and integration guidelines.
+  * Modules, packages, or components and their dependencies.
+  * Layered architecture or build-time structure.
+  * Source control and integration guidelines.
 * **What is irrelevant**:
-  - Runtime behavior or deployment information.
-  - Detailed user interactions or workflows.
+  * Runtime behavior or deployment information.
+  * Detailed user interactions or workflows.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/development_viewpoint_level_1.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.development_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Development" width="75%" height="75%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#development-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -250,21 +246,20 @@ resilience.
 * **Key Stakeholders**: Infrastructure engineers, operations teams, performance
   engineers.
 * **Concerns**:
-  - Hardware or cloud resources and their configurations.
-  - Deployment of software components to nodes or devices.
-  - Communication pathways and their performance constraints.
+  * Hardware or cloud resources and their configurations.
+  * Deployment of software components to nodes or devices.
+  * Communication pathways and their performance constraints.
 * **What is irrelevant**:
-  - Detailed internal behaviors of software components.
-  - Design-time or source-level module structures.
+  * Detailed internal behaviors of software components.
+  * Design-time or source-level module structures.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/deployment_viewpoint_environment.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.deployment_viewpoint_environment.jpg"  alt="Viewpoints & Perspectives Deployment" width="75%" height="75%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#deployment-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
@@ -284,21 +279,20 @@ changing environment.
 * **Key Stakeholders**: Support teams, operations engineers, system
   administrators.
 * **Concerns**:
-  - Monitoring, logging, and alerting mechanisms.
-  - Backup, recovery, and failover strategies.
-  - Maintenance workflows and tools used.
+  * Monitoring, logging, and alerting mechanisms.
+  * Backup, recovery, and failover strategies.
+  * Maintenance workflows and tools used.
 What **is irrelevant**:
-  - Functional or runtime details unrelated to operations.
-  - Implementation-level details of monitoring or recovery mechanisms.
+  * Functional or runtime details unrelated to operations.
+  * Implementation-level details of monitoring or recovery mechanisms.
 
-<img
-  align="center"
-  src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/operational_viewpoint_level_1.jpg"
-  alt="Architecture Process"
-  width="75%"
-  height="75%"/>
-<br>
-Source: [O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists](https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master)
+<center>
+  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.operational_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Operational" width="75%" height="75%"/>
+  <br><br>
+  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#operational-viewpoint">
+    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
+  </a>
+</center>
 
 ---
 
