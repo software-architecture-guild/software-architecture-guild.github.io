@@ -1,5 +1,5 @@
 ---
-weight: 620
+weight: 1140
 title: "C4 Model"
 description: "This article provides overview of C4 Model as an Architectural Framework"
 icon: "document_scanner"

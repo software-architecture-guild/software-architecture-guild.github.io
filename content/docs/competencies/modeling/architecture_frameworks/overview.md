@@ -1,6 +1,6 @@
 ---
-weight: 610
-title: "Architecture Frameworks Overview"
+weight: 1130
+title: "Overview"
 description: "This article justifies the need and explain benefits of using architectural frameworks"
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"

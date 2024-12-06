@@ -1,5 +1,5 @@
 ---
-weight: 621
+weight: 1150
 title: "Viewpoints and Perspectives"
 description: "This article provides overview of Viewpoints and Perspectives Architectural Framework"
 icon: "document_scanner"

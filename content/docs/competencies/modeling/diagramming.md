@@ -1,5 +1,5 @@
 ---
-weight: 630
+weight: 1170
 title: "Diagramming"
 description: "This article explains how diagramming approaches complement architectural frameworks and provide tool choosing guidance"
 icon: "document_scanner"
@@ -35,7 +35,7 @@ for system design, diagramming approaches focus on effectively communicating
   that design through visuals, turning abstract concepts into understandable
   representations.
 
-Another distinction is between the **diagramming language** (e.g., **C4**,
+Another distinction is between the **diagramming language** - a  (e.g., **C4**,
 **[Archimate](https://pubs.opengroup.org/architecture/archimate3-doc/)**) and
 the tools used to create diagrams. The language defines the structure for visual
 representation, while the tools implement it. For mature diagramming approaches,
@@ -44,8 +44,7 @@ specifically built to support the framework. However, for lightweight
 diagramming frameworks, this distinction is more significant, as they tend to be
 more **tool-agnostic** and can be applied across a variety of platforms.
 
-
-## Tool and Framework Pairings
+## Notation and Framework Pairings
 
 Architects often face the challenge of selecting the **right diagramming tools**
 for their projects. **Frameworks** need a way to be expressed, which is where
@@ -81,6 +80,10 @@ even the most complex solutions. The C4 model does not dictate a specific tool,
 so **multiple diagramming options** are available to best match the needs of the
 solution.
 
+
+<center>
+  <img align="center" src="../../../images/fundamentals/styles.layered.drawio.png" alt="Layered Architecture" width="75%" height="75%"/>
+</center>
 <img
   align="center"
   src="../../../../../images/competencies/modeling/architecture_frameworks/viewpoints_and_perspectives/context_viewpoint_level_2.jpg"

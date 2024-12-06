@@ -1,5 +1,5 @@
 ---
-weight: 600
+weight: 1200
 title: "Communication"
 description: "This section explains what kinds of comminucations exists and how to evolve them."
 icon: "communication"

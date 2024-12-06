@@ -1,5 +1,5 @@
 ---
-weight: 620
+weight: 1120
 title: "Architecture Frameworks"
 description: ""
 icon: "document_scanner"

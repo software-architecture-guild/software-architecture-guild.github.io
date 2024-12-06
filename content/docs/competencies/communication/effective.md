@@ -1,5 +1,5 @@
 ---
-weight: 640
+weight: 1240
 title: "Effective"
 description: "This article explores the importance of effective communication and its key components."
 icon: "article"

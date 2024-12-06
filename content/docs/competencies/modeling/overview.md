@@ -1,5 +1,5 @@
 ---
-weight: 600
+weight: 1110
 title: "Overview"
 description: "This article gives justification for the importance of the skills listed in the chapter"
 icon: "document_scanner"

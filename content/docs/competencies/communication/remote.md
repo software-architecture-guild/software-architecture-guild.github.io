@@ -1,5 +1,5 @@
 ---
-weight: 660
+weight: 1260
 title: "Remote"
 description: "This article explores the challenges and best practices of remote communication."
 icon: "article"

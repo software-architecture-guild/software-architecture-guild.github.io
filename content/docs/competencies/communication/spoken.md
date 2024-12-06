@@ -1,5 +1,5 @@
 ---
-weight: 630
+weight: 1230
 title: "Spoken"
 description: "This article explores the dynamics of verbal and nonverbal communication and their significance."
 icon: "article"
