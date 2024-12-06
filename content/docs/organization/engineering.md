@@ -1,5 +1,5 @@
 ---
-weight: 430
+weight: 420
 title: "Engineering"
 description: "This article explains what an engineering organization should look like."
 icon: "article"

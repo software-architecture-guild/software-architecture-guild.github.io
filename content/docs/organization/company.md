@@ -1,5 +1,5 @@
 ---
-weight: 490
+weight: 440
 title: "Company"
 description: "This article explains what an enterprise should look like."
 icon: "article"
