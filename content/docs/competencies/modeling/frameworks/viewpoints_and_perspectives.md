@@ -87,7 +87,7 @@ as a foundation for other viewpoints, offering essential insights into
   * Overly detailed protocol specifications.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.context_viewpoint_level_2.jpg" alt="Viewpoints & Perspectives Context" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.context_viewpoint_level_2.jpg" alt="Viewpoints & Perspectives Context" width="75%" height="75%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#context-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -120,7 +120,7 @@ user expectations and business requirements.
   * User interface specifics (unless a critical part of the function).
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.functional_viewpoint_user_profile.jpg" alt="Viewpoints & Perspectives Functional" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.functional_viewpoint_user_profile.jpg" alt="Viewpoints & Perspectives Functional" width="75%" height="75%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#functional-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -153,7 +153,7 @@ processing pipelines.
   * Storage technology specifics (unless critical to the architecture).
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.information_viewpoint_data_model.jpg" alt="Viewpoints & Perspectives Functional" width="50%" height="50%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.information_viewpoint_data_model.jpg" alt="Viewpoints & Perspectives Functional" width="50%" height="50%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/information_viewpoint/README.md#here-you-can-find-more-details-about-proposed-data-model">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -186,7 +186,7 @@ of failure related to **race conditions** or excessive resource utilization.
   * Non-concurrent components or workflows.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.concurrency_viewpoint_messaging_actors.jpg" alt="Viewpoints & Perspectives Concurrency" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.concurrency_viewpoint_messaging_actors.jpg" alt="Viewpoints & Perspectives Concurrency" width="75%" height="75%"/>
   <br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#concurrency-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -219,7 +219,7 @@ this viewpoint ensures a smoother implementation phase.
   * Detailed user interactions or workflows.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.development_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Development" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.development_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Development" width="75%" height="75%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#development-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -254,7 +254,7 @@ resilience.
   * Design-time or source-level module structures.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.deployment_viewpoint_environment.jpg"  alt="Viewpoints & Perspectives Deployment" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.deployment_viewpoint_environment.jpg"  alt="Viewpoints & Perspectives Deployment" width="75%" height="75%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#deployment-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
@@ -287,7 +287,7 @@ What **is irrelevant**:
   * Implementation-level details of monitoring or recovery mechanisms.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/vp.operational_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Operational" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/vp.operational_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Operational" width="75%" height="75%"/>
   <br><br>
   <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#operational-viewpoint">
     <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>

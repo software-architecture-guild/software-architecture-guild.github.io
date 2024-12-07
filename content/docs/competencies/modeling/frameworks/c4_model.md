@@ -41,7 +41,7 @@ building blocks, namely:
 Each bulding block is composed from smaller blocks.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.abstractions.png" alt="C4 Abstractions" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.abstractions.png" alt="C4 Abstractions" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/abstractions">
     <small>Source: https://c4model.com/</small>
@@ -65,7 +65,7 @@ interactions with external entities. This diagram sets the stage for
 understanding how the system fits into its broader environment.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_context.png" alt="C4 System Context" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 System Context" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/system-context">
     <small>Source: https://c4model.com/</small>
@@ -81,7 +81,7 @@ illustrating relationships between them. This level of detail allows
 stakeholders to see how different parts of the system interact.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_context.png" alt="C4 Containers" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 Containers" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/container">
     <small>Source: https://c4model.com/</small>
@@ -98,7 +98,7 @@ structure of the container and how components collaborate to fulfill system
 requirements.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.components.png" alt="C4 Components" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.components.png" alt="C4 Components" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/component">
     <small>Source: https://c4model.com/</small>
@@ -114,7 +114,7 @@ or modules within a component. This diagram is particularly useful for
 developers to grasp the details of the code structure.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.code.png" alt="C4 Code" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.code.png" alt="C4 Code" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/code">
     <small>Source: https://c4model.com/</small>
@@ -141,7 +141,7 @@ systems** across a portfolio, their relationships, and the high-level data flows
 between them, providing a **wider organizational perspective**.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.system_landscape.png" alt="C4 System Landscape" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_landscape.png" alt="C4 System Landscape" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/system-landscape">
     <small>Source: https://c4model.com/</small>
@@ -159,7 +159,7 @@ this diagram emphasizes how elements collaborate during specific **use cases or
 processes**, making it useful for understanding workflows and runtime scenarios.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.dynamic_components.png" alt="C4 Dynamic Components" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.dynamic_components.png" alt="C4 Dynamic Components" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/dynamic">
     <small>Source: https://c4model.com/</small>
@@ -178,7 +178,7 @@ servers, containers**, and their connections, highlighting the operational aspec
 of the system.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/architecture_frameworks/c4.deployment.png" alt="C4 Deployment" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/frameworks/c4.deployment.png" alt="C4 Deployment" width="75%" height="75%"/>
   <br>
   <a href="https://c4model.com/diagrams/deployment">
     <small>Source: https://c4model.com/</small>
