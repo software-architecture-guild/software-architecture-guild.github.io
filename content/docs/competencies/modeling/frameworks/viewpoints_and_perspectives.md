@@ -27,7 +27,8 @@ The framework gives a few definitions crucial to its understanding and applicati
 * **Architectural Viewpoint**: A viewpoint is a collection of patterns, templates, and conventions for constructing a specific view type. It defines the stakeholders whose concerns are reflected in the view and provides
   guidelines for creating and describing that aspect of the architecture. 
   - **Architectural Perspective**: A perspective is a collection of architectural activities, tactics, and guidelines used to ensure that the system exhibits a particular set of related quality properties.
-* *Note*: while both viewpoints and perspectives guide architectural design, their focus differs. Viewpoints primarily define the structure and content of views, while perspectives focus on ensuring the architecture meets specific quality requirements.
+
+*Note*: while both viewpoints and perspectives guide architectural design, their focus differs. Viewpoints primarily define the structure and content of views, while perspectives focus on ensuring the architecture meets specific quality requirements.
 
 ## Viewpoints
 
