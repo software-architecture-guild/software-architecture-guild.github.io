@@ -44,7 +44,8 @@ A popular method, SMART goals are:
 * **Achievable**: Realistic targets based on resources and constraints.
 * **Relevant**: Aligned with overall business strategy.
 * **Time-Bound**: Set within a specific timeframe.
-  **Example**: Increase customer satisfaction scores by 10% within 12 months.
+
+**Example**: Increase customer satisfaction scores by 10% within 12 months.
 
 ##### OKRs (Objectives and Key Results)
 
@@ -52,7 +53,9 @@ Used to align teams and measure progress, OKRs consist of:
 
 * **Objective**: A qualitative goal that describes what you aim to achieve.
 * **Key Results**: Quantitative measures that indicate success.
-  **Example**:
+
+**Example**:
+
 * **Objective**: Expand market presence in Europe.
 * **Key Results**:
   * Launch operations in three new European countries.
@@ -67,7 +70,8 @@ This framework ensures a holistic approach to goal-setting by addressing four pe
 * **Customer**: Satisfaction, retention, and engagement.
 * **Internal Processes**: Efficiency and operational excellence.
 * **Learning and Growth**: Employee development and innovation.
-  **Example**: Improve operational efficiency by reducing production cycle time by 15% within six months.
+
+**Example**: Improve operational efficiency by reducing production cycle time by 15% within six months.
 
 ### Examples of Business Goals
 
