@@ -1,5 +1,5 @@
 ---
-weight: 600
+weight: 1000
 title: "Competencies"
 description: "Hard and Soft skills architect should develop"
 icon: "layers"

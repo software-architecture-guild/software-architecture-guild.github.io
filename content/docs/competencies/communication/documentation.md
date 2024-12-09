@@ -1,5 +1,5 @@
 ---
-weight: 650
+weight: 1250
 title: "Documentation"
 description: "This article discusses the importance of documentation in communication and its key components."
 icon: "article"

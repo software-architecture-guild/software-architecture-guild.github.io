@@ -1,5 +1,5 @@
 ---
-weight: 610
+weight: 1210
 title: "Visual"
 description: "This article outlines the principles and antipatterns for creating effective visualizations (diagrams)."
 icon: "article"

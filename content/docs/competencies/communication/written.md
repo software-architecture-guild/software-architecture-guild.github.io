@@ -1,5 +1,5 @@
 ---
-weight: 620
+weight: 1220
 title: "Written"
 description: "This article examines the essentials of written communication and its effective use."
 icon: "article"

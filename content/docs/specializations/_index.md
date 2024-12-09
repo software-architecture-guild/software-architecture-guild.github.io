@@ -1,5 +1,5 @@
 ---
-weight: 700
+weight: 2000
 title: "Specializations"
 description: "Describes specializations and domain knowledge required for those."
 icon: "hub"

@@ -1,5 +1,5 @@
 ---
-weight: 670
+weight: 1270
 title: "Multi Culture"
 description: "This article examines the nuances of multi-cultural communication and its key components."
 icon: "article"
