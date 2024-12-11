@@ -15,7 +15,7 @@ jobs:
       with: 
         globs: |
           **/*.md
-        #themes
+          #themes
 
       
   build-hugo:
