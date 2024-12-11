@@ -24,7 +24,7 @@ Each process step is crucial to successfully defining, developing, and managing 
 
 The process begins with identifying and engaging stakeholders—individuals or groups with a vested interest in the system's architecture. Stakeholder involvement is essential in shaping the architecture to meet business and technical needs.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Identify key stakeholders**: Determine who will influence or be impacted by the architecture, such as business owners, users, developers, and operations teams.
 2. **Classify stakeholders**: Group stakeholders into categories—primary (direct involvement), secondary (indirect involvement), and tertiary (peripheral influence).
@@ -38,7 +38,7 @@ By engaging stakeholders early, architects ensure the architecture is designed t
 
 Managing concerns, principles, and decisions is foundational to the architecture definition process. Architects must balance problem-focused concerns (functional and non-functional requirements) with solution-focused concerns (how to address these requirements) while adhering to core principles that guide the system’s design.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Identify problem-focused concerns**: Understand what the system needs to achieve, such as performance benchmarks, security needs, scalability, and usability.
 2. **Address solution-focused concerns**: Determine how the system will meet these needs, including decisions around architectural styles, technology choices, and design approaches.
@@ -53,7 +53,7 @@ Effectively managing concerns and decisions ensures the architecture is well-gro
 
 Scenarios provide a concrete means to test and validate architectural decisions. They represent the system's behavior under different conditions, helping architects ensure it meets functional and non-functional requirements.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Identify critical scenarios**: Develop functional (e.g., user interactions) and non-functional (e.g., performance, scalability) scenarios that reflect real-world use cases and system behavior.
 2. **Capture scenarios in detail**: Document each scenario, including its context, expected outcome, and the specific architectural concerns it addresses.
@@ -68,7 +68,7 @@ Scenarios are essential for testing and validating architecture, ensuring it can
 
 Identifying **key architectural characteristics** — also referred to as **quality attributes** — is one of the most critical aspects of the architecture definition process. These characteristics dictate the architectural style and decisions made throughout the process. Quality attributes such as performance, scalability, security, and maintainability drive architects' technical and design choices.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Define essential quality attributes**: Work with stakeholders to identify the core architectural characteristics that the system must support. Common attributes include:
    * **Performance**: How the system must perform under various loads (e.g., response times, throughput).
@@ -89,7 +89,7 @@ Identifying and prioritizing quality attributes is essential, as these character
 
 Architects can now select appropriate **architectural styles** and **design patterns** based on the identified architectural characteristics and quality attributes. These choices provide a framework for organizing the system and addressing the identified challenges.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Select appropriate architectural styles**: Choose an architectural style that best addresses the system’s prioritized quality attributes. For instance, a **microservices** architecture might be chosen to support scalability and flexibility, while a **layered architecture** might be more suitable for maintainability and clear separation of concerns.
 2. **Apply design patterns**: Leverage design patterns like **Singleton**, **Observer**, or **Repository** to solve common technical challenges within the chosen architectural style. These patterns provide reusable solutions to issues such as state management, communication, or data access.
@@ -104,7 +104,7 @@ By selecting suitable architectural styles and design patterns, architects can e
 
 **Architectural models** are critical to representing the system’s structure, behavior, and deployment in a visual and structured format. These models simplify complex systems, making it easier for stakeholders to understand how the architecture will be realized.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Create structural models**: Develop models that describe the organization of the system's components and how they interact. These models show the system's relationships between services, modules, or layers.
 2. **Develop behavioral models**: Model the system's behavior over time, particularly the interaction between components. Behavioral models visualize workflows, event-driven interactions, and data flows.
@@ -120,7 +120,7 @@ Architectural models are vital communication tools that help stakeholders unders
 
 The **architectural description** is the formal documentation of the system’s architecture. It provides a comprehensive view of the system's design, ensuring all stakeholders are aligned and the architecture is well-documented for future reference.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Structure the description clearly**: The architectural description should include an overview of the system, stakeholder analysis, architectural views, key architectural decisions, and a glossary of terms.
 2. **Ensure clarity and detail**: The description should cater to technical and non-technical stakeholders, balancing detailed technical diagrams with high-level overviews explaining how the architecture supports business goals.
@@ -135,7 +135,7 @@ The architectural description is essential for guiding development teams and ens
 
 Regular **architecture evaluation** is critical to ensuring that the architecture continues to meet its goals and remains aligned with both technical and business requirements. Evaluation helps identify weaknesses, risks, and opportunities for improvement.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Use scenario-based evaluation**: Test the architecture against defined scenarios to ensure it behaves as expected. For example, test how the system handles high traffic loads or potential security breaches.
 2. **Conduct expert reviews**: Involve external experts or experienced team members to review the architecture and provide insights on its strengths and potential risks.
@@ -150,7 +150,7 @@ Regular architecture evaluation ensures the system can adapt to changes and meet
 
 Proactively managing **architecture risk** is essential to preventing critical issues from arising later in the system's lifecycle. Risks may stem from technology choices, scalability challenges, security vulnerabilities, or integration complexities.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Identify potential risks**: Use techniques such as architecture reviews, stakeholder interviews, and prototyping to uncover risks related to performance, scalability, and security.
 2. **Assess risk impact and likelihood**: Evaluate each risk based on how likely it is to occur and its potential impact on the system. Prioritize high-impact, high-likelihood risks.
@@ -165,7 +165,7 @@ By identifying and addressing risks early in the process, architects can prevent
 
 Architecture is not static; it must evolve as the system grows, user needs change, and new technologies emerge. Continuous refinement ensures the system remains aligned with business and technical goals while adapting to future changes.
 
-#### Key Actions:
+**Key Actions**:
 
 1. **Monitor trends and emerging risks**: Stay aware of new trends, technologies, and risks that could impact the architecture, and adjust as necessary.
 2. **Revisit architectural decisions**: Periodically review and reassess past architectural decisions to ensure they still meet the system’s current needs.

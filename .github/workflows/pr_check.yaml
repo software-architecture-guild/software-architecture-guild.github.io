@@ -1,0 +1,36 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+
+jobs:
+  lint-markdown:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v4
+
+    - name: Lint Markdown 
+      uses: DavidAnson/markdownlint-cli2-action@v18
+      with: 
+        globs: |
+          **/*.md
+          #themes
+
+      
+  build-hugo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Hugo
+      uses: ./.github/actions/install-hugo
+
+    - name: Install Node.js modules
+      uses: ./.github/actions/install-nodejs
+
+    - name: Build WebSite
+      uses: ./.github/actions/build-hugo
+      with:
+        baseURL: localhost

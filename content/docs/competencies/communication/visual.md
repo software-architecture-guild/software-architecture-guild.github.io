@@ -33,7 +33,7 @@ Visual communication bridges gaps between software architecture stakeholders, in
 
 To ensure that visuals achieve their intended purpose, consider the following best practices:
 
-#### 1. Know Your Audience
+##### 1. Know Your Audience
 
 Tailor visuals to the needs and technical expertise of your audience. For example:
 
@@ -44,7 +44,7 @@ Failure to adapt visuals to your audience may lead to confusion or misalignment.
 
 ---
 
-#### 2. Maintain Clarity and Simplicity
+##### 2. Maintain Clarity and Simplicity
 
 Simplicity is key in visual communication. A cluttered or overcomplicated diagram can overwhelm the viewer and obscure the intended message. Use the following principles:
 
@@ -54,7 +54,7 @@ Simplicity is key in visual communication. A cluttered or overcomplicated diagra
 
 ---
 
-#### 3. Use Levels of Abstraction
+##### 3. Use Levels of Abstraction
 
 Separate diagrams by abstraction levels to avoid mixing high-level and low-level details in the same visual. For example:
 
@@ -64,7 +64,7 @@ Separate diagrams by abstraction levels to avoid mixing high-level and low-level
 
 ---
 
-#### 4. Simplify and Streamline
+##### 4. Simplify and Streamline
 
 Cognitive load—the mental effort required to interpret a visual—should be minimized. To achieve this:
 
@@ -76,7 +76,7 @@ Avoid the "explosion of unicorns" antipattern, where excessive use of colors dis
 
 ---
 
-#### 5. Make Visuals Accessible
+##### 5. Make Visuals Accessible
 
 Accessibility ensures that visuals are understandable for everyone, including those with disabilities. Consider the following:
 
@@ -88,7 +88,7 @@ Relying solely on color for differentiation can exclude part of your audience, r
 
 ---
 
-#### 6. Create a Narrative
+##### 6. Create a Narrative
 
 Diagrams should tell a story. Start with the big picture, such as the system’s overall context, and then move into details like specific components or processes. This narrative structure helps guide the audience, keeping them engaged and ensuring they understand how each element fits into the whole.
 
@@ -96,7 +96,7 @@ Avoid the antipattern of **starting with details**, which confuses viewers who l
 
 ---
 
-#### 7. Choose the Right Notation
+##### 7. Choose the Right Notation
 
 Different diagramming styles and notations suit different purposes. Examples include:
 
@@ -107,7 +107,7 @@ Using the wrong notation, such as overly technical UML diagrams for business lea
 
 ---
 
-#### 8. Strive for Consistency
+##### 8. Strive for Consistency
 
 Maintain a consistent visual style across all diagrams. This includes:
 

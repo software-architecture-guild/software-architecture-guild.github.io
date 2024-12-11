@@ -90,9 +90,9 @@ As the role of an architect can be demanding, it is important to manage **work-l
 
 Several **anti-patterns** can stall an architect's career growth:
 
-1. **Stagnation**: As the industry evolves rapidly, failing to continue learning or adapting to new technologies and methodologies can lead to career stagnation. Architects who don’t prioritize learning may struggle to keep up.
-2. **Over-Focusing on Technical Skills**: Architects who neglect soft skills, communication, and business acumen may struggle to lead teams or align with organizational goals. Balancing technical expertise with soft skills is crucial for long-term success.
-3. **Avoiding Leadership Roles**: Avoiding leadership responsibilities and team mentorship can limit career progression, as effective architects are also seen as leaders and influencers. Taking on leadership roles helps architects grow and develop new skills.
+* **Stagnation**: As the industry evolves rapidly, failing to continue learning or adapting to new technologies and methodologies can lead to career stagnation. Architects who don’t prioritize learning may struggle to keep up.
+* **Over-Focusing on Technical Skills**: Architects who neglect soft skills, communication, and business acumen may struggle to lead teams or align with organizational goals. Balancing technical expertise with soft skills is crucial for long-term success.
+* **Avoiding Leadership Roles**: Avoiding leadership responsibilities and team mentorship can limit career progression, as effective architects are also seen as leaders and influencers. Taking on leadership roles helps architects grow and develop new skills.
 
 ### Conclusion
 

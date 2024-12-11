@@ -54,7 +54,7 @@ In simpler terms, how teams communicate and collaborate significantly shapes the
    <img align="center" src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conways Law" width="75%" height="75%"/>
 </center>
 
-##### Key Insights from Conway's Law:
+##### Key Insights from Conway's Law
 
 1. **Systems Reflect Communication Patterns**: The architecture of software systems tends to mirror the social and communication structures of the teams that build them. The resulting software will likely have siloed or fragmented components if teams are siloed or fragmented.
 2. **Team Structure Affects Product Structure**: How teams are organized—whether by function (e.g., development, testing, operations) or around specific products—leads to certain architectural decisions in the software. For example, if separate teams work on frontend and backend development, the software will likely have a distinct separation between those layers.
@@ -77,9 +77,9 @@ In simpler terms, how teams communicate and collaborate significantly shapes the
 5. **Reducing Complexity**:
    * A poorly organized company will naturally create overly complex systems. By simplifying team structures, organizations can reduce the complexity of their software architectures. This, in turn, makes systems more suitable to develop, test, deploy, and maintain.
 
-##### Real-World Example of Conway’s Law in Action:
+##### Real-World Example of Conway’s Law in Action
 
-* **Microservices Architecture**: Team structures have evolved in many organizations adopting microservices to mirror this approach. A dedicated, autonomous team often builds and maintains each service (or group of services). This enables each team to work independently on their microservice without affecting the others, enhancing system scalability and flexibility. This is a practical application of the reverse Conway maneuver—shaping team structures to achieve a specific software architecture.
+**Microservices Architecture**: Team structures have evolved in many organizations adopting microservices to mirror this approach. A dedicated, autonomous team often builds and maintains each service (or group of services). This enables each team to work independently on their microservice without affecting the others, enhancing system scalability and flexibility. This is a practical application of the reverse Conway maneuver—shaping team structures to achieve a specific software architecture.
 
 ### What is Value Stream?
 
@@ -87,11 +87,11 @@ A **Value Stream** is the end-to-end sequence of activities required to deliver 
 
 **Key Components of a Value Stream:**
 
-* **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
-* **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
-* **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
-* **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
-* **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
+1. **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
+2. **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
+3. **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
+4. **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
+5. **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
 
 <center>
    <img align="center" src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" width="75%" height="75%"/>
@@ -109,7 +109,7 @@ When applied to identify value streams, Value Stream Mapping helps organizations
 
 The **[Independent Service Heuristics (ISH)](https://teamtopologies.com/key-concepts-content/finding-good-stream-boundaries-with-independent-service-heuristics)** method is a practical approach designed to help organizations identify good value streams and team boundaries to improve flow and efficiency. It is a complementary tool to **Domain-Driven Design (DDD)** and is particularly effective for evaluating and discovering service boundaries without needing deep engineering expertise.
 
-##### Key Steps in the ISH Method:
+##### Key Steps in the ISH Method
 
 1. **Select Candidate Areas**: Start by identifying potential services, products, or domains within your organization that could represent value streams. These should be areas where work is done, or value is delivered to the customer.
 2. **Apply Heuristics to Evaluate Independence**:
@@ -122,7 +122,7 @@ The **[Independent Service Heuristics (ISH)](https://teamtopologies.com/key-conc
 4. **Refine Based on Business Impact**: Determine whether each candidate provides enough value or presents an engaging challenge for teams. The value stream should have enough scope to justify a dedicated team responsible for its full lifecycle.
 5. **Validate with Teams and Adjust Boundaries**: After identifying potential streams, validate them by testing whether teams can independently manage these areas. Adjust the boundaries to ensure they align with organizational goals and customer needs.
 
-##### Outcome:
+##### Outcome
 
 The ISH method helps define **stream-aligned teams** responsible for delivering distinct value to customers. This alignment leads to faster, more autonomous workflows and reduces organizational bottlenecks and dependencies.
 
@@ -136,7 +136,7 @@ The model defines **four fundamental team types** and **three modes of team inte
    <img align="center" src="../../../images/organization/engineering.teams_topologies.drawio.png" alt="Teams topologies" width="75%" height="75%"/>
 </center>
 
-##### The Four Fundamental Team Types:
+##### The Four Fundamental Team Types
 
 1. **Stream-Aligned Teams**:
    * These teams are aligned with a specific value stream, such as a product, service, or customer journey.
@@ -151,13 +151,13 @@ The model defines **four fundamental team types** and **three modes of team inte
    * Platform teams provide foundational services, infrastructure, and tools to other teams, reducing their cognitive load and allowing them to focus on delivering customer value.
    * A well-designed platform helps other teams be self-sufficient and reduces the complexity of managing infrastructure.
 
-##### The Three Modes of Team Interaction:
+##### The Three Modes of Team Interaction
 
 1. **Collaboration**: Teams work together closely for a period of time to solve complex problems or innovate.
 2. **X-as-a-Service**: One team provides a service (e.g., platform services) to another, which consumes it without understanding its inner workings.
 3. **Facilitating**: An enabling team temporarily helps another team improve their skills or adopt new technologies.
 
-##### Key Principles in Team Topologies:
+##### Key Principles in Team Topologies
 
 1. **Optimize for Fast Flow**:
    * The primary goal of Team Topologies is to optimize the flow of value to the customer. This means structuring teams and their interactions to minimize bottlenecks, delays, and unnecessary dependencies.
@@ -204,7 +204,7 @@ Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity an
    <img align="center" src="../../../images/organization/engineering.scrum_of_scrums.drawio.png" alt="Scrum@Scale" width="75%" height="75%"/>
 </center>
 
-##### Key Concepts of Scrum@Scale:
+##### Key Concepts of Scrum@Scale
 
 1. **Modular Approach**: Scrum@Scale is designed to be modular, meaning organizations can apply and implement parts of the framework based on their needs. Teams can adopt components progressively and adapt to their specific contexts without overhauling their entire process.
 2. **Two Cycles**:
@@ -217,14 +217,14 @@ Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity an
 7. **Backlog Refinement at Scale**: Scrum@Scale ensures that product backlogs are refined and prioritized across multiple teams to ensure they deliver value cohesively and coordinatedly. This is typically done through multi-tiered backlogs, with top-level priorities trickling down to individual team backlogs.
 8. **Cross-Team Collaboration**: The framework promotes strong collaboration across teams through frequent communication and the removal of silos. This ensures that knowledge, resources, and solutions are shared effectively, avoiding redundancy or inefficiency.
 
-##### Benefits of Scrum@Scale:
+##### Benefits of Scrum@Scale
 
 1. **Agility at Scale**: The ability to scale Scrum without losing the core agile principles of transparency, inspection, and adaptation.
 2. **Decentralized Decision-Making**: Empowers teams to make decisions that directly impact their work, improving speed and reducing bottlenecks.
 3. **Flexibility**: Scrum@Scale can be customized to the unique needs of an organization, allowing for a tailored implementation.
 4. **Coordination and Alignment**: Ensures that multiple teams can work together in a coordinated fashion to deliver value to customers.
 
-##### Comparison with Other Scaled Frameworks:
+##### Comparison with Other Scaled Frameworks
 
 While frameworks like SAFe (Scaled Agile Framework), LeSS (Large-Scale Scrum), and Nexus are also designed for scaling Scrum, Scrum@Scale is often seen as more lightweight and modular, focusing on decentralization and flexibility over prescriptive processes.
 
@@ -240,7 +240,7 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
    <img align="center" src="../../../images/organization/engineering.safe.drawio.png" alt="SAFe" width="75%" height="75%"/>
 </center>
 
-##### Key Components of SAFe:
+##### Key Components of SAFe
 
 1. **Core Principles**:
    * **Lean-Agile Mindset**: SAFe promotes a mindset rooted in Lean thinking and Agile principles, encouraging organizations to focus on delivering value quickly and efficiently while continuously improving.
@@ -275,14 +275,14 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
    * SAFe promotes adopting DevOps practices to enhance collaboration between development and operations teams.
    * The Continuous Delivery Pipeline is a set of practices and tools that help deliver software faster and more reliably, from code development to deployment.
 
-##### Benefits of SAFe:
+##### Benefits of SAFe
 
 1. **Alignment Across the Organization**: SAFe creates alignment between business strategy, execution, and teams, ensuring everyone is focused on the same goals and objectives.
 2. **Improved Time to Market**: SAFe reduces the time it takes to deliver value to customers by promoting faster decision-making, efficient processes, and frequent feedback loops.
 3. **Increased Productivity**: SAFe helps eliminate silos and improve communication, leading to increased collaboration and productivity across teams.
 4. **Scalable Agility**: SAFe is designed to scale, whether you have a small number of teams or a large enterprise with hundreds of teams, without losing the core benefits of agility.
 
-##### Challenges and Criticisms:
+##### Challenges and Criticisms
 
 1. **Complexity**: Some critics argue that SAFe is too complex, especially for organizations starting with Agile. Its comprehensive nature can feel overwhelming compared to lighter frameworks like LeSS or Scrum@Scale.
 2. **Top-Down Approach**: Critics of SAFe sometimes feel it is too hierarchical or prescriptive, potentially stifling innovation or team autonomy. In contrast, other scaling frameworks encourage more decentralized decision-making.
@@ -297,7 +297,7 @@ LeSS is designed for organizations that want to scale Agile while remaining as c
    <img align="center" src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" width="75%" height="75%"/>
 </center>
 
-##### Key Principles of LeSS:
+##### Key Principles of LeSS
 
 Less is built on a set of principles derived from Scrum, Lean, and Systems Thinking:
 
@@ -307,7 +307,7 @@ Less is built on a set of principles derived from Scrum, Lean, and Systems Think
 4. **Customer-Centric Focus**: In LeSS, all teams are aligned around delivering maximum customer value. Teams work on the same product backlog and focus on delivering a unified product.
 5. **Systems Thinking**: LeSS encourages teams to look at the larger organizational system, considering how various elements (such as culture, policies, and processes) interact and affect overall performance. This holistic view helps in identifying systemic bottlenecks and challenges.
 
-##### LeSS Framework Structure:
+##### LeSS Framework Structure
 
 LeSS comes in two configurations depending on the number of teams involved:
 
@@ -322,7 +322,7 @@ LeSS comes in two configurations depending on the number of teams involved:
    * Each requirement area functions like a mini-LeSS, with multiple Scrum teams working together.
    * A single **Product Owner** still oversees the entire product, ensuring overall alignment and strategic prioritization.
 
-##### Roles in LeSS:
+##### Roles in LeSS
 
 LeSS deliberately keeps the roles in Scrum simple and aligned with the standard Scrum roles.
 
@@ -335,7 +335,7 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
    * All Scrum teams in LeSS are cross-functional and self-managing, meaning each team can deliver end-to-end features.
    * Teams work from a common product backlog and collaborate to deliver integrated product increments.
 
-##### Key Practices in LeSS:
+##### Key Practices in LeSS
 
 1. **One Product Backlog**:
    * All teams work from a single product backlog, ensuring alignment and reducing the need for redundant work. Priorities are clear across all teams.
@@ -353,14 +353,14 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
 7. **Feature Teams**:
    * LeSS encourages the formation of **feature teams** that are cross-functional and able to deliver complete features (rather than component teams that focus on one aspect of the product). Feature teams reduce handoffs and increase the speed of delivery.
 
-##### Benefits of LeSS:
+##### Benefits of LeSS
 
 1. **Simplicity**: LeSS focuses on scaling by keeping Scrum simple and lightweight, minimizing complexity and overhead.
 2. **Customer Focus**: All teams are focused on delivering value to the customer rather than getting bogged down in internal processes.
 3. **Continuous Improvement**: Emphasizing empirical process control and systems thinking helps organizations continuously improve at scale.
 4. **Collaboration and Alignment**: LeSS promotes strong collaboration between teams, encouraging them to work together on shared goals.
 
-##### Challenges of LeSS:
+##### Challenges of LeSS
 
 1. **Requires Organizational Change**: LeSS can require significant organizational changes, especially for companies used to more hierarchical or siloed structures. Teams and departments must work closely together, which can be challenging to implement.
 2. **Not a One-Size-Fits-All Solution**: LeSS best suits organizations with multiple teams working on a single product. It may not be ideal for organizations with multiple unrelated products.
@@ -376,7 +376,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
    <img align="center" src="../../../images/organization/engineering.nexus.drawio.png" alt="Nexus" width="75%" height="75%"/>
 </center>
 
-##### Key Concepts of Nexus:
+##### Key Concepts of Nexus
 
 1. **Focus on Integration**:
    * Nexus's primary goal is to manage dependencies and integrations between teams working on the same product. As teams scale, integrating their work becomes more complex, and Nexus helps address this by ensuring continuous integration across teams.
@@ -387,7 +387,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 4. **Cross-Team Collaboration**:
    * Nexus emphasizes close collaboration between teams to ensure that dependencies are managed early and effectively. It helps prevent bottlenecks when multiple teams work in isolation on different product parts.
 
-##### Nexus Framework Structure:
+##### Nexus Framework Structure
 
 1. **Nexus Integration Team (NIT)**:
    * This is the only new role introduced by Nexus. The Nexus Integration Team consists of members responsible for ensuring that the work produced by all Scrum teams is successfully integrated into a single product increment.
@@ -408,7 +408,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 4. **Refinement Across Teams**:
    * Product backlog refinement happens across teams in a Nexus. All teams work together to clarify, refine, and split product backlog items, ensuring that the work can be completed in a single sprint and that dependencies are well understood.
 
-##### Key Principles of Nexus:
+##### Key Principles of Nexus
 
 1. **Transparency**:
    * Transparency is a key principle of Nexus, just like in Scrum. Work progress and dependencies between teams must be visible to everyone, helping prevent surprises and unplanned delays.
@@ -417,7 +417,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 3. **Collaboration over Coordination**:
    * Nexus strongly emphasizes collaboration between teams rather than relying on a separate coordination layer. Teams are encouraged to work closely together, resolve dependencies early, and continuously integrate their work.
 
-##### Nexus Role Responsibilities:
+##### Nexus Role Responsibilities
 
 1. **Product Owner**:
    * There is only one Product Owner for the entire Nexus. This individual manages a single Product Backlog and ensures alignment across all teams. The Product Owner ensures that the teams work on the highest-priority items and contribute to a cohesive product.
@@ -426,7 +426,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 3. **Development Teams**:
    * Each team in Nexus works on its assigned Product Backlog items like in Scrum. However, they must closely coordinate with other teams to manage dependencies and ensure integration.
 
-##### Benefits of Nexus:
+##### Benefits of Nexus
 
 1. **Maintains Scrum Simplicity**:
    * Nexus makes very few changes to the Scrum framework, keeping Scrum's simplicity intact even when scaling. This makes it easier for organizations already using Scrum to adopt Nexus without extensive additional training or process changes.
@@ -437,7 +437,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 4. **Single Product Backlog**:
    * Nexus ensures that all teams are aligned around the same product goals by working from a single product backlog. This avoids fragmentation and ensures the teams deliver value as a unified product.
 
-##### Challenges of Nexus:
+##### Challenges of Nexus
 
 1. **Requires Strong Coordination**:
    * Nexus relies heavily on cross-team coordination. If teams don’t communicate effectively or don’t address dependencies early, integration issues may arise, which can affect the quality of the product.

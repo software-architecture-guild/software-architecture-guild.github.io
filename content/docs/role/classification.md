@@ -18,11 +18,13 @@ These dimensions — Scope, Specialization, and Seniority — are not just theor
 
 Here are the key dimensions that help classify software architects:
 
-* **Scope**
+* **Scope**\
   This dimension defines the level at which an architect operates within an organization, ranging from strategic oversight to detailed system design. It specifies the breadth of responsibility an architect has, determining whether they focus on the overall architecture across multiple systems, specific solutions for particular projects, or the technical details of individual applications. Understanding the scope helps assign architects to the right level of tasks, ensuring that projects are guided by appropriate expertise, whether across the entire organization or within a specific component.
-* **Specialization**
+
+* **Specialization**\
   This dimension focuses on the technical expertise and domain-specific skills of architects. It highlights the areas where architects have deep, specialized knowledge, such as application development, data management, or platform infrastructure. Specialization reflects the ability to handle particular technological challenges, tools, and best practices within a specific area. By understanding the specialization, organizations can ensure that experts with the appropriate skill sets address technical needs— from building scalable applications to managing robust data pipelines or maintaining secure and efficient platform operations.
-* **Seniority**
+  
+* **Seniority**\
   This dimension represents an architect's experience, leadership, and career progression within the field. It illustrates how architects advance from more technically focused roles, primarily learning and supporting, to positions that involve strategic decision-making, oversight, and organizational leadership. Seniority defines not only the depth of technical knowledge but also the scope of influence, from guiding individual projects to shaping the overall technology strategy of an organization. This dimension helps structure career development and enables organizations to allocate resources based on expertise and leadership capability, ensuring immediate project success and long-term technological growth.
 
 ## By Scope

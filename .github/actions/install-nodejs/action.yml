@@ -1,0 +1,9 @@
+name: Install Node.js dependencies
+description: Instalation of Hugo Node.JS modules
+runs:
+  using: "composite"
+  steps:
+    - name: Install Node.js dependencies
+      shell: bash
+      run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      

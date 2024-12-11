@@ -36,14 +36,14 @@ The role of a software architect now encompasses a diverse set of expectations, 
 
 **Key expectations include**:
 
-* **Making Architecture Decisions**: Architects must define the guiding principles and constraints that help development teams make informed choices.
-* **Continually Analyzing the Architecture**: This involves assessing how well the architecture remains viable as technologies and business needs change.
-* **Keeping Current with Trends**: Architects must stay informed about the latest technological advancements and methodologies to make long-lasting decisions.
-* **Ensuring Compliance**: Monitoring that development teams adhere to architectural guidelines and design principles is essential for consistency.
-* **Diverse Experience and Exposure**: A broad understanding of multiple technologies and platforms is crucial in today’s heterogeneous environments.
-* **Possessing Business Domain Knowledge**: Effective architects should have sufficient expertise in the relevant business domain to align the architecture with business needs.
-* **Possessing Interpersonal Skills**: Communication, leadership, and conflict resolution are as vital as technical knowledge for architects.
-* **Understanding and Navigating Politics**: Architects often face challenges in gaining buy-in for their decisions, making negotiation skills and political awareness crucial.
+1. **Making Architecture Decisions**: Architects must define the guiding principles and constraints that help development teams make informed choices.
+2. **Continually Analyzing the Architecture**: This involves assessing how well the architecture remains viable as technologies and business needs change.
+3. **Keeping Current with Trends**: Architects must stay informed about the latest technological advancements and methodologies to make long-lasting decisions.
+4. **Ensuring Compliance**: Monitoring that development teams adhere to architectural guidelines and design principles is essential for consistency.
+5. **Diverse Experience and Exposure**: A broad understanding of multiple technologies and platforms is crucial in today’s heterogeneous environments.
+6. **Possessing Business Domain Knowledge**: Effective architects should have sufficient expertise in the relevant business domain to align the architecture with business needs.
+7. **Possessing Interpersonal Skills**: Communication, leadership, and conflict resolution are as vital as technical knowledge for architects.
+8. **Understanding and Navigating Politics**: Architects often face challenges in gaining buy-in for their decisions, making negotiation skills and political awareness crucial.
 
 ## Defining the Role of a Software Architect
 
@@ -75,13 +75,16 @@ Stakeholder concerns are the driving force behind all architectural decisions. T
 
 ##### **3. Making Architecture Decisions**
 
-TODO: Confirm with appropriate stakeholders.
-
 A central part of the software architect’s role is making informed decisions about architecture that balance business needs, technical constraints, and stakeholder expectations. This involves deeply understanding trade-offs, assessing risks, and selecting appropriate design patterns and technologies.
 
 * **Evaluating Options and Making Trade-Offs**: Architects often face competing requirements or constraints, such as choosing between scalability and cost or security and usability. Making trade-offs is an essential skill for architects. They must evaluate each option's pros and cons and consider their choices' long-term impact on the system’s maintainability, performance, and adaptability. For example, an architect might choose a microservices architecture for scalability but must account for the increased complexity in communication and deployment.
+
 * **Choosing Appropriate Technologies and Patterns**: Architects are responsible for selecting technologies, frameworks, and architectural patterns that best fit the project’s needs. They must consider factors like team expertise, technology maturity, support, and alignment with organizational standards. The choices made here affect the system’s long-term sustainability and flexibility.
+
+* **Confirming Decisions with Appropriate Stakeholders**: Architectural decisions often have significant implications for various stakeholders, including development teams, product managers, and business leaders. Architects should actively involve these stakeholders to ensure alignment and obtain feedback before finalizing decisions. This collaborative approach helps validate the choices made and increases buy-in, reducing potential friction during implementation.
+
 * **Documenting Decisions and Rationales**: It’s not enough to make decisions; architects must also document them. Documenting the rationale behind decisions helps stakeholders understand the reasoning and trade-offs considered. It also provides a reference point for future changes or onboarding new team members.
+
 * **Managing Risks and Uncertainties**: Every architectural decision carries inherent risks, such as adopting a new technology or pattern that may not yet be proven at scale. Architects must assess these risks, plan mitigation strategies, and be prepared to revise their decisions if new information comes to light.
 
 ##### **4. Creating and Owning the Architecture Description (AD)**
@@ -234,8 +237,6 @@ Agile methodologies like Scrum and Extreme Programming (XP) are becoming increas
 * **Close Team Integration**: Architects are deeply embedded within development teams in agile settings. They participate in daily stand-ups, sprint planning, and retrospectives. This level of involvement allows them to stay connected to the team’s progress, identify architectural issues early, and adjust their plans accordingly.
 
 ## Recommended Reading
-
-https://www.redhat.com/en/blog/agile-architect
 
 #### Articles
 
