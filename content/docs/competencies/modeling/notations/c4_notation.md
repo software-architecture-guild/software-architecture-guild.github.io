@@ -92,19 +92,19 @@ The **C4 Model** focuses on clarity and simplicity in representing software arch
 
 ### Key Attributes
 
-1. **Labels and Annotations**:
-   * Each element is labeled with a **clear and concise description**.
-   * Relationships are annotated to explain their purpose or data exchanged.
-2. **Color and Visual Distinction**:
-   * While C4 is minimalistic, **color coding** or shading can differentiate element types or emphasize specific parts of the diagram.
-   * **Examples**: Using one color for external systems and another for internal ones.
-3. **Simple and Flexible Shapes**:
-   * Avoid overly complex symbols; simple rectangles, arrows, and stick figures suffice.
-   * The goal is accessibility, whether the diagram is drawn on a whiteboard or using diagramming tools.
-4. **Legend or Key**:
-   * Each diagram includes a **legend** explaining the notation used, ensuring it is self-explanatory even for new viewers.
-5. **Minimalism**:
-   * Unnecessary details are avoided. The diagrams focus only on the elements relevant to the level of abstraction being presented (e.g., Context, Container, Component).
+* **Labels and Annotations**:
+  * Each element is labeled with a **clear and concise description**.
+  * Relationships are annotated to explain their purpose or data exchanged.
+* **Color and Visual Distinction**:
+  * While C4 is minimalistic, **color coding** or shading can differentiate element types or emphasize specific parts of the diagram.
+  * **Examples**: Using one color for external systems and another for internal ones.
+* **Simple and Flexible Shapes**:
+  * Avoid overly complex symbols; simple rectangles, arrows, and stick figures suffice.
+  * The goal is accessibility, whether the diagram is drawn on a whiteboard or using diagramming tools.
+* **Legend or Key**:
+  * Each diagram includes a **legend** explaining the notation used, ensuring it is self-explanatory even for new viewers.
+* **Minimalism**:
+  * Unnecessary details are avoided. The diagrams focus only on the elements relevant to the level of abstraction being presented (e.g., Context, Container, Component).
 
 ---
 
@@ -120,12 +120,12 @@ C4 diagrams are hierarchical, with elements at each level of abstraction buildin
 
 ### Benefits of C4 Notation
 
-1. **Clarity Across Audiences**:
-   * C4’s focus on simplicity ensures diagrams are understandable by both technical teams and business stakeholders.
-2. **Adaptability**:
-   * It works well with digital tools or physical whiteboarding, making it versatile for various workflows.
-3. **Focus on Essentials**:
-   * By emphasizing only the most critical elements at each level, C4 notation prevents diagrams from cluttering.
+* **Clarity Across Audiences**:
+  * C4’s focus on simplicity ensures diagrams are understandable by both technical teams and business stakeholders.
+* **Adaptability**:
+  * It works well with digital tools or physical whiteboarding, making it versatile for various workflows.
+* **Focus on Essentials**:
+  * By emphasizing only the most critical elements at each level, C4 notation prevents diagrams from cluttering.
 
 ## Recommended Reading
 

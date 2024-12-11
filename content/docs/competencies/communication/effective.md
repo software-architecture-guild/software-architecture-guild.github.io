@@ -43,7 +43,7 @@ Balancing these elements is essential for tailoring messages to different audien
 
 ### Key Elements
 
-#### 1. Ethos: Establishing Credibility
+##### 1. Ethos: Establishing Credibility
 
 Ethos reflects the communicator’s authority, trustworthiness, and expertise. Audiences are less likely to engage with or believe the message without ethos.
 
@@ -54,7 +54,7 @@ Ethos reflects the communicator’s authority, trustworthiness, and expertise. A
 * **Be Transparent**: Acknowledge uncertainties or limitations in your argument to build trust.
 * **Tailor to the Audience**: Use language and examples that resonate with the specific group you’re addressing.
 
-#### 2. Pathos: Engaging Emotion
+##### 2. Pathos: Engaging Emotion
 
 Pathos involves appealing to the audience’s emotions, values, or motivations. It’s a powerful tool for making technical or abstract concepts more relatable and impactful.
 
@@ -65,7 +65,7 @@ Pathos involves appealing to the audience’s emotions, values, or motivations. 
 * **Use Visual and Descriptive Language**: Employ vivid language or imagery to create a stronger emotional connection.
 * **Show Empathy**: Acknowledge the audience’s concerns, frustrations, or aspirations to demonstrate understanding.
 
-#### 3. Logos: Structuring Logical Arguments
+##### 3. Logos: Structuring Logical Arguments
 
 Logos emphasizes the importance of reasoning, data, and structure in creating persuasive communication. A logical foundation gives your message credibility and clarity.
 
@@ -80,7 +80,7 @@ Logos emphasizes the importance of reasoning, data, and structure in creating pe
 
 ### Applying the Rhetoric Triangle
 
-#### 1. Presentations
+##### 1. Presentations
 
 In a technical presentation:
 
@@ -88,7 +88,7 @@ In a technical presentation:
 * Leverage **pathos** by sharing a user story or real-world example of how the solution impacts people.
 * Highlight **logos** by presenting well-structured data and evidence to support your recommendations.
 
-#### 2. Documentation
+##### 2. Documentation
 
 In written documentation:
 
@@ -96,7 +96,7 @@ In written documentation:
 * Include **pathos** by addressing the end user’s needs or frustrations.
 * Organize content logically with headings, bullet points, and data visualizations to enhance **logos**.
 
-#### 3. Team Discussions
+##### 3. Team Discussions
 
 In team meetings or discussions:
 

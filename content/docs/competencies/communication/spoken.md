@@ -52,7 +52,7 @@ Mastering verbal and nonverbal communication ensures that your message is heard,
 
 ### Verbal Communication
 
-#### 1. Speak Clearly and Concisely
+##### 1. Speak Clearly and Concisely
 
 The clarity of your speech directly impacts how well your message is understood.
 
@@ -62,7 +62,7 @@ The clarity of your speech directly impacts how well your message is understood.
 
 ---
 
-#### 2. Control Your Tone and Pace
+##### 2. Control Your Tone and Pace
 
 How you speak matters as much as what you say. Tone and pace influence how your message is perceived.
 
@@ -72,7 +72,7 @@ How you speak matters as much as what you say. Tone and pace influence how your 
 
 ---
 
-#### 3. Tailor Your Message to the Audience
+##### 3. Tailor Your Message to the Audience
 
 Adapt your language, tone, and level of detail based on who you’re speaking to.
 
@@ -84,7 +84,7 @@ Adapt your language, tone, and level of detail based on who you’re speaking to
 
 ### Nonverbal Communication
 
-#### 1. Use Open and Confident Body Language
+##### 1. Use Open and Confident Body Language
 
 Your posture, gestures, and facial expressions can reinforce or contradict your verbal message.
 
@@ -94,7 +94,7 @@ Your posture, gestures, and facial expressions can reinforce or contradict your 
 
 ---
 
-#### 2. Be Mindful of Facial Expressions
+##### 2. Be Mindful of Facial Expressions
 
 Your face often communicates more than your words.
 
@@ -104,7 +104,7 @@ Your face often communicates more than your words.
 
 ---
 
-#### 3. Pay Attention to Proximity and Space
+##### 3. Pay Attention to Proximity and Space
 
 How you position yourself relative to your audience matters, especially in physical settings.
 
