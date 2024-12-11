@@ -79,7 +79,7 @@ In simpler terms, how teams communicate and collaborate significantly shapes the
 
 ##### Real-World Example of Conway’s Law in Action
 
-* **Microservices Architecture**: Team structures have evolved in many organizations adopting microservices to mirror this approach. A dedicated, autonomous team often builds and maintains each service (or group of services). This enables each team to work independently on their microservice without affecting the others, enhancing system scalability and flexibility. This is a practical application of the reverse Conway maneuver—shaping team structures to achieve a specific software architecture.
+**Microservices Architecture**: Team structures have evolved in many organizations adopting microservices to mirror this approach. A dedicated, autonomous team often builds and maintains each service (or group of services). This enables each team to work independently on their microservice without affecting the others, enhancing system scalability and flexibility. This is a practical application of the reverse Conway maneuver—shaping team structures to achieve a specific software architecture.
 
 ### What is Value Stream?
 
@@ -87,11 +87,11 @@ A **Value Stream** is the end-to-end sequence of activities required to deliver 
 
 **Key Components of a Value Stream:**
 
-* **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
-* **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
-* **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
-* **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
-* **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
+1. **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
+2. **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
+3. **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
+4. **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
+5. **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
 
 <center>
    <img align="center" src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" width="75%" height="75%"/>
