@@ -23,6 +23,7 @@ The main goal of an Architectural Kata is to simulate the challenges architects 
 We were given **seven days** to develop a detailed architectural description and submit our proposal. We utilized **Viewpoints and Perspectives** as our architectural framework and employed the **C4 model** for our diagramming needs to tackle this.
 
 #### The Competition
+
 <img align="right" src="../../../images/fundamentals/sample.katas-first-place-badge.png" style="max-height: 250px; max-width: 250px; margin-left: 40px" alt="Katas Badge" />
 
 In the initial round, our submission was among the **top five** selected by the judges. This achievement gave us the opportunity to advance to the next phase, where we had a few days to prepare a comprehensive presentation and record a **five-minute video**. These materials were essential to explain and advocate for our architectural design to the judging panel.
@@ -30,7 +31,7 @@ In the initial round, our submission was among the **top five** selected by the 
 * **[Final Presentation](https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/KATAS%202023%20-%20final%20presentation.pptx)**
 * **[Presentation Video](https://www.youtube.com/watch?v=31RLrp68yvc)**
 
-#### Victory!!!
+#### Victory
 
 We are thrilled to share that our hard work and dedication paid off—we **won** the competition!
 

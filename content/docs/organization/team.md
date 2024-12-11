@@ -8,6 +8,8 @@ lastmod: "2024-10-01T16:42:31+02:00"
 draft: false
 toc: true
 ---
+{{< mdl-disable "<!-- markdownlint-disable MD024 -->" >}}
+
 ## What makes a Team?
 
 A real team is more than just a group of people working together. Katzenbach and Smith outline several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
@@ -79,7 +81,7 @@ Key characteristics include:
 2. **Organized Around Value**: Agile teams are designed to focus on delivering value to the customer. Whether they are building digital solutions or business functionality, they work to provide continuous value delivery through frequent, small increments.
 3. **High Performance and Collaboration**: Effective Agile teams have a clear, shared vision, trust each other, take risks without fear, and meet their commitments to deliver high-quality work. They are often part of an Agile Release Train, synchronizing with other teams to deliver comprehensive solutions.
 
-#### Responsibilities of Agile Teams:
+#### Responsibilities of Agile Teams
 
 1. **Connecting with Customers**: Agile teams are deeply customer-centric. They build empathy for customer needs and design solutions that address those needs. They engage in activities such as direct observation, using telemetry data to monitor product use, and understanding customer personas.
 2. **Planning the Work**: Teams plan their own work, often engaging in Program Increment (PI) Planning sessions at the ART level to align with broader organizational goals. They break down work into manageable increments and continuously refine their backlog based on new information.
@@ -160,7 +162,7 @@ Kanban is more than just a workflow management tool; it is a comprehensive metho
 
 Scrum is a widely adopted framework for agile project management, particularly in software development. It provides a structured approach to delivering high-quality products through iterative processes and teamwork.
 
-### Core Values
+### Core Values {{< mdl-disable "<!-- markdownlint-disable-line MD024 -->" >}}
 
 Scrum is grounded in core values shaping its practices and guiding teams in pursuing successful project outcomes. These values are:
 
@@ -170,7 +172,9 @@ Scrum is grounded in core values shaping its practices and guiding teams in purs
 4. **Openness**: Transparency in processes, progress, and challenges promotes trust among team members and stakeholders, enhancing collaboration and communication.
 5. **Respect**: Team members respect each other’s skills, experiences, and contributions, fostering an environment where everyone feels valued and empowered to contribute.
 
-### Principles
+{{- MD024 -}}
+
+### Principles {{< mdl-disable "<!-- markdownlint-disable-line MD024 -->" >}}
 
 Scrum is built on several principles that guide its practices and processes:
 

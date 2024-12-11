@@ -17,9 +17,11 @@ Before you begin, ensure you have the following installed:
 ### Local development
 
 1. Run hugo site locally:
-```bash
-hugo server -D
-```
+
+   ```bash
+   hugo server -D
+   ```
+
 2. Open your browser and visit: [http://localhost:1313](http://localhost:1313)
 
 ## Site Structure
@@ -49,5 +51,3 @@ software-architecture-guild/
 - themes/lotus/: The Lotus theme files.
 - config.toml: Configuration file for your site.
 - README.md: This file.
-
-

@@ -235,7 +235,7 @@ Agile methodologies like Scrum and Extreme Programming (XP) are becoming increas
 
 ## Recommended Reading
 
-https://www.redhat.com/en/blog/agile-architect
+<https://www.redhat.com/en/blog/agile-architect>
 
 #### Articles
 

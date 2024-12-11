@@ -8,12 +8,17 @@ jobs:
   lint-markdown:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: DavidAnson/markdownlint-cli2-action@v18
-      with:
+    - name: Git Checkout
+      uses: actions/checkout@v4
+
+    - name: Lint Markdown 
+      uses: DavidAnson/markdownlint-cli2-action@v18
+      with: 
         globs: |
-          *.md
-          !test/*.md
+          **/*.md
+          #themes
+
+      
   build-hugo:
     runs-on: ubuntu-latest
     steps:
