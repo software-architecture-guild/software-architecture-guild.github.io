@@ -162,7 +162,7 @@ Kanban is more than just a workflow management tool; it is a comprehensive metho
 
 Scrum is a widely adopted framework for agile project management, particularly in software development. It provides a structured approach to delivering high-quality products through iterative processes and teamwork.
 
-### Core Values {{< mdl-disable "<!-- markdownlint-disable-line MD024 -->" >}}
+### Core Values
 
 Scrum is grounded in core values shaping its practices and guiding teams in pursuing successful project outcomes. These values are:
 
@@ -172,9 +172,7 @@ Scrum is grounded in core values shaping its practices and guiding teams in purs
 4. **Openness**: Transparency in processes, progress, and challenges promotes trust among team members and stakeholders, enhancing collaboration and communication.
 5. **Respect**: Team members respect each other’s skills, experiences, and contributions, fostering an environment where everyone feels valued and empowered to contribute.
 
-{{- MD024 -}}
-
-### Principles {{< mdl-disable "<!-- markdownlint-disable-line MD024 -->" >}}
+### Principles
 
 Scrum is built on several principles that guide its practices and processes:
 
