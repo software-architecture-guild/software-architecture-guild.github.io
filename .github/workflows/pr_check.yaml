@@ -17,8 +17,16 @@ jobs:
   build-hugo:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: ./.github/actions/install-hugo
-    - uses: ./.github/actions/build-hugo
+    - name: Git Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Hugo
+      uses: ./.github/actions/install-hugo
+
+    - name: Install Node.js modules
+      uses: ./.github/actions/install-nodejs
+
+    - name: Build WebSite
+      uses: ./.github/actions/build-hugo
       with:
         baseURL: localhost
