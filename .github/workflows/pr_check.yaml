@@ -1,0 +1,24 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint-markdown:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: DavidAnson/markdownlint-cli2-action@v18
+      with:
+        globs: |
+          *.md
+          !test/*.md
+  build-hugo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/install-hugo
+    - uses: ./.github/actions/build-hugo
+      with:
+        baseURL: localhost
