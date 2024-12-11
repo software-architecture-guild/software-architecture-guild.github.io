@@ -66,15 +66,15 @@ During this time, I contributed to **IBM's RM Metro project**, which evolved int
 
 **Acquired Skills**:
 
-- Transitioned from Java to Data Engineering
-- Proficiency in IBM stack technologies: DB2, Datastage, Cognos, MQ, and Message Broker
+- Transitioned from Java to **Data Engineering**
+- Proficiency in **IBM stack** technologies: DB2, Datastage, Cognos, MQ, and Message Broker
 - Experience in **data integration**, **dimensional modeling**, and **data architecture**
-- Strengthened collaboration and **leadership skills** during large-scale project execution
+- Strengthened collaboration and leadership skills during **large-scale project** execution
 
 **Achievements**:
 
 - Contributed to transforming RM Metro into the Data Aggregator project, a critical solution for IBM’s global HR systems
-- Took on my first leadership role, driving technical design and implementation alongside IBM architects
+- Took on my first leadership role, **driving** technical design and implementation alongside IBM architects
 - Earned a **Master’s degree in Information Technology** while gaining practical work experience
 
 ---
@@ -87,15 +87,15 @@ In this dual role as **Team Lead** and **Data Architect**, I managed a developme
 
 **Acquired Skills**:
 
-- Big Data Technologies: Hadoop (Cloudera), HDFS, Hive, Spark, Oozie, Impala
-- Microsoft Stack: MS SQL, SSIS, SSAS, PowerBI
+- **Big Data Technologies**: Hadoop (Cloudera), HDFS, Hive, Spark, Oozie, Impala
+- **Microsoft Stack**: MS SQL, SSIS, SSAS, PowerBI
 - Advanced **data architecture**, including **data lake design** and ETL pipelines
-- Leadership and team management: Coordinating international teams to deliver complex projects
-- Migration and consolidation strategies for scalable global solutions
+- **Leadership and team management**: Coordinating international teams to deliver complex projects
+- Migration and consolidation **strategies** for scalable global solutions
 
 **Achievements**:
 
-- Successfully led a development team from India, ensuring effective collaboration and timely delivery
+- Successfully **led a development** team from India, ensuring effective collaboration and timely delivery
 - Played a key role in designing and implementing the **Global Data Lake**, modernizing Rockwell’s data infrastructure
 - Gained expertise in managing complex **data migration** and **architectural projects**
 
@@ -118,13 +118,13 @@ Based on my experience, I established a **Big Data Center of Excellence (CoE)** 
 
 **Achievements**:
 
-- Contributed to the design and implementation of IBM’s **CEDP**, enabling centralized and secure data access
+- Contributed to the design and implementation of IBM’s CEDP, enabling centralized and secure data access
 - Key projects:
   - **EPM Sales Analytics**: Migrated legacy platforms to cloud-native infrastructure
   - **DataHub**: Built a data ingestion service integrating Apache Kafka and Hadoop
   - **Watson Health**: Created a HIPAA-compliant healthcare data platform
   - **Security Center**: Architected dynamic access controls for hybrid environments
-- Established and scaled the **Big Data CoE**, training 50+ engineers
+- Established and scaled the Big Data CoE, **training 50+ engineers**
 
 ---
 
