@@ -19,61 +19,145 @@ toc: true
     </div><!--end row-->
 </div><!--end container-->
 
-### My Educational Journey
+## What Drives Me
 
-##### Beginning
+I am driven by a passion for solving complex problems, leveraging technology to create innovative solutions, and leading teams to achieve excellence. My career has been a journey of continuous learning and growth, with each experience enriching my ability to deliver impactful results.
 
-My journey into technology began at the Belarusian State University of Informatics and Radioelectronics, where I earned a **Bachelor's degree in Telecommunications Engineering** (2007–2012). This education provided me with a strong foundation in telecommunications and programming, including coding in **C++** with elements of Assembler, and developing low-level telecommunication processing algorithms. Building on this, I pursued a **Master's in Information Technology** (2012–2014), where I expanded my expertise in advanced software systems and data management. These formative years set the stage for my career in technology.
+What truly motivates me is the ability to align technology with business needs, creating scalable and efficient systems that not only address immediate challenges but also lay the groundwork for future success. Whether it’s through designing robust architectures, mentoring teams, or collaborating with stakeholders, I thrive on creating solutions that drive real-world impact.
 
-My education didn’t end with formal degrees—it became a continuous process. On the job, I learn something new every day, and I make it a point to **read 2–3 professional books each year** to stay at the forefront of technological advancements.
+### My Core Values
 
-##### Transitioning to Data Engineering
+- **Empowering Teams**: I take pride in mentoring and guiding professionals, helping them unlock their potential and grow into effective leaders. Seeing my team members thrive is one of my greatest rewards.
+- **Continuous Learning**: The tech world evolves rapidly, and I am committed to staying ahead. I read extensively, participate in industry discussions, and constantly seek opportunities to expand my knowledge.
+- **Problem-Solving**: I am motivated by the challenge of solving complex technical and organizational problems. I approach these challenges with curiosity, creativity, and a results-oriented mindset.
+- **Collaboration and Communication**: I believe that clear and open communication is key to successful projects. By fostering collaboration across teams and stakeholders, I aim to create an environment where ideas can flourish.
+- **Driving Innovation**: I am passionate about exploring new technologies and methodologies to push the boundaries of what’s possible. Whether it’s implementing modern architecture paradigms or enhancing legacy systems, I am always looking for ways to innovate.
 
-I began my career learning *Java* but quickly shifted focus to **data engineering**. Early on, I mastered **IBM technologies** such as *DB2*, *Datastage*, *Cognos*, and *Message Broker*. At the same time, I delved into **data architecture**, studying *Kimball’s Data Warehousing* theory and *dimensional modeling* to gain a deeper understanding of designing data systems.
+### My Mission
 
-##### Embracing Big Data
+My mission is to combine technical excellence with strategic thinking to deliver solutions that are not only functional but transformative. By leveraging my expertise in architecture, data systems, and leadership, I strive to bridge the gap between technology and business, driving meaningful progress and creating value.
 
-The advent of the **Big Data** era brought new challenges and opportunities. I immersed myself in the **Hadoop ecosystem**, learning tools and platforms like *HDFS*, *Spark*, *Hive*, *Oozie*, and *Cloudera and Hortonworks* distributions. This era also introduced new architectural paradigms, such as **Data Lakes** and **Lambda/Kappa architectures**, which I embraced while transitioning into leadership and architectural roles. I developed "hard" architecture skills by adopting frameworks like the **Viewpoints and Perspectives** Framework and mastering **C4 diagrams** for architectural design.
+This drive is what fuels my journey and inspires me to continue pushing forward, one challenge at a time.
 
-##### Adapting to the Cloud Revolution
+## My Journey
 
-As **cloud computing** gained prominence, I returned to IBM in a role as **Technical Delivery Leader**, which required significant learning and adaptation. I dove into **cloud-native** technologies, including *Docker* and *Kubernetes*, to run Big Data workloads, and learned how to build *CI/CD* pipelines with *GitLab* and *IBM Toolchains*. I also gained expertise in deploying and maintaining *ElasticSearch* and *Kafka* clusters, managing *cloud storage*, and setting up *logging* and *monitoring* solutions.
+### Student Time: 2007–2012
 
-From an architectural perspective, I expanded my expertise to **solutions architecture**, enabling me to design *web-based* applications, *data management* systems, and the *infrastructure* to support them. I also explored *DevOps* practices, *microservices*, and *machine learning* system integration into data pipelines and services. Additionally, I deepened my knowledge of *data governance*, *DataOps*, and *data quality* frameworks.
+I studied at the Belarusian State University of Informatics and Radioelectronics (BSUIR) from 2007 to 2012, earning a **Bachelor's degree in Telecommunications Engineering**. During this time, I built a strong technical foundation, particularly in programming, and gained proficiency in **C++**.
 
-##### Growing Leadership and Management Skills
+Alongside my academic studies, I secured my first part-time job at Geoinformation Systems, applying theoretical knowledge to real-world projects. This experience marked the beginning of my professional journey and offered valuable insights into the practical aspects of programming and telecommunications.
 
-In this phase, I began **leading a team** of 8, which grew to 24 members under my leadership. I honed my **management skills**, implementing *Agile practices* (Scrum) and developing effective *planning* and *estimation* methods for team projects. **Mentorship** became a significant focus, as I worked closely with team members to support their professional growth. My role also required frequent *communication* with technical leads and managers, which sharpened my *collaboration* and *presentation* skills.
+**Acquired Skills**:
 
-##### Advancing to a Product Company
+- **C++ programming**
+- Development of low-level telecommunication processing algorithms
 
-I transitioned to a product company as a **Solution Architect** and was quickly promoted to **Lead (Chief) Architect**. This role pushed me to learn extensively about *business operations* and *product development*. I was tasked with *mentoring* individuals into becoming architects, further enhancing my management and mentorship skills. Responsibilities like **resource management**, *salary reviews*, *feedback cycles*, and *one-on-one* meetings became integral parts of my work.
+**Achievements**:
 
-During this period, I matured as an **architect and leader**, working closely with C-level executives and vice presidents. I refined my *communication* and *presentation* skills and learned to craft **strategy and technical vision** aligned with *business objectives*. Additionally, I gained insights into **engineering organizational structures**, supported by frameworks such as *Team Topologies*.
+- Graduated with a **Diploma with Honors**, reflecting academic excellence and dedication.
 
-##### A New Chapter: Staff Systems Architect
+---
 
-Now, I am embarking on a new journey as a **Staff Systems Architect** at a large enterprise company. The learning never stops—I continue to expand my technical, leadership, and strategic skills as I take on exciting new challenges in this role.
+### First Job at IBM: Software Engineer (2012–2014)
 
-### My Professional Timeline
+At the conclusion of my Bachelor’s degree, I joined the **IBA internship program** in my hometown, marking the official start of my career. Initially, I focused on learning Java, but soon discovered my passion for **Data Engineering** and transitioned into this field. Simultaneously, I pursued and earned a **Master’s degree in Information Technology** from BSUIR through remote studies.
 
-* **2011–2012: Programmer at Geoinformation Systems (Belarus)**
-  I started my career as a programmer, honing my coding and database skills and gaining hands-on experience in software development.
-* **2012–2014: Software Developer at IBA Group (Gomel, Belarus)**
-  At IBA Group, I contributed to the development of data flows, system integration, and enterprise solutions, which laid the groundwork for my future in data architecture.
-* **2014–2017: Lead Software Developer at IBA Group (Gomel, Belarus)**
-  As a Lead Developer, I took on more responsibilities, including system optimization, performance tuning, and managing deployments to production environments.
-* **2017–2021: Cloud/Big Data Architect at IBA Group (Gomel, Belarus)**
-  I transitioned into an architectural role, specializing in cloud-native and big data technologies like Hadoop, Spark, and Kubernetes. I designed scalable data systems and resolved complex performance issues.
-* **2021–2022: Solutions Architect at Profitero (Wrocław, Poland)**
-  Moving to Poland, I began managing architecture across multiple product lines, translating business requirements into technical solutions, and mentoring a team of architects and tech leads.
-* **2022–2024: Lead (Chief) Architect at Profitero (Wrocław, Poland)**
-  As the Chief Architect, I was responsible for driving Profitero's technology vision, establishing architectural standards, and fostering innovation within the organization.
-* **2024–Present: Staff Systems Architect at Vonage (Wrocław, Poland)**
-  Currently, I focus on designing secure and efficient IT architectures, implementing robust data governance frameworks, and collaborating with cross-functional teams to enhance operational efficiency.
+During this time, I contributed to **IBM's RM Metro project**, which evolved into the Data Aggregator for IBM’s global HR domain. This was my first experience, where I actively drove the design and implementation of solutions in collaboration with IBM architects, gaining hands-on experience in systems integration.
 
-### What Drives Me
+**Acquired Skills**:
 
-I take pride in mentoring teams, solving complex challenges, and driving innovation. Winning **O'Reilly’s Architectural Kata in 2023** was a significant milestone that highlighted my ability to tackle intricate architectural problems. My career has been defined by impactful contributions, including my work on IBM's Cognitive Enterprise Data Platform, Profitero's eCommerce analytics platform, and Vonage's AI-powered contact center solutions.
+- Transitioned from Java to Data Engineering
+- Proficiency in IBM stack technologies: DB2, Datastage, Cognos, MQ, and Message Broker
+- Experience in **data integration**, **dimensional modeling**, and **data architecture**
+- Strengthened collaboration and **leadership skills** during large-scale project execution
 
-Fluent in English, Russian, and proficient in Polish, I am committed to fostering collaboration in diverse environments. My passion for technology, coupled with a strategic mindset, continues to propel my career forward as I strive to create value and drive business success in every endeavor I undertake.
+**Achievements**:
+
+- Contributed to transforming RM Metro into the Data Aggregator project, a critical solution for IBM’s global HR systems
+- Took on my first leadership role, driving technical design and implementation alongside IBM architects
+- Earned a **Master’s degree in Information Technology** while gaining practical work experience
+
+---
+
+### Rockwell Automation: Lead Software Engineer (2014–2017)
+
+After my tenure with IBM, I joined Rockwell Automation as a **Lead Software Engineer**. Initially, I maintained a regional **Data Warehouse (DWH)** but soon transitioned to a major initiative to consolidate all regional warehouses into a **Global Data Lake** using the **Hadoop (Cloudera) stack**.
+
+In this dual role as **Team Lead** and **Data Architect**, I managed a development team based in India, guiding them in re-implementing the functionality of existing regional warehouses within the global framework. This was my first significant experience with big data and architectural design, demanding leadership, data expertise, and effective cross-cultural collaboration.
+
+**Acquired Skills**:
+
+- Big Data Technologies: Hadoop (Cloudera), HDFS, Hive, Spark, Oozie, Impala
+- Microsoft Stack: MS SQL, SSIS, SSAS, PowerBI
+- Advanced **data architecture**, including **data lake design** and ETL pipelines
+- Leadership and team management: Coordinating international teams to deliver complex projects
+- Migration and consolidation strategies for scalable global solutions
+
+**Achievements**:
+
+- Successfully led a development team from India, ensuring effective collaboration and timely delivery
+- Played a key role in designing and implementing the **Global Data Lake**, modernizing Rockwell’s data infrastructure
+- Gained expertise in managing complex **data migration** and **architectural projects**
+
+---
+
+### Back to IBM: Cloud/BigData Architect (2017–2021)
+
+After completing my work at Rockwell Automation, I rejoined **IBM** in a strategic role to build their **Cognitive Enterprise Data Platform (CEDP)**. This initiative aimed to consolidate IBM's global data into a hybrid cloud environment. I transitioned into a **Technical Delivery Lead** role, overseeing scalable, secure, and efficient data systems.
+
+Based on my experience, I established a **Big Data Center of Excellence (CoE)** at IBA, creating educational programs to train more than 50 engineers, 10 of whom became tutors under my leadership.
+
+**Acquired Skills**:
+
+- **Cloud Technologies**: IBM Cloud, Docker, Kubernetes
+- **Big Data Tools**: Spark, Kafka, ElasticSearch, Hortonworks Hadoop ecosystem
+- **Data Governance**: Designing and implementing frameworks for compliance, quality, and security
+- **DevOps and Pipelines**: Building CI/CD pipelines with GitLab and IBM Toolchains
+- **Architecture**: Viewpoints and Perspectives Framework, C4 modeling
+- **Leadership**: Grew a team from **8 to 24**, fostering professional development and optimizing performance
+
+**Achievements**:
+
+- Contributed to the design and implementation of IBM’s **CEDP**, enabling centralized and secure data access
+- Key projects:
+  - **EPM Sales Analytics**: Migrated legacy platforms to cloud-native infrastructure
+  - **DataHub**: Built a data ingestion service integrating Apache Kafka and Hadoop
+  - **Watson Health**: Created a HIPAA-compliant healthcare data platform
+  - **Security Center**: Architected dynamic access controls for hybrid environments
+- Established and scaled the **Big Data CoE**, training 50+ engineers
+
+---
+
+### Profitero: Lead (Chief) Architect (2021–2024)
+
+At **Profitero**, I started as a **Solutions Architect** and was quickly promoted to **Lead (Chief) Architect**, where I was responsible for driving the company’s technology vision, scaling its engineering capabilities, and aligning architectural initiatives with business objectives. This period marked a phase of immense growth, balancing technical innovation with strategic leadership.
+
+**Acquired Skills**:
+
+- **Product Architecture**: Designing scalable, secure, and efficient systems tailored to meet the demands of e-commerce analytics.
+- **Cloud Technologies**: Expertise in **AWS** and **GCP**, integrating cloud-native solutions into data platforms.
+- **Management Skills**:
+  - **Leadership and Mentorship**: Mentored architects and technical leads, fostering a culture of innovation and professional growth.
+  - **Engineering Organization Design**: Structured teams using frameworks like **Team Topologies** to optimize productivity and collaboration.
+- **Business and Strategy Alignment**: Collaborated with C-level executives and VPs to align technical roadmaps with overarching business goals.
+
+**Achievements**:
+
+- **Leadership and Team Growth**: Mentored team members into senior and architectural roles, and successfully scaled the engineering team while fostering collaboration and productivity.
+- **Company Acquisition**: Contributed to the company’s acquisition process by presenting and explaining how systems functioned, addressing potential concerns, and highlighting their strengths to showcase the value of the technical infrastructure.
+- **Cloud RFP Leadership**: Drove the Request for Proposal (RFP) process for cloud migration, leading the technical evaluation and decision-making to ensure alignment with business needs.
+- **Cloud Migration Execution**:
+  - Designed and planned the migration of over **400 bare metal servers** to Google Cloud using a **lift-and-shift** strategy within a challenging four-month timeline.
+  - Monitored and tracked execution, ensuring deadlines and quality benchmarks were met.
+- **System Modernization on Cloud**:
+  - Initiated and led the modernization of legacy systems post-migration, aligning the transformation with product objectives to maximize value and efficiency.
+
+At Profitero, I gained invaluable experience in balancing immediate tactical needs—such as cloud migrations—with long-term strategic goals, including system modernization and organizational growth. These achievements underscore my ability to lead transformative projects, align technology with business strategy, and drive impactful results.
+
+---
+
+### Vonage: Staff Systems Architect (2024–Present)
+
+At **Vonage**, I serve as a **Staff Systems Architect**, focusing on designing reliable architectures and implementing data intensive systems.
+
+While it is still early in my journey, I am eager to take on new challenges and continue driving impactful solutions. **My story continues.**
