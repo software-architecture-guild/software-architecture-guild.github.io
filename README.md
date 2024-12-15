@@ -51,3 +51,39 @@ software-architecture-guild/
 - themes/lotus/: The Lotus theme files.
 - config.toml: Configuration file for your site.
 - README.md: This file.
+
+## Linting
+
+### Markdown
+
+1. Install markdown lint:
+
+   ```bash
+   sudo npm install -g markdownlint-cli2
+   ```
+
+2. Run markdown lint:
+
+   ```bash
+   markdownlint-cli2 "**/*.md" "#node_modules" "#themes"
+   ```
+
+3. Fix automatically:
+
+   ```bash
+   markdownlint-cli2 "**/*.md" "#node_modules" "#themes" --fix
+   ```
+
+### Spell Check
+
+1. Install cspell:
+
+   ```bash
+   sudo npm install -g cspell@latest
+   ```
+
+2. Run cspell lint:
+
+   ```bash
+   cspell lint .
+   ```
