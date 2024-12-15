@@ -1,5 +1,5 @@
 ---
-weight: 320
+weight: 330
 title: "Architecture Styles"
 description: "This article explains the different types of architectures and how to apply them."
 icon: "school"

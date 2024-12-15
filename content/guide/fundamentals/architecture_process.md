@@ -1,5 +1,5 @@
 ---
-weight: 340
+weight: 350
 title: "Architecture Process"
 description: "This article explains how the architectural process works to produce architecture."
 icon: "schema"

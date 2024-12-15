@@ -1,5 +1,5 @@
 ---
-weight: 330
+weight: 340
 title: "Visualizing Architecture"
 description: "This article explains how to visualize different aspects of architecture."
 icon: "draw"
