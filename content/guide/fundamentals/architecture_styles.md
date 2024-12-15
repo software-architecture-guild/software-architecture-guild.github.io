@@ -88,7 +88,16 @@ Understanding the system's **functional** and **non-functional requirements** is
 
 * **Performance**: Will the system need to handle high throughput, low-latency responses, or real-time data processing? High-performance systems may benefit from styles like **event-driven** or **space-based architecture**, which efficiently handle distributed, asynchronous processes.
 * **Scalability**: If the system must handle growing traffic or user demand, **microservices** or **space-based architectures** might be better suited, as they allow independent scaling of components.
-* **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures
+* **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures.
+
+<center>
+  <img align="center" src="../../../images/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" width="75%" height="75%"/>
+  <br>
+  <a href="https://developertoarchitect.com/resources.html">
+    <small>Source: https://developertoarchitect.com/</small>
+  </a>
+</center>
+<br>
 
 ### Team Expertise and Resources
 
