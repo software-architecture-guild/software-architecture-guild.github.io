@@ -54,7 +54,7 @@ Notations are the symbolic languages or styles used to create **architectural di
 
 * **[UML (Unified Modeling Language)](https://www.conceptdraw.com/How-To-Guide/uml-diagrams)**: A standardized notation for depicting system components, relationships, and workflows. Effective for class diagrams, sequence diagrams, and activity diagrams.
 * **[C4 Notation](https://c4model.com/diagrams/notation)**: Built into the C4 model, it simplifies diagramming with four layers of abstraction and focuses on clear labeling and relationships over complex symbols.
-* **[Archimate](https://pubs.opengroup.org/architecture/archimate3-doc/)**: A visual modeling language explicitly designed for enterprise architecture, often used with TOGAF.
+* **[ArchiMate](https://pubs.opengroup.org/architecture/archimate3-doc/)**: A visual modeling language explicitly designed for enterprise architecture, often used with TOGAF.
 
 ---
 
