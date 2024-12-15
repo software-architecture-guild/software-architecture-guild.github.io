@@ -36,7 +36,7 @@ menu:
 
 params:
   footer:
-    copyright: '© :YEAR: Software Architecture Giuld. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
+    copyright: '© :YEAR: Software Architecture Guild. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
     version: true # include git commit info in footer
 
   social:

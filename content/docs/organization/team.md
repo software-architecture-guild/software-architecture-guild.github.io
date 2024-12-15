@@ -12,7 +12,7 @@ toc: true
 
 ## What makes a Team?
 
-A real team is more than just a group of people working together. Katzenbach and Smith outline several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
+A real team is more than just a group of people working together. There are several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
 
 <center>
    <img align="center" src="../../../images/organization/team.attributes.drawio.png" alt="Team attributes" width="75%" height="75%"/>
@@ -39,7 +39,7 @@ The book identifies different types of teams based on their roles and functions 
 
 ### The Difference Between Teams and Non-Teams
 
-Katzenbach and Smith emphasize that not every group is a team, even if they call themselves one. Groups often fail to become real teams because they lack the discipline to follow the key elements of team performance. The authors differentiate teams from other groupings, such as:
+Not every group is a team, even if they call themselves one. Groups often fail to become real teams because they lack the discipline to follow the key elements of team performance. The authors differentiate teams from other groupings, such as:
 
 1. **Working Groups**: These are collections of individuals who come together to share information or coordinate activities but do not have a collective purpose or shared performance goals. In working groups, individual members focus on their own areas of responsibility and performance, with little or no emphasis on mutual accountability or collaboration.
    * **Example**: A meeting of managers from different departments to update each other on their respective areas is a working group, not a team.

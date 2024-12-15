@@ -202,7 +202,7 @@ The **tactical level** involves **middle management**, including department head
 
 * **Time Horizon:** Tactical plans are medium-term and typically cover a 1 to 3-year period.
 * **Scope:** While the strategic level focuses on the entire organization, the tactical level focuses on specific departments or business units. Each department is responsible for executing its portion of the overall strategy.
-* **Key Decisions:** Tactical decisions include setting departmental goals, allocating resources, and determining how to execute strategic initiatives. For example, a marketing department might plan targeted campaigns to support a strategic objective, while the HR department might develop training programs to upskill employees for future needs.
+* **Key Decisions:** Tactical decisions include setting departmental goals, allocating resources, and determining how to execute strategic initiatives. For example, a marketing department might plan targeted campaigns to support a strategic objective, while the HR department might develop training programs to improve employees' skills for future needs.
 
 **Example**: If the company’s strategy is to enter a new market, the marketing department might develop a tactical plan to research local consumer behavior, adapt marketing materials, and establish new advertising channels.
 

@@ -67,7 +67,7 @@ features:
 
     - title: Dark Mode
       icon: dark_mode
-      description: "Prefer not to be blasted by the sun while reading? Switch to a low-light UI with the click of a button. Modify colour variables to match your branding."
+      description: "Prefer not to be blasted by the sun while reading? Switch to a low-light UI with the click of a button. Modify color variables to match your branding."
 
     - title: Search by DocSearch
       icon: search
@@ -79,15 +79,15 @@ features:
 
     - title: Bootstrap v5
       icon: palette
-      description: Built on Bootstrap 5, Lotus Docs allows for a familiar, flexible, and intuitive developer experience. Easily customise your site via SCSS variables and files.
+      description: Built on Bootstrap 5, Lotus Docs allows for a familiar, flexible, and intuitive developer experience. Easily customize your site via SCSS variables and files.
 
 # Image compare
 image_compare:
   enable: false
   weight: 30
 
-  title: Customise The Lotus Docs Appearance
-  subtitle: Much of Lotus Docs' appearance can be customised. Dark mode is optional (enabled by default) and you can choose a Google font that suites you via the config parameters.
+  title: Customize The Lotus Docs Appearance
+  subtitle: Much of Lotus Docs' appearance can be customized. Dark mode is optional (enabled by default) and you can choose a Google font that suites you via the config parameters.
 
   items:
     - title: Dark Mode
@@ -136,5 +136,5 @@ image_compare:
         }
       }
       imagePath: "images/screenshots"
-      imageBefore: "lotusdocs_blue_theme_colour.webp"
-      imageAfter: "lotusdocs_cardinal_theme_colour.webp"
+      imageBefore: "lotusdocs_blue_theme_color.webp"
+      imageAfter: "lotusdocs_cardinal_theme_color.webp"

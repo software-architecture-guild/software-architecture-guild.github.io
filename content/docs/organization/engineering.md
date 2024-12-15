@@ -51,7 +51,7 @@ Another key concept is the **value stream**. A value stream represents a product
 In simpler terms, how teams communicate and collaborate significantly shapes the design of the systems they create. A company's organizational structure directly influences the architecture and structure of the software or systems it produces.
 
 <center>
-   <img align="center" src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conways Law" width="75%" height="75%"/>
+   <img align="center" src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conway's Law" width="75%" height="75%"/>
 </center>
 
 ##### Key Insights from Conway's Law
@@ -214,7 +214,7 @@ Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity an
 4. **Executive Action Team (EAT)**: This team is responsible for removing systemic impediments and making decisions at the organizational level. It provides leadership, governance, and support for scaling efforts and ensures that the framework aligns with organizational goals and strategy.
 5. **Executive MetaScrum (EMS)**: This is a leadership group that acts like the Product Owner for the organization, providing clarity, priorities, and vision across different teams and departments. It helps align the strategic initiatives with the execution efforts.
 6. **Scale-Free Architecture**: Scrum@Scale allows organizations to grow or shrink the number of teams without altering the structure fundamentally. The framework is adaptable to teams of different sizes, product types, or market demands, helping organizations remain agile and flexible as they scale.
-7. **Backlog Refinement at Scale**: Scrum@Scale ensures that product backlogs are refined and prioritized across multiple teams to ensure they deliver value cohesively and coordinatedly. This is typically done through multi-tiered backlogs, with top-level priorities trickling down to individual team backlogs.
+7. **Backlog Refinement at Scale**: Scrum@Scale ensures that product backlogs are refined and prioritized across multiple teams to ensure they deliver value collaboratively and systematically. This is typically done through multi-tiered backlogs, with top-level priorities trickling down to individual team backlogs.
 8. **Cross-Team Collaboration**: The framework promotes strong collaboration across teams through frequent communication and the removal of silos. This ensures that knowledge, resources, and solutions are shared effectively, avoiding redundancy or inefficiency.
 
 ##### Benefits of Scrum@Scale
@@ -291,7 +291,7 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
 
 **[LeSS (Large-Scale Scrum)](https://less.works/less/framework)** is a framework for scaling Scrum across multiple teams working together on a single product. It was developed by Craig Larman and Bas Vodde and aims to maintain Scrum's simplicity and principles while scaling it to larger organizations or teams. Unlike other scaling frameworks, LeSS focuses on keeping Scrum lightweight and minimizing additional roles, processes, and artifacts.
 
-LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer-centricity.
+LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer-focus.
 
 <center>
    <img align="center" src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" width="75%" height="75%"/>

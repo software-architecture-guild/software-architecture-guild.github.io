@@ -92,7 +92,7 @@ The **Information** viewpoint addresses the **organization, storage, and flow of
 * **Concerns**:
   * Data models (conceptual, logical, or physical).
   * Relationships between data entities.
-  * Data lifecycles and flow between components.
+  * Data lifecycle and flow between components.
 * **What is irrelevant**:
   * Behavioral or functional information.
   * Storage technology specifics (unless critical to the architecture).

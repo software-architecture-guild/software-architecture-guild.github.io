@@ -22,8 +22,8 @@ At the heart of lean product development is the concept of **Product-Market Fit*
 A valuable framework for achieving product-market fit is the **Product-Market Fit Pyramid**. It is a layered model consisting of five components:
 
 1. **Target Customer**: Who are you building the product for? These are the people whose problems you are solving.
-2. **Underserved Needs**: What specific needs of the target customer are unmet by existing products?
-3. **Value Proposition**: How does your product meet these underserved needs better than the alternatives?
+2. **Unfulfilled Needs**: What specific needs of the target customer are unmet by existing products?
+3. **Value Proposition**: How does your product meet these unfulfilled needs better than the alternatives?
 4. **Feature Set**: What features will your product offer to deliver the value proposition?
 5. **User Experience (UX)**: How will customers interact with your product, and how will it feel and function for them?
 
@@ -51,7 +51,7 @@ The lean product development process has six iterative steps that help teams wor
 
 Understanding your target customers is the first step. Customers can be identified through demographic, psychographic, and behavioral segmentation. Creating detailed personas—representative archetypes of your ideal customers—helps ensure every decision is made with their needs in mind.
 
-##### Step 2: Identify Underserved Customer Needs
+##### Step 2: Identify Unfulfilled Customer Needs
 
 This step involves pinpointing specific customer problems or unmet needs that current solutions fail to address. Tools such as the **Importance versus Satisfaction Framework** help categorize and prioritize these needs, allowing teams to focus on the most critical gaps in the market.
 
@@ -111,4 +111,4 @@ Lean product development is not just about getting the product right—it’s ab
 #### Books
 
 * Olsen, Dan. [The Lean Product Playbook: How to Innovate with Minimum Viable Products and Rapid Customer Feedback.](https://leanproductplaybook.com/) Wiley, 2015.
-  * The Lean Product Playbook by Dan Olsen provides a step-by-step framework for developing successful products using lean principles. The book focuses on achieving product-market fit, where a product effectively meets customer needs better than alternatives. Olsen introduces the Product-Market Fit Pyramid, which includes defining the target customer, identifying their underserved needs, crafting a value proposition, creating an MVP (Minimum Viable Product), and testing it with real users. A key theme is separating the problem space (understanding customer needs) from the solution space (developing the product), ensuring teams focus on the right issues. The book also covers agile development practices and emphasizes iterative testing, customer feedback, and using data and metrics to continuously optimize and refine the product.
+  * The Lean Product Playbook by Dan Olsen provides a step-by-step framework for developing successful products using lean principles. The book focuses on achieving product-market fit, where a product effectively meets customer needs better than alternatives. Olsen introduces the Product-Market Fit Pyramid, which includes defining the target customer, identifying their unaddressed needs, crafting a value proposition, creating an MVP (Minimum Viable Product), and testing it with real users. A key theme is separating the problem space (understanding customer needs) from the solution space (developing the product), ensuring teams focus on the right issues. The book also covers agile development practices and emphasizes iterative testing, customer feedback, and using data and metrics to continuously optimize and refine the product.
