@@ -35,19 +35,19 @@ Architecture characteristics represent the critical non-functional attributes of
 
 ### Why Are Architecture Characteristics Important?
 
-###### **Alignment with Business Goals**
+**Alignment with Business Goals**:
 
 Architecture characteristics bridge the gap between technical decisions and business outcomes. For example, an e-commerce platform that prioritizes **availability** ensures customers can shop without interruptions, directly affecting revenue.
 
-###### **Guidance for Architectural Decisions**
+**Guidance for Architectural Decisions**:
 
 They serve as benchmarks for making design choices, such as selecting architectural styles (e.g., microservices vs. monoliths) or technologies (e.g., relational vs. NoSQL databases).
 
-###### **System Quality and User Experience**
+**System Quality and User Experience**:
 
 Characteristics like **performance**, **scalability**, and **security** directly impact how users perceive and interact with the system.
 
-###### **Risk Mitigation**
+**Risk Mitigation**:
 
 Prioritizing attributes like **resilience** and **fault tolerance** reduces the risk of failures and downtime.
 
@@ -55,11 +55,11 @@ Prioritizing attributes like **resilience** and **fault tolerance** reduces the 
 
 ### Defining and Prioritizing Characteristics
 
-###### **Step 1: Collaborate with Stakeholders**
+**Step 1. Collaborate with Stakeholders**:
 
 Engage stakeholders (e.g., business leaders, product managers, and technical teams) to identify the system’s critical success factors. For instance, a finance application might emphasize **security** and **compliance**, while a social media platform prioritizes **scalability** and **performance**.
 
-###### **Step 2: Use Quality Attribute Scenarios**
+**Step 2. Use Quality Attribute Scenarios**:
 
 Create measurable scenarios to define characteristics. A quality attribute scenario has three parts:
 
@@ -67,7 +67,7 @@ Create measurable scenarios to define characteristics. A quality attribute scena
 * **Response**: How the system should behave (e.g., "Handle the increased load without downtime").
 * **Response Measure**: A quantifiable metric (e.g., "Maintain response time under 500ms for 95% of requests").
 
-###### **Step 3: Prioritize Characteristics**
+**Step 3. Prioritize Characteristics**:
 
 Use prioritization techniques like **MOSCOW analysis** (Must-have, Should-have, Could-have, Won’t-have) or weighted scoring to focus on the most critical characteristics.
 
@@ -375,6 +375,25 @@ Enables components or modules to be reused across different systems or projects.
 
 ---
 
+### Safety
+
+**Definition:**
+Ensures the system operates without causing harm to users, the environment, or other systems.
+
+**Techniques:**
+
+* Input validation to prevent hazardous operations.
+* Fail-safe mechanisms for critical systems.
+* Risk assessment during design.
+
+**Trade-Offs:**
+
+* **Impact on Performance:** Safety checks may introduce latency.
+* **Impact on Cost:** Ensuring safety requires investment in thorough testing and certification.
+* **Impact on Simplicity:** Safety features may complicate otherwise simple designs.
+
+---
+
 ### Scalability
 
 **Definition:**
@@ -391,6 +410,25 @@ Ensures the system can handle increased workloads without degrading performance.
 * **Impact on Cost:** Scaling infrastructure increases expenses.
 * **Impact on Testability:** Large-scale systems require advanced testing strategies.
 * **Impact on Modifiability:** Scaling mechanisms may limit future architectural changes.
+
+---
+
+### Security
+
+**Definition:**
+Protects the system from unauthorized access, breaches, and vulnerabilities.
+
+**Techniques:**
+
+* Role-based access control (RBAC).
+* Encryption for data at rest and in transit.
+* Regular vulnerability scans and penetration testing.
+
+**Trade-Offs:**
+
+* **Impact on Performance:** Security measures like encryption add processing overhead.
+* **Impact on Usability:** Stringent security can reduce user convenience.
+* **Impact on Scalability:** Securing distributed systems is more complex.
 
 ---
 
@@ -448,44 +486,6 @@ Ensures the system provides an intuitive and efficient experience for users.
 * **Impact on Security:** Simplified usability may compromise stringent security requirements.
 * **Impact on Configurability:** Usability improvements may reduce customization options.
 * **Impact on Cost:** Extensive usability testing increases development expenses.
-
----
-
-### Security
-
-**Definition:**
-Protects the system from unauthorized access, breaches, and vulnerabilities.
-
-**Techniques:**
-
-* Role-based access control (RBAC).
-* Encryption for data at rest and in transit.
-* Regular vulnerability scans and penetration testing.
-
-**Trade-Offs:**
-
-* **Impact on Performance:** Security measures like encryption add processing overhead.
-* **Impact on Usability:** Stringent security can reduce user convenience.
-* **Impact on Scalability:** Securing distributed systems is more complex.
-
----
-
-### Safety
-
-**Definition:**
-Ensures the system operates without causing harm to users, the environment, or other systems.
-
-**Techniques:**
-
-* Input validation to prevent hazardous operations.
-* Fail-safe mechanisms for critical systems.
-* Risk assessment during design.
-
-**Trade-Offs:**
-
-* **Impact on Performance:** Safety checks may introduce latency.
-* **Impact on Cost:** Ensuring safety requires investment in thorough testing and certification.
-* **Impact on Simplicity:** Safety features may complicate otherwise simple designs.
 
 ---
 

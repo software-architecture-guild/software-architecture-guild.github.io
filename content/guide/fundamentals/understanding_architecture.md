@@ -25,7 +25,7 @@ There are two primary principles you need to learn:
 1. **Everything in Software Architecture is a Trade-off**: Every architectural decision involves balancing costs and benefits, such as performance vs. scalability or flexibility vs. simplicity.
 2. **Why is More Important Than How**: Understanding the reasons behind architectural decisions is critical for long-term success. The “how” (implementation details) may change over time, but the “why” must remain aligned with system and business objectives.
 
-### Key Concepts of Software Architecture**
+### Key Concepts of Software Architecture
 
 1. **Architecture as a Set of Structures:** Software architecture is composed of multiple structures categorized into three types:
     * **Module Structures:** Focus on implementation units (e.g., layers, classes, modules) and their static organization.
@@ -74,10 +74,10 @@ Software architecture is the cornerstone of successful system design, acting as 
 
 ### Key Reasons Why Software Architecture Is Important
 
-1. **Driving Quality Attributes:**
+1. **Driving Architecture Characteristics:**
    * Architecture significantly influences whether a system can meet its required quality attributes (e.g., performance, security, scalability).
    * It shapes time-based behavior, resource usage, coupling, and dependency management to achieve these attributes.
-2. **Reasoning About and Managing Change:**
+2. **Justifying and Managing Change:**
    * A well-designed architecture isolates potential changes within specific components, enabling adaptability.
    * Helps stakeholders assess the impact and feasibility of modifications.
 3. **Predicting System Qualities:**
@@ -86,7 +86,7 @@ Software architecture is the cornerstone of successful system design, acting as 
 4. **Enhancing Stakeholder Communication:**
    * Architecture is a common language for diverse stakeholders, such as developers, testers, and business owners.
    * Documented architecture provides clarity and shared understanding, fostering collaboration.
-5. **Carrier of Fundamental Design Decisions:**
+5. **Making and Capturing Fundamental Design Decisions:**
    * Architecture embodies the earliest and most critical design decisions, which are complex and expensive to change later.
    * These decisions form the foundation for all subsequent development work.
 6. **Defining Constraints on Implementation:**
@@ -95,7 +95,7 @@ Software architecture is the cornerstone of successful system design, acting as 
 7. **Influencing Organizational Structure:**
    * According to Conway’s Law, the architecture often mirrors the organizational structure that created it.
    * A clear architecture supports efficient team coordination and task division.
-8. **Enabling Evolutionary Prototyping:**
+8. **Enabling System Evolution:**
    * Architecture supports prototyping by offering a structure to build and test incremental system functionality.
    * Facilitates iterative development, especially in Agile or exploratory projects.
 9. **Supporting Cost and Schedule Estimation:**
@@ -104,10 +104,10 @@ Software architecture is the cornerstone of successful system design, acting as 
 10. **Foundation for Reusable Models:**
     * Architectures can be reused across product lines or projects, enabling economies of scale.
     * Serves as a blueprint for building similar systems efficiently.
-11. **Focus on Component Assembly:**
+11. **Focus on Component Composition:**
     * Encourages viewing the system as a set of interacting components rather than just a collection of code.
-    * Shifts focus from creating components to effectively assembling them, improving modularity and maintainability.
-12. **Restricting Design Alternatives:**
+    * Shifts focus from creating components to effectively combining them, improving modularity and maintainability.
+12. **Constraining Design Alternatives:**
     * Architecture narrows design choices, channeling creativity toward solving specific problems.
     * Reduces complexity by limiting unnecessary variability in implementation.
 13. **Basis for Training:**
