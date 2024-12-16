@@ -1,5 +1,5 @@
 ---
-weight: 460
+weight: 430
 title: "Product"
 description: "This article explains what a product development should look like."
 icon: "article"
