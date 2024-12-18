@@ -46,22 +46,35 @@
         </div>
 
         <div class="d-flex align-items-center">
-            <ul class="list-unstyled mb-0">
-                {{ with $.Scratch.Get "social_list" }}
+
+            <div id="navigation">
+                <!-- Navigation Menu -->
+                <ul class="navigation-menu nav-right">
+                    {{- range .Site.Menus.primary }}
+                    <li><a href="{{ relLangURL .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul><!--end navigation menu-->
+            </div><!--end navigation-->
+
+            <!-- Social Links Start -->
+            {{ with $.Scratch.Get "social_list" }}
+            <ul class="social-link d-flex list-inline mb-0">
                 {{ range . }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
                     <li class="list-inline-item mb-0">
                         <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else }} https://{{ . }}.com/{{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank">
-                            <div class="btn btn-icon btn-default border-0">
+                            <div class="btn btn-icon btn-landing border-0">
                                 {{ with resources.Get $path }}
                                     {{ .Content | safeHTML }}
                                 {{ end }}
                             </div>
                         </a>
                     </li>
-                    {{ end }}
                 {{ end }}
             </ul>
+            {{ end }}
+            <!-- Social Links End -->
+
             {{ if eq .Site.Params.docs.darkMode true -}}
             <button id="mode" class="btn btn-icon btn-default ms-2" type="button" aria-label="Toggle user interface mode">
                 <span class="toggle-dark">

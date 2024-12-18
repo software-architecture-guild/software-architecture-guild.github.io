@@ -352,6 +352,61 @@
             max-height: 70px;
             left: 0px;
             transition: all 0.3s;
+
+            #navigation {
+                &.toggle-menu {
+                    position: relative;
+                    display: block;
+                    top: 0;
+                    border: none;
+                    .toggle-menu-item {
+                        display: block;
+                        >li {
+                            float: none;
+                            margin: 0 16px !important;
+                            text-align: center;
+                            >a {
+                                padding: 16px 0;
+                                min-height: auto;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            .navigation-menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                > li {
+                    float: left;
+                    display: block;
+                    position: relative;
+                    margin: 0 10px;
+                    &:hover > a,
+                    &.active > a{
+                        color: $primary !important;
+                    }
+                    > a {
+                        display: flex;
+                        color: $dark;
+                        font-size: 15px;
+                        background-color: transparent !important;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        line-height: 24px;
+                        // text-transform: uppercase;
+                        font-family: $font-family-base;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        align-items: center;
+                        &:hover,
+                        &:active{
+                            color: $primary;
+                        }
+                    }
+                }
+            }
             .header-bar {
                 background: var(--top-header-bg);
                 backdrop-filter: saturate(180%) blur(5px);
