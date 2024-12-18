@@ -5,7 +5,7 @@ description: "This article explores the importance of effective communication an
 icon: "article"
 date: "2024-11-30T18:31:00+01:00"
 lastmod: "2024-11-30T18:31:00+01:00"
-draft: true
+draft: false
 toc: true
 ---
 ## What makes communication effective?
@@ -34,7 +34,7 @@ Mastering communication means understanding your audience and crafting messages 
 The Rhetoric Triangle outlines three interconnected elements of effective communication:
 
 * **Ethos (Credibility)**: Establishing trust and authority to make your message more convincing.
-* **Pathos (Emotion)**: Connecting with the audience emotionally to create engagement and relatability.
+* **Pathos (Emotion)**: Connecting with the audience emotionally to create engagement and accessibility.
 * **Logos (Logic)**: Using data, reasoning, and structure to build a solid, persuasive argument.
 
 Balancing these elements is essential for tailoring messages to different audiences and achieving communication goals.

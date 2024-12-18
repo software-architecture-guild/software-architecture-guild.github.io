@@ -69,12 +69,12 @@ Built into the C4 model, it simplifies diagramming with four layers of abstracti
   </a>
 </center>
 
-#### [Archimate](https://pubs.opengroup.org/architecture/archimate3-doc/)
+#### [ArchiMate](https://pubs.opengroup.org/architecture/archimate3-doc/)
 
 A visual modeling language explicitly designed for enterprise architecture, often used with TOGAF.
 
 <center>
-  <img src="../../../../../images/competencies/modeling/notations/archimate.legend.png" alt="Archimate Legend" width="75%" height="75%"/>
+  <img src="../../../../../images/competencies/modeling/notations/archimate.legend.png" alt="ArchiMate Legend" width="75%" height="75%"/>
   <br>
   <a href="https://www.archimatetool.com/resources/">
     <small>Source: https://www.archimatetool.com/</small>
@@ -130,7 +130,7 @@ When selecting **architecture diagramming tools**, we can classify them into two
 
 These tools are tailored for creating, analyzing, and documenting **software architectures**. They typically support structured notations such as **UML** and **ArchiMate**, which enforce **architectural standards** and offer **advanced analysis** features. Architecture-specific tools provide **consistency**, implement standards, and facilitate **in-depth modeling** of complex systems. For example:
 
-* **[Archimate (Open Group)](https://www.archimatetool.com/)** – Archimate is a  modeling tool built around the **ArchiMate standard**, enabling architects to
+* **[ArchiMate (Open Group)](https://www.archimatetool.com/)** – ArchiMate is a  modeling tool built around the **ArchiMate standard**, enabling architects to
   represent layered architecture with structured views. It supports detailed templates and integrates with enterprise tools for **advanced analysis**.
 * **[PlantUML](https://plantuml.com/)** – A **text-based UML** diagram generator, PlantUML creates diagrams from plain text descriptions. It’s beneficial for integrating architecture designs with **version control systems** like Git, offering flexibility and quick updates.
 * **[Sparx Systems Enterprise Architect](https://sparxsystems.com/products/ea/)** - This tool supports multiple diagramming types, including **UML**, **BPMN**, and **ArchiMate**. It’s ideal for modeling large and complex architectures and integrates well with development environments, making it suitable for **enterprise-scale projects**.

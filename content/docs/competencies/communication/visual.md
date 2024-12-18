@@ -5,7 +5,7 @@ description: "This article outlines the principles and antipatterns for creating
 icon: "article"
 date: "2024-11-30T18:15:36+01:00"
 lastmod: "2024-11-30T18:15:36+01:00"
-draft: true
+draft: false
 toc: true
 ---
 ## What is Visual Communication?

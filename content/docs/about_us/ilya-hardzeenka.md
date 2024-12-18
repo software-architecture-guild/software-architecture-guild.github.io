@@ -14,7 +14,7 @@ toc: true
             <img src="../../../images/about_us/Ilya-Hardzeenka.png" alt="Ilya Photo" width="80%" height="80%" class="rounded mx-auto d-block mt-4 mb-4"/>
         </div><!--end col-->
         <div class="col-lg-8 col-md-8 align-items-left align-middle mt-4 mb-4">
-            I am Ilya Hardzeenka, a passionate Data and Software Architect with a strong academic foundation and over a decade of experience designing and delivering innovative, secure, and scalable technology solutions. Currently residing in Wrocław, Poland, I thrive at the intersection of technology and business, aligning technical strategies to achieve impactful outcomes.
+            I am Ilya Hardzeenka, a passionate Data and Software Architect with a strong academic foundation and over a decade of experience designing and delivering innovative, secure, and scalable technology solutions. Currently residing in Wroclaw, Poland, I thrive at the intersection of technology and business, aligning technical strategies to achieve impactful outcomes.
             <br><br>
             <a href="https://www.linkedin.com/in/ilya-hardzeenka" target="_blank" class="d-flex align-items-center text-decoration-none text-primary mb-3">
               <img
@@ -60,7 +60,7 @@ This drive is what fuels my journey and inspires me to continue pushing forward,
 
 I studied at the Belarusian State University of Informatics and Radioelectronics (BSUIR) from 2007 to 2012, earning a **Bachelor's degree in Telecommunications Engineering**. During this time, I built a strong technical foundation, particularly in programming, and gained proficiency in **C++**.
 
-Alongside my academic studies, I secured my first part-time job at Geoinformation Systems, applying theoretical knowledge to real-world projects. This experience marked the beginning of my professional journey and offered valuable insights into the practical aspects of programming and telecommunications.
+Alongside my academic studies, I secured my first part-time job at Geo Information Systems, applying theoretical knowledge to real-world projects. This experience marked the beginning of my professional journey and offered valuable insights into the practical aspects of programming and telecommunications.
 
 **Acquired Skills**:
 
