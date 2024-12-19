@@ -1,0 +1,20 @@
+{{- $content := . -}}
+{{- with .Params.Banner -}}
+  {{- $banner := $content.Resources.GetMatch . -}}
+  {{- if $banner -}}
+    {{- $banner.Permalink -}}
+  {{- else -}}
+    {{- (resources.GetMatch $content.Params.Banner).Permalink -}}
+  {{- end -}}
+{{- else -}}
+  {{- if .Params.Image -}}
+    {{- $image := $content.Resources.GetMatch $content.Params.Image -}}
+    {{- if $image -}}
+      {{-  $image.Permalink -}}
+    {{- else -}}
+      {{- (resources.GetMatch $content.Site.Params.content.site.ogimage).Permalink -}}
+    {{- end -}}
+  {{- else -}}
+    {{- (resources.GetMatch $content.Site.Params.content.site.ogimage).Permalink -}}
+  {{- end -}}
+{{- end -}}

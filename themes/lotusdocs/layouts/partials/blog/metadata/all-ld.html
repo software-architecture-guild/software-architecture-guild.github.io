@@ -1,0 +1,70 @@
+<script type="application/ld+json" id="meta-organisation">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": {{- .Site.Home.Permalink -}},
+    "logo": {{ partial "blog/metadata/image-ld.html" . }}
+  }
+</script>
+
+<script defer type="application/ld+json" id="meta-website">
+  { 
+    "@context": "http://schema.org", 
+    "@type": "WebSite", 
+    "url": {{ .Site.Home.Permalink }}, 
+    "sameAs": [
+      {{ printf "%s%s" "https://twitter.com/" .Site.Params.content.social.twitter | absURL }}, 
+      {{ printf "%s%s" "https://github.com/" .Site.Params.content.social.github | absURL }}
+    ], 
+    "name": {{ .Title }}, 
+    "logo": {{ "/favicon.ico" | absURL }},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        {{ with .Site.GetPage "search" }}
+          "urlTemplate": {{ printf "%s%s" .Permalink "?s={search_term_string}" }}
+        {{ end }}
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>
+
+<script type="application/ld+json" id="meta-breadcrumbs">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ .Site.Title }}",
+      "item": {{ .Site.BaseURL }}
+    }
+    {{ if and (or .IsNode .IsPage) (not .IsHome)}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": 
+        {{- if or (and .Parent .Parent.IsHome) .IsNode -}}
+          {{- .Title -}}
+        {{- else -}}
+          {{- .Parent.Title -}}
+        {{ end }},
+      {{ if and (not (and .Parent .Parent.IsHome)) .IsPage }}
+        "item": {{ .Parent.Permalink }}
+      {{ end }}
+    }
+    {{ end }}
+    {{ if .Parent }}
+      {{ if and (not .Parent.IsHome) .IsPage }}
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ .Title }}"
+      }
+      {{ end }}
+    {{ end }}
+    ]
+  }
+</script>

@@ -1,0 +1,160 @@
+{{- $site := .Site -}}
+{{- $content := . -}}
+
+{{ $guestLen := 0 }}
+{{ $hostLen := 0 }}
+
+{{ with $content.Params.guests }}
+  {{ $guestLen = len . }}
+{{ end }}
+
+{{ with $content.Params.hosts }}
+  {{ $hostLen = len . }}
+{{ end }}
+
+{{ $peopleLen := add $guestLen $hostLen }}
+
+<script defer type="application/ld+json" id="meta-episode">
+  { 
+    "@context": "http://schema.org", 
+    "@type": "PodcastEpisode",
+    "name": "{{- .Params.Title -}}",
+    "image": {{- partial "blog/metadata/image-ld.html" . -}},
+    "author": [
+      {{- range $index, $value := .Params.hosts -}}
+        {{- $person := $site.GetPage (printf "/person/%s" $value) -}}
+        {
+          "@type": "Person",
+          "name": "{{- $person.Title -}}",
+          "image": {{- partial "blog/metadata/image-ld.html" $person -}},
+          "url": {{- $person.Permalink -}}
+        }{{- if ne (add $index 1) $peopleLen -}},{{- end -}}
+      {{- end -}}
+      {{- range $index, $value := .Params.guests -}}
+        {{- $person := $site.GetPage (printf "/person/%s" $value) -}}
+        {
+          "@type": "Person",
+          "name": "{{- $person.Title -}}",
+          "image": {{- partial "blog/metadata/image-ld.html" $person -}},
+          "url": {{- $person.Permalink -}}
+        }{{- if ne (add (add $index 1) $hostLen) $peopleLen -}},{{- end -}}
+      {{- end -}}
+    ],
+    "url": {{- .Permalink  -}},
+    "description": "{{- .Params.Description | plainify -}}",
+    "associatedMedia": [
+      {{ with .Params.podcast_file }}
+        {
+          "@type": "MediaObject",
+          "contentUrl": {{- printf "%s%s" $site.Params.content.site.media_prefix . | absURL -}}
+        }
+        {{ with $content.Params.youtube }},{{ end }}
+      {{ end }}
+
+      {{ with .Params.youtube }}
+        {
+          "@type": "VideoObject",
+          "contentUrl": {{- printf "%s%s" "https://youtu.be/" . | absURL -}},
+          "name": "{{- $content.Title -}}",
+          "thumbnailUrl": {{- $content.Params.image | absURL -}},
+          "description": "{{- $content.Params.Description | plainify -}}",
+          "uploadDate": "{{- $content.Date.Format "2006-01-02" -}}"          
+        }
+      {{ end }}
+    ]
+    {{ with .Params.Series }}
+    ,
+      {{- $counter := 0 -}}
+      {{ with . }}
+        {{- range $key, $value := . -}}
+          {{ with $value }}
+            {{- $counter = add $counter 1 -}}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{ $seriesLen := (len .) }}
+      {{ if gt $counter 0 }}
+        "partOfSeries": [
+        {{ range $index, $value := . }}
+          {{- $series := $site.GetPage (printf "/series/%s" ($value | urlize)) -}}
+          {
+            "@type": "PodcastSeries",
+            "name": "{{- $series.Title -}}",
+            "url": {{- $series.Permalink -}}
+          }{{- if ne (add $index 1) $seriesLen -}},{{- end -}}
+        {{ end }}
+      ]
+      {{ end }}
+    {{ end }}
+  }
+</script>
+
+{{ if .Params.upcoming }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{- .Title -}}",
+    "startDate": "{{- .Date.Format "2006-01-02" -}}",
+    "endDate": "{{- .Date.Format "2006-01-02" -}}",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "offers": {
+      "@type": "Offer",
+      "validFrom": "{{- .PublishDate.Format "2006-01-02" -}}",
+      "url": {{- .Permalink  -}},
+      {{ if .Date.Before now }} 
+        "availability": "https://schema.org/SoldOut",
+      {{ else }}
+        {{ if and (isset .Params.event "available") (not .Params.Event.available) }}
+          "availability": "https://schema.org/SoldOut",
+        {{ else }}
+          "availability": "https://schema.org/InStock",
+        {{ end }}
+      {{ end }}
+      {{ if and .Params.event.cost .Params.event.costCurrency }}
+      "price": "{{- .Params.event.cost -}}",
+      "priceCurrency": "{{- .Params.event.costCurrency -}}"
+      {{ else }}
+      "price": "0.00",
+      "priceCurrency": "GBP"
+      {{ end }}
+    },
+    "location": {
+      "@type": "VirtualLocation",
+      "url": {{- .Permalink -}}
+      },
+    "image": [
+      {{- partial "blog/metadata/image-ld.html" . -}}
+     ],
+    "description": "{{- .Params.Description | plainify -}}",
+    "performer": [
+      {{- range $index, $value := .Params.hosts -}}
+        {{- $person := $site.GetPage (printf "/person/%s" $value) -}}
+        {
+          "@type": "Person",
+          "name": "{{- $person.Title -}}",
+          "image": {{- partial "blog/metadata/image-ld.html" $person -}},
+          "url": {{- $person.Permalink -}}
+        }{{- if ne (add $index 1) $peopleLen -}},{{- end -}}
+      {{- end -}}
+      {{- range $index, $value := .Params.guests -}}
+        {{- $person := $site.GetPage (printf "/person/%s" $value) -}}
+        {
+          "@type": "Person",
+          "name": "{{- $person.Title -}}",
+          "image": {{- partial "blog/metadata/image-ld.html" $person -}},
+          "url": {{- $person.Permalink -}}
+        }{{- if ne (add (add $index 1) $hostLen) $peopleLen -}},{{- end -}}
+      {{- end -}}
+    ],
+    "organizer": {
+      "@type": "Organization",
+      "name": "{{- .Site.Title -}}",
+      "url": {{- .Site.Home.Permalink -}},
+      "logo": {{- .Site.Params.content.site.ogimage | absURL -}}
+    }
+  }
+</script>
+{{ end }}

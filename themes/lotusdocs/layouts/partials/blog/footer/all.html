@@ -1,0 +1,100 @@
+<footer class="mt-auto">
+  <div class="container">
+    <div class="row justify-content-center">
+      <nav id="nav-footer" class="navbar navbar-expand navbar-dark bg-cwc justify-content-center">
+        <ul id="nav-footer-links" class="nav navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="#" id="changePreferences">Cookie Preferences</a>
+          </li>
+          {{ $currentPage := . }}
+            {{ range .Site.Menus.footer }}
+              {{ partial "blog/nav-links.html" (dict "context" . "currentPage" $currentPage) }}
+            {{ end }}      
+        </ul>    
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <ul id="nav-footer-socials" class="icons nav justify-content-center">
+          {{ with .Site.Params.content.social.YouTube }}
+            <li class="nav-item">            
+              <a class="nav-link" href="https://www.youtube.com/c/{{ . }}"><button type="button" aria-label="YouTube" class="btn btn-social btn-youtube btn-rounded"><i class="fab fa-youtube"></i></button></a>
+            </li>
+          {{ end }}
+          {{ with .Site.Params.content.social.Twitter }}
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/{{ . }}" aria-label="Twitter"><button aria-label="Twitter" type="button" class="btn btn-social btn-twitter btn-rounded"><i class="fab fa-twitter"></i></button></a>
+            </li>
+          {{ end }}
+          {{ with .Site.Params.content.social.Facebook }}
+            <li class="nav-item">
+              
+              <a class="nav-link" href="https://facebook.com/{{ . }}" aria-label="Twitter"><button aria-label="Twitter" type="button" class="btn btn-social btn-facebook btn-rounded"><i class="fab fa-facebook"></i></button></a>
+            </li>  
+          {{ end }}        
+          {{ with .Site.Params.content.social.GitHub }}
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/{{ . }}" aria-label="GitHub"><button type="button" aria-label="GitHub" class="btn btn-social btn-github btn-rounded"><i class="fab fa-github"></i></button></a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row justify-content-center text-white text-wrap">
+          <p>&copy; {{ .Site.Params.content.site.copyright.established | markdownify }} - {{ dateFormat "2006" now }} {{ .Site.Params.content.site.copyright.notice | markdownify }}</p>
+        </div>
+        <div class="row justify-content-center text-white text-wrap">
+          <p>{{ .Site.Params.content.site.copyright.additional_information | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- JavaScript and dependencies -->
+
+
+
+{{ $scripts := .Site.Data.bootstrapdeps  }} 
+{{ $.Scratch.Set "bootstrapDeps" slice }}
+{{ with $scripts }}
+  {{ range $scripts.scripts }}    
+    {{ with resources.Get .}}
+      {{ $.Scratch.Add "bootstrapDeps" . }}
+    {{ end }}
+  {{ end }}
+
+  {{ $bootstrapJs := $.Scratch.Get "bootstrapDeps" | resources.Concat "js/bootstrap.js" | resources.Minify | fingerprint }}
+  <script src="{{ $bootstrapJs.RelPermalink }}"  cookie-consent="strictly-necessary" defer></script>
+
+{{ end }}
+
+{{ $consent := resources.Get "./js/cookie-consent.js" }}
+{{ $consentJs := slice $consent | resources.Concat "js/consent-bundle.js" | resources.Minify | fingerprint }}
+<script src="{{$consentJs.RelPermalink}}" cookie-consent="strictly-necessary" defer></script>
+  
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"{{ .Site.Title }}","open_preferences_center_selector":"#changePreferences","website_privacy_policy_url":"{{ .Site.BaseURL }}/privacy-policy"});
+});
+</script>
+
+<script type="text/plain" cookie-consent="functionality">
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js', { scope: '/' })
+    .then(function(registration) {
+      //console.log('Service Worker Registered');
+    });
+
+  navigator.serviceWorker
+    .ready
+    .then(function(registration) {
+      //console.log('Service Worker Ready');
+    });
+}
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  Cookie Consent by <a href="https://www.PrivacyPolicies.com/cookie-consent/" rel="nofollow noopener">PrivacyPolicies.com</a></noscript>
+<!-- End Cookie Consent -->

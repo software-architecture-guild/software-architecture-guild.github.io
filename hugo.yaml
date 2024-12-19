@@ -31,6 +31,10 @@ menu:
       url: "https://github.com/orgs/software-architecture-guild/discussions"
       identifier: community
       weight: 20
+    - name: Blog
+      url: "/blog/"
+      identifier: blog
+      weight: 30
 
 
 

@@ -1,0 +1,90 @@
+{{ define "top" }}
+  {{ $site := .Site }}
+  {{ $page := . }}
+
+  <div class="container mb-3">
+    <div class="col">
+      <div class="row pt-3" id="section-breadcrumbs">
+        {{ partial "content/breadcrumbs.html" . }}
+      </div>
+
+      {{ with .Params.banner }}
+        <div class="row mb-3" id="section-banner">
+          {{- partial "component/banner.html" $page -}}
+        </div>
+      {{ end }}
+
+      {{ if (not (.Params.banner))  }}
+      <div class="row mb-3">
+        <div class="d-flex">
+          <div class="me-auto" id="section-title">
+            <h1>{{ .Title }}</h1>
+          </div>
+          <div>{{ partial "content/socialshare.html" . }}</div>
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="row mb-3 justify-content-start">
+        {{ partial "content/people.html" (dict "people" .Params.Authors "site" $site "size" 50 )}}
+      </div>
+      <div class="row mb-3">
+        <div class="d-flex ms-1" id="section-published">
+          {{ partial "content/published.html" . }}
+        </div>
+      </div>
+      {{ with .Params.Series }}
+        <div class="row mb-3">
+          <div class="d-flex ms-1" id="section-series">
+              {{ partial "content/series.html" (dict "taxo" "series" "value" . "site" $.Site ) }}
+          </div>
+        </div>    
+      {{ end }}
+      {{ with .Params.tags }}
+        <div class="row mb-3">
+          <div class="align-self-center">
+            <div class="d-flex ms-1 tags" id="section-tags">
+              {{ partial "content/tags.html" (dict "taxo" "tags" "value" . "site" $.Site ) }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+      <p class="ms-1" id="section-description">{{ .Params.Description | markdownify }}</p>
+      
+    </div>
+  </div>
+{{ end }}
+
+{{ define "main" }}
+  {{ $page := .Page }}
+
+  <div class="container">
+    {{ if ge (len .TableOfContents) 50 }}
+      <h2>Contents</h2>
+      <p>{{ .TableOfContents }}</p>
+    {{ end }}
+
+    <p>{{ .Content }}</p>
+    <p></p>
+  </div>
+{{ end }}
+
+{{ define "bottom" }}
+  {{ $site := .Site }}
+
+  <div class="py-5 container" align="center">
+    <div class="col">
+      <div class="row float-center">
+        {{ $related := .Site.RegularPages.Related . | first 3 }}
+        {{ with $related }}
+          <h3>Related</h3>
+          <p></p>
+          {{ range . }}
+            {{- partial "cards/content-card.html" (dict "content" . "numItems" (len $related)) -}}
+          {{ end }}
+        {{ end }}      
+      </div>
+    </div>
+  </div>
+{{ end }}

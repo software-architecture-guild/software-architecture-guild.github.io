@@ -1,0 +1,10 @@
+{{- $personString := .person}}
+{{- $site := .site -}}
+{{- $scratch := .scratch }}
+{{- $person := $site.GetPage (printf "/person/%s" $personString) -}}
+{{- $image := $person.Resources.GetMatch $person.Params.Image -}}
+{{- if $image -}}
+    {{- $scratch.Add "people" (dict "person" $person.Title "url" ($person.Permalink | relURL) "image" $image.RelPermalink) -}}
+{{- else -}}
+    {{- $scratch.Add "people" (dict "person" $person.Title "url" ($person.Permalink | relURL) "image" ($person.Params.Image | relURL)) -}}
+{{- end -}}

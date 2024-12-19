@@ -1,0 +1,25 @@
+
+{{ $site := .Site }}
+{{ $scratch := .Scratch }}
+
+<div class="col-md-6">
+  <div class="row mb-2">
+    <div class="d-flex align-items-center mb-2">
+      <div class="pe-3">            
+        {{ $image := .Resources.GetMatch .Params.image }}
+        <a href="{{ .Permalink | relURL}}"><img src="{{ $image.RelPermalink }}" width="100" class="rounded-circle z-depth-2 person-image" alt="{{ .Title }}" title="{{ .Title }}" /></a>
+      </div>
+      <div class="me-auto text-left">
+        <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+        <span>
+          {{ partial "blog/content/socialprofiles.html" . }}
+      </span>
+      </div>
+    </div>
+    <div class="episode-card">
+      <div class="row mb-3">
+        <p class="card-text">{{ .Params.Description | markdownify }}</p>
+      </div>
+    </div>
+  </div>
+</div>

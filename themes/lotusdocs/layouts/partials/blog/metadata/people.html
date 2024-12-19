@@ -1,0 +1,11 @@
+{{- $site := .site -}}
+{{- $people := .people -}}
+
+{{- $peopleOutput := newScratch -}}
+{{- range $people -}}
+  {{- with $site.GetPage (printf "/person/%s" .) -}}
+    {{- $peopleOutput.Add "list" (slice .Title) -}}
+  {{- end -}}
+{{- end -}}
+
+{{ delimit ($peopleOutput.Get "list") ", " }}

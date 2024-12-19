@@ -1,0 +1,61 @@
+{{ $content := .content }}
+{{ $size := .size }}
+{{ $lazy := .lazy }}
+
+{{ $width := 50 }}
+
+{{ if eq $size "small" }}
+  {{ $width = 100 }}
+{{ end }}
+
+{{ $image := $content.Resources.GetMatch $content.Params.image }}
+
+  {{ if not $image }}
+    {{ $image = resources.GetMatch ($content.Params.Image | relURL) }}
+  {{ end }}
+
+
+{{ if eq $size "small" }}
+  {{ template "imageRender" dict "content" .content "resources" resources "tiny" "50" "small" "75" "medium" "100"  "large" "125" "image" $image "lazy" $lazy  }}
+{{ else if eq $size "medium" }}
+  {{ template "imageRender" dict "content" .content "resources" resources "tiny" "100" "small" "100" "medium" "125"  "large" "150" "image" $image "lazy" $lazy  }}
+{{ else }}
+  {{ template "imageRender" dict "content" .content "resources" resources "tiny" "100" "small" "200" "medium" "300"  "large" "400" "image" $image "lazy" $lazy  }}
+{{ end }}
+
+{{ define "imageRender"}}
+  {{ $content := .content }}
+  {{ $image := .image }}
+  {{ $lazy := .lazy }}
+
+  {{ $url := cond (and (isset $content.Params "externallink") (ne $content.Params.externalLink "")) ($content.Params.externalLink) ($content.Permalink | relURL) }}
+  
+  {{ $tiny := ($image.Resize (printf "%sx webp" .tiny)) }}
+  {{ $tinySize := .tiny }}
+  {{ $small := ($image.Resize (printf "%sx webp" .small)) }}
+  {{ $smallSize := .small }}
+  {{ $medium := ($image.Resize (printf "%sx webp" .medium)) }}
+  {{ $mediumSize := .medium }}
+  {{ $large := ($image.Resize (printf "%sx webp" .large)) }}
+  {{ $largeSize := .large }}
+  <a href="{{ $url }}">
+    <img class="rounded-circle z-depth-2 person-image"
+          {{ if $lazy }}
+          loading="lazy"
+          {{ end }}
+          srcset="
+              {{- with $tiny.RelPermalink -}}{{.}} {{ $tinySize }}w{{- end -}}
+              {{- with $small.RelPermalink -}}, {{.}} {{ $smallSize }}w{{- end -}}
+              {{- with $medium.RelPermalink -}}, {{.}} {{ $mediumSize }}w{{- end -}}
+              {{- with $large.RelPermalink -}}, {{.}} {{ $largeSize }}w{{- end -}}" 
+          src="{{ $image.RelPermalink }}" 
+          width="{{ $large.Width }}"
+          height="{{ $large.Height }}"
+          sizes="(max-width: {{ add (int $tinySize) 100 }}px) {{ $tinySize }}px,
+                (max-width: {{ add (int $smallSize) 100 }}px) {{ $smallSize }}px,
+                (max-width: {{ add (int $mediumSize) 100 }}px) {{ $mediumSize }}px,
+                {{ $largeSize }}px"
+          alt="{{ $content.Title }}" 
+          title="{{ $content.Title }}" />
+  </a>
+{{ end }}

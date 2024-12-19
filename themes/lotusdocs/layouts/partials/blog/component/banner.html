@@ -1,0 +1,27 @@
+{{ $image := .Resources.GetMatch .Params.Banner }}
+
+{{ if $image }}
+  {{ template "bannerImage" dict "currentPage" .Page "url" ($image.RelPermalink | relURL) }}
+{{ else }}
+  {{ template "bannerImage" dict "currentPage" .Page "url" (.Params.Image | relURL) }}
+{{ end }}
+
+{{ define "bannerImage" }}
+  <div class="border-0 p-0 card  text-white">
+
+    {{ partial "blog/content/banner-image.html" (dict "content" .currentPage "size" "large" "lazy" false) }}
+
+    <div class="row align-items-end card-img-overlay">
+      <div class="d-flex background">
+        <div class="me-auto align-self-center">
+          <h1 class="card-title">
+            {{ .currentPage.Title }}
+          </h1>
+        </div>
+        <div class="align-self-center">
+          {{ partial "blog/content/socialshare.html" .currentPage }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

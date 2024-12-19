@@ -1,0 +1,12 @@
+{{ $icon := "generic" }}
+
+{{ if eq .Type "episode" }}
+  {{ $icon = "fa-solid fa-play" }}
+{{ else if eq .Type "blog" }}
+  {{ $icon = "fa-solid fa-pencil" }}
+{{ else if eq .Type "talk" }}
+  {{ $icon = "fa-solid fa-chalkboard-user" }}
+{{ end }}
+  <i class="{{ $icon }} me-2"></i>
+  {{ .Type | humanize }}
+</span>
