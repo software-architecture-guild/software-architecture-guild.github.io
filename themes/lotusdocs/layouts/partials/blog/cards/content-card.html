@@ -8,47 +8,29 @@
 
 {{ $url := cond (and (isset $content.Params "externallink") (ne $content.Params.externalLink "")) ($content.Params.externalLink) ($content.Permalink | relURL) }}
 
-<div class="col-md-{{ $width }}">
-  <div class="card mb-3 shadow mr-5 ml-5">
-     <div class="card-body">
-        <div class="row mb-3 text-start">
-          <a class="card-title" href="{{ $url }}"><h2 >{{ $content.Title }}</h2></a>
-        </div>
-        <p class="text-start">{{ $content.Params.Description | markdownify }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
-    <div class="row">
-      
 
-      <div class="row justify-content-start">
-          {{ if eq $content.Type "blog" }}
-            {{ partial "blog/content/people.html" (dict "people" $content.Params.Authors "site" $site "size" 50 )}}
-          {{ end }}
+<div class="col">
+  <a href="#" class="text-decoration-none text-reset">
+      <div class="card">
+          <img src="https://img.freepik.com/photos-premium/koala-somnolent-portant-bonnet-nuit-lunettes-soleil-tenant-tasse-chocolat-chaud-livre-tout-somnolant-fauteuil-confortable_674594-7878.jpg?w=1380" class="card-img-left" alt="Post Image">
+          <div class="card-details">
+              <div class="tag-row">
+                  <h5 class="card-title">Blog Post Title 1</h5>
+                  <span class="text-muted">2023-01-01</span> 
+              </div>
+              <p class="card-text">{{ $content.Params.Description | markdownify }}</p>
+              <div class="tag-row"> 
+                  <div>
+                      <span class="badge bg-secondary">Tag 1</span>
+                      <span class="badge bg-secondary">Tag 2</span>
+                  </div>							
+                  <div class="author-info">
+                      <img src="/images/about_us/Ilya-Hardzeenka.png" class="author-avatar" alt="Author Avatar">
+                      <span class="text-muted">Ilya Hardzeenka</span>
+                  </div>
+                  
+              </div>
+          </div>
       </div>
-
-      
-
-      <div class="row text-start">
-        <p>{{ partial "blog/content/type" $content }}</p>
-      </div>  
-
-
-      {{ if or $content.Params.Date $content.Params.DatePublished }}
-        <div class="row mb-3">
-          <div class="d-flex">
-            {{ partial "blog/content/published.html" $content }}
-          </div>
-        </div>
-      {{ end }}
-      {{ with $content.Params.tags }}
-        <div class="row mb-3">
-          <div class="align-self-center text-start">
-            <div class="d-flex tags">
-              {{ partial "blog/content/tags.html" (dict "taxo" "tags" "value" . "site" $content.Site ) }}
-            </div>
-          </div>
-        </div>
-      {{ end }}
-    </div>
-  </div>
+  </a>
 </div>

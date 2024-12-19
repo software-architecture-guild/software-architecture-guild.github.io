@@ -1,39 +1,16 @@
 {{ define "main" }}
-{{ with .Site.Data.landing.hero.backgroundImage }}
-    {{ $path := .path | default "images" }}
-    {{ $filename := .filename }}
-    {{ $pathDesktop := printf "%s/%s" $path $filename.desktop }}
-    {{ $pathMobile := printf "%s/%s" $path $filename.mobile }}
-        <style>
-            .hero {
-                {{ with $filename.desktop }}
-                    {{ with resources.Get $pathDesktop }}
-                        @media (min-width: 768px) {
-                            background-image: url("{{ .RelPermalink }}");
-                        }
-                    {{ end }}
-                {{ end }}
-                {{ with $filename.mobile }}
-                    {{ with resources.Get $pathMobile }}
-                        background-image: url("{{ .RelPermalink }}");
-                    {{ end }}
-                {{ end }}
-            }
-        </style>
-{{ end }}
 <section class="d-table w-100 overflow-hidden hero">
   <div class="container" align="center">
-    <div class="container mt-5">
-      <div class="row">
-        <h2 class="text-start my-3">Recent {{ .Title | pluralize }}</h2>
-        {{ $paginator := .Paginate .Pages }}
-
-        {{- partial "paginator.html" . -}}
-
-        {{ range $index, $value := $paginator.Pages }}
-          {{- partial "blog/cards/content-card.html" (dict "content" .) -}}
-        {{ end }}
-        
+    <div class="container mt-4">
+      <h2 class="text-start my-3">Recent {{ .Title | pluralize }}</h2>
+      {{ $paginator := .Paginate .Pages }}
+      {{- partial "paginator.html" . -}}
+      <div class="row row-cols-1 g-4">
+          {{ range $index, $value := $paginator.Pages }}
+            {{- partial "blog/cards/content-card.html" (dict "content" .) -}}
+          {{ end }}
+      </div>
+      <div>
         {{- partial "paginator.html" . -}}
       </div>
     </div>
