@@ -30,7 +30,7 @@ Front-end applications can be broadly categorized into four types:
   * Game Development (web technologies (HTML5 games) or engines like Unity or Unreal Engine)
   * Virtual and Augmented Reality (Immersive experiences that blend the digital and physical worlds)
 
-### Structure of a Front-End Application
+### Patterns of a Front-End Application
 When building a front-end application, you need to decide on an architectural structure that suits the project’s goals and scale. Different structures influence how components interact, how the application is maintained, and how it can be scaled in the future. Common front-end architectural structures include:
 * **Micro Front-End**: In this architecture, an application is split into smaller, independently deployable front-end modules. Each module (or micro front-end) can be built using different frameworks or technologies. This structure is ideal for large applications with distributed teams, as each micro front-end can be developed and maintained separately, improving scalability and team productivity.
 * **Monolith**: A monolithic architecture involves building the entire application as a single unit. While simpler to implement, it can become difficult to maintain and scale as the application grows. On the other hand, Monolith can be an ideal solution for prototyping and small tools.
@@ -40,6 +40,20 @@ When building a front-end application, you need to decide on an architectural st
   * **MVP (Model-View-Presenter)**: Separates the UI logic from business logic, improving maintainability.
   * **MVVM (Model-View-ViewModel)**: Similar to MVC but with better separation of the UI and business logic. Common in frameworks like Angular and React.
 
+### Key Parts of a Front-End Application
+A front-end application consists of various parts that work together to provide a cohesive user experience. Here are the main components:
+* **Structure of the Application**
+The overall structure refers to how the codebase is organized. It includes directories, modules, and how different parts of the app interact. A well-structured application makes it easier to navigate the code, enforce consistency, and scale efficiently.
+
+* **Frameworks**
+Front-end frameworks provide the backbone for building applications. Popular frameworks include React, Angular, and Vue.js, each offering different strengths in terms of component management, state handling, and tooling. The choice of framework influences the structure of your app and its development workflow.
+
+* **Component Libraries**
+Component libraries help speed up development by providing reusable UI components. Popular examples include Material-UI, Bootstrap, and Ant Design. These libraries ensure consistent design and can be customized to fit the app's needs.
+
+* **Communication with Back-End**
+Effective front-end communication with the back-end is critical for a responsive and functional app. This typically involves RESTful APIs or GraphQL for querying and manipulating data. Modern frameworks also facilitate state management and API interaction through libraries like Axios, Fetch API, or Apollo Client for GraphQL.
+
 ## Recommended Reading
 
 #### Web Resources
@@ -47,8 +61,11 @@ When building a front-end application, you need to decide on an architectural st
 * [Front-end Architecture: In-Depth Analysis, Best Practices, and Insights](https://elitex.systems/blog/front-end-architecture-in-depth-analysis/)
 * [A Comprehensive Guide to Modern Frontend Architecture Patterns](https://medium.com/@johnadjanohoun/a-comprehensive-guide-to-modern-frontend-architecture-patterns-eb39debbd503)
 * Mike Potel, [MVP: Model-View-Presenter The Taligent Programming Model for C++ and Java](https://www.wildcrest.com/Potel/Portfolio/mvp.pdf)
+* [Modularizing React Applications with Established UI Patterns Juntao QIU](
+https://martinfowler.com/articles/modularizing-react-apps.html)
 
 #### Books
 * Luca Mezzalira, [Building Micro-frontend](https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/)
   * What's the answer to today's increasingly complex web applications? Micro-frontends. Inspired by the microservices model, this approach lets you break interfaces into separate features managed by different teams of developers. With this practical guide, Luca Mezzalira shows software architects, tech leads, and software developers how to build and deliver artifacts atomically rather than use a big bang deployment.
   You'll learn how micro-frontends enable your team to choose any library or framework. This gives your organization technical flexibility and allows you to hire and retain a broad spectrum of talent. Micro-frontends also support distributed or colocated teams more efficiently. Pick up this book and learn how to get started with this technological breakthrough right away.
+* Lydia Hallie and Addy Osmani, [Learning Patterns](https://www.patterns.dev/book)
