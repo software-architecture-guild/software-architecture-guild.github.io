@@ -1,0 +1,13 @@
+{{ define "top" }}
+  {{ $site := .Site }}
+  {{ $page := . }}
+
+{{ end }}
+
+{{ define "main" }}
+  {{ $page := .Page }}
+{{ end }}
+
+{{ define "bottom" }}
+  {{ $site := .Site }}
+{{ end }}

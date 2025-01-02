@@ -14,10 +14,16 @@
         <div>
             {{- partial "header.html" . -}}
         </div>
-        <div class="mb-4" id="content">
+        
+        {{- partial "background.html" . -}}
+        
+        <div class="mb-6" id="content mb-6">
             {{- block "main" . }}{{- end }}
+            <div style="height: 60px;"/>
         </div>
-            {{- partial "footer.html" . -}}
+        
+        
+        {{- partial "footer.html" . -}}
 
         <!-- Lotus Docs JS -->
         {{ $app := resources.Get "/js/app.js" }}

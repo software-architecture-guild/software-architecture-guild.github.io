@@ -17,4 +17,4 @@ externalLink: ""            # Full URL to override listing links to an external 
 authors:
 -  ""                       # An array of authors of the post (filenames in authors).
 ---
-Input content here.
+Input your blog post content here.

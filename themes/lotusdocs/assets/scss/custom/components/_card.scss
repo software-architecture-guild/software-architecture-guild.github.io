@@ -26,17 +26,14 @@
     justify-content: space-between;
     align-items: center;
 }
-.author-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .author-avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
+    margin-left: 10px;
 }
 .card-text {
     text-align: left;

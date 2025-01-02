@@ -27,16 +27,18 @@ menu:
       url: /guide/
       identifier: guide
       weight: 10
+    - name: Blogs
+      url: "/blogs/"
+      identifier: blogs
+      weight: 20
     - name: Community
       url: "https://github.com/orgs/software-architecture-guild/discussions"
       identifier: community
-      weight: 20
-    - name: Blog
-      url: "/blog/"
-      identifier: blog
       weight: 30
 
 
+pagination:
+  pagerSize: 5
 
 params:
   footer:

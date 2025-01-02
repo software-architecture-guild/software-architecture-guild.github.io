@@ -1,9 +1,0 @@
-{{ $content := .content }}
-{{ $size := .size | default "small" }}
-{{ $lazy := .lazy | default true }}
-
-{{ with $content.Params.Banner }}
-  {{ partial "blog/content/banner-image.html" (dict "content" $content "size" $size "lazy" $lazy) }}
-{{ else }}
-  {{ partial "blog/content/circular-image.html" (dict "content" $content "size" $size "lazy" $lazy) }}
-{{ end }}

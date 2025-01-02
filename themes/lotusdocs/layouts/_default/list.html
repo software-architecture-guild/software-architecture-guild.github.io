@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="d-table w-100 overflow-hidden hero">
+  <div class="container" align="center">
+    <div class="container mt-4 mb-4">
+      <div class="row row-cols-2">
+        <h2 class="text-start my-3">{{ .Title | pluralize }}</h2>
+        {{ $paginator := .Paginate .Pages }}
+        {{- partial "paginator.html" . -}}
+      </div>
+      <div class="row row-cols-1 g-4">
+          {{ range $index, $value := $paginator.Pages }}
+            {{- partial "cards/content-card.html" (dict "content" .) -}}
+          {{ end }}
+      </div>
+      <div class="mt-4">
+        {{- partial "paginator.html" . -}}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

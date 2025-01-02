@@ -1,7 +1,0 @@
-<div class="row">
-  {{ range first 12 (shuffle (where $.Site.RegularPages "Section" "person")) }}
-    <div class="col-2">
-      {{ partial "blog/content/circular-image.html" (dict "content" . "size" "small") }}
-    </div>
-  {{ end }}
-</div>

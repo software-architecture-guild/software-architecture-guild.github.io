@@ -32,7 +32,7 @@ The basic structure of your Hugo site with the Lotus theme is as follows:
 software-architecture-guild/
 ├── archetypes/
 ├── content/
-│   ├── blog/
+│   ├── blogs/
 │   ├── guide/
 │   └── _index.md
 ├── data/
