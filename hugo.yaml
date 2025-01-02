@@ -24,8 +24,8 @@ markup:
 menu:
   primary:
     - name: Guide
-      url: /docs/
-      identifier: docs
+      url: /guide/
+      identifier: guide
       weight: 10
     - name: Community
       url: "https://github.com/orgs/software-architecture-guild/discussions"
@@ -48,7 +48,7 @@ params:
 
   docs:
     title: 'Software Architecture Guild'
-    pathName: docs
+    pathName: guide
 
     sidebarIcons: true
     titleIcon: true

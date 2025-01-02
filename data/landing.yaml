@@ -30,11 +30,11 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Get Started"
-    url: "docs/introduction/purpose"
+    url: "guide/introduction/purpose"
   cta2Button:
     icon: group
     btnText: "About us"
-    url: "docs/introduction/about_us"
+    url: "guide/introduction/authors"
 
 # Features Grid
 features:
