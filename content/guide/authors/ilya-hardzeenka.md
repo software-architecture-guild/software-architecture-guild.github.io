@@ -8,31 +8,8 @@ lastmod: "2024-12-09T11:42:08+01:00"
 draft: false
 toc: true
 ---
-<div class="container">
-    <div class="row mt-5 mb-5 align-items-center shadow" style="background: var(--gray-100);">
-        <div class="col-lg-4 col-md-4">
-            <img src="../../../images/about_us/Ilya-Hardzeenka.png" alt="Ilya Photo" width="80%" height="80%" class="rounded mx-auto d-block mt-4 mb-4"/>
-        </div><!--end col-->
-        <div class="col-lg-8 col-md-8 align-items-left align-middle mt-4 mb-4">
-            I am Ilya Hardzeenka, a passionate Data and Software Architect with a strong academic foundation and over a decade of experience designing and delivering innovative, secure, and scalable technology solutions. Currently residing in Wroclaw, Poland, I thrive at the intersection of technology and business, aligning technical strategies to achieve impactful outcomes.
-            <br><br>
-            <a href="https://www.linkedin.com/in/ilya-hardzeenka" target="_blank" class="d-flex align-items-center text-decoration-none text-primary mb-3">
-              <img
-                src="../../../images/about_us/linkedIn-logo.png"
-                alt="LinkedIn Icon"
-                class="me-2" style="width: 24px; height: 24px;">
-              ilya-hardzeenka
-            </a>
-            <a href="mailto:gordeenkoilya@gmail.com" class="d-flex align-items-center text-decoration-none text-primary">
-              <img
-                src="../../../images/about_us/email-logo.png"
-                alt="Email Icon"
-                class="me-2" style="width: 24px; height: 24px;">
-              gordeenkoilya@gmail.com
-    </a>
-        </div><!--end col-->
-    </div><!--end row-->
-</div><!--end container-->
+
+{{< author "authors/ilya-hardzeenka.md" >}}
 
 ## What Drives Me
 
