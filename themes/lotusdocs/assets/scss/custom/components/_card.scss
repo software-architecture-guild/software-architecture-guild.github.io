@@ -9,10 +9,16 @@
 .card-title {
     margin-bottom: 0;
 }
+
+
 .card-img-left {
     width: 30%;
     max-height: 300px;
     object-fit: cover;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 .card-details {
     width: 70%;
@@ -21,6 +27,19 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width: 1000px) {
+    .card-img-left {
+        display: none;
+    }
+
+    .card-details {
+        width: 100%;
+    }
+    
+}
+
+
 .tag-row {
     display: flex;
     justify-content: space-between;

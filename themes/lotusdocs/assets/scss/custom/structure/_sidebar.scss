@@ -1,5 +1,16 @@
 /* Common Sidebar Styling */
-.sidebar-position {
+
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none;      /* Hide the sidebar */
+    }
+
+    .main-content {
+        margin-left: 0;     /* Remove the left margin when sidebar is hidden */
+    }
+}
+
+.sidebar {
     width: 12%;              /* 50% less width */
     max-width: 300px;
     padding: 1rem;
