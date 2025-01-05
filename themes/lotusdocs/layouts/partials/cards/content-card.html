@@ -19,7 +19,7 @@
                     <h5 class="card-title">{{$content.Params.Title}}</h5>
                     <span class="text-muted">{{ if $content.Params.Date }}{{ time.Format "January 2, 2006" $content.Params.Date }}{{ end }}</span> 
                 </div>
-                <p class="card-text">{{ $content.Params.Description | markdownify }}</p>
+                <div class="card-text">{{ $content.Params.Description | markdownify }}</div>
                 <div class="tag-row"> 
                     <div>
                         {{ range $content.Params.Tags }}

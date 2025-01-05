@@ -1,0 +1,38 @@
+/* Common Sidebar Styling */
+.sidebar-position {
+    width: 12%;              /* 50% less width */
+    max-width: 300px;
+    padding: 1rem;
+    height: calc(100vh - 225px); /* 200px less than screen height */
+    position: sticky;        /* Stick vertically while scrolling */
+    top: 140px;               /* Maintain a top margin */
+    margin-top: 70px;
+}
+
+.sidebar-style {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Sidebar Specific Styling */
+.left-column {
+    margin-right: 10px;      /* Attach to the main content */
+}
+
+/* Right Sidebar Specific Styling */
+.right-column {
+    margin-left: 10px;       /* Attach to the main content */
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 0;                  /* Remove gap between columns */
+    justify-content: center; /* Center the entire content wrapper */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.main-content {
+    flex-basis: 70%;         /* Main content with more width */
+    max-width: 1320px;       /* Set a maximum width for the main content */
+}

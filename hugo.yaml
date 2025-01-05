@@ -38,7 +38,7 @@ menu:
 
 
 pagination:
-  pagerSize: 5
+  pagerSize: 10
 
 params:
   footer:
