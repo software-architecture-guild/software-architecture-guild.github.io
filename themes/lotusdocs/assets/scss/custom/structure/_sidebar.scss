@@ -14,14 +14,15 @@
     width: 12%;              /* 50% less width */
     max-width: 300px;
     padding: 1rem;
-    height: calc(100vh - 225px); /* 200px less than screen height */
+    height: calc(100vh - 250px);
     position: sticky;        /* Stick vertically while scrolling */
     top: 140px;               /* Maintain a top margin */
     margin-top: 70px;
+    overflow: hidden;
 }
 
 .sidebar-style {
-    background-color: white;
+    background-color: $white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -46,4 +47,11 @@
 .main-content {
     flex-basis: 70%;         /* Main content with more width */
     max-width: 1320px;       /* Set a maximum width for the main content */
+}
+
+.content-style {
+    margin-top: 70px;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

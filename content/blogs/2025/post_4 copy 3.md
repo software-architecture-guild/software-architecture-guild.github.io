@@ -3,7 +3,7 @@
 title: "post 4"                   # Name of the blog
 description: "some post asasdlkasdlkasjdlkasjdlkasjd laskjd laskjd aslkjd4"             # Used for SEO optimisation
 publishDate: "2021-12-24T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2025-12-24T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+date: "2024-12-24T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
 
 # Site-wide [required properties]
 image: ""                   # Displayed when referenced in listing pages

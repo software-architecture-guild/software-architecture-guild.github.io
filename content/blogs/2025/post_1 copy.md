@@ -1,9 +1,9 @@
 ---
 # Default hugo properties
-title: "Welcome"                   # Name of the blog
+title: "Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome Welcome"                   # Name of the blog
 description: "some post 1"             # Used for SEO optimisation
 publishDate: "2020-12-23T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2020-12-23T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+date: "2025-01-02"                    # TODO: Differentiate between PublishDate
 
 # Site-wide [required properties]
 image: ""                   # Displayed when referenced in listing pages

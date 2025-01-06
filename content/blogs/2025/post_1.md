@@ -3,10 +3,9 @@ title: "Welcome to the Software Architecture Guild"
 description: |
     Greetings, fellow architects, developers, and tech enthusiasts!
     
-    We’re thrilled to welcome you to the official blog of the **Software Architecture Guild**. Whether you’re a seasoned architect, an aspiring tech lead, or someone curious about the art and science of software design, this is the space for you. Our mission is to foster a vibrant community of professionals dedicated to building resilient, scalable, and elegant software systems."
+    We’re thrilled to welcome you to the official blog of the **Software Architecture Guild**. Whether you’re a seasoned architect, an aspiring tech lead, or someone curious about the art and science of software design, this is the space for you. Our mission is to foster a vibrant community of professionals dedicated to building resilient, scalable, and elegant software systems.
 
-publishDate: "2020-12-23T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2020-12-23T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+date: "2025-01-06"
 
 # Site-wide [required properties]
 image: "/images/blogs/2025/post_1/welcome.jpg"                   # Displayed when referenced in listing pages
@@ -25,11 +24,6 @@ series:                     # Array of series (i.e. filenames of the series this
 authors:
 -  "ilya-hardzeenka.md"                       # An array of authors of the post (filenames in authors).
 ---
-## Welcome to the Software Architecture Guild
-
-Greetings, fellow architects, developers, and tech enthusiasts!
-
-We’re thrilled to welcome you to the official blog of the **Software Architecture Guild**. Whether you’re a seasoned architect, an aspiring tech lead, or someone curious about the art and science of software design, this is the space for you. Our mission is to foster a vibrant community of professionals dedicated to building resilient, scalable, and elegant software systems.
 
 ### Who Are We?
 
