@@ -2,27 +2,18 @@
 title: "Welcome to the Software Architecture Guild"
 description: |
     Greetings, fellow architects, developers, and tech enthusiasts!
-    
     We’re thrilled to welcome you to the official blog of the **Software Architecture Guild**. Whether you’re a seasoned architect, an aspiring tech lead, or someone curious about the art and science of software design, this is the space for you. Our mission is to foster a vibrant community of professionals dedicated to building resilient, scalable, and elegant software systems.
 
-date: "2025-01-06"
-
-# Site-wide [required properties]
-image: "/images/blogs/2025/post_1/welcome.jpg"                   # Displayed when referenced in listing pages
-images:                     # An array of images used in Social Sharing
-- ""
-tags:                       # Used for SEO optimisation and browsing across the site.
+date: "2024-01-06"
+image: "/images/blogs/2025/post_1/welcome.jpg"                  
+tags:                       
 - "Software Architecture"
 - "News"
 
-# Site-wide [optional properties]
-externalLink: ""            # Full URL to override listing links to an external page
-series:                     # Array of series (i.e. filenames of the series this is a part of)
-- "series"
-
-# Content-specific properties
+externalLink: ""            
 authors:
--  "ilya-hardzeenka.md"                       # An array of authors of the post (filenames in authors).
+-  "ilya-hardzeenka.md"                       
+draft: false
 ---
 
 ### Who Are We?

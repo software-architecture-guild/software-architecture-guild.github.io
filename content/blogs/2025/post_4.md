@@ -1,26 +1,18 @@
 ---
-# Default hugo properties
-title: "post 4"                   # Name of the blog
-description: "some post asasdlkasdlkasjdlkasjdlkasjd laskjd laskjd aslkjd4"             # Used for SEO optimisation
-publishDate: "2021-12-24T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2024-12-24T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+title: "Visualizing Architecture: Bridging Imagination and Reality"
+description: |
+    Visualization is a critical part of the architectural process, transforming abstract concepts into tangible designs. This post delves into various visualization techniques, from hand-drawn sketches and physical models to advanced digital tools like 3D rendering and virtual reality. By understanding how architects visualize and communicate their ideas, readers can appreciate the intricate process that brings built environments to life. Whether you're a professional or a design enthusiast, this guide offers insights into the evolving role of visualization in architecture.
 
-# Site-wide [required properties]
-image: ""                   # Displayed when referenced in listing pages
-images:                     # An array of images used in Social Sharing
-- ""
-tags:                       # Used for SEO optimisation and browsing across the site.
-- "tag"
-- "tag"
+date: "2024-01-09"
+image: ""                  
+tags:                       
+- "Software Architecture"
+- "Fundamentals"
 
-# Site-wide [optional properties]
-externalLink: ""            # Full URL to override listing links to an external page
-series:                     # Array of series (i.e. filenames of the series this is a part of)
-- "series"
-
-# Content-specific properties
+externalLink: ""            
 authors:
--  ""                       # An array of authors of the post (filenames in authors).
+-  "ilya-hardzeenka.md"                      
+draft: false
 ---
 Input your blog post content here.
 asd

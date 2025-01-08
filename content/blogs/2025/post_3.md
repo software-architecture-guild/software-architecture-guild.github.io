@@ -1,26 +1,18 @@
 ---
-# Default hugo properties
-title: "post 3"                   # Name of the blog
-description: "some post 3"             # Used for SEO optimisation
-publishDate: "2021-12-24T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2021-12-24T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+title: "An Overview of Architectural Styles: Evolution Through Time"
+description: |
+    Architectural styles represent distinct approaches to design, shaped by cultural, historical, and technological influences. This post outlines major architectural styles across different eras, from ancient classical forms to contemporary minimalist designs. By exploring key characteristics, notable examples, and the context behind each style, readers will gain a deeper understanding of how architecture evolves and reflects the values of societies throughout history.
 
-# Site-wide [required properties]
-image: ""                   # Displayed when referenced in listing pages
-images:                     # An array of images used in Social Sharing
-- ""
-tags:                       # Used for SEO optimisation and browsing across the site.
-- "tag"
-- "tag"
+date: "2024-01-08"
+image: ""                  
+tags:                       
+- "Software Architecture"
+- "Fundamentals"
 
-# Site-wide [optional properties]
-externalLink: ""            # Full URL to override listing links to an external page
-series:                     # Array of series (i.e. filenames of the series this is a part of)
-- "series"
-
-# Content-specific properties
+externalLink: ""            
 authors:
--  ""                       # An array of authors of the post (filenames in authors).
+-  "ilya-hardzeenka.md" 
+draft: false                      
 ---
 Input your blog post content here.
 asd

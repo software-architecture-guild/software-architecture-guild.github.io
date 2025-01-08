@@ -1,26 +1,18 @@
 ---
-# Default hugo properties
-title: "post 2"                   # Name of the blog
-description: "some post 2"             # Used for SEO optimisation
-publishDate: "2020-12-24T15:21:54+05:30"             # TODO: Differentiate between date
-date: "2020-12-24T15:21:54+05:30"                    # TODO: Differentiate between PublishDate
+title: "Understanding the Core Principles of Architecture"
+description: |
+    Architecture is the thoughtful process of designing and constructing spaces that serve both functional and aesthetic purposes. This blog post explores fundamental architectural concepts, from structural elements and materials to design philosophies and historical influences. By examining key principles and real-world examples, it provides a clear foundation for understanding how architecture shapes our environments and meets human needs.
 
-# Site-wide [required properties]
-image: ""                   # Displayed when referenced in listing pages
-images:                     # An array of images used in Social Sharing
-- ""
-tags:                       # Used for SEO optimisation and browsing across the site.
-- "tag"
-- "tag"
+date: "2024-01-07"
+image: ""                  
+tags: 
+- "Software Architecture"
+- "Fundamentals"
 
-# Site-wide [optional properties]
-externalLink: ""            # Full URL to override listing links to an external page
-series:                     # Array of series (i.e. filenames of the series this is a part of)
-- "series"
-
-# Content-specific properties
+externalLink: ""      
 authors:
--  ""                       # An array of authors of the post (filenames in authors).
+-  "ilya-hardzeenka.md"                
+draft: false
 ---
 Input your blog post content here.
 asd
