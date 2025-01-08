@@ -43,13 +43,14 @@
         -webkit-transition: all 0.2s;
     }
 
+    &.active {
+        color: $primary !important;
+        background-color: $gray-300;
+        border-right: 3px solid;
+        // font-weight: 600;
+        //opacity: 0.9;
+    }
+
     
 }
 
-.active {
-    color: $primary !important;
-    background-color: $gray-300;
-    border-right: 3px solid;
-    // font-weight: 600;
-    //opacity: 0.9;
-}

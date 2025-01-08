@@ -2,6 +2,13 @@
 // footer.scss
 //
 
+@media (max-width: 991px) {
+    .footer-py {
+        padding: 3px 0 !important;
+    }
+}
+
+
 .footer {
     background: $footer;
     //position: relative;

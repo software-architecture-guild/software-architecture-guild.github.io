@@ -28,7 +28,7 @@ $font-family-monospace:  {{ .Site.Params.mono_font | default "SFMono-Regular, Me
 @import "custom/structure/general";
 @import "custom/structure/topbar";
 // @import "custom/structure/content";
-@import "custom/structure/sidebar";
+@import "custom/structure/default";
 @import "custom/structure/toc";
 // @import "custom/structure/toc-layouts";
 @import "custom/structure/footer";

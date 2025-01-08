@@ -9,8 +9,14 @@
     }
 }
 
+@media (max-width: 991px) {
+    .hero {
+        height: calc(100vh - 30px) !important;
+    }
+}
+
 .hero {
     background-size: cover;
     padding-top: 70px;
-    height: 93vh;
+    height: calc(100vh - 60px);
 }

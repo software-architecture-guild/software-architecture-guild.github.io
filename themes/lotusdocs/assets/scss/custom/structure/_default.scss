@@ -6,7 +6,14 @@
     }
 
     .main-content {
-        margin-left: 0;     /* Remove the left margin when sidebar is hidden */
+        flex-basis: 100% !important;      /* Remove the left margin when sidebar is hidden */
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-placeholder {
+        height: 30px !important;
     }
 }
 
@@ -37,6 +44,8 @@
     margin-left: 10px;       /* Attach to the main content */
 }
 
+/* Content Styling */
+
 .content-wrapper {
     display: flex;
     gap: 0;                  /* Remove gap between columns */
@@ -54,4 +63,8 @@
     background-color: $white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-placeholder {
+    height: 60px;
 }

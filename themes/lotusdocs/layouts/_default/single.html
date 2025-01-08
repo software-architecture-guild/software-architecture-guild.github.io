@@ -16,8 +16,8 @@
                 {{ $index = $i }}
               {{ end }}
             {{ end }}
-            {{ $start := cond (gt $index 25) (sub $index 25) 0 }}
-            {{ $end := cond (lt (add $index 25) (len $pages)) (add $index 25) (sub (len $pages) 1) }}
+            {{ $start := cond (gt $index 5) (sub $index 5) 0 }}
+            {{ $end := cond (lt (add $index 5) (len $pages)) (add $index 5) (sub (len $pages) 1) }}
             {{ range $i, $p := $pages }}
               {{ if and (ge $i $start) (le $i $end) }}
                 <li>
@@ -34,7 +34,7 @@
 
     <!-- Main Content Section -->
     <div class="main-content">
-      <div class="container">
+      <div class="container-xl">
         <div class="text-start row row-cols-1 content-style">
           <h2 class="my-3">{{ .Title }}</h2>
           <div>{{ .Description | markdownify}}</div>
