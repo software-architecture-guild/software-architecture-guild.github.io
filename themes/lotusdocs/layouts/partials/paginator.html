@@ -2,7 +2,7 @@
 {{ if gt $pag.TotalPages 1 }}
 {{ $.Scratch.Set "dot_rendered" false }}
 <nav aria-label="page navigation">
-    <ul class="pagination my-3 justify-content-end">
+    <ul class="pagination my-1 justify-content-end">
         <!-- Don't show on 1st and 2nd page -->
         {{ if and (ne $pag.PageNumber 1) (ne $pag.PageNumber 2) }}
         <li class="page-item"><a href="{{ $pag.First.URL }}" rel="first" class="page-link">« First</a></li>

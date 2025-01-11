@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $page := .Page }}
+{{ $site := .Site }}
 <section class="d-table w-100 hero">
   <div class="content-wrapper mb-4">
     <!-- Left Column Section -->
@@ -9,7 +10,7 @@
         <nav id="TableOfContents">
           <ul>
             {{ $currentPage := . }}
-            {{ $pages := where .Site.RegularPages "Section" "blogs" }}
+            {{ $pages := where $site.RegularPages "Section" "blogs" }}
             {{ $index := 0 }}
             {{ range $i, $p := $pages }}
               {{ if eq $p.Permalink $currentPage.Permalink }}
@@ -35,10 +36,58 @@
     <!-- Main Content Section -->
     <div class="main-content">
       <div class="container-xl">
-        <div class="text-start row row-cols-1 content-style">
-          <h2 class="my-3">{{ .Title }}</h2>
-          <div>{{ .Description | markdownify}}</div>
+        
+        <nav class="post-navigation py-1">
+            <div class="nav-links">
+                {{ with .PrevInSection }}
+                    <a class="text-start" href="{{ .RelPermalink }}">
+                      Previous
+                      <span class="hidden-on-small">: {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
+                    </a>
+                {{ else }}
+                    <span class="link-disabled hidden-on-small">No Previous Post</span>
+                {{ end }}
+
+                {{ with .NextInSection }}
+                    <a class="text-end" href="{{ .RelPermalink }}">
+                      Next
+                      <span class="hidden-on-small">: {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
+                    </a>
+                {{ else }}
+                    <span class="link-disabled hidden-on-small">No Next Post</span>
+                {{ end }}
+            </div>
+        </nav>
+        
+        <div class="row row-cols-1 content-style">
+          
+          <div class="tag-row my-2">
+            <h2 class="text-center">{{ .Title }}</h2>
+            <div class="text-muted">{{ if .Params.Date }}{{ time.Format "January 2, 2006" .Params.Date }}{{ end }}</div> 
+          </div>
+
+          <div class="mb-3">{{ .Description | markdownify}}</div>
           <div class="">{{ .Content | markdownify}}</div>
+          <div class="tag-row mb-3"> 
+            <div>
+                {{ range .Params.Tags }}
+                <span class="badge bg-soft-primary">{{ . }}</span>
+                {{ end }}
+            </div>
+            <div>
+                {{ range .Params.Authors }}
+                {{ if ne . "" }}
+                    {{ $author := $site.GetPage (printf "authors/%s" .) }}
+                        {{ if $author }}
+                            <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Name }} Avatar">
+                              <span class="text-muted hidden-on-small">{{ $author.Params.Name }}</span>
+                        {{ else }}
+                            <span class="text-muted">Unknown Author: {{ . }}</span>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

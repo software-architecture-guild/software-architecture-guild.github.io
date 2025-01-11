@@ -4,7 +4,7 @@ description: |
     Greetings, fellow architects, developers, and tech enthusiasts!
     We’re thrilled to welcome you to the official blog of the **Software Architecture Guild**. Whether you’re a seasoned architect, an aspiring tech lead, or someone curious about the art and science of software design, this is the space for you. Our mission is to foster a vibrant community of professionals dedicated to building resilient, scalable, and elegant software systems.
 
-date: "2024-01-06"
+date: "2024-02-06"
 image: "/images/blogs/2025/post_1/welcome.jpg"                  
 tags:                       
 - "Software Architecture"

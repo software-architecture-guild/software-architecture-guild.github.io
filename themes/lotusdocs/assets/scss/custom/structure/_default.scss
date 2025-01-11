@@ -23,8 +23,8 @@
     padding: 1rem;
     height: calc(100vh - 250px);
     position: sticky;        /* Stick vertically while scrolling */
-    top: 140px;               /* Maintain a top margin */
-    margin-top: 70px;
+    top: calc(70px + 1.6rem + 1.5rem);               /* Maintain a top margin */
+    margin-top: calc(1.6rem + 1.5rem);
     overflow: hidden;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .content-style {
-    margin-top: 70px;
+    // margin-top: 12px;
     background-color: $white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -67,4 +67,46 @@
 
 .footer-placeholder {
     height: 60px;
+}
+
+
+.post-navigation {
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.nav-links > a {
+    color: $primary;
+    flex: 1;
+    display: inline-block;
+    white-space: nowrap;     /* Prevents text from wrapping to the next line */
+    overflow: hidden;        /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) when the text overflows */
+    max-width: 100%;         /* Ensures it respects the parent container's width */
+
+    &:hover {
+        text-decoration: underline !important; 
+    }
+}
+
+.hidden-on-small {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .hidden-on-small {
+        display: none;
+    }
+}
+
+.link-disabled {
+    color: $gray-600;
+    font-style: italic;
 }

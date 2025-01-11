@@ -3,7 +3,7 @@ title: "Understanding the Core Principles of Architecture"
 description: |
     Architecture is the thoughtful process of designing and constructing spaces that serve both functional and aesthetic purposes. This blog post explores fundamental architectural concepts, from structural elements and materials to design philosophies and historical influences. By examining key principles and real-world examples, it provides a clear foundation for understanding how architecture shapes our environments and meets human needs.
 
-date: "2024-01-07"
+date: "2024-02-01"
 image: ""                  
 tags: 
 - "Software Architecture"
@@ -11,6 +11,7 @@ tags:
 
 externalLink: ""      
 authors:
+-  "ilya-hardzeenka.md"
 -  "ilya-hardzeenka.md"                
 draft: false
 ---

@@ -22,8 +22,8 @@
     <!-- Main Content Section -->
     <div class="main-content overflow-hidden">
       <div class="container-xl">
-        <div class="row row-cols-2">
-          <h2 class="text-start my-3">{{ .Title }}</h2>
+        <div class="row row-cols-2 mb-1">
+          <h2 class="text-start my-1">{{ .Title }}</h2>
           {{ $paginator := .Paginate .Pages }}
           {{- partial "paginator.html" . -}}
         </div>
