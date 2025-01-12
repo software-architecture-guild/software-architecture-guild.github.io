@@ -5,6 +5,20 @@ $prefix:                      bs-;
 $btn-link-color:              var(--#{$prefix}link-color);
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
 
+$shadow:                    0 0 3px rgba($dark,.15);
+
+//Topnav
+$nav-sticky-bg:             $white;
+$submenu-bg:                $white;
+$megamenu-head-text:        $body-color;
+$topnav-bg:                 $white;
+$navbar-white-bg:           $white;
+$topnav-white-color:        $white;
+$topnav-dark-color:         $dark;
+
+
+$muted:                     #6b7686;
+
 :root {
 
     // color-variables (HSL)

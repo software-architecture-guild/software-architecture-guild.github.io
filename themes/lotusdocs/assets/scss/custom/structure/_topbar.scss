@@ -310,7 +310,7 @@
 @media (max-width: 991px) {
     #topnav {
         background-color: $topnav-bg;
-        min-height: 50px;
+        min-height: 70px;
         .logo {
             .l-dark {
                 display: inline-block !important;
@@ -326,9 +326,12 @@
 
         #navigation{
             max-height: 400px;
+            max-width: 200px;
         }
         .navigation-menu {
+            display: flex;
             float: none;
+            flex-direction: column;
             > li {
                 float: none;
                 > a {
@@ -352,8 +355,8 @@
 
     #navigation {
         position: absolute;
-        top: 64px;
-        left: 0;
+        top: 71px;
+        right: 0;
         width: 100%;
         display: none;
         height: auto;
@@ -381,6 +384,8 @@
 
 //Nav Social Button
 .social-link {
+    align-items: center;
+    height: 70px;
     > li {
         line-height: initial;
     }

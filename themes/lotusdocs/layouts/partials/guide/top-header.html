@@ -75,6 +75,20 @@
             {{ end }}
             <!-- Social Links End -->
 
+            <div class="menu-extras ms-3 me-2">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <button class="navbar-toggle btn btn-icon btn-soft-light" id="isToggle" aria-label="toggleMenu" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+
             {{ if eq .Site.Params.docs.darkMode true -}}
             <button id="mode" class="btn btn-icon btn-default ms-2" type="button" aria-label="Toggle user interface mode">
                 <span class="toggle-dark">
