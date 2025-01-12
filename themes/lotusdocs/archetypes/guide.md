@@ -7,4 +7,6 @@ date: "{{ .Date }}"
 lastmod: "{{ .Date }}"
 draft: true
 toc: true
+authors:
+-  ""                       # An array of authors of the post (filenames in content/authors).
 ---

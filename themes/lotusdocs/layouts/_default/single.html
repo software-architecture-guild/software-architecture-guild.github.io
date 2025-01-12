@@ -4,7 +4,7 @@
 <section class="d-table w-100 hero">
   <div class="content-wrapper mb-4">
     <!-- Left Column Section -->
-    <aside class="left-column sidebar sidebar-style">
+    <aside class="sidebar white-box">
       <toc>
         <h4 class="text-start">Blog Navigation</h4>
         <nav id="TableOfContents">
@@ -37,7 +37,7 @@
     <div class="main-content">
       <div class="container-xl">
         
-        <nav class="post-navigation py-1">
+        <nav class="post-navigation mb-3">
             <div class="nav-links">
                 {{ with .PrevInSection }}
                     <a class="text-start" href="{{ .RelPermalink }}">
@@ -59,10 +59,10 @@
             </div>
         </nav>
         
-        <div class="row row-cols-1 content-style">
+        <div class="white-box px-3 py-1">
           
           <div class="tag-row my-2">
-            <h2 class="text-center">{{ .Title }}</h2>
+            <h2 class="text-center mb-0">{{ .Title }}</h2>
             <div class="text-muted">{{ if .Params.Date }}{{ time.Format "January 2, 2006" .Params.Date }}{{ end }}</div> 
           </div>
 
@@ -74,26 +74,14 @@
                 <span class="badge bg-soft-primary">{{ . }}</span>
                 {{ end }}
             </div>
-            <div>
-                {{ range .Params.Authors }}
-                {{ if ne . "" }}
-                    {{ $author := $site.GetPage (printf "authors/%s" .) }}
-                        {{ if $author }}
-                            <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Name }} Avatar">
-                              <span class="text-muted hidden-on-small">{{ $author.Params.Name }}</span>
-                        {{ else }}
-                            <span class="text-muted">Unknown Author: {{ . }}</span>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
+            {{ partial "default/authors.html" . }}
           </div>
         </div>
       </div>
     </div>
 
     <!-- Right Column Section -->
-    <aside class="sidebar right-column sidebar-style">
+    <aside class="sidebar white-box">
       {{ if ge (len .TableOfContents) 50 }}
       <h4 class="text-start">Contents</h4>
       <toc>{{ .TableOfContents }}</toc>

@@ -10,7 +10,7 @@
 
 
 
-<div class="col">
+<div>
     <a href="{{$url}}" class="text-decoration-none text-reset">
         <div class="card">
             <img src="{{ if or (eq $content.Params.Image "") (not $content.Params.Image) }}/images/blogs/default.jpg{{ else }}{{ $content.Params.Image }}{{ end }}" class="card-img-left" alt="Post Image">
@@ -26,19 +26,7 @@
                         <span class="badge bg-soft-primary">{{ . }}</span>
                         {{ end }}
                     </div>
-                    <div>
-                        {{ range $content.Params.Authors }}
-                        {{ if ne . "" }}
-                            {{ $author := $site.GetPage (printf "authors/%s" .) }}
-                                {{ if $author }}
-                                    <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Name }} Avatar">
-                                    <span class="text-muted hidden-on-small">{{ $author.Params.Name }}</span>
-                                {{ else }}
-                                    <span class="text-muted">Unknown Author: {{ . }}</span>
-                                {{ end }}
-                            {{ end }}
-                        {{ end }}
-                    </div>
+                    {{ partial "default/authors.html" $content }}
                 </div>
             </div>
         </div>

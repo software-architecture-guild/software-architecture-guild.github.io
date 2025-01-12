@@ -2,7 +2,7 @@
 <section class="d-table w-100 hero">
   <div class="content-wrapper mb-4">
     <!-- Left Column Section -->
-    <aside class="left-column sidebar sidebar-style">
+    <aside class="sidebar white-box">
       <toc>
         <h4 class="text-start">Tags</h4>
         <nav id="TableOfContents">
@@ -29,7 +29,7 @@
         </div>
         <div class="row row-cols-1 g-4">
           {{ range $index, $value := $paginator.Pages }}
-            {{- partial "cards/content-card.html" (dict "content" .) -}}
+            {{- partial "default/list-card.html" (dict "content" .) -}}
           {{ end }}
         </div>
         <div>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Right Column Section -->
-    <aside class="sidebar right-column"></aside>
+    <aside class="sidebar"></aside>
   </div>
 </section>
 

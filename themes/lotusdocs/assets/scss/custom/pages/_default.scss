@@ -1,5 +1,6 @@
-/* Common Sidebar Styling */
-
+////////////////////////////////////
+/* Common Page Styling            */
+////////////////////////////////////
 @media (max-width: 1200px) {
     .sidebar {
         display: none;      /* Hide the sidebar */
@@ -8,12 +9,6 @@
     .main-content {
         flex-basis: 100% !important;      /* Remove the left margin when sidebar is hidden */
         margin: 0.5rem;
-    }
-}
-
-@media (max-width: 991px) {
-    .footer-placeholder {
-        height: 30px !important;
     }
 }
 
@@ -28,23 +23,10 @@
     overflow: hidden;
 }
 
-.sidebar-style {
-    background-color: $white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.main-content {
+    flex-basis: 70%;         /* Main content with more width */
+    max-width: 1320px;       /* Set a maximum width for the main content */
 }
-
-/* Left Sidebar Specific Styling */
-.left-column {
-    margin-right: 10px;      /* Attach to the main content */
-}
-
-/* Right Sidebar Specific Styling */
-.right-column {
-    margin-left: 10px;       /* Attach to the main content */
-}
-
-/* Content Styling */
 
 .content-wrapper {
     display: flex;
@@ -53,13 +35,7 @@
     align-items: flex-start; /* Align items at the top */
 }
 
-.main-content {
-    flex-basis: 70%;         /* Main content with more width */
-    max-width: 1320px;       /* Set a maximum width for the main content */
-}
-
-.content-style {
-    // margin-top: 12px;
+.white-box {
     background-color: $white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -67,9 +43,14 @@
 
 .footer-placeholder {
     height: 60px;
+    @media (max-width: 991px) {
+           height: 30px !important;
+    }
 }
 
-
+////////////////////////////////////
+/* Top navigation for single page */
+////////////////////////////////////
 .post-navigation {
     margin-top: 0.6rem;
     margin-bottom: 0.5rem;
@@ -96,17 +77,22 @@
     }
 }
 
+.link-disabled {
+    color: $gray-600;
+    font-style: italic;
+}
+////////////////////////////////////
+/* Responsive text to hide parts 
+of it on small screen             */
+////////////////////////////////////
+
+
 .hidden-on-small {
     display: inline;
 }
 
 @media (max-width: 768px) {
     .hidden-on-small {
-        display: none;
+        display: none !important;
     }
-}
-
-.link-disabled {
-    color: $gray-600;
-    font-style: italic;
 }

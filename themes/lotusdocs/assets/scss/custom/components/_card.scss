@@ -1,3 +1,8 @@
+//
+// _card.scss
+//
+//Cards
+
 .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -55,14 +60,6 @@
     }
 }
 
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-    margin-left: 10px;
-}
 .card-text {
     text-align: left;
     justify-content: center !important;

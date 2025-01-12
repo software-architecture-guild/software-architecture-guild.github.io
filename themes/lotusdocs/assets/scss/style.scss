@@ -28,7 +28,6 @@ $font-family-monospace:  {{ .Site.Params.mono_font | default "SFMono-Regular, Me
 @import "custom/structure/general";
 @import "custom/structure/topbar";
 // @import "custom/structure/content";
-@import "custom/structure/default";
 @import "custom/structure/toc";
 // @import "custom/structure/toc-layouts";
 @import "custom/structure/footer";
@@ -37,12 +36,11 @@ $font-family-monospace:  {{ .Site.Params.mono_font | default "SFMono-Regular, Me
 @import "custom/components/buttons";
 @import "custom/components/badge";
 @import "custom/components/backgrounds";
-// @import "custom/components/alerts";
+@import "custom/components/authors";
 @import "custom/components/card";
 
 // // Pages
-// @import "custom/pages/blog";
-
+@import "custom/pages/default";
 @import "custom/pages/features";
 @import "custom/pages/helper";
 @import "custom/pages/hero";

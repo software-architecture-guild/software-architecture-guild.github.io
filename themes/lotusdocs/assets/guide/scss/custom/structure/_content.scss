@@ -85,13 +85,24 @@
     align-self: center;
 }
 
+.docs-title {
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 i {
     &.title-icon {
         width: 44px;
         height: 44px;
         color: var(--content-icon-color);
         background-color: var(--content-icon-bg);
-        display: inline-flex !important;
+        display: inline-flex;
         align-self: center;
         align-items: center;
         justify-content: center;
@@ -101,6 +112,7 @@ i {
 
         @media (max-width: 768px) {
             align-self: auto;
+            display: none !important;
         }
     }
 }
@@ -109,6 +121,9 @@ i {
     &.lead {
         color: var(--text-muted);
         font-weight: 400;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
 }
 
@@ -273,4 +288,20 @@ i {
 
 .docs-content figcaption {
     font-size: small;
+}
+
+////////////////////////////////////
+/* Responsive text to hide parts 
+of it on small screen             */
+////////////////////////////////////
+
+
+.hidden-on-small {
+    display: inline;
+}
+
+@media (max-width: 1500px) {
+    .hidden-on-small {
+        display: none !important;
+    }
 }
