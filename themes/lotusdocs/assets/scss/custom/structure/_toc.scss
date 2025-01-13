@@ -1,0 +1,56 @@
+//
+// toc-layouts.scss
+//
+
+#TableOfContents ul,
+#toc ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+        padding-bottom: 5px;
+
+        ul {
+            li {
+                border-top: none;
+                padding-left: 1rem;
+                margin-top: 0.125rem;
+                padding-top: 0.125rem;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+#TableOfContents a,
+#toc a {
+    display: block;
+    color: $text-default;
+    padding: 0 10px 0 10px;
+    padding-block: 3px 3px;
+    margin: 0 0 0 -10px;
+    //border-radius: 4px;
+    width: calc(100% + 20px);
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+
+    &:hover {
+        background-color: $gray-300;
+        transition: all 0.1s;
+        -webkit-transition: all 0.2s;
+    }
+
+    &.active {
+        color: $primary !important;
+        background-color: $gray-300;
+        border-right: 3px solid;
+        // font-weight: 600;
+        //opacity: 0.9;
+    }
+
+    
+}
+

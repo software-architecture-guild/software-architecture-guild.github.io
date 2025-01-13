@@ -24,19 +24,25 @@ markup:
 menu:
   primary:
     - name: Guide
-      url: /docs/
-      identifier: docs
+      url: /guide/
+      identifier: guide
       weight: 10
+    - name: Blogs
+      url: "/blogs/"
+      identifier: blogs
+      weight: 20
     - name: Community
       url: "https://github.com/orgs/software-architecture-guild/discussions"
       identifier: community
-      weight: 20
+      weight: 30
 
 
+pagination:
+  pagerSize: 10
 
 params:
   footer:
-    copyright: '© :YEAR: Software Architecture Giuld. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
+    copyright: '© :YEAR: Software Architecture Guild. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
     version: true # include git commit info in footer
 
   social:
@@ -44,7 +50,7 @@ params:
 
   docs:
     title: 'Software Architecture Guild'
-    pathName: docs
+    pathName: guide
 
     sidebarIcons: true
     titleIcon: true

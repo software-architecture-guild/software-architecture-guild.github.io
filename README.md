@@ -17,9 +17,11 @@ Before you begin, ensure you have the following installed:
 ### Local development
 
 1. Run hugo site locally:
-```bash
-hugo server -D
-```
+
+   ```bash
+   hugo server -D
+   ```
+
 2. Open your browser and visit: [http://localhost:1313](http://localhost:1313)
 
 ## Site Structure
@@ -30,7 +32,8 @@ The basic structure of your Hugo site with the Lotus theme is as follows:
 software-architecture-guild/
 ├── archetypes/
 ├── content/
-│   ├── docs/
+│   ├── blogs/
+│   ├── guide/
 │   └── _index.md
 ├── data/
 ├── layouts/
@@ -50,4 +53,38 @@ software-architecture-guild/
 - config.toml: Configuration file for your site.
 - README.md: This file.
 
+## Linting
 
+### Markdown
+
+1. Install markdown lint:
+
+   ```bash
+   sudo npm install -g markdownlint-cli2
+   ```
+
+2. Run markdown lint:
+
+   ```bash
+   markdownlint-cli2 "**/*.md" "#node_modules" "#themes"
+   ```
+
+3. Fix automatically:
+
+   ```bash
+   markdownlint-cli2 "**/*.md" "#node_modules" "#themes" --fix
+   ```
+
+### Spell Check
+
+1. Install cspell:
+
+   ```bash
+   sudo npm install -g cspell@latest
+   ```
+
+2. Run cspell lint:
+
+   ```bash
+   cspell lint .
+   ```

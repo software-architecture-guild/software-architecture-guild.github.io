@@ -1,0 +1,20 @@
+name: Build Hugo
+description: Building a WebSite with Hugo CLI
+inputs:
+  baseURL:
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Build with Hugo
+      env:
+        # For maximum backward compatibility with Hugo modules
+        HUGO_ENVIRONMENT: production
+        HUGO_ENV: production
+      shell: bash
+      run: |
+          hugo -D \
+            --gc \
+            --minify \
+            --baseURL "${{ inputs.baseURL }}/"
+      

@@ -1,0 +1,15 @@
+{{ $site := .Site }}
+
+<div class="author">
+    {{ range .Params.Authors }}
+    {{ if ne . "" }}
+        {{ $author := $site.GetPage (printf "authors/%s" .) }}
+            {{ if $author }}
+                <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Name }} Avatar">
+                <span class="text-muted hidden-on-small">{{ $author.Params.Name }}</span>
+            {{ else }}
+                <span class="text-muted">Unknown Author: {{ . }}</span>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>

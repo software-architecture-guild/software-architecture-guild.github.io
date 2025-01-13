@@ -1,0 +1,27 @@
+//
+// _authors.scss
+//
+// Authors Images
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @media (max-width: 768px) {
+        margin-left: 0px !important;
+        justify-content: center;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-self: center;
+}
+
