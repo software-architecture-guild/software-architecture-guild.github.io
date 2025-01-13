@@ -9,6 +9,7 @@ draft: false
 toc: true
 ---
 ## Front-End Architecture overview
+
 Front-end architecture is an important part of user-facing application development. It involves the choice of structure, components, and technologies used to build the user interface. Understanding the different types of front-end applications and their architectural patterns is essential to creating efficient, scalable, and maintainable applications.
 
 ### Types of Front-End Applications
@@ -42,16 +43,16 @@ When building a front-end application, you need to decide on an architectural st
 
 ### Key Parts of a Front-End Application
 A front-end application consists of various parts that work together to provide a cohesive user experience. Here are the main components:
-* **Structure of the Application**
+* **Structure of the Application** \
 The overall structure refers to how the codebase is organized. It includes directories, modules, and how different parts of the app interact. A well-structured application makes it easier to navigate the code, enforce consistency, and scale efficiently.
 
-* **Frameworks**
+* **Frameworks** \
 Front-end frameworks provide the backbone for building applications. Popular frameworks include React, Angular, and Vue.js, each offering different strengths in terms of component management, state handling, and tooling. The choice of framework influences the structure of your app and its development workflow.
 
-* **Component Libraries**
+* **Component Libraries** \
 Component libraries help speed up development by providing reusable UI components. Popular examples include Material-UI, Bootstrap, and Ant Design. These libraries ensure consistent design and can be customized to fit the app's needs.
 
-* **Communication with Back-End**
+* **Communication with Back-End** \
 Effective front-end communication with the back-end is critical for a responsive and functional app. This typically involves RESTful APIs or GraphQL for querying and manipulating data. Modern frameworks also facilitate state management and API interaction through libraries like Axios, Fetch API, or Apollo Client for GraphQL.
 
 ## Recommended Reading
