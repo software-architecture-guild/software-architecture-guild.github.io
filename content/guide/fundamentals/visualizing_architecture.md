@@ -7,6 +7,8 @@ date: "2024-09-11T08:35:02+02:00"
 lastmod: "2024-09-11T08:35:02+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## Why visualizing is important?
 

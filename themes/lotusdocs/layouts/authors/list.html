@@ -1,3 +1,37 @@
 {{ define "main" }}
+<section class="d-table w-100 hero">
+  <div class="content-wrapper mb-4">
+    <!-- Left Column Section -->
+    <aside class="sidebar">
+    </aside>
+
+    <!-- Main Content Section -->
+    <div class="main-content overflow-hidden">
+      <div class="container-xl">
+        <div class="row row-cols-2 mb-1">
+          <h2 class="text-start my-1">{{ .Title }}</h2>
+          {{ $paginator := .Paginate .Pages }}
+          {{- partial "paginator.html" . -}}
+        </div>
+        <div class="row row-cols-1 g-4">
+          {{ range $index, $value := $paginator.Pages }}
+          <div class="card">
+            <a href="{{(.Permalink | relURL)}}" class="text-decoration-none text-reset stretched-link"></a>
+            <div>
+              {{ partial "authors/author-details.html" . }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div>
+          {{- partial "paginator.html" . -}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column Section -->
+    <aside class="sidebar"></aside>
+  </div>
+</section>
 
 {{ end }}

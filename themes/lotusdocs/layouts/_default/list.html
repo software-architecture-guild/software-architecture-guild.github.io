@@ -29,7 +29,7 @@
         </div>
         <div class="row row-cols-1 g-4">
           {{ range $index, $value := $paginator.Pages }}
-            {{- partial "default/list-card.html" (dict "content" .) -}}
+            {{- partial "default/card.html" (dict "content" .) -}}
           {{ end }}
         </div>
         <div>

@@ -5,8 +5,10 @@
     {{ if ne . "" }}
         {{ $author := $site.GetPage (printf "authors/%s" .) }}
             {{ if $author }}
-                <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Name }} Avatar">
-                <span class="text-muted hidden-on-small">{{ $author.Params.Name }}</span>
+                <a href="{{ $author.Permalink }}" class="link-overlay-fix">
+                    <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Title }} Avatar">
+                    <span class="text-muted hidden-on-small">{{ $author.Params.Title }}</span>
+                </a>
             {{ else }}
                 <span class="text-muted">Unknown Author: {{ . }}</span>
             {{ end }}

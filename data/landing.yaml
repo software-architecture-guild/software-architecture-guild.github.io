@@ -34,7 +34,7 @@ hero:
   cta2Button:
     icon: group
     btnText: "About us"
-    url: "guide/authors"
+    url: "/authors"
 
 # Features Grid
 features:
