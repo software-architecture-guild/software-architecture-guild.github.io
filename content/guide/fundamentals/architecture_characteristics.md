@@ -8,7 +8,6 @@ lastmod: "2024-12-15T09:25:26+01:00"
 draft: false
 toc: true
 ---
-
 ## Introduction
 
 In software architecture, **architecture characteristics** (often referred to as "non-functional requirements" or "-ilities") define the qualities or attributes a system must exhibit to meet business goals and operational needs. While functional requirements dictate *what* a system does, architecture characteristics determine *how well* it performs those functions under real-world conditions.
@@ -31,7 +30,43 @@ Architecture characteristics represent the critical non-functional attributes of
 6. **Testability**: The extent to which the system can be effectively tested.
 7. **Deployability**: How quickly and reliably the system can be deployed to production.
 
----
+### Explicit Architecture Characteristics
+
+Explicit architecture characteristics are those that are clearly defined, documented, and specified during the initial phases of software development. These characteristics are often stated in the requirements document or design specifications and serve as direct inputs to architectural decisions.
+
+* **Examples of Explicit Characteristics:**
+  * **Performance**: Requirements related to system responsiveness and processing speed.
+  * **Scalability**: The ability of the system to handle increased load or demand.
+  * **Security**: Measures to ensure data protection and prevent unauthorized access.
+  * **Availability**: Ensuring the system remains operational and accessible with minimal downtime.
+* **Characteristics of Explicit Attributes:**
+  * **Defined Early**: Explicit characteristics are identified during the planning and design stages.
+  * **Measurable**: These characteristics are typically associated with clear, quantifiable metrics.
+  * **Stakeholder-Driven**: They are often derived from stakeholder needs and business goals.
+
+### Implicit Architecture Characteristics
+
+Unlike explicit architecture characteristics, implicit architecture characteristics are not directly specified or documented during the early stages of development. They emerge as a result of design and implementation decisions and often become evident during system operation or maintenance.
+
+* **Examples of Implicit Characteristics:**
+  * **Maintainability**: The ease with which the system can be updated or modified.
+  * **Modifiability**: The ability to add new features or components without significant changes to the existing system.
+  * **Portability**: The effort required to deploy the system in different environments.
+  * **Usability**: How easy it is for users to interact with the system.
+* **Characteristics of Implicit Attributes:**
+  * **Emergent**: Implicit characteristics become apparent over time, often during later stages of development or deployment.
+  * **Harder to Measure**: Since implicit characteristics are not explicitly defined, they may lack clear metrics.
+  * **Influenced by Context**: These characteristics depend on how the system is used and maintained.
+
+#### Key Differences
+
+| Aspect                      | Explicit Characteristics                 | Implicit Characteristics                 |
+| ----------------------------- | ------------------------------------------ | ------------------------------------------ |
+| **Definition**              | Clearly defined and documented           | Emerge during design and operation       |
+| **Timing**                  | Identified during early stages           | Become apparent over time                |
+| **Measurement**             | Associated with clear metrics            | Harder to quantify                       |
+| **Stakeholder Involvement** | Directly influenced by stakeholder needs | Often influenced by operational feedback |
+| **Design Impact**           | Directly shapes initial design decisions | Affects long-term system adaptability    |
 
 ### Why Are Architecture Characteristics Important?
 
@@ -77,16 +112,16 @@ Use prioritization techniques like **MOSCOW analysis** (Must-have, Should-have, 
 
 To ensure that the system meets its desired attributes, measurement is essential. This can be achieved through:
 
-* **Performance Testing**\
-    Tools like Apache JMeter or Gatling measure response times and throughput under load.
-* **Availability Metrics**\
-    Track uptime using Service Level Agreements (SLAs) or Mean Time Between Failures (MTBF).
-* **Scalability Tests**\
-    Simulate increased traffic to assess system behavior during scale-up/down scenarios.
-* **Security Audits**\
-    Use tools like OWASP ZAP to identify vulnerabilities.
-* **Fitness Functions**\
-    Automated tests that validate whether a system adheres to architectural characteristics over time.
+* **Performance Testing**
+  Tools like Apache JMeter or Gatling measure response times and throughput under load.
+* **Availability Metrics**
+  Track uptime using Service Level Agreements (SLAs) or Mean Time Between Failures (MTBF).
+* **Scalability Tests**
+  Simulate increased traffic to assess system behavior during scale-up/down scenarios.
+* **Security Audits**
+  Use tools like OWASP ZAP to identify vulnerabilities.
+* **Fitness Functions**
+  Automated tests that validate whether a system adheres to architectural characteristics over time.
 
 ---
 
@@ -113,7 +148,7 @@ To ensure that the system meets its desired attributes, measurement is essential
 
 * **Define Clear Metrics**: Ensure all characteristics are measurable and tied to specific business outcomes.
 * **Incorporate Into CI/CD Pipelines**: Automate tests and fitness functions to validate characteristics during every deployment.
-* **Continuously Monitor**: Use observability tools (e.g., Prometheus and Grafana) to track characteristics like availability and performance in real time.
+* **Continuously Monitor**: Use observability tools (e.g., Prometheus and Grafana) to track characteristics like availability and performance in real-time.
 * **Evolve with the System**: Revisit and refine characteristics as the system and business needs grow.
 
 ---
@@ -128,28 +163,29 @@ To ensure that the system meets its desired attributes, measurement is essential
 
 ## Architecture Characteristics Catalog
 
----
+### Abstraction
 
-### Availability
+**Type:** Implicit
 
 **Definition:**
-Ensures the system remains operational and accessible over a defined period, often measured as uptime percentage.
+Simplifies complex systems by exposing only essential components and hiding implementation details.
 
 **Techniques:**
 
-* Redundancy and failover mechanisms.
-* Graceful degradation and backup systems.
-* Monitoring and alert systems for failure detection.
+* Clear interfaces and APIs.
+* Design patterns like facade, adapter, or factory.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Higher availability requires redundancy, increasing infrastructure expenses.
-* **Impact on Performance:** Replication and failover can introduce latency.
-* **Impact on Complexity:** Additional components for availability can complicate maintenance and deployment.
+* **Impact on Performance:** Extra abstraction layers may increase latency.
+* **Impact on Modifiability:** Overgeneralized abstractions can hinder future changes.
+* **Impact on Simplicity:** Abstracting too much can complicate debugging.
 
 ---
 
 ### Agility
+
+**Type:** Explicit
 
 **Definition:**
 Measures the ability of a system to adapt to new requirements, technologies, or environments.
@@ -168,25 +204,68 @@ Measures the ability of a system to adapt to new requirements, technologies, or 
 
 ---
 
-### Abstraction
+### Auditability
+
+**Type:** Explicit
 
 **Definition:**
-Simplifies complex systems by exposing only essential components and hiding implementation details.
+The ease with which a system's actions can be examined to ensure policy compliance and detect anomalies.
 
 **Techniques:**
 
-* Clear interfaces and APIs.
-* Design patterns like facade, adapter, or factory.
+* Logging and audit trails.
+* Comprehensive documentation.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Extra abstraction layers may increase latency.
-* **Impact on Modifiability:** Overgeneralized abstractions can hinder future changes.
-* **Impact on Simplicity:** Abstracting too much can complicate debugging.
+* **Impact on Performance:** Generating audit logs may introduce latency.
+* **Impact on Complexity:** Auditability features can add complexity to the system.
+
+---
+
+### Availability
+
+**Type:** Explicit
+
+**Definition:**
+Ensures the system remains operational and accessible over a defined period, often measured as uptime percentage.
+
+**Techniques:**
+
+* Redundancy and failover mechanisms.
+* Graceful degradation and backup systems.
+* Monitoring and alert systems for failure detection.
+
+**Trade-Offs:**
+
+* **Impact on Cost:** Higher availability requires redundancy, increasing infrastructure expenses.
+* **Impact on Performance:** Replication and failover can introduce latency.
+* **Impact on Complexity:** Additional components for availability can complicate maintenance and deployment.
+
+---
+
+### Complexity
+
+**Type:** Implicit
+
+**Definition:**
+Represents how intricate or complicated the system’s architecture is.
+
+**Techniques:**
+
+* Using clear architectural patterns.
+* Reducing unnecessary dependencies.
+
+**Trade-Offs:**
+
+* **Impact on Modifiability:** High complexity may hinder system changes.
+* **Impact on Maintainability:** Complex systems require more effort to understand and maintain.
 
 ---
 
 ### Configurability
+
+**Type:** Explicit
 
 **Definition:**
 Allows system behavior to be modified without altering the underlying code.
@@ -205,6 +284,8 @@ Allows system behavior to be modified without altering the underlying code.
 ---
 
 ### Cost
+
+**Type:** Explicit
 
 **Definition:**
 Represents the financial investment required for the system's development, deployment, and maintenance.
@@ -225,6 +306,8 @@ Represents the financial investment required for the system's development, deplo
 
 ### Deployability
 
+**Type:** Explicit
+
 **Definition:**
 Measures how easily and efficiently a system can be deployed and updated in various environments.
 
@@ -243,6 +326,8 @@ Measures how easily and efficiently a system can be deployed and updated in vari
 ---
 
 ### Elasticity
+
+**Type:** Implicit
 
 **Definition:**
 Enables a system to adjust its resources based on workload demands dynamically.
@@ -263,6 +348,8 @@ Enables a system to adjust its resources based on workload demands dynamically.
 
 ### Evolvability
 
+**Type:** Implicit
+
 **Definition:**
 Ensures a system can adapt and grow to meet future requirements and technologies.
 
@@ -281,6 +368,8 @@ Ensures a system can adapt and grow to meet future requirements and technologies
 ---
 
 ### Fault-Tolerance
+
+**Type:** Explicit
 
 **Definition:**
 Ensures the system continues to operate despite failures in components or subsystems.
@@ -301,6 +390,8 @@ Ensures the system continues to operate despite failures in components or subsys
 
 ### Integrability
 
+**Type:** Explicit
+
 **Definition:**
 Measures how seamlessly the system can connect and interact with other systems or components.
 
@@ -320,6 +411,8 @@ Measures how seamlessly the system can connect and interact with other systems o
 
 ### Interoperability
 
+**Type:** Explicit
+
 **Definition:**
 Ensures that the system can exchange data and operate with external systems, regardless of platform differences.
 
@@ -337,7 +430,47 @@ Ensures that the system can exchange data and operate with external systems, reg
 
 ---
 
+### Maintainability
+
+**Type:** Implicit
+
+**Definition:**
+The ease with which a system can be maintained to correct defects, improve performance, or adapt to a changing environment.
+
+**Techniques:**
+
+* Modular design.
+* Clear and comprehensive documentation.
+
+**Trade-Offs:**
+
+* **Impact on Cost:** Maintaining a system requires ongoing investment.
+* **Impact on Complexity:** Poor maintainability can increase technical debt.
+
+---
+
+### Modifiability
+
+**Type:** Explicit
+
+**Definition:**
+The ease with which a system can be changed to meet new requirements.
+
+**Techniques:**
+
+* Modular design.
+* Clear separation of concerns.
+
+**Trade-Offs:**
+
+* **Impact on Complexity:** Frequent modifications can increase system complexity.
+* **Impact on Performance:** Modifications may introduce performance overhead.
+
+---
+
 ### Performance
+
+**Type:** Explicit
 
 **Definition:**
 Measures the system’s responsiveness and efficiency under various workloads.
@@ -356,7 +489,28 @@ Measures the system’s responsiveness and efficiency under various workloads.
 
 ---
 
+### Reliability
+
+**Type:** Explicit
+
+**Definition:**
+The ability of a system to perform its required functions under stated conditions for a specified period.
+
+**Techniques:**
+
+* Redundancy and backup mechanisms.
+* Error detection and correction.
+
+**Trade-Offs:**
+
+* **Impact on Cost:** Ensuring high reliability may increase infrastructure and operational expenses.
+* **Impact on Complexity:** Adding reliability features can complicate the system.
+
+---
+
 ### Reusability
+
+**Type:** Explicit
 
 **Definition:**
 Enables components or modules to be reused across different systems or projects.
@@ -375,7 +529,28 @@ Enables components or modules to be reused across different systems or projects.
 
 ---
 
+### Resilience
+
+**Type:** Implicit
+
+**Definition:**
+The ability of a system to recover quickly from difficulties or disruptions.
+
+**Techniques:**
+
+* Graceful degradation.
+* Redundant infrastructure.
+
+**Trade-Offs:**
+
+* **Impact on Cost:** Ensuring resilience may increase redundancy costs.
+* **Impact on Performance:** Recovery mechanisms can introduce latency.
+
+---
+
 ### Safety
+
+**Type:** Explicit
 
 **Definition:**
 Ensures the system operates without causing harm to users, the environment, or other systems.
@@ -396,6 +571,8 @@ Ensures the system operates without causing harm to users, the environment, or o
 
 ### Scalability
 
+**Type:** Explicit
+
 **Definition:**
 Ensures the system can handle increased workloads without degrading performance.
 
@@ -414,6 +591,8 @@ Ensures the system can handle increased workloads without degrading performance.
 ---
 
 ### Security
+
+**Type:** Explicit
 
 **Definition:**
 Protects the system from unauthorized access, breaches, and vulnerabilities.
@@ -434,6 +613,8 @@ Protects the system from unauthorized access, breaches, and vulnerabilities.
 
 ### Simplicity
 
+**Type:** Implicit
+
 **Definition:**
 Minimizes unnecessary complexity in the system’s design and implementation.
 
@@ -453,6 +634,8 @@ Minimizes unnecessary complexity in the system’s design and implementation.
 
 ### Testability
 
+**Type:** Explicit
+
 **Definition:**
 Measures how easily a system can be tested for correctness, performance, and reliability.
 
@@ -470,7 +653,28 @@ Measures how easily a system can be tested for correctness, performance, and rel
 
 ---
 
+### Traceability
+
+**Type:** Implicit
+
+**Definition:**
+The ability to trace an entity's history, application, or location by means of recorded identifications.
+
+**Techniques:**
+
+* Logging and traceability tools.
+* Version control systems.
+
+**Trade-Offs:**
+
+* **Impact on Complexity:** Maintaining traceability may add overhead.
+* **Impact on Performance:** Extensive tracing can introduce latency.
+
+---
+
 ### Usability
+
+**Type:** Implicit
 
 **Definition:**
 Ensures the system provides an intuitive and efficient experience for users.
@@ -489,6 +693,25 @@ Ensures the system provides an intuitive and efficient experience for users.
 
 ---
 
+### Vulnerability
+
+**Type:** Explicit
+
+**Definition:**
+The degree to which a system is susceptible to harm or attack.
+
+**Techniques:**
+
+* Regular security assessments.
+* Intrusion detection systems.
+
+**Trade-Offs:**
+
+* **Impact on Complexity:** Reducing vulnerabilities may increase system complexity.
+* **Impact on Performance:** Security measures to reduce vulnerabilities may introduce latency.
+
+---
+
 ## Conclusion
 
 Architecture characteristics define how a system operates, grows, and interacts with its environment, forming the foundation of robust, scalable, and resilient systems. While each characteristic offers distinct benefits, their interdependencies often lead to trade-offs. By carefully defining, prioritizing, and measuring these characteristics—such as availability, scalability, performance, security, and usability—architects can design systems that achieve optimal functionality while aligning with business goals and real-world demands. Strategic planning, disciplined management, and effective prioritization are essential to navigating these trade-offs and delivering high-quality software that meets user and stakeholder expectations.
@@ -498,9 +721,10 @@ Architecture characteristics define how a system operates, grows, and interacts 
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+
   * **Part 1: Foundations**\
     It establishes the foundational concepts of software architecture, focusing on high-level, strategic decisions that shape a system's structure. It emphasizes the importance of **modularity** and **component-based thinking**, where systems are broken down into cohesive, loosely coupled components to enhance flexibility, scalability, and maintainability. The section also highlights **architecture characteristics** (non-functional requirements) such as performance, scalability, and security, which are crucial to the system’s long-term success. The distinction between architecture and design is clarified, with architecture guiding the overall structure, while design focuses on implementation details. Ultimately, Part 1 stresses the importance of **trade-offs** in architectural decision-making, balancing technical requirements with business goals to create adaptable, future-proof systems.
-
 * Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.
+
   * **Part 2: Quality Attributes**\
-  Part Two of *Software Architecture in Practice* explores **architecture characteristics**, which define a system’s behavior, structure, and alignment with stakeholder needs. It examines key attributes such as availability, performance, security, scalability, and modifiability, discussing their definitions, tactics, and inherent trade-offs. The section emphasizes the importance of balancing these characteristics to design systems that meet both functional requirements and business objectives effectively.
+    Part Two of *Software Architecture in Practice* explores **architecture characteristics**, which define a system’s behavior, structure, and alignment with stakeholder needs. It examines key attributes such as availability, performance, security, scalability, and modifiability, discussing their definitions, tactics, and inherent trade-offs. The section emphasizes the importance of balancing these characteristics to design systems that meet both functional requirements and business objectives effectively.
