@@ -44,7 +44,7 @@ These issues prevent organizations from responding effectively to complex challe
 
 The root of these challenges lies in how complicated and complex systems differâ€”and how those differences manifest in teams.
 
-<div class="table-bordered table-responsive" style="padding-left: 20px">
+{{< table >}}
 
 | **Aspect**          | **Complicated Teams**       | **Complex Teams**                  |
 | --------------------- | ----------------------------- | ------------------------------------ |
@@ -55,8 +55,7 @@ The root of these challenges lies in how complicated and complex systems differâ
 | **Communication**   | Linear, siloed              | Nonlinear, cross-functional        |
 | **Adaptability**    | Slow to respond to change   | Rapid and iterative                |
 
-</div>
-<br>
+{{< /table >}}
 
 **Challenge**: Applying the patterns of complicated teams to complex environments results in misalignment, inefficiency, and missed opportunities. Organizations need a model that captures the strengths of small, adaptable teams while scaling their effectiveness across the enterprise.
 
