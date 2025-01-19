@@ -1,0 +1,46 @@
+{{ define "main" }}
+<section class="d-table w-100 hero">
+  <div class="content-wrapper mb-4">
+    <!-- Left Column Section -->
+    <aside class="sidebar white-box">
+      <toc>
+        <h4 class="text-start">Tags</h4>
+        <nav id="TableOfContents">
+          <ul>
+            {{ range .Site.Taxonomies.tags }}
+                <li>
+                  <a href="{{ .Page.Permalink }}">- {{ .Page.Title }}</a>
+                  <ul><li></li></ul>
+                </li>
+                
+            {{ end }}
+          </ul>
+        </nav>
+    </toc>
+    </aside>
+
+    <!-- Main Content Section -->
+    <div class="main-content overflow-hidden">
+      <div class="container-xl">
+        <div class="row row-cols-2 mb-1">
+          <h2 class="text-start my-1">{{ .Title }}</h2>
+          {{ $paginator := .Paginate .Pages }}
+          {{- partial "paginator.html" . -}}
+        </div>
+        <div class="row row-cols-1 g-4">
+          {{ range $index, $value := $paginator.Pages }}
+            {{- partial "default/card.html" (dict "content" .) -}}
+          {{ end }}
+        </div>
+        <div>
+          {{- partial "paginator.html" . -}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column Section -->
+    <aside class="sidebar"></aside>
+  </div>
+</section>
+
+{{ end }}

@@ -4,60 +4,13 @@
 <section class="d-table w-100 hero">
   <div class="content-wrapper mb-4">
     <!-- Left Column Section -->
-    <aside class="sidebar white-box">
-      <toc>
-        <h4 class="text-start">Blog Navigation</h4>
-        <nav id="TableOfContents">
-          <ul>
-            {{ $currentPage := . }}
-            {{ $pages := where $site.RegularPages "Section" "blogs" }}
-            {{ $index := 0 }}
-            {{ range $i, $p := $pages }}
-              {{ if eq $p.Permalink $currentPage.Permalink }}
-                {{ $index = $i }}
-              {{ end }}
-            {{ end }}
-            {{ $start := cond (gt $index 5) (sub $index 5) 0 }}
-            {{ $end := cond (lt (add $index 5) (len $pages)) (add $index 5) (sub (len $pages) 1) }}
-            {{ range $i, $p := $pages }}
-              {{ if and (ge $i $start) (le $i $end) }}
-                <li>
-                  <a class="{{ if eq $p.Permalink $currentPage.Permalink }}active{{ end }}" href="{{ $p.Permalink }}">
-                    {{ if gt (len $p.Title) 50 }}{{ substr $p.Title 0 47 }}...{{ else }}{{ $p.Title }}{{ end }}
-                  </a>
-                </li>
-              {{ end }}
-            {{ end }}
-          </ul>
-        </nav>
-      </toc>
-    </aside>
+    <aside class="sidebar"></aside>
 
     <!-- Main Content Section -->
     <div class="main-content">
       <div class="container-xl">
         
-        <nav class="post-navigation mb-3">
-            <div class="nav-links">
-                {{ with .PrevInSection }}
-                    <a class="text-start" href="{{ .RelPermalink }}">
-                      ←
-                      <span class="hidden-on-small"> {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
-                    </a>
-                {{ else }}
-                    <span class="link-disabled hidden-on-small">No Previous Post</span>
-                {{ end }}
-
-                {{ with .NextInSection }}
-                    <a class="text-end" href="{{ .RelPermalink }}">
-                      <span class="hidden-on-small"> {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
-                      →
-                    </a>
-                {{ else }}
-                    <span class="link-disabled hidden-on-small">No Next Post</span>
-                {{ end }}
-            </div>
-        </nav>
+        <div style="height: 3.1rem;"></div>
         
         <div class="white-box px-3 py-1">
           
@@ -81,14 +34,7 @@
     </div>
 
     <!-- Right Column Section -->
-    <aside class="sidebar white-box">
-      {{ if ge (len .TableOfContents) 50 }}
-      <h4 class="text-start">Contents</h4>
-      <toc>{{ .TableOfContents }}</toc>
-    {{ end }}
-
-
-    </aside>
+    <aside class="sidebar"></aside>
   </div>
 </section>
 

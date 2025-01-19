@@ -46,7 +46,7 @@ pagination:
 
 params:
   footer:
-    copyright: '© :YEAR: Software Architecture Guild. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
+    copyright: '© :YEAR: Software Architecture Guild | Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs) | [**Privacy Policy**](/privacy-policy/)'
     version: true # include git commit info in footer
 
   social:
