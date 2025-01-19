@@ -98,11 +98,7 @@
         {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "head/plausible") . }}
     {{- end -}}
     {{- end -}}
-    <!-- Google Analytics v4 Config -->
-    {{- if not hugo.IsServer }}
-    {{- if .Site.Config.Services.GoogleAnalytics.ID }}
-        {{- template "_internal/google_analytics.html" . -}}
-    {{- end -}}
-    {{- end -}}
-    {{ partial "google-analytics.html" . }}
+    <!-- Google Analytics v4 Config + Cookies Consent -->
+    {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $consentJS.Permalink }}" defer></script>
 </head>

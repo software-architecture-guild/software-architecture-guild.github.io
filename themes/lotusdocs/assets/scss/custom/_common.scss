@@ -16,3 +16,43 @@
         width: 100% !important; /* Full width on mobile screens */
     }
 }
+
+#consent-banner {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack text above buttons */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $gray-100;
+    padding: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 9999;
+}
+
+#consent-banner button {
+    margin: 0 10px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#consent-banner button#accept-cookies {
+    background-color: green;
+    color: white;
+}
+
+#consent-banner button#decline-cookies {
+    background-color: red;
+    color: white;
+}
+
+/* Display banner if JavaScript enables it */
+#consent-banner.visible {
+    display: flex; /* Show the banner when JavaScript adds the "visible" class */
+  }
+  
