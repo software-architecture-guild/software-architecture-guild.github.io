@@ -50,13 +50,7 @@ The **Context** viewpoint defines the **scope** and boundaries of the system, il
   * Internal system details (e.g., components, detailed data flows).
   * Overly detailed protocol specifications.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.context_viewpoint_level_2.jpg" alt="Viewpoints & Perspectives Context" width="75%" height="75%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#context-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.context_viewpoint_level_2.jpg" alt="Viewpoints & Perspectives Context" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#context-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -75,13 +69,7 @@ helps identify critical functions, dependencies, and opportunities for optimizat
   * Deployment details (e.g., servers hosting components).
   * User interface specifics (unless a critical part of the function).
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.functional_viewpoint_user_profile.jpg" alt="Viewpoints & Perspectives Functional" width="75%" height="75%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#functional-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.functional_viewpoint_user_profile.jpg" alt="Viewpoints & Perspectives Functional" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#functional-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -99,13 +87,7 @@ The **Information** viewpoint addresses the **organization, storage, and flow of
   * Behavioral or functional information.
   * Storage technology specifics (unless critical to the architecture).
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.information_viewpoint_data_model.jpg" alt="Viewpoints & Perspectives Functional" width="50%" height="50%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/information_viewpoint/README.md#here-you-can-find-more-details-about-proposed-data-model">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.information_viewpoint_data_model.jpg" alt="Viewpoints & Perspectives Functional" href="https://github.com/Profitero-Data-Alchemists/katas-2023/blob/master/information_viewpoint/README.md#here-you-can-find-more-details-about-proposed-data-model" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -123,13 +105,7 @@ The **Concurrency** viewpoint describes the **runtime interactions** between sys
   * Low-level implementation code.
   * Non-concurrent components or workflows.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.concurrency_viewpoint_messaging_actors.jpg" alt="Viewpoints & Perspectives Concurrency" width="75%" height="75%"/>
-  <br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#concurrency-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.concurrency_viewpoint_messaging_actors.jpg" alt="Viewpoints & Perspectives Concurrency" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#concurrency-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -147,13 +123,7 @@ The **Development** viewpoint focuses on the software architecture as seen by th
   * Runtime behavior or deployment information.
   * Detailed user interactions or workflows.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.development_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Development" width="75%" height="75%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#development-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.development_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Development" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#development-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -172,13 +142,7 @@ The **Deployment** viewpoint describes the **physical environment** where the sy
   * Detailed internal behaviors of software components.
   * Design-time or source-level module structures.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.deployment_viewpoint_environment.jpg"  alt="Viewpoints & Perspectives Deployment" width="75%" height="75%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#deployment-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.deployment_viewpoint_environment.jpg"  alt="Viewpoints & Perspectives Deployment" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#deployment-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 
@@ -196,13 +160,7 @@ The **Operational** viewpoint focuses on the system’s day-to-day **management 
 * * Functional or runtime details unrelated to operations.
   * Implementation-level details of monitoring or recovery mechanisms.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/vp.operational_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Operational" width="75%" height="75%"/>
-  <br><br>
-  <a href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#operational-viewpoint">
-    <small>Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/vp.operational_viewpoint_level_1.jpg" alt="Viewpoints & Perspectives Operational" href="https://github.com/Profitero-Data-Alchemists/katas-2023/tree/master?tab=readme-ov-file#operational-viewpoint" msg="Source: O'Reilly Katas 2023 Fall solution by Profitero Data Alchemists" >}}
 
 ---
 

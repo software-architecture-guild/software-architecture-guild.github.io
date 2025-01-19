@@ -39,13 +39,7 @@ The framework defines four basic diagram types corresponding to the abstractions
 
 This diagram provides a high-level overview of the system and its interactions with external entities. It sets the stage for understanding how the system fits into its broader environment.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 System Context" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/system-context">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 System Context" href="https://c4model.com/diagrams/system-context" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -53,13 +47,7 @@ This diagram provides a high-level overview of the system and its interactions w
 
 It breaks down the system into its containers, illustrating relationships between them. This level of detail allows stakeholders to see how different parts of the system interact.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 Containers" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/container">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 Containers" href="https://c4model.com/diagrams/container" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -67,13 +55,7 @@ It breaks down the system into its containers, illustrating relationships betwee
 
 It offers a detailed view of the components within a specific container and their interactions. This helps understand the container's internal structure and how components collaborate to fulfill system requirements.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.components.png" alt="C4 Components" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/component">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.components.png" alt="C4 Components" href="https://c4model.com/diagrams/component" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -81,13 +63,7 @@ It offers a detailed view of the components within a specific container and thei
 
 This diagram focuses on the implementation level, typically showing classes or modules within a component. It is particularly useful for developers to grasp the details of the code structure.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.code.png" alt="C4 Code" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/code">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.code.png" alt="C4 Code" href="https://c4model.com/diagrams/code" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -101,13 +77,7 @@ The default diagrams create a foundation for describing the software system's st
 
 The **System Landscape** diagram extends the C4 Model by representing the **broader ecosystem** of interconnected systems. Unlike the Context diagram, which focuses on a single system and its external interactions, it captures **multiple systems** across a portfolio, their relationships, and the high-level data flows between them, providing a **broader organizational perspective**.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.system_landscape.png" alt="C4 System Landscape" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/system-landscape">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.system_landscape.png" alt="C4 System Landscape" href="https://c4model.com/diagrams/system-landscape" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -115,13 +85,7 @@ The **System Landscape** diagram extends the C4 Model by representing the **broa
 
 The **Dynamic** diagram illustrates the **runtime behavior** of the system by detailing the interactions and **sequence** of events between components. Unlike the static structure of Container and Component diagrams, this diagram emphasizes how elements collaborate during specific **use cases or processes**, making it helpful in understanding workflows and runtime scenarios.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.dynamic_components.png" alt="C4 Dynamic Components" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/dynamic">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.dynamic_components.png" alt="C4 Dynamic Components" href="https://c4model.com/diagrams/dynamic" msg="Source: https://c4model.com/" >}}
 
 ---
 
@@ -129,13 +93,7 @@ The **Dynamic** diagram illustrates the **runtime behavior** of the system by de
 
 The **Deployment** diagram adds a **physical** perspective to the C4 Model by showing how software elements are deployed across **hardware or infrastructure** nodes. Unlike the Container and Component diagrams, which describe the logical architecture, the Deployment diagram provides details about **environments, servers, containers**, and their connections, highlighting the operational aspect of the system.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.deployment.png" alt="C4 Deployment" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/deployment">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.deployment.png" alt="C4 Deployment" href="https://c4model.com/diagrams/deployment" msg="Source: https://c4model.com/" >}}
 
 ---
 

@@ -28,9 +28,7 @@ To address these challenges, companies began experimenting with **feature teams*
 
 The **functional team** and **component team** approaches have advantages. Still, they also have significant downsides, particularly in dependencies and the coordination required to deliver features to customers efficiently. **Feature teams** attempt to solve these problems but often face hurdles in complex, large-scale microservices environments.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.intro.drawio.png" alt="Engineering Intro" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.intro.drawio.png" alt="Engineering Intro" >}}
 
 ---
 
@@ -52,9 +50,7 @@ Another key concept is the **value stream**. A value stream represents a product
 
 In simpler terms, how teams communicate and collaborate significantly shapes the design of the systems they create. A company's organizational structure directly influences the architecture and structure of the software or systems it produces.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conway's Law" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.conway_law.drawio.png" alt="Conway's Law" >}}
 
 ##### Key Insights from Conway's Law
 
@@ -95,9 +91,7 @@ A **Value Stream** is the end-to-end sequence of activities required to deliver 
 4. **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
 5. **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" >}}
 
 ##### What is Value Stream Mapping?
 
@@ -134,9 +128,7 @@ The ISH method helps define **stream-aligned teams** responsible for delivering 
 
 The model defines **four fundamental team types** and **three modes of team interaction**, which help ensure that teams are designed and interact to support the flow of work through the organization.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.teams_topologies.drawio.png" alt="Teams topologies" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.teams_topologies.drawio.png" alt="Teams topologies" >}}
 
 ##### The Four Fundamental Team Types
 
@@ -202,9 +194,7 @@ Agile frameworks help organizations scale and implement Agile methodologies acro
 
 Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity and flexibility, focusing on decentralized decision-making, and ensuring that organizations can grow without losing the ability to innovate or deliver high-quality products quickly.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.scrum_of_scrums.drawio.png" alt="Scrum@Scale" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.scrum_of_scrums.drawio.png" alt="Scrum@Scale" >}}
 
 ##### Key Concepts of Scrum@Scale
 
@@ -238,9 +228,7 @@ In summary, Scrum@Scale provides a framework for organizations to expand agile p
 
 Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive framework that provides a structured approach for scaling agile methodologies like Scrum or Kanban from the team level to enterprise-wide levels.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.safe.drawio.png" alt="SAFe" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.safe.drawio.png" alt="SAFe" >}}
 
 ##### Key Components of SAFe
 
@@ -295,9 +283,7 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
 
 LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer-focus.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" >}}
 
 ##### Key Principles of LeSS
 
@@ -374,9 +360,7 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
 
 Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 to 9 Scrum teams working together to deliver an integrated product increment. It introduces minimal additional roles and events, focusing on integrating work produced by different teams into a single, potentially shippable product at the end of each sprint.
 
-<center>
-   <img align="center" src="../../../images/organization/engineering.nexus.drawio.png" alt="Nexus" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/engineering.nexus.drawio.png" alt="Nexus" >}}
 
 ##### Key Concepts of Nexus
 

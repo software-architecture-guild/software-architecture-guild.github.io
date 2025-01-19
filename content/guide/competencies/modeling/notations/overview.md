@@ -51,37 +51,19 @@ Architecture notations provide the visual language needed to describe systems ef
 
 A standardized notation for depicting system components, relationships, and workflows. Effective for class diagrams, sequence diagrams, and activity diagrams.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/notations/uml.legend.png" alt="UML Legend" width="75%" height="75%"/>
-  <br>
-  <a href="https://www.conceptdraw.com/examples/component-diagram">
-    <small>Source: https://www.conceptdraw.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/notations/uml.legend.png" alt="UML Legend" href="https://www.conceptdraw.com/examples/component-diagram" msg="Source: https://www.conceptdraw.com/" >}}
 
 #### [C4 Notation](https://c4model.com/diagrams/notation)
 
 Built into the C4 model, it simplifies diagramming with four layers of abstraction and focuses on clear labeling and relationships over complex symbols.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/notations/c4.legend.png" alt="C4 Legend" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/diagrams/notation">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/notations/c4.legend.png" alt="C4 Legend" href="https://c4model.com/diagrams/notation" msg="Source: https://c4model.com/" >}}
 
 #### [ArchiMate](https://pubs.opengroup.org/architecture/archimate3-doc/)
 
 A visual modeling language explicitly designed for enterprise architecture, often used with TOGAF.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/notations/archimate.legend.png" alt="ArchiMate Legend" width="75%" height="75%"/>
-  <br>
-  <a href="https://www.archimatetool.com/resources/">
-    <small>Source: https://www.archimatetool.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/notations/archimate.legend.png" alt="ArchiMate Legend" href="https://www.archimatetool.com/resources/" msg="Source: https://www.archimatetool.com/" >}}
 
 ---
 

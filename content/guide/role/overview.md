@@ -32,9 +32,7 @@ This shift requires architects to adopt a mindset that sees architecture as an o
 
 The role of a software architect now encompasses a diverse set of expectations, extending beyond purely technical responsibilities.
 
-<center>
-   <img align="center" src="../../../images/role/overview.expectations.drawio.png" alt="Expectations" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/overview.expectations.drawio.png" alt="Expectations" >}}
 
 **Key expectations include**:
 
@@ -55,9 +53,7 @@ Software architects often find themselves at the intersection of technology and 
 
 The core responsibilities of a software architect extend far beyond merely designing software systems. These responsibilities encompass stakeholder management, creating architectural blueprints, ensuring the implementation aligns with the architecture, and addressing quality attributes. Chapter 5 of *Software Systems Architecture* details these core responsibilities, which define the role of the software architect as a central figure in bridging the gap between business needs and technical execution. Let’s explore each responsibility in more depth.
 
-<center>
-   <img align="center" src="../../../images/role/overview.responsibilities.drawio.png" alt="Responsibilities" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/overview.responsibilities.drawio.png" alt="Responsibilities" >}}
 
 ##### **1. Identifying and Engaging Stakeholders**
 
@@ -128,9 +124,7 @@ One of the most vital roles of a software architect is leading innovation and ad
 
 A successful software architect requires more than a deep understanding of technical concepts and methodologies. Software architects must possess unique technical knowledge, strategic thinking, leadership skills, and strong interpersonal abilities. These skills allow them to bridge the gap between stakeholders’ expectations and the development team’s execution, ensuring that the architecture aligns with business and technical goals.
 
-<center>
-   <img align="center" src="../../../images/role/overview.skills.drawio.png" alt="Skills" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/overview.skills.drawio.png" alt="Skills" >}}
 
 ##### **1. Technical Expertise**
 

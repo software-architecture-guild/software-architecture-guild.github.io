@@ -35,9 +35,7 @@ When classifying software architects by **Scope**, we can distinguish them based
 
 Here are the key types of architects based on **Scope**:
 
-<center>
-   <img align="center" src="../../../images/role/classification.scope.drawio.png" alt="Scope" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/classification.scope.drawio.png" alt="Scope" >}}
 
 ### Enterprise
 
@@ -73,9 +71,7 @@ Here are the key types of architects based on **Scope**:
 
 When categorizing software architects by **Specialization**, we focus on their technical expertise in specific domains within software architecture. This dimension highlights the distinct areas where architects apply their deep knowledge, from designing user-facing applications to managing complex data systems and ensuring efficient platform operations. Here are the main types of architects based on **Specialization**:
 
-<center>
-   <img align="center" src="../../../images/role/classification.specialization.drawio.png" alt="Specialization" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/classification.specialization.drawio.png" alt="Specialization" >}}
 
 ### Application
 
@@ -112,9 +108,7 @@ When categorizing software architects by **Specialization**, we focus on their t
 
 When classifying software architects based on **Seniority**, we look at their level of experience, leadership responsibilities, and career progression. This dimension reflects how architects advance from more technically focused roles to strategic leadership positions that involve guiding teams and shaping the organization’s overall technology direction. Here are the key types of architects by **Seniority**:
 
-<center>
-   <img align="center" src="../../../images/role/classification.seniority.drawio.png" alt="Seniority" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/classification.seniority.drawio.png" alt="Seniority" >}}
 
 ### Associate / Junior
 
@@ -171,9 +165,7 @@ When classifying software architects based on **Seniority**, we look at their le
 
 A typical CTO organization consists of an Engineering Team, an Architecture Team, an Infrastructure Team, and a Technical Support Team. The architecture team is usually led by the chief architect, who manages other architects in the organization. Matrix structure is also possible when the direct manager is the Engineering Manager.
 
-<center>
-   <img align="center" src="../../../images/role/classification.roles.drawio.png" alt="Seniority" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/role/classification.roles.drawio.png" alt="Seniority" >}}
 
 ### System Architect
 
