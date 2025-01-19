@@ -7,6 +7,7 @@ archimate
 Architecting
 Asana
 BSUIR
+CCPA
 CEDP
 Cognos
 colinwilson

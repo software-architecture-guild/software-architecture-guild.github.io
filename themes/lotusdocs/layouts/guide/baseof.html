@@ -97,6 +97,8 @@
             {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer/flexsearch.html") . -}}
         {{ end }}
     {{ end }}
+    
+    {{- partial "consent.html" . -}}
 </body>
 {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "modals.html") . -}}
 </html>

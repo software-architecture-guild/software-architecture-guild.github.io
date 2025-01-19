@@ -19,10 +19,8 @@
         
         <div class="mb-6" id="content mb-6">
             {{- block "main" . }}{{- end }}
-            <div class="footer-placeholder"/>
         </div>
-        
-        
+        {{- partial "consent.html" . -}}
         {{- partial "footer.html" . -}}
 
         <!-- Lotus Docs JS -->
