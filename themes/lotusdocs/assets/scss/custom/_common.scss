@@ -1,0 +1,18 @@
+/* Container to center the image */
+.image-container {
+    text-align: center;
+}
+
+/* Responsive image styling */
+.responsive-image {
+    display: inline-block;
+    width: 75%; /* Default for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    .responsive-image {
+        width: 100% !important; /* Full width on mobile screens */
+    }
+}

@@ -26,9 +26,7 @@ Visualizing software architecture is essential for several reasons, each contrib
 
 Three primary elements form the foundation of any software architecture: components, connectors, and configurations. These elements represent the system’s internal structure and dictate how its various parts interact and work together to achieve its goals.
 
-<center>
-  <img align="center" src="../../../images/fundamentals/visualizing.architecture-blocks.drawio.png" alt="Architecture Building Blocks" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/fundamentals/visualizing.architecture-blocks.drawio.png" alt="Architecture Building Blocks" >}}
 
 #### Components: The Building Blocks of Software Systems
 
@@ -76,9 +74,7 @@ A **viewpoint** serves as a framework or guideline for constructing an architect
 
 Each viewpoint targets the concerns of a different stakeholder group, such as developers, operators, or business executives, helping architects focus on relevant aspects while ensuring nothing critical is overlooked.
 
-<center>
-  <img align="center" src="../../../images/fundamentals/visualizing.viewpoint.drawio.png" alt="Architecture Viewpoint" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/fundamentals/visualizing.viewpoint.drawio.png" alt="Architecture Viewpoint" >}}
 
 #### Key Viewpoints
 
@@ -112,9 +108,7 @@ In software architecture, **perspectives** are used to ensure that critical qual
 
 An **architectural perspective** provides a structured approach to incorporating quality attributes into the system’s design. Rather than being limited to a single view, perspectives cut across multiple views, ensuring that qualities like security, performance, and evolution are factored into every aspect of the architecture. Perspectives offer a set of activities, tactics, and guidelines to help architects ensure that the system meets its quality goals, from concept to implementation and maintenance.
 
-<center>
-  <img align="center" src="../../../images/fundamentals/visualizing.perspective.drawio.png" alt="Architecture Perspective" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/fundamentals/visualizing.perspective.drawio.png" alt="Architecture Perspective" >}}
 
 #### Key Perspectives
 

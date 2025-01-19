@@ -49,8 +49,11 @@ $font-sizes: (
 @import {{ printf "'%s%s'" "custom/colors/" (.Site.Params.docs.themeColor | default "blue") }}; // current theme color
 @import "../../scss/bootstrap/mixins";
 @import "../../scss/bootstrap/bootstrap";
-@import "../../scss/custom/components/authors";
 @import "variables";
+
+//Common
+@import "../../scss/custom/common";
+@import "../../scss/custom/components/authors";
 
 {{ if and (.Site.Params.docsearch.appID) (.Site.Params.docsearch.apiKey) -}}
 @import "custom/plugins/docsearch/style";
