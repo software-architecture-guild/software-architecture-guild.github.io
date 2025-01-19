@@ -1,0 +1,73 @@
+//
+// _card.scss
+//
+//Cards
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.card-title {
+    margin-bottom: 0;
+}
+
+
+.card-img-left {
+    width: 30%;
+    max-height: 300px;
+    object-fit: cover;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+.card-details {
+    width: 70%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .card-img-left {
+        display: none;
+    }
+
+    .card-details {
+        width: 100%;
+    }
+    
+}
+
+
+.tag-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .tag-row {
+        margin-top: 0.25rem;
+        flex-direction: column; /* Stacks the divs vertically */
+        gap: 10px;
+        align-items: flex-center; /* Aligns the divs to the left */
+    }
+}
+
+.card-text {
+    text-align: left;
+    justify-content: center !important;
+    margin-top: 10px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,6 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+
+<div class="image-container">
+  <img src="{{ $src }}" alt="{{ $alt | html }}" class="responsive-image">
+</div>

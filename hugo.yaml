@@ -24,15 +24,25 @@ markup:
 menu:
   primary:
     - name: Guide
-      url: /docs/
-      identifier: docs
+      url: /guide/
+      identifier: guide
       weight: 10
+    - name: Blogs
+      url: "/blogs/"
+      identifier: blogs
+      weight: 20
     - name: Community
       url: "https://github.com/orgs/software-architecture-guild/discussions"
       identifier: community
-      weight: 20
+      weight: 30
+    - name: Authors
+      url: "/authors/"
+      identifier: authors
+      weight: 40
 
 
+pagination:
+  pagerSize: 10
 
 params:
   footer:
@@ -44,7 +54,7 @@ params:
 
   docs:
     title: 'Software Architecture Guild'
-    pathName: docs
+    pathName: guide
 
     sidebarIcons: true
     titleIcon: true

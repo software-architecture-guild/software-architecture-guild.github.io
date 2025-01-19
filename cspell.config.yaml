@@ -14,6 +14,7 @@ ignorePaths:
   - 'public'
   - 'resources'
   - 'backup'
+  - 'layouts'
   - '/project-words.txt'
   - '/go.sum'
   - '/go.mod'

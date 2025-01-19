@@ -1,0 +1,40 @@
+{{- $file := .Get 0 -}}
+{{- $page := .Site.GetPage $file -}}
+
+{{- if $page }}
+    <div class="container">
+        <div class="row mt-5 mb-5 align-items-center shadow" style="background: var(--gray-100);">
+            <div class="col-lg-4 col-md-4">
+                <img src="{{ $page.Params.image }}" alt="Photo" width="80%" height="80%" class="rounded mx-auto d-block mt-4 mb-4"/>
+            </div><!--end col-->
+            <div class="col-lg-8 col-md-8 align-items-left align-middle mt-4 mb-4">
+                {{ $page.Params.description }}
+                <br><br>
+                <a href="{{ $page.Params.linkedin }}" target="_blank" class="d-flex align-items-center text-decoration-none text-primary mb-3">
+                  <img
+                    src="/images/authors/linkedIn-logo.png"
+                    alt="LinkedIn Icon"
+                    class="me-2" style="width: 24px; height: 24px;">
+                    {{ index (strings.Split $page.Params.linkedin "/") 4}}
+                </a>
+                <a href="mailto:{{ $page.Params.email }}" class="d-flex align-items-center text-decoration-none text-primary mb-3">
+                  <img
+                    src="/images/authors/email-logo.png"
+                    alt="Email Icon"
+                    class="me-2" style="width: 24px; height: 24px;">
+                    {{ $page.Params.email }}
+                </a>
+                <a href="{{ $page.Params.github }}" class="d-flex align-items-center text-decoration-none text-primary">
+                  <img
+                    src="/images/authors/github-logo.png"
+                    alt="Email Icon"
+                    class="me-2" style="width: 24px; height: 24px;">
+                    {{ index (strings.Split $page.Params.github "/") 3}}
+                </a>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+{{- else }}
+    <p>File not found: {{ $file }}</p>
+{{- end }}
+

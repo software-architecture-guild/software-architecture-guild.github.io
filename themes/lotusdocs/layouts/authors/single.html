@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $page := .Page }}
+{{ $site := .Site }}
+<section class="d-table w-100 hero">
+  <div class="content-wrapper mb-4">
+    <!-- Left Column Section -->
+    <aside class="sidebar white-box">
+      <toc>
+        <h4 class="text-start">Authors</h4>
+        <nav id="TableOfContents">
+          <ul>
+            {{ $currentPage := . }}
+            {{ $pages := where $site.RegularPages "Section" "authors" }}
+            {{ $index := 0 }}
+            {{ range $i, $p := $pages }}
+              {{ if eq $p.Permalink $currentPage.Permalink }}
+                {{ $index = $i }}
+              {{ end }}
+            {{ end }}
+            {{ $start := cond (gt $index 5) (sub $index 5) 0 }}
+            {{ $end := cond (lt (add $index 5) (len $pages)) (add $index 5) (sub (len $pages) 1) }}
+            {{ range $i, $p := $pages }}
+              {{ if and (ge $i $start) (le $i $end) }}
+                <li>
+                  <a class="{{ if eq $p.Permalink $currentPage.Permalink }}active{{ end }}" href="{{ $p.Permalink }}">
+                    {{ if gt (len $p.Title) 50 }}{{ substr $p.Title 0 47 }}...{{ else }}{{ $p.Title }}{{ end }}
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </nav>
+      </toc>
+    </aside>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <div class="container-xl">
+        
+        <div style="height: 3.1rem;"></div>
+        <div class="white-box px-3 py-1">
+          
+          <div class="">
+            {{ partial "authors/author-details.html" . }}
+          </div>
+          <hr>
+          <div class="">{{ .Content | markdownify}}</div>
+          <div class="tag-row mb-3"> 
+            <div>
+                {{ range .Params.Tags }}
+                <span class="badge bg-soft-primary">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ partial "default/authors.html" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column Section -->
+    <aside class="sidebar white-box">
+      {{ if ge (len .TableOfContents) 50 }}
+      <h4 class="text-start">Contents</h4>
+      <toc>{{ .TableOfContents }}</toc>
+    {{ end }}
+
+
+    </aside>
+  </div>
+</section>
+
+{{ end }}

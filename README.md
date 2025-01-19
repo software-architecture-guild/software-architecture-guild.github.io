@@ -32,14 +32,16 @@ The basic structure of your Hugo site with the Lotus theme is as follows:
 software-architecture-guild/
 ├── archetypes/
 ├── content/
-│   ├── docs/
+|   ├── authors/
+│   ├── blogs/
+│   ├── guide/
 │   └── _index.md
 ├── data/
 ├── layouts/
 ├── static/
 ├── themes/
 │   └── lotus/
-├── config.toml
+├── hugo.yaml
 └── README.md
 ```
 
@@ -49,7 +51,7 @@ software-architecture-guild/
 - layouts/: Custom layout files.
 - static/: Static files like images, CSS, and JavaScript.
 - themes/lotus/: The Lotus theme files.
-- config.toml: Configuration file for your site.
+- hugo.yaml: Configuration file for your site.
 - README.md: This file.
 
 ## Linting
