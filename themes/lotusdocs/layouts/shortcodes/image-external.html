@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $href := .Get "href" -}}
+{{- $msg := .Get "msg" -}}
+
+<div class="image-container">
+  <img src="{{ $src }}" alt="{{ $alt | html }}" class="responsive-image">
+  <br>
+  <a href="{{ $href }}">
+    <small>{{ $msg }}</small>
+  </a>
+</div>

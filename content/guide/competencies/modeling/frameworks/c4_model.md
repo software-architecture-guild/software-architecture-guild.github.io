@@ -23,13 +23,7 @@ The framework defines elements of an architecture as a set of hierarchical build
 
 Each building block is composed of smaller blocks.
 
-<center>
-  <img src="../../../../../images/competencies/modeling/frameworks/c4.abstractions.png" alt="C4 Abstractions" width="75%" height="75%"/>
-  <br>
-  <a href="https://c4model.com/abstractions">
-    <small>Source: https://c4model.com/</small>
-  </a>
-</center>
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.abstractions.png" alt="C4 Abstractions" href="https://c4model.com/abstractions" msg="Source: https://c4model.com/" >}}
 
 ---
 
