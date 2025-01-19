@@ -7,6 +7,8 @@ date: "2024-10-01T16:42:31+02:00"
 lastmod: "2024-10-01T16:42:31+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 {{< mdl-disable "<!-- markdownlint-disable MD024 -->" >}}
 

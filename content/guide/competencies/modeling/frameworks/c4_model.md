@@ -7,6 +7,8 @@ date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 The **C4 model** is a hierarchical framework designed for visualizing the architecture of software systems. It emphasizes **clarity and simplicity**, making it accessible for technical and non-technical stakeholders. The framework consists of diagram types representing **different levels of abstraction**, enabling users to effectively convey a system's architecture. It is **tool-agnostic**, allowing various tools to create the diagrams.
 

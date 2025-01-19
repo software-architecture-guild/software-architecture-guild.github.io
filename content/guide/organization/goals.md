@@ -7,6 +7,8 @@ date: "2024-12-02T16:48:43+02:00"
 lastmod: "2024-12-02T16:48:43+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## What is a Business Goal?
 

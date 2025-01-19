@@ -7,6 +7,8 @@ date: "2024-11-30T18:15:44+01:00"
 lastmod: "2024-11-30T18:15:44+01:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## What is Written Communication?
 

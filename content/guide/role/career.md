@@ -7,6 +7,8 @@ date: "2024-10-27T15:41:57+01:00"
 lastmod: "2024-10-27T15:41:57+01:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## Career Path
 

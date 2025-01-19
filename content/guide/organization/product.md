@@ -7,6 +7,8 @@ date: "2024-10-01T16:48:35+02:00"
 lastmod: "2024-10-01T16:48:35+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 
 Product development is a multi-faceted process that transforms ideas into tangible products to solve customer needs. A structured approach helps companies navigate this complex process, focusing on reducing waste, iterating quickly, and achieving product-market fit. This article explores key concepts in product development, including core principles, the lean product process, and building and optimizing products.
