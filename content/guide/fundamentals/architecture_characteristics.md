@@ -61,7 +61,7 @@ Unlike explicit architecture characteristics, implicit architecture characterist
 #### Key Differences
 
 | Aspect                      | Explicit Characteristics                 | Implicit Characteristics                 |
-| ----------------------------- | ------------------------------------------ | ------------------------------------------ |
+| --------------------------- | ---------------------------------------- | ---------------------------------------- |
 | **Definition**              | Clearly defined and documented           | Emerge during design and operation       |
 | **Timing**                  | Identified during early stages           | Become apparent over time                |
 | **Measurement**             | Associated with clear metrics            | Harder to quantify                       |
