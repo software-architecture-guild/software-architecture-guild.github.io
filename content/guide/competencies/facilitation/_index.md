@@ -2,7 +2,7 @@
 weight: 1300
 title: "Facilitation"
 description: "This section explains the process of facilitation and its role in guiding discussions and achieving outcomes."
-icon: "diversity_3"
+icon: "groups"
 date: "2025-01-19T12:34:18+01:00"
 lastmod: "2025-01-19T12:34:18+01:00"
 draft: false
