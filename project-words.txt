@@ -44,6 +44,7 @@ Microkernel
 Misaligning
 MTBF
 Norming
+OLTP
 Oozie
 Opengraph
 operationalize

@@ -7,6 +7,8 @@ date: "2024-10-01T16:48:43+02:00"
 lastmod: "2024-10-01T16:48:43+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## Structure
 
@@ -31,9 +33,7 @@ While no single company structure is universally applicable, every organization 
 
 ### Structure Types
 
-<center>
-   <img align="center" src="../../../images/organization/company.structure.drawio.png" alt="Company Structure" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/company.structure.drawio.png" alt="Company Structure" >}}
 
 * **Hierarchical Structure** \
   The traditional hierarchical structure is often seen in larger, established businesses. This structure places decision-making power at the top, with responsibilities flowing downward through various levels of management. This model works well for organizations with straightforward, repetitive tasks that benefit from tight oversight.
@@ -69,9 +69,7 @@ While no single company structure is universally applicable, every organization 
 
 The structure of a business helps facilitate the smooth operation of its core functions — **Value Creation**, **Marketing**, **Sales**, **Value Delivery**, and **Finance**. These functions are fundamental to ensuring that a business not only survives but thrives in a competitive market.
 
-<center>
-   <img align="center" src="../../../images/organization/company.business_functions.drawio.png" alt="Business Functions" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/company.business_functions.drawio.png" alt="Business Functions" >}}
 
 ### Value Creation: The Foundation of a Business
 
@@ -182,9 +180,7 @@ Accounting is responsible for recording, tracking, and reporting the company’s
 
 Every organization, regardless of size or industry, operates within a framework of decision-making that cascades through different levels of responsibility. These levels: **strategic**, **tactical**, and **operational** — are essential for ensuring that the organization’s vision is effectively translated into action. Each level plays a unique role, addressing different time frames, scopes, and objectives, yet all are interconnected to guide the organization toward success.
 
-<center>
-   <img align="center" src="../../../images/organization/company.business_execution.drawio.png" alt="Business Execution" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/company.business_execution.drawio.png" alt="Business Execution" >}}
 
 ### Strategic Level: Defining the Vision
 

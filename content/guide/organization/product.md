@@ -7,6 +7,8 @@ date: "2024-10-01T16:48:35+02:00"
 lastmod: "2024-10-01T16:48:35+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 
 Product development is a multi-faceted process that transforms ideas into tangible products to solve customer needs. A structured approach helps companies navigate this complex process, focusing on reducing waste, iterating quickly, and achieving product-market fit. This article explores key concepts in product development, including core principles, the lean product process, and building and optimizing products.
@@ -43,9 +45,7 @@ A classic example of this distinction involves a space pen that works in zero gr
 
 The lean product development process has six iterative steps that help teams work methodically toward product-market fit. Each step involves testing with customers and refining ideas based on feedback.
 
-<center>
-   <img align="center" src="../../../images/organization/product.process.drawio.png" alt="SAFe" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/product.process.drawio.png" alt="SAFe" >}}
 
 ##### Step 1: Determine Your Target Customers
 

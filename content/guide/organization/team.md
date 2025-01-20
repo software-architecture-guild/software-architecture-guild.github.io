@@ -7,6 +7,8 @@ date: "2024-10-01T16:42:31+02:00"
 lastmod: "2024-10-01T16:42:31+02:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 {{< mdl-disable "<!-- markdownlint-disable MD024 -->" >}}
 
@@ -14,9 +16,7 @@ toc: true
 
 A real team is more than just a group of people working together. There are several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
 
-<center>
-   <img align="center" src="../../../images/organization/team.attributes.drawio.png" alt="Team attributes" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/team.attributes.drawio.png" alt="Team attributes" >}}
 
 1. **Common Purpose**: A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
 2. **Specific Performance Goals**: In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
@@ -59,9 +59,7 @@ Not every group is a team, even if they call themselves one. Groups often fail t
 
 Tuckman’s model, developed in 1965 by psychologist Bruce Tuckman, describes five stages that teams go through as they form and develop. The Tuckman model remains highly relevant in today’s collaborative environments, including corporate, academic, and community settings.
 
-<center>
-   <img align="center" src="../../../images/organization/team.building.drawio.png" alt="Team building" width="75%" height="75%"/>
-</center>
+{{< image src="../../../images/organization/team.building.drawio.png" alt="Team building" >}}
 
 1. **Forming**: Team members meet and begin to understand their roles and objectives. This stage involves introductions, goal clarification, and initial team planning in project teams.
 2. **Storming**: Conflicts emerge as personalities clash and power dynamics are established. Team members may disagree on strategies, roles, or project timelines. This phase often leads to improved communication and a deeper understanding of team dynamics.
@@ -142,9 +140,7 @@ Implementing Kanban involves several key steps and practices that help teams tra
 
 A structured approach to events and meetings is integral to the Kanban method, helping teams maintain communication, evaluate progress, and promote continuous improvement. Here are the key meetings commonly associated with Kanban:
 
-<center>
-   <img align="center" src="../../../images/organization/team.kanban.drawio.png" alt="Kanban" width="75%" height="50%"/>
-</center>
+{{< image src="../../../images/organization/team.kanban.drawio.png" alt="Kanban" >}}
 
 1. **Strategy Review**: The Strategy Review meeting is focused on selecting the services to be provided and defining the concept of “fit for purpose” for those services. It helps teams sense how the external environment changes, allowing them to adapt their service offerings and provide clear direction for future efforts.
 2. **Operations Review**: The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery while ensuring alignment with customer expectations and facilitates discussions on improving overall service efficiency.
@@ -185,9 +181,7 @@ Scrum is built on several principles that guide its practices and processes:
 
 Implementing Scrum involves several key roles, events, and artifacts that help teams organize their work effectively:
 
-<center>
-   <img align="center" src="../../../images/organization/team.scrum.drawio.png" alt="Scrum" width="75%" height="50%"/>
-</center>
+{{< image src="../../../images/organization/team.scrum.drawio.png" alt="Scrum" >}}
 
 ##### Key Roles in Scrum
 

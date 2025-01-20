@@ -7,6 +7,8 @@ date: "2024-12-01T11:37:10+01:00"
 lastmod: "2024-12-01T11:37:10+01:00"
 draft: false
 toc: true
+authors:
+-  "ilya-hardzeenka.md"
 ---
 ## What is Multi-Cultural Communication?
 

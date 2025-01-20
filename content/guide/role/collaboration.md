@@ -8,6 +8,5 @@ lastmod: "2024-11-23T18:25:06+01:00"
 draft: false
 toc: true
 ---
-## Introduction
 
 {{< alert context="info" text="This article is still under construction" />}}
