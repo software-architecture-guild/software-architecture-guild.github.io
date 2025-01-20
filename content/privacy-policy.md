@@ -20,7 +20,9 @@ draft: true
 The owner and data controller responsible for processing your personal data is:
 
 **Name:** Software Architecture Guild
+
 **Email:** [software.architecture.guild@gmail.com](mailto:software.architecture.guild@gmail.com)
+
 **Website:** [https://software-architecture-guild.com/](https://software-architecture-guild.com/)
 
 If you have inquiries about this Privacy Policy or data requests or want to exercise your rights under applicable privacy laws, please use the information above to contact us.
