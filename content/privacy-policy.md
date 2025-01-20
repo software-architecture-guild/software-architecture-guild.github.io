@@ -1,5 +1,5 @@
 ---
-title: "Privacy Policy"
+title: "Privacy & Cookies Policy"
 description: |
     Welcome to [Software Architecture Guild](https://software-architecture-guild.com/) ("we," "our," or "us"). Your privacy is important to us, and we are committed to safeguarding your personal information. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.
 
@@ -40,13 +40,24 @@ For more information on how Google Analytics collects and processes data, visit 
 
 ---
 
-### 2. How We Use Your Information
+### 2. Purposes and Methods of Processing
 
-We use the collected data to:
+We process your information to achieve the following purposes:
 
-- Understand how visitors use our website.
-- Improve the performance and content of our website.
-- Monitor traffic and optimize the user experience.
+#### 2.1 Purposes of Processing
+
+- To understand how visitors use our website.
+- To improve the performance, design, and content of our website.
+- To analyze and monitor traffic for operational and business insights.
+- To optimize the user experience and ensure smooth functionality of the website.
+- To comply with legal obligations and enforce our terms and conditions.
+
+#### 2.2 Methods of Processing
+
+- **Automated Processing:** Data is processed using automated tools (e.g., Google Analytics) to collect, store, and analyze non-personal information such as page views, session durations, and traffic sources.
+- **Technical Measures:** Data is handled securely using encryption and other protection mechanisms where applicable.
+- **Minimal Data Retention:** We retain data only for as long as necessary to fulfill the purposes outlined above and to comply with legal obligations.
+- **Third-Party Processors:** Specific tools like Fastly CDN, Google Analytics, and GitHub Pages may process your data according to their respective privacy policies.
 
 ---
 
@@ -54,7 +65,13 @@ We use the collected data to:
 
 We do not sell, trade, or share your personal information with third parties, except as follows:
 
-- **Google Analytics:** We use Google Analytics to gather insights into website usage. Google may process your data in accordance with their policies. You can learn how to opt-out of Google Analytics tracking in the [Opt-Out Section](#5-your-choices-and-rights).
+- **Google Analytics:** We use Google Analytics to gather insights into website usage. Google may process your data in accordance with their policies: [Google’s Privacy Policy](https://policies.google.com/privacy) and [Google Analytics Terms](https://marketingplatform.google.com/about/analytics/terms/us/).
+- **Fastly CDN:** Our website uses Fastly Content Delivery Network (CDN) to enhance website performance and deliver content efficiently. Fastly may process certain non-personal information (such as IP addresses) to provide its services. For more information, visit [Fastly’s Privacy Policy](https://www.fastly.com/privacy).
+- **GitHub Pages:** This website is hosted on GitHub Pages, which may process limited data, such as IP addresses, as part of its standard hosting services. For more details, visit [GitHub’s Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
+
+#### 3.1 No Selling of Personal Data
+
+We want to clarify that we do not sell your personal data to third parties for monetary or other valuable consideration. This includes data collected through cookies, analytics, or any other means.
 
 ---
 
@@ -84,7 +101,26 @@ You can prevent Google Analytics from collecting your data by:
 
 ### 6. Cookies Policy
 
-We use cookies to improve the functionality of our website and analyze traffic. By continuing to use our website, you agree to the use of cookies. You can manage or disable cookies in your browser settings.
+We use cookies and similar technologies ("Trackers") to improve the functionality of our website and analyze traffic. These technologies allow us to store information on your device or access resources to provide a better user experience. Trackers may include first-party cookies (managed by us) and third-party cookies (managed by external providers, such as Google Analytics).
+
+#### 6.1 Types of Trackers Used
+
+- **Necessary Trackers:** These are essential for the operation and delivery of the website’s core services.
+- **Measurement Trackers:** These help us measure traffic and analyze user behavior to improve the website’s performance and content.
+
+#### 6.2 Managing Preferences and Consent
+
+Users can manage or withdraw their consent for Trackers by:
+
+- Adjusting preferences via the <a href="#" id="manage-cookies-link">Manage Cookie Preferences</a> on our website.
+- Using browser settings to block or delete cookies.
+- Opting out through links provided by third-party providers (e.g., [Google Analytics Opt-Out Browser Add-On](https://tools.google.com/dlpage/gaoptout)).
+
+For mobile apps, users may adjust device settings such as advertising or tracking preferences.
+
+#### 6.3 Consequences of Denying Trackers
+
+Trackers enable advanced functionalities and improve user experience. If you block Trackers, certain features or services on our website may not function as intended.
 
 ---
 
@@ -104,8 +140,5 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions about this Privacy Policy or how we handle your data, please contact us:
 
-**Email:** [software.architecture.guild@gmail.com](mailto:software.architecture.guild@gmail.com)
-
+**Email:** [software.architecture.guild@gmail.com](mailto:software.architecture.guild@gmail.com)  
 **Website:** [https://software-architecture-guild.com/](https://software-architecture-guild.com/)
-
----
