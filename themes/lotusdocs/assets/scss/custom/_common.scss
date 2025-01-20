@@ -42,17 +42,27 @@
 }
 
 #consent-banner button#accept-cookies {
-    background-color: green;
+    background-color: #0066ff;
     color: white;
 }
 
 #consent-banner button#decline-cookies {
-    background-color: red;
+    background-color: #0066ff;
     color: white;
 }
 
 /* Display banner if JavaScript enables it */
 #consent-banner.visible {
     display: flex; /* Show the banner when JavaScript adds the "visible" class */
+  }
+
+/* Footer Link Styling */
+#manage-cookies-link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  #manage-cookies-link:hover {
+    text-decoration: none;
   }
   
