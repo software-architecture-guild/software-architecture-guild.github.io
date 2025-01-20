@@ -1,5 +1,5 @@
 ---
-weight: 350
+weight: 390
 title: "Sample Architecture"
 description: "This article provides a detailed example of the Software Architecture description and creation process."
 icon: "visibility"

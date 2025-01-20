@@ -12,20 +12,6 @@
 
 // Default Table
 table {
-    td {
-        border-top: 1px solid var(--card-border-color);
-    }
-    td, th {
-        border-right: 1px solid var(--card-border-color);
-        padding: 8px 12px;
-    }
-    td:last-child, th:last-child {
-        border-right: 0;
-    }
-}
-
-// Shortcode Table
-.table {
     --bs-table-color: var(--text-default);
     --bs-table-bg: transparent;
     --bs-table-accent-bg: none;
@@ -34,10 +20,17 @@ table {
     --bs-table-hover-color: var(--text-default);
     --bs-table-hover-bg: var(--table-hover-bg);
 
+    border: 1px solid var(--card-border-color);
+    border-collapse: separate;
+    border-radius: 8px;
+    border-spacing: 0;
     color: var(--text-default);
     font-size: 0.875rem;
-    border-collapse: separate;
-    border-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    
 
     > :not(caption) > * > * {
         padding: 1rem 1rem;
@@ -46,54 +39,43 @@ table {
 
     tbody {
         vertical-align: top;
-
-        td {
-            border-top: inherit;
-            border-bottom-width: 1px;
-        }
-
-        td:first-child {
-            border-left-width: 1px;
-        }
-
-        td:last-child {
-            border-right: inherit;
-            border-right-width: 1px;
-        }
-
-        tr:first-child {
-            td {
-                border-top-width: 1px;
-            }
-            td:first-child {
-                border-top-left-radius: 4px;
-            }
-            td:last-child {
-                border-top-right-radius: 4px;
-            }
-        }
-
-        tr:last-child {
-            td:first-child {
-                border-bottom-left-radius: 4px;
-            }
-            td:last-child {
-                border-bottom-right-radius: 4px;
-            }
-        }
-    }
-
-    td, th {
-        border-right: 0;
-    }
-
-    thead, tbody, tfoot, tr, td, th {
-        border-color: var(--card-border-color);
     }
 
     thead tr th {
         text-transform: uppercase;
-        background: none;
+        background: rgba($gray-200,1);
+    }
+
+    td, th {
+        border: 1px solid var(--card-border-color);
+        padding: 8px 12px;
+    }
+}
+
+/* Ensure the table's corners remain rounded */
+table tr:first-child th:first-child {
+    border-top-left-radius: 8px;
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: 8px;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+
+// Shortcode Table
+.table {
+    border: 1px solid var(--card-border-color);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    thead tr th {
+        text-transform: uppercase;
+        background: rgba($gray-200,1);
     }
 }
 

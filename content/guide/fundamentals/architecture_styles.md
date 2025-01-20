@@ -1,5 +1,5 @@
 ---
-weight: 320
+weight: 330
 title: "Architecture Styles"
 description: "This article explains the different types of architectures and how to apply them."
 icon: "school"
@@ -88,7 +88,9 @@ Understanding the system's **functional** and **non-functional requirements** is
 
 * **Performance**: Will the system need to handle high throughput, low-latency responses, or real-time data processing? High-performance systems may benefit from styles like **event-driven** or **space-based architecture**, which efficiently handle distributed, asynchronous processes.
 * **Scalability**: If the system must handle growing traffic or user demand, **microservices** or **space-based architectures** might be better suited, as they allow independent scaling of components.
-* **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures
+* **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures.
+
+{{< image-external src="../../../images/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
 
 ### Team Expertise and Resources
 
