@@ -15,6 +15,7 @@ Datastage
 Doerr
 Eoin
 Excalidraw
+Fastly
 flexsearch
 Fussell
 gohugoio

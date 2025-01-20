@@ -23,7 +23,7 @@ The owner and data controller responsible for processing your personal data is:
 **Email:** [software.architecture.guild@gmail.com](mailto:software.architecture.guild@gmail.com)
 **Website:** [https://software-architecture-guild.com/](https://software-architecture-guild.com/)
 
-For inquiries about this Privacy Policy, data requests, or to exercise your rights under applicable privacy laws, please contact us using the information above.
+If you have inquiries about this Privacy Policy or data requests or want to exercise your rights under applicable privacy laws, please use the information above to contact us.
 
 ---
 
@@ -46,7 +46,7 @@ When you visit our site, we may collect certain technical data automatically:
 
 We use cookies and similar technologies to analyze how visitors interact with our website. These technologies may include:
 
-* **Google Analytics cookies:** For tracking visitor activity, such as the number of visits, session duration, and traffic sources.
+* **Google Analytics cookies:** These are used to track visitor activity, such as the number of visits, session duration, and traffic sources.
   For more information on how Google Analytics collects and processes data, visit [Google’s Privacy Policy](https://policies.google.com/privacy).
 
 ---
@@ -106,7 +106,7 @@ We implement reasonable measures to protect your data from unauthorized access, 
 
 Depending on your location, you may have rights under privacy laws such as GDPR or CCPA. These may include:
 
-* The right to access, delete, or restrict processing of your data.
+* The right to access, delete, or restrict the processing of your data.
 * The right to object to data processing.
 * The right to opt out of non-essential cookies.
 
