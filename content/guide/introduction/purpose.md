@@ -1,7 +1,7 @@
 ---
 weight: 210
 title: "Guide Purpose"
-description: "Explaination of the guide purpose and objectives it wants to reach"
+description: "Explanation of the guide purpose and objectives it wants to reach"
 icon: "article"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"
