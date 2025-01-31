@@ -1,5 +1,5 @@
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:description" content="{{ with .Description | markdownify }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
@@ -7,7 +7,7 @@
 {{- range first 6 . }}<meta property="og:image" content="{{ . | absURL }}" />{{ end -}}
 {{- else -}}
 {{- $images := $.Resources.ByType "image" -}}
-{{- $featured := partial (printf "%s/%s" ($.Scratch.Get "pathName") "head/get-featured-image.html") . }}
+{{- $featured := partial "head/get-featured-image.html" . }}
 {{- with $featured -}}
 <meta property="og:image" content="{{ $featured.Permalink }}"/>
 {{- else -}}

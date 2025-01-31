@@ -1,6 +1,6 @@
 ---
 weight: 1500
-title: "Overview"
+title: "Management Overview"
 description: "This article explains the fundamentals of management, highlighting project management techniques for planning and risk assessment, and people management practices for mentoring and interviewing."
 icon: "article"
 date: "2025-01-19T14:56:36+01:00"

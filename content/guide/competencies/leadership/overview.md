@@ -1,6 +1,6 @@
 ---
 weight: 1400
-title: "Overview"
+title: "Leadership Overview"
 description: "This article explains the fundamentals of leadership, focusing on setting goals, crafting strategies, and guiding initiatives toward success."
 icon: "article"
 date: "2025-01-19T14:56:06+01:00"

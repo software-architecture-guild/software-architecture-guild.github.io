@@ -1,11 +1,28 @@
 <head>
     <meta charset="utf-8" />
-    <title>{{- .Site.Title }}</title>
+    <title>
+        {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+        {{- if eq $url "/" }}
+            {{- .Site.Title }}
+        {{- else }}
+            {{- if .Params.heading }}
+                {{ .Params.heading }}
+            {{ else }}
+                {{- if eq .Title .Site.Title }}
+                    {{- .Title }}
+                {{- else }}
+                    {{- .Title }} | {{ .Site.Params.docs.Title | default (.Site.Title) }}
+                {{- end }}
+            {{- end }}
+        {{- end -}}
+    </title>
     {{- if not hugo.IsProduction }}
     <meta name="robots" content="noindex">
     {{- end }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Architecture Guild: Guide and Blog" />
+    {{- with .Description | default ($.Param "description") }}
+    <meta name="description" content="{{ . }}">
+    {{- end }}
     <meta name="keywords" content="Software Architecture Guild, Architecture, Software Architecture, Architect, Software Architect, Solution Architect, System Design" />
     <meta name="author" content="Software Architecture Guild" />
     <meta name="email" content="software.architecture.guild@gmail.com" />
@@ -13,6 +30,8 @@
     <meta name="Version" content="v0.1.0" />
     <!-- favicon -->
     {{ block "head/favicon" . }}{{ partialCached "head/favicon.html" . }}{{ end }}
+    {{- partial "head/opengraph.html" . }}
+    {{- partial "head/twitter_cards.html" . }}
     <!-- Google Fonts -->
     {{- partial "google-fonts" . }}
     <!-- Custom CSS -->
