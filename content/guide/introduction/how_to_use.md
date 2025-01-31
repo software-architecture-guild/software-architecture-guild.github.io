@@ -55,6 +55,6 @@ Here’s a brief overview of the sections you’ll find in this guide:
 
 We believe in the power of collective wisdom. Please don't hesitate to get involved if you have any feedback or suggestions or want to contribute content. Your input can make a significant difference in helping us create a comprehensive resource for everyone interested in architecture.
 
-<!-- // TODO: add a link to contribution guidelines -->
+**[CONTRIBUTING.md](https://github.com/software-architecture-guild/software-architecture-guild.github.io/blob/main/CONTRIBUTING.md)**
 
 Stay tuned as we continue to expand and refine this guide together!
