@@ -1,0 +1,81 @@
+{{ $images := $.Resources.ByType "image" }}
+{{ $featured := $images.GetMatch "*feature*" }}
+{{ if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end }}
+{{ if not $featured }}
+    {{ $featured = resources.Get "/opengraph/card-base-2.png" }}
+    {{ $font := resources.Get "/opengraph/poppins-bold.ttf" }}
+    {{ $filters := slice }}
+
+    {{ $logo := resources.Get "images/logos/logo.png" }}
+    {{ with $logo }}
+        {{ $logo = $logo.Resize "x60" }}
+        {{ $logoFilter := (images.Overlay $logo 65 50) }}
+        {{ $filters = $filters | append $logoFilter }}
+    {{ end }}
+
+    {{ $textSiteTitle := $.Site.Title }}
+    {{ with $textSiteTitle }}
+        {{ $textSiteTitleOptions := dict
+            "color" "#5e5e5e"
+            "size" 35
+            "lineSpacing" 10
+            "x" 200 "y" 60
+            "font" $font
+        }}
+        {{ $siteTitleFilter := (images.Text $textSiteTitle $textSiteTitleOptions)}}
+        {{ $filters = $filters | append $siteTitleFilter }}
+    {{ end }}   
+    
+
+
+    
+
+    {{ $textTitle := $.LinkTitle }}
+    {{ $offsetTitle := 40 }}
+    {{ $offsetDesc := -40 }}
+    {{ $lenTitle := $textTitle | strings.RuneCount }}
+    {{ if gt $lenTitle 30 }}
+            {{ $offsetTitle = 0 }}
+            {{ $offsetDesc  = 0 }}
+    {{ end }}
+
+    {{ with $textTitle }}
+        {{ $sizeTitle := 60 }}
+        {{ $textTitleOptions := dict
+            "color" "#2e2e2e"
+            "size" $sizeTitle
+            "lineSpacing" 10
+            "x" 65 "y" (add 130 $offsetTitle)
+            "font" $font
+        }}
+        {{ $titleFilter := (images.Text $textTitle $textTitleOptions) }}
+        {{ $filters = $filters | append $titleFilter }}
+    {{ end }}
+
+    {{ $description := $.Description }}
+    {{ with $description }}
+        {{ $sizeDesc := 30 }}
+        {{ $lenDesc := $description | strings.RuneCount }}
+        {{ if lt $lenDesc 200 }}
+            {{ $sizeDesc = 50 }}
+        {{ else if lt $lenDesc 250 }}
+            {{ $sizeDesc = 40 }}
+        {{ else if lt $lenDesc 300 }}
+            {{ $sizeDesc = 35 }}
+        {{ end }}
+
+        {{ $textDescriptionOptions := dict
+            "color" "#8e8e8e"
+            "size" $sizeDesc
+            "lineSpacing" 10
+            "x" 65 "y" (add 290 $offsetDesc)
+            "font" $font
+        }}
+        {{ $descriptionFilter := (images.Text $description $textDescriptionOptions) }}
+        {{ $filters = $filters | append $descriptionFilter }}
+    {{ end }}
+
+    {{ $featured = $featured | images.Filter $filters }}
+{{ end }}
+
+{{ return $featured }}
