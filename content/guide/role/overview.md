@@ -1,6 +1,6 @@
 ---
 weight: 510
-title: "Overview"
+title: "Role Overview"
 description: "This article provides an overview of the Software Architecture role, including expectations, required skills, and responsibilities."
 icon: "article"
 date: "2024-10-19T14:20:12+02:00"
