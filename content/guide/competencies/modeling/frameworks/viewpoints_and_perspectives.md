@@ -8,6 +8,7 @@ lastmod: "2024-09-08T10:39:56+02:00"
 draft: false
 toc: true
 authors:
+-  "oleg-zubchenko.md"
 -  "ilya-hardzeenka.md"
 ---
 Viewpoints and Perspectives is another architectural framework. It is lightweight, versatile, adaptable, and unbound by specific tool dependencies. Various diagramming tools can support work in this framework style, promoting efficient collaboration and customization.
