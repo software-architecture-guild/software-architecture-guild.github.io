@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $page := .Page }}
 {{ $site := .Site }}
+{{ if .Params.visible }}
 <section class="d-table w-100 hero">
   <div class="content-wrapper mb-4">
     <!-- Left Column Section -->
@@ -40,7 +41,7 @@
         <div style="height: 3.1rem;"></div>
         <div class="white-box px-3 py-1">
           
-          <div class="">
+          <div class="container-fluid">
             {{ partial "authors/author-details.html" . }}
           </div>
           <hr>
@@ -69,4 +70,5 @@
   </div>
 </section>
 
+{{ end }}
 {{ end }}

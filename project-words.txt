@@ -45,6 +45,7 @@ Microkernel
 Misaligning
 MTBF
 Norming
+Oleg
 OLTP
 Oozie
 Opengraph
@@ -76,3 +77,4 @@ Vonage
 webp
 whiteboarding
 wireframes
+Zubchenko

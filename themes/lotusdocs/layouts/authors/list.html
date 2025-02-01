@@ -10,14 +10,16 @@
       <div class="container-xl">
         <div class="row row-cols-2 mb-1">
           <h2 class="text-start my-1">{{ .Title }}</h2>
-          {{ $paginator := .Paginate .Pages }}
+          {{ $filteredPages := where .Pages "Params.visible" "eq" true }}
+          {{ $sortedPages := sort $filteredPages "Params.order" }}
+          {{ $paginator := .Paginate $sortedPages }}
           {{- partial "paginator.html" . -}}
         </div>
         <div class="row row-cols-1 g-4">
           {{ range $index, $value := $paginator.Pages }}
           <div class="card">
             <a href="{{(.Permalink | relURL)}}" class="text-decoration-none text-reset stretched-link"></a>
-            <div>
+            <div class="container-fluid">
               {{ partial "authors/author-details.html" . }}
             </div>
           </div>

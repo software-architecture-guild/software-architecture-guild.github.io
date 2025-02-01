@@ -25,6 +25,17 @@
     align-self: center;
 }
 
+.author-profile {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center;
+}
+
 .link-overlay-fix {
     position: relative;
     z-index: 1;
