@@ -30,7 +30,7 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Get Started"
-    url: "guide/introduction/purpose"
+    url: "guide/introduction/welcome"
   cta2Button:
     icon: group
     btnText: "About us"
