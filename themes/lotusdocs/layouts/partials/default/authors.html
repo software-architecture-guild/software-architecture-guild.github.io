@@ -6,7 +6,7 @@
         {{ $author := $site.GetPage (printf "authors/%s" .) }}
             {{ if $author }}
                 <a href="{{ $author.Permalink }}" class="link-overlay-fix">
-                    <img src="{{ $author.Params.Image }}" class="author-avatar" alt="{{ $author.Params.Title }} Avatar">
+                    <img src="{{ $author.Params.Avatar }}" class="author-avatar" alt="{{ $author.Params.Title }} Avatar">
                     <span class="text-muted hidden-on-small">{{ $author.Params.Title }}</span>
                 </a>
             {{ else }}
