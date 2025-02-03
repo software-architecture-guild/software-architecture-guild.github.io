@@ -1,91 +1,53 @@
-# Software Architecture Guild site
+# Software Architecture Guild Web Site
 
-Table of Contents
+This website is dedicated to sharing our knowledge with the world. It consists of three main sections:
 
-- [Quick Start](#quick-start)
-- [Site Structure](#site-structure)
+* **Guide** : A practical, hands-on resource designed to empower developers, architects, and managers. Its primary goal is to serve as an educational roadmap for those eager to learn. More than just a collection of tips and tricks, this guide provides a structured approach to understanding key concepts, tools, and skills essential to software architecture. Think of it as a compass directing you toward the best resources, frameworks, and practices to support your growth.
+* **Blog** : A space for sharing thoughts, discussing new ideas, and expressing perspectives on various topics related to software architecture. Whether it’s exploring emerging technologies, debating best practices, or reflecting on industry trends, our blog serves as a platform for insightful discussions and knowledge exchange.
+* **Authors** : A section dedicated to the individuals who contribute to the creation and promotion of this website. Here, you can learn more about our contributors—their backgrounds, expertise, and passion for software architecture. These professionals help shape the content and ensure that the knowledge shared is valuable, relevant, and engaging.
 
-## Quick Start
+## Table of Contents
 
-### Prerequisites
+* [Site Structure](#repository-structure)
+* [Contributing](#contributing)
+* [License](#license)
 
-Before you begin, ensure you have the following installed:
+## Repository Structure
 
-- Go ≥ v1.19
-- Hugo ≥ v0.117.0 (Extended Version)
-
-### Local development
-
-1. Run hugo site locally:
-
-   ```bash
-   hugo server -D
-   ```
-
-2. Open your browser and visit: [http://localhost:1313](http://localhost:1313)
-
-## Site Structure
-
-The basic structure of your Hugo site with the Lotus theme is as follows:
+Repository follows the basic structure of Hugo site with the Lotus Docs theme is as follows:
 
 ```bash
 software-architecture-guild/
-├── archetypes/
 ├── content/
 |   ├── authors/
-│   ├── blogs/
+│   ├── blog/
 │   ├── guide/
 │   └── _index.md
 ├── data/
+├── images/
 ├── layouts/
 ├── static/
 ├── themes/
-│   └── lotus/
+│   └── lotusdocs/
 ├── hugo.yaml
 └── README.md
 ```
 
-- archetypes/: Templates for new content.
-- content/: Markdown files for your site content.
-- data/: Additional data files for Hugo to use.
-- layouts/: Custom layout files.
-- static/: Static files like images, CSS, and JavaScript.
-- themes/lotus/: The Lotus theme files.
-- hugo.yaml: Configuration file for your site.
-- README.md: This file.
+* content/authors: Markdown files with author profiles.
+* content/blog: Markdown files with blog.
+* content/guide: Markdown files with guide articles.
+* data/: Configuration file for landing page.
+* images/: Images published as static files and are referenced from Markdown files.
+* layouts/: Custom layout files.
+* static/: Static files like images, CSS, and JavaScript.
+* themes/lotusdocs/: The Lotus Docs theme files.
+* hugo.yaml: Configuration file for your site.
+* README.md: This file.
 
-## Linting
+## Contributing
 
-### Markdown
+Please review the **[CONTRIBUTING.md](CONTRIBUTING.md)**  for information on how to get started contributing to the project.
 
-1. Install markdown lint:
+## License
 
-   ```bash
-   sudo npm install -g markdownlint-cli2
-   ```
-
-2. Run markdown lint:
-
-   ```bash
-   markdownlint-cli2 "**/*.md" "#node_modules" "#themes"
-   ```
-
-3. Fix automatically:
-
-   ```bash
-   markdownlint-cli2 "**/*.md" "#node_modules" "#themes" --fix
-   ```
-
-### Spell Check
-
-1. Install cspell:
-
-   ```bash
-   sudo npm install -g cspell@latest
-   ```
-
-2. Run cspell lint:
-
-   ```bash
-   cspell lint .
-   ```
+All content in repository is licensed under [MIT license](LICENSE).

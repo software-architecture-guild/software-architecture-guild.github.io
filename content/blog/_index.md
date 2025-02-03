@@ -1,7 +1,7 @@
 ---
 # Default hugo properties
-title: "Blogs"                   # Name of the blog
-description: "My Blogs"             # Used for SEO optimization
+title: "Blog"                   # Name of the blog
+description: "Guild Blog"             # Used for SEO optimization
 publishDate: ""             # TODO: Differentiate between date
 date: ""                    # TODO: Differentiate between PublishDate
 

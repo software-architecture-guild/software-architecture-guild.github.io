@@ -13,10 +13,11 @@
 <div>
     <div class="card">
         <a href="{{$url}}" class="text-decoration-none text-reset stretched-link"></a>
-        <img src="{{ if or (eq $content.Params.Image "") (not $content.Params.Image) }}/images/blogs/default.jpg{{ else }}{{ $content.Params.Image }}{{ end }}" class="card-img-left" alt="Post Image">
+        <!--<img src="{{ if or (eq $content.Params.Image "") (not $content.Params.Image) }}/images/blog/default.jpg{{ else }}{{ $content.Params.Image }}{{ end }}" class="card-img-left" alt="Post Image">
+    -->
         <div class="card-details">
             <div class="tag-row">
-                <h5 class="card-title">{{$content.Params.Title}}</h5>
+                <h3 class="card-title">{{$content.Params.Title}}</h3>
                 <span class="text-muted">{{ if $content.Params.Date }}{{ time.Format "January 2, 2006" $content.Params.Date }}{{ end }}</span> 
             </div>
             <div class="card-text">{{ $content.Params.Description | markdownify }}</div>

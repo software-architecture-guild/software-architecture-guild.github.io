@@ -23,6 +23,8 @@
         {{- partial "consent.html" . -}}
         {{- partial "footer.html" . -}}
 
+        <div style="height: 3.1rem;"></div>
+
         <!-- Lotus Docs JS -->
         {{ $app := resources.Get "/js/app.js" }}
         {{- if not hugo.IsServer }}
