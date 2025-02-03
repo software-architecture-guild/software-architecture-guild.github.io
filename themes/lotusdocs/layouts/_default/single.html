@@ -41,8 +41,8 @@
             <div class="nav-links">
                 {{ with .PrevInSection }}
                     <a class="text-start" href="{{ .RelPermalink }}">
-                      Previous
-                      <span class="hidden-on-small">: {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
+                      ←
+                      <span class="hidden-on-small"> {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
                     </a>
                 {{ else }}
                     <span class="link-disabled hidden-on-small">No Previous Post</span>
@@ -50,8 +50,8 @@
 
                 {{ with .NextInSection }}
                     <a class="text-end" href="{{ .RelPermalink }}">
-                      Next
-                      <span class="hidden-on-small">: {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
+                      <span class="hidden-on-small"> {{ if gt (len .Title) 50 }}{{ substr .Title 0 47 }}...{{ else }}{{ .Title }}{{ end }}</span>
+                      →
                     </a>
                 {{ else }}
                     <span class="link-disabled hidden-on-small">No Next Post</span>

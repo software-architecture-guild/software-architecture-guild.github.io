@@ -1,7 +1,7 @@
 ---
 # Default hugo properties
 title: "Blogs"                   # Name of the blog
-description: "My Blogs"             # Used for SEO optimisation
+description: "My Blogs"             # Used for SEO optimization
 publishDate: ""             # TODO: Differentiate between date
 date: ""                    # TODO: Differentiate between PublishDate
 
@@ -9,7 +9,7 @@ date: ""                    # TODO: Differentiate between PublishDate
 image: ""                   # Displayed when referenced in listing pages
 images:                     # An array of images used in Social Sharing
 - ""
-tags:                       # Used for SEO optimisation and browsing across the site.
+tags:                       # Used for SEO optimization and browsing across the site.
 - ""
 - ""
 

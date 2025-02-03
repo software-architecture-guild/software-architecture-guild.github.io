@@ -35,6 +35,10 @@ menu:
       url: "https://github.com/orgs/software-architecture-guild/discussions"
       identifier: community
       weight: 30
+    - name: Authors
+      url: "/authors/"
+      identifier: authors
+      weight: 40
 
 
 pagination:
