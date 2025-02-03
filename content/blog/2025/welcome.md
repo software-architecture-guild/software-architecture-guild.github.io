@@ -5,7 +5,7 @@ description: |
     We’re excited to introduce you to the **Software Architecture Guild**, a community dedicated to growing, learning, and sharing knowledge in the field of software architecture. Whether you’re a developer looking to expand your skills, an architect striving to refine your craft, or a manager seeking to better understand architectural roles, you’ve come to the right place.
 
 date: "2025-02-01"
-image: "/images/blogs/2025/post_1/welcome.jpg"                
+image: "/images/blog/2025/post_1/welcome.jpg"                
 tags:                     
 - "Software Architecture"
 - "News"

@@ -10,7 +10,7 @@
         <nav id="TableOfContents">
           <ul>
             {{ $currentPage := . }}
-            {{ $pages := where $site.RegularPages "Section" "blogs" }}
+            {{ $pages := where $site.RegularPages "Section" "blog" }}
             {{ $index := 0 }}
             {{ range $i, $p := $pages }}
               {{ if eq $p.Permalink $currentPage.Permalink }}

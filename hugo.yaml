@@ -27,9 +27,9 @@ menu:
       url: /guide/
       identifier: guide
       weight: 10
-    - name: Blogs
-      url: "/blogs/"
-      identifier: blogs
+    - name: Blog
+      url: "/blog/"
+      identifier: blog
       weight: 20
     - name: Community
       url: "https://github.com/orgs/software-architecture-guild/discussions"
