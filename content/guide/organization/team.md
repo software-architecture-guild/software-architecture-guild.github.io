@@ -10,7 +10,7 @@ toc: true
 authors:
 -  "ilya-hardzeenka.md"
 ---
-{{< mdl-disable "<!-- markdownlint-disable MD024 -->" >}}
+{{< md-lint "<!-- markdownlint-disable MD024 -->" >}}
 
 ## What makes a Team?
 
