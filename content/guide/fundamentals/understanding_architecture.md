@@ -175,6 +175,10 @@ Component size, or **granularity**, is an important factor in architecture. Smal
 
 ## Recommended Reading
 
+#### Blogs
+
+* Software Architecture Guild, *[What is Software Architecture? IMHO]({{% relref "/blog/2025/fundamentals_architecture" %}})*
+
 #### Articles
 
 * Fowler, M. *[Software Architecture Guide](https://martinfowler.com/architecture/)*
