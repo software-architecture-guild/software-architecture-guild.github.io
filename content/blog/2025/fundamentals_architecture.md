@@ -1,5 +1,5 @@
 ---
-title: "What is Software Architecture? (IMHO)"          # Name of the blog
+title: "What is Software Architecture? Opinion."          # Name of the blog
 description: |
   I believe everyone agrees with Ralph Johnson’s definition of software architecture: "Architecture is about the important stuff. Whatever that is". While I fully agree with this definition, I think adding more clarity would help better understand what it means.
 
@@ -14,7 +14,7 @@ authors:
 draft: false
 ---
 
-**This blog is inspired by *[Fundamentals -> Understanding Architecture]({{% relref "/guide/fundamentals/understanding_architecture/" %}})* in our Guide.**
+**This blog explores themes covered in *[Fundamentals -> Understanding Architecture]({{% relref "/guide/fundamentals/understanding_architecture/" %}})* in our Guide.**
 
 ## Construction vs Software Engineering
 
@@ -37,7 +37,7 @@ While engineering, design, and architecture are interconnected, they have distin
 * **Architecture** is a specialized form of design that deals with the structure and organization of complex systems. It establishes the fundamental principles, high-level structure, and key constraints that define the system.
 * **Engineering** is the process of turning design and architecture into reality by applying scientific and mathematical principles. It involves detailed planning, calculations, and implementation to ensure the system is functional, efficient, and practical.
 
-In construction, **architects** create the vision for a building, ensuring it meets aesthetic, functional, and structural goals. **Engineers** then take that vision and make it physically possible by calculating materials, forces, and construction methods. The same relationship exists in software: **software architects** define the system's structure and principles, while **software engineers** translate that into working code, handling the technical details of performance, scalability, and reliability.
+In construction, **architects** create the vision for a building, ensuring it meets aesthetic, functional, and spatial requirements. **Engineers** then make that vision physically possible by designing the structural, mechanical, electrical, and civil systems that allow for safe and efficient construction.
 
 Good architecture must respect engineering constraints, and sound engineering must refine and optimize the architectural vision.
 
@@ -128,7 +128,7 @@ The building is **complete and fully populated**, and the business now has money
 
 **Architect:** *"Fine. Give me two hours, and I’ll figure something out."*
 
-**Building Manager:** *"Thanks, man. You’re saving my life here."*
+**Building Manager:** *"Thanks, man. You’re saving my day!"*
 
 ##### 2 Hours Later
 
