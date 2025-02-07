@@ -37,7 +37,7 @@ While engineering, design, and architecture are interconnected, they have distin
 * **Architecture** is a specialized form of design that deals with the structure and organization of complex systems. It establishes the fundamental principles, high-level structure, and key constraints that define the system.
 * **Engineering** is the process of turning design and architecture into reality by applying scientific and mathematical principles. It involves detailed planning, calculations, and implementation to ensure the system is functional, efficient, and practical.
 
-In construction, **architects** create the vision for a building, ensuring it meets aesthetic, functional, and spatial requirements. **Engineers** then make that vision physically possible by designing the structural, mechanical, electrical, and civil systems that allow for safe and efficient construction.
+In construction, **architects** create the vision for a building, ensuring it meets aesthetic, functional, and spatial requirements. **Engineers** then make that vision physically possible by designing the structural, mechanical, electrical, and civil systems that allow for safe and efficient construction. The same relationship exists in software: **software architects** define the system's structure and principles, while **software engineers** translate that into working code, handling the technical details of performance, scalability, and reliability.
 
 Good architecture must respect engineering constraints, and sound engineering must refine and optimize the architectural vision.
 
