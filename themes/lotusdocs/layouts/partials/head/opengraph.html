@@ -2,8 +2,9 @@
 <meta prefix="og: http://ogp.me/ns#" property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ "images/logo.png" | absURL }}"/>
 <meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ .Permalink }}" />
+<!--
 <meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ with .Description | markdownify }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-
+-->
 <!--{{- with $.Params.images -}}
 {{- range first 6 . }}<meta property="og:image" content="{{ . | absURL }}" />{{ end -}}
 {{- else -}}
