@@ -3,7 +3,7 @@ title: "What is Software Architecture? Opinion."          # Name of the blog
 description: |
   I believe everyone agrees with Ralph Johnson’s definition of software architecture: "Architecture is about the important stuff. Whatever that is". While I fully agree with this definition, I think adding more clarity would help better understand what it means.
 
-date: "2025-02-04"          # Data post is published
+date: "2025-02-09"          # Data post is published
 image: ""          # Displayed when referenced in listing pages
 tags:            # Used for SEO optimization and browsing across the site.
 - "Software Architecture"
