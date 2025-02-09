@@ -1,0 +1,55 @@
+// Universal List Styling
+.main-content ol, ul {
+    list-style: none;
+    line-height: 26px;
+}
+
+// Unordered List Styling
+.main-content ul {
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: 32px;
+        // margin-bottom: 5px;
+    }
+
+    > li::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: 8px;
+        top: 10px;
+        border-radius: 30%;
+        background: $gray-500;
+    }
+}
+
+// Ordered List Styling
+.main-content ol {
+    list-style: none; /* Remove default numbering */
+    counter-reset: listitem;
+    li {
+        counter-increment: listitem;
+        position: relative;
+        padding-left: 32px;
+    }
+
+    > li::before {
+        content: counter(listitem);
+        background: $gray-200;
+        color: $gray-800;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: center;
+        padding: 5px 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top: 3px;
+    }
+}

@@ -17,6 +17,7 @@ Eoin
 Excalidraw
 Fastly
 flexsearch
+Foote
 Fussell
 gohugoio
 goldmark
@@ -71,6 +72,7 @@ timeframe
 TOGAF
 transformative
 Tuckman
+upsell
 Vercel
 Visio
 Vodde
@@ -78,4 +80,5 @@ Vonage
 webp
 whiteboarding
 wireframes
+Yoder
 Zubchenko

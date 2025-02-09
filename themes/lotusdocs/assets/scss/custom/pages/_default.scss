@@ -96,3 +96,22 @@ of it on small screen             */
         display: none !important;
     }
 }
+
+.custom-blockquote {
+    background-color: rgba($primary, 0.1); /* Light blue background */
+    border-left: 5px solid $primary; /* Blue left border for emphasis */
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0; /* Adds spacing around the blockquote */
+}
+
+.custom-blockquote p {
+    margin-top: 0; /* Prevents extra top space */
+    margin-bottom: 0.5rem; /* Keeps paragraph spacing */
+}
+
+.custom-blockquote p:last-child {
+    margin-bottom: 0; /* Removes bottom margin from last paragraph */
+}

@@ -129,7 +129,7 @@ either of these shortcodes in conjunction with this render hook.
       {{- $pathDesc := .Description }}
       {{- $pathTitle := .Title }}
       {{- $pathParentSection := .Parent.Title | upper }}
-      {{- $pathHTML := printf "<a href='%s'><p>%s</p><strong>%s</strong><br>%s</a>" $href $pathParentSection $pathTitle $pathDesc }}
+      {{- $pathHTML := printf "<a href='%s'><p>%s</p><strong>%s</strong><br>%s</a>" $href $pathParentSection $pathTitle $pathDesc | markdownify | safeHTML }}
       {{- with $u.RawQuery }}
         {{- $href = printf "%s?%s" $href . }}
       {{- end }}
