@@ -1,5 +1,5 @@
 ---
-title: "What is Software Architecture? Opinion."          # Name of the blog
+title: "What is Software Architecture? Opinion"          # Name of the blog
 description: |
   I believe everyone agrees with Ralph Johnson’s definition of software architecture: "Architecture is about the important stuff. Whatever that is". While I fully agree with this definition, I think adding more clarity would help better understand what it means.
 
