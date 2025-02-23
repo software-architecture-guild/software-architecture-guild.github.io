@@ -21,7 +21,8 @@ take a break and cool off.  This project will still be here later.
 * Personal attacks
 * Trolling or insulting/derogatory comments
 * Public or private harassment
-* Publishing other's private information
+* Publishing others' private information, such as a physical or email
+  address, without their explicit permission
 * Plagiarism
 * Other unethical or unprofessional conduct
 
@@ -36,8 +37,9 @@ This means we may:
 This Code of Conduct applies both within project spaces and in public spaces when an
 individual is representing the project or its community.
 
-Instances of unacceptable behavior may be reported privately to the project maintainers.
+Instances of unacceptable behavior may be reported privately to the project maintainers at software.architecture.guild@gmail.com.
 
-#### See Also
+#### Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org).
+This Code of Conduct is based on [OpenStreetMap iD's Code of Conduct](https://github.com/openstreetmap/iD/blob/develop/CODE_OF_CONDUCT.md),
+which in turn is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/).
