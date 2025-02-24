@@ -6,7 +6,8 @@
 {{- $featured := partial "head/get-featured-image.html" . }}
 {{- with $featured -}}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+<meta name="twitter:image" content="{{ "images/logo.png" | absURL }}"/>
+<meta name="image" content="{{ $featured.Permalink }}"/>
 {{- else -}}
 {{- with $.Site.Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>

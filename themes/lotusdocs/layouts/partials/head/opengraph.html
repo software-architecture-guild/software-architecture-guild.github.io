@@ -1,7 +1,7 @@
-<meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ .Title }}" />
-<meta prefix="og: http://ogp.me/ns#" property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ "images/logo.png" | absURL }}"/>
-<meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:image" content="{{ "images/logo.png" | absURL }}"/>
+<meta property="og:url" content="{{ .Permalink }}" />
 <!--
 <meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ with .Description | markdownify }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 -->
