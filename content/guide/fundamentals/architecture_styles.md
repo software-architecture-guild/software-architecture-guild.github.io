@@ -26,6 +26,12 @@ A traditional style that organizes the system into horizontal layers, such as pr
 
 {{< image src="../../../images/fundamentals/styles.layered.drawio.png" alt="Layered Architecture" >}}
 
+### Modular Architecture
+
+In this style, an application is structured into independent, **domain-driven** modules while deployed as a single unit. Unlike traditional monoliths, it enforces clear boundaries and loose coupling between components. Each module encapsulates business logic, interacts via well-defined interfaces, and improves maintainability and scalability. While keeping deployment simple, it allows gradual migration to a distributed system if needed. This style balances simplicity and structure, offering microservices-like organization without added complexity.
+
+{{< image src="../../../images/fundamentals/styles.modular.drawio.png" alt="Modular Architecture" >}}
+
 ### Pipeline Architecture
 
 In this style, data flows through a sequence of processing stages, where each stage performs specific operations before passing the data to the next stage. It is ideal for tasks requiring sequential processing, such as media streaming or batch data processing, but can face challenges in scaling efficiently.
