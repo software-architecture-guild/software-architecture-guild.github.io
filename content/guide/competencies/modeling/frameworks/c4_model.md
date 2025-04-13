@@ -48,7 +48,7 @@ This diagram provides a high-level overview of the system and its interactions w
 
 It breaks down the system into its containers, illustrating relationships between them. This level of detail allows stakeholders to see how different parts of the system interact.
 
-{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.system_context.png" alt="C4 Containers" href="https://c4model.com/diagrams/container" msg="Source: https://c4model.com/" >}}
+{{< image-external src="../../../../../images/competencies/modeling/frameworks/c4.containers.png" alt="C4 Containers" href="https://c4model.com/diagrams/container" msg="Source: https://c4model.com/" >}}
 
 ---
 
