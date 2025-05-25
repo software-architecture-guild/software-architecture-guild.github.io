@@ -116,17 +116,19 @@ The **"Software Systems Architecture"** framework outlines several critical pers
 
 1. **Security**:
    * Focuses on ensuring that the system reliably controls access to sensitive resources. It encompasses managing users’ access rights, protecting data confidentiality, and ensuring integrity and accountability. This perspective applies to any system where user identity and resource access are significant concerns.
-2. **Performance and Scalability**:
+2. **Cost**:
+   * Focuses on understanding, estimating, and optimizing the financial implications of architectural decisions across the system’s lifecycle.
+3. **Performance and Scalability**:
    * Ensures the system can handle its required workload efficiently and scale to meet future demands. This perspective focuses on optimizing system performance and ensuring that the architecture can support increased volumes of data or users without degradation.
-3. **Availability and Resilience**:
+4. **Availability and Resilience**:
    * Focuses on keeping the system operational, even during failures. This perspective emphasizes building a fault-tolerant system, ensuring it remains available to users and can recover from potential disruptions.
-4. **Evolution**:
+5. **Evolution**:
    * Addresses the system's ability to adapt and change over time. This perspective ensures the system can evolve with changing requirements, technologies, or environments while balancing the costs and risks of such flexibility.
-5. **Development Resource**:
+6. **Development Teams**:
    * Focuses on ensuring the system can be built, deployed, and maintained within time, budget, and available personnel constraints. It ensures that development resources are efficiently managed throughout the project lifecycle.
-6. **Internationalization**:
+7. **Internationalization**:
    * Ensures the system can operate across different languages, regions, and cultural settings. This perspective is particularly important for global applications catering to diverse users.
-7. **Location**:
+8. **Location**:
    * Addresses challenges arising from system components' physical distribution, such as network latency or geographic constraints. This perspective is critical for distributed systems where the location of components can impact performance and reliability.
 
 #### Benefits of Applying Perspectives
