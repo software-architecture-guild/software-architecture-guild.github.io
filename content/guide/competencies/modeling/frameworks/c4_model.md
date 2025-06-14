@@ -1,5 +1,5 @@
 ---
-weight: 1140
+weight: 1130
 title: "C4 Model"
 description: "This article provides an overview of the C4 Model as an Architectural Framework."
 icon: "document_scanner"
@@ -104,3 +104,8 @@ The **Deployment** diagram adds a **physical** perspective to the C4 Model by sh
 
 - Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.
   Detailed description of the C4 architecture framework.
+
+#### Books
+
+- Simon Brown. *["The C4 model for visualizing software architecture"](https://leanpub.com/visualising-software-architecture)*.  
+  Guide to communicating software architecture using the C4 model—a pragmatic visual framework covering context, containers, components, and code .
