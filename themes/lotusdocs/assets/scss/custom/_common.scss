@@ -4,15 +4,36 @@
 }
 
 /* Responsive image styling */
-.responsive-image {
+.responsive-image-big {
+    display: inline-block;
+    width: 100%; /* Default for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.responsive-image-default {
     display: inline-block;
     width: 75%; /* Default for larger screens */
     height: auto; /* Maintain aspect ratio */
 }
 
+.responsive-image-medium {
+    display: inline-block;
+    width: 50%; /* Default for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.responsive-image-small {
+    display: inline-block;
+    width: 25%; /* Default for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Media query for mobile responsiveness */
 @media only screen and (max-width: 768px) {
-    .responsive-image {
+    .responsive-image-default,
+    .responsive-image-big
+    .responsive-image-medium,
+    .responsive-image-small {
         width: 100% !important; /* Full width on mobile screens */
     }
 }
