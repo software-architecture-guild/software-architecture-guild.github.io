@@ -1,10 +1,13 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
+{{- $size := .Get "size" | default "default" -}}
 {{- $href := .Get "href" -}}
 {{- $msg := .Get "msg" -}}
 
+{{- $class := printf "responsive-image-%s" $size -}}
+
 <div class="image-container">
-  <img src="{{ $src }}" alt="{{ $alt | html }}" class="responsive-image">
+  <img src="{{ $src }}" alt="{{ $alt | html }}" class="{{ $class }}" loading="lazy" />
   <br>
   <a href="{{ $href }}">
     <small>{{ $msg }}</small>

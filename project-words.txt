@@ -24,6 +24,7 @@ goldmark
 Hardzeenka
 HDFS
 Hortonworks
+iiirm
 ilities
 Ilya
 inclusivity
