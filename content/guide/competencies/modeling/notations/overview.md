@@ -1,5 +1,5 @@
 ---
-weight: 1170
+weight: 1165
 title: "Overview"
 description: "This article explains how notations complement architectural frameworks and provide tool-choosing guidance."
 icon: "document_scanner"
@@ -48,17 +48,17 @@ Architecture notation typically involves:
 
 Architecture notations provide the visual language needed to describe systems effectively. Different notations have unique strengths based on the elements they emphasize, allowing architects to choose the best fit for their context.
 
-#### [UML (Unified Modeling Language)](https://www.conceptdraw.com/How-To-Guide/uml-diagrams)
-
-A standardized notation for depicting system components, relationships, and workflows. Effective for class diagrams, sequence diagrams, and activity diagrams.
-
-{{< image-external src="../../../../../images/competencies/modeling/notations/uml.legend.png" alt="UML Legend" href="https://www.conceptdraw.com/examples/component-diagram" msg="Source: https://www.conceptdraw.com/" >}}
-
 #### [C4 Notation](https://c4model.com/diagrams/notation)
 
 Built into the C4 model, it simplifies diagramming with four layers of abstraction and focuses on clear labeling and relationships over complex symbols.
 
 {{< image-external src="../../../../../images/competencies/modeling/notations/c4.legend.png" alt="C4 Legend" href="https://c4model.com/diagrams/notation" msg="Source: https://c4model.com/" >}}
+
+#### [UML (Unified Modeling Language)](https://www.conceptdraw.com/How-To-Guide/uml-diagrams)
+
+A standardized notation for depicting system components, relationships, and workflows. Effective for class diagrams, sequence diagrams, and activity diagrams.
+
+{{< image-external src="../../../../../images/competencies/modeling/notations/uml.legend.png" alt="UML Legend" href="https://www.conceptdraw.com/examples/component-diagram" msg="Source: https://www.conceptdraw.com/" >}}
 
 #### [ArchiMate](https://pubs.opengroup.org/architecture/archimate3-doc/)
 

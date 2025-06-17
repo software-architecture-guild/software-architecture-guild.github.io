@@ -1,5 +1,5 @@
 ---
-weight: 1150
+weight: 1135
 title: "Viewpoints and Perspectives"
 description: "This article provides an overview of Viewpoints and Perspectives Architectural Framework."
 icon: "document_scanner"
@@ -232,7 +232,14 @@ The framework provides a comprehensive overview of the architecture from differe
 
 ## Recommended Reading
 
-##### Books
+#### Articles
+
+* Nick Rozanski and Eoin Woods. *["Viewpoints"](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.  
+  Catalog of seven core architectural viewpoints (Context, Functional, Information, Concurrency, Development, Deployment, and Operational), defining templates, stakeholders, concerns, and guidance for modeling system architecture.
+* Nick Rozanski and Eoin Woods. *["Perspectives"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.  
+  Discussion of architectural **perspectives** - a set of quality-driven, cross-view guidelines (e.g., Security, Usability, Performance & Scalability, Availability & Resilience, Evolution, Development Resource, Location, Regulation, Accessibility): used to enhance and validate each architectural viewpoint within system design.
+
+#### Books
 
 * Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
   * **Part 3 - Viewpoint Framework**\

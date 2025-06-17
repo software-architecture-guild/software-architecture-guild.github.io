@@ -1,5 +1,5 @@
 ---
-weight: 1130
+weight: 1125
 title: "Overview"
 description: "This article justifies the need and explains the benefits of using architectural frameworks."
 icon: "document_scanner"
@@ -48,10 +48,10 @@ The complexity of modern software systems requires a disciplined approach to ens
 
 The C4, Viewpoints and Perspective, 4+1, and TOGAF are popular architectural frameworks used in software development.
 
-* The **[C4 model](https://c4model.com/introduction)** is a modern approach to diagramming software architectures, focusing on hierarchical views. The framework is lightweight and tools-agnostic, making it fast to apply.
-* The **[Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)** framework organizes software architecture through viewpoints capture the **structural aspects** of the solution and perspectives to address additional, **cross-cutting concerns** like security, performance, scalability.
-* The **[4+1 view model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)** is a well-established framework that focuses on four primary views: logical, process, physical, and development, along with **scenario-based use cases** to capture system behavior. It provides a structured approach to understanding and documenting complex software systems.
-* The **[Open Group Architecture Framework a.k.a. TOGAF](https://pubs.opengroup.org/togaf-standard/)** is a comprehensive framework for enterprise architecture that provides a set of guidelines and tools for designing, planning, and implementing IT systems. It is particularly useful for large organizations that need to manage
+* The **[C4 model]({{% relref "/guide/competencies/modeling/frameworks/c4_model" %}})** is a modern approach to diagramming software architectures, focusing on hierarchical views. The framework is lightweight and tools-agnostic, making it fast to apply.
+* The **[Viewpoints and Perspectives]({{% relref "/guide/competencies/modeling/frameworks/viewpoints_and_perspectives" %}})** framework organizes software architecture through viewpoints capture the **structural aspects** of the solution and perspectives to address additional, **cross-cutting concerns** like security, performance, scalability.
+* The **[4+1 view model]({{% relref "/guide/competencies/modeling/frameworks/4_plus_1" %}})** is a well-established framework that focuses on four primary views: logical, process, physical, and development, along with **scenario-based use cases** to capture system behavior. It provides a structured approach to understanding and documenting complex software systems.
+* The **[Open Group Architecture Framework a.k.a. TOGAF]({{% relref "/guide/competencies/modeling/frameworks/togaf" %}})** is a comprehensive framework for enterprise architecture that provides a set of guidelines and tools for designing, planning, and implementing IT systems. It is particularly useful for large organizations that need to manage
   **complex IT landscapes**.
 
 ### How to Apply Architecture Frameworks
