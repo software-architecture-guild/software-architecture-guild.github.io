@@ -45,6 +45,8 @@ pagination:
   pagerSize: 10
 
 params:
+  google_fonts:
+    - ["Architects Daughter", "400"]
   footer:
     copyright: '© :YEAR: Software Architecture Guild | Built with [Lotus Docs](https://github.com/colinwilson/lotusdocs) | [Privacy & Cookies Policy](/privacy-policy/) | <a href="#" id="manage-cookies-link">Manage Cookie Preferences</a>'
     version: true # include git commit info in footer

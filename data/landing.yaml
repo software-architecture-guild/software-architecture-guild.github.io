@@ -29,12 +29,12 @@ hero:
 
   ctaButton:
     icon: rocket_launch
-    btnText: "Get Started"
-    url: "guide/introduction/welcome"
+    btnText: "Start Learning"
+    url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4/?referralCode=352F4C68E77F40FDDC25"
   cta2Button:
-    icon: group
-    btnText: "About us"
-    url: "/authors"
+    icon: auto_stories
+    btnText: "Read the Guide"
+    url: "guide/introduction/welcome"
 
 # Features Grid
 features:
