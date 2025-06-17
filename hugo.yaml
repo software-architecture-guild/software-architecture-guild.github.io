@@ -31,9 +31,9 @@ menu:
       url: "/blog/"
       identifier: blog
       weight: 20
-    - name: Community
-      url: "https://github.com/orgs/software-architecture-guild/discussions"
-      identifier: community
+    - name: Courses
+      url: "https://www.udemy.com/user/software-architecture-guild/"
+      identifier: courses
       weight: 30
     - name: Authors
       url: "/authors/"
@@ -51,6 +51,8 @@ params:
 
   social:
     github: 'software-architecture-guild'
+    udemy: 'user/software-architecture-guild/'
+    linkedin: 'company/software-architecture-guild'
 
   docs:
     title: 'Software Architecture Guild'
