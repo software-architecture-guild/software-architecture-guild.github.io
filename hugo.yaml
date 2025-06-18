@@ -32,7 +32,7 @@ menu:
       identifier: blog
       weight: 20
     - name: Courses
-      url: "https://www.udemy.com/user/software-architecture-guild/"
+      url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4/?couponCode=JUNE_2025"
       identifier: courses
       weight: 30
     - name: Authors
