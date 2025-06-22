@@ -23,18 +23,23 @@
                 <!-- Navigation Menu -->
                 <ul class="navigation-menu nav-right">
                     {{- range .Site.Menus.primary }}
-                    <li><a href="{{ relLangURL .URL }}">{{ .Name }}</a></li>
+                    <li>
+                        <a href="{{ relLangURL .URL }}" 
+                           {{ if eq .Identifier "courses" }} id="courses-link" data-base-url="{{ .URL }}" {{ end }}>
+                           {{ .Name }}
+                        </a>
+                    </li>
                     {{ end }}
                 </ul><!--end navigation menu-->
             </div><!--end navigation-->
 
             <!-- Social Links Start -->
             {{ with $.Scratch.Get "social_list" }}
-            <ul class="social-link d-flex list-inline mb-0">
+            <ul class="social-link d-flex list-inline mb-0 align-items-center">
                 {{ range . }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
                     <li class="list-inline-item mb-0">
-                        <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else }} https://{{ . }}.com/{{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank">
+                        <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else }} {{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank">
                             <div class="btn btn-icon btn-landing border-0">
                                 {{ with resources.Get $path }}
                                     {{ .Content | safeHTML }}
@@ -43,6 +48,10 @@
                         </a>
                     </li>
                 {{ end }}
+                <li class="list-inline-item hide-on-mobile">
+                    <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                    <script type="IN/FollowCompany" data-id="106891500" data-counter="right"></script>
+                </li>
             </ul>
             {{ end }}
             <!-- Social Links End -->

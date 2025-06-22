@@ -1,11 +1,11 @@
 {{ if .Site.Data.landing.hero.enable }}
 <!-- Hero Start -->
-{{- partial "background.html" . -}}
+
 <section class="d-table w-100 overflow-hidden hero">
     <div class="container-xl">
         <div class="row mt-5 align-items-center">
 
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6 responsive-text-center">
                 <div class="title-heading">
                     {{ if .Site.Data.landing.hero.badge }}
                     <span class="badge {{ if eq .Site.Data.landing.hero.badge.pill true }}rounded-pill{{ end }} bg-{{ if eq .Site.Data.landing.hero.badge.soft true }}soft-{{ end }}{{ .Site.Data.landing.hero.badge.color }} mb-1">{{ .Site.Data.landing.hero.badge.text }}</span>
@@ -60,15 +60,11 @@
 
                     {{ if .Site.Data.landing.hero.info }}
                     <p class="text-muted mb-0 mt-3">{{ .Site.Data.landing.hero.info | markdownify }}</p>
-                    {{ end }}
-                    <div class="linkedin-follow">
-                            <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-                            <script type="IN/FollowCompany" data-id="106891500" data-counter="right"></script>
-                    </div>
+                    {{ end }}                   
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
+            <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0 hide-on-mobile">
                 {{ with .Site.Data.landing.hero.image }}
                     {{ $path := .path | default "images" }}
                     {{ $filename := .filename }}
@@ -77,7 +73,7 @@
                     {{ $rounded := .rounded | default false }}
                     {{ $path := printf "%s/%s" $path $filename }}
                     {{ with $filename }}
-                        <div class="ms-lg-4">
+                        <div class="ms-lg-4 ">
                             <div class="classic-hero-image">
                                 {{ with $image := resources.Get $path }}
                                     {{ if eq .MediaType.SubType "svg" }}
@@ -95,6 +91,13 @@
             </div><!--end col-->
 
         </div><!--end row-->
+        <div class="row mt-5 align-items-center">
+            <iframe src="https://softwarearchitectureguild.substack.com/embed" width="480" height="150" style="border:1px solid #f4faff" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="row mt-5 text-center show-on-mobile">
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/FollowCompany" data-id="106891500" data-counter="right"></script>
+        </div>
     </div> <!--end container-->
 </section><!--end section-->
 <!-- Hero End -->

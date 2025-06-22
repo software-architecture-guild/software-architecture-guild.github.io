@@ -58,7 +58,7 @@
 
             <!-- Social Links Start -->
             {{ with $.Scratch.Get "social_list" }}
-            <ul class="social-link d-flex list-inline mb-0">
+            <ul class="social-link d-flex list-inline mb-0 align-items-center">
                 {{ range . }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
                     <li class="list-inline-item mb-0">
@@ -71,6 +71,10 @@
                         </a>
                     </li>
                 {{ end }}
+                    <li class="list-inline-item hide-on-mobile">
+                        <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                        <script type="IN/FollowCompany" data-id="106891500" data-counter="right"></script>
+                    </li>
             </ul>
             {{ end }}
             <!-- Social Links End -->
