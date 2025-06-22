@@ -30,7 +30,7 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Start Learning"
-    url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4/?couponCode=JUNE_2025"
+    url: "courses/"
   cta2Button:
     icon: auto_stories
     btnText: "Read the Guide"

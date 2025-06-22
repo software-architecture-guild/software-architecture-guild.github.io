@@ -28,3 +28,16 @@ function toggleMenu() {
         isOpen.style.display = "block";
     }
 };
+
+// Udemy 
+// Define the function
+function generateCouponUrl(baseUrl) {
+  const now = new Date();
+  const month = now.toLocaleString('en-US', { month: 'long' }).toUpperCase();
+  const year = now.getFullYear();
+  const couponCode = `${month}_${year}`;
+  return `${baseUrl}/?couponCode=${couponCode}`;
+}
+
+// Expose it globally
+window.generateCouponUrl = generateCouponUrl;

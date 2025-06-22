@@ -23,12 +23,7 @@
                 <!-- Navigation Menu -->
                 <ul class="navigation-menu nav-right">
                     {{- range .Site.Menus.primary }}
-                    <li>
-                        <a href="{{ relLangURL .URL }}" 
-                           {{ if eq .Identifier "courses" }} id="courses-link" data-base-url="{{ .URL }}" {{ end }}>
-                           {{ .Name }}
-                        </a>
-                    </li>
+                    <li><a href="{{ relLangURL .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul><!--end navigation menu-->
             </div><!--end navigation-->
