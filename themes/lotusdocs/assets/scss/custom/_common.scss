@@ -28,6 +28,10 @@
     height: auto; /* Maintain aspect ratio */
 }
 
+.show-on-mobile {
+    display: none; /* Hide on larger screens */
+}
+
 /* Media query for mobile responsiveness */
 @media only screen and (max-width: 768px) {
     .responsive-image-default,
@@ -35,6 +39,15 @@
     .responsive-image-medium,
     .responsive-image-small {
         width: 100% !important; /* Full width on mobile screens */
+    }
+    .hide-on-mobile { 
+        display: none;
+    }
+    .show-on-mobile {
+        display: block; /* Show on mobile screens */
+    }
+    .responsive-text-center {
+        text-align: center; /* Center text on mobile */
     }
 }
 

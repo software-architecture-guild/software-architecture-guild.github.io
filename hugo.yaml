@@ -28,11 +28,11 @@ menu:
       identifier: guide
       weight: 10
     - name: Blog
-      url: "/blog/"
+      url: "https://softwarearchitectureguild.substack.com/t/blog"
       identifier: blog
       weight: 20
     - name: Courses
-      url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4/?couponCode=JUNE_2025"
+      url: "/courses/"
       identifier: courses
       weight: 30
     - name: Authors
@@ -52,9 +52,10 @@ params:
     version: true # include git commit info in footer
 
   social:
-    github: 'software-architecture-guild'
-    udemy: 'user/software-architecture-guild/'
-    linkedin: 'company/software-architecture-guild'
+    udemy: 'https://www.udemy.com/user/software-architecture-guild/'
+    substack: 'https://softwarearchitectureguild.substack.com/'    
+   # linkedin: 'https://linkedin.com/company/software-architecture-guild'
+    github: 'https://github.com/software-architecture-guild/'
 
   docs:
     title: 'Software Architecture Guild'

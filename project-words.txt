@@ -66,6 +66,7 @@ Sparx
 SSAS
 SSIS
 standups
+substack
 Systemization
 Tantum
 timebox

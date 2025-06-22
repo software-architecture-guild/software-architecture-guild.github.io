@@ -17,7 +17,13 @@ hero:
 #    soft: true # boolean
 
   title: "Software Architecture Guild"
-  subtitle: Our goal is to create a community of software architecture experts, collaborate to share best practices, tackle common challenges with innovative solutions, and stay at the forefront of the ever-evolving technology landscape.
+  subtitle: |
+    **Software architecture is more than drawing diagrams.**\
+    It’s about making decisions, managing complexity, and helping teams build systems that actually work.
+
+    **Software Architecture Guild** is a micro-academy and community for hands-on architects and senior engineers. We write about what it really means to be a software architect—and how to grow into the role through practice, not theory.
+
+    Our team took **1st place** in O’Reilly’s Architectural Kata (Autumn 2023) and **3rd place** in the Winter 2025 edition, proving we don’t just teach architecture—we practice it in public.
   info: "**Open Source** MIT Licensed."
 
   image:
@@ -30,7 +36,7 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Start Learning"
-    url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4/?couponCode=JUNE_2025"
+    url: "courses/"
   cta2Button:
     icon: auto_stories
     btnText: "Read the Guide"

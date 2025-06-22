@@ -4,7 +4,7 @@
     {{ $pathDesktop := printf "%s/%s" $path $filename.desktop }}
     {{ $pathMobile := printf "%s/%s" $path $filename.mobile }}
         <style>
-            .hero {
+           /* .hero {
                 {{ with $filename.desktop }}
                     {{ with resources.Get $pathDesktop }}
                         @media (min-width: 768px) {
@@ -17,6 +17,9 @@
                         background-image: url("{{ .RelPermalink }}");
                     {{ end }}
                 {{ end }}
+            }*/
+            body {
+                background-color: #f4faff;
             }
         </style>
 {{ end }}
