@@ -3,7 +3,7 @@
 
 <section class="d-table w-100 overflow-hidden hero">
     <div class="container-xl">
-        <div class="row mt-5 align-items-center">
+        <div class="row mt-5">
 
             <div class="col-lg-6 col-md-6 responsive-text-center">
                 <div class="title-heading">
@@ -64,7 +64,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0 hide-on-mobile">
+            <div class="col-lg-6 col-md-6 mt-2 hide-on-mobile d-flex justify-content-center" >
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7338091175876116484?collapsed=1" height="542" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                 {{ with .Site.Data.landing.hero.image }}
                     {{ $path := .path | default "images" }}
                     {{ $filename := .filename }}
