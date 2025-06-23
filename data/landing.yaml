@@ -26,7 +26,7 @@ hero:
     Our team took **1st place** in O’Reilly’s Architectural Kata (Autumn 2023) and **3rd place** in the Winter 2025 edition, proving we don’t just teach architecture—we practice it in public.
   info: "**Open Source** MIT Licensed."
 
-  image:
+  no-image:
     path: "images" # path to image under configured assets directory. default 'images'
     filename: "abstract-image.png" # filename of your hero image (including file extension)
     alt: "Logo" # Optional but recommended
