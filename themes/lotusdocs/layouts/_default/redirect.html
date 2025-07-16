@@ -16,19 +16,36 @@
             <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
 
+  {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $consentJS.Permalink }}"></script>
   <!-- Trigger redirect after DOM is ready -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const baseUrl = "{{ .Params.base_url }}";
 
-      if (typeof generateCouponUrl === "function") {
-        const fullUrl = generateCouponUrl(baseUrl);
-        window.location.replace(fullUrl);   /* smoother redirect */
+      // Fire GA4 event before redirect
+      if (typeof gtag === "function") {
+        gtag('event', 'funnel_redirect', {
+          'event_category': 'Funnel',
+          'event_label': 'Udemy Course Landing',
+          'destination_url': destinationUrl || 'Unknown'
+        });
       } else {
-        console.error("generateCouponUrl is not defined");
+        console.warn("gtag not defined yet");
       }
+
+      // 2. Wait briefly to ensure event is sent, then redirect
+      setTimeout(function() {
+        if (typeof generateCouponUrl === "function") {
+          const fullUrl = generateCouponUrl(baseUrl);
+          window.location.replace(fullUrl);
+        } else {
+          console.error("generateCouponUrl is not defined");
+        }
+      }, 200); // 200ms delay is a reasonable balance
     });
   </script>
+
 </head>
 <body>
   <p>Redirecting...</p>
