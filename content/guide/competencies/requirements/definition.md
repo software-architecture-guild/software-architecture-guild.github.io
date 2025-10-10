@@ -1,147 +1,161 @@
-# What is a Requirement?
+---
+weight: 1310
+title: "What Is a Requirement?"
+description: "This article defines what a requirement is."
+icon: "article"
+date: "2025-10-10T17:16:03+01:00"
+lastmod: "2025-10-10T17:16:03+01:00"
+draft: false
+toc: true
+authors:
 
-A requirement is a precise statement of what a product must do or how well it must do it—measurable, justified, and traceable to owner value.
+- "ilya-hardzeenka.md"
+---
 
-## What is it?
+Requirement is Understanding what a product must do—and how well it must do it—to truly solve the right problem.
 
-A requirement is **either** a capability the product must perform (**functional** ) **or** a quality it must exhibit (**non-functional/quality attribute** ) to be acceptable or attractive. Requirements already exist in the problem domain; our job is to **discover** them, not invent them.
+A requirement isn’t a document. It’s a truth waiting to be discovered.
 
-Requirements are valid when they’re (a) justified by intrinsic domain needs or by the client’s value case, (b) stated precisely enough to be **tested** , and (c) bounded by legitimate **constraints** (law, budget, platforms, deadlines).
+Requirements exist whether or not we write them down. They describe what the product must **do** or **be like** to make it acceptable or valuable to its owner. In practice, this spans three axes:
 
-## Why it matters (owner value + risks)
+- **Functional requirements** — what the product does.
+- **Quality attributes** — how well it performs those functions.
+- **Constraints** — limits within which the solution must fit.
 
-Getting requirements right maximizes **owner value** —benefit per cost and disruption—by aligning solution scope with real work. Weak requirements create expensive risks: feature churn, local optimizations that hurt the whole, fragile architectures, and untestable promises. Strong requirements sharpen trade-offs among **quality attributes** (performance, security, usability, modifiability) so architecture can be purposeful, not accidental.
+Every successful system—software, hardware, or process—rests on knowing these three clearly enough to make design decisions and measure success.
 
-## Connection between Architecture and Requirements
+## Why it matters?
 
-Architecture and requirements shape each other. Treat them as a feedback loop, not a handoff.
+If we skip discovering real requirements, we risk optimizing the wrong thing. Shipping software isn’t the same as solving the problem.
 
-* **Requirements drive structure:** Functional flows and **quality scenarios** (latency, availability, security) determine boundaries, protocols, deployment topology. Example: p99 latency ≤ 300 ms → caching, partitioning, async I/O.
-* **Architecture refines requirements:** Early choices expose new constraints and work clarifications. Example: event-driven backbone → require idempotency, exactly-once semantics become “must-haves.”
-* **Utility tree = prioritization engine:** Rank qualities (e.g., **availability** > **modifiability** > **cost** ) to focus architectural effort where it buys the most owner value.
-* **Trade-offs are architectural:** You can’t maximize everything. More **security** often taxes **usability** ; more **availability** can dent **latency** and **cost** . Make the trade visible and measurable.
-* **Prototypes as truth serum:** Architecturally significant spikes validate whether requirements are feasible at target measures (fit criteria) before you commit.
-* **Decision logs tie it together:** Record “requirement → decision → consequence” so future changes don’t break hidden assumptions.
-* **Continuous alignment:** As discovery updates requirements, revisit structure. As structure evolves, revisit measures. No “set and forget.”
+Reasonable requirements work discovers *why* we’re building, *what value* the owner expects, and *how success will be measured.* Bad requirements work - documents guesses or opinions.
 
-## How to do it
-
-* **Start-with-problem:** Frame the **business problem** and desired **change in work** before features. Tie each requirement to an outcome (risk: building a polished mismatch).
-* **Separate what vs how-well:** Capture **functional** behaviors and **fit criteria** for qualities separately. Numbers beat adjectives (risk: “fast” becomes untestable debt).
-* **Model the work:** Map tasks, events, and vocabulary. Use scenarios to surface missing behaviors (risk: stakeholder statements are partial and solution-biased).
-* **Optimize for owner value:** Identify the **owner** , quantify benefit/cost, and negotiate scope by value slices (risk: over-serving low-value niches).
-* **Make it measurable:** Add **fit criteria** to every requirement (e.g., “p95 ≤ 2s, 99.9% over 30 days”). If you can’t test it, it’s a **wish** , not a requirement.
-* **Elicit beyond “better version of now”:** Facilitate discovery (workshops, prototypes, counter-examples). Record assertions as **inputs** , not gospel (risk: locking in yesterday’s design).
-* **Use quality-attribute scenarios:** For each attribute, write **Stimulus → Response → Measure** (e.g., “During peak load, API responds ≤ 300 ms for 95% of requests”). Drive architecture with these levers.
-* **Tailor the process, not the rigor:** Work deliverable-first (goals, glossary, context, scenarios, fit criteria). Adjust depth/sequence to risk/complexity (risk: rigid ceremony or chaotic skipping).
-* **Document rationale lightly:** Capture the “why” once: decision logs linking requirements ⇄ architectural choices (risk: future changes break invisible assumptions).
-* **Continuously align with architecture:** Use **utility trees** to prioritize qualities, run **architectural spikes/prototypes** , and revisit trade-offs as knowledge changes (risk: drifting architecture–requirements gap).
-
-## Examples / Pitfalls
-
-* **E-commerce performance (latency vs cost)**
-  * **Requirement:** “Handle 1,000 concurrent users; p95 ≤ 2 s; p99 ≤ 3 s.”
-  * **Architecture response:** Load balancer + distributed cache + async I/O.
-  * **Trade-offs:** Availability ↑, latency ↓; **cost** and **operational complexity** ↑; **consistency** risks with caching.
-  * **Pitfall:** Hitting p95 but missing p99 during sales spikes.
-  * **Fix:** Add fit criteria for p99 and warm-up plans; implement cache TTLs + write-through; run peak-load drills.
-* **Healthcare security (security vs usability)**
-  * **Requirement:** “HIPAA compliant; all PHI encrypted at rest/in transit; audit within 24 h.”
-  * **Architecture response:** End-to-end TLS, field-level encryption, centralized IAM, immutable audit log.
-  * **Trade-offs:** **Security** ↑; **usability** and **supportability** may suffer (MFA friction, key rotation).
-  * **Pitfall:** Clinicians bypassing flows (shared accounts, sticky notes) to save time.
-  * **Fix:** Task-fit MFA (biometrics/SSO), least-privilege roles, session timeouts tuned to clinical rhythms; measure task time as a quality attribute.
-* **Streaming analytics (freshness vs accuracy)**
-  * **Requirement:** “Dashboard freshness ≤ 5 s; accuracy ≥ 99.5%.”
-  * **Architecture response:** Event bus + stream processors + approximate windows.
-  * **Trade-offs:** **Latency** ↓, but approximate aggregation and **exactly-once** semantics get harder.
-  * **Pitfall:** Silent double counts on retries; accuracy drifts under backlog.
-  * **Fix:** Idempotent keys + de-dup store; watermarking + backpressure metrics; publish accuracy SLO with confidence intervals.
-* **Mobile field app (availability vs consistency)**
-  * **Requirement:** “Works offline; sync conflicts resolved < 10 s; data loss = 0.”
-  * **Architecture response:** Local-first storage, CRDT/OT conflict resolution, background sync.
-  * **Trade-offs:** **Availability** ↑; **consistency** becomes **eventual** ; **data model** complexity ↑.
-  * **Pitfall:** Underspecified conflict policy → surprising merges.
-  * **Fix:** Write explicit conflict scenarios (Stimulus → Response → Measure); surface user-resolvable conflicts with clear rules and logs.
-* **Legacy platform constraint (time-to-market vs modifiability)**
-  * **Requirement:** “Ship in 8 weeks; must run on Vendor DB X.”
-  * **Architecture response:** Strangler façade + anti-corruption layer + feature toggles.
-  * **Trade-offs:** **Time-to-market** ↑; **modifiability** and **performance** may degrade due to translation layers.
-  * **Pitfall:** Temporary façade becomes permanent, blocking modernization.
-  * **Fix:** Decision log with exit criteria; track “strangler removal” milestones; performance budget per call path with regression tests.
-
-## Conclusion (takeaways)
-
-* **Discover, don’t invent:** Requirements live in the domain; find them by understanding work.
-* **Two axes matter:** **What** it does and **how well** —both measurable.
-* **Owner value rules:** Scope is a value optimization problem.
-* **Architecture ⇄ Requirements:** Use quality scenarios, utility trees, and prototypes to keep them locked together.
-* **Write just-enough:** Precision and rationale beat page count.
-
-## Recommended Reading
-
-* Robertson, S., & Robertson, J. *Mastering the Requirements Process: Getting Requirements Right* (3rd ed.). Addison-Wesley, 2012.
-* Bass, L., Clements, P., & Kazman, R. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.
-* Rozanski, N., & Woods, E. *Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives* (2nd ed.). Addison-Wesley, 2012.
-* Wiegers, K., & Beatty, J. *Software Requirements* (3rd ed.). Microsoft Press, 2013.
-* ISO/IEC/IEEE 29148: *Systems and Software Engineering — Life Cycle Processes — Requirements Engineering* , 2018.
-
-A requirement is a precise statement of what a product must do or how well it must do it—measurable, justified, and traceable to owner value.
-
-## What is it?
-
-A requirement is **either** a capability the product must perform (**functional** ) **or** a quality it must exhibit (**non-functional/quality attribute** ) to be acceptable or attractive. Requirements already exist in the problem domain; our job is to **discover** them, not invent them.
-
-Requirements are valid when they’re (a) justified by intrinsic domain needs or by the client’s value case, (b) stated precisely enough to be **tested** , and (c) bounded by legitimate **constraints** (law, budget, platforms, deadlines).
-
-## Why it matters (owner value + risks)
-
-Getting requirements right maximizes **owner value** —benefit per cost and disruption—by aligning solution scope with real work. Weak requirements create expensive risks: feature churn, local optimizations that hurt the whole, fragile architectures, and untestable promises. Strong requirements sharpen trade-offs among **quality attributes** (performance, security, usability, modifiability) so architecture can be purposeful, not accidental.
-
-## Connection between Architecture and Requirements
-
-Architecture and requirements shape each other. Treat them as a feedback loop, not a handoff.
-
-* **Requirements drive structure:** Functional flows and **quality scenarios** (latency, availability, security) determine boundaries, protocols, deployment topology. Example: p99 latency ≤ 300 ms → caching, partitioning, async I/O.
-* **Architecture refines requirements:** Early choices expose new constraints and work clarifications. Example: event-driven backbone → require idempotency, exactly-once semantics become “must-haves.”
-* **Utility tree = prioritization engine:** Rank qualities (e.g., **availability** > **modifiability** > **cost** ) to focus architectural effort where it buys the most owner value.
-* **Trade-offs are architectural:** You can’t maximize everything. More **security** often taxes **usability** ; more **availability** can dent **latency** and **cost** . Make the trade visible and measurable.
-* **Prototypes as truth serum:** Architecturally significant spikes validate whether requirements are feasible at target measures (fit criteria) before you commit.
-* **Decision logs tie it together:** Record “requirement → decision → consequence” so future changes don’t break hidden assumptions.
-* **Continuous alignment:** As discovery updates requirements, revisit structure. As structure evolves, revisit measures. No “set and forget.”
+There’s a trade-off between **speed and understanding**. Iteration accelerates learning, but iteration without insight creates rework. The right balance comes from blending exploration with disciplined validation.
 
 ## How to do it
 
-* **Start-with-problem:** Frame the **business problem** and desired **change in work** before features. Tie each requirement to an outcome (risk: building a polished mismatch).
-* **Separate what vs how-well:** Capture **functional** behaviors and **fit criteria** for qualities separately. Numbers beat adjectives (risk: “fast” becomes untestable debt).
-* **Model the work:** Map tasks, events, and vocabulary. Use scenarios to surface missing behaviors (risk: stakeholder statements are partial and solution-biased).
-* **Optimize for owner value:** Identify the **owner** , quantify benefit/cost, and negotiate scope by value slices (risk: over-serving low-value niches).
-* **Make it measurable:** Add **fit criteria** to every requirement (e.g., “p95 ≤ 2s, 99.9% over 30 days”). If you can’t test it, it’s a **wish** , not a requirement.
-* **Elicit beyond “better version of now”:** Facilitate discovery (workshops, prototypes, counter-examples). Record assertions as **inputs** , not gospel (risk: locking in yesterday’s design).
-* **Use quality-attribute scenarios:** For each attribute, write **Stimulus → Response → Measure** (e.g., “During peak load, API responds ≤ 300 ms for 95% of requests”). Drive architecture with these levers.
-* **Tailor the process, not the rigor:** Work deliverable-first (goals, glossary, context, scenarios, fit criteria). Adjust depth/sequence to risk/complexity (risk: rigid ceremony or chaotic skipping).
-* **Document rationale lightly:** Capture the “why” once: decision logs linking requirements ⇄ architectural choices (risk: future changes break invisible assumptions).
-* **Continuously align with architecture:** Use **utility trees** to prioritize qualities, run **architectural spikes/prototypes** , and revisit trade-offs as knowledge changes (risk: drifting architecture–requirements gap).
+- **Start with the problem, not the spec.**\
+Treat requirements as discoveries, not inventions. Clarify the business problem before suggesting solutions.\
+*Quality tie: correctness.*
+
+- **Identify the owner and their value goals.**\
+The “user” isn’t always the one funding or disrupted by change. Focus on the owner’s notion of value and optimize for benefit–cost fit.\
+*Risk tie: misaligned scope.*
+
+- **Understand the current and future work.**\
+Observe how people work today and how they want to work tomorrow. Separate *what* the system must do from *how well* it must do it.\
+*Quality tie: completeness.*
+
+- **Validate problem–solution fit across the business.**\
+Don’t confuse local satisfaction with organizational value. Check ripple effects before implementation.\
+*Risk tie: partial optimization.*
+
+- **Write only what adds clarity and traceability.**\
+Documentation is useful when it sharpens thought, preserves rationale, or supports testing and maintenance—not when it fills pages.\
+*Quality tie: maintainability.*
+
+- **Treat stakeholder statements as partial truths.**\
+People describe symptoms or solutions, not needs. Challenge, derive, and reformulate until the real requirement emerges.\
+*Risk tie: ambiguity.*
+
+- **Follow an orderly, not rigid, process.**\
+A process defines deliverables and decisions; tailor its order and depth to context and risk.\
+*Quality tie: repeatability.*
+
+- **Blend discovery with iteration.**\
+Iterative delivery is effective only if discovery continues throughout. Write just enough, just in time—but never skip understanding.\
+*Risk tie: premature convergence.*
+
+- **Prioritize judgment over tools.**\
+No tool replaces critical thinking. Use frameworks and checklists to support—not substitute—analysis.\
+*Quality tie: decision integrity.*
+
+- **Make requirements measurable and testable.**\
+Attach **fit criteria** to every statement: numbers, thresholds, or observable outcomes. If you can’t test it, it’s not a requirement—it’s a wish.\
+*Quality tie: verifiability.*
+
+- **Expect your work to reshape thinking.**\
+Visual models and shared language often change how stakeholders see their problem. Encourage that evolution—it’s evidence of learning.\
+*Quality tie: stakeholder alignment.*
+
+## Functional, Non-Functional, and Constraints
+
+**Functional requirements** describe *observable behaviors*—what the system does to support the work. They are best linked to real business events.\
+Example: “Record a customer order,” not “Provide an order database.”
+
+**Non-functional requirements** describe *qualities*—performance, security, usability, legal compliance, look and feel. They are often harder to capture but crucial to success.\
+Example: “Process 1,000 orders per minute with <2% error.”
+
+**Constraints** define the *boundaries*—mandated technologies, legal deadlines, or existing platforms. Validate them as business truths, not arbitrary choices.
+
+## Architecture and Requirements
+
+Requirements shape architecture, and architecture refines requirements. The relationship is continuous and bidirectional.
+
+- **Requirements → Architecture:**\
+  Functional and quality attributes dictate the system’s structure and behavior.\
+  *Example:* A 2-second response-time requirement drives caching and load-balancing design.
+
+- **Architecture → Requirements:**\
+  Early architectural choices reveal gaps, conflicts, and new needs.\
+  *Example:* Adopting microservices forces explicit service boundaries and API definitions.
+
+## Managing the relationship
+
+- **Use quality attribute scenarios** to specify how the system should respond under certain conditions.\
+  *Stimulus → Response → Measurable outcome.*\
+  This ties architecture to observable behavior.
+
+- **Use utility trees** to prioritize competing quality attributes.\
+  Not every quality matters equally; prioritize what supports the owner’s value.
+
+- **Continuously align.**\
+  Architecture and requirements coevolve. Review them together as the system and understanding mature.
+
+- **Document architectural decisions** and the rationale behind them.\
+  Trace each back to its driving requirement for future validation and change control.
+
+- **Handle trade-offs explicitly.**\
+  Balancing qualities (e.g., security vs. usability) is part of the architect’s job. Make the priorities transparent.
 
 ## Examples / Pitfalls
 
-* **Trade-off example:** To meet **availability** (99.95%), we add redundancy and failover. **Cost/complexity ↑** , **latency** may ↑. Owner accepts latency p95 +50 ms to avoid revenue loss from downtime.
-* **E-commerce scenario:** “Handle 1,000 concurrent users with p95 ≤ 2 s.” Drives load balancer + distributed cache. Pitfall: forgetting cache consistency and **modifiability** costs.
-* **Healthcare constraint:** Regulatory compliance mandates encryption + access controls. Pitfall: security hardening impacts **usability** ; mitigate with task-fit workflows and SSO.
-* **Anti-pattern:** 120-page spec with vague adjectives. Nobody reads it, nobody can test it. Replace with concise requirements + fit criteria + examples.
+#### 1. Building features, not solving problems
 
-## Conclusion (takeaways)
+**Summary:** Teams deliver code fast but miss the real business need.
+**Concrete pass:** A telecom company added a self-service portal because “customers wanted more control.” After release, call volumes didn’t drop—customers still phoned support to fix billing errors the portal couldn’t handle.
+**Why it works:** Demonstrates that functional completeness without problem understanding yields low business value.
 
-* **Discover, don’t invent:** Requirements live in the domain; find them by understanding work.
-* **Two axes matter:** **What** it does and **how well** —both measurable.
-* **Owner value rules:** Scope is a value optimization problem.
-* **Architecture ⇄ Requirements:** Use quality scenarios, utility trees, and prototypes to keep them locked together.
-* **Write just-enough:** Precision and rationale beat page count.
+#### 2. The illusion of clarity
+
+**Summary:** Requirements sound precise but hide untestable adjectives.
+**Concrete pass:** A healthcare app spec demanded a “user-friendly interface.” When tested, every stakeholder had a different interpretation—nurses wanted speed, doctors wanted simplicity, and admins wanted data visibility.
+**Why it works:** Shows why measurable fit criteria are essential for testability and shared understanding.
+
+#### 3. Architecture unmoored from requirements
+
+**Summary:** Architectural enthusiasm replaces alignment.
+**Concrete pass:** A startup adopted microservices for “scalability,” yet user load was minimal. Deployment overhead and debugging complexity slowed releases, and costs skyrocketed.
+**Why it works:** Highlights how explicit, measurable requirements must justify architectural choices.
+
+## Conclusion
+
+- Requirements are **discoveries**, not documents.
+- Always start with **problem understanding** and **owner value.**
+- Separate **what** (functionality) from **how well** (quality).
+- Keep requirements **measurable** and **traceable** to architecture.
+- Expect both **requirements and architecture** to evolve as understanding deepens.
 
 ## Recommended Reading
 
-* Robertson, S., & Robertson, J. *Mastering the Requirements Process: Getting Requirements Right* (3rd ed.). Addison-Wesley, 2012.
-* Bass, L., Clements, P., & Kazman, R. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.
-* Rozanski, N., & Woods, E. *Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives* (2nd ed.). Addison-Wesley, 2012.
-* Wiegers, K., & Beatty, J. *Software Requirements* (3rd ed.). Microsoft Press, 2013.
-* ISO/IEC/IEEE 29148: *Systems and Software Engineering — Life Cycle Processes — Requirements Engineering* , 2018.
+#### Books
+
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley, 2012.\
+  - **Chapter 1: Some Fundamental Truths**\
+    Establishes that requirements are discovered—not invented—and must start from the real business problem. Optimizes for the owner’s value, separates *what* from *how well*, and warns that shipping software isn’t the same as solving the problem. Advocates write only when it adds clarity and traceability, treating stakeholder input as partial truths, following an orderly but adaptable process, blending discovery with iteration, and rejecting “silver bullets.” The text emphasizes measurability through fit criteria and notes that modeling and shared vocabulary reshape stakeholder thinking. Includes a clear definition of requirements across three axes—functional behavior, quality attributes, and constraints—with guidance to justify each by intrinsic need or owner value.\
+  - **Volere Requirements Process (preview)**\
+    Presents a deliverable-driven, tailorable process for discovering, verifying, and documenting requirements. The emphasis is on outcomes over procedures: use the outline as a map, adjust sequence and depth to risk and context, and let deliverables steer effort and fidelity.
+
+- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.\
+  - **Chapter 16: Architecture and Requirements**\
+    Explores the two-way relationship between requirements and architecture. Requirements (functional and quality attributes) shape structure and behavior; architectural decisions, in turn, clarify and constrain requirements. This text introduces quality-attribute scenarios (stimulus, environment, response, and measurable criteria) and utility trees to prioritize competing qualities. Stresses continuous alignment, explicit trade-offs (e.g., security vs. usability), and maintaining an architectural decision log that traces choices back to their driving requirements. Includes concrete alignment examples (e-commerce performance; healthcare compliance) with acknowledged trade-offs.
