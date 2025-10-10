@@ -1,5 +1,5 @@
 ---
-weight: 1500
+weight: 1600
 title: "Management"
 description: "This section explains project management tasks like planning, estimating, and risk assessment, and people management skills such as mentoring and interviewing."
 icon: "timeline"
