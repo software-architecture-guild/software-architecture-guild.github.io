@@ -1,5 +1,5 @@
 ---
-weight: 220
+weight: 12
 title: "How to use this Guide"
 description: "This article explains who should use this guide and how to use it effectively."
 icon: "article"

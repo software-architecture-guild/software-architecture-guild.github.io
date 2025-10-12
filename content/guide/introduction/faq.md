@@ -1,5 +1,5 @@
 ---
-weight: 280
+weight: 13
 title: "Frequently Asked Questions"
 description: "This article addresses frequently asked questions."
 icon: "article"
@@ -13,32 +13,32 @@ toc: true
 ##### What is a software architecture, and why does it matter in development?  
 
 Software architecture defines a system's fundamental structure, guiding its scalability, maintainability, and performance. A well-designed architecture ensures that software can evolve effectively over time.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
 
 ##### What are architecture characteristics, and how do they impact development?  
 
 Architecture characteristics, such as scalability, security, and performance, define the system's non-functional attributes. These characteristics influence critical design decisions and impact how a system meets business and technical goals.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
 
 ##### What are the main software architecture styles, and how do they affect design?  
 
 Different architecture styles, such as microservices, monoliths, and event-driven systems, shape how applications are structured and how components interact. Choosing the right style affects scalability, maintainability, and development speed.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/fundamentals/architecture_styles/" %}}).  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
 
 ##### How can visualizing architecture help me understand system components better?  
 
 Visualization techniques like diagrams and modeling help developers and architects understand system structure, dependencies, and workflows, making it easier to communicate design decisions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
 
 ##### How does the architecture process support the development lifecycle?  
 
 The architecture process ensures that design decisions align with business goals and technical requirements, providing a structured approach to system evolution, risk management, and quality assurance.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
 
 ##### What does good architecture documentation look like for developers?  
 
 Clear and structured architecture documentation helps developers understand design decisions, constraints, and system behavior, improving collaboration and maintainability.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
 
 ##### How can I work better with my team to deliver software?  
 
@@ -145,32 +145,32 @@ For more information, explore [Competencies -> Communication -> Multi Culture]({
 ##### What are the key principles of software architecture?  
 
 Software architecture is built on modularity, scalability, maintainability, and flexibility, ensuring that systems are structured for long-term success.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
 
 ##### How can architects prioritize architectural characteristics effectively?  
 
 Prioritizing scalability, security, and performance requires understanding business needs, system constraints, and trade-offs between quality attributes.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
 
 ##### How do different architecture styles address system requirements?  
 
 Architecture styles like monoliths, microservices, and event-driven designs influence system behavior, performance, and maintainability, each suited to different application needs.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/fundamentals/architecture_styles/" %}}).  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
 
 ##### What are the best practices for visualizing software architecture?  
 
 Effective visualization includes using diagrams, flowcharts, and modeling languages to clearly communicate system design, dependencies, and interactions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
 
 ##### What are the steps to defining good architecture?  
 
 A solid architecture process includes requirement analysis, choosing the proper architectural patterns, evaluating trade-offs, and continuously refining designs based on feedback.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
 
 ##### How should architecture be structured?  
 
 Good architecture consists of clear documentation, well-defined system components, and an approach that balances flexibility, scalability, and maintainability.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
 
 ##### How can architects and developers collaborate better?  
 
@@ -277,32 +277,32 @@ For more information, explore [Competencies -> Communication -> Multi Culture]({
 ##### Why is architecture important?  
 
 Architecture provides a structured approach to designing scalable, maintainable, and efficient systems that meet business and technical requirements.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
 
 ##### Why do architectural characteristics matter for business goals?  
 
 Architecture characteristics such as performance, security, and scalability directly impact business success by ensuring systems meet operational and strategic needs.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
 
 ##### How should architecture styles align with business needs?  
 
 Choosing the right architecture style ensures system design supports business objectives, balancing flexibility, cost, and performance requirements.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/fundamentals/architecture_styles/" %}}).  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
 
 ##### Why is visualizing architecture helpful for teams?  
 
 Visual representations improve collaboration, making it easier for teams to understand system components, dependencies, and interactions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
 
 ##### How does engaging stakeholders improve architecture outcomes?  
 
 Involving stakeholders ensures architecture decisions align with business goals, reducing risks and increasing team adoption.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
 
 ##### What should architecture documentation include?  
 
 Good documentation captures key design decisions, system components, dependencies, and trade-offs, making it easier for teams to build and maintain software.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
 
 ##### What makes a team?  
 

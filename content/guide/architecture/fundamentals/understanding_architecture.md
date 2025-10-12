@@ -1,5 +1,5 @@
 ---
-weight: 310
+weight: 30
 title: "Understanding Architecture"
 description: "This article will help you to develop a foundational understanding of Architecture and its distinction from design."
 icon: "article"

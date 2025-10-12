@@ -1,5 +1,5 @@
 ---
-weight: 210
+weight: 11
 title: "Welcome to the Guide"
 description: "This article outlines the purpose and reasons behind the creation of this guide."
 icon: "article"

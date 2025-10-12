@@ -1,5 +1,5 @@
 ---
-weight: 330
+weight: 40
 title: "Architecture Styles"
 description: "This article explains the different types of architectures and how to apply them."
 icon: "school"
@@ -24,25 +24,25 @@ Monolithic architecture refers to a design where all system components are tight
 
 A traditional style that organizes the system into horizontal layers, such as presentation, business logic, and data access. Each layer has a distinct role and communicates only with adjacent layers. While it promotes separation of concerns, it can become rigid and difficult to scale as complexity increases.
 
-{{< image src="../../../images/fundamentals/styles.layered.drawio.png" alt="Layered Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.layered.drawio.png" alt="Layered Architecture" >}}
 
 ### Modular Architecture
 
 In this style, an application is structured into independent, **domain-driven** modules while deployed as a single unit. Unlike traditional monoliths, it enforces clear boundaries and loose coupling between components. Each module encapsulates business logic, interacts via well-defined interfaces, and improves maintainability and scalability. While keeping deployment simple, it allows gradual migration to a distributed system if needed. This style balances simplicity and structure, offering microservices-like organization without added complexity.
 
-{{< image src="../../../images/fundamentals/styles.modular.drawio.png" alt="Modular Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.modular.drawio.png" alt="Modular Architecture" >}}
 
 ### Pipeline Architecture
 
 In this style, data flows through a sequence of processing stages, where each stage performs specific operations before passing the data to the next stage. It is ideal for tasks requiring sequential processing, such as media streaming or batch data processing, but can face challenges in scaling efficiently.
 
-{{< image src="../../../images/fundamentals/styles.pipeline.drawio.png" alt="Pipeline Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.pipeline.drawio.png" alt="Pipeline Architecture" >}}
 
 ### Microkernel Architecture
 
 This style consists of a core system (the microkernel) that provides minimal functionality, with additional features implemented as plug-ins. It is ideal for highly customizable systems, like product platforms, but can lead to challenges in managing plug-in dependencies and integration.
 
-{{< image src="../../../images/fundamentals/styles.micro-kernel.drawio.png" alt="Microkernel Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.micro-kernel.drawio.png" alt="Microkernel Architecture" >}}
 
 ---
 
@@ -54,31 +54,31 @@ Distributed architecture involves splitting the system into smaller, independent
 
 SOA consists of larger, integrated services that communicate over a network. It is widely used in large enterprises to promote reuse and standardization. SOA supports scalability but can become a "monolithic SOA" if not properly managed.
 
-{{< image src="../../../images/fundamentals/styles.service-based.drawio.png" alt="Service-Oriented Architecture (SOA)" >}}
+{{< image src="/images/architecture/fundamentals/styles.service-based.drawio.png" alt="Service-Oriented Architecture (SOA)" >}}
 
 ### Event-Driven Architecture
 
 This style decouples components by allowing them to communicate asynchronously through events. When one component emits an event, other components react to it. It is ideal for systems requiring scalability and flexibility but can introduce challenges in managing event flows and ensuring consistency.
 
-{{< image src="../../../images/fundamentals/styles.event-driven.drawio.png" alt="Event-Driven Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.event-driven.drawio.png" alt="Event-Driven Architecture" >}}
 
 ### Space-Based Architecture
 
 Space-based architecture distributes workloads across multiple nodes to handle large amounts of data and high concurrency. It is used in systems requiring high scalability and availability, such as online services with heavy traffic. However, managing data distribution and synchronization can be complex.
 
-{{< image src="../../../images/fundamentals/styles.space-based.drawio.png" alt="Space-Based Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.space-based.drawio.png" alt="Space-Based Architecture" >}}
 
 ### Orchestration-Driven Architecture
 
 In this architecture, a central orchestrator controls the interaction and coordination between services. This style provides strong control and visibility into workflows but can introduce bottlenecks at the orchestrator level, limiting scalability.
 
-{{< image src="../../../images/fundamentals/styles.orchestration-driven.drawio.png" alt="Orchestration-Driven Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.orchestration-driven.drawio.png" alt="Orchestration-Driven Architecture" >}}
 
 ### Microservices Architecture
 
 Microservices divide the system into small, independently deployable services, each responsible for a specific functionality. These services communicate over APIs or messaging systems and can be scaled independently. Microservices offer high flexibility and scalability but come with increased operational complexity, including challenges with distributed data management and latency.
 
-{{< image src="../../../images/fundamentals/styles.microservices.drawio.png" alt="Microservices Architecture" >}}
+{{< image src="/images/architecture/fundamentals/styles.microservices.drawio.png" alt="Microservices Architecture" >}}
 
 ---
 
@@ -96,7 +96,7 @@ Understanding the system's **functional** and **non-functional requirements** is
 * **Scalability**: If the system must handle growing traffic or user demand, **microservices** or **space-based architectures** might be better suited, as they allow independent scaling of components.
 * **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures.
 
-{{< image-external src="../../../images/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
+{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
 
 ### Team Expertise and Resources
 
