@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 10
 title: "Introduction"
 description: "Introduction into Software Architecture Guide"
 icon: "home"
