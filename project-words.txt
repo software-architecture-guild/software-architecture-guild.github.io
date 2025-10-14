@@ -14,6 +14,7 @@ Cognos
 colinwilson
 Datastage
 Doerr
+endline
 Eoin
 Excalidraw
 Fastly
@@ -46,7 +47,9 @@ Lucidchart
 markdownlint
 Microkernel
 Misaligning
+misprioritized
 MTBF
+MTTR
 Norming
 Oleg
 OLTP
@@ -57,9 +60,11 @@ Pais
 Pereira
 Profitero
 psychographic
+pytest
 Radioelectronics
 rebalances
 relref
+replaceability
 roadmaps
 Rozanski
 runability
