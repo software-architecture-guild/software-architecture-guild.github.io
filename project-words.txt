@@ -16,6 +16,7 @@ colinwilson
 Datastage
 decisioning
 Doerr
+endline
 Eoin
 Excalidraw
 Fastly
@@ -50,7 +51,9 @@ Lucidchart
 markdownlint
 Microkernel
 Misaligning
+misprioritized
 MTBF
+MTTR
 Norming
 Oleg
 OLTP
@@ -63,9 +66,11 @@ parallelizable
 Pereira
 Profitero
 psychographic
+pytest
 Radioelectronics
 rebalances
 relref
+replaceability
 roadmaps
 Rozanski
 runbooks
