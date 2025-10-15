@@ -1,7 +1,7 @@
 ---
 weight: 114
 title: "Security"
-description: "This article explains what is Security and how to achieve it."
+description: "This article explains what security is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -80,7 +80,7 @@ These contexts highlight how the properties, scenarios, and tactics come togethe
 
 ## Conclusion
 
-Security protects system assets and services from malicious attacks and accidental misuse while preserving essential functionality. Effective designs combine resistance, detection, and recovery tactics aligned to clear threat scenarios, supported by best practices, incident response planning, and targeted testing. Because security decisions affect performance, usability, cost, and modifiability, architects must balance protections with practical constraints and keep mechanisms usable so they are consistently applied.
+Security protects system assets and services from malicious attacks and accidental misuse while preserving essential functionality. Effective designs combine resistance, detection, and recovery tactics aligned to clear threat scenarios, supported by best practices, incident response planning, and targeted testing. Because security decisions affect performance, usability, cost, and modifiability, architects must balance protections with practical constraints and ensure mechanisms remain usable to be consistently applied.
 
 ## Recommended Reading
 
@@ -88,4 +88,4 @@ Security protects system assets and services from malicious attacks and accident
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 9: Security**\
-    Informed this article’s definition and key properties, general scenario structure (stimulus, source, environment, artifact, response, response measure), architectural tactics grouped as resistance, detection, and recovery, the design checklist, trade-offs, and practice examples.
+    Defines security and its general scenario structure, then organizes architectural tactics into resistance, detection, and recovery, with guidance on trade-offs and a checklist for evaluating designs against security goals.

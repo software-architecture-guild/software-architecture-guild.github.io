@@ -13,7 +13,7 @@ authors:
 
 Quality attribute modeling and analysis predict whether the architecture will meet its quality requirements, expose problems and trade-offs early, and guide decision-making while validating assumptions. The outcome increases confidence in performance and quality, reveals architectural weaknesses, and creates a clearer basis for stakeholder communication.
 
-## A Practical Flow for Quality Attribute Evaluation
+## A Practical Flow for Evaluation
 
 - **Elicit quality attribute requirements:** define specific, measurable scenarios (for example, “handle 1000 concurrent users with a 2-second maximum response time”).
 - **Create architectural models:** represent structure, components, interactions, and deployments via module, component-and-connector, and allocation views.
@@ -27,7 +27,7 @@ Quality attribute modeling and analysis predict whether the architecture will me
 
 Scenarios turn vague quality goals into precise, testable statements about system behavior. A scenario names a **stimulus**, its **source**, the **environment** in which it occurs, the **artifact** that is affected, and the expected **response** and **measure**. Working from general scenarios for each attribute helps you cover typical conditions (for example, a performance spike or a component failure) and then specialize them for your system.
 
-Use scenarios to connect requirements to architectural views: a performance scenario can be traced to a component-and-connector view to see where queuing or contention may happen; a modifiability scenario ties to a module view to see which responsibilities concentrate change. The primary benefit is **predictability**—you can reason about whether the architecture, as modeled, can meet the stated response and measure before committing to costly implementation.
+Use scenarios to connect requirements to architectural views: a performance scenario can be traced to a component-and-connector view to identify where queuing or contention may occur; a modifiability scenario ties to a module view to determine which responsibilities are most affected by change. The primary benefit is **predictability**—you can reason about whether the architecture, as modeled, can meet the stated response and measure before committing to costly implementation.
 
 - **Good for:** performance, availability, modifiability, security, usability.  
 - **Inputs:** measurable quality requirements and the relevant architectural view(s).  
@@ -70,7 +70,7 @@ Prototypes are focused implementations used to **validate assumptions** that are
 Tie prototypes to the views you aim to validate: a performance prototype might instantiate a critical message path from the component-and-connector view; a usability prototype can explore key workflows without full backend integration. The goal is not completeness but **evidence**—confirming that key quality claims are plausible before scaling up.
 
 - **Good for:** usability and security (experience and hardening), performance (hot paths), integrability (API contracts).  
-- **Inputs:** a narrowly scoped question, minimal architecture slice, realistic data or interactions.  
+- **Inputs:** a narrowly scoped question, a minimal architecture slice, realistic data, or interactions.  
 - **Outputs:** empirical measurements, usability findings, or security observations that confirm or refute assumptions and inform the next architectural revision.
 
 ## Analysis Techniques by Attribute
@@ -87,7 +87,7 @@ Performance analysis connects measurable scenarios to the parts of the architect
 
 Availability analysis evaluates how faults combine into outages and how tactics like redundancy and recovery affect service continuity. Begin by framing top-level failure scenarios (stimulus, environment, affected artifact, response, and measure), then examine how failures propagate through components and deployments.
 
-- **Fault tree analysis:** Start from the undesirable top event (for example, system outage) and decompose contributing faults through logical gates. This exposes single points of failure and common-cause risks so you can prioritize mitigations such as redundancy or isolation.
+- **Fault tree analysis:** Start from the undesirable top event (for example, system outage) and decompose contributing faults through logical gates. This exposes single points of failure and common-cause risks, allowing you to prioritize mitigations such as redundancy or isolation.
 - **Reliability block diagrams:** Model alternative and parallel structures to quantify how replication, failover, or recovery mechanisms change the probability of service continuity.
 - **Markov models:** Capture probabilistic transitions among states such as “up,” “degraded,” and “down” with repair rates. Compare availability impacts of alternative designs (for example, active-active vs. active-passive) using steady-state results.
 
@@ -139,7 +139,7 @@ Scalability analysis examines how the system maintains required behavior as load
 - **Simulation of growth patterns:** Explore “what-if” situations (bursts, steady ramps, periodic peaks) to identify capacity thresholds and to compare alternative deployment strategies before committing changes.
 - **Path and resource analysis:** Map hot paths to connectors and deployments to locate shared bottlenecks (for example, shared caches or databases) and validate the effectiveness of tactics like distributed caching or database partitioning by re-running the scenarios.
 
-## Design Checklist for Modeling and Analysis
+## Design Checklist
 
 - **Identify requirements:** determine which attributes are critical to success and capture measurable scenarios.
 - **Balance trade-offs:** evaluate impacts across attributes before committing to tactics.
@@ -160,7 +160,7 @@ Scalability analysis examines how the system maintains required behavior as load
 
 ## Conclusion
 
-Modeling and analysis make quality attributes actionable by tying measurable scenarios to architectural views and fit-for-purpose techniques. By simulating behavior, analyzing failure and change impacts, and testing with users and threats in mind, architects validate assumptions and refine designs early. Extending attention to deployability, scalability, reusability, integrability, and safety surfaces practical trade-offs that shape robust systems. With a repeatable flow, targeted tools, and explicit scenarios, teams can proactively steer architectures toward their quality goals.
+Modeling and analysis make quality attributes actionable by tying measurable scenarios to architectural views and fit-for-purpose techniques. By simulating behavior, analyzing the impacts of failure and change, and testing with users and threats in mind, architects validate assumptions and refine designs early. Extending attention to deployability, scalability, reusability, integrability, and safety surfaces practical trade-offs that shape robust systems. With a repeatable flow, targeted tools, and explicit scenarios, teams can proactively steer architectures toward their quality goals.
 
 ## Recommended Reading
 
@@ -168,6 +168,6 @@ Modeling and analysis make quality attributes actionable by tying measurable sce
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 14: Quality Attribute Modeling and Analysis**\
-    Informs the end-to-end flow for eliciting scenarios, selecting views, choosing techniques, and iterating analysis and refinement across performance, availability, modifiability, security, and usability.  
+    This chapter informs the end-to-end flow for eliciting scenarios, selecting views, choosing techniques, and iterating analysis and refinement across performance, availability, modifiability, security, and usability.  
   - **Chapter 12: Other Quality Attributes**\
-    Expands the attribute set with deployability, scalability, reusability, integrability, and safety, including scenarios, tactics, and the trade-offs that accompany them.
+    This chapter expands the attribute set with deployability, scalability, reusability, integrability, and safety, including scenarios, tactics, and the trade-offs that accompany them.
