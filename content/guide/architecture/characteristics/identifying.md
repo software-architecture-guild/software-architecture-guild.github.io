@@ -19,7 +19,7 @@ Architectural characteristics shape design decisions and the trade-offs made alo
 
 ## Approaches to Identification
 
-Effective identification blends stakeholder engagement with contextual awareness. Stakeholders surface business drivers and operational expectations; architects translate those into architectural concerns and make the stakes visible. Context anchors the work: a banking application emphasizes security and reliability, while a social platform stresses scalability and low latency. The same attribute can carry different weight depending on domain, purpose, and constraints.
+Effective identification blends stakeholder engagement with contextual awareness. Stakeholders surface business drivers and operational expectations, and architects translate these into architectural concerns, making the stakes visible. Context anchors the work: a banking application emphasizes security and reliability, while a social platform stresses scalability and low latency. The same attribute can carry different weight depending on the domain, purpose, and constraints.
 
 ## Techniques to Surface Characteristics
 
@@ -49,7 +49,7 @@ Architects balance these based on business needs, emphasizing the attributes tha
 
 ## Common Pitfalls
 
-Ambiguity turns characteristics into slogans rather than actionable guidance; each characteristic must be well-defined and measurable. Overgeneralization ignores context and leads to misfit solutions. Excluding stakeholders risks misalignment between architecture and business goals. Avoid these by insisting on clarity, tailoring to the system’s realities, and keeping stakeholder involvement continuous.
+Ambiguity turns characteristics into slogans rather than actionable guidance; each characteristic must be well-defined and measurable. Overgeneralization ignores context and leads to misfit solutions. Excluding stakeholders risks misalignment between the architecture and business goals. Avoid these by insisting on clarity, tailoring to the system’s realities, and keeping stakeholder involvement continuous.
 
 ## Documenting Decisions
 
@@ -78,4 +78,4 @@ Identifying architectural characteristics is a collaborative, context-driven act
 
 - Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (1st ed.). O’Reilly Media, 2020.  
   - **Chapter 5: Identifying Architectural Characteristics**\
-    Informed this article’s focus on collaborative identification with stakeholders, context-driven emphasis by domain, structured techniques such as quality attribute scenarios, interviews, surveys, and checklists, explicit prioritization methods (e.g., MoSCoW, weighted scoring), trade-off analysis, documentation via ADRs, and the need to revisit characteristics as systems evolve.
+    This chapter focuses on collaborative identification with stakeholders, context-driven emphasis by domain, and structured techniques such as quality attribute scenarios, interviews, surveys, and checklists. It also covers explicit prioritization methods (e.g., MoSCoW, weighted scoring), trade-off analysis, documentation via ADRs, and the need to revisit characteristics as systems evolve.

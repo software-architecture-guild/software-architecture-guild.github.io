@@ -1,7 +1,7 @@
 ---
 weight: 110
 title: "Availability"
-description: "This article explains what is Availability and how to achieve it."
+description: "This article explains what availability is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Availability is the readiness of a system to perform its functions at any given time. In domains that demand high reliability—financial services, healthcare, and online platforms—availability becomes a central concern because the system must continue delivering its services even in the face of failures. It is commonly expressed as a percentage of operational time over total time; for example, “five nines” (99.999%) translates to only a few minutes of downtime per year.
+Availability is the readiness of a system to perform its functions at any given time. In domains that demand high reliability, such as financial services, healthcare, and online platforms, availability becomes a central concern because the system must continue delivering its services even in the face of failures. It is commonly expressed as a percentage of operational time over total time; for example, “five nines” (99.999%) translates to only a few minutes of downtime per year.
 
 ## Specifying Availability with Scenarios
 
-Availability benefits from explicit scenarios that make requirements measurable and testable. A scenario names the failure stimulus and its source, states the environment and affected artifact, and defines the expected response and response measure. Typical stimuli include hardware crashes, software bugs, or malicious attacks; environments range from normal operation to peak traffic; artifacts include databases or network links; responses encompass detection, failover, restart, or rollback; response measures include recovery time and data loss thresholds.
+Availability benefits from explicit scenarios that make requirements measurable and testable. A scenario names the failure stimulus and its source, states the environment and affected artifact, and defines the expected response and response measure. Typical stimuli include hardware crashes, software bugs, or malicious attacks. Environments range from regular operation to peak traffic. Artifacts include databases or network links. Responses encompass detection, failover, restart, or rollback. Response measures include recovery time and data loss thresholds.
 
 ## Factors That Influence Availability
 
@@ -67,4 +67,4 @@ Availability ensures a system continues to provide its services despite faults o
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 5: Availability**\
-    Informed this article’s definition and scenario structure (stimulus, source, environment, artifact, response, response measure), the factors from faults to failures, the tactics across prevention, detection, recovery, and repair, the trade-offs with performance, cost, and security, and the design considerations around requirements, redundancy, detection, failover, data integrity, and failure testing.
+    Defines availability as a system’s readiness to deliver service and uses scenario-based specifications (stimulus, source, environment, response) to express and evaluate how a system continues operating in the presence of faults.

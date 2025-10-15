@@ -1,7 +1,7 @@
 ---
 weight: 116
 title: "Usability"
-description: "This article explains what is Usability and how to achieve it."
+description: "This article explains what usability is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -36,7 +36,7 @@ Usability enhances user productivity and satisfaction, reduces training and supp
 - **Simplify user interfaces**: Keep interaction intuitive and straightforward; maintain consistency in terminology, layouts, and workflows; provide immediate, meaningful feedback.  
 - **Enhance learnability**: Reduce the effort to learn; offer inline help, tooltips, and tutorials; use progressive disclosure so advanced features appear when needed.  
 - **Manage user errors**: Prevent mistakes and support recovery; display clear, actionable error messages; validate input to block invalid actions.  
-- **Improve responsiveness**: React quickly to user actions; show loading indicators during delays; prioritize performance for common tasks.  
+- **Improve responsiveness**: React quickly to user actions; show loading indicators during delays; prioritize performance for everyday tasks.  
 - **Enable customization and personalization**: Let users tailor themes, layouts, and navigation; persist preferences across sessions.
 
 ## Navigating Trade-offs
@@ -47,11 +47,11 @@ Usability enhances user productivity and satisfaction, reduces training and supp
 
 ## A Practical Design Checklist
 
-- **User goals**: What tasks do users want to accomplish and how does the system support them.  
-- **Interface design**: Is the interface intuitive, consistent, and visually coherent.  
-- **Error handling**: Does the system prevent, detect, and help users recover from errors.  
-- **Performance**: Does the system respond quickly to user actions.  
-- **Accessibility**: Is the system usable with assistive technologies and keyboard navigation.  
+- **User goals**: What tasks do users want to accomplish, and how does the system support them?  
+- **Interface design**: Is the interface intuitive, consistent, and visually coherent?  
+- **Error handling**: Does the system prevent, detect, and help users recover from errors?  
+- **Performance**: Does the system respond quickly to user actions?  
+- **Accessibility**: Is the system usable with assistive technologies and keyboard navigation?  
 - **Testing**: Are usability tests conducted with real users to surface and address pain points.
 
 ## Usability in Practice
@@ -70,4 +70,4 @@ Usability determines how effectively users can engage with and benefit from a sy
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 11: Usability**\
-    Informed this article’s definition and importance, general scenario elements (stimulus, source, environment, artifact, response, response measure), usability tactics (support user initiative, simplify interfaces, enhance learnability, manage errors, improve responsiveness, enable customization), trade-offs, checklist, and practice examples.
+    Defines usability and uses scenario-based specification (stimulus, source, environment, artifact, response, response measure) to make it testable. Summarizes tactics—support user initiative, simplify interfaces, enhance learnability, manage errors, improve responsiveness, enable customization—along with key trade-offs and a checklist for evaluation.

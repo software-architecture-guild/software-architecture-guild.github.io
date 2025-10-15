@@ -46,7 +46,7 @@ Automation ensures measurement is continuous and trustworthy.
 
 ## Governing Architecture Characteristics
 
-Governance aligns delivery with architectural intent through lightweight standards, automated policy, and transparent exceptions. The aim is to make desired characteristics—such as scalability, performance, availability, security, testability, and modifiability—**observable, enforceable, and adaptable** throughout the lifecycle. Effective governance uses the same ingredients as measurement (clear metrics, thresholds, and continuous feedback) but adds **explicit decision records** and a **managed exception process** so changes remain intentional rather than accidental.
+Governance aligns delivery with architectural intent through lightweight standards, automated policy, and transparent exceptions. The aim is to make desired characteristics—such as scalability, performance, availability, security, testability, and modifiability—**observable, enforceable, and adaptable** throughout the lifecycle. Effective governance uses the same ingredients as measurement (clear metrics, thresholds, and continuous feedback) but adds **explicit decision records** and a **managed exception process**. Hence, changes remain intentional rather than accidental.
 
 ##### Fitness Functions as Policy
 
@@ -54,13 +54,13 @@ Fitness functions operationalize architecture as code. They encode thresholds an
 
 - **What they enforce:** target latencies and throughput, scaling behavior under load, uptime and recovery objectives, absence of critical vulnerabilities, test execution expectations, and structural rules that affect modifiability.\
 - **Where they run:** pre-merge checks, nightly suites, performance/stress environments, and monitored runtime paths for critical flows.\
-- **Outcomes:** immediate feedback to developers, early detection of drift, and consistent application of architectural standards without manual gate keeping.
+- **Outcomes:** immediate feedback to developers, early detection of drift, and consistent application of architectural standards without manual gatekeeping.
 
 When a fitness function fails (for example, 95th percentile latency exceeds the threshold), governance requires **either** remediation (tune, refactor, or reconfigure) **or** a documented exception via the variance process. This keeps policy strict on outcomes while flexible on how teams reach them.
 
 ##### Architecture Decision Records (ADRs)
 
-ADRs capture **what** was decided, **why** it was chosen, and **which trade-offs** were accepted for a characteristic. They connect metrics and thresholds to the business goals they serve and provide continuity as teams and systems evolve.
+ADRs capture **what** was decided, **why** it was chosen, and **which trade-offs** were accepted for a characteristic. They connect metrics and thresholds to the business goals they serve, providing continuity as teams and systems evolve.
 
 - **Content to capture:** problem context, alternatives considered, chosen option, rationale, expected impact on characteristics, and any follow-up measurements or thresholds.\
 - **Lifecycle:** propose → review → accept → monitor. As measurements come in, ADRs can be amended or superseded to reflect new evidence.\
@@ -108,7 +108,7 @@ In combination, fitness functions, ADRs, and variance models create a closed loo
 
 ##### Microservices Architecture
 
-Distributed services introduce many places where latency, errors, and inconsistencies can hide. Make the desired cross-service behavior explicit, measure it continuously, and encode policy so drift is caught early.
+Distributed services introduce many places where latency, errors, and inconsistencies can hide. Make the desired cross-service behavior explicit, measure it continuously, and encode policy so that drift is caught early.
 
 - **What to measure:** end-to-end latency percentiles for critical journeys, per-service throughput and error rates, and data consistency between services after asynchronous operations.\
   *Example:* 95th percentile end-to-end latency ≤ 200 ms for “Place Order”; per-service error rate < 0.5%.
@@ -119,7 +119,7 @@ Distributed services introduce many places where latency, errors, and inconsiste
 
 ##### E-Commerce System
 
-Traffic is busy and revenue-critical paths are short but sensitive. Measurement focuses on protecting customer experience and transaction integrity during peaks; governance keeps optimizations from undermining availability.
+Traffic is busy, and revenue-critical paths are short but sensitive. Measurement focuses on protecting customer experience and transaction integrity during peaks,  while governance ensures optimizations do not undermine availability.
 
 - **What to measure:** uptime, page load time for core pages, and transaction throughput across peak windows; inventory and pricing data freshness where asynchronous updates are used.\
   *Example:* 99.99% monthly availability; home/search/product/detail pages p95 < 200 ms; successful checkouts per minute during promotion ≥ baseline.
@@ -130,7 +130,7 @@ Traffic is busy and revenue-critical paths are short but sensitive. Measurement 
 
 ##### Financial Application
 
-Security, availability, and auditability dominate. Measurement provides objective evidence for controls and recovery behavior; governance ensures decisions remain traceable and compliant.
+Security, availability, and auditability are the key priorities. Measurement provides objective evidence for controls and recovery behavior; governance ensures decisions remain traceable and compliant.
 
 - **What to measure:** vulnerability counts by severity, authentication/authorization success and failure patterns, response times for regulated workflows, and recovery metrics (MTTR) for critical services.\
   *Example:* zero critical vulnerabilities in production; regulated transaction p95 < 200 ms; defined MTTR targets for core services.
@@ -172,4 +172,4 @@ Measuring and governing architecture characteristics keeps quality goals actiona
 
 - Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (2nd ed.). O’Reilly Media, 2024.  
   - **Chapter 6: Measuring and Governing Architecture Characteristics**\
-    Informs this article’s focus on defining attribute-specific metrics, implementing automated fitness functions, integrating measurements into CI/CD, and using lightweight governance (ADRs and variances) to balance enforcement with flexibility—applied exactly as outlined in the provided notes.
+    This chapter focuses on defining attribute-specific metrics, implementing automated fitness functions, integrating measurements into CI/CD, and using lightweight governance (ADRs and variances) to balance enforcement with flexibility—applied exactly as outlined in the provided notes.

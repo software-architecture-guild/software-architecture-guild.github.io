@@ -17,7 +17,7 @@ Architectural characteristics (such as performance, availability, security, modi
 
 ##### What Tactics Are
 
-Tactics are targeted design strategies used to influence a single quality attribute. They are smaller and more focused than patterns and act as building blocks that can be composed. Their purpose is to systematically address quality attribute requirements by giving architects precise levers to pull.
+Tactics are targeted design strategies used to influence a single quality attribute. They are smaller and more focused than patterns, acting as building blocks that can be composed into larger structures. Their purpose is to systematically address quality attribute requirements by giving architects precise levers to pull.
 
 ##### Categories of Tactics
 
@@ -52,7 +52,7 @@ Tactics are targeted design strategies used to influence a single quality attrib
 
 ##### What Patterns Are
 
-Architectural patterns are high-level, proven solutions to recurring design problems. A pattern defines a system’s structural organization and interaction style and usually combines multiple tactics to meet attribute goals in a specific context.
+Architectural patterns are high-level, proven solutions to recurring design problems. A pattern defines a system’s structural organization and interaction style, usually combining multiple tactics to meet attribute goals in a specific context.
 
 ##### Why Patterns Matter
 
@@ -108,13 +108,13 @@ Patterns rely on tactics to meet attribute goals along their critical paths. Eac
 
 ## Trade-offs to Surface and Manage
 
-- **Performance vs. Modifiability:** layers add indirection and potential overhead but improve modularity and clarity; optimizations (for example, inlining, caching) can reduce modularity.
-- **Security vs. Usability:** stronger controls (for example, multi-factor authentication) can complicate user workflows, reduce ease of use, and slow interactions.
-- **Cost vs. Scalability:** microservices increase operational investment in orchestration and deployment tooling.
-- **Availability vs. Cost:** redundancy improves availability while increasing hardware and maintenance expense.
-- **Scalability vs. Performance:** distributed mechanisms can introduce latency.
-- **Deployability vs. Security:** simplifying deployment may open vulnerabilities.
-- **Reusability vs. Modifiability:** generalized components can become complex and harder to tailor.
+- **Performance vs. Modifiability:** Layers add indirection and potential overhead but improve modularity and clarity; optimizations (for example, inlining, caching) can reduce modularity.
+- **Security vs. Usability:** Stronger controls (for example, multi-factor authentication) can complicate user workflows, reduce ease of use, and slow interactions.
+- **Cost vs. Scalability:** Microservices increase operational investment in orchestration and deployment tooling.
+- **Availability vs. Cost:** Redundancy improves availability while increasing hardware and maintenance expense.
+- **Scalability vs. Performance:** Distributed mechanisms can introduce latency.
+- **Deployability vs. Security:** Simplifying deployment may open vulnerabilities.
+- **Reusability vs. Modifiability:** Generalized components can become complex and harder to tailor.
 
 ## Design Checklist for Patterns and Tactics
 
@@ -122,7 +122,7 @@ Patterns rely on tactics to meet attribute goals along their critical paths. Eac
 - **Pattern selection:** choose a structure whose strengths match those priorities and use cases.
 - **Tactic integration:** apply attribute-specific tactics within the chosen structure.
 - **Trade-off analysis:** evaluate side effects on other attributes before committing.
-- **Validation:** prototype or test to confirm that the chosen tactics and pattern achieve the intended results.
+- **Validation:** prototype or test to confirm that the chosen tactics and patterns achieve the intended results.
 
 ## Examples in Practice
 
@@ -133,7 +133,7 @@ Patterns rely on tactics to meet attribute goals along their critical paths. Eac
   - *How it comes together:* caching reduces latency on catalog and search reads; encryption protects customer and payment data in transit and at rest; retries with backoff improve resilience for transient failures in payment or inventory services.
   - *Quality scenarios to validate:* p95 response time for “Add to Cart → Pay” within target under peak load; zero critical security findings for payment flows; successful checkout despite transient downstream failures.
   - *Trade-offs to manage:* performance vs. modifiability when adding cross-service caches; cost vs. scalability as the number of services and deployments grows.
-  - *Evidence and governance:* fitness functions that fail builds when latency budgets regress; ADRs capturing caching and service-boundary decisions; time-bounded variances during promotions.
+  - *Evidence and governance:* fitness functions that fail build when latency budgets regress; ADRs capturing caching and service-boundary decisions; time-bounded variances during promotions.
 
 - **Data processing pipelines**
   - *Context and drivers:* large or variable data volumes, evolving transformations, need for predictable throughput. Primary characteristics are modifiability, performance, and availability.
@@ -148,14 +148,14 @@ Patterns rely on tactics to meet attribute goals along their critical paths. Eac
   - *Context and drivers:* high fan-out message delivery, variable event rates, need for responsive user feedback. Primary characteristics are scalability, responsiveness, and operational visibility.
   - *Pattern:* event-driven for responsiveness and scale. Producers emit events; consumers react asynchronously, keeping components loosely coupled.
   - *Tactics:* queuing for performance, monitoring to support security.
-  - *How it comes together:* queues smooth bursts and decouple producers from consumers to maintain throughput; monitoring provides visibility into delivery success, anomalies, and misuse patterns that could signal security concerns.
+  - *How it comes together:* queues smooth bursts and decouples producers from consumers to maintain throughput; monitoring provides visibility into delivery success, anomalies, and misuse patterns that could signal security concerns.
   - *Quality scenarios to validate:* p95 end-to-end delivery time within target under high load; backlog drains to steady state after a spike; alerts trigger when delivery failures or suspicious usage exceed thresholds.
   - *Trade-offs to manage:* scalability vs. performance when multi-hop routing adds latency; deployability vs. security if simplifying operational paths weakens protections.
   - *Evidence and governance:* load and soak tests with burst patterns; ADRs for topic design and consumer responsibilities; fitness functions guarding delivery latency and failure rates.
 
 ## Conclusion
 
-Tactics and patterns translate architectural characteristics into concrete structures and behaviors. Tactics are precise levers—caching, retries, encapsulation, authentication—that directly influence a target attribute. Patterns assemble those levers into proven shapes such as layered, client–server, event-driven, microservices, pipe-and-filter, and repository. Because every choice carries trade-offs, architects align pattern strengths with prioritized attributes, integrate the right tactics along critical paths, and validate results through prototyping or testing. The result is an architecture that addresses stakeholder expectations while balancing competing qualities.
+Tactics and patterns translate architectural characteristics into concrete structures and behaviors. Tactics are precise levers—caching, retries, encapsulation, and authentication—that directly influence a target attribute. Patterns assemble those levers into proven shapes such as layered, client–server, event-driven, microservices, pipe-and-filter, and repository. Because every choice carries trade-offs, architects align pattern strengths with prioritized attributes, integrate the right tactics along critical paths, and validate results through prototyping or testing. The result is an architecture that addresses stakeholder expectations while balancing competing qualities.
 
 ## Recommended Reading
 
@@ -163,4 +163,4 @@ Tactics and patterns translate architectural characteristics into concrete struc
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 13: Architectural Tactics and Patterns**  
-    Provides the definitions and roles of tactics and patterns, catalogs tactics by quality attribute, outlines common architectural patterns with their attribute implications, and emphasizes selecting and combining them while managing trade-offs.
+    This chapter defines and describes the roles of tactics and patterns, catalogs tactics by quality attribute, outlines common architectural patterns with their attribute implications, and emphasizes the selection and combination of these tactics while managing trade-offs.

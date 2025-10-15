@@ -6,6 +6,7 @@ Archi
 archimate
 Architecting
 Asana
+autoscale
 BSUIR
 CCPA
 CEDP
@@ -24,6 +25,7 @@ flexsearch
 Foote
 functionals
 Fussell
+gatekeeping
 Gause
 gohugoio
 goldmark
@@ -67,7 +69,9 @@ Pereira
 Profitero
 psychographic
 pytest
+Qube
 Radioelectronics
+rebalance
 rebalances
 relref
 replaceability

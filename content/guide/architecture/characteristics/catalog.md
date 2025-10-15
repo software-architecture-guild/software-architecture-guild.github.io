@@ -48,7 +48,7 @@ Measures the ability of a system to adapt to new requirements, technologies, or 
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Agile systems may prioritize speed over-optimization.
+* **Impact on Performance:** Agile systems may prioritize speed over optimization.
 * **Impact on Security:** Frequent updates can introduce vulnerabilities if security processes are overlooked.
 * **Impact on Simplicity:** Rapid adaptations may lead to a more complex system.
 

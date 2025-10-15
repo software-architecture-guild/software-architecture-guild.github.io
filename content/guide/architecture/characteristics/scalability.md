@@ -1,7 +1,7 @@
 ---
 weight: 117
 title: "Scalability"
-description: "This article explains what is Scalability and how to achieve it."
+description: "This article explains what scalability is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -15,11 +15,11 @@ Scalability is an operational architecture characteristic concerned with how a s
 
 ## What Scalability Is (and Isn’t)
 
-Scalability belongs to the family of operational characteristics alongside performance, availability, reliability, and elasticity. It is not a synonym for elasticity (automatic matching of capacity to demand), nor is it guaranteed by adding hardware. Effective scalability comes from designs that can *use* additional resources—organizing computation, data, and coordination so that capacity increments translate into maintained latency and throughput.
+Scalability is part of the family of operational characteristics, including performance, availability, reliability, and elasticity. It is not a synonym for elasticity (automatic matching of capacity to demand), nor is it guaranteed by adding hardware. Effective scalability comes from designs that can *use* additional resources—organizing computation, data, and coordination so that capacity increments translate into maintained latency and throughput.
 
 ## Scalability General Scenario
 
-A scalability scenario frames how the architecture should behave as workload grows or spikes:
+A scalability scenario frames how the architecture should behave as the workload grows or spikes:
 
 - **Stimulus**: A sustained increase or sudden spike in requests, data volume, or concurrent users.  
 - **Source of stimulus**: Organic user growth, time-bound events (e.g., campaign, flash sale), partner integrations, or batch/backfill jobs.  
@@ -28,18 +28,18 @@ A scalability scenario frames how the architecture should behave as workload gro
 - **Response**: Add or reallocate capacity (scale out/up), rebalance partitions, warm/expand caches, shed noncritical load, and degrade gracefully while preserving core SLOs.  
 - **Response measure**: p50/p95/p99 latency, sustained throughput, error rate, queue depth, autoscale time-to-stability, and SLO/SLA attainment during and after the load event.  
 
-## Directions of Scale and the Utilization Problem
+## Directions of Scale
 
 Two directions dominate:
 
 - **Scale up** (vertical): more powerful instances.\
-  Useful for quick headroom but hits hardware and price ceilings.
+  Useful for quick headroom, but hits hardware and price ceilings.
 - **Scale out** (horizontal): more instances.\
-  Enables higher ceilings but demands careful partitioning, coordination, and state handling.
+  This approach enables higher ceilings but demands careful partitioning, coordination, and state handling.
 
-Neither direction works without solving the utilization problem: removing architectural choke points so added CPU, memory, and network actually serve user work.
+Neither direction works without solving the utilization problem: removing architectural choke points so that added CPU, memory, and network actually serve user work.
 
-## Tactics That Enable Scalability
+## Architectural Tactics for Scalability
 
 Scalability borrows and recombines performance-oriented tactics with a growth lens:
 
@@ -52,9 +52,9 @@ Scalability borrows and recombines performance-oriented tactics with a growth le
 
 ## The Data Bottleneck
 
-Scaling stateless compute is usually easier than scaling state. Many “just add servers” efforts simply push pressure onto a single database. Approaches that lift synchronous dependence on a central store—grids, caches, write-behind pumps, and careful partitioning—are often decisive. The art is deciding *which* data to cache, *where* to partition, and *how* to reconcile.
+Scaling stateless compute is usually easier than scaling state. Many “just add servers” efforts simply push pressure onto a single database. Approaches that lift synchronous dependence on a central store—such as grids, caches, write-behind pumps, and careful partitioning—are often decisive. The art is deciding *which* data to cache, *where* to partition, and *how* to reconcile.
 
-## Uneven Demand and Architectural Quanta
+## Uneven Demand
 
 Different parts of a system experience different growth. Split responsibilities so that hot paths and cold paths carry distinct scalability and availability targets. This is the rationale for isolating components (or services) along natural seams so each can scale and be governed at its own “quantum” without dragging the rest along.
 
@@ -75,7 +75,7 @@ Measure scalability through the same lenses you use for performance—latency, t
 
 ## Conclusion
 
-Scalability is less about raw horsepower and more about shaping work so additional resources maintain user-facing outcomes. Express needs as scenarios, choose styles that align with demand patterns, apply tactics that relieve choke points (especially in the data path), and govern decisions with explicit measures and utility thresholds. When growth comes, systems that scale well are those whose architecture made new capacity *useful*—not merely *available*.
+Scalability is less about raw horsepower and more about shaping work so additional resources maintain user-facing outcomes. Express needs as scenarios, choose styles that align with demand patterns, apply tactics that relieve choke points (especially in the data path), and govern decisions with explicit measures and utility thresholds. When growth comes, systems that scale well are those whose architecture makes new capacity *useful*—not merely *available*.
 
 ## Recommended Reading
 
@@ -83,4 +83,4 @@ Scalability is less about raw horsepower and more about shaping work so addition
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 12: Other Quality Attributes**\
-    Positions scalability among related operational characteristics and clarifies its relationship to attributes like performance and availability. This framing informed the article’s emphasis on distinguishing scalability from neighboring concerns and on surfacing trade-offs that arise at higher loads.
+    Position scalability among related operational characteristics and clarifies its relationship to attributes like performance and availability. This framing informed the article’s emphasis on distinguishing scalability from neighboring concerns and on surfacing trade-offs that arise at higher loads.
