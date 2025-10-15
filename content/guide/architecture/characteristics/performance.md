@@ -1,7 +1,7 @@
 ---
 weight: 113
 title: "Performance"
-description: "This article explains what is Performance and how to achieve it."
+description: "This article explains what performance is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -35,7 +35,7 @@ A performance scenario specifies constraints and expected behaviors to guide des
 - **System resources**: Availability and capacity of processors, memory, storage, and network.\
   Example: insufficient memory causing disk swapping and degradation.
 - **System behavior**: Interactions among components, including communication and synchronization.\
-  Example: excessive inter-process communication creating bottlenecks.
+  Example: excessive inter-process communication creates bottlenecks.
 - **Concurrency**: Ability to handle multiple tasks simultaneously without harmful contention.\
   Example: threads competing for shared resources.
 - **Failure recovery**: Fault handling and retries that can temporarily degrade performance.
@@ -79,4 +79,4 @@ Performance ensures a system can meet timing and capacity goals under expected c
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 8: Performance**\
-    Informed this article’s definition, performance scenario elements (stimulus, source, environment, artifact, response, response measures), factors affecting performance, architectural tactics (resource demand reduction, resource management, latency reduction), trade-offs, checklist, and practice examples.
+    Defines performance and the scenario elements for specifying it, then groups tactics into reducing demand, managing resources, and reducing latency. Highlights key factors, typical trade-offs, and a checklist for evaluating designs against performance goals.

@@ -6,6 +6,7 @@ Archi
 archimate
 Architecting
 Asana
+autoscale
 BSUIR
 CCPA
 CEDP
@@ -20,6 +21,7 @@ Fastly
 flexsearch
 Foote
 Fussell
+gatekeeping
 gohugoio
 goldmark
 Hardzeenka
@@ -59,7 +61,9 @@ Pais
 Profitero
 psychographic
 pytest
+Qube
 Radioelectronics
+rebalance
 relref
 replaceability
 roadmaps

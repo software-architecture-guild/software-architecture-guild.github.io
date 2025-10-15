@@ -1,7 +1,7 @@
 ---
 weight: 115
 title: "Testability"
-description: "This article explains what is Testability and how to achieve it."
+description: "This article explains what testability is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -70,4 +70,4 @@ Testability makes verification efficient and effective by improving observabilit
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 10: Testability**\
-    Informed the article’s definition and importance, general scenario elements (stimulus, source, environment, artifact, response, response measure), testability tactics (observability, controllability, simplifying test design, automation, isolating units), trade-offs, checklist, and practice examples.
+    Defines testability and its scenario elements, then catalogs tactics to improve it—enhancing observability and controllability, simplifying test design, automating, and isolating units. Summarizes common trade-offs and provides a checklist for evaluating designs against testability goals.

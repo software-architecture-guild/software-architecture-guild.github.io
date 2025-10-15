@@ -1,7 +1,7 @@
 ---
 weight: 112
 title: "Modifiability"
-description: "This article explains what is Modifiability and how to achieve it."
+description: "This article explains what modifiability is and how to achieve it."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -76,4 +76,4 @@ Modifiability ensures systems can evolve efficiently, cost-effectively, and pred
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 7: Modifiability**\
-    Informed the article’s definition, general scenario elements (stimulus, source, artifact, environment, response, response measures), modifiability tactics (localize changes, limit dependencies, postpone binding, anticipate changes, manage dependencies), associated trade-offs, design checklist, practical examples, and lifecycle considerations.
+    Defines modifiability and its scenario structure, then catalogs tactics—localize changes, limit/manage dependencies, defer binding, anticipate change—with guidance on trade-offs and how to evaluate designs against modifiability goals.

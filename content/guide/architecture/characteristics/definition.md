@@ -1,7 +1,7 @@
 ---
 weight: 101
-title: "What is Architecture Characteristic?"
-description: "This article explains what are Architecture Characteristics."
+title: "What is an Architecture Characteristic?"
+description: "This article explains what Architecture Characteristics are."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
@@ -11,17 +11,17 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Architecture characteristics (often called “quality attributes” or the famous “-ilities”) describe **how well** a system must behave—not **what** it does. They shape the software’s structure, influence nearly every important design decision, and ultimately determine whether a system succeeds in real use.
+Architecture characteristics (often called “quality attributes” or the famous “-ilities”) describe **how well** a system must behave—not **what** it does. They shape the software’s structure, influence nearly every critical design decision, and ultimately determine whether a system succeeds in real use.
 
 Architecture characteristics are non-functional properties a system must exhibit—such as performance, availability, security, modifiability, and usability. They are orthogonal to functionality: a feature can be correct yet still fail in practice if the system is slow, fragile, insecure, or hard to change. It’s helpful to think in broad classes:
 
 - **Operational (runtime):** performance, scalability, availability, usability
 - **Development/evolution:** modifiability, testability, deployability, maintainability
-- **Security:** confidentiality, integrity, availability of data
+- **Security:** confidentiality, integrity, and availability of data
 
 ## Why They Matter
 
-These characteristics are the yardstick for architectural success and the shared contract among stakeholders about expectations beyond features. Architecture directly enables or constrains them; implementation polish can’t rescue a design that ignored them. Because real systems face competing forces, trade-offs are inevitable: tightening security can erode usability, and squeezing for maximal performance can make code harder to modify.
+These characteristics serve as the yardstick for architectural success and as the shared contract among stakeholders regarding expectations beyond features. Architecture directly enables or constrains them; implementation polish can’t rescue a design that ignored them. Because real systems face competing forces, trade-offs are inevitable: tightening security can erode usability, and squeezing for maximal performance can make code harder to modify.
 
 ## Scope: Where They Apply
 
@@ -32,7 +32,7 @@ Architecture characteristics operate at multiple levels. Making scope explicit p
 - **System level** — global policies and guarantees; for example, 99.99% availability or single sign-on across all services.  
 - **Cross-system/enterprise level** — spanning multiple systems; for example, organization-wide encryption and data-integrity policies.
 
-Governance connects these scopes: define standards (e.g., encryption requirements), monitor compliance, and allow justified variances when local performance or cost constraints apply.
+Governance connects these scopes: defining standards (e.g., encryption requirements), monitoring compliance, and allowing justified variances when local performance or cost constraints apply.
 
 ## How to Specify Them
 
@@ -60,11 +60,11 @@ If it isn’t measurable, it won’t be managed. Define metrics that reveal whet
 
 ## Lifecycle Integration
 
-Characteristics guide early structural choices, but they also live through implementation, testing, and operations. Teams align code and configuration with architectural constraints; scenario-based tests confirm expectations; deployment practices such as blue-green or canary releases preserve availability and performance in production. As systems and markets change, re-evaluate which characteristics matter most—a startup may value modifiability first, whereas a mature product may shift toward availability and performance.
+Characteristics guide early structural choices, but they also live through implementation, testing, and operations. Teams align code and configuration with architectural constraints; scenario-based tests confirm expectations; deployment practices such as blue-green or canary releases preserve availability and performance in production. As systems and markets change, re-evaluate which characteristics matter most—a startup may prioritize modifiability, while a mature product may focus on availability and performance.
 
 ## Characteristic Spotlights
 
-- **Scalability** is the ability to handle increasing load by adding resources. Vertical scaling grows a node; horizontal scaling adds nodes and distribution complexity.  
+- **Scalability** is the ability to handle increasing load by adding resources. Vertical scaling grows a node, while horizontal scaling adds nodes and increases distribution complexity.  
 - **Performance** captures speed and efficiency; it demands systemic tuning, not just micro-optimizations.  
 - **Availability** keeps the system operational—“four nines” is a property of design (redundancy, isolation, rapid recovery), not hope.  
 - **Security** protects confidentiality, integrity, and availability through layered controls and vigilant operations.  
@@ -82,7 +82,7 @@ Context determines emphasis; architecture expresses that emphasis in structure a
 
 ## Common Pitfalls
 
-Teams often treat attributes as slogans (“fast,” “secure”) rather than measurable scenarios; apply system-wide solutions to local problems (or the reverse); ignore trade-offs until complexity accumulates; or defer attributes to “later,” when change is most expensive. The cure is specificity, scope clarity, and early validation.
+Teams often treat attributes as slogans (“fast,” “secure”) rather than as measurable scenarios; apply system-wide solutions to local problems (or vice versa); ignore trade-offs until complexity accumulates; or defer attributes to “later,” when change is most expensive. The cure involves specificity, clarity of scope, and early validation.
 
 ## Quick Starter Checklist
 
@@ -96,7 +96,7 @@ Teams often treat attributes as slogans (“fast,” “secure”) rather than m
 
 ## Conclusion
 
-Architecture characteristics **define success beyond features**. They demand explicit scope, concrete scenarios, and purposeful tactics; they involve trade-offs aligned to business goals; and they stay healthy only when continuously measured and reinforced across the lifecycle.
+Architecture characteristics **define success beyond features**. They demand explicit scope, concrete scenarios, and purposeful tactics; they involve trade-offs aligned with business goals; and they remain healthy only when continuously measured and reinforced throughout the lifecycle.
 
 ## Recommended Reading
 
@@ -104,9 +104,9 @@ Architecture characteristics **define success beyond features**. They demand exp
 
 - Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
   - **Chapter 4: Understanding Quality Attributes**\
-    Informed the article’s definitions, category distinctions (system-wide/runtime/development), the use of quality attribute scenarios (stimulus–environment–response), the role of tactics and patterns, and the emphasis on prioritization, trade-offs, and lifecycle validation.
+    Introduces quality attributes and the scenario-based method (stimulus, environment, response) for specifying and evaluating them.
 - Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (1st ed.). O’Reilly Media, 2020.  
   - **Chapter 4: Architecture Characteristics Defined**\
-    Provided the framing of architecture characteristics as “-ilities,” the classification into operational, development, security, and UX concerns, concrete examples (scalability, performance, availability, security, modifiability, testability, deployability, maintainability), and guidance on measurement (including fitness functions) and ADR-based documentation.  
+    Defines architecture characteristics (“-ilities”) with core examples and explains why they drive architectural decisions.  
   - **Chapter 7: Scope of Architecture Characteristics**\
-    Shaped the multi-level scope discussion (component, subsystem, system, cross-system), governance and variance management, and lifecycle integration across requirements, design, implementation, testing, and deployment.
+    Explains how characteristics apply at different scopes (component, subsystem, system, and cross-system) and how scope influences design and governance.
