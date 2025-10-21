@@ -21,7 +21,7 @@ A real team is more than just a group of people working together. There are seve
 1. **Common Purpose**: A team must have a shared and **meaningful purpose** that all members are committed to achieving. This purpose should go beyond individual goals and align with the broader organizational objectives. A clear and compelling purpose helps to unify the team and motivates them to work toward a common goal.
 2. **Specific Performance Goals**: In addition to a common purpose, a team must set concrete, measurable performance goals. These goals help translate the team's purpose into actionable steps and provide a benchmark for success. Performance goals ensure that the team stays focused on delivering results.
 3. **Complementary Skills**: Teams must have the **right mix of skills** to achieve their goals. These skills should be complementary, meaning that team members bring different strengths to the table, such as technical expertise, problem-solving abilities, and interpersonal skills. Teams that lack complementary skills struggle to perform at a high level.
-4. **A Common Working Approach**: Teams need to establish a clear, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
+4. **A Common Working Approach**: Teams need to establish a transparent, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
 5. **Mutual Accountability**: In a real team, members are **mutually accountable** to each other for the team’s performance. This goes beyond individual accountability and requires that every team member feels responsible for their tasks and the team's overall success. Mutual accountability fosters trust and encourages collaboration.
 
 **Example**: The architecture team at a tech company is working on building aligned architecture for the product with a focus on modernization (**common purpose**). They set a goal to reduce the system run rate by 15% while improving the system scalability by the end of the quarter (**specific performance goals**). Each member has it's own zone of responsibility - Infrastructure, Data Platform, Presentation Layers, System Security, etc. - allowing them to cover all critical aspects (**complementary skills**). They follow an agile approach using the Kanban framework with bi-weekly reviews and reiterations on planning sessions (**common working approach**). The team is mutually accountable for the final architecture's performance, with everyone taking responsibility for both successes and challenges (**mutual accountability**).```
@@ -57,13 +57,13 @@ Not every group is a team, even if they call themselves one. Groups often fail t
 
 ### Building a team
 
-Tuckman’s model, developed in 1965 by psychologist Bruce Tuckman, describes five stages that teams go through as they form and develop. The Tuckman model remains highly relevant in today’s collaborative environments, including corporate, academic, and community settings.
+Tuckman’s model, developed in 1965 by psychologist Bruce Tuckman, describes five stages that teams go through as they form and evolve. The Tuckman model remains highly relevant in today’s collaborative environments, including corporate, academic, and community settings.
 
 {{< image src="../../../images/organization/team.building.drawio.png" alt="Team building" >}}
 
 1. **Forming**: Team members meet and begin to understand their roles and objectives. This stage involves introductions, goal clarification, and initial team planning in project teams.
 2. **Storming**: Conflicts emerge as personalities clash and power dynamics are established. Team members may disagree on strategies, roles, or project timelines. This phase often leads to improved communication and a deeper understanding of team dynamics.
-3. **Norming**: The team begins to resolve differences, creating norms and fostering collaboration. Teams develop agreed-upon rules and working patterns, enabling smoother collaboration.
+3. **Norming**: The team begins to resolve differences, creating norms and fostering collaboration. Teams develop agreed-upon rules and working patterns, enabling smoother cooperation.
 4. **Performing**: The team functions efficiently, focusing on achieving its goals. Collaboration is natural and efficient.
 5. **Adjourning**: Once objectives are met, teams disband, celebrating success or reflecting on lessons learned.
 
@@ -77,7 +77,7 @@ Key characteristics include:
 
 1. **Cross-Functional Teams**: Agile teams comprise members with varied skill sets (development, testing, etc.), eliminating handoffs and delays. Each team can define, build, test, and deploy product features, ensuring that all required expertise is available within the team.
 2. **Organized Around Value**: Agile teams are designed to focus on delivering value to the customer. Whether they are building digital solutions or business functionality, they work to provide continuous value delivery through frequent, small increments.
-3. **High Performance and Collaboration**: Effective Agile teams have a clear, shared vision, trust each other, take risks without fear, and meet their commitments to deliver high-quality work. They are often part of an Agile Release Train, synchronizing with other teams to deliver comprehensive solutions.
+3. **High Performance and Collaboration**: Effective Agile teams have a clear, shared vision, trust each other, take risks without fear, and meet their commitments to deliver high-quality work. They are often part of an Agile Release Train, synchronizing with other teams to provide comprehensive solutions.
 
 #### Responsibilities of Agile Teams
 
@@ -212,7 +212,7 @@ Scrum utilizes specific techniques to provide transparency and facilitate commun
 
 ### Conclusion
 
-Scrum is a powerful framework that enables teams to deliver high-quality products through structured collaboration, transparency, and continuous improvement. By embracing Scrum's core values and principles, teams can create a productive and engaging work environment that fosters innovation and adaptability. Scrum's defined roles, events, and artifacts provide a clear roadmap for teams to navigate their projects effectively. With its focus on iterative progress and stakeholder engagement, Scrum empowers organizations to meet the market's ever-changing demands while delivering value to their customers.
+Scrum is a robust framework that enables teams to deliver high-quality products through structured collaboration, transparency, and continuous improvement. By embracing Scrum's core values and principles, teams can create a productive and engaging work environment that fosters innovation and adaptability. Scrum's defined roles, events, and artifacts provide a clear roadmap for teams to navigate their projects effectively. With its focus on iterative progress and stakeholder engagement, Scrum empowers organizations to meet the market's ever-changing demands while delivering value to their customers.
 
 ## Recommended Reading
 

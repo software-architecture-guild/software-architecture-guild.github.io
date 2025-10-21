@@ -24,7 +24,7 @@ For example:
 
 However, new organizational challenges emerged as software architectures evolved toward **distributed systems** and especially **microservices**. In **microservices architecture**, there are multiple independent components. To manage this, organizations shifted to **component teams**. Each team owned and supported specific microservices from end to end, including development, testing, and deployment. While this approach offered some advantages, like clear ownership and specialization, it also introduced significant dependencies between teams. For example, delivering a feature often requires coordination across several teams, leading to delays and handovers.
 
-To address these challenges, companies began experimenting with **feature teams** . In theory, a feature team is structured to take a feature and deliver it end to end without relying on other teams. The goal is to reduce dependencies and handovers. However, in practice, implementing feature teams in a **microservices environment** is challenging. For instance, a feature may require changes to multiple services—some of which the team has never worked on before—leading to inefficiencies and bottlenecks.
+To address these challenges, companies began experimenting with **feature teams**. In theory, a feature team is structured to take a feature and deliver it end to end without relying on other teams. The goal is to reduce dependencies and handovers. However, in practice, implementing feature teams in a **microservices environment** is challenging. For instance, a feature may require changes to multiple services—some of which the team has never worked on before—leading to inefficiencies and bottlenecks.
 
 The **functional team** and **component team** approaches have advantages. Still, they also have significant downsides, particularly in dependencies and the coordination required to deliver features to customers efficiently. **Feature teams** attempt to solve these problems but often face hurdles in complex, large-scale microservices environments.
 
@@ -79,49 +79,6 @@ In simpler terms, how teams communicate and collaborate significantly shapes the
 
 **Microservices Architecture**: Team structures have evolved in many organizations adopting microservices to mirror this approach. A dedicated, autonomous team often builds and maintains each service (or group of services). This enables each team to work independently on their microservice without affecting the others, enhancing system scalability and flexibility. This is a practical application of the reverse Conway maneuver—shaping team structures to achieve a specific software architecture.
 
-### What is Value Stream?
-
-A **Value Stream** is the end-to-end sequence of activities required to deliver a product, service, or solution to a customer, starting from the initial concept and continuing through to delivery and ongoing support. It encompasses all the processes involved in creating, developing, and delivering value, engaging cross-functional teams, tools, and systems to ensure that value continuously flows to the customer.
-
-**Key Components of a Value Stream:**
-
-1. **Flow of Work**: A value stream involves different types of work, such as features (new functionality), defects (issues needing resolution), risks (compliance or security concerns), and technical debt (long-term technical improvements).
-2. **Continuous Delivery**: Value streams are dynamic and evolve. Rather than focusing on the completion of individual projects, they emphasize the continuous and iterative delivery of value to the customer.
-3. **Continuous Improvement**: To optimize value streams, organizations track the flow of work using metrics such as flow velocity (how much work is completed), flow time (how long work takes to move through the stream), and flow efficiency (the balance between active work and waiting time). This visibility enables the identification of bottlenecks and opportunities for improvement.
-4. **Customer-Centric Focus**: A value stream is designed with the customer at the center, ensuring that every activity and process is aligned to deliver outcomes that meet customer needs and add tangible value.
-5. **Alignment with Business Goals**: Value streams align with the organization’s broader business objectives, ensuring that all efforts are focused on delivering measurable results that support strategic goals.
-
-{{< image src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" >}}
-
-##### What is Value Stream Mapping?
-
-**Value Stream Mapping** (VSM) is a structured exercise for visualizing, analyzing, and improving the flow of materials, information, or work through a system. Its primary goal is to identify the steps required to deliver value to the customer, including all value-added and non-value-added activities. By mapping out the current process, organizations can pinpoint inefficiencies, bottlenecks, and waste that hinder value delivery. The exercise is widely used in Lean manufacturing, software development, and other industries to streamline processes and increase efficiency.
-
-##### Value Stream Mapping to Identify Value Streams
-
-When applied to identify value streams, Value Stream Mapping helps organizations visualize how value is delivered to the customer across various stages, from product conception to delivery. It involves mapping out the current workflow within an organization to identify distinct **value streams** — the sequence of activities and processes that result in a product, service, or feature providing value to the customer.
-
-##### Independent Service Heuristics (ISH) Method for Identifying Value Streams
-
-The **[Independent Service Heuristics (ISH)](https://teamtopologies.com/key-concepts-content/finding-good-stream-boundaries-with-independent-service-heuristics)** method is a practical approach designed to help organizations identify good value streams and team boundaries to improve flow and efficiency. It is a complementary tool to **Domain-Driven Design (DDD)** and is particularly effective for evaluating and discovering service boundaries without needing deep engineering expertise.
-
-##### Key Steps in the ISH Method
-
-1. **Select Candidate Areas**: Start by identifying potential services, products, or domains within your organization that could represent value streams. These should be areas where work is done, or value is delivered to the customer.
-2. **Apply Heuristics to Evaluate Independence**:
-   * Assess each candidate with questions such as:
-     * Could this function independently as a service?
-     * Does it have a well-defined customer base or user personas?
-     * Can it be managed separately regarding cost, data, and infrastructure?
-     * Would consumers value it as a standalone offering?
-3. **Evaluate for Clear Boundaries**: Review whether each potential value stream can operate with minimal dependencies on other parts of the organization. The more self-contained and independent it is, the better it serves as a value stream.
-4. **Refine Based on Business Impact**: Determine whether each candidate provides enough value or presents an engaging challenge for teams. The value stream should have enough scope to justify a dedicated team responsible for its full lifecycle.
-5. **Validate with Teams and Adjust Boundaries**: After identifying potential streams, validate them by testing whether teams can independently manage these areas. Adjust the boundaries to ensure they align with organizational goals and customer needs.
-
-##### Outcome
-
-The ISH method helps define **stream-aligned teams** responsible for delivering distinct value to customers. This alignment leads to faster, more autonomous workflows and reduces organizational bottlenecks and dependencies.
-
 ### What Are Team Topologies?
 
 **[Team Topologies](https://teamtopologies.com/)** is a framework developed by Matthew Skelton and Manuel Pais that provides a structured approach to organizing teams to maximize the flow of value and improve collaboration. It focuses on designing team structures that support fast and efficient software delivery while minimizing complexity and reducing cognitive load on teams. Team Topologies helps organizations create teams aligned with business goals and deliver value quickly and continuously.
@@ -161,6 +118,20 @@ The model defines **four fundamental team types** and **three modes of team inte
    * Team Topologies heavily references Conway’s Law, which states that systems reflect the communication structures of the teams that build them. The framework encourages organizations to align their teams with the desired architecture of their systems to ensure they work efficiently.
 4. **Loosely Coupled Teams**:
    * Teams should be designed to work independently, reducing cross-team dependencies that can slow down work flow. This allows for greater autonomy and faster decision-making within teams.
+
+##### Independent Service Heuristics (ISH) for Finding Stream Boundaries
+
+The **Independent Service Heuristics (ISH)** method is a practical, DDD-complementary approach to discover good value-stream and team boundaries—without deep engineering expertise.
+
+**Key steps:**
+
+* **Select Candidate Areas:** services/products/domains where work is done or value is delivered.  
+* **Apply Heuristics to Evaluate Independence:** ask whether it could function as an independent service, has clear personas, can be managed separately (cost, data, infra), and would be valued standalone.  
+* **Evaluate for Clear Boundaries:** prefer minimal dependencies on other parts of the organization.  
+* **Refine Based on Business Impact:** ensure scope justifies a dedicated team responsible for the full lifecycle.  
+* **Validate with Teams and Adjust:** confirm teams can manage independently; tune boundaries to organizational goals and customer needs.
+
+**Outcome:** ISH helps define **stream-aligned teams** responsible for distinct customer value, enabling faster, more autonomous flow and fewer bottlenecks.
 
 ##### Relationship Between Team Topologies and Value Streams
 
@@ -292,7 +263,7 @@ Less is built on a set of principles derived from Scrum, Lean, and Systems Think
 1. **Large-Scale Scrum is Scrum**: The core idea behind LeSS is that Scrum remains the same, whether used by one or many teams. The principles, rules, and roles of Scrum are unchanged; LeSS adds coordination mechanisms for multiple teams.
 2. **Empirical Process Control**: LeSS emphasizes iterative and incremental delivery, using empirical processes (inspect, adapt, and transparency) to guide decision-making at scale.
 3. **Lean Thinking**: Lean principles are deeply embedded in LeSS. The framework encourages eliminating waste, reducing delays, optimizing flow, and continuously improving processes.
-4. **Customer-Centric Focus**: In LeSS, all teams are aligned around delivering maximum customer value. Teams work on the same product backlog and focus on delivering a unified product.
+4. **Customer-Centric Focus**: In LeSS, all teams are aligned around delivering maximum customer value. Teams work on the same product backlog and focus on providing a unified product.
 5. **Systems Thinking**: LeSS encourages teams to look at the larger organizational system, considering how various elements (such as culture, policies, and processes) interact and affect overall performance. This holistic view helps in identifying systemic bottlenecks and challenges.
 
 ##### LeSS Framework Structure
@@ -303,7 +274,7 @@ LeSS comes in two configurations depending on the number of teams involved:
    * Designed for up to 8 Scrum teams (around 50 people) working on the same product.
    * All teams work from a single product backlog, and the roles and events are based on standard Scrum.
    * There is one **Product Owner** for all teams, ensuring alignment and prioritization across the entire product.
-   * The **Scrum Master** role is still important but may be shared across multiple teams to facilitate the process.
+   * The **Scrum Master** role is still essential but may be shared across multiple teams to facilitate the process.
 2. **LeSS Huge**:
    * Designed for organizations with over eight teams working on a large-scale product.
    * The product is divided into **Requirement Areas**, each with its own **Area Product Owner** who handles a section of the product backlog.
@@ -343,7 +314,7 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
 
 ##### Benefits of LeSS
 
-1. **Simplicity**: LeSS focuses on scaling by keeping Scrum simple and lightweight, minimizing complexity and overhead.
+1. **Simplicity**: LeSS focuses on scaling by keeping Scrum lightweight and straightforward, minimizing complexity and overhead.
 2. **Customer Focus**: All teams are focused on delivering value to the customer rather than getting bogged down in internal processes.
 3. **Continuous Improvement**: Emphasizing empirical process control and systems thinking helps organizations continuously improve at scale.
 4. **Collaboration and Alignment**: LeSS promotes strong collaboration between teams, encouraging them to work together on shared goals.
@@ -351,7 +322,7 @@ LeSS deliberately keeps the roles in Scrum simple and aligned with the standard 
 ##### Challenges of LeSS
 
 1. **Requires Organizational Change**: LeSS can require significant organizational changes, especially for companies used to more hierarchical or siloed structures. Teams and departments must work closely together, which can be challenging to implement.
-2. **Not a One-Size-Fits-All Solution**: LeSS best suits organizations with multiple teams working on a single product. It may not be ideal for organizations with multiple unrelated products.
+2. **Not a One-Size-Fits-All Solution**: LeSS best suits organizations with multiple teams working on a single product. It may not be ideal for organizations with numerous unrelated products.
 3. **Scaling Beyond Product Ownership**: Managing a single product backlog across many teams can put a lot of pressure on the Product Owner, making it a challenging role in LeSS.
 
 ### Nexus
@@ -453,12 +424,3 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
     Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
   * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery**\
     Part III introduces three modes of team interaction — **collaboration**, **X-as-a-service**, and **facilitating** — to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
-* Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.
-  * **Chapter 3: Introducing the Flow Framework**\
-    This chapter introduces the concept of value streams, emphasizing the shift from project management to managing value streams. It outlines how the Flow Framework focuses on managing and measuring the flow of value through these streams.
-  * **Chapter 4: Capturing Flow Metrics**\
-    This chapter dives deeper into value streams by introducing flow metrics that help track the performance of value streams. It explains how businesses can measure and optimize the flow of value from development to delivery.
-  * **Chapter 5: Connecting to Business Results**\
-    This chapter explores the relationship between value streams and business outcomes, tying value streams to business metrics such as value, cost, quality, and employee happiness.
-  * **Chapter 9: Value Stream Management**\
-    This chapter is dedicated to value stream management and how organizations can continuously improve work flow across value streams, ensuring they deliver maximum business value.

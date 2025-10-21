@@ -25,7 +25,7 @@ While no single company structure is universally applicable, every organization 
 
 * **Departments and Functions** \
   Larger businesses tend to have various departments, such as marketing, sales, finance, operations, and customer service. Each department serves a specific function and works toward achieving the company’s overall goals. The larger the company, the more formalized these functions become. Small businesses often combine several functions into fewer roles due to limited resources.
-  Creating clear lines between these departments is essential for communication and efficiency. Cross-functional collaboration is important, but without a clear structure, projects can stagnate, and accountability can be blurred.
+  Creating precise lines between these departments is essential for communication and efficiency. Cross-functional collaboration is important, but without a clear structure, projects can stagnate, and accountability can be blurred.
 
 * **Hierarchy and Reporting Lines** \
   The hierarchy of an organization determines who reports to whom. This can range from a simple structure in small companies where everyone reports directly to the founder to more complex structures in large corporations with multiple levels of management.
