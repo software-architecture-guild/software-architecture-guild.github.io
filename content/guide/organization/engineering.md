@@ -22,9 +22,9 @@ For example:
 * The **backend team** handled business logic and persistence.
 * The **infrastructure or database team** managed the database layer.
 
-However, new organizational challenges emerged as software architectures evolved toward **distributed systems** and especially **microservices**. In **microservices architecture**, there are multiple independent components. To manage this, organizations shifted to **component teams**. Each team owned and supported specific microservices from end to end, including development, testing, and deployment. While this approach offered some advantages, like clear ownership and specialization, it also introduced significant dependencies between teams. For example, delivering a feature often requires coordination across several teams, leading to delays and handovers.
+However, new organizational challenges emerged as software architectures evolved toward **distributed systems** and especially **microservices**. In a **microservices architecture**, there are multiple independent components. To manage this, organizations shifted to **component teams**. Each team owned and supported specific microservices from end to end, including development, testing, and deployment. While this approach offered some advantages, like clear ownership and specialization, it also introduced significant dependencies between teams. For example, delivering a feature often requires coordination across several teams, leading to delays and handovers.
 
-To address these challenges, companies began experimenting with **feature teams**. In theory, a feature team is structured to take a feature and deliver it end to end without relying on other teams. The goal is to reduce dependencies and handovers. However, in practice, implementing feature teams in a **microservices environment** is challenging. For instance, a feature may require changes to multiple services—some of which the team has never worked on before—leading to inefficiencies and bottlenecks.
+To address these challenges, companies began experimenting with **feature teams**. In theory, a feature team is structured to take a feature and deliver it end-to-end without relying on other teams. The goal is to reduce dependencies and handovers. However, in practice, implementing feature teams in a **microservices environment** is challenging. For instance, a feature may require changes to multiple services—some of which the team has never worked on before—leading to inefficiencies and bottlenecks.
 
 The **functional team** and **component team** approaches have advantages. Still, they also have significant downsides, particularly in dependencies and the coordination required to deliver features to customers efficiently. **Feature teams** attempt to solve these problems but often face hurdles in complex, large-scale microservices environments.
 
@@ -34,7 +34,7 @@ The **functional team** and **component team** approaches have advantages. Still
 
 ## Department Structure
 
-Several new frameworks and approaches have been developed to address the challenges of aligning organizational structures with effective software delivery. One of the most important concepts is **Conway's Law**, which states that an organization's structure and software architecture are so tightly coupled that they inevitably mirror each other. This insight leads to the realization that we should organize teams in a way that reflects how we want the architecture to look. At the same time, we should design the architecture so that feature teams can effectively deliver it.
+Several new frameworks and approaches have been developed to address the challenges of aligning organizational structures with effective software delivery. One of the most important concepts is **Conway's Law**, which states that an organization's structure and software architecture are so tightly coupled that they inevitably mirror each other. This insight leads to the realization that we should organize teams to reflect how we want the architecture to look. At the same time, we should design the architecture so that feature teams can effectively deliver it.
 
 Another key concept is the **value stream**. A value stream represents a product, service, or part of a product/service that delivers distinct value to customers. We can create independent units operating autonomously by organizing teams and architecture around value streams. This brings up several important questions:
 
@@ -73,7 +73,7 @@ In simpler terms, how teams communicate and collaborate significantly shapes the
    * Conway’s Law is especially relevant in Agile and DevOps environments, where cross-functional, autonomous teams are encouraged. Organizations can improve the speed and quality of software delivery by creating stream-aligned, product-focused teams.
    * As teams are designed around the flow of work or specific value streams, optimizing system performance and maintaining smooth workflows from concept to deployment becomes easier.
 5. **Reducing Complexity**:
-   * A poorly organized company will naturally create overly complex systems. By simplifying team structures, organizations can reduce the complexity of their software architectures. This, in turn, makes systems more suitable to develop, test, deploy, and maintain.
+   * A poorly organized company will naturally create overly complex systems. By simplifying team structures, organizations can reduce the complexity of their software architectures. This, in turn, makes systems more suitable for development, testing, deployment, and maintenance.
 
 ##### Real-World Example of Conway’s Law in Action
 
@@ -106,7 +106,7 @@ The model defines **four fundamental team types** and **three modes of team inte
 
 1. **Collaboration**: Teams work together closely for a period of time to solve complex problems or innovate.
 2. **X-as-a-Service**: One team provides a service (e.g., platform services) to another, which consumes it without understanding its inner workings.
-3. **Facilitating**: An enabling team temporarily helps another team improve their skills or adopt new technologies.
+3. **Facilitating**: An enabling team temporarily helps another team improve its skills or adopt new technologies.
 
 ##### Key Principles in Team Topologies
 
@@ -117,7 +117,7 @@ The model defines **four fundamental team types** and **three modes of team inte
 3. **Conway’s Law**:
    * Team Topologies heavily references Conway’s Law, which states that systems reflect the communication structures of the teams that build them. The framework encourages organizations to align their teams with the desired architecture of their systems to ensure they work efficiently.
 4. **Loosely Coupled Teams**:
-   * Teams should be designed to work independently, reducing cross-team dependencies that can slow down work flow. This allows for greater autonomy and faster decision-making within teams.
+   * Teams should be designed to work independently, reducing cross-team dependencies that can slow down workflow. This allows for greater autonomy and faster decision-making within teams.
 
 ##### Independent Service Heuristics (ISH) for Finding Stream Boundaries
 
@@ -171,10 +171,10 @@ Scrum@Scale aims to enable agility at scale by maintaining Scrum's simplicity an
 
 1. **Modular Approach**: Scrum@Scale is designed to be modular, meaning organizations can apply and implement parts of the framework based on their needs. Teams can adopt components progressively and adapt to their specific contexts without overhauling their entire process.
 2. **Two Cycles**:
-   * **The Scrum Master Cycle**: This cycle focuses on scaling the "how" of Scrum, ensuring continuous improvement, process facilitation, and removal of impediments. It helps coordinate teams and ensures they work efficiently and effectively together.
-   * **The Product Owner Cycle**: This cycle focuses on scaling the "what" of Scrum, ensuring the alignment of the vision, roadmap, and product goals across all teams. It is responsible for managing the [flow of work and prioritizing features or product requirements in line with organizational goals.
+   * **The Scrum Master Cycle**: This cycle focuses on scaling the "how" of Scrum, ensuring continuous improvement, process facilitation, and removal of impediments. It helps coordinate teams and ensures they work together efficiently and effectively.
+   * **The Product Owner Cycle**: This cycle focuses on scaling the "what" of Scrum, ensuring the alignment of the vision, roadmap, and product goals across all teams. It is responsible for managing the flow of work and prioritizing features or product requirements in line with organizational goals.
 3. **Scrum of Scrums (SoS)**: A mechanism to scale coordination across multiple Scrum teams. Representatives from each Scrum team participate in regular Scrum of Scrums meetings to align on progress, identify cross-team dependencies, and address any issues that could block delivery.
-4. **Executive Action Team (EAT)**: This team is responsible for removing systemic impediments and making decisions at the organizational level. It provides leadership, governance, and support for scaling efforts and ensures that the framework aligns with organizational goals and strategy.
+4. **Executive Action Team (EAT)**: This team is responsible for removing systemic impediments and making decisions at the organizational level. It provides leadership, governance, and support for scaling efforts, ensuring that the framework aligns with organizational goals and strategy.
 5. **Executive MetaScrum (EMS)**: This is a leadership group that acts like the Product Owner for the organization, providing clarity, priorities, and vision across different teams and departments. It helps align the strategic initiatives with the execution efforts.
 6. **Scale-Free Architecture**: Scrum@Scale allows organizations to grow or shrink the number of teams without altering the structure fundamentally. The framework is adaptable to teams of different sizes, product types, or market demands, helping organizations remain agile and flexible as they scale.
 7. **Backlog Refinement at Scale**: Scrum@Scale ensures that product backlogs are refined and prioritized across multiple teams to ensure they deliver value collaboratively and systematically. This is typically done through multi-tiered backlogs, with top-level priorities trickling down to individual team backlogs.
@@ -252,7 +252,7 @@ Dean Leffingwell introduced SAFe in 2011. It has evolved into a comprehensive fr
 
 **[LeSS (Large-Scale Scrum)](https://less.works/less/framework)** is a framework for scaling Scrum across multiple teams working together on a single product. It was developed by Craig Larman and Bas Vodde and aims to maintain Scrum's simplicity and principles while scaling it to larger organizations or teams. Unlike other scaling frameworks, LeSS focuses on keeping Scrum lightweight and minimizing additional roles, processes, and artifacts.
 
-LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer-focus.
+LeSS is designed for organizations that want to scale Agile while remaining as close as possible to Scrum's original values. It emphasizes simplicity, lean thinking, and customer focus.
 
 {{< image src="../../../images/organization/engineering.less.drawio.png" alt="LeSS" >}}
 
@@ -260,7 +260,7 @@ LeSS is designed for organizations that want to scale Agile while remaining as c
 
 Less is built on a set of principles derived from Scrum, Lean, and Systems Thinking:
 
-1. **Large-Scale Scrum is Scrum**: The core idea behind LeSS is that Scrum remains the same, whether used by one or many teams. The principles, rules, and roles of Scrum are unchanged; LeSS adds coordination mechanisms for multiple teams.
+1. **Large-Scale Scrum is Scrum**: The core idea behind LeSS is that Scrum remains the same, whether used by one or many teams. The principles, rules, and roles of Scrum remain unchanged, while LeSS adds coordination mechanisms for multiple teams.
 2. **Empirical Process Control**: LeSS emphasizes iterative and incremental delivery, using empirical processes (inspect, adapt, and transparency) to guide decision-making at scale.
 3. **Lean Thinking**: Lean principles are deeply embedded in LeSS. The framework encourages eliminating waste, reducing delays, optimizing flow, and continuously improving processes.
 4. **Customer-Centric Focus**: In LeSS, all teams are aligned around delivering maximum customer value. Teams work on the same product backlog and focus on providing a unified product.
@@ -342,7 +342,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 3. **Minimal Changes to Scrum**:
    * Nexus is designed to stay as close to the core Scrum framework as possible. It adds only a few roles, events, and artifacts to handle cross-team coordination and integration.
 4. **Cross-Team Collaboration**:
-   * Nexus emphasizes close collaboration between teams to ensure that dependencies are managed early and effectively. It helps prevent bottlenecks when multiple teams work in isolation on different product parts.
+   * Nexus emphasizes close collaboration between teams to ensure that dependencies are managed early and effectively. It helps prevent bottlenecks when multiple teams work in isolation on different parts of the product.
 
 ##### Nexus Framework Structure
 
@@ -357,9 +357,9 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
    * **Nexus Daily Scrum**:
      In addition to the daily scrums held by each team, Nexus introduces a cross-team **Nexus Daily Scrum**. Representatives from each team (often Scrum Masters or team members) come together to address the day's integration issues, dependencies, and coordination.
    * **Nexus Sprint Review**:
-     The teams collectively demonstrate their integrated product increment to stakeholders, just like a regular Sprint Review in Scrum, but at a larger scale involving multiple teams.
+     The teams collectively demonstrate their integrated product increment to stakeholders, similar to a regular Sprint Review in Scrum, but on a larger scale involving multiple teams.
    * **Nexus Sprint Retrospective**:
-     The retrospective happens at two levels. First, individual teams hold their retrospectives to reflect on their sprint. Then, there is a **Nexus Sprint Retrospective**, where representatives from each team and the Nexus Integration Team meet to identify challenges with cross-team collaboration and integration and find ways to improve.
+     The retrospective happens at two levels. First, individual teams hold their retrospectives to reflect on their sprint. Then, there is a **Nexus Sprint Retrospective**, where representatives from each team and the Nexus Integration Team meet to identify challenges in cross-team collaboration and integration, and to find ways to improve.
 3. **Nexus Artifact: Integrated Increment**:
    * Similar to Scrum, the goal of each Nexus sprint is to produce a **Done** integrated product increment. All Nexus teams contribute to this increment, and the Nexus Integration Team ensures that it is cohesive and shippable.
 4. **Refinement Across Teams**:
@@ -368,7 +368,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 ##### Key Principles of Nexus
 
 1. **Transparency**:
-   * Transparency is a key principle of Nexus, just like in Scrum. Work progress and dependencies between teams must be visible to everyone, helping prevent surprises and unplanned delays.
+   * Transparency is a key principle of Nexus, just like in Scrum. Work progress and dependencies between teams must be visible to everyone to help prevent surprises and unplanned delays.
 2. **Inspection and Adaptation**:
    * Nexus emphasizes Scrum’s empirical process (inspection, adaptation, and transparency) but on a larger scale. The teams frequently inspect their work, identify challenges (especially related to integration), and adapt to improve efficiency and quality.
 3. **Collaboration over Coordination**:
@@ -381,7 +381,7 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 2. **Nexus Integration Team Scrum Master**:
    * The Nexus Integration Team has its own Scrum Master, who is responsible for facilitating Nexus events and helping resolve integration issues across teams. This Scrum Master also coaches the entire Nexus in cross-team collaboration and continuous improvement.
 3. **Development Teams**:
-   * Each team in Nexus works on its assigned Product Backlog items like in Scrum. However, they must closely coordinate with other teams to manage dependencies and ensure integration.
+   * Each team in Nexus works on its assigned Product Backlog items, like in Scrum. However, they must closely coordinate with other teams to manage dependencies and ensure integration.
 
 ##### Benefits of Nexus
 
@@ -397,11 +397,11 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 ##### Challenges of Nexus
 
 1. **Requires Strong Coordination**:
-   * Nexus relies heavily on cross-team coordination. If teams don’t communicate effectively or don’t address dependencies early, integration issues may arise, which can affect the quality of the product.
+   * Nexus relies heavily on cross-team coordination. If teams don’t communicate effectively or address dependencies early, integration issues may arise, affecting the quality of the product.
 2. **Complexity with More Teams**:
    * Although Nexus is designed to handle 3 to 9 teams, scaling beyond that may introduce additional complexity. For large organizations, frameworks like **SAFe** or **LeSS** may be more appropriate.
 3. **Integration Bottlenecks**:
-   * Nexus's success depends on teams' ability to integrate their work continuously. If integration bottlenecks aren’t addressed, progress could slow down and affect the quality of the product increment.
+   * Nexus's success depends on the teams' ability to integrate their work continuously. If integration bottlenecks aren’t addressed, progress could slow down and affect the quality of the product increment.
 
 ---
 
@@ -423,4 +423,4 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
   * **Part II: Team Topologies That Work for Flow**\
     Part II introduces four key team types: **stream-aligned**, **complicated-subsystem**, **platform**, and **enabling teams**, each with a specific role in improving the flow of value. It emphasizes the importance of organizing teams around value streams, allowing them to work independently and reduce dependencies. The section also defines clear modes of team interaction to optimize collaboration and minimize complexity within organizations.
   * **Part III: Evolving Team Interactions for Innovation and Rapid Delivery**\
-    Part III introduces three modes of team interaction — **collaboration**, **X-as-a-service**, and **facilitating** — to optimize teamwork. It emphasizes the need for teams to continuously evolve in response to changing business and technology requirements. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.
+    Part III introduces three modes of team interaction — **collaboration**, **X-as-a-service**, and **facilitating** — to optimize teamwork. It emphasizes the need for teams to evolve in response to changing business and technology requirements continuously. The section highlights the importance of creating autonomous, adaptable teams that maintain fast delivery while minimizing dependencies.

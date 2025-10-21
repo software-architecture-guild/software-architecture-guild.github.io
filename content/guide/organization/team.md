@@ -14,7 +14,7 @@ authors:
 
 ## What makes a Team?
 
-A real team is more than just a group of people working together. There are several key characteristics that make a group of individuals a team. These elements distinguish a true team from a working group or committee.
+A real team is more than just a group of people working together. Several key characteristics make a group of individuals a team. These elements distinguish a true team from a working group or committee.
 
 {{< image src="../../../images/organization/team.attributes.drawio.png" alt="Team attributes" >}}
 
@@ -24,7 +24,7 @@ A real team is more than just a group of people working together. There are seve
 4. **A Common Working Approach**: Teams need to establish a transparent, agreed-upon approach to working together. This includes how decisions will be made, how tasks will be divided, and how team members will communicate. A defined working approach ensures the team operates efficiently and minimizes confusion or conflict.
 5. **Mutual Accountability**: In a real team, members are **mutually accountable** to each other for the team’s performance. This goes beyond individual accountability and requires that every team member feels responsible for their tasks and the team's overall success. Mutual accountability fosters trust and encourages collaboration.
 
-**Example**: The architecture team at a tech company is working on building aligned architecture for the product with a focus on modernization (**common purpose**). They set a goal to reduce the system run rate by 15% while improving the system scalability by the end of the quarter (**specific performance goals**). Each member has it's own zone of responsibility - Infrastructure, Data Platform, Presentation Layers, System Security, etc. - allowing them to cover all critical aspects (**complementary skills**). They follow an agile approach using the Kanban framework with bi-weekly reviews and reiterations on planning sessions (**common working approach**). The team is mutually accountable for the final architecture's performance, with everyone taking responsibility for both successes and challenges (**mutual accountability**).```
+**Example**: The architecture team at a tech company is working on building aligned architecture for the product with a focus on modernization (**common purpose**). They set a goal to reduce the system run rate by 15% and improve system scalability by the end of the quarter (**specific performance goals**). Each member has their own zone of responsibility - Infrastructure, Data Platform, Presentation Layers, System Security, etc. - allowing them to cover all critical aspects (**complementary skills**). They follow an agile approach using the Kanban framework with bi-weekly reviews and reiterations on planning sessions (**common working approach**). The team is mutually accountable for the final architecture's performance, with everyone taking responsibility for both successes and challenges (**mutual accountability**).
 
 ### Types of Teams
 
@@ -35,7 +35,7 @@ The book identifies different types of teams based on their roles and functions 
 2. **Teams That Make or Do Things**: These are the operational teams, such as manufacturing, sales, or customer service. Their goal is to execute specific tasks or produce tangible results. These teams are often responsible for ongoing operations and are focused on achieving specific outcomes, such as product quality, customer satisfaction, or sales targets.
    * **Key challenge**: These teams often must balance their workload and improve processes. They must be able to manage themselves effectively, including resolving conflicts, developing new skills, and continually improving their performance.
 3. **Teams That Run Things**: This category includes **management teams** at various levels, such as senior leadership teams or departmental leadership teams. These teams focus on **overseeing operations, setting direction, and ensuring the organization runs smoothly**.
-   * **Key challenge**: Teams that run things face unique obstacles, such as dealing with hierarchical boundaries, managing multiple priorities, and handling long-term strategic decisions. Members of management teams often have strong individual responsibilities, making it harder to function as a collective team.
+   * **Key challenge**: Teams that run things face unique obstacles, such as dealing with hierarchical boundaries, managing multiple priorities, and handling long-term strategic decisions. Members of management teams often have strong individual responsibilities, which makes it harder for them to function as a collective team.
 
 ### The Difference Between Teams and Non-Teams
 
@@ -43,8 +43,8 @@ Not every group is a team, even if they call themselves one. Groups often fail t
 
 1. **Working Groups**: These are collections of individuals who come together to share information or coordinate activities but do not have a collective purpose or shared performance goals. In working groups, individual members focus on their own areas of responsibility and performance, with little or no emphasis on mutual accountability or collaboration.
    * **Example**: A meeting of managers from different departments to update each other on their respective areas is a working group, not a team.
-2. **Pseudo-Teams**: These groups may be labeled as teams but **lack the essential characteristics** of a true team. Members may meet regularly and share some responsibilities but do not fully commit to a common purpose or hold each other mutually accountable for performance. As a result, they never achieve the performance potential of a real team.
-   * **Example**: A group formed to tackle a company-wide initiative but that lacks clear goals or commitment from its members can be considered a pseudo-team.
+2. **Pseudo-Teams**: These groups may be labeled as teams but **lack the essential characteristics** of a true team. Members may meet regularly and share some responsibilities, but do not fully commit to a common purpose or hold each other mutually accountable for performance. As a result, they never achieve the performance potential of a real team.
+   * **Example**: A group formed to tackle a company-wide initiative, but that lacks clear goals or commitment from its members, can be considered a pseudo-team.
 3. **Potential Teams**: Potential teams are groups on their way to becoming real teams but have not fully developed the discipline needed. They might have a common purpose and some performance goals, but they lack total commitment or haven’t yet established the mutual accountability required to perform at a high level.
    * **Example**: A task force with a defined mission but struggling with alignment on performance goals is a potential team.
 
@@ -83,7 +83,7 @@ Key characteristics include:
 
 1. **Connecting with Customers**: Agile teams are deeply customer-centric. They build empathy for customer needs and design solutions that address those needs. They engage in activities such as direct observation, using telemetry data to monitor product use, and understanding customer personas.
 2. **Planning the Work**: Teams plan their own work, often engaging in Program Increment (PI) Planning sessions at the ART level to align with broader organizational goals. They break down work into manageable increments and continuously refine their backlog based on new information.
-3. **Delivering Value**: Agile teams continuously integrate and test their work, ensuring quality. Depending on their operating model, they may release increments of functionality directly to customers, ensuring fast value delivery and responsiveness to feedback.
+3. **Delivering Value**: Agile teams continuously integrate and test their work, ensuring quality. Depending on their operating model, they may release increments of functionality directly to customers, providing fast value delivery and responsiveness to feedback.
 4. **Getting Feedback**: Agile teams thrive on quick and meaningful feedback from customers and technological systems. Frequent customer interaction and solution demos allow them to adjust course and improve the product incrementally.
 5. **Improving Relentlessly**: Continuous improvement is a core principle. Teams regularly hold retrospectives to reflect on their work and make necessary adjustments. They proactively solve problems as they arise and constantly seek ways to optimize their workflow and output.
 
@@ -143,12 +143,12 @@ A structured approach to events and meetings is integral to the Kanban method, h
 {{< image src="../../../images/organization/team.kanban.drawio.png" alt="Kanban" >}}
 
 1. **Strategy Review**: The Strategy Review meeting is focused on selecting the services to be provided and defining the concept of “fit for purpose” for those services. It helps teams sense how the external environment changes, allowing them to adapt their service offerings and provide clear direction for future efforts.
-2. **Operations Review**: The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery while ensuring alignment with customer expectations and facilitates discussions on improving overall service efficiency.
+2. **Operations Review**: The Operations Review meeting aims to understand the balance between and across services. It assesses resource deployment to maximize value delivery, ensures alignment with customer expectations, and facilitates discussions on improving overall service efficiency.
 3. **Risk Review**: The Risk Review is dedicated to understanding and responding to the risks associated with effective service delivery. This meeting typically involves identifying blockers and clustering them to proactively address potential issues, ensuring teams can navigate challenges effectively.
 4. **Service Delivery Review**: The Service Delivery Review focuses on examining and improving the effectiveness of a specific service. This meeting looks at performance metrics, customer feedback, and potential enhancements to ensure that the service continues to meet or exceed expectations.
 5. **Replenishment Meeting**: The Replenishment Meeting is essential for moving items over the commitment point and into the workflow system. It oversees the preparation of options for future selections, ensuring that the backlog remains aligned with the team’s capacity and priorities.
 6. **Kanban Meeting**: Often held daily, the Kanban Meeting is a coordination and self-organization session for those collaborating to deliver the service. Utilizing a stand-up format encourages a short, energetic meeting focused on completing work items and addressing any blockers that may impede progress.
-7. **Delivery Planning Meeting**: The Delivery Planning Meeting is designed to monitor and plan deliveries to customers. This meeting helps teams align their efforts with customer needs, ensuring that the right products and services are delivered on time and following customer expectations.
+7. **Delivery Planning Meeting**: The Delivery Planning Meeting is designed to monitor and plan deliveries to customers. This meeting helps teams align their efforts with customer needs, ensuring that the right products and services are delivered on time and meet customer expectations.
 
 ### Conclusion
 
@@ -160,7 +160,7 @@ Scrum is a widely adopted framework for agile project management, particularly i
 
 ### Core Values
 
-Scrum is grounded in core values shaping its practices and guiding teams in pursuing successful project outcomes. These values are:
+Scrum is grounded in core values that shape its practices and guide teams in pursuing successful project outcomes. These values are:
 
 1. **Commitment**: Team members are dedicated to achieving their goals and supporting one another. This commitment fosters a culture of responsibility and accountability.
 2. **Courage**: Scrum encourages team members to tackle challenging problems and express their ideas, ensuring that issues are addressed transparently.
@@ -198,7 +198,7 @@ Scrum is structured around six key events that provide a framework for teams to 
 3. **Sprint Planning**: This meeting kicks off the Sprint, where the team collaboratively selects items from the product backlog to work on during the Sprint. The team defines the Sprint Goal and creates a plan for delivering the selected items.
 4. **Daily Scrum**: Also known as the daily stand-up, this 15-minute meeting allows team members to synchronize their work, discuss progress, and identify any impediments. It promotes transparency and keeps the team focused on the Sprint Goal.
 5. **Sprint Review**: At the end of each Sprint, the team presents the completed work to stakeholders during the Sprint Review. This event provides an opportunity for feedback, ensuring that the product aligns with customer expectations and market needs.
-6. **Sprint Retrospective**: After the Sprint Review, the team holds a Retrospective to reflect on their performance during the Sprint. They discuss what went well and what could be improved and identify actionable steps for enhancing their processes in the next Sprint.
+6. **Sprint Retrospective**: After the Sprint Review, the team holds a Retrospective to reflect on their performance during the Sprint. They discuss what went well and what could be improved, and identify actionable steps for enhancing their processes in the next Sprint.
 
 ##### Scrum Techniques
 
