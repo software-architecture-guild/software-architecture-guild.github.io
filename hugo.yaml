@@ -28,7 +28,7 @@ menu:
       identifier: guide
       weight: 10
     - name: Blog
-      url: "https://softwarearchitectureguild.substack.com/t/blog"
+      url: "https://softwarearchitectureguild.substack.com/archive"
       identifier: blog
       weight: 20
     - name: Courses
