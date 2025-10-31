@@ -6,6 +6,7 @@ Archi
 archimate
 Architecting
 Asana
+autoscale
 BSUIR
 CCPA
 CEDP
@@ -13,12 +14,14 @@ Cognos
 colinwilson
 Datastage
 Doerr
+endline
 Eoin
 Excalidraw
 Fastly
 flexsearch
 Foote
 Fussell
+gatekeeping
 gohugoio
 goldmark
 Hardzeenka
@@ -45,7 +48,9 @@ Lucidchart
 markdownlint
 Microkernel
 Misaligning
+misprioritized
 MTBF
+MTTR
 Norming
 Oleg
 OLTP
@@ -55,8 +60,12 @@ operationalize
 Pais
 Profitero
 psychographic
+pytest
+Qube
 Radioelectronics
+rebalance
 relref
+replaceability
 roadmaps
 Rozanski
 Schwaber
