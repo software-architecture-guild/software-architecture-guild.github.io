@@ -9,6 +9,7 @@ Asana
 BSUIR
 CCPA
 CEDP
+chargeback
 Cognos
 colinwilson
 Datastage
@@ -53,6 +54,7 @@ Oozie
 Opengraph
 operationalize
 Pais
+Pereira
 Profitero
 psychographic
 Radioelectronics
@@ -63,6 +65,7 @@ Rozanski
 Schwaber
 Silverman
 Smartsheet
+socio
 Sparx
 SSAS
 SSIS

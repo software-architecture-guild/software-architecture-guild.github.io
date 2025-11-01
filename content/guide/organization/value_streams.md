@@ -1,145 +1,172 @@
 ---
 weight: 415
 title: "Value Streams"
-description: "This article explains what value streams are and how to identify them."
+description: "A practical guide to what value streams are, how to identify them, and how to organize teams and architecture around them."
 icon: "article"
 date: "2024-10-01T16:42:31+02:00"
-lastmod: "2024-10-01T16:42:31+02:00"
+lastmod: "2025-11-01T10:00:00+02:00"
 draft: false
 toc: true
 authors:
--  "ilya-hardzeenka.md"
+- "ilya-hardzeenka.md"
 ---
 
-Value streams shift the focus from managing tasks and activities to managing how value moves from concept to delivery. They make software work legible to the business by tracing end-to-end flow and aligning development with outcomes. In this lens, all work is categorized as features, defects, risks, or debt. The goal is to monitor and optimize how these items progress through the system so that delivery reflects real business priorities.
+{{< alert icon=" " text="In traditional Lean examples, an order is a discrete flow: take order → fulfill → ship.<br>In software, “order” is an experience that you must own and maintain across the stages of discovery, comparison, purchase, payment, tracking, receipt, and return. Treating “order” like a one-off operation underestimates what teams and architectures must own over time." />}}
+
+## Why value streams matter
+
+Value streams shift attention from managing activities to managing how value moves from intent to impact, and who owns that movement end-to-end. They are the unit that enables you to organize teams, metrics, and architecture into a single, coherent socio-technical system.
+
+Mindset shift: don’t ask “What process do we run?” Ask “What promise do we keep, for whom, again and again?” That promise is your value stream.
 
 ## Definition
 
-A value stream can be defined via two-dimensional map:
+A value stream is a long-lived capability that repeatedly delivers a customer-recognizable outcome for a specific segment, persona, or job.
 
-- **Horizontal (Time):** the end-to-end stages from trigger to value realized. Here we map the content of a stream.
-- **Vertical (Customer):** the segments/personas/jobs-to-be-done you serve (e.g., SMB vs Enterprise; within Enterprise: IT Admin vs Business User). Here, we define how many and what kinds of value streams we will have.
+It’s defined in two dimensions:
 
-A value stream exists where a contiguous path across time for a specific customer slice produces a customer-recognizable outcome measured by a single north-star metric. Beyond being a process, a value stream is a **structured unit of business**: the end-to-end sequence of activities required to deliver a product, service, or solution from concept through delivery and ongoing support: engaging cross-functional teams, tools, and systems so value continuously flows to the customer.
+- Horizontal (time): the end-to-end stages from trigger to value realized.
+- Vertical (customer): the segments, personas, or jobs you serve (for example, SMB vs Enterprise; within Enterprise: IT Admin vs Business User).
 
-### Key Components of a Value Stream
+A stream exists where a contiguous path across time for a specific customer slice produces a recognizable outcome measured by a single north-star metric. It’s more than a process: it’s a structured unit of business you can fund, staff, measure, and evolve.
 
-- **Flow of Work:** features (new functionality), defects (issues), risks (compliance/security), and technical debt (long-term improvements).  
-- **Continuous Delivery:** streams are dynamic and emphasize iterative delivery over project completion.  
-- **Continuous Improvement:** visibility via flow metrics (velocity, time, efficiency, load, distribution) to surface bottlenecks and opportunities.  
-- **Customer-Centric Focus:** design every activity around customer outcomes.  
-- **Alignment with Business Goals:** ensure work supports measurable, strategic objectives.
+*Example*  
+In Manufacturing: “Order-to-Ship” is a process lane.  
+In Software: “Shopper Purchase Experience” is the stream. The service where shoppers can discover → compare → purchase → receive (and return) goods successfully. One team (or set of teams) owns that experience from end to end.
 
-{{< image src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" >}}
+### Key components of a value stream
 
-### The Four Flow Items
+- **Flow of work**: everything falls into Features, Defects, Risks, or Debt (the four flow items).
+- **Continuous delivery**: streams are ongoing, not projects with an end date.
+- **Continuous improvement**: use flow metrics (velocity, time, efficiency, load, distribution) to reveal bottlenecks.
+- **Customer-centric**: outcome first, activity second.
+- **Aligned to business goals**: the stream’s north-star metric ties to strategy.
 
-- **Features**: new functionality delivered to customers.  
-- **Defects**: problems that must be fixed.  
-- **Risks**: compliance, security, and related risk work.  
-- **Debt**: technical shortcuts that accumulate and must be addressed.
+{{< image src="../../../images/organization/engineering.value_stream.drawio.png" alt="Value Stream" size="">}}
 
-These four categories are the unit of analysis for value streams: they reveal what is being delivered, what is being stabilized, what is being protected, and what is being paid down.
+### The four flow items
 
-### Measuring Flow in Value Streams
+- **Features**: new customer value.
+- **Defects**: restoring expected value.
+- **Risks**: protecting value (security, compliance).
+- **Debt**: sustaining value (capability, quality, cost).
 
-Flow metrics provide transparency into how work moves and where it stalls.
+These are the atoms of work that move through a stream.
 
-- **Flow Velocity**: how many flow items are completed per period.\
-  Indicates the delivery rate across features, defects, risks, and debts.
-- **Flow Time**: elapsed time from start to completion for a work item.\
-  Longer times highlight bottlenecks or inefficiencies in the stream.
-- **Flow Load**: number of active items in progress.\
-  Excess load overwhelms teams and slows delivery.
-- **Flow Efficiency**: ratio of active time to waiting time (approvals, handoffs, etc.).\
-  Low efficiency signals delays unrelated to actual work.
-- **Flow Distribution**: mix of work across the four item types.\
-  Prevents overemphasis on new features at the expense of defects, risks, or debt.
+### Measuring flow
 
-These measures let organizations manage software with the same rigor they apply to other critical business functions.
+- **Flow Velocity**: items completed per period.
+- **Flow Time**: elapsed time from start to done.
+- **Flow Load**: work in progress; too much creates thrash.
+- **Flow Efficiency**: active vs waiting time.
+- **Flow Distribution**: balance across the four items.
 
-### Value Streams vs. Revenue Streams
+### Example: Shopper Purchase Experience
+
+Let's use the Shopper Purchase Experience Example to illustrate how the core components of a value stream unfold in a real-world journey.
+
+##### Flow of work
+
+- Features — discover, compare, purchase, receive, return.  
+  Enable shoppers to find relevant products, evaluate options (reviews/specs/price), complete checkout and payment, track delivery, and initiate/complete returns.
+- Defects — refunds and incomplete flows.  
+  Drop-offs that cannot be resumed, failed or duplicate charges, orders not confirmed, undelivered, or wrong items that require recovery and refunds.
+- Risks — payment security, fraud, and identity obligations.  
+  PCI/SCA compliance, fraud detection and chargeback handling, identity and access protection, data residency, and auditability are built into the journey.
+- Debt — cost to run and maintain the service and operations.  
+  Ongoing platform/runtime costs, on-call/support load, observability and reliability work, plus operational costs to maintain catalog data, process orders, handle refunds/returns, and keep policies and integrations current.
+
+##### Continuous delivery
+
+The Shopper Purchase Experience is a running service. Continuous delivery here means the service is always able to deliver value: it is always available, responsive under load, safe to operate, and capable of processing each transaction end-to-end.
+
+- Always-on journey (discover → compare → purchase → receive → return)
+- Handles the needed number of simultaneous customer journeys
+- Each journey is isolated and has a consistent end-to-end
+- Degrades gracefully if a step slows
+
+##### Continuous improvement
+
+Continuous improvement is about measuring how the flow performs and tightening the system where it matters most.
+
+- Flow Velocity: journeys completed per period (orders confirmed, returns completed).
+- Flow Time: elapsed time from start to done (trigger → value realized).
+- Flow Load: work in progress; how many customer journeys are in flight simultaneously.
+- Flow Efficiency: active processing vs waiting time between steps (for example, Pay → Confirm waits).
+- Flow Distribution: balance across the four items (Features/Defects/Risks/Debt) affecting this stream.
+
+##### Customer-centric
+
+The stream is judged by the shopper’s outcome, not by internal activity. Success means the shopper finds the right product, completes the purchase smoothly, receives it on time, and can return or request a refund without friction. Design choices prioritize clarity, speed, and trust at each step of the journey.
+
+##### Aligned to business goals
+
+The north-star metric is conversion: the share of shoppers who complete a purchase. Higher conversion directly increases marketplace commission revenue. Guardrails include refund resolution time, fraud loss rate, cost to serve per order, and on-time delivery rate, so conversion gains don’t degrade trust or unit economics.
+
+## Identifying value streams
+
+Value streams are not process steps; they are customer outcomes you can own end-to-end. Identify them by crossing time (trigger → value realized) with who you serve (segments, personas, jobs). Draw boundaries where the outcome, policies, or success measures genuinely differ. Split when those differ; merge when they don’t.
+
+### Step by step
+
+1. **State the outcome**  
+   Write one sentence for the outcome and who it is for.  
+   Example (Shopper Purchase Experience): “We win when consumer shoppers complete a purchase and receive the order on time (conversion → delivered order).”
+
+2. **Sketch the timeline**  
+   Name the minimal stages from trigger to value realized. Keep it business-level: discover → compare → purchase → receive → return (adapt for your domain).
+
+3. **List customer slices**  
+   Enumerate segments or personas that matter (for example, SMB shoppers, enterprise procurement, sellers, couriers).
+
+4. **Fill the grid**  
+   For each segment × stage, note intent, proof points (what makes this stage complete), key policies/SLAs, and the primary metric affected.
+
+5. **Find material divergences**  
+   Scan the grid for meaningful differences that change the outcome or how success is proved: distinct triggers or finish lines, different proof points, extra approvals or policies (KYC, PO, tax), unique obligations or SLAs, different north-star metric, different risk posture or cadence, or distinct data/entitlement needs. Mark these forks—they are candidates to split into separate streams.
+
+6. **Propose candidate streams**  
+   For each contiguous path with a distinct customer outcome, name it and capture start → finish, north-star metric, and critical policies.
+
+7. **Pressure-test ownership**  
+   Ask: Can one stream team own this outcome from end to end? If it stalls, does only this outcome stall (reasonable boundary), or does the whole business freeze (bad boundary)?
+
+8. **Lock the minimal set**  
+   Split only when triggers, finish lines, metrics, or policies differ. Merge when they are the same. Stop at the smallest set that keeps value creation legible.
+
+### Decision criteria and checks
+
+- Time integrity: clear start and finish with proof points.  
+- Customer clarity: specific segment/persona/job with a single north-star metric.  
+- Policy and SLA deltas: materially different obligations justify a separate stream.  
+- Cadence and learning: very different change rhythms or risk posture suggest separation.  
+- Blast radius: failures remain local to the stream.  
+- Simplicity: a new leader can explain the map in under a minute.
+
+### Order example
+
+Manufacturing treats “Order-to-Ship” as one process lane. In software, the shopper’s outcome spans discover → compare → purchase → receive → return. That is one stream for consumer buyers when the trigger, finish line, and success metric (conversion to completed delivery) are the same.
+
+Enterprise procurement may diverge: formal quotes, POs, tax exemptions, delivery windows, different finish line (invoice approved, goods received), and a different north-star metric. That becomes a separate stream, even though both include “order,” because the outcome, policies, and measure of success differ.
+
+### Value streams vs revenue streams
 
 A **revenue stream** captures value for the business; a **value stream** delivers value to customers. Many value streams generate revenue, but some (e.g., compliance or internal enablement) do not and are still essential to sustained delivery. You can reverse-engineer value streams by following revenue: track what customers pay for and how it is delivered to surface under-recognized or under-resourced streams.
 
-### Top-Level and Supporting Streams
+### Top-level and supporting streams
 
-Top-level streams align to distinct customer value (e.g., **Electric Vehicles**, **Trucks and SUVs**, **Fleet Sales**), each with its own customers, products, pipelines, metrics, and risks: even when underlying parts overlap. Supporting streams (e.g., **Engine Production**, **Battery Cell Assembly**, **Software Updates for In-Vehicle Systems**) provide shared capabilities critical to delivering those customer-facing streams.
+Top-level streams align to distinct customer value (e.g., Electric Vehicles, Trucks and SUVs, Fleet Sales), each with its own customers, products, pipelines, metrics, and risks: even when underlying parts overlap. Supporting streams (e.g., Engine Production, Battery Cell Assembly, Software Updates for In-Vehicle Systems) provide shared capabilities critical to delivering those customer-facing streams.
 
-## Managing Value Streams Over Time
+*Example*  
+The Shopper Purchase Experience stream relies on Payments (supporting) for tokens, fraud, and settlement, as well as the Platform for deployment and observability. These are streams, too, but supporting ones.
 
-Value streams evolve as products, teams, and technologies change. Continuous monitoring and improvement keep them aligned with business goals. A connected **value stream network**, which includes the tools and processes through which work flows, supports this visibility. Organizing around a **product model** aligns teams, technology, and goals to a shared product vision, ensuring the stream’s structure reflects the outcomes it owns.
+## Architectural impact of value stream boundaries
 
-### Evolving Streams
+Value streams shape architecture indirectly, through funding, management, and team boundaries, and directly via choices about centralized versus distributed capabilities. Defining Internal/Supporting Value Streams is an explicit decision to manage specific capabilities centrally and offer them as a service to Customer Value Streams (for example, platform, identity, observability, data, billing, CRM, onboarding). Architectural seams then follow: standardized contracts, shared controls, and multi-tenant isolation around those shared services. Suppose you don’t establish shared/supporting streams. In that case, the centralization impulse doesn’t vanish—it’s often recreated inside each Customer Value Stream as a small “mini-platform” with its own paved road and internal contracts.
 
-As markets and technology shift, streams change. In the car domain, subscription-based software services (real-time navigation, premium audio, remote diagnostics, over-the-air updates) can crystallize into a distinct stream: **Digital Experience and Connected Services**: with its own tech stacks, teams, and customer interactions. A practical operating cadence is to **review your value-stream map every six months** or after major market shifts.
+### Shared vs Owned
 
-## Identifying Value Streams
-
-### Value Stream Mapping
-
-**Value Stream Mapping (VSM)** visualizes, analyzes, and improves the flow of materials, information, or work. By mapping the current process, including value-added and non-value-added activities, organizations pinpoint inefficiencies, bottlenecks, and waste that hinder delivery. When used to identify value streams, VSM exposes how value is delivered from conception to delivery and helps surface distinct streams that produce customer-recognizable outcomes.
-
-Follow this numbered process to identify your value streams:
-
-1. **Choose outcomes and customer scope**  
-   List 1–3 business outcomes (revenue, retention, cost, risk).\
-   Decide the primary segmentation (e.g., SMB vs Enterprise) and any secondary persona/job layer (e.g., Enterprise: IT Admin, Business User).\
-   *Write: “We win when **{OUTCOME}** happens for **{SEGMENT}** (segment/persona).”*
-
-2. **Draft the timeline**  
-   Name the minimal stages from trigger → value realized (business-level only).\
-   *Example stages: Trigger → Discover → Decide → Transact/Contract → Deliver/Activate → Prove Value.*
-
-3. **List customer segments and personas**  
-   Enumerate the segments/personas/jobs you serve (e.g., SMB; Enterprise: IT; Enterprise: Business).
-
-4. **Capture business facts per stage and segment**  
-   For each segment at each stage, capture only:\
-   *Intent, Proof point (qualified, signed, activated, paid, resolved), Policy/SLA, Primary metric influenced.*
-
-5. **Mark material divergences**  
-   Highlight where a segment differs in trigger, proof point, policy/SLA, or metric. Note any forks (extra steps, approvals, security checks) that appear only for certain segments/personas.
-
-6. **Trace paths to value by segment**  
-   For each segment/persona, confirm a contiguous path from trigger to value realized. If a segment splits into forks with different finish lines or metrics, treat them as separate candidate streams.
-
-7. **Define candidate value streams**  
-   For each candidate path, specify:\
-   *Name, Customer slice, Start trigger → finish line, North-star metric, Key proof points*
-
-8. **Pressure-test each candidate**  
-   *New offer:* Can this path deliver end-to-end for this segment without relying on other paths for the core outcome?\
-   *Disruption:* If it stalls, does value stall only here (good) or everywhere (bad)?\
-   *Policy change:* Can obligations change here without rewriting other paths?
-
-9. **Lock the minimal set**  
-   *Split* when triggers/finish lines/metrics/policies differ materially for a segment/persona.\
-   *Merge* when they share the same trigger, finish line, and north-star metric.\
-   *Stop* at the smallest set that makes value creation legible.
-
-### Decision Criteria & Checks
-
-- **Time integrity:** All stages from trigger → value realized with clear proof points.  
-- **Customer clarity:** Targets a specific segment/persona/job** with a single north-star metric.  
-- **Fork intensity:** Unique steps/approvals → justify a separate stream.  
-- **Policy/SLA deltas:** Materially different obligations (audits, response targets, data handling) → separate streams.  
-- **Trigger & finish alignment:** Distinct triggers or distinct “value realized” → separate.  
-- **Cadence & learning loop:** One segment experiments rapidly vs another regimented → separate.  
-- **Blast radius containment:** Failures mostly impact the target segment/persona’s outcome.  
-- **Simplicity:** A new exec can explain the 2D map in 60 seconds.
-
-### Operating Principles and Cautions
-
-Identifying a value stream is the beginning; effective delivery requires dedicated teams, transparent governance, and focused metrics. Avoid creating separate streams without a clear need for distinct governance or delivery; prefer the fewest streams that keep value creation legible. Architects and engineers typically don’t make or manage streams directly, but understanding them sets boundaries for technical architecture decisions and keeps investments aligned to business outcomes.
-
-## Architectural Impact of Value Stream Boundaries
-
-Value streams shape architecture indirectly—through funding, management, and team boundaries—and directly via choices about centralized vs. distributed capabilities. Defining Internal/Supporting Value Streams is an explicit decision to manage specific capabilities centrally and offer them as a service to Customer Value Streams (for example, platform, identity, observability, data, billing, CRM, onboarding). Architectural seams then follow: standardized contracts, shared controls, and multi-tenant isolation around those shared services. Suppose you don’t establish shared/supporting streams. In that case, the centralization impulse doesn’t vanish—it’s often recreated inside each Customer Value Stream as a small “mini-platform” with its own paved road and internal contracts.
-
-### Shared vs. Owned: the core lever (generic)
-
-- **Shared capabilities** — Centralized, funded, and staffed once; offered self-service to all streams. This concentrates expertise, increases consistency, and encourages uniform integration and control patterns.  
+- **Shared capabilities** — Centralized, funded, and staffed once; offered self-service to all streams. This consolidates expertise, enhances consistency, and fosters uniform integration and control patterns.  
 - **Owned capabilities** — Embedded within a stream and tailored to its outcomes and obligations. This maximizes autonomy and pace, but risks duplication and divergence across streams.
 
 {{< alert icon=" " text="Explicit call-out: Infrastructure as the canonical driver:<br>The shared-vs-owned split is most forceful in infrastructure. A shared platform pushes standardized runtimes, security, and telemetry with strong guardrails; stream-owned stacks push isolation by default, bespoke topologies, independent release trains, and strong boundaries to avoid tight coupling." />}}
@@ -154,9 +181,6 @@ Each item can be shared across streams or owned within a stream. Your choice set
 - **Identity and access (authN/Z, roles, entitlements)**  
   Identities span the whole product. Shared centralizes sign-in, tokens, and entitlements for a single audit plane. Owned refines roles and entitlements to match a stream’s outcomes. Implication: declare the entitlements source of truth, document cache and validation rules, and prevent policy drift.
 
-- **Data ownership and persistence (system of record, schemas)**  
-  Data follows who owns “done.” Shared central records publish clean, versioned read models to everyone. Owned puts writes with the stream that delivers the customer-recognizable outcome; others subscribe to events and build read views. Implication: keep writes where value is realized, version events and schemas, and plan explicit evolution paths.
-
 - **Integration and events (APIs, messages, workflows)**  
   Boundaries need clarity. Shared gateways and buses standardize auth, retries, idempotency, and schemas. Owned choreography favors decoupling and responsiveness. Implication: prefer asynchronous edges at stream seams; when synchronous is required, keep contracts explicit and versioned.
 
@@ -164,16 +188,16 @@ Each item can be shared across streams or owned within a stream. Your choice set
   This is the canonical driver. Shared provides a paved road for clusters, pipelines, secrets, policy-as-code, and guardrails. Owned tailors stacks to segment needs with independent release trains and scaling. Implication: this choice defines isolation, blast radius, and the smallest unit you can scale.
 
 - **Security, compliance, and policy (audit, residency, keys)**  
-  Controls must be provable. Shared centralizes evidence such as key management, audit trails, and residency policies. Owned tightens controls where obligations differ. Implication: map obligations to deployment topologies and document which controls are platform versus stream.
+  Controls must be provable. Shared centralizes evidence such as key management, audit trails, and residency policies. Owned tightens controls where obligations differ. Implication: Map obligations to deployment topologies and document which controls are platform-specific versus stream-specific.
 
 - **Observability and SLOs (logs, traces, metrics, flow checkpoints)**  
-  You can’t improve what you can’t see. Shared telemetry unifies dashboards and SLO templates. Owned sharpens signals for local needs. Implication: regardless of ownership, emit events at business proof points so the flow from trigger to value is visible end-to-end.
+  You can’t improve what you can’t see. Shared telemetry unifies dashboards and SLO templates. Owned sharpens signals for local needs. Implication: Regardless of ownership, emit events at business proof points so the flow from trigger to value is visible end-to-end.
 
 - **Release and delivery tooling (build, deploy, approvals)**  
-  Delivery is culture in code. Shared pipelines enforce provenance, SBOMs, and policy checks. Owned pipelines tune for pace and context. Implication: establish minimum standards for security and compliance, even when streams customize their path.
+  Delivery is culture in code. Shared pipelines enforce provenance, SBOMs, and policy checks. Owned pipelines tune for pace and context. Implication: Establish minimum standards for security and compliance, even when streams customize their path.
 
 - **Failure domains and scaling (isolation, capacity, hot paths)**  
-  Boundaries decide blast radius. Shared multi-tenant setups need strong partitioning to avoid wide outages. Owned isolates by default and scales only the hot path. Implication: design day-to-day isolation first; do disaster recovery and backups per boundary, not as a substitute for good compartmentalization.
+  Boundaries decide blast radius. Shared multi-tenant setups require strong partitioning to prevent widespread outages. Owned isolates by default and scales only the hot path. Implication: design day-to-day isolation first; do disaster recovery and backups per boundary, not as a substitute for good compartmentalization.
 
 - **Analytics and reporting (metrics, models, BI)**  
   Decisions need consistent numbers. Shared warehouses and metric layers define canonical KPIs. Owned models answer stream-specific questions. Implication: declare which KPIs are global versus local and publish metric-logic contracts.
@@ -185,25 +209,37 @@ Each item can be shared across streams or owned within a stream. Your choice set
   Think of CRM as the golden source of customer truth. Shared publishes clean, versioned read models to all streams. Owned keeps an augmented view tailored to journeys while deferring canonical fields to the shared source. Implication: declare golden fields, emit change-data events, and keep stream enrichments additive, not authoritative.
 
 - **Customer onboarding and provisioning (KYC, setup, policy checks)**  
-  First impressions set the tone. Shared reusable workflows apply segment-aware policies centrally. Owned handles niche steps for specific personas. Implication: expose onboarding states and events so downstream streams progress without synchronous blocking.
+  First impressions set the tone. Shared reusable workflows apply segment-aware policies centrally. Owned handles niche steps for specific personas. Implication: Expose onboarding states and events so that downstream streams can progress without synchronous blocking.
 
 ### What architects optimize
 
 - **Map ownership to design** — Make platform/shared versus stream-owned responsibilities unambiguous; don’t let ambiguity leak into code.  
 - **Seal the seams** — Define narrow, versioned contracts (events and APIs); prefer asynchronous edges at stream boundaries.  
-- **Protect the record** — Place writes where the outcome lives; publish read models elsewhere.  
+- **Protect the data** — Place writes where the outcome lives; publish read models elsewhere.  
 - **Tune by obligations** — Let policy and SLA deltas (latency, audit, residency) drive topology and controls per stream.  
 - **Contain blast radius** — Isolate runtime, state, and deployment units so incidents remain local.  
 - **Instrument the flow** — Track Flow Time, Velocity, Load, Efficiency, and Distribution per stream, with checkpoints tied to business proof points.  
 - **Keep platforms thin** — If shared, provide a paved road and guardrails, not business logic. If stream-owned, avoid accidentally rebuilding a heavy platform; standardize just enough.
 
+## Managing Value Streams Over Time
+
+Value streams evolve as products, teams, and technologies change. Continuous monitoring and improvement keep them aligned with business goals. A connected *value stream network*, which includes the tools and processes through which work flows, supports this visibility. Organizing around a *product model* aligns teams, technology, and goals to a shared product vision, ensuring the stream’s structure reflects the outcomes it owns.
+
+### Evolving Streams
+
+As markets and technology shift, streams change. In the automotive domain, subscription-based software services (such as real-time navigation, premium audio, remote diagnostics, and over-the-air updates) can crystallize into a distinct stream: *Digital Experience and Connected Services*, with its own tech stacks, teams, and customer interactions. A practical operating cadence is to review your value-stream map every six months or after major market shifts.
+
 ## Conclusion
 
-Value streams make software delivery measurable in terms that the business recognizes: outcomes, evidence, and flow. Framing all work as features, defects, risks, or debt, and tracking velocity, time, load, efficiency, and distribution, exposes bottlenecks and rebalances investment. The two-dimensional, segment-aware view clarifies triggers, proofs, policies, and “done,” producing cleaner seams and the smallest proper set of streams. Because streams evolve, review them regularly and sustain them with dedicated teams, governance, and metrics to ensure the architecture remains aligned with the value realized for each segment.
+Value streams describe the customer’s journey to value—start to finish—not the mechanics of software delivery. Each stream is an end-to-end outcome you own over time: a coherent journey for a defined segment where “value realized” is unambiguous.
 
-## Recommended Reading
+Identify streams with a simple map of time × customer. It clarifies triggers, proof points, and policies, exposes clean seams, and yields the smallest proper set of streams. Run each stream as an always-on service and measure the journey itself: flow velocity, flow time, flow load, flow efficiency, and flow distribution. These signals tell you where customers wait, where work piles up, and what to change next.
 
-#### Books
+Design shared versus owned capabilities deliberately, seal seams with explicit contracts and events, and keep platforms thin. Review streams on a regular cadence, adjust boundaries as markets and obligations change, and sustain them with dedicated teams and lightweight governance.
+
+Organize funding and work around streams—not projects—and use the flow metrics to continuously steer the customer journey toward outcomes that matter.
+
+## Recommended reading
 
 - Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.  
   - **Chapter 3: Introducing the Flow Framework**\
@@ -212,3 +248,15 @@ Value streams make software delivery measurable in terms that the business recog
     Defines the flow metrics—velocity, time, load, efficiency, and distribution — and explains how they create transparency and reveal bottlenecks.
   - **Chapter 9: Value Stream Management**\
     Emphasizes continuous improvement, the value stream network, and the product model to keep streams aligned with evolving business goals.
+
+- Pereira, S., & Davis, A. (2024). [Flow Engineering: From Value Stream Mapping to Effective Action](https://flowengineering.org/).  
+  - **Chapter 5: Outcome Mapping**\
+    Aligns teams on measurable outcomes and signals of success before modifying the system, thereby anchoring all subsequent maps.
+  - **Chapter 6: Current State Value Stream Mapping**\
+    Makes today’s flow visible end-to-end to expose delays, rework, and handoffs that slow customer journeys.
+  - **Chapter 7: Dependency Mapping**\
+    Surfaces cross-team and external constraints, illustrating how platforms, policies, and vendors influence the flow.
+  - **Chapter 8: Future State Value Stream Mapping**\
+    Designs a target flow with fewer waits and clearer ownership, tied to outcomes rather than outputs.
+  - **Chapter 9: The Flow Roadmap**\
+    Converts insights from the four maps into sequenced, owned experiments with success measures and review cadence.
