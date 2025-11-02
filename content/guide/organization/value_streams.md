@@ -109,18 +109,18 @@ Value streams are not process steps; they are customer outcomes you can own end-
 
 ### Step by step
 
-1. **State the outcome**  
+1. **List customer slices**  
+   Enumerate segments or personas that matter (for example, SMB shoppers, enterprise procurement, sellers, couriers).
+
+2. **State the outcomes**  
    Write one sentence for the outcome and who it is for.  
    Example (Shopper Purchase Experience): “We win when consumer shoppers complete a purchase and receive the order on time (conversion → delivered order).”
 
-2. **Sketch the timeline**  
+3. **Sketch the timeline**  
    Name the minimal stages from trigger to value realized. Keep it business-level: discover → compare → purchase → receive → return (adapt for your domain).
 
-3. **List customer slices**  
-   Enumerate segments or personas that matter (for example, SMB shoppers, enterprise procurement, sellers, couriers).
-
 4. **Fill the grid**  
-   For each segment × stage, note intent, proof points (what makes this stage complete), key policies/SLAs, and the primary metric affected.
+   For each segment × stage, note intent, proof points (what makes this stage complete), and the primary metric affected.
 
 5. **Find material divergences**  
    Scan the grid for meaningful differences that change the outcome or how success is proved: distinct triggers or finish lines, different proof points, extra approvals or policies (KYC, PO, tax), unique obligations or SLAs, different north-star metric, different risk posture or cadence, or distinct data/entitlement needs. Mark these forks—they are candidates to split into separate streams.
