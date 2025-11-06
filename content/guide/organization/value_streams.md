@@ -109,30 +109,73 @@ Value streams are not process steps; they are customer outcomes you can own end-
 
 ### Step by step
 
-1. **List customer slices**  
-   Enumerate segments or personas that matter (for example, SMB shoppers, enterprise procurement, sellers, couriers).
+##### 1) List customer slices
 
-2. **State the outcomes**  
-   Write one sentence for the outcome and who it is for.  
-   Example (Shopper Purchase Experience): “We win when consumer shoppers complete a purchase and receive the order on time (conversion → delivered order).”
+**Goal:** Know exactly who you serve.  
+**What needs to happen:** Write a short, concrete list of segments/personas you can win, support, and renew.  
+**Expected outcome:** 2–5 slices you can point to in your pipeline and roadmap.
 
-3. **Sketch the timeline**  
-   Name the minimal stages from trigger to value realized. Keep it business-level: discover → compare → purchase → receive → return (adapt for your domain).
+##### 2) State the outcome
 
-4. **Fill the grid**  
-   For each segment × stage, note intent, proof points (what makes this stage complete), and the primary metric affected.
+**Goal:** Make success observable for each slice.  
+**What needs to happen:** One sentence per slice — *“We win when {outcome} happens for {slice}.”* Use a measurable finish line.  
+**Expected outcome:** Clear outcome statements that anchor future metrics.
 
-5. **Find material divergences**  
-   Scan the grid for meaningful differences that change the outcome or how success is proved: distinct triggers or finish lines, different proof points, extra approvals or policies (KYC, PO, tax), unique obligations or SLAs, different north-star metric, different risk posture or cadence, or distinct data/entitlement needs. Mark these forks—they are candidates to split into separate streams.
+##### 3) Sketch the timeline
 
-6. **Propose candidate streams**  
-   For each contiguous path with a distinct customer outcome, name it and capture start → finish, north-star metric, and critical policies.
+**Goal:** See the journey end-to-end.  
+**What needs to happen:** For each slice, create a **Customer Journey Map** and list the actual steps they go through with you—from first contact to leaving or expanding. Use the same skeleton for all slices.  
+**Expected outcome:** One consistent journey map per slice.
 
-7. **Pressure-test ownership**  
-   Ask: Can one stream team own this outcome from end to end? If it stalls, does only this outcome stall (reasonable boundary), or does the whole business freeze (bad boundary)?
+##### 4) Fill the grid
 
-8. **Lock the minimal set**  
-   Split only when triggers, finish lines, metrics, or policies differ. Merge when they are the same. Stop at the smallest set that keeps value creation legible.
+**Goal:** Replace assumptions with specifics.  
+**What needs to happen:** For every cell (slice × step), capture:
+
+- **Intent** — what the customer is trying to do  
+- **Value delivered** — what they tangibly get  
+- **Outcome** — how you know the step worked  
+- **Metric** — the single measure you’ll track  
+**Expected outcome:** A grid that spells out what must be true at each step and how you’ll know.
+
+##### 5) Find material divergences
+
+**Goal:** Separate real splits from noise.  
+**What needs to happen:** Scan across slices and mark only meaningful differences—where the path truly forks (different intent, finish line, proof, cadence, or policy expectations). Keep shared areas merged.  
+**Expected outcome:** A small set of justified forks; everything else stays shared.
+
+##### 6) Propose candidate value streams
+
+**Goal:** Turn journeys into ownable streams.  
+**What needs to happen:** For each distinct path, create a **Value Stream Card** that includes:
+
+- **For / Trigger / Finish line / Outcome**  
+- **Stages** (lightweight, matching the journey skeleton)  
+- **Metrics** (north-star + supporting)  
+- **Policies / SLAs / Constraints**  
+- **Ownership** (what this stream owns vs relies on)  
+- **Key Capabilities & Systems** (owned vs used)  
+- **Interfaces / Dependencies**  
+- **Typical Risks / Failure Modes**  
+**Expected outcome:** 2–4 cards that read like team charters.
+
+##### 7) Pull out shared capabilities
+
+**Goal:** Make common stuff “one and done.”  
+**What needs to happen:** List the capabilities that multiple streams require (tools, processes, data, policies). Move them into **supporting streams** with a concise charter, a brief service list, clear interfaces/SLAs, and an escalation path. Add a simple **graduation rule** for determining when something becomes shared versus staying product-specific.  
+**Expected outcome:** A small set of supporting streams, owned once and measurable.
+
+##### 8) Validate staffing & runability
+
+**Goal:** Prove the design can operate with your headcount.  
+**What needs to happen:**  
+
+- Map people to streams and functions.  
+- Ensure embedded functions have **at least two people**.  
+- Confirm each stream has the roles it needs (e.g., Product, AM/CSM, Engineering).  
+- Check top dependencies have **named owners** and **SLAs** in supporting streams.  
+- If it doesn’t fit, merge/simplify or rebalance headcount.  
+**Expected outcome:** A staffed, executable set of streams with clear ownership and no orphaned work.
 
 ### Decision criteria and checks
 
@@ -147,7 +190,7 @@ Value streams are not process steps; they are customer outcomes you can own end-
 
 Manufacturing treats “Order-to-Ship” as one process lane. In software, the shopper’s outcome spans discover → compare → purchase → receive → return. That is one stream for consumer buyers when the trigger, finish line, and success metric (conversion to completed delivery) are the same.
 
-Enterprise procurement may diverge: formal quotes, POs, tax exemptions, delivery windows, different finish line (invoice approved, goods received), and a different north-star metric. That becomes a separate stream, even though both include “order,” because the outcome, policies, and measure of success differ.
+Enterprise procurement may diverge: formal quotes, POs, tax exemptions, delivery windows, different finish line (invoice approved, goods received), and a different north-star metric. That becomes a separate stream, even though both include “order”, because the outcome, policies, and measure of success differ.
 
 ### Value streams vs revenue streams
 
@@ -173,7 +216,7 @@ Value streams shape architecture indirectly, through funding, management, and te
 
 ### Where the boundary shows up in the system
 
-Each item can be shared across streams or owned within a stream. Your choice sets seams, contracts, and quality-attribute tactics.
+Each item can be shared across streams or owned within a stream. Your choice sets the seams, contracts, and quality attribute tactics.
 
 - **User experience (shell, design system, UIs)**  
   Treat the UX layer as your front door. Shared provides a single shell and design system where streams plug in features, ensuring consistency and accessibility come for free. Owned lets each stream shape its UI to fit its journey, emphasizing speed and specialization, but allowing for more divergence. Implication: define navigation contracts, theming tokens, and who controls shell version bumps.
@@ -255,7 +298,7 @@ Organize funding and work around streams—not projects—and use the flow metri
   - **Chapter 6: Current State Value Stream Mapping**\
     Makes today’s flow visible end-to-end to expose delays, rework, and handoffs that slow customer journeys.
   - **Chapter 7: Dependency Mapping**\
-    Surfaces cross-team and external constraints, illustrating how platforms, policies, and vendors influence the flow.
+    Surfaces cross-team and external constraints, illustrating how platforms, policies, and vendors influence the flow of information.
   - **Chapter 8: Future State Value Stream Mapping**\
     Designs a target flow with fewer waits and clearer ownership, tied to outcomes rather than outputs.
   - **Chapter 9: The Flow Roadmap**\
