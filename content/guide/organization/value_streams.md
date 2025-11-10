@@ -152,6 +152,7 @@ Value streams are not process steps; they are customer outcomes you can own end-
 - **For / Trigger / Finish line / Outcome**  
 - **Stages** (lightweight, matching the journey skeleton)  
 - **Metrics** (north-star + supporting)  
+- **Revenue Streams** (how we make money)
 - **Policies / SLAs / Constraints**  
 - **Ownership** (what this stream owns vs relies on)  
 - **Key Capabilities & Systems** (owned vs used)  
