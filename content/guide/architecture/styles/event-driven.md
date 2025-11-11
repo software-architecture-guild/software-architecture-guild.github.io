@@ -43,7 +43,7 @@ Coupling should run through event contracts—not through shared databases or ba
 
 Treat each producer’s write as authoritative and emit events via an outbox so the event stream reflects committed facts. End-to-end transactions across multiple consumers are rare; design for local ACID and cross-component **compensations**. Consumers must be **idempotent** and tolerant of **at-least-once** delivery. Use versioned schemas (with additive evolution) and correlation IDs so events can be joined in logs and traces. Back-pressure belongs in the platform: bounded topics/queues, consumer lag metrics, and admission control.
 
-### Example (Language-Neutral)
+### Example
 
 A user checks out. The Order component validates and **commits** the order, then publishes *OrderPlaced* with order ID, items, and amounts. Inventory consumes *OrderPlaced* to reserve stock and emits *StockReserved* or *OutOfStock*. Billing consumes *OrderPlaced* to authorize payment and emits *PaymentAuthorized* or *PaymentFailed*. Notification listens to both to decide what to tell the customer. None of these consumers call Order synchronously; each can scale, retry, or roll back independently. Adding a new fraud-detection consumer requires no changes to the producer.
 
@@ -95,7 +95,8 @@ Re-evaluate when users need answers **now** but you rely on asynchronous chains,
 
 #### Web Resources
 
-* Developer To Architect, *[Event-Driven Architecture](https://developertoarchitect.com/lessons/lesson165.html)*
+* Developer To Architect, *[Lesson 165 - Event-Driven Architecture](https://developertoarchitect.com/lessons/lesson165.html)*
+* Developer To Architect, *[Event-Driven Architecture Lessons](https://developertoarchitect.com/lessons-eda.html)*
 
 #### Books
 

@@ -41,7 +41,7 @@ Processing units depend on grid contracts, not on each other’s internals. Cros
 
 Treat the in-memory grid as the authoritative source for hot-path reads and writes; treat the database as a system of record and recovery. Partition data with clear ownership (one writer per shard). Favor local, short-lived transactions scoped to a partition; handle cross-partition work with saga-like compensations or asynchronous coordination. Accept eventual consistency between grid and cold store; design reconciliation and replay for recovery.
 
-### Example (Language-Neutral)
+### Example
 
 During a flash sale, requests are routed to any node. The node’s processing unit validates the cart and reserves inventory **in the grid partition that owns those SKUs**. The reservation is replicated to a backup partition; the user session also lives in the grid. A persistence agent later writes the confirmed order to the database. If a node fails, partitions fail over to replicas and requests are re-routed—no central database round-trips on the critical path.
 
@@ -93,8 +93,7 @@ Re-evaluate when cross-partition joins dominate hot paths, when reconciliation d
 
 #### Web Resources
 
-* Developer To Architect, *[Space-Based Architecture](https://developertoarchitect.com/lessons/lesson166.html)*  
-* Developer To Architect, *[Horizontal vs. Vertical Scalability](https://developertoarchitect.com/lessons/lesson153.html)*
+* Developer To Architect, *[Lesson 166 - Space-Based Architecture](https://developertoarchitect.com/lessons/lesson166.html)*  
 
 #### Books
 

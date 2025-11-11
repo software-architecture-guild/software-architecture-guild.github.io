@@ -40,7 +40,7 @@ Plugins depend on the core’s contracts, not on core internals or each other. C
 
 Keep authoritative writes within the owning plugin or a core service designated as the broker; avoid direct cross-plugin table writes. If a plugin needs data owned elsewhere, go through the owning plugin’s API or core-mediated event streams. Transactions are local to a plugin where possible; cross-plugin workflows prefer events or explicit orchestration through core services. Version schemas at the seam and design for idempotency and replay.
 
-### Example (Language-Neutral)
+### Example
 
 Consider an insurance platform. The core provides intake, authentication, lifecycle, and extension points for Rating and Compliance. A US-Rating plugin implements state-specific rules and registers capabilities; an EU-Compliance plugin enforces GDPR checks. The Claims plugin consumes “PolicyRated” events, but never reaches into the US-Rating internals or its tables. If a regulator changes a rule, only the US-Rating plugin is updated and hot-reloaded; the core and other plugins remain untouched.
 
@@ -90,7 +90,7 @@ Re-evaluate when you see core churn due to business variation (move logic to plu
 
 #### Web Resources
 
-* Developer To Architect, *[Fundamental Lesson: Microkernel Architecture](https://developertoarchitect.com/lessons/lesson160.html)*
+* Developer To Architect, *[Lesson 160 - Microkernel Architecture](https://developertoarchitect.com/lessons/lesson160.html)*
 
 #### Books
 

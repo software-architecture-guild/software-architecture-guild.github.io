@@ -55,7 +55,7 @@ Two common data choices exist:
 
 End-to-end transactions across services are rare; favor local transactions plus compensations and idempotent operations. Use outbox patterns and change events to keep read models in sync and enable asynchronous workflows.
 
-### Example (Language-Neutral)
+### Example
 
 An online store exposes three services. **Catalog** manages products and pricing, **Ordering** manages carts and orders, and **Billing** handles payments and invoices. A checkout request hits **Ordering**, which validates items against **Catalog** (coarse-grained call or cached read model), reserves inventory, and requests authorization from **Billing**. On success, **Ordering** emits an `OrderPlaced` event; **Billing** emits `PaymentAuthorized`; **Catalog** decrements inventory on `OrderPlaced`. Each service evolves behind its own API; shared concerns like auth and rate limiting sit at the gateway.
 
@@ -106,7 +106,9 @@ Re-evaluate boundaries when you see persistent cross-service changes that requir
 
 #### Web Resources
 
-* Developer To Architect, *[Service-Based Architecture](https://developertoarchitect.com/lessons/lesson114.html?utm_source=chatgpt.com)*
+* Developer To Architect, *[Lesson 114 - Microservices vs Service-Based Architecture](https://developertoarchitect.com/lessons/lesson114.html)*
+* Developer To Architect, *[Lesson 163 - Service-Based Architecture](https://developertoarchitect.com/lessons/lesson163.html)*
+* Developer To Architect, *[Lesson 153 - Service-Based Architecture vs. SOA](https://developertoarchitect.com/lessons/lesson153.html)*
 
 #### Books
 

@@ -42,7 +42,7 @@ The rule set is simple: Presentation → Application → Domain → Persistence.
 
 Place transaction boundaries in the Application layer and aim for “one use case = one transaction.” Within a request, consistency is strong and predictable. For cross-system propagation, use an outbox pattern and events so the monolith’s internal model remains authoritative. Read-heavy paths can use caches or read models, but they should be fed by events or change streams to keep data coherent over time. Treat schema evolution as a first-class concern: favor additive changes and keep migrations backward-compatible for one release to enable safe rollbacks.
 
-### Example (Language-Neutral)
+### Example
 
 Consider “Place Order.” The request enters Presentation, which validates input and shapes it into a command. Application opens a transaction and orchestrates the steps. Domain calculates prices, enforces policies, and decides state transitions. Persistence commits the changes and emits an OrderPlaced event via an adapter. Control returns to Application to commit or roll back, and Presentation shapes the response. Notice what doesn’t happen: the UI never queries the database directly, and the Domain never formats HTTP or JSON.
 
@@ -89,7 +89,7 @@ Plan a review when you observe sustained trends such as rising change lead time 
 
 #### Web Resources
 
-* Developer To Architect, *[Fundamental Lesson: Layered Architecture](https://developertoarchitect.com/lessons/lesson158.html)*
+* Developer To Architect, *[Lesson 158 - Layered Architecture](https://developertoarchitect.com/lessons/lesson158.html)*
 
 #### Books
 

@@ -49,7 +49,7 @@ Stages depend only on the contracts of their immediate neighbors. A stage must n
 
 Design for idempotency at the stage level and for message semantics that support at-least-once processing with deduplication. Where a multi-stage transactional boundary is necessary, keep it short and instrumented; otherwise rely on compensations and replayable inputs. Use consistent, versioned schemas at the boundaries and minimize per-hop re-serialization cost. Back-pressure is non-negotiable: bounded queues, rate limits, and admission control prevent upstream overload.
 
-### Example (Language-Neutral)
+### Example
 
 Consider an image-processing pipeline: *ingest* receives uploads, *preprocess* resizes/normalizes, *classify* applies a model, and *postprocess* formats results. Each stage exposes a handler (for example, `handle(Image|Tensor|Result)`) and produces a typed output for the next. Under load, duplicate the *classify* workers and shard by image key. If *preprocess* lags, back-pressure slows *ingest* rather than dropping images. Errors at *classify* move items to a retry lane with cap and jitter; repeated failures go to a dead-letter stage for inspection.
 
@@ -98,10 +98,6 @@ Operate the pipeline as a flow: expose per-stage metrics (arrival rate, service 
 Re-evaluate when you see long-tail latency dominated by a single stage, chronic back-pressure and dropped work, frequent schema breaks between stages, or rising coordination cost that forces cross-stage calls and hidden coupling. If most value now sits in interactive flows, shorten or split the pipeline and reserve it for asynchronous work.
 
 ## Recommended Reading
-
-#### Web Resources
-
-* *(None supplied)*
 
 #### Books
 

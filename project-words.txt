@@ -19,6 +19,7 @@ Cockburn
 chargeback
 Cognos
 colinwilson
+counterforces
 Datastage
 decisioning
 Diagnosability
@@ -89,6 +90,7 @@ replaceability
 roadmaps
 Rollouts
 Rozanski
+runbooks
 sandboxing
 runbooks
 Schwaber
@@ -116,6 +118,7 @@ TOGAF
 transformative
 Tuckman
 udemy
+underinvesting
 unloadable
 unambiguity
 upsell
