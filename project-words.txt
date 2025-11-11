@@ -6,8 +6,13 @@ Archi
 archimate
 Architecting
 Asana
+backdoors
+backpressure
+Bain
+Bellemare
 autoscale
 BSUIR
+bursty
 CCPA
 CEDP
 Cockburn
@@ -18,6 +23,7 @@ Datastage
 decisioning
 Diagnosability
 Doerr
+ecommerce
 endline
 Eoin
 Excalidraw
@@ -32,7 +38,10 @@ gohugoio
 goldmark
 Hardzeenka
 HDFS
+Hohpe
 Hortonworks
+hotspot
+hotspots
 iiirm
 ilities
 Ilya
@@ -75,9 +84,12 @@ Radioelectronics
 rebalance
 rebalances
 relref
+replayable
 replaceability
 roadmaps
+Rollouts
 Rozanski
+sandboxing
 runbooks
 Schwaber
 Silverman
@@ -93,6 +105,7 @@ Sparx
 SSAS
 SSIS
 standups
+Stopford
 substack
 Systemization
 tailorable
@@ -103,6 +116,7 @@ TOGAF
 transformative
 Tuckman
 udemy
+unloadable
 unambiguity
 upsell
 Vercel
