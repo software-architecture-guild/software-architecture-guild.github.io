@@ -23,6 +23,7 @@ counterforces
 Datastage
 decisioning
 Diagnosability
+deployables
 Doerr
 ecommerce
 endline
@@ -66,6 +67,7 @@ Microkernel
 Misaligning
 misprioritized
 MTBF
+MTTR
 MTTR
 Norming
 Oleg
