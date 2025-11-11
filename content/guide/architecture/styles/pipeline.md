@@ -101,6 +101,6 @@ Re-evaluate when you see long-tail latency dominated by a single stage, chronic 
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 11: Pipeline Architecture Style**\  
     Defines stages and data flows, contrasts synchronous vs. asynchronous hand-offs, and covers bottlenecks, back-pressure, and error handling with practical patterns.  

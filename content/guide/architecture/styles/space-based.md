@@ -97,9 +97,9 @@ Re-evaluate when cross-partition joins dominate hot paths, when reconciliation d
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 15: Space-Based Architecture Style**\  
     Introduces processing and data grids, partitioning/replication, and asynchronous persistence, with guidance on when the style fits and when it does not.  
-* Richards, M. (2015). *[Software Architecture Patterns](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/)*. O’Reilly Media.  
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
   * **Chapter 7: Space-Based Architecture**\  
     Explains how to remove the central DB from the hot path, co-locate logic with in-memory partitions, and stream changes to cold storage for recovery and reporting.

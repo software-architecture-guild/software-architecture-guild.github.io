@@ -98,13 +98,13 @@ Re-evaluate boundaries when you see coordinated deploys across “independent”
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 17: Microservices Architecture**\  
     Frames microservices as independently deployable capability slices with owned data, and walks through platform needs, contracts, data consistency, and trade-offs.  
-* Richards, M. (2015). *[Software Architecture Patterns](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/)*. O’Reilly Media.  
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
   * **Chapter 6: Microservices Architecture**\  
     Explains topology (edge, discovery, observability), contrasts sync vs. async integration, and warns against shared databases and distributed layers.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098141105/)*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
   * **Chapter 10: Microservices Architecture — Bit by Bit**\  
     Uses a concrete monitoring domain to show boundary finding, service sizing, orchestration vs. choreography, and resilience patterns in practice.  
 * Newman, S. (2021). *[Building Microservices (2nd ed.)](https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/)*. O’Reilly Media.  

@@ -90,6 +90,6 @@ Re-evaluate boundaries or consider extraction when you see sustained cross-modul
 
 #### Books
 
-* Bain, D., O’Dea, M., & Ford, N. (2024). *Head First Software Architecture*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
   * **Chapter 7: Modular Monoliths — Driven by the Domain**\
     Shows how to slice by capability, assign ownership, and design contracts/events that reflect business language. Includes boundary-enforcement patterns and a performance/maintainability/testability lens.

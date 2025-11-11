@@ -92,7 +92,7 @@ Styles are not one-way doors. You can strengthen module boundaries inside a mono
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 9: Foundations**\
     Establishes core architectural concepts—components, modularity, coupling/cohesion, and characteristics—used to reason about styles and their trade-offs.
 
@@ -102,6 +102,6 @@ Styles are not one-way doors. You can strengthen module boundaries inside a mono
   * **Chapter 2: Architectural Structures and Styles**\
     Surveys common styles and structural views, clarifying terminology you’ll use throughout the Foundations section.
 
-* Gandhi, R., Richards, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
   * **Chapter 5: Architectural Styles: Categorization and Philosophies**\
     Provides a practical taxonomy of styles and the design philosophies behind them, preparing readers to compare options with intent.
