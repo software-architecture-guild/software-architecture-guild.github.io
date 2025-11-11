@@ -35,7 +35,7 @@ Modules do not reach into each other’s internals. There is **no cross-module d
 
 A module is the authority for its data and owns its write model. Multiple modules may share a physical database, but not each other’s tables or write models; schema segments map to modules. Transactions are local to a module; cross-module workflows coordinate with events or explicit orchestration through public APIs. Read models and local caches inside a module help avoid cross-module “N+1” calls.
 
-### Example (Language-Neutral)
+### Example
 
 In an e-commerce system, *Ordering* takes the order and decides state transitions; *Catalog* answers product queries; *Billing* authorizes and settles payments. Ordering does not write to Billing’s tables, and Catalog does not reach into Ordering’s entities. Ordering exposes `placeOrder()` and emits `OrderPlaced`; Billing listens to `OrderPlaced` to charge, then emits `PaymentAuthorized`; Ordering reacts to update order status. Internals remain hidden; collaboration occurs through contracts and events.
 
@@ -86,7 +86,7 @@ Re-evaluate boundaries or consider extraction when you see sustained cross-modul
 
 #### Web Resources
 
-* Developer To Architect, *[Fundamental Lesson: Modular Monolith](https://developertoarchitect.com/lessons/lesson159.html)*
+* Developer To Architect, *[Lesson 159 - Modular Monolith Architecture](https://developertoarchitect.com/lessons/lesson159.html)*
 
 #### Books
 

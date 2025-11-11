@@ -16,6 +16,7 @@ CCPA
 CEDP
 Cognos
 colinwilson
+counterforces
 Datastage
 Doerr
 ecommerce
@@ -65,11 +66,13 @@ Pais
 Profitero
 psychographic
 Radioelectronics
+rebalances
 relref
 replayable
 roadmaps
 Rollouts
 Rozanski
+runbooks
 sandboxing
 Schwaber
 Silverman
@@ -88,6 +91,7 @@ TOGAF
 transformative
 Tuckman
 udemy
+underinvesting
 unloadable
 upsell
 Vercel

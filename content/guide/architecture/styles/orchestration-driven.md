@@ -41,7 +41,7 @@ Keep workflow logic in the orchestrator and business rules inside services. Serv
 
 Each service commits its own changes locally. The orchestrator coordinates the bigger picture with compensating actions rather than global transactions. Prefer idempotent service operations so retries are safe, and include correlation IDs in calls and messages so you can trace a workflow end to end. Long-running steps should surface timeouts and cancellation cleanly; the orchestrator records progress and applies compensations if a branch fails.
 
-### Example (Language-Neutral)
+### Example
 
 Consider order fulfillment. The orchestrator validates the order, then calls **Inventory** to reserve stock, **Billing** to authorize payment, and **Shipping** to schedule delivery. If **Billing** declines, the orchestrator triggers a compensation in **Inventory** to release the reservation and marks the workflow as failed with a reason code. All steps are visible in the workflow state; retries and backoff are policy, not ad-hoc code in each service.
 
@@ -91,7 +91,8 @@ Re-evaluate when orchestrator CPU and queue depth dominate latency, when most st
 
 #### Web Resources
 
-* Developer To Architect, *[Orchestration-Driven SOA](https://developertoarchitect.com/lessons/lesson43.html)*
+* Developer To Architect, *[Lesson 43 - Microservices Orchestration Pattern](https://developertoarchitect.com/lessons/lesson43.html)*
+* Developer To Architect, *[Lesson 23 - Orchestration vs. Choreography](https://developertoarchitect.com/lessons/lesson23.html)*
 
 #### Books
 

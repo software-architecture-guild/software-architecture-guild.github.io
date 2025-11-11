@@ -41,7 +41,7 @@ Services do not reach into each other’s databases. Integration is through publ
 
 Each service is the **single writer** for its data. Cross-service workflows favor local ACID plus **sagas/compensations** over distributed transactions. Use outbox/change events to update read models and keep consumers in sync. Embrace eventual consistency where acceptable; when strong invariants are needed, constrain scope (for example, keep within one service or design a reservation protocol).
 
-### Example (Language-Neutral)
+### Example
 
 In an e-commerce system, **Catalog** owns product data and pricing; **Ordering** owns carts and orders; **Billing** authorizes and settles payments. Checkout calls **Ordering**, which performs local validation and publishes `OrderPlaced`. **Billing** consumes `OrderPlaced`, authorizes payment, and emits `PaymentAuthorized`; **Ordering** reacts to finalize the order. **Catalog** provides coarse read models to reduce hot-path cross-calls. Each service deploys and scales independently, sharing no write models.
 
@@ -93,7 +93,8 @@ Re-evaluate boundaries when you see coordinated deploys across “independent”
 
 #### Web Resources
 
-* Developer To Architect, *[Microservices Architecture](https://developertoarchitect.com/lessons/lesson162.html)*
+* Developer To Architect, *[Lesson 162 - Microservices Architecture](https://developertoarchitect.com/lessons/lesson162.html)*
+* Developer To Architect, *[Microservices Lessons](https://developertoarchitect.com/lessons-microservices.html)*
 
 #### Books
 
