@@ -18,6 +18,7 @@ Cognos
 colinwilson
 counterforces
 Datastage
+deployables
 Doerr
 ecommerce
 Eoin
@@ -56,6 +57,7 @@ markdownlint
 Microkernel
 Misaligning
 MTBF
+MTTR
 Norming
 Oleg
 OLTP
