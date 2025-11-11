@@ -100,13 +100,13 @@ Re-evaluate when users need answers **now** but you rely on asynchronous chains,
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 14: Event-Driven Architecture Style**\  
     Defines events, producers/consumers, and channels; contrasts queues vs. topics; and lays out delivery guarantees, back-pressure, and error-handling patterns.  
-* Richards, M. (2015). *[Software Architecture Patterns](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/)*. O’Reilly Media.  
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
   * **Chapter 5: Event-Driven Architecture**\  
     Explains notification vs. event-carried state transfer, shows typical topologies, and highlights pitfalls like over-generic events and hidden coupling.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098141105/)*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
   * **Chapter 11: Event-Driven Architecture — Asynchronous Adventures**\  
     Uses concrete scenarios to contrast sync vs. async, model initiating vs. derived events, and practice idempotency, retries, and compensation design.  
 * Bellemare, A. (2020). *[Building Event-Driven Microservices](https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/)*. O’Reilly Media.  

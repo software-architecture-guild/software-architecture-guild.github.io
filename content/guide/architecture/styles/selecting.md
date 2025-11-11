@@ -134,6 +134,6 @@ Plan for evolution in your ADR: what signal triggers re-evaluation, and what fir
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 18: Choosing the Appropriate Architecture Style**\  
     A concise, scenario-driven approach to selecting styles by quality attributes, risk, and organizational context.

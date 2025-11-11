@@ -112,6 +112,6 @@ Re-evaluate boundaries when you see persistent cross-service changes that requir
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *Fundamentals of Software Architecture*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 13: Service-Based Architecture Style**\  
     Frames service-based as coarse-grained, business-aligned services with pragmatic data choices; contrasts it with microservices and discusses scaling, contracts, and governance.

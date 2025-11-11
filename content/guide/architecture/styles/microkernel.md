@@ -94,12 +94,12 @@ Re-evaluate when you see core churn due to business variation (move logic to plu
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *Fundamentals of Software Architecture*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 12: Microkernel Architecture Style**\  
     Defines core vs. plugins, contracts and extension points, and compares monolithic vs. distributed plugin deployment models with guidance on performance and governance.  
-* Richards, M. (2015). *Software Architecture Patterns*. O’Reilly Media.  
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
   * **Chapter 4: Microkernel Architecture**\  
     Explains topology (kernel + plugins), common product and enterprise use cases, and pitfalls such as bloated cores and cross-plugin coupling.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *Head First Software Architecture*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
   * **Chapter 8: Microkernel Architecture — Crafting Customizations**\  
     Shows how to design extension points, govern discovery/activation/versioning, and craft replaceable plugins with clear error semantics and upgrade paths.
