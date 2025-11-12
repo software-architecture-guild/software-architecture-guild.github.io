@@ -15,15 +15,15 @@ authors:
 
 Microservices-based architecture decomposes a system into independently deployable services that each own a coherent capability and its data. The payoff is team autonomy and selective scale; the price is distributed complexity across networking, data, and operations.
 
-A microservice is a small, self-contained deployable that exposes a contract (API/events), owns its persistence, and can be built, released, and operated without coordinating code changes with peers. Boundaries usually follow business capabilities or DDD bounded contexts, not technical layers. The architecture is the set of these services plus the platform that connects, observes, and governs them.
+A microservice is a small, self-contained, deployable unit that exposes a contract (APIs/events), owns its persistence, and can be built, released, and operated without coordinating code changes with peers. Boundaries usually follow business capabilities or DDD bounded contexts, not technical layers. The architecture comprises these services, along with the platform that connects, observes, and governs them.
 
 ### Intent & Forces
 
-The style exists to let different parts of a product evolve at different speeds, scale independently, and fail without taking down the whole. It addresses forces like heterogeneous workloads, many teams working in parallel, and frequent releases. Counterforces include higher operational overhead, non-trivial data consistency, and harder end-to-end debugging.
+The style exists to allow different parts of a product to evolve at various speeds, scale independently, and fail without taking down the entire system. It addresses forces such as heterogeneous workloads, multiple teams working in parallel, and frequent releases. Counterforces include higher operational overhead, non-trivial data consistency, and harder end-to-end debugging.
 
 ### Structure
 
-Think in capability slices, each with clear edges.
+Think in terms of capability slices, each with distinct boundaries.
 
 * **Services** implement cohesive responsibilities and publish versioned APIs/events.  
 * **Edge/gateway** centralizes routing, authN/Z, and rate limits.  
@@ -35,7 +35,7 @@ Think in capability slices, each with clear edges.
 
 ### Dependency Rules
 
-Services do not reach into each other’s databases. Integration is through published contracts (HTTP/gRPC/events) with explicit timeouts, retries, and circuit breakers. Avoid chatty, fine-grained RPC across service boundaries; make interactions coarse and purposeful. Shared libraries should be domain-agnostic and versioned deliberately; shared services for true platform concerns (identity, billing gateway) are acceptable with clear SLOs.
+Services do not reach into each other’s databases. Integration is through published contracts (HTTP/gRPC/events) with explicit timeouts, retries, and circuit breakers. Avoid chatty, fine-grained RPC across service boundaries; make interactions coarse and purposeful. Shared libraries should be domain-agnostic and versioned deliberately; shared services for genuine platform concerns (identity, billing gateway) are acceptable with clear SLOs.
 
 ### Data & Transactions
 
@@ -49,18 +49,18 @@ In an e-commerce system, *Catalog* owns product data and pricing; *Ordering* own
 
 ##### Where It Fits / Where It Struggles
 
-It fits products with multiple teams and capabilities that change at different cadences, where autonomy, fault isolation, and selective scaling matter. It struggles when the domain needs broad, synchronous, strongly consistent operations or when platform automation and observability are immature; in those cases a modular or layered monolith is safer until the organization is ready.
+It suits products with multiple teams and capabilities that evolve at varying cadences, where autonomy, fault isolation, and selective scaling are crucial. It struggles when the domain requires broad, synchronous, and strongly consistent operations, or when platform automation and observability are immature. In such cases, a modular or layered monolith is safer until the organization is ready.
 
 ##### Trade-offs
 
 * **Optimizes:** team autonomy, independent deployability, fault isolation, selective scaling  
-* **Sacrifices:** simplicity of in-process calls, global transactions, easy debugging and testing  
+* **Sacrifices:** simplicity of in-process calls, global transactions, easy debugging, and testing  
 * **Requires:** strong platform automation, contract governance, observability, and disciplined data ownership
 
 ##### Misconceptions & Anti-Patterns
 
 * *“Micro = tiny.”* Size isn’t the goal; **independent change** is.  
-* *Shared database across services.* Violates ownership and couples releases.  
+* *Shared database across services.* Violates ownership and couples' releases.  
 * *Distributed layers.* Splitting by UI/logic/data across services re-creates a distributed monolith.  
 * *God services and chatty meshes.* Coalesce hotspots or redesign contracts; keep hops coarse.  
 * *“We’ll fix ops later.”* The platform is part of the architecture—underinvesting dooms the style.
@@ -75,15 +75,15 @@ It fits products with multiple teams and capabilities that change at different c
 
 ##### Combining Styles
 
-Most microservices systems embed **layered** slices inside each service for clarity, use **event-driven** integration between services, and adopt **orchestration** for spans that demand ordering and auditability while leaving the rest choreographed. Hot read paths frequently employ **read models** or **API composition** to avoid N+1 calls.
+Most microservice systems embed **layered** slices within each service for clarity, utilize **event-driven** integration between services, and adopt **orchestration** for spans that require ordering and auditability, while leaving the rest choreographed. Hot read paths frequently employ **read models** or **API composition** to avoid N+1 calls.
 
 ##### Evolution Path
 
-Start by carving out a few capabilities with clear seams and owned data. As evidence accumulates, **merge** services that co-deploy or chat heavily; **split** services that become hotspots in scale or change. Gradually move from shared to per-service schemas with outbox events and backfills. Treat service count as a cost; only add services when autonomy or risk reduction justifies them.
+Start by identifying a few key capabilities with clear boundaries and owned data. As evidence accumulates, merge services that co-deploy or chat heavily; split services that become hotspots in scale or undergo significant changes. Gradually move from shared to per-service schemas with outbox events and backfills. Treat service count as a cost; only add services when autonomy or risk reduction justifies them.
 
 ## Operational Considerations
 
-Treat each service as a product with SLOs, runbooks, and on-call. Automate deployment (blue/green, canary), config, and secrets. Observe end-to-end: trace IDs across hops, standard logs, and RED/USE metrics per service. Resilience patterns—timeouts, retries with jitter, bulkheads, circuit breakers—are table stakes. Test at multiple layers: contracts → components → journey e2e. Budget and monitor cost per service.
+Treat each service as a product with SLOs, runbooks, and on-call. Automate deployment (blue/green, canary), config, and secrets. Observe end-to-end: trace IDs across hops, standard logs, and RED/USE metrics per service. Resilience patterns—timeouts, retries with jitter, bulkheads, circuit breakers—are table stakes. Test at multiple layers: contracts, components, and end-to-end journey. Budget and monitor the cost per service.
 
 ##### Decision Signals to Revisit the Style
 

@@ -12,6 +12,7 @@ Bain
 Bellemare
 autoscale
 BSUIR
+buildable
 bursty
 CCPA
 CEDP
@@ -58,6 +59,7 @@ Kersten
 Kiplinger
 Kruchten
 Larman
+Larty
 lastmod
 Leffingwell
 lotusdocs
@@ -68,7 +70,7 @@ Misaligning
 misprioritized
 MTBF
 MTTR
-MTTR
+Nadareishvili
 Norming
 Oleg
 OLTP
@@ -86,6 +88,7 @@ Qube
 Radioelectronics
 rebalance
 rebalances
+rebalancing
 relref
 replayable
 replaceability

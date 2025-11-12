@@ -13,33 +13,33 @@ authors:
 
 ## Definition
 
-Orchestration-driven architecture coordinates work through a central orchestrator that calls services in a defined sequence. It gives you visibility, control, and explicit error handling for complex business processes—at the cost of a new operational hotspot you must scale and govern carefully.
+Orchestration-driven architecture coordinates work through a central orchestrator that calls services in a defined sequence. It provides visibility, control, and explicit error handling for complex business processes—at the cost of creating a new operational hotspot that must be scaled and governed carefully.
 
 In the orchestration-driven style, a dedicated component (the orchestrator) owns the workflow: it invokes services, handles branching and retries, aggregates results, and records progress. Services remain modular and reusable, but their collaboration happens through the orchestrator’s contracts rather than ad-hoc calls between peers. This contrasts with choreography, where services react to events without a central conductor.
 
 ### Intent & Forces
 
-The style exists to make multi-step business processes explicit, observable, and governable. It is favored when the sequence really matters, when auditing is mandatory, and when you need one place to implement compensation, timeouts, and retries. The counterforces are scalability of the orchestrator, the risk of over-coupling workflows to one component, and the extra care needed to keep services independent of workflow specifics.
+The style exists to make multi-step business processes explicit, observable, and governable. It is favored when the sequence really matters, when auditing is mandatory, and when you need one place to implement compensation, timeouts, and retries. The counterforces are the scalability of the orchestrator, the risk of over-coupling workflows to a single component, and the extra care required to keep services independent of workflow specifics.
 
 ### Structure
 
 A typical solution has three parts: the orchestrator, the services, and the workflow definitions that bind them.
 
 * **Orchestrator** executes workflows, evaluates conditions, manages timeouts/retries/compensations, and tracks state.  
-* **Services** encapsulate business capabilities and expose stable contracts (sync or async) the orchestrator can call.  
+* **Services** encapsulate business capabilities and expose stable contracts (sync or async) that the orchestrator can call.  
 * **Workflow definitions** capture sequence, branching, joins, and data mapping—often modeled in BPMN or a similar DSL.
 
-The communication mix is pragmatic: synchronous calls for short, user-facing steps; asynchronous messaging for long-running steps, integration, and resilience under load.
+The communication mix is pragmatic: synchronous calls are used for short, user-facing steps, while asynchronous messaging is employed for long-running steps, integration, and resilience under load.
 
 {{< image src="/images/architecture/fundamentals/styles.orchestration-driven.drawio.png" alt="Orchestration-Driven Architecture" >}}
 
 ### Dependency Rules
 
-Keep workflow logic in the orchestrator and business rules inside services. Services should not depend on the orchestrator’s internals or on each other’s private state; all collaboration runs through published contracts or messages. If a service needs data owned by another, go through that service’s API or its events—never its tables. These rules reduce tight coupling and preserve service reusability across different workflows.
+Keep workflow logic in the orchestrator and business rules inside services. Services should not depend on the orchestrator’s internals or on each other’s private state; all collaboration runs through published contracts or messages. If a service requires data owned by another, access it through that service’s API or its events—never its tables. These rules reduce tight coupling and preserve service reusability across different workflows.
 
 ### Data & Transactions
 
-Each service commits its own changes locally. The orchestrator coordinates the bigger picture with compensating actions rather than global transactions. Prefer idempotent service operations so retries are safe, and include correlation IDs in calls and messages so you can trace a workflow end to end. Long-running steps should surface timeouts and cancellation cleanly; the orchestrator records progress and applies compensations if a branch fails.
+Each service commits its own changes locally. The orchestrator coordinates the bigger picture with compensating actions rather than global transactions. Prefer idempotent service operations so that retries are safe, and include correlation IDs in calls and messages to enable end-to-end workflow tracing. Long-running steps should surface timeouts and cancellation cleanly; the orchestrator records progress and applies compensations if a branch fails.
 
 ### Example
 
@@ -49,7 +49,7 @@ Consider order fulfillment. The orchestrator validates the order, then calls *In
 
 ##### Where It Fits / Where It Struggles
 
-It fits regulated or audit-heavy domains, multi-party integrations, and processes with clear ordering and compensations: e-commerce fulfillment, loan underwriting, patient intake, claims processing. It struggles when services must evolve independently without central coordination, when hot paths demand ultra-low latency, or when workflows devolve into chatty, fine-grained RPC that the orchestrator cannot scale economically.
+It fits regulated or audit-heavy domains, multi-party integrations, and processes with clear ordering and compensations: e-commerce fulfillment, loan underwriting, patient intake, and claims processing. It struggles when services must evolve independently without central coordination, when hot paths demand ultra-low latency, or when workflows devolve into chatty, fine-grained RPC that the orchestrator cannot scale economically.
 
 ##### Trade-offs
 
@@ -61,8 +61,8 @@ It fits regulated or audit-heavy domains, multi-party integrations, and processe
 
 * **Monolithic orchestrator.** Overloading the orchestrator with business logic or heavy computation makes it a bottleneck; keep it focused on coordination.  
 * **Hard-coded flows.** Baking sequences deep in code slows change; use declarative workflow definitions and version them.  
-* **Synchronous everything.** Long chains of blocking calls raise latency and fragility; introduce queues where steps can be asynchronous.  
-* **Workflow logic inside services.** Services should stay reusable; let the orchestrator own the process.
+* **Synchronous everything.** Long chains of blocking calls increase latency and fragility, introducing queues where steps can be executed asynchronously.  
+* **Workflow logic inside services.** Services should remain reusable; let the orchestrator own the process.
 
 ##### Key Mechanics Done Well
 
@@ -73,11 +73,11 @@ It fits regulated or audit-heavy domains, multi-party integrations, and processe
 
 ##### Combining Styles
 
-Orchestration and choreography are complements, not rivals. Use orchestration for the critical span that needs ordering, audit, and compensation; let the rest of the ecosystem react through events. Inside each service, keep a simple layered slice; across services, prefer coarse-grained calls and asynchronous handoffs to avoid the “distributed monolith.”
+Orchestration and choreography are complements, not rivals. Use orchestration for the critical span that requires ordering, auditing, and compensation; let the rest of the ecosystem respond through events. Within each service, maintain a simple, layered slice; across services, prefer coarse-grained calls and asynchronous handoffs to avoid the “distributed monolith.”
 
 ##### Evolution Path
 
-Start with a small number of high-value workflows. As evidence accumulates, split orchestration domains (e.g., by product line or region), promote durable state stores if in-memory state becomes a limit, and move long-running or compute-heavy steps to asynchronous tasks. If a set of steps stabilizes and no longer needs central control, convert that span to choreography and keep the orchestrator focused on the truly critical parts.
+Start with a small number of high-value workflows. As evidence accumulates, splitting orchestration domains (e.g., by product line or region) promotes durable state stores if in-memory state becomes a limitation, and moves long-running or compute-intensive steps to asynchronous tasks. If a set of steps stabilizes and no longer needs central control, convert that span to choreography and keep the orchestrator focused on the truly critical parts.
 
 ## Operational Considerations
 
@@ -85,7 +85,7 @@ Run the orchestrator like a product. Measure workflow completion time, step succ
 
 ##### Decision Signals to Revisit the Style
 
-Re-evaluate when orchestrator CPU and queue depth dominate latency, when most steps have become independent and event-driven, when compensation logic overwhelms the happy path, or when workflow definitions change faster than you can safely roll them out. In these cases, narrow the orchestrated span, split orchestration domains, or switch parts of the flow to choreography.
+Re-evaluate when the orchestrator CPU and queue depth dominate latency, when most steps have become independent and event-driven, when compensation logic overwhelms the happy path, or when workflow definitions change more frequently than you can safely roll them out. In these cases, narrow the orchestrated span, split orchestration domains, or switch parts of the flow to choreography.
 
 ## Recommended Reading
 
@@ -98,4 +98,4 @@ Re-evaluate when orchestrator CPU and queue depth dominate latency, when most st
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 16: Orchestration-Driven Service-Oriented Architecture**\
-    Defines orchestrators, workflow definitions, sync/async communication, benefits and challenges, and contrasts orchestration with choreography.
+    Defines orchestrators, workflow definitions, synchronous and asynchronous communication, benefits and challenges, and contrasts orchestration with choreography.

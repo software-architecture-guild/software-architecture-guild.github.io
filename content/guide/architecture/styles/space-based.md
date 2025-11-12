@@ -19,7 +19,7 @@ Space-based systems distribute both data and processing across many identical no
 
 ### Intent & Forces
 
-The intent is extreme throughput and elasticity under variable load, without a single choke point. Typical forces include unpredictable traffic, large numbers of concurrent sessions, and the need to co-locate compute with data. The style favors in-memory partitioning, replication, and parallelism over global transactions, cross-partition joins, and strict immediate consistency.
+The intent is to achieve extreme throughput and elasticity under variable loads, without a single choke point. Typical forces include unpredictable traffic, large numbers of concurrent sessions, and the need to co-locate compute with data. The style favors in-memory partitioning, replication, and parallelism over global transactions, cross-partition joins, and strict immediate consistency.
 
 ### Structure
 
@@ -35,7 +35,7 @@ Space-based systems are built from a small set of moving parts that reflect “c
 
 ### Dependency Rules
 
-Processing units depend on grid contracts, not on each other’s internals. Cross-partition access happens through the grid’s APIs and routing, not ad-hoc calls. Avoid hidden shared state outside the grid; keep utilities domain-agnostic. When units must collaborate, communicate via the messaging grid or events rather than direct in-process backdoors.
+Processing units depend on grid contracts, not on each other’s internals. Cross-partition access happens through the grid’s APIs and routing, not ad-hoc calls. Avoid hidden shared state outside the grid; keep utilities domain-agnostic. When units must collaborate, they should communicate via the messaging grid or events rather than using direct in-process backdoors.
 
 ### Data & Transactions
 
@@ -49,7 +49,7 @@ During a flash sale, requests are routed to any node. The node’s processing un
 
 ##### Where It Fits / Where It Struggles
 
-Space-based fits extreme or spiky traffic, session-heavy portals, stream/analytics preparation, trading/tick processing, and other domains where latency and throughput dominate and eventual consistency is acceptable. It struggles where strict ACID across sources, global transactions, or heavy cross-shard queries are non-negotiable, and where teams cannot absorb the operational complexity of clustering, rebalancing, and high-load testing.
+Space-based systems excel in extreme or spiky traffic, session-heavy portals, stream/analytics preparation, trading/tick processing, and other domains where latency and throughput dominate, and eventual consistency is acceptable. It struggles where strict ACID across sources, global transactions, or heavy cross-shard queries are non-negotiable, and where teams cannot absorb the operational complexity of clustering, rebalancing, and high-load testing.
 
 ##### Trade-offs
 
@@ -59,18 +59,18 @@ Space-based fits extreme or spiky traffic, session-heavy portals, stream/analyti
 
 ##### Misconceptions & Anti-Patterns
 
-* **Keeping the central DB in the hot path.** The grid exists to avoid DB bottlenecks—persist changes off the hot path.  
+* **Keeping the central DB in the hot path.** The grid exists to avoid database bottlenecks—persist changes off the hot path.
 * **Uneven partitions and overloaded nodes.** Poor keys create hotspots; monitor and rebalance.  
 * **Tight coupling between processing units.** Cross-calls undermine scale; communicate via the grid or events.  
 * **Ignoring network costs.** Replication and messaging add latency; size partitions and replicas accordingly.  
-* **Assuming strong consistency.** Plan for drift and reconciliation between grid and cold store.
+* **Assuming strong consistency.** Plan for drift and reconciliation between the grid and the cold store.
 
 ##### Key Mechanics Done Well
 
 * **Stateless units with grid-backed state.** Keep business state in the grid so units can scale/relocate freely.  
 * **Partition keys that follow access patterns.** Choose keys that maximize locality and minimize cross-shard hops.  
 * **Replica strategy per partition.** Balance RPO/RTO with cost; test failover and rebalance regularly.  
-* **Back-pressure and admission control.** Use bounded queues and rate limits to avoid melt-downs under spikes.  
+* **Back-pressure and admission control.** Use bounded queues and rate limits to prevent meltdowns during spikes.  
 * **Asynchronous write-behind with audit trails.** Persist events/changes reliably; rehearse recovery from cold store.
 
 ##### Combining Styles
@@ -79,7 +79,7 @@ SBA often wraps event-driven ingestion and change propagation at the edges, uses
 
 ##### Evolution Path
 
-Start by moving the hottest aggregates and sessions into a small grid and co-locating logic as processing units. Add partitions and replicas as evidence accumulates. If a subset of functionality demands isolation or different scaling, extract that slice as a separate cluster or service with its own grid, keeping contracts stable. Always size partitions for future growth and design rebalancing as a routine operation.
+Start by moving the hottest aggregates and sessions into a small grid and co-locating logic as processing units. Add partitions and replicas as evidence accumulates. If a subset of functionality requires isolation or different scaling, extract that slice as a separate cluster or service with its own grid, maintaining stable contracts. Always size partitions for future growth and design rebalancing as a routine operation.
 
 ## Operational Considerations
 
@@ -87,7 +87,7 @@ Operate the cluster like a living system: track partition distribution, replica 
 
 ##### Decision Signals to Revisit the Style
 
-Re-evaluate when cross-partition joins dominate hot paths, when reconciliation drift creates user-visible errors, when rebalancing time violates SLOs, or when the cost/complexity of realistic performance testing exceeds the benefit over simpler styles. If strict ACID becomes mandatory end-to-end, consider consolidating hotspots or moving those workflows off the space.
+Re-evaluate when cross-partition joins dominate hot paths, when reconciliation drift creates user-visible errors, when rebalancing time violates SLOs, or when the cost/complexity of realistic performance testing exceeds the benefit over simpler styles. If strict ACID becomes mandatory end-to-end, consider consolidating hotspots or moving those workflows to a different space.
 
 ## Recommended Reading
 

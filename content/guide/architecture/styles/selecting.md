@@ -13,13 +13,13 @@ authors:
 
 ## What “selecting a style” really means
 
-Choosing an architecture style is less about fashion and more about fit. This article lays out a practical way to decide, using quality attributes, constraints, and evidence rather than trends.
+Choosing an architecture style is less about fashion and more about fit. This article outlines a practical approach to decision-making, utilizing quality attributes, constraints, and evidence rather than trends.
 
 An architecture style is a high-level structural pattern that shapes how a system is decomposed, deployed, and evolved. Selecting a style means choosing the dominant structural approach—and its constraints—that best satisfies your system’s quality attributes (e.g., availability, modifiability) while remaining feasible for your team and environment. You are committing to trade-offs: every style amplifies some qualities and suppresses others.
 
 ### Start from outcomes, not structures
 
-Selection begins with outcomes, not with the catalogue of styles. Define the behaviors and qualities your system must demonstrate under real conditions: load peaks, failure modes, deployment cadence, regulatory events, and organizational change. If these aren’t explicit, you will optimize for whatever seems easiest or trendiest, and discover the gaps in production.
+Selection begins with outcomes, not with the catalogue of styles. Define the behaviors and qualities your system must demonstrate under real-world conditions, including load peaks, failure modes, deployment cadence, regulatory events, and organizational changes. If these aren’t explicit, you will optimize for whatever seems easiest or trendiest, and you will likely discover gaps in production.
 
 ### Quality attributes drive the decision
 
@@ -36,7 +36,7 @@ These scenarios become the yardstick for judging styles, not just features.
 
 Architecture does not operate in a vacuum. Consider the constraints that will make or break your choice.
 
-* **Team topology and skills:** Can your teams own services end-to-end? Do you have ops/SRE maturity for distributed systems?  
+* **Team topology and skills:** Can your teams own services end-to-end? Do you have operational and SRE maturity for distributed systems?  
 * **Runtime platform:** Cloud, on-prem, hybrid—each changes networking, storage, identity, and deployment constraints.  
 * **Data gravity and governance:** Where data lives and how it is controlled will steer decomposition and integration.  
 * **Compliance and risk posture:** Auditability, residency, and change control can rule out otherwise attractive options.  
@@ -54,7 +54,7 @@ Use a lightweight, repeatable comparison so decisions are transparent and defens
 
 2) **Map each candidate to the same scenarios**: For every quality attribute scenario, write a short, concrete response of how the style meets it (or not). Be explicit about mechanisms (e.g., backpressure, bulkheads, blue/green).
 
-3) **Identify primary risks and mitigations**: Note what could go wrong: cascading failures, data consistency drift, coordination overhead, debugging complexity. Pair each risk with a mitigation and its cost.
+3) **Identify primary risks and mitigations**: Note what could go wrong: cascading failures, data consistency drift, coordination overhead, debugging complexity. Pair each risk with its corresponding mitigation and associated cost.
 
 4) **Prototype the riskiest assumption**: Run a focused spike: e.g., can event-driven ingestion keep p95 under target with realistic payloads? Measure, don’t guess.
 
@@ -63,7 +63,7 @@ Use a lightweight, repeatable comparison so decisions are transparent and defens
 ### What different styles optimize (and sacrifice)
 
 * **Layered/Monolithic:** Optimizes simplicity, local reasoning, and throughput with minimal operational overhead. Sacrifices independent deployability and fine-grained scaling as size grows.  
-* **Modular Monolith:** Balances simplicity with internal boundaries and stricter layering. Sacrifices some runtime independence to keep operational surface small.  
+* **Modular Monolith:** Balances simplicity with internal boundaries and stricter layering. Sacrifices some runtime independence to maintain a small operational surface.  
 * **Service-Based / SOA (coarse-grained):** Optimizes organizational alignment and reuse of business capabilities. Sacrifices local changes that cross service boundaries.  
 * **Microservices (fine-grained, independently deployable):** Optimizes team autonomy, selective scaling, and velocity in heterogeneous domains. Sacrifices operational simplicity; increases failure modes and observability demands.  
 * **Event-Driven:** Optimizes decoupling, elasticity, and temporal independence. Sacrifices debugging ease and global consistency; requires mature telemetry and contracts.  
