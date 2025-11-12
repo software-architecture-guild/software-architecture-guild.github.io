@@ -12,13 +12,13 @@ authors:
 ---
 {{< md-lint "<!-- markdownlint-disable MD024 -->" >}}
 
-Architecture styles are named, reusable macro-structures that constrain how a system is organized and how its parts interact. By choosing a style, you shape how the system grows, fails, and performs over time.
-
 ## What an Architecture Style Is (and Isn’t)
 
-A **style** defines high-level structure: the primary building blocks, their responsibilities, and allowed interaction patterns. A style intentionally narrows your choices so specific qualities—like modifiability or resilience—are easier to achieve.
+Architecture styles are named, reusable macro-structures that constrain how a system is organized and how its parts interact. By choosing a style, you shape how the system grows, fails, and performs over time.
 
-A **pattern** is smaller in scope. Patterns (e.g., CQRS) can live inside many styles. Styles set the city grid; patterns are the buildings you place on it.
+A **style** defines high-level structure: the primary building blocks, their responsibilities, and allowed interaction patterns. A style intentionally narrows your choices so specific qualities (like modifiability or resilience) are easier to achieve.
+
+A **pattern** is smaller in scope. Patterns (e.g., CQRS) can live inside many styles. Styles set the city grid; patterns are buildings types (like school or a firehouse) you place on it.
 
 ### Where Styles Apply
 
@@ -35,7 +35,9 @@ Styles front-load trade-offs. For example, a monolith centralizes execution and 
 
 ### The Monolithic Family
 
-A **monolith** packages UI, domain logic, and data access into a single deployable unit. The appeal: fast development, simple deployment, in-process calls, and one place to debug. The caution: scaling is coarse, the blast radius is wide, and teams can step on each other’s toes as the codebase grows.
+A **monolith** packages UI, domain logic, and data access into a single deployable unit.  
+The appeal: fast development, simple deployment, in-process calls, and one place to debug.  
+The caution: scaling is coarse, the blast radius is wide, and teams can step on each other’s toes as the codebase grows.
 
 Monoliths aren’t one shape. Common monolithic styles include:
 
@@ -44,7 +46,8 @@ Monoliths aren’t one shape. Common monolithic styles include:
 * **Pipeline (batch/ETL).** Linear stages transform data end-to-end inside one process or job. Good for data flows; not a microservice just because it has stages.  
 * **Microkernel (plugin).** Minimal core with plug-ins. Useful for platforms and tools that need extension points without fragmenting the core.
 
-**Example (language-neutral).** An e-commerce app ships as one process. “Catalog,” “Cart,” and “Checkout” are modules with internal APIs. A request handler calls into “Cart”; “Cart” raises a domain event handled by “Checkout” in-process. Deployment stays simple, module boundaries stay explicit.
+**Example**\
+An e-commerce app ships as one process. “Catalog,” “Cart,” and “Checkout” are modules with internal APIs. A request handler calls into “Cart”; “Cart” raises a domain event handled by “Checkout” in-process. Deployment stays simple, module boundaries stay explicit.
 
 ### The Distributed Family
 
@@ -53,33 +56,34 @@ A **distributed architecture** runs multiple deployable units that collaborate o
 “Distributed” is a toolbox, not one style. Typical options:
 
 * **Microservices.** Small, independently deployable services with strong ownership. Improves autonomy; increases operational overhead.  
-* **SOA.** Service-oriented design with emphasis on contracts and shared standards. Good for interoperability; risks central control bottlenecks.  
+* **SOA.** Service-oriented architecture with emphasis on contracts and shared standards. Good for interoperability; risks central control bottlenecks.  
 * **Event-Driven.** Asynchronous, message-centric collaboration. Scales well and decouples producers/consumers; introduces eventual consistency.  
 * **Space-Based.** Co-locates compute with shared, distributed data grids to absorb high concurrency. Powerful for spikes; data management is demanding.  
 * **Orchestration-Driven.** Central workflow coordinates services. Yields visibility and control; the orchestrator can become a new monolith.
 
-**Example (language-neutral).** “Checkout” is a service. It publishes an “OrderPlaced” event; “Billing” and “Shipping” subscribe. If “Billing” is down, messages queue and process later, but users may see delayed confirmations. Observability must stitch traces across services.
+**Example**\
+“Checkout” is a service. It publishes an “OrderPlaced” event; “Billing” and “Shipping” subscribe. If “Billing” is down, messages queue and process later, but users may see delayed confirmations. Observability must stitch traces across services.
 
 ## Design Considerations
 
-### Cross-Cutting Trade-offs Driven by Style
+##### Cross-Cutting Trade-offs Driven by Style
 
 * **Operability vs. Autonomy.** Monoliths simplify ops; distributed styles grant team independence and targeted scaling while increasing operational burden.
 * **Latency & Consistency.** In-process calls are fast and strongly consistent. Cross-network calls add latency, failure modes, and often eventual consistency.
 * **Debugging & Change Management.** Monoliths centralize logs and stack traces. Distributed styles require correlation IDs, tracing, and stricter versioning discipline.
 * **Team Topology Alignment.** Distributed styles map well to autonomous teams; monoliths reduce coordination cost for small teams.
 
-### Misconceptions and Anti-Patterns
+##### Misconceptions and Anti-Patterns
 
 * **“Monoliths are dead.”** They’re not. Many systems start—and stay—monolithic by choice, using modular structure to remain healthy.
 * **“Distributed = modern.”** Trends aside, distributed designs carry heavy complexity taxes. Adopt them for concrete needs, not fashion.
-* **Distributed layers.** Splitting a layered monolith into separately deployed “UI service,” “business service,” and “data service” recreates tight coupling with extra latency—autonomy doesn’t improve.
+* **“Distributed layers.”** Splitting a layered monolith into separately deployed “UI service,” “business service,” and “data service” recreates tight coupling with extra latency—autonomy doesn’t improve.
 
-### Combining Styles (Intentionally)
+##### Combining Styles
 
-Hybridization is normal. Examples include microservices that communicate via events (microservices + event-driven) or a microkernel-style core inside a monolith. Combine styles to meet a specific characteristic—elasticity, responsiveness, extension—not to collect buzzwords.
+Hybridization is normal. Examples include microservices that communicate via events (microservices + event-driven) or a microkernel-style core inside SOA. Combine styles to meet a specific characteristic (e.g. elasticity, responsiveness, extension), not to collect buzzwords.
 
-### Evolution Inside a Style
+##### Evolution Inside a Style
 
 Styles are not one-way doors. You can strengthen module boundaries inside a monolith, or simplify a distributed design by consolidating tightly coupled services. Evolve structure to match where change and load actually occur; avoid moving both axes (partitioning and deployment) at once.
 

@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-A layered monolith is a single deployable application organized into a small set of horizontal layers with clear responsibilities. It favors local reasoning and simple operations over independent deploys and fine-grained scaling. If your team needs clarity, safe refactors, and predictable releases, this style is a dependable starting point.
-
 ## Definition
 
-In a layered monolith, code is grouped into layers—Presentation, Application, Domain, and Persistence—and released as one process or image. The dependency direction runs downward only: each higher layer depends on the next lower one, and lower layers remain unaware of higher layers. Layers are closed by default, which prevents shortcuts that couple distant parts of the system. Exceptions exist, but they are rare, explicit, and justified with data.
+A layered monolith is a single deployable application organized into a small set of horizontal layers with clear responsibilities. It favors local reasoning and simple operations over independent deploys and fine-grained scaling. If your team needs clarity, safe refactors, and predictable releases, this style is a dependable starting point.
+
+In a layered monolith, code is grouped into layers (Presentation, Application, Domain, and Persistence) and released as one process or image. The dependency direction runs downward only: each higher layer depends on the next lower one, and lower layers remain unaware of higher layers. Layers are closed by default, which prevents shortcuts that couple distant parts of the system. Exceptions exist, but they are rare, explicit, and justified with data.
 
 ### Intent & Forces
 
@@ -48,32 +48,32 @@ Consider “Place Order.” The request enters Presentation, which validates inp
 
 ## Design Considerations
 
-### Where It Fits / Where It Struggles
+##### Where It Fits / Where It Struggles
 
 The layered monolith fits product teams that ship regularly, handle mostly local change, and want low operational overhead. It is especially useful when onboarding new engineers or untangling a previously ad-hoc structure. The style struggles when only a small subset of features needs massive scale, when cross-component change is the norm, or when latency budgets are so tight that pass-through code becomes a measurable drag. In those contexts, you either strengthen seams to prepare for extraction or adopt styles that optimize for isolation and selective scaling.
 
-### Trade-offs (At a Glance)
+##### Trade-offs
 
 * **Optimizes:** simplicity, testability, onboarding speed, coherent transactions, single-artifact operations  
 * **Sacrifices:** fine-grained scaling, fault isolation, polyglot autonomy  
 * **Requires:** disciplined boundaries, contract tests, clean dependency direction, baseline CI/CD and observability
 
-### Misconceptions & Anti-Patterns
+##### Misconceptions & Anti-Patterns
 
 * **“Layers = separate deployables.”** Turning technical layers into networked tiers creates accidental distribution and brittle latency chains.  
 * **Skip-the-layer.** UI-to-database shortcuts become permanent coupling.  
 * **Leaky rules.** Business logic in controllers or DAOs undermines the Domain’s role.  
 * **Pass-through layers.** Hops that only shuttle DTOs add latency without value and should be removed or collapsed.
 
-### Key Mechanics Done Well
+##### Key Mechanics Done Well
 
 Healthy layered monoliths are component-centric: each business component contains its own slice of Presentation, Application, Domain, and Persistence. That keeps changes local and makes future extraction cheaper. Contracts between layers are explicit and protected with tests. Dependency hygiene is enforced with static checks and CI rules, so back-edges and cycles fail fast. These mechanics keep the style crisp as teams and codebases grow.
 
-### Combining Styles Intentionally
+##### Combining Styles
 
-This is not a stylistic prison. You can add event-driven edges to integrate with other systems asynchronously or introduce cache/space-centric reads for hot query paths while keeping authoritative writes in Persistence. External services—payments, identity, search—should sit behind adapters so their details do not leak into Domain or Presentation. Mixing patterns is safe when boundaries remain intact.
+This is not a stylistic prison. You can add event-driven edges to integrate with other systems asynchronously or introduce cache/space-centric reads for hot query paths while keeping authoritative writes in Persistence. External services(e.g. payments, identity, search) should sit behind adapters so their details do not leak into Domain or Presentation. Mixing patterns is safe when boundaries remain intact.
 
-### Evolution Path
+##### Evolution Path
 
 Evolution typically starts inside the monolith. Strengthen code and data seams around components and align ownership to those seams. When a single component becomes a hotspot—due to load, risk, or velocity constraints—extract that component behind a stable contract rather than splitting by technical layer. If production data or governance needs force distribution, use strangler techniques to route a slice of traffic and measure outcomes before expanding the cut. Let evidence, not fashion, drive the pace of change.
 
@@ -81,9 +81,9 @@ Evolution typically starts inside the monolith. Strengthen code and data seams a
 
 Operate the layered monolith like any critical service: one release pipeline, feature flags for safe rollout, and tracing across layer boundaries. Domain events provide breadcrumbs for operations and analytics. Keep external calls wrapped with timeouts, retries, and circuit breakers where appropriate, and design degradation paths in Presentation and Application so partial failures do not become total outages. Because you ship a single artifact, rollbacks are simpler—but only if schema changes remain compatible for at least one release window.
 
-### Decision Signals to Revisit the Style
+##### Decision Signals to Revisit the Style
 
-Plan a review when you observe sustained trends such as rising change lead time from cross-component coordination, worsening MTTR because failures take down unrelated features, resource concentration in a small set of endpoints, or muddled ownership where multiple teams change the same internals. These indicators suggest consolidating responsibilities, strengthening seams, or extracting a hotspot.
+Plan a review when you observe sustained trends such as rising change lead time from cross-component coordination, worsening MTTR (Mean time to recover) because failures take down unrelated features, resource concentration in a small set of endpoints, or muddled ownership where multiple teams change the same internals. These indicators suggest consolidating responsibilities, strengthening seams, or extracting a hotspot.
 
 ## Recommended Reading
 
@@ -94,11 +94,11 @@ Plan a review when you observe sustained trends such as rising change lead time 
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Chapter 10: Layered Architecture Style**\  
+  * **Chapter 10: Layered Architecture Style**\
     Establishes the canonical four-layer structure, explains closed versus open layers with examples, and relates the style to modular monoliths and service-based decompositions.  
 * Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
-  * **Chapter 3: Layered Architecture**\  
+  * **Chapter 3: Layered Architecture**\
     Breaks down responsibilities per layer, analyzes the cost of layer-skipping and pass-through code, and contrasts in-process layering with N-tier distribution.  
 * Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
-  * **Chapter 6: Layered Architecture — Separating Concerns**\  
+  * **Chapter 6: Layered Architecture — Separating Concerns**\
     Presents a step-by-step “Naan & Pop” scenario showing request flow, transaction boundaries, and practical checks that prevent responsibility leaks across layers.

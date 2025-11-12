@@ -11,9 +11,9 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-A modular monolith is one deployable application split into real modules aligned to the domain. Each module owns its behavior and data behind a clear contract. You get the speed and simplicity of a monolith with the order and evolvability of services—without the distributed-systems tax.
-
 ## Definition
+
+A modular monolith is one deployable application split into real modules aligned to the domain. Each module owns its behavior and data behind a clear contract. You get the speed and simplicity of a monolith with the order and evolvability of services—without the distributed-systems tax.
 
 A modular monolith organizes a single process around *domain modules*: cohesive slices that encapsulate capabilities, policies, and the data they authoritatively own. Modules hide their internals and expose contracts—APIs and/or events—written in ubiquitous language. This is not a pre-microservices stage; it is a complete architecture that preserves the option to extract later if the evidence demands it.
 
@@ -41,17 +41,17 @@ In an e-commerce system, *Ordering* takes the order and decides state transition
 
 ## Design Considerations
 
-### Where It Fits / Where It Struggles
+##### Where It Fits / Where It Struggles
 
 It fits teams that want fast development, clear ownership, and lower operational overhead than microservices—especially when the domain can be sliced into well-understood capabilities with limited cross-module chatter. It struggles when you require strict fault isolation or independent scaling across many modules, or when team boundaries and the module map fundamentally conflict. In those cases, strengthen seams first; extract only where reality (load, risk, or cadence) justifies it.
 
-### Trade-offs (At a Glance)
+###### Trade-offs
 
 * **Optimizes:** development speed, maintainability, testability, low call overhead, simple transactions  
 * **Sacrifices:** independent runtime scaling and hard fault isolation (blast radius is the process)  
 * **Requires:** real boundaries (private internals), contract-first collaboration, automated enforcement
 
-### Misconceptions & Anti-Patterns
+##### Misconceptions & Anti-Patterns
 
 * *“Modules are just packages.”* A module is a semantic boundary with rules; a package is only mechanical unless enforced.  
 * *“We’ll add microservices later, so anything goes now.”* Erosion now makes extraction harder later; guard seams from day one.  
@@ -59,18 +59,18 @@ It fits teams that want fast development, clear ownership, and lower operational
 * God utilities that smuggle domain rules. Keep shared utilities domain-agnostic.  
 * “Misc” or “shared-domain” modules. These become coupling magnets; split by capability.
 
-### Key Mechanics Done Well
+##### Key Mechanics Done Well
 
 * Assign every component **one home**; unclear placement signals a boundary flaw. Ownership implies data authority and an API/event surface.  
 * Keep internal layering per module (API → domain → infrastructure).  
 * Add fitness functions in CI: allowed-deps, no cycles, forbidden imports; turn violations into failing builds.  
 * Prefer additive evolution of contracts and events; document error semantics (idempotency, retries, compensations).
 
-### Combining Styles Intentionally
+##### Combining Styles Intentionally
 
 Modular monoliths blend well with event-driven integration at module boundaries and with read-optimized patterns (for example, per-module caches or projections) for hot paths. Use synchronous calls when the SLA is tight and failure coupling is acceptable; use events to decouple and absorb bursts. Wrap external capabilities (payments, identity, search) behind module adapters to prevent leaks into other modules.
 
-### Evolution Path
+##### Evolution Path
 
 Start by reinforcing module seams—code, schema, and ownership. Track incoming/outgoing dependencies and remove cycles quickly. If evidence shows a genuine hotspot—change frequency, incident spread, or resource concentration—extract *that module* behind its existing contract rather than splitting by technical layer. Treat extraction as an option unlocked by good modularity, not as the plan.
 
@@ -78,7 +78,7 @@ Start by reinforcing module seams—code, schema, and ownership. Track incoming/
 
 Operations are simpler than in distributed styles: one deployable, centralized logging, straightforward rollbacks. Still, modules need observability: standardize logging/metrics/tracing fields so you can follow flows across seams; publish SLOs per module where it matters. Version events and contracts, deprecate with timelines, and keep a small set of end-to-end tests to prove the wiring across modules.
 
-### Decision Signals to Revisit the Style
+##### Decision Signals to Revisit the Style
 
 Re-evaluate boundaries or consider extraction when you see sustained cross-module changes that force coordination, “just this once” back-edges becoming precedent, incident blast radius crossing module lines, or hot modules that dominate resources and can’t be isolated with in-process techniques. Use lead time, incident spread, and dependency metrics to guide the call.
 
