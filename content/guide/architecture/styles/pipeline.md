@@ -11,9 +11,9 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-A pipeline monolith organizes one deployable application as a sequence of well-defined stages connected by data flows. Each stage does one job, passes results to the next, and can be tuned or parallelized without turning the system into a distributed tangle. This style fits workloads that are naturally sequential—ingest → validate → transform → publish—while keeping operational overhead low.
-
 ## Definition
+
+A pipeline monolith organizes one deployable application as a sequence of well-defined stages connected by data flows. Each stage does one job, passes results to the next, and can be tuned or parallelized without turning the system into a distributed tangle. This style fits workloads that are naturally sequential: ingest → validate → transform → publish, while keeping operational overhead low.
 
 A pipeline monolith is a single process composed of chained stages. Each stage accepts an input, applies a specific transformation or decision, and forwards an output to the next stage. The flow is predominantly one-way; branching and merging are allowed but must be explicit. The essence is stage independence with clear contracts and observable data flow, not a grab-bag of helpers glued together.
 
@@ -55,17 +55,17 @@ Consider an image-processing pipeline: *ingest* receives uploads, *preprocess* r
 
 ## Design Considerations
 
-### Where It Fits / Where It Struggles
+##### Where It Fits / Where It Struggles
 
 The pipeline monolith shines for ETL/ELT, event enrichment, content moderation, analytics preparation, and ML inference chains—domains with clear stepwise transformations and measurable throughput. It struggles when the workload is highly interactive with tight end-to-end latency, when steps require heavy two-way coordination, or when consistency guarantees span many stages and long durations. In those cases, shorten pipelines, isolate synchronous “inner loops,” or mix in request/response patterns for the hot path.
 
-### Trade-offs (At a Glance)
+##### Trade-offs
 
 * **Optimizes:** modularity of steps, localized tuning, streaming/batch throughput, testability of units  
 * **Sacrifices:** lowest possible latency per request, arbitrary cross-stage calls, simple global transactions  
 * **Requires:** explicit contracts, idempotency and replay, back-pressure, and end-to-end observability
 
-### Misconceptions & Anti-Patterns
+##### Misconceptions & Anti-Patterns
 
 * **Overloaded stages.** A “do-everything” stage defeats modularity and becomes the bottleneck.  
 * **Skipping early validation.** Bad records leak downstream and become expensive to fix later.  
@@ -73,7 +73,7 @@ The pipeline monolith shines for ETL/ELT, event enrichment, content moderation, 
 * **Ignoring back-pressure.** Unbounded buffers hide overload until the process tips over.  
 * **Hidden side effects.** Stages that alter shared state break replay and complicate error handling.
 
-### Key Mechanics Done Well
+##### Key Mechanics Done Well
 
 * Define schemas and contracts first; make stage inputs/outputs explicit and versioned.  
 * Keep stages stateless or minimally stateful; persist state at well-known checkpoints.  
@@ -81,11 +81,11 @@ The pipeline monolith shines for ETL/ELT, event enrichment, content moderation, 
 * Engineer retries with caps, jitter, and dedupe keys; route poison messages to dead-letter handling.  
 * Use batch windows or vectorized operations in compute-heavy stages for throughput gains.
 
-### Combining Styles Intentionally
+##### Combining Styles
 
 Pipelines mix naturally with event-driven systems (broker at the edges), with layered components for administration and APIs, and with modular-monolith boundaries to reflect domain ownership of each stage family. Keep the pipeline’s internal flow in-process for simplicity; externalize only where isolation, elasticity, or organizational boundaries make it worthwhile.
 
-### Evolution Path
+##### Evolution Path
 
 Evolve by inserting, reordering, or replacing stages behind stable contracts. When a single stage dominates cost or risk, parallelize it internally or extract it as a process with a narrow interface. Treat extraction as an optimization driven by telemetry—stage latency, queue depth, error rates—not by fashion. Keep replayable inputs and deterministic stage logic so you can rebuild outputs when algorithms or rules change.
 
@@ -93,7 +93,7 @@ Evolve by inserting, reordering, or replacing stages behind stable contracts. Wh
 
 Operate the pipeline as a flow: expose per-stage metrics (arrival rate, service time, queue depth), set SLOs for end-to-end latency and error budgets, and alert on back-pressure thresholds. Standardize logs/traces so you can follow a record through the stages. Rollouts favor canaries per stage behind feature flags. Capacity plans track both CPU-bound stages and I/O-bound hand-offs; tune batch sizes and concurrency accordingly.
 
-### Decision Signals to Revisit the Style
+##### Decision Signals to Revisit the Style
 
 Re-evaluate when you see long-tail latency dominated by a single stage, chronic back-pressure and dropped work, frequent schema breaks between stages, or rising coordination cost that forces cross-stage calls and hidden coupling. If most value now sits in interactive flows, shorten or split the pipeline and reserve it for asynchronous work.
 
@@ -102,5 +102,5 @@ Re-evaluate when you see long-tail latency dominated by a single stage, chronic 
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Chapter 11: Pipeline Architecture Style**\  
+  * **Chapter 11: Pipeline Architecture Style**\
     Defines stages and data flows, contrasts synchronous vs. asynchronous hand-offs, and covers bottlenecks, back-pressure, and error handling with practical patterns.  

@@ -11,9 +11,9 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Choosing an architecture style is less about fashion and more about fit. This article lays out a practical way to decide, using quality attributes, constraints, and evidence rather than trends.
-
 ## What “selecting a style” really means
+
+Choosing an architecture style is less about fashion and more about fit. This article lays out a practical way to decide, using quality attributes, constraints, and evidence rather than trends.
 
 An architecture style is a high-level structural pattern that shapes how a system is decomposed, deployed, and evolved. Selecting a style means choosing the dominant structural approach—and its constraints—that best satisfies your system’s quality attributes (e.g., availability, modifiability) while remaining feasible for your team and environment. You are committing to trade-offs: every style amplifies some qualities and suppresses others.
 
@@ -50,25 +50,15 @@ A style that ignores these realities will fail, even if it “works” in slides
 
 Use a lightweight, repeatable comparison so decisions are transparent and defensible.
 
-##### 1) Define 2–3 credible candidates  
+1) **Define 2–3 credible candidates**: Avoid false choices. If you have one real option, you don’t have a decision—gather another.
 
-Avoid false choices. If you have one real option, you don’t have a decision—gather another.
+2) **Map each candidate to the same scenarios**: For every quality attribute scenario, write a short, concrete response of how the style meets it (or not). Be explicit about mechanisms (e.g., backpressure, bulkheads, blue/green).
 
-##### 2) Map each candidate to the same scenarios  
+3) **Identify primary risks and mitigations**: Note what could go wrong: cascading failures, data consistency drift, coordination overhead, debugging complexity. Pair each risk with a mitigation and its cost.
 
-For every quality attribute scenario, write a short, concrete response of how the style meets it (or not). Be explicit about mechanisms (e.g., backpressure, bulkheads, blue/green).
+4) **Prototype the riskiest assumption**: Run a focused spike: e.g., can event-driven ingestion keep p95 under target with realistic payloads? Measure, don’t guess.
 
-##### 3) Identify primary risks and mitigations  
-
-Note what could go wrong: cascading failures, data consistency drift, coordination overhead, debugging complexity. Pair each risk with a mitigation and its cost.
-
-##### 4) Prototype the riskiest assumption  
-
-Run a focused spike: e.g., can event-driven ingestion keep p95 under target with realistic payloads? Measure, don’t guess.
-
-##### 5) Record the decision  
-
-Capture an ADR that states the decision, alternatives, trade-offs, and expected review date. Make it easy to revisit with new evidence.
+5) **Record the decision**: Capture an ADR that states the decision, alternatives, trade-offs, and expected review date. Make it easy to revisit with new evidence.
 
 ### What different styles optimize (and sacrifice)
 
@@ -83,9 +73,10 @@ Choose deliberately based on what you need to be great at—and what you can aff
 
 ### Style–Attribute Scorecard
 
-{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
-
 *Illustrative matrix for comparing common styles across selected quality attributes. Created by Mark Richards, DeveloperToArchitect.com. Treat the stars as directional, not absolute; confirm with scenarios and experiments in your context.*
+
+{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
+\
 
 ### Anti-patterns that derail selection
 
@@ -117,7 +108,7 @@ Styles should change as reality changes.
 
 Plan for evolution in your ADR: what signal triggers re-evaluation, and what first steps you’ll take.
 
-### Decision checklist you can actually finish
+### Decision checklist
 
 * Do top quality attribute scenarios have measurable thresholds?  
 * Can your team operate the failure modes the style introduces?  
@@ -135,5 +126,5 @@ Plan for evolution in your ADR: what signal triggers re-evaluation, and what fir
 #### Books
 
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-  * **Chapter 18: Choosing the Appropriate Architecture Style**\  
+  * **Chapter 18: Choosing the Appropriate Architecture Style**\
     A concise, scenario-driven approach to selecting styles by quality attributes, risk, and organizational context.
