@@ -11,6 +11,7 @@ backpressure
 Bain
 Bellemare
 BSUIR
+buildable
 bursty
 CCPA
 CEDP
@@ -49,6 +50,7 @@ Kersten
 Kiplinger
 Kruchten
 Larman
+Larty
 lastmod
 Leffingwell
 lotusdocs
@@ -58,6 +60,7 @@ Microkernel
 Misaligning
 MTBF
 MTTR
+Nadareishvili
 Norming
 Oleg
 OLTP
@@ -68,7 +71,9 @@ Pais
 Profitero
 psychographic
 Radioelectronics
+rebalance
 rebalances
+rebalancing
 relref
 replayable
 roadmaps
