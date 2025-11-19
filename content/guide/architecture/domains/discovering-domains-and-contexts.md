@@ -11,17 +11,19 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 Domain-Driven Design only works if you actually understand the domain you’re driving from. That sounds obvious, but most teams still jump from high-level requirements straight into diagrams and services.  
 
 Discovering domains and contexts is the missing step: a set of collaborative practices that turn tacit expert knowledge into explicit models, language, and boundaries you can safely build on.
 
-## Why domain discovery is a separate skill
+### Why domain discovery is a separate skill
 
 You can’t reason your way to a good model from your desk. Real domains are full of competing goals, exceptions, and unwritten rules. If you treat “requirements gathering” as a one-off phase, you’ll ship a system that reflects the loudest stakeholder, not the real business.  
 
 DDD treats domain discovery as its own skillset:
 
-* **Knowledge crunching** instead of requirement handoff.  
+* Knowledge crunching instead of requirement handoff.  
 * Direct collaboration between devs and domain experts.  
 * Continuous refinement instead of frozen specs.  
 
@@ -33,9 +35,9 @@ The question is not “do we understand enough to start coding?” but “how do
 
 Core ideas:
 
-* Work **shoulder-to-shoulder** with experts using real scenarios, not slideware.  
+* Work shoulder-to-shoulder with experts using real scenarios, not rely solely on presentations.  
 * Use whiteboards, sticky notes, and concrete examples to force clarity.  
-* Aim to separate what’s **salient** (rules, decisions, outcomes) from noise (implementation trivia, personal preferences).
+* Aim to separate what’s salient (rules, decisions, outcomes) from noise (implementation trivia, personal preferences).
 
 You’re not trying to capture everything: you’re crushing a messy pile of stories, policies, and workflows into something structured enough to design around.
 
@@ -85,8 +87,8 @@ You don’t discover domains and contexts by guessing; you use repeatable techni
 
 You don’t have infinite time with experts, so spend it where it matters:
 
-* Follow the **money, risk, and pain**: where are the biggest costs, delays, or errors?  
-* Chase **disagreements** and **edge cases**; that’s where the real rules hide.  
+* Follow the money, risk, and pain: where are the biggest costs, delays, or errors?  
+* Chase disagreements and edge cases; that’s where the real rules hide.  
 * Timebox low-impact areas and park them for later.  
 
 If the conversation is too smooth, you’re probably working on somewhere that doesn’t drive the business.
@@ -107,8 +109,8 @@ Good questions expose policies; bad ones produce vague answers.
 
 Useful patterns:
 
-* “What **must** be true before this can happen?”  
-* “What do you **never** allow?”  
+* “What must be true before this can happen?”  
+* “What do you never allow?”  
 * “What do you do when X and Y conflict?”  
 * “Can you recall the last time this went wrong? What happened?”  
 
@@ -146,13 +148,13 @@ EventStorming is DDD’s favorite power tool for discovery: a low-tech workshop 
 
 At its core:
 
-* Work on a single **business process** at a time.  
-* Start from **domain events** written in past tense (“Order Shipped”, “Payment Failed”).  
+* Work on a single business process at a time.  
+* Start from domain events written in past tense (“Order Shipped”, “Payment Failed”).  
 * Add commands, actors, policies, read models, external systems, and aggregates as the story fills out.
 
 ### Who should be in the room
 
-You want a **diverse but small** group:
+You want a diverse but small group:
 
 * Domain experts from operations, product, support, etc.  
 * Engineers who will actually build/maintain the system.  
@@ -177,7 +179,7 @@ You can think of the 10 steps as three phases.
 **1. Understand what happens**  
 
 * Brainstorm all the **events** that can happen in the process, in past tense.  
-* Arrange them into a timeline: happy path first, then branches and exceptions.  
+* Arrange them into a **timeline**: happy path first, then branches and exceptions.  
 * Mark pain points and unknowns so you don’t lose them.  
 
 **2. Understand who and what drives it**  
@@ -220,10 +222,10 @@ Events and timelines are not just pretty; they’re signals.
 
 Patterns to watch for:
 
-* **Pivotal events** that mark clear phase changes (“Application Approved”, “Policy Cancelled”). These often separate **subdomains** or bounded contexts.  
-* Areas dense with **pain points** and **manual work**—good candidates for core or complex supporting subdomains.  
-* Clusters of commands/events that share policies and invariants—likely **aggregates** and early **context** candidates.  
-* Events that mention external systems—likely **integration seams** where context boundaries will land.
+* Pivotal events that mark clear phase changes (“Application Approved”, “Policy Cancelled”). These often separate subdomains or bounded contexts.  
+* Areas dense with pain points and manual work—good candidates for core or complex supporting subdomains.  
+* Clusters of commands/events that share policies and invariants—likely aggregates and early context candidates.  
+* Events that mention external systems—likely integration seams where context boundaries will land.
 
 You can overlay your EventStorming board with:
 
@@ -252,24 +254,14 @@ From there, domains and subdomains become clearer, bounded contexts emerge from 
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 12: EventStorming**\
     Explains how to run big-picture and process-level EventStorming sessions, turning domain events and flows into concrete subdomains and candidate bounded contexts.
-
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 2: Distilling the Problem Domain**\
     Shows how to separate core and supporting concerns, crunch knowledge with experts, and use language and scenarios to carve out domains and subdomains.
-
-* Brandolini, A. (n.d.). *[Introducing EventStorming](https://leanpub.com/introducing_eventstorming)*. Leanpub.  
+* Brandolini, A. (n.d.). *[Introducing EventStorming](https://www.eventstorming.com/book/)*. Leanpub.  
   * **Core chapters on EventStorming practice**\
     Provides a practitioner’s guide to designing and facilitating EventStorming workshops, with concrete patterns, anti-patterns, and facilitation tips.
-
-* Bass, Len, Paul Clements, and Rick Kazman. *[Software Architecture in Practice (3rd ed.)](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/)*. Addison-Wesley, 2012.  
-  * **Architecture in the life cycle (selected chapters)**\
-    Complements DDD by showing how domain understanding and quality attributes feed into architectural drivers and early design decisions.

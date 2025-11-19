@@ -11,20 +11,24 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 DDD isn’t a lifestyle choice. It’s a set of tools for when the domain is tricky, the stakes are high, and you can actually talk to people who know how the business works. Used in the wrong place, it’s ceremony. Used in the right place, it’s how you turn complexity into something your team can reason about and change.  
 
 This article puts the pieces together: when DDD pays off, how to sell it, how to work with experts, and how to keep your models simple, explicit, and evolvable.
 
-## Use DDD where it actually helps
+## Practices
+
+### Use DDD where it actually helps
 
 DDD is not for every system, every team, or every feature.
 
 It shines when:
 
-* The domain is **non-trivial and important** for the business.  
-* You have **access to real domain experts**.  
-* The team is willing to **iterate in small steps**, not demand a full design up front.  
-* You can build and refine **over time**, not in a one-shot project.  
+* The domain is non-trivial and important for the business.  
+* You have access to real domain experts.  
+* The team is willing to iterate in small steps, not demand a full design up front.  
+* You can build and refine over time, not in a one-shot project.  
 
 When any of those are missing, lean on simpler patterns:
 
@@ -33,7 +37,7 @@ When any of those are missing, lean on simpler patterns:
 
 Save deep modeling and rich domain layers for places that move the needle.
 
-## Sell outcomes, not “DDD”
+### Sell outcomes, not “DDD”
 
 Most executives don’t care about aggregates or bounded contexts. They care about:
 
@@ -49,21 +53,21 @@ So don’t sell “we’re doing DDD.” Sell things like:
 
 Inside the team, you can talk patterns. Outside, talk risk, speed, and clarity.
 
-## Teach language and context first, patterns second
+### Teach language and context first, patterns second
 
-Most DDD adoptions fail because teams start with **tactical patterns** (entities, repositories) and never fix how they talk about the domain.
+Most DDD adoptions fail because teams start with tactical patterns (entities, repositories) and never fix how they talk about the domain.
 
 Flip it:
 
-* Start with **vision** – what is this product trying to be? Core? Supporting? A “fail fast” experiment? The level of rigor should match the bet.  
-* Teach **ubiquitous language** – shared terms, examples, and scenarios that everyone uses in conversation, docs, and code.  
-* Introduce **domains, subdomains, bounded contexts**, and **context maps** so people see where models start and end.  
+* Start with vision – what is this product trying to be? Core? Supporting? A “fail fast” experiment? The level of rigor should match the bet.  
+* Teach ubiquitous language – shared terms, examples, and scenarios that everyone uses in conversation, docs, and code.  
+* Introduce domains, subdomains, bounded contexts, and context maps so people see where models start and end.  
 
 Only then talk about aggregates, value objects, and event sourcing. Technology choices are implementations of that shared understanding, not the other way around.
 
-## Work in the problem space before the solution space
+### Work in the problem space before the solution space
 
-Most teams rush into APIs and data models. Best practice: **slow down the start**.
+Most teams rush into APIs and data models. Best practice: slow down the start.
 
 Move through a deliberate sequence:
 
@@ -75,17 +79,17 @@ Move through a deliberate sequence:
    Use behavior-driven examples: Given/When/Then, concrete inputs and outputs, and especially *why* the behavior matters. Treat BDD as a requirements language, not a testing fashion.  
 
 3. **Distill the problem space**  
-   Cluster related behaviors into **capabilities and subdomains** (core, supporting, generic). This reduces cognitive load and makes it clear where to invest.  
+   Cluster related behaviors into capabilities and subdomains (core, supporting, generic). This reduces cognitive load and makes it clear where to invest.  
 
 4. **Focus on what’s important**  
    Spend disproportionate modeling time on the core. Timebox everything else ruthlessly.  
 
 5. **Understand the landscape**  
-   Build and maintain a **context map**: which bounded contexts exist, how they integrate, who is upstream/downstream, and where legacy systems push constraints at you.  
+   Build and maintain a context map: which bounded contexts exist, how they integrate, who is upstream/downstream, and where legacy systems push constraints at you.  
 
 If you skip these, you’ll build beautiful models in the wrong places.
 
-## Use the simplest implementation pattern that fits
+### Use the simplest implementation pattern that fits
 
 DDD isn’t “rich domain model everywhere.”
 
@@ -108,67 +112,67 @@ Then pick the pattern that matches:
 
 You can—and should—mix patterns in one system. Over-modeling everywhere burns attention and makes the architecture harder to work with.
 
-## Work with domain experts like they’re your scarcest resource
+### Work with domain experts like they’re your scarcest resource
 
 Without real domain experts, DDD is cosplay.
 
 Good practice:
 
 * Treat the expert’s time as the rarest resource. Prepare scenarios and questions; don’t show up to “pick their brain.”  
-* Model around **concrete scenarios**, not abstractions. “Walk me through the last three times this failed” beats “what are the requirements?”  
-* Spend joint time on the **hard, interesting parts** – decisions, exceptions, policies. Don’t drag them through CRUD forms and field names.  
+* Model around concrete scenarios, not abstractions. “Walk me through the last three times this failed” beats “what are the requirements?”  
+* Spend joint time on the hard, interesting parts – decisions, exceptions, policies. Don’t drag them through CRUD forms and field names.  
 
 You want deep insight into the core domain, not broad but shallow coverage of everything.
 
-## Let language drive code, and refactor both
+### Let language drive code, and refactor both
 
 Ambiguity is a design smell.
 
-Good DDD practice treats **language refactoring** as important as code refactoring:
+Good DDD practice treats language refactoring as important as code refactoring:
 
-* When you discover a better term, **rename it everywhere**—tests, classes, APIs, docs.  
-* When experts use a term repeatedly, give it a **real place in the model**: a type, an event, a module.  
+* When you discover a better term, rename it everywhere—tests, classes, APIs, docs.  
+* When experts use a term repeatedly, give it a real place in the model: a type, an event, a module.  
 * When two contexts use the same word to mean different things, split it into context-specific terms instead of arguing over one universal definition.
 
 Non-technical refactoring (renaming, clarifying, splitting concepts) is a first-class activity, not cosmetic work you do “if there’s time.”  
 
-## Expect to throw away models
+### Expect to throw away models
 
 If your first model survives untouched, it’s probably wrong and nobody is looking closely.
 
 Better practice:
 
-* Assume your **first and second models are disposable**. You build them to learn.  
+* Assume your first and second models are disposable. You build them to learn.  
 * Use tests and examples to expose where the model bends or breaks.  
 * Be ready to unlearn: sometimes you must abandon a clever structure in favor of a dull one that fits the domain better.  
 
 The metric is not how long a model lasts; it’s how quickly you can evolve it as understanding deepens.
 
-## Prove the model in code with boring solutions
+### Prove the model in code with boring solutions
 
 Beautiful whiteboard models don’t count until they survive contact with code.
 
 Principles:
 
-* Implement the model with the **same terms** you use in conversation—no translation step where “Policy” suddenly becomes “ContractDtoV2”.  
-* Keep code **boring and focused**. Fancy frameworks, reflection, and meta-programming rarely help with clarity.  
-* Integrate the model **end-to-end early and often**: thin vertical slices through UI, app layer, domain, and persistence. See if it still feels right once it’s wired up.  
+* Implement the model with the same terms you use in conversation—no translation step where “Policy” suddenly becomes “ContractDtoV2”.  
+* Keep code boring and focused. Fancy frameworks, reflection, and meta-programming rarely help with clarity.  
+* Integrate the model end-to-end early and often: thin vertical slices through UI, app layer, domain, and persistence. See if it still feels right once it’s wired up.  
 
 If it’s hard to test or to explain to a new teammate, it’s probably too clever.
 
-## Carve out safety when dealing with legacy
+### Carve out safety when dealing with legacy
 
 Most real DDD work happens in brownfield systems. You rarely get a greenfield playground.
 
 Best practice around legacy:
 
-* Treat legacy systems and schemas as **upstream contexts**. Document what they provide and how they constrain you.  
-* Use **anti-corruption layers** to protect your new model from leaking legacy concepts inside. The extra layer is cheaper than a polluted core.  
-* Refactor **inside a safe zone**. Establish new boundaries and models in one slice, then gradually route more behavior through them.
+* Treat legacy systems and schemas as upstream contexts. Document what they provide and how they constrain you.  
+* Use anti-corruption layers to protect your new model from leaking legacy concepts inside. The extra layer is cheaper than a polluted core.  
+* Refactor inside a safe zone. Establish new boundaries and models in one slice, then gradually route more behavior through them.
 
 Don’t start by “fixing the database.” Start by protecting the core domain from being distorted.
 
-## Model and refactor continuously, not in phases
+### Model and refactor continuously, not in phases
 
 DDD isn’t “we did a modeling workshop in Q1.”
 
@@ -180,7 +184,7 @@ Treat modeling and refactoring as continuous:
 
 If your model looks the same year after year while the environment shifts, you’re running on stale understanding.
 
-## Don’t solve every problem
+### Don’t solve every problem
 
 Some complexity is not worth automating.
 
@@ -192,16 +196,16 @@ Ask:
 
 It can be perfectly fine to leave rare, weird edge cases for humans to handle—with clear procedures and good tooling—while the system focuses on the 80–95% that bring value.
 
-## How to know if you’re doing it right
+### How to know if you’re doing it right
 
 Signs you’re on the right track:
 
-* Conversations, docs, and code use **the same language**.  
+* Conversations, docs, and code use the same language.  
 * New team members can explain core flows back to domain experts in a couple of days.  
-* Changing a core rule touches a **small, obvious part of the system**, not ten random services.  
-* Teams talk about **subdomains, contexts, and invariants**, not just “the microservices architecture.”  
+* Changing a core rule touches a small, obvious part of the system, not ten random services.  
+* Teams talk about subdomains, contexts, and invariants, not just “the microservices architecture.”  
 
-The outcome is not “we did DDD.” The outcome is **understandable, maintainable software that reliably reflects the business and can change with it**.
+The outcome is not “we did DDD.” The outcome is understandable, maintainable software that reliably reflects the business and can change with it.
 
 ## Summary
 
@@ -218,16 +222,8 @@ Done this way, DDD becomes a way to keep complexity legible, rather than another
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Millett, S., & Tune, N. (2015). *Patterns, Principles, and Practices of Domain-Driven Design*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 10: Applying the Principles, Practices, and Patterns of DDD**\
     A practical checklist of when to apply DDD, how to work with domain experts, how to keep models simple and explicit, and how to integrate and refactor continuously in real organizations.  
-
-* Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
-  * **Architecture in the life cycle (selected chapters)**\
-    Complements DDD by showing how to align architectural decisions with evolving business drivers, evaluate trade-offs, and keep software structure adaptable over time.

@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 Once you’ve mapped your domain and shaped an initial model, you still have a practical problem: **how do you implement all this in code without creating a ball of mud?**  
 
 Domain model building blocks are the small, repeatable patterns you use to turn domain concepts into concrete, maintainable code: value objects, entities, aggregates, domain services, domain events, factories, repositories, and (sometimes) event sourcing. Used well, they let your model grow in depth without collapsing under its own complexity.  
 
-## Why you need building blocks at all
+### Why you need building blocks at all
 
 Not all business logic is equal.
 
@@ -47,7 +49,7 @@ At the code level, tactical DDD gives you a vocabulary:
 
 You do **not** have to use all of them everywhere. The art is picking just enough of them in the places where complexity demands it.
 
-## Value Objects: modeling precise, reusable concepts
+### Value Objects: modeling precise, reusable concepts
 
 **Value objects** represent descriptive concepts where **identity doesn’t matter**, only the value does: amounts, ranges, coordinates, dimensions, names. Two value objects are equal if all their attributes are equal.  
 
@@ -71,7 +73,7 @@ Trade-offs:
 
 Good rule of thumb: whenever you have a primitive field that carries non-trivial rules (money, dates, quantities), try a value object.
 
-## Entities: modeling identity and lifecycle
+### Entities: modeling identity and lifecycle
 
 **Entities** represent things that **remain the same even as their state changes**: a particular customer, order, or shipment. Two entities can have identical attribute values and still be different because their IDs differ.  
 
@@ -94,7 +96,7 @@ Trade-offs:
 
 Listen to the domain language: if people talk about “this specific X over time”, you probably have an entity.
 
-## Aggregates: enforcing invariants and consistency
+### Aggregates: enforcing invariants and consistency
 
 If value objects and entities are your bricks, **aggregates** are the walls: they are **clusters of entities/value objects with a single consistency boundary**. All changes inside an aggregate happen in a single transaction, through a single entry point called the **aggregate root**.  
 
@@ -117,7 +119,7 @@ Trade-offs:
 
 If you routinely need to update several aggregates in one transaction, your boundaries are probably wrong—or your business really does need eventual consistency.
 
-## Domain Services: modeling behaviors, not data
+### Domain Services: modeling behaviors, not data
 
 Some behaviors clearly belong to a single entity or value object. Others don’t.
 
@@ -134,7 +136,7 @@ Guidelines:
 * Keep services **stateless** and focused on domain logic, not infrastructure plumbing.  
 * Don’t dump everything into services, or you’ll create an anemic model. If logic clearly belongs to one entity, put it there.
 
-## Domain Events: making change explicit
+### Domain Events: making change explicit
 
 Most domains are naturally **eventful**: orders are placed, payments fail, shipments are dispatched, contracts expire.
 
@@ -157,7 +159,7 @@ Trade-offs:
 
 Start small: use domain events for genuinely important happenings, not every minor state change.
 
-## Factories: encapsulating creation
+### Factories: encapsulating creation
 
 Sometimes creating a valid aggregate is **non-trivial**: you must pull data from services, apply rules, pick one of several implementations, and ensure invariants hold from day one.
 
@@ -177,7 +179,7 @@ Trade-offs:
 * **Upside:** Cleaner entities, explicit intent, easier to change construction rules.  
 * **Downside:** Overusing factories can create indirection; keep them for genuinely complex creation paths.  
 
-## Repositories: accessing aggregates with intent
+### Repositories: accessing aggregates with intent
 
 **Repositories** are how you **load and save aggregates** without leaking persistence concerns into your domain model. Think of them as type-safe, intention-revealing collections for aggregate roots.  
 
@@ -194,7 +196,7 @@ Trade-offs:
 
 Use repositories in **rich domain contexts** where aggregates and invariants matter. For reporting and ad hoc queries, go directly against read models instead of tunneling everything through repositories.
 
-## Event Sourcing: modeling the dimension of time
+### Event Sourcing: modeling the dimension of time
 
 So far, we’ve assumed you store only the **current state** of aggregates. Sometimes that’s not enough.
 
@@ -231,7 +233,6 @@ A more realistic approach:
   * Use entities, value objects, aggregates, domain services, domain events.  
   * Consider event sourcing if time and history are first-class concerns.  
   * Use repositories and factories to protect invariants and keep construction/persistence tame.  
-
 * In **supporting or generic subdomains**:  
   * Use Transaction Script or Active Record for simple flows.  
   * Reach for a couple of building blocks (e.g., a value object for money) where they pay off.  
@@ -251,15 +252,14 @@ Used selectively and strategically, these patterns give you a common language wi
 
 #### Books
 
-* Khononov, V. (2021). *Learning Domain-Driven Design*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 5: Implementing Simple Business Logic**\
     Introduces Transaction Script and Active Record as pragmatic patterns for simple flows and explains their limits when complexity grows.  
   * **Chapter 6: Tackling Complex Business Logic**\
     Presents the rich domain model pattern and the core building blocks—value objects, entities, aggregates, and domain services—for managing complex rules.  
   * **Chapter 7: Modeling the Dimension of Time**\
     Shows how event sourcing models time explicitly by treating event streams as the source of truth and building projections from them.
-
-* Millett, S., & Tune, N. (2015). *Patterns, Principles, and Practices of Domain-Driven Design*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 14: Introducing the Domain Modeling Building Blocks**\
     Provides an overview of entities, value objects, domain services, modules, aggregates, factories, repositories, domain events, and event sourcing as a cohesive toolkit.  
   * **Chapter 15: Value Objects**\

@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Definition
+
 Domain-Driven Design (DDD) is a way of building software that starts from the business problem, not from frameworks or technology. It helps you keep complex systems understandable and changeable by putting the business domain at the center of your models, code, and architecture.
 
 DDD is not a framework, a set of annotations, or a microservices recipe. It is a set of principles, patterns, and practices that align people, language, and code so that the system reflects how the business really works.
 
-## Why complex domains hurt
+### Why complex domains hurt
 
 Most systems don’t turn into a mess because people are stupid. They rot because complexity is unmanaged.
 
@@ -30,7 +32,7 @@ A few common symptoms:
 
 DDD starts by naming this problem clearly: your biggest risk is not that the system is slow today, but that it becomes impossible to safely change tomorrow.
 
-## The core idea of Domain-Driven Design
+### The core idea
 
 Domain-Driven Design says: if the problem is in the domain, the solution must be in the domain model.
 
@@ -44,7 +46,7 @@ At its heart, DDD asks you to:
 
 Everything else in DDD — patterns, diagrams, tactical building blocks — exists to support these moves, not the other way around.
 
-## Problem space vs solution space
+### Problem space vs solution space
 
 DDD draws a sharp line between **problem space** and **solution space**.
 
@@ -118,7 +120,7 @@ Some core practices:
 
 Teams that succeed with DDD treat the domain model as a living artifact that grows with the business, not as a diagram that was correct once in a workshop.
 
-## Common misconceptions about Domain-Driven Design
+### Common misconceptions
 
 Because DDD has many patterns and famous diagrams, it’s easy to misunderstand what it is.
 
@@ -138,7 +140,7 @@ Typical misconceptions:
 
 When you treat DDD as a checklist of patterns or a technology choice, you miss its value. When you treat it as a philosophy for aligning domain, language, and architecture, it becomes useful.
 
-## When Domain-Driven Design makes sense
+### When DDD makes sense
 
 DDD is most valuable when:
 
@@ -165,6 +167,6 @@ Most importantly, DDD is a long-term habit of working with domain experts, refin
 
 #### Books
 
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 1: What Is Domain-Driven Design?**\
     A clear high-level introduction to DDD, explaining the core challenges of complex domains, the split between strategic and tactical patterns, and common misconceptions.
