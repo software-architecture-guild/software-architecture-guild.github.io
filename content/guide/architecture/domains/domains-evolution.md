@@ -1,7 +1,7 @@
 ---
 weight: 208
 title: "Domains Evolution"
-description: "This article explains how domains, subdomains, and designs evolve over time, and how to adapt your domain, context, and implementation decisions as strategy, knowledge, and organization change."
+description: "This article explains how domains, subdomains, and designs evolve, and how to adapt your domain, context, and implementation decisions as strategy, knowledge, and organization change."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"
@@ -23,7 +23,7 @@ We like to think “core, supporting, generic” is a one-time classification. I
 
 As the business changes, so does what truly differentiates you:
 
-* A feature that was once pioneering becomes commodity.  
+* A feature that was once pioneering becomes a commodity.  
 * A boring back-office area becomes your new strategic bet.  
 * Cost pressures make “build” suddenly worse than “buy,” or the other way around.
 
@@ -59,7 +59,7 @@ Emotionally, this is hard—“our core” often has internal prestige. But hang
 
 ### Generic → Core
 
-The inverse: an area you once saw as “commodity” suddenly becomes where you win:
+The inverse: an area you once saw as a “commodity” suddenly becomes where you win:
 
 * You spot a new market that depends on it.  
 * Your selling story shifts (“we’re not just a tool, we’re an analytics company”).  
@@ -67,11 +67,11 @@ The inverse: an area you once saw as “commodity” suddenly becomes where you 
 
 What to do:
 
-* Elevate it to core in your domain map.  
+* Elevate it to the core in your domain map.  
 * Pull modeling and architecture talent into it.  
 * Break it out into its own bounded contexts instead of leaving it buried inside others.
 
-If you don’t promote it, your “core” lives in slides, not in the structure of the system.
+If you don’t promote it, your “core” lives in slides rather than in the system's structure.
 
 ### Supporting shifts
 
@@ -90,7 +90,7 @@ If your domain map doesn’t change for years, it’s probably out of date.
 
 ## Strategic design: evolving contexts and relationships
 
-Strategic design decisions are the slow, structural ones: where you draw bounded context boundaries and how those contexts relate.
+Strategic design decisions are the slow, structural ones: where you draw bounded context boundaries and how those contexts relate to one another.
 
 You should regularly ask:
 
@@ -123,7 +123,7 @@ You start with Transaction Script for a small, linear area:
 Then complexity accretes:
 
 * Several scripts manipulate the same data.  
-* Business rules duplicate between them.  
+* Business rules are duplicated between them.  
 * Changes require editing multiple places.
 
 At this point, moving to Active Record can help:
@@ -140,7 +140,7 @@ Eventually, you hit the limits:
 
 * You need invariants across multiple fields and associated records.  
 * You’re juggling multiple states and transitions.  
-* Conditionals multiply and correctness becomes fragile.
+* Conditionals multiply, and correctness becomes fragile.
 
 Now you need a Domain Model:
 
@@ -156,12 +156,12 @@ Even a great state-based domain model sometimes isn’t enough:
 
 * The business needs auditability (“who changed what, when?”).  
 * You need to reason over history (“how did we get here?”).  
-* Rules depend on sequences of events, not just current state.
+* Rules depend on sequences of events, not just the current state.
 
 Then event sourcing becomes attractive:
 
 * The domain model emits domain events as the source of truth.  
-* State is rebuilt by replaying events or from snapshots.  
+* The state is rebuilt by replaying events or from snapshots.  
 * New projections (for analytics, read models, regulatory reports) can be added later.
 
 > **You pay with more complex infrastructure and migration concerns. So you should evolve only the domains where history truly matters—not the whole codebase.**
@@ -174,7 +174,7 @@ Two broad strategies:
 
 ### Reconstructing “recovered” events
 
-You look at current state and generate synthetic events backwards:
+You look at the current state and generate synthetic events backwards:
 
 * For each entity, create events that approximate how it got here (“OrderCreated”, “OrderCompleted”).  
 * Use these to initialize streams.  
@@ -190,7 +190,7 @@ Cons:
 * You don’t get true history; you only get a plausible story from the final state.  
 * If you treat it as real history, you’ll make wrong assumptions later.
 
-Use this when you need event streams mainly for forward-looking behavior (e.g., new projections), and you can live with shallow history.
+Use this when you need event streams primarily for forward-looking behavior (e.g., new projections) and can live with shallow history.
 
 ### Explicit migration events
 
@@ -201,7 +201,7 @@ The more honest approach:
 
 Pros:
 
-* The ledger tells the truth: “we don’t know how we got here before this point.”  
+* The ledger tells the truth: “We don’t know how we got here before this point.”  
 * Projections can treat migration events specially.
 
 Cons:
@@ -213,7 +213,7 @@ Use this when audits, correctness, and transparency matter more than having a cl
 
 ## Organization changes force design changes
 
-Your architecture reflects your org. When the org changes, pretending the system can stay still is fantasy.
+Your architecture reflects your org. When the org changes, pretending the system can stay still is a fantasy.
 
 Examples:
 
@@ -221,7 +221,7 @@ Examples:
 * A once-aligned customer–supplier relationship becomes toxic: upstream ignores downstream needs, downstream hacks around it. At some point, Separate Ways (duplication, decoupling) is cheaper than constant friction.  
 * New reporting and compliance requirements force new read models that cross multiple contexts.
 
-If you don’t revisit your context map and integration patterns as the org moves, teams will create shadow integrations, copy-paste code, and local workarounds. Architecture debt becomes organizational debt, visible in slow delivery.
+If you don’t revisit your context map and integration patterns as the org moves, teams will create shadow integrations, copy-paste code, and local workarounds. Architecture debt becomes organizational debt, as evidenced by slow delivery.
 
 ## Evolving with domain knowledge
 
@@ -295,9 +295,9 @@ The goal is not to predict every change. It’s to make changing your mind cheap
 
 ## Summary
 
-Domains evolve because strategy, markets, organizations, and knowledge evolve. If your architecture pretends otherwise, it slowly drifts away from the business it’s supposed to serve.  
+Domains evolve because strategy, markets, organizations, and knowledge grow. If your architecture pretends otherwise, it slowly drifts away from the business it’s supposed to serve.  
 
-You can stay aligned by reclassifying subdomains as strategy shifts; redrawing bounded contexts and integration patterns as team relationships change; evolving tactical patterns along a path from scripts to rich models to event sourcing; and continuously pruning subdomains, contexts, and aggregates as the system grows.  
+You can stay aligned by reclassifying subdomains as strategy shifts; redrawing bounded contexts and integration patterns as team relationships change; evolving tactical patterns from scripts to rich models to event sourcing; and continuously pruning subdomains, contexts, and aggregates as the system grows.  
 
 Change isn’t a failure of your original design—it’s the environment doing its job. Your job is to make sure the design can follow.
 

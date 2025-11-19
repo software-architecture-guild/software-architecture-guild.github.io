@@ -67,7 +67,7 @@ The most important artifact of discovery is not a diagram, it’s a **Ubiquitous
 
 You know it’s working when:
 
-* Domain experts can read tests and say “yes, that’s how we talk about it.”  
+* Domain experts can read tests and say, “Yes, that’s how we talk about it.”  
 * Code names (classes, methods, events) match the phrases used in workshops.  
 * Ambiguous or overloaded words get split into sharper concepts as understanding grows.
 
@@ -87,11 +87,11 @@ You don’t discover domains and contexts by guessing; you use repeatable techni
 
 You don’t have infinite time with experts, so spend it where it matters:
 
-* Follow the money, risk, and pain: where are the biggest costs, delays, or errors?  
+* Follow the money, risk, and pain: where are the most significant costs, delays, or errors?  
 * Chase disagreements and edge cases; that’s where the real rules hide.  
 * Timebox low-impact areas and park them for later.  
 
-If the conversation is too smooth, you’re probably working on somewhere that doesn’t drive the business.
+If the conversation is too smooth, you’re probably working on something that doesn’t drive the business.
 
 ### Start from real use cases
 
@@ -140,7 +140,7 @@ Discovery follows a loop, not a straight line:
 4. Refine the language and structure.  
 5. Update code and diagrams.  
 
-You’re not failing when a model breaks; that’s the point. The faster you spin this whirlpool, the better your eventual model becomes.
+You’re not failing when a model breaks; that’s the point. The faster you spin this whirlpool, the better your final model will be.
 
 ## EventStorming: fast discovery in a room
 
@@ -149,7 +149,7 @@ EventStorming is DDD’s favorite power tool for discovery: a low-tech workshop 
 At its core:
 
 * Work on a single business process at a time.  
-* Start from domain events written in past tense (“Order Shipped”, “Payment Failed”).  
+* Start from domain events written in the past tense (“Order Shipped”, “Payment Failed”).  
 * Add commands, actors, policies, read models, external systems, and aggregates as the story fills out.
 
 ### Who should be in the room
@@ -178,7 +178,7 @@ You can think of the 10 steps as three phases.
 
 **1. Understand what happens**  
 
-* Brainstorm all the **events** that can happen in the process, in past tense.  
+* Brainstorm all the **events** that can happen in the process, in the past tense.  
 * Arrange them into a **timeline**: happy path first, then branches and exceptions.  
 * Mark pain points and unknowns so you don’t lose them.  
 
@@ -201,10 +201,10 @@ You don’t have to follow the cookbook exactly. The real value is making the pr
 
 Two common moves:
 
-* **Big-picture EventStorming** — you run a wide session over an entire domain or product journey to find major flows, pivots, and pain points (often using only events, timelines, and problems).  
-* **Process-level EventStorming** — you zoom into one critical process (e.g., “Debt Collection”) and run the full 10 steps to feed design.  
+* **Big-picture EventStorming** — you run a wide session over an entire domain or product journey to find significant flows, pivots, and pain points (often using only events, timelines, and problems).  
+* **Process-level EventStorming** — you zoom into one critical process (e.g., “Debt Collection”) and run the complete 10 steps to feed design.  
 
-A good pattern is: big picture once, then multiple focused sessions on the core flows.
+A good pattern is: a big-picture session once, then multiple focused sessions on the core flows.
 
 ### Remote EventStorming
 
@@ -214,7 +214,7 @@ Remote workshops are harder but doable:
 * Keep groups smaller (~5 people), and run multiple sessions instead of one huge one.  
 * Merge boards afterward and recap with the whole group so the model doesn’t fork.  
 
-You lose some spontaneity versus a real wall, so you compensate with facilitation: clear legend, strict turn-taking, visible parking lot.
+You lose some spontaneity compared to a real wall, so you compensate with facilitation: a clear legend, strict turn-taking, and a visible parking lot.
 
 ## From events to domains and contexts
 
