@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 You can have perfect infrastructure, clean code, and still ship the wrong thing. The usual root cause is simple: the software model and the business model drift apart.  
 
 Modeling the business domain is how you close that gap. It is the discipline of turning fuzzy expert knowledge into precise concepts, language, and code that actually matches how the business thinks and works.
 
-## Why model the business domain at all?
+### Why model the business domain at all?
 
 Every serious system exists to solve business problems: reduce manual work, enforce policies, support decisions, or coordinate people and data. Those problems live in the domain, not in the framework.  
 
@@ -28,7 +30,7 @@ When you skip modeling and jump straight to implementation:
 
 Modeling the domain is not “extra architecture.” It is the only way to make sure your software actually reflects the business you are serving.
 
-## From domain knowledge to domain model
+### From domain knowledge to domain model
 
 You do not become a domain expert. You learn enough of experts’ mental models to design effective software. That is a different job.  
 
@@ -120,7 +122,7 @@ For example, a shipping model might care about:
 
 Those details matter to someone, just not for the problem you are solving today.
 
-### Domain vs domain model
+### Domain vs Domain model
 
 The **domain** is the real-world area: shipping, lending, onboarding.  
 
@@ -134,7 +136,7 @@ You judge a domain model by:
 
 You do **not** judge it by how closely it mirrors “how things work in reality” in full detail.
 
-## From diagrams to code: analysis model vs code model
+### Analysis model vs Code model
 
 Teams often produce diagrams, whiteboard sketches, or UML to understand the domain. That is your **analysis model**. The implemented classes, methods, and modules are your **code model**.  
 
@@ -202,6 +204,24 @@ Effective domain models focus on:
 
 Data shapes matter, but they are there to support behavior and rules, not to be the model on their own.
 
+### When (and where) to apply model-driven design
+
+You do not need heavy modeling everywhere. In fact, you **should not**.  
+
+Apply model-driven design when:
+
+* The area is part of your core or a complex supporting subdomain.
+* Rules are subtle, interdependent, or politically sensitive.
+* Misunderstandings between business and tech have a high cost.
+
+Keep things lighter when:
+
+* The problem is simple and stable.
+* You can safely buy or outsource the solution.
+* Domain experts are already overloaded and need to focus on the core.
+
+A good starting point is to map domains and subdomains, identify the core, and then deliberately decide where modeling effort goes first.
+
 ## Implementation patterns for the domain layer
 
 All this thinking has to land in code somewhere. DDD talks about a **domain layer**: the part of the system where business rules live, insulated from UI and infrastructure.  
@@ -244,4 +264,41 @@ They become a problem when you try to stretch them over genuinely complex, evolv
 You will also see:
 
 * **Active Record**: each entity handles its own persistence.
-* **Anemic Domain Model**: entities with data only, logic pushed*
+* **Anemic Domain Model**: entities with data only, logic pushed into services.  
+
+These are often criticized in DDD circles, sometimes fairly. But in many supporting or generic areas, they are entirely adequate and simpler to maintain.
+
+The important thing is not dogma. It is making an explicit choice:
+
+* Rich domain model where you need deep behavior and invariants.
+* Simple script or record-based patterns where CRUD is truly enough.
+* Clear separation so a “cheap” pattern in one context does not leak into your core.
+
+### Mixing patterns across contexts
+
+Large systems almost always mix patterns:
+
+* Core subdomain → rich domain model.
+* Supporting admin module → transaction scripts.
+* Integration glue → simple scripts or table modules.
+
+Modeling the domain includes choosing the right implementation pattern per context, not forcing everything into one mold.  
+
+## Summary
+
+Modeling the business domain is how you turn expert knowledge into software that actually matches reality and can adapt as the business changes.  
+
+You start by improving knowledge flow with domain experts, shape a ubiquitous language, and use it to drive both analysis and code. You treat the domain model as a purpose-driven abstraction, not a perfect mirror of the real world, and you use model-driven design to keep diagrams and code aligned. Finally, you choose implementation patterns that fit each context, reserving rich domain modeling for the places where it truly pays off.
+
+## Recommended Reading
+
+#### Books
+
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
+  * **Chapter 2: Discovering Domain Knowledge**\
+    Explores how to work with domain experts, build a ubiquitous language, and treat modeling as a continuous learning process rather than a one-off phase.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+  * **Chapter 4: Model-Driven Design**\
+    Describes how to bind analysis and code through a shared model and language, and why the code model should be treated as the primary expression of the domain.  
+  * **Chapter 5: Domain Model Implementation Patterns**\
+    Surveys implementation patterns such as Domain Model, Transaction Script, Table Module, and Active Record, explaining where each fits in a layered architecture.

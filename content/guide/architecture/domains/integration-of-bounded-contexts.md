@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 Splitting your system into bounded contexts fixes only half the problem. Those contexts still have to work together as one product. Customers don’t care that “Billing” and “Onboarding” are separate models; they care that a payment goes through and access is granted.  
 
 Integration of bounded contexts is where domain design meets reality: contracts, upstream/downstream power, release schedules, and all the messy human factors that sit behind “just call their API.”  
 
-## Why integrations are inevitable
+### Why integrations are inevitable
 
 Bounded contexts let models and teams evolve independently. That’s the point. But the system as a whole still has to:  
 
@@ -23,7 +25,7 @@ Bounded contexts let models and teams evolve independently. That’s the point. 
 * Coordinate workflows that span multiple contexts.  
 * Keep enough consistency that the business doesn’t fall apart.  
 
-Every seam between contexts is a **contract**. Because each context has its own ubiquitous language, those contracts can’t be left implicit. You have to decide:  
+Every seam between contexts is a contract. Because each context has its own ubiquitous language, those contracts can’t be left implicit. You have to decide:  
 
 * Which language appears at the boundary.  
 * Who owns that language.  
@@ -31,24 +33,24 @@ Every seam between contexts is a **contract**. Because each context has its own 
 
 If you ignore these questions, you don’t “avoid politics”; you just let them hit you later as breaking changes, integration bugs, and slow delivery.
 
-## Integration is about collaboration, not just tech
+### Integration is about collaboration, not just tech
 
 A common failure mode is picking integration mechanics (REST vs events vs gRPC) without first understanding the **relationship between teams**.  
 
 Key insight:  
 
-> The right integration pattern depends more on **how teams collaborate** than on your choice of protocol.  
+> **The right integration pattern depends more on how teams collaborate than on your choice of protocol.**  
 
 Two axes matter a lot:
 
-* **Collaboration strength** — Do teams talk frequently? Share goals? Plan together?  
-* **Power balance** — Is one side clearly upstream (sets the contract) and the other downstream (follows)?  
+* **Collaboration strength**: Do teams talk frequently? Share goals? Plan together?  
+* **Power balance**: Is one side clearly upstream (sets the contract) and the other downstream (follows)?  
 
 DDD’s integration patterns are basically codified answers to “given this relationship, how should we integrate?”
 
 ## Context maps: making relationships visible
 
-A **context map** is a diagram that shows:
+A context map is a diagram that shows:
 
 * All relevant bounded contexts.  
 * The integration patterns between them (ACL, Conformist, etc.).  
@@ -56,9 +58,9 @@ A **context map** is a diagram that shows:
 
 You use it as a reality map, not a fantasy architecture:
 
-* Draw how things **actually** work today.  
+* Draw how things actually work today.  
 * Annotate which patterns you’re using.  
-* Mark the **core domain** and the risky seams around it.  
+* Mark the core domain and the risky seams around it.  
 
 Benefits:
 
@@ -74,7 +76,7 @@ Sometimes teams have shared goals, strong communication, and short feedback loop
 
 ### Partnership
 
-**Partnership** is a two-way collaboration pattern:
+Partnership is a two-way collaboration pattern:
 
 * Teams coordinate changes and releases together.  
 * Nobody unilaterally imposes their model; they negotiate.  
@@ -90,28 +92,28 @@ Risk: if communication degrades, you silently slide into a customer–supplier r
 
 ### Shared Kernel
 
-A **Shared Kernel** means two contexts share a small, identical slice of the model:
+A Shared Kernel means two contexts share a small, identical slice of the model:
 
 * The shared part might be an authorization model, core identifiers, or a tiny set of value objects.  
 * It’s implemented as a shared library, a mono-repo module, or another “single source” artifact.  
 
 Rules of survival:
 
-* Keep the kernel **tiny**. The more you share, the more fragile everything becomes.  
+* Keep the kernel tiny. The more you share, the more fragile everything becomes.  
 * Run integration tests for every kernel change against all dependent contexts.  
-* Use it when coordination cost is **lower** than duplication, and usually only between teams that already behave like a partnership.
+* Use it when coordination cost is lower than duplication, and usually only between teams that already behave like a partnership.
 
 Shared kernels are often temporary: good for navigating legacy modernization or when one team owns multiple contexts. Long term, you usually want to shrink or remove them.
 
 ## Customer–Supplier patterns: who drives the contract?
 
-Most cross-team relationships are not equal. One context is **upstream** (supplier), the other **downstream** (customer). Upstream sets the contract and release rhythm; downstream feels the impact.
+Most cross-team relationships are not equal. One context is upstream (supplier), the other downstream (customer). Upstream sets the contract and release rhythm; downstream feels the impact.
 
 DDD offers three main patterns here: Conformist, Anti-corruption Layer, and Open-Host Service.  
 
 ### Conformist
 
-In a **Conformist** relationship, downstream simply adopts upstream’s model “as is”:
+In a Conformist relationship, downstream simply adopts upstream’s model “as is”:
 
 * You deserialize their JSON, map it to very similar objects, and live with their names and quirks.  
 * You adjust when they change; your model bends around theirs.  
@@ -122,11 +124,11 @@ This is fine when:
 * The upstream model is reasonably clean and aligned with your needs.  
 * The area is non-core for you, so some distortion is acceptable.
 
-But if conformism invades your **core domain**, your own model slowly becomes a mirror of somebody else’s problems.
+But if conformism invades your core domain, your own model slowly becomes a mirror of somebody else’s problems.
 
-### Anti-corruption Layer (ACL)
+### Anti-corruption Layer
 
-An **Anti-corruption Layer** is how a downstream context says “no” politely:
+An Anti-corruption Layer is how a downstream context says “no” politely:
 
 * You wrap the upstream API in a translation layer.  
 * The ACL converts upstream’s model into your own concepts and language.  
@@ -134,17 +136,17 @@ An **Anti-corruption Layer** is how a downstream context says “no” politely:
 
 Use an ACL when:
 
-* Your context contains a **core subdomain**.  
+* Your context contains a core subdomain.  
 * The upstream model is messy, legacy, or evolving independently.  
 * You need to protect your ubiquitous language from being polluted.
 
 Trade-off: you pay extra implementation and maintenance cost in the translator. But you avoid slow, subtle damage to your core model.
 
-### Open-Host Service (OHS) and Published Language
+### Open-Host Service
 
-An **Open-Host Service** is the “reverse ACL” from the supplier’s side:
+An Open-Host Service is the “reverse ACL” from the supplier’s side:
 
-* Upstream exposes a **published language** optimized for integration, not for its internal model.  
+* Upstream exposes a published language optimized for integration, not for its internal model.  
 * It can evolve its internals freely, as long as the published contract remains stable.  
 * It may support multiple versions in parallel for safe consumer migrations.  
 
@@ -156,7 +158,7 @@ You choose OHS when:
 
 OHS plus published language is the cleanest way to scale integrations around a central service.
 
-## Separate Ways: when the best integration is no integration
+### Separate Ways
 
 Sometimes the cost of integrating two contexts is higher than the value they’d get:
 
@@ -164,19 +166,19 @@ Sometimes the cost of integrating two contexts is higher than the value they’d
 * The functionality is trivial or generic enough to duplicate.  
 * Automating the connection would take more effort than manual steps.  
 
-**Separate Ways** is the pattern for explicitly not integrating:
+Separate Ways is the pattern for explicitly not integrating:
 
 * You might link UIs via deep links instead of sharing data.  
 * You might accept duplicate implementations of a generic function in two contexts.  
 * You keep the contexts independent and revisit later if the trade-off changes.
 
-Rule: this is almost never acceptable in your **core domain**. But for peripheral or generic areas, it can be the pragmatic move.
+Rule: this is almost never acceptable in your core domain. But for peripheral or generic areas, it can be the pragmatic move.
 
 ## Model translation: how contexts actually talk
 
 Once you know which pattern fits the relationship, you still need the low-level mechanics of translating between models.
 
-There are two broad shapes: **stateless** and **stateful** translation.  
+There are two broad shapes: stateless and stateful translation.  
 
 ### Stateless translation
 
@@ -194,12 +196,12 @@ Stateless translation is the default starting point: simple, easy to reason abou
 
 ### Stateful translation
 
-Sometimes translation needs to **remember things**:
+Sometimes translation needs to remember things:
 
 * Combine a series of fine-grained upstream events into a single consolidated downstream event.  
 * Aggregate data from multiple upstreams before emitting something downstream can use.  
 
-Here you need a translator with its own **persistent store**:
+Here you need a translator with its own persistent store:
 
 * It subscribes to events or calls APIs.  
 * It stores intermediate state.  
@@ -207,17 +209,17 @@ Here you need a translator with its own **persistent store**:
 
 Think of it as a mini bounded context dedicated to integration logic—not something you can cram into a gateway configuration file.
 
-## Making messaging reliable: Outbox
+### Making messaging reliable: Outbox
 
 As soon as you integrate via events, you hit the **dual-write problem**:
 
 > How do I update my database and publish an event without losing one or the other?
 
-The **Outbox** pattern solves this:
+The Outbox pattern solves this:
 
-1. When you change an aggregate, you also store the new domain events in an outbox table or field **in the same transaction**.  
-2. A relay process reads unpublished events from the outbox, publishes them to the message bus, and marks them as sent.  
-3. Consumers are designed to handle duplicate events (at-least-once delivery).  
+* When you change an aggregate, you also store the new domain events in an outbox table or field in the same transaction.  
+* A relay process reads unpublished events from the outbox, publishes them to the message bus, and marks them as sent.  
+* Consumers are designed to handle duplicate events (at-least-once delivery).  
 
 Result:
 
@@ -226,18 +228,18 @@ Result:
 
 Without an outbox, every event-driven integration is sitting on a subtle race condition.
 
-## Cross-context workflows: Saga and Process Manager
+## Cross-context workflows
 
 Some business flows span multiple bounded contexts and aggregates:
 
 * Approving a loan that touches risk, contracts, and disbursement.  
 * Onboarding a customer across identity verification, billing, and provisioning.
 
-You can’t make this a single distributed transaction, so you need process coordination on top of local transactions. Two patterns cover most needs: **Saga** and **Process Manager**.  
+You can’t make this a single distributed transaction, so you need process coordination on top of local transactions. Two patterns cover most needs: Saga and Process Manager.  
 
 ### Saga: event-driven chains
 
-A **Saga** coordinates a linear sequence of steps:
+A Saga coordinates a linear sequence of steps:
 
 * It listens for events.  
 * For each event, it triggers the next command in the process.  
@@ -253,7 +255,7 @@ Pair sagas with an outbox so commands and events are reliably dispatched.
 
 ### Process Manager: when the flow branches
 
-When the workflow has complex branching or decision logic (“if user is enterprise do X, else Y”), a **Process Manager** fits better:
+When the workflow has complex branching or decision logic (“if user is enterprise do X, else Y”), a Process Manager fits better:
 
 * It keeps explicit state about the process.  
 * It decides what to do next based on a richer internal model.  
@@ -267,9 +269,9 @@ These patterns are not permanent choices. They evolve as team structure, trust, 
 
 Typical shifts:
 
-* A **Partnership** can degrade into **Customer–Supplier** when teams are split across time zones or org lines.  
-* A **Customer–Supplier** relation can drift into **Conformist** when downstream stops being involved in upstream planning.  
-* In rough environments, teams retreat to **Separate Ways** because collaboration cost is too high.
+* A *Partnership* can degrade into *Customer–Supplier* when teams are split across time zones or org lines.  
+* A *Customer–Supplier* relation can drift into *Conformist* when downstream stops being involved in upstream planning.  
+* In rough environments, teams retreat to *Separate Ways* because collaboration cost is too high.
 
 The context map helps you catch these shifts early:
 
@@ -288,19 +290,14 @@ Done deliberately, integration lets each bounded context keep a clean, local mod
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Khononov, V. (2021). *Learning Domain-Driven Design*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 4: Integrating Bounded Contexts**\
     Classifies integration patterns (Partnership, Shared Kernel, Customer–Supplier, ACL, OHS, Separate Ways) and shows how to choose them based on team collaboration and power balance.  
   * **Chapter 9: Communication Patterns**\
     Describes model translation, stateless/stateful proxies, outbox, sagas, and process managers as a toolkit for reliable communication across bounded contexts.
-
-* Millett, S., & Tune, N. (2015). *Patterns, Principles, and Practices of Domain-Driven Design*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 7: Context Mapping (pp. 91–104)**\
     Introduces context maps as reality diagrams that capture technical and organizational relationships, helping you reason about integration risk and strategy.  
   * **Chapter 11: Introduction to Bounded Context Integration**\

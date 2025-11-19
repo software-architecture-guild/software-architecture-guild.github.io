@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Definition
+
 When you design software, “the business domain” is the playing field you are actually designing for. It is the part of reality your system touches: the services the company provides, the rules it must respect, and the outcomes it needs to achieve.
 
 If you can’t clearly describe that domain, every later decision—requirements, architecture, technology—rests on guesswork.
-
-## Definition
 
 A business domain is the company’s main area of activity: the customer-facing service it delivers to the market. An airline’s domain is air travel; a food-delivery startup’s domain is food ordering and delivery; a SaaS billing platform’s domain is subscription billing and payments.
 
@@ -27,7 +27,7 @@ A few important points:
 
 When you say “we are building software for X,” that X is your business domain.
 
-## Domains, subdomains, and the problem space
+### Domains, subdomains, and the problem space
 
 Treat “domain” as the top level of your problem space. Inside it, you break things down into **subdomains**: finer-grained business capabilities that together deliver the overall service.
 
@@ -40,7 +40,7 @@ No single subdomain wins the game on its own. They need to collaborate to produc
 
 Thinking in subdomains gives you a realistic map of the problem space. Instead of treating “the system” as a single blob, you see it as a set of cooperating capabilities with different characteristics and priorities.
 
-## Types of subdomains: core, generic, supporting
+## Types of subdomains
 
 Domain-Driven Design adds another crucial distinction: **not all subdomains matter equally**. It classifies them into three types, each with different strategic value.
 
@@ -97,7 +97,9 @@ Common traits:
 
 These should be intentionally “good enough.” Over-engineering them steals capacity from the core.
 
-## Comparing subdomains: advantage, complexity, volatility, strategy
+## Working with domains
+
+### Comparing subdomains
 
 Classifying subdomains is not a gut feeling exercise; it is a **strategic analysis tool**. Looking at a domain through four lenses helps: competitive advantage, complexity, volatility, and solution strategy.
 
@@ -117,7 +119,7 @@ Classifying subdomains is not a gut feeling exercise; it is a **strategic analys
 
 Once you see subdomains through these lenses, it becomes obvious that “treat every part of the system equally” is a bad idea.
 
-## Finding and refining subdomain boundaries
+### Finding and refining subdomain boundaries
 
 You rarely get a ready-made list of subdomains from the business. You have to **discover and distill** them.
 
@@ -135,7 +137,7 @@ Then refine:
 
 The goal is not the perfect taxonomy. The goal is a **useful map** that guides design and investment.
 
-## Using domains and subdomains to shape architecture
+### Using domains and subdomains to shape architecture
 
 Once you understand the domain and its subdomains, you can let that knowledge drive your architecture instead of the other way around.
 
@@ -153,7 +155,7 @@ Subdomains also inform:
 
 If you ignore the domain and jump straight to solution patterns, you end up with services and modules whose boundaries reflect your org chart or framework defaults—not the real problem space.
 
-## Focusing on the core domain
+### Focusing on the core domain
 
 A critical step in domain analysis is to write down **what is actually core** and treat it as a product, not a project.
 
@@ -171,7 +173,7 @@ Sometimes you only discover the core after experimenting:
 
 The key is to be deliberate: know what you are treating as core today, and revisit that decision regularly.
 
-## Domain experts and the limits of diagrams
+### Domain experts and the limits of diagrams
 
 You cannot analyze a domain in isolation from the people who live in it.
 
@@ -193,16 +195,11 @@ When you let domains and subdomains drive boundaries, staffing, and technical ch
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 1: Analyzing Business Domains**\
     Introduces domains and subdomains, shows how to classify them as core/generic/supporting, and explains how this analysis anchors all later design decisions.  
-
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 3: Focusing on the Core Domain**\
     Explains how to distill the problem domain into subdomains, identify what is truly core, and align architecture, staffing, and quality levels with that analysis.

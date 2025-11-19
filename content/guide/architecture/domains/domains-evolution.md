@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 Your first domain model is a snapshot of how you understood the business at one moment in time. Strategy changes. Markets shift. Teams grow and split. Yet most architectures are treated as if yesterday’s decisions should hold forever.  
 
-Domain evolution is about accepting that **change is the rule, not the exception**—and making your subdomains, bounded contexts, and tactical patterns easy to move as reality shifts.
+> **Domain evolution is about accepting that change is the rule, not the exception—and making your subdomains, bounded contexts, and tactical patterns easy to move as reality shifts.**
 
-## Why domains can’t stay frozen
+### Why domains can’t stay frozen
 
 We like to think “core, supporting, generic” is a one-time classification. It isn’t.  
 
@@ -29,7 +31,7 @@ If your architecture doesn’t follow these shifts, you get:
 
 * Heavyweight modeling and custom code in areas that no longer matter.  
 * Strategic work stuck on top of old “generic” platforms.  
-* Teams and contexts optimised for yesterday’s priorities.
+* Teams and contexts optimized for yesterday’s priorities.
 
 Design follows strategy, not the other way around.
 
@@ -88,12 +90,12 @@ If your domain map doesn’t change for years, it’s probably out of date.
 
 ## Strategic design: evolving contexts and relationships
 
-Strategic design decisions are the **slow, structural** ones: where you draw bounded context boundaries and how those contexts relate.
+Strategic design decisions are the slow, structural ones: where you draw bounded context boundaries and how those contexts relate.
 
 You should regularly ask:
 
-* Does our current **context map** still reflect reality?  
-* Have any **upstream/downstream** relationships flipped?  
+* Does our current context map still reflect reality?  
+* Have any upstream/downstream relationships flipped?  
 * Have we silently drifted from partnership into a strained customer–supplier relationship?
 
 Typical shifts:
@@ -102,7 +104,7 @@ Typical shifts:
 * A supplier that used to be stable starts shipping breaking changes. You might add anti-corruption layers where you previously conformed.  
 * A “shared kernel” grows into an all-purpose dumping ground; shrinking or splitting it can restore autonomy.
 
-Strategic design is not “set once in a workshop.” It’s a repeated activity: **compare your context map to how people actually work now and adjust**.
+> **Strategic design is not “set once in a workshop.” It’s a repeated activity: compare your context map to how people actually work now and adjust.**
 
 ## Tactical design: evolving implementation patterns
 
@@ -112,7 +114,7 @@ You often see this path:
 
 ### Transaction Script → Active Record
 
-You start with **Transaction Script** for a small, linear area:
+You start with Transaction Script for a small, linear area:
 
 * A simple use case.  
 * A couple of checks.  
@@ -124,13 +126,13 @@ Then complexity accretes:
 * Business rules duplicate between them.  
 * Changes require editing multiple places.
 
-At this point, moving to **Active Record** can help:
+At this point, moving to Active Record can help:
 
 * Bring related behavior onto the same “record-centric” object.  
 * Eliminate obvious duplication.  
 * Keep it data-centric but less scattered.
 
-This is still fine for relatively simple domains—especially supporting or generic ones.
+> **This is still fine for relatively simple domains—especially supporting or generic ones.**
 
 ### Active Record → Domain Model
 
@@ -140,31 +142,31 @@ Eventually, you hit the limits:
 * You’re juggling multiple states and transitions.  
 * Conditionals multiply and correctness becomes fragile.
 
-Now you need a **Domain Model**:
+Now you need a Domain Model:
 
 * Identify aggregates and their invariants.  
 * Encapsulate state changes behind clear methods.  
 * Treat entities and value objects as first-class citizens.
 
-You don’t rewrite everything. You move **just the complex parts** to a rich model, leave the rest in simpler patterns, and accept that your system can host multiple styles at once.
+> **You don’t rewrite everything. You move just the complex parts to a rich model, leave the rest in simpler patterns, and accept that your system can host multiple styles at once.**
 
 ### Domain Model → Event-Sourced Domain Model
 
 Even a great state-based domain model sometimes isn’t enough:
 
-* The business needs **auditability** (“who changed what, when?”).  
+* The business needs auditability (“who changed what, when?”).  
 * You need to reason over history (“how did we get here?”).  
 * Rules depend on sequences of events, not just current state.
 
-Then **event sourcing** becomes attractive:
+Then event sourcing becomes attractive:
 
 * The domain model emits domain events as the source of truth.  
 * State is rebuilt by replaying events or from snapshots.  
 * New projections (for analytics, read models, regulatory reports) can be added later.
 
-You pay with more complex infrastructure and migration concerns. So you should evolve **only the domains where history truly matters**—not the whole codebase.
+> **You pay with more complex infrastructure and migration concerns. So you should evolve only the domains where history truly matters—not the whole codebase.**
 
-## Migrating to event sourcing without lying to yourself
+## Migrating to event sourcing
 
 Migration is where event sourcing usually gets painful. You have to answer: “How do we get from today’s state tables to event streams?”
 
@@ -188,13 +190,13 @@ Cons:
 * You don’t get true history; you only get a plausible story from the final state.  
 * If you treat it as real history, you’ll make wrong assumptions later.
 
-Use this when you need event streams mainly for **forward-looking behavior** (e.g., new projections), and you can live with shallow history.
+Use this when you need event streams mainly for forward-looking behavior (e.g., new projections), and you can live with shallow history.
 
 ### Explicit migration events
 
 The more honest approach:
 
-* For each legacy record, write a single **migration event** (“PolicyMigratedFromLegacy”).  
+* For each legacy record, write a single migration event (“PolicyMigratedFromLegacy”).  
 * From that point on, real domain events record the true evolution.  
 
 Pros:
@@ -215,8 +217,8 @@ Your architecture reflects your org. When the org changes, pretending the system
 
 Examples:
 
-* A previously tight **partnership** between two contexts is split across locations. Communication slows down; you need clearer contracts and maybe separate release trains.  
-* A once-aligned customer–supplier relationship becomes toxic: upstream ignores downstream needs, downstream hacks around it. At some point, **Separate Ways** (duplication, decoupling) is cheaper than constant friction.  
+* A previously tight partnership between two contexts is split across locations. Communication slows down; you need clearer contracts and maybe separate release trains.  
+* A once-aligned customer–supplier relationship becomes toxic: upstream ignores downstream needs, downstream hacks around it. At some point, Separate Ways (duplication, decoupling) is cheaper than constant friction.  
 * New reporting and compliance requirements force new read models that cross multiple contexts.
 
 If you don’t revisit your context map and integration patterns as the org moves, teams will create shadow integrations, copy-paste code, and local workarounds. Architecture debt becomes organizational debt, visible in slow delivery.
@@ -231,44 +233,48 @@ Domain knowledge is not static:
 
 You should design for this:
 
-* When knowledge is low, use **broader bounded contexts** so you don’t artificially freeze the wrong boundaries.  
-* As language and rules stabilize, **split contexts** and refine aggregates.  
-* When knowledge is lost, use **EventStorming, scenario workshops, and artifact mining** to rebuild understanding instead of cargo-culting old code.
+* When knowledge is low, use broader bounded contexts so you don’t artificially freeze the wrong boundaries.  
+* As language and rules stabilize, split contexts and refine aggregates.  
+* When knowledge is lost, use EventStorming, scenario workshops, and artifact mining to rebuild understanding instead of blindly copying old code.
 
-If models and boundaries don’t change as knowledge deepens, your code will keep reflecting your **first misunderstanding** of the domain.
+If models and boundaries don’t change as knowledge deepens, your code will keep reflecting your first misunderstanding of the domain.
 
 ## Growth without “big ball of mud”
 
-Growth is good—more features, more users, more value. But every growth step adds complexity. The job is to keep that complexity **accidental**, not structural.
-
-Signals to watch:
+Growth is good—more features, more users, more value. But every growth step adds complexity. The job is to keep that complexity accidental, not structural.
 
 ### Subdomains
+
+Signals to watch:
 
 * A subdomain now hosts several unrelated problem areas.  
 * Use cases and policies inside it have diverged a lot.  
 
-Move:
+Actions:
 
-* Split the domain into clearer subdomains based on **coherent use cases and shared data**.  
+* Split the domain into clearer subdomains based on coherent use cases and shared data.  
 * Promote the parts that carry differentiation; demote or simplify the rest.
 
 ### Bounded contexts
 
+Signals to watch:
+
 * A context has become the “misc” service for anything that doesn’t fit elsewhere.  
 * It’s chatty with half the system, coordinating many workflows.  
 
-Move:
+Actions:
 
 * Slice out coherent clusters of behavior into new contexts.  
 * Tighten the mission of each context so it can evolve independently.
 
 ### Aggregates
 
+Signals to watch:
+
 * Aggregates are doing too many jobs: their invariants cover unrelated rules.  
 * A single change always touches the same huge aggregate, even for simple cases.  
 
-Move:
+Actions:
 
 * Re-express invariants and find smaller boundaries.  
 * Extract new aggregates around specific invariants and workflows.
@@ -281,11 +287,11 @@ Most teams “evolve” architecture only when something breaks. You can do bett
 
 Practical moves:
 
-* Add a **regular review cadence**: once or twice a year, revisit subdomain classifications, context map, and key tactical patterns.  
-* Log strategic decisions as **Architecture Decision Records (ADRs)** so you remember why you chose a pattern and when to re-evaluate it.  
-* Define a few **fitness functions** (tests or monitoring signals) tied to key goals—time-to-change in a core domain, coupling metrics, cycle time across contexts.
+* Add a regular review cadence: once or twice a year, revisit subdomain classifications, context map, and key tactical patterns.  
+* Log strategic decisions as Architecture Decision Records (ADRs) so you remember why you chose a pattern and when to re-evaluate it.  
+* Define a few fitness functions (tests or monitoring signals) tied to key goals—time-to-change in a core domain, coupling metrics, cycle time across contexts.
 
-The goal is not to predict every change. It’s to make **changing your mind cheap**.
+The goal is not to predict every change. It’s to make changing your mind cheap.
 
 ## Summary
 
@@ -297,16 +303,8 @@ Change isn’t a failure of your original design—it’s the environment doing 
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Khononov, V. (2021). *Learning Domain-Driven Design*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 11: Evolving Design Decisions**\
     Explores how changes in strategy, domain classification, knowledge, and organization should drive reclassification of subdomains, evolution of tactical patterns, and adjustments to bounded contexts and integration models.
-
-* Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
-  * **Architecture in the life cycle (selected chapters)**\
-    Connects evolving business drivers and quality attributes to ongoing architectural change, offering guidance on when and how to refactor structures and mechanisms as systems grow.

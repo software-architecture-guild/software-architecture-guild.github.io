@@ -11,6 +11,7 @@ backdoors
 backpressure
 Bain
 Bellemare
+Brandolini
 BSUIR
 buildable
 bursty
@@ -28,6 +29,7 @@ Diagnosability
 Doerr
 ecommerce
 endline
+downstreams
 Eoin
 Excalidraw
 Fastly
@@ -56,16 +58,20 @@ Katas
 Katzenbach
 Kazman
 Kersten
+Khononov
 Kiplinger
 Kruchten
 Larman
 Larty
 lastmod
+Leanpub
 Leffingwell
+lifecycles
 lotusdocs
 Lucidchart
 markdownlint
 Microkernel
+Millett
 Misaligning
 misprioritized
 MTBF
@@ -102,6 +108,7 @@ Schwaber
 Silverman
 Skimmability
 skimmable
+skillset
 Smartsheet
 socio
 solutioning
@@ -135,5 +142,6 @@ webp
 whiteboarding
 Wiegers
 wireframes
+Wrox
 Yoder
 Zubchenko

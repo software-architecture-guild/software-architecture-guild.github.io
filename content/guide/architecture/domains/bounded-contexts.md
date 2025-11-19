@@ -11,11 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
+## Introduction
+
 You can’t fix a messy domain by stuffing everything into one “unified” model. At some point, different parts of the business need the same words to mean different things. If you force them into one schema or one big service, the model bloats, and change becomes dangerous.  
 
 Bounded contexts are how Domain-Driven Design accepts that reality and uses it instead of fighting it.
 
-## Why one model for the whole company doesn’t work
+### Why one model for the whole company doesn’t work
 
 In real organizations, the same term often means different things:
 
@@ -30,7 +32,7 @@ If you try to build a single “Lead” model that fits both:
 
 The same happens with “Customer,” “Order,” “Policy,” “Account,” and any other word dragged across departments.
 
-The lesson: the problem is not the word. The problem is assuming it must have **one** model and **one** meaning everywhere.
+The lesson: the problem is not the word. The problem is assuming it must have **one model and one meaning everywhere**.
 
 ## What is a bounded context?
 
@@ -44,8 +46,8 @@ Outside that boundary, the same terms are allowed to mean something else.
 
 Roughly:
 
-> *Domain = problem space.*  
-> *Bounded context = solution space for one model.*
+> **Domain = problem space.**  
+> **Bounded context = solution space for one model.**
 
 Inside the context:
 
@@ -55,42 +57,42 @@ Inside the context:
 
 You don’t chase one global glossary. You deliberately **split one vague language into several precise ones**, each scoped to a context.  
 
-## Language is always context-bound
+### Language is always context-bound
 
 A ubiquitous language is not “everyone in the company uses the same terms.” That’s a trap.  
 
 A more realistic rule:
 
-* Each bounded context has **its own** ubiquitous language.  
+* Each bounded context has its own ubiquitous language.  
 * Terms are ubiquitous *within* the context, not across the entire org.  
 
 Practically, that means:
 
 * Glossaries and diagrams must always name their context: “Sales UL,” “Billing UL,” not “company glossary.”  
 * When you say “Customer” in a conversation, you should be able to answer “Customer in which context?”  
-* Renames happen **per context**, not globally.
+* Renames happen per context, not globally.
 
 Once you accept that language is local, you stop fighting over “the true definition” and start designing clear boundaries.
 
-## Scoping a bounded context
+### Scoping a bounded context
 
 How big should a bounded context be? Too big and the model gets fuzzy; too small and integration is a nightmare.
 
 Some heuristics from experience:  
 
-* Start **wide**, especially around a new core subdomain. Splitting too early makes learning expensive.  
-* Narrow the context when you see **conflicting meanings** or **very different lifecycles** for the same term.  
-* Consider **non-functional needs**: performance, scaling, availability, data residency. Sometimes those alone justify a split.  
-* Watch for **cross-context changes**. If a single feature consistently requires coordinated changes across two contexts, your boundaries might be wrong.
+* **Start wide**, especially around a new core subdomain. Splitting too early makes learning expensive.  
+* **Narrow the context** when you see conflicting meanings or very different lifecycles for the same term.  
+* **Consider non-functional needs**: performance, scaling, availability, data residency. Sometimes those alone justify a split.  
+* **Watch for cross-context changes**. If a single feature consistently requires coordinated changes across two contexts, your boundaries might be wrong.
 
 The boundary is part of the model, not an afterthought. You design it with the same care as entities and aggregates.
 
-## Domains, subdomains, and bounded contexts
+### Domains, subdomains, and bounded contexts
 
 It helps to keep roles clear:
 
-* **Domain** and **subdomains** live in the **problem space** — how the business thinks.  
-* **Bounded contexts** live in the **solution space** — how you implement models and services.  
+* **Domain and subdomains live in the problem space** — how the business thinks.  
+* **Bounded contexts live in the solution space** — how you implement models and services.  
 
 One subdomain may map to:
 
@@ -98,7 +100,7 @@ One subdomain may map to:
 * Several contexts (e.g., same subdomain but different technology or latency profiles).  
 * A context that also hosts small parts of neighboring subdomains for pragmatic reasons.
 
-Don’t chase a perfect 1–1 mapping. Use subdomains to guide **where** to invest and bounded contexts to guide **how** you implement.
+Don’t chase a perfect 1–1 mapping. Use subdomains to guide where to invest and bounded contexts to guide how you implement.
 
 ## Keeping the model clean with CQRS
 
@@ -111,8 +113,8 @@ If you use one model and one schema for both, aggregates tend to grow to mirror 
 
 **Command–Query Responsibility Segregation (CQRS)** is one way to resolve this inside a bounded context:
 
-* A **command model** — single source of truth, handles writes, enforces invariants.  
-* One or more **read models** — projections optimized for queries and reporting.  
+* **A command model** — single source of truth, handles writes, enforces invariants.  
+* **One or more read models** — projections optimized for queries and reporting.  
 
 They can share the same database or use separate storage, depending on scale needs.
 
@@ -120,18 +122,18 @@ They can share the same database or use separate storage, depending on scale nee
 
 On the write side, CQRS makes the domain model the defender of rules:
 
-* Commands are small DTOs that express **intent in domain language** (“RedeemGiftCertificate”, “ApproveLoan”).  
+* Commands are small DTOs that express intent in domain language (“RedeemGiftCertificate”, “ApproveLoan”).  
 * Application services / command handlers orchestrate the use case: load aggregates, call domain methods, persist changes.  
 * Aggregates stay focused on invariants, not on being “report-friendly.”  
 
-Important nuance: commands **can return data** — for example, validation errors or a fresh view of the updated entity — as long as that data comes from the strongly consistent write model, not from eventually consistent projections.  
+Important nuance: **commands can return data** — for example, validation errors or a fresh view of the updated entity — as long as that data comes from the strongly consistent write model, not from eventually consistent projections.  
 
 ### Read side: projections and reporting
 
 Read models exist purely to answer questions efficiently:
 
 * Their schema can be completely different from the command model.  
-* They are **read-only**; if they get out of sync, you rebuild them from the write side.  
+* They are read-only; if they get out of sync, you rebuild them from the write side.  
 * They can be as denormalized as needed (“one table per screen” is fine here).  
 
 Projections can be:
@@ -147,20 +149,19 @@ Within a bounded context, CQRS lets you:
 
 ## Commands, queries, and application services
 
-The write and read sides still need orchestration. That’s where **application services** come in:
+The write and read sides still need orchestration. That’s where application services come in:
 
-* On the command side, they:  
+* **On the command side**, they:  
   * Validate input formats and basic technical constraints.  
   * Start/commit/rollback transactions.  
   * Load aggregates from repositories and invoke domain methods.  
   * Publish domain events to other contexts.  
-
-* On the query side, they:  
+* **On the query side**, they:  
   * Fetch from the appropriate read model or reporting store.  
   * Assemble view models for UI or external consumers.  
   * Sometimes bypass the domain layer entirely for heavy reporting (e.g., querying a denormalized reporting DB).
 
-Think of application services as **coordinators**:
+Think of application services as coordinators:
 
 * They own technical concerns (transactions, logging, auth, retries).  
 * They should not own core business rules — that’s the domain’s job.
@@ -198,21 +199,16 @@ Done well, bounded contexts turn “we have conflicting definitions” from a so
 
 ## Recommended Reading
 
-#### Web Resources
-
-* None yet.
-
 #### Books
 
-* Khononov, V. (2021). *Learning Domain-Driven Design*. O’Reilly Media.  
+* Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 3: Managing Domain Complexity**\
     Introduces bounded contexts as the answer to inconsistent models and shows how model boundaries and language scope reduce complexity.  
   * **Chapter 8: Command-Query Responsibility Segregation (CQRS)**\
     Explains CQRS as a way to have multiple models in a single context, separating write correctness from read efficiency with command and read models.  
   * **Chapter 10: Design Heuristics**\
     Offers practical rules of thumb for sizing bounded contexts, choosing business-logic patterns, and matching architecture and testing strategy to domain needs.
-
-* Millett, S., & Tune, N. (2015). *Patterns, Principles, and Practices of Domain-Driven Design*. Wrox/Wiley.  
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 6: Maintaining the Integrity of Domain Models with Bounded Contexts**\
     Defines bounded contexts formally and discusses how to keep models cohesive and language consistent within each boundary.  
   * **Chapter 24: CQRS – An Architecture of a Bounded Context**\
