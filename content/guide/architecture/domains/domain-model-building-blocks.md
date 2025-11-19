@@ -24,15 +24,15 @@ Not all business logic is equal.
 * Some flows are straightforward: validate input, read/update a few records, commit.  
 * Others are messy: multiple rules interact, time matters, and the cost of mistakes is high.
 
-For the first category, **simple patterns** like Transaction Script or Active Record are often enough: you write a procedure per operation or a record-centric class and keep going.  
+For the first category, simple patterns like Transaction Script or Active Record are often enough: you write a procedure per operation or a record-centric class and keep going.  
 
-But as soon as you hit **complex, evolving logic**—discount rules, underwriting, compliance, multi-step workflows—those simple patterns start to leak:
+But as soon as you hit complex, evolving logic—discount rules, underwriting, compliance, multi-step workflows—those simple patterns start to leak:
 
 * Rules duplicate across services and controllers.  
 * It becomes easy to break invariants with “just one more if”.  
 * You can’t tell where the real behavior lives.
 
-That’s where a rich domain model and its building blocks earn their keep. They give you **places to put behavior**, precise boundaries for consistency, and a way to express rules in the ubiquitous language instead of ad hoc conditionals spread everywhere.  
+That’s where a rich domain model and its building blocks earn their keep. They give you places to put behavior, precise boundaries for consistency, and a way to express rules in the ubiquitous language instead of ad hoc conditionals spread everywhere.  
 
 ## The tactical toolbox at a glance
 
@@ -47,11 +47,11 @@ At the code level, tactical DDD gives you a vocabulary:
 * **Repositories** – collection-like abstractions for loading and saving aggregates.  
 * **Event Sourcing** – a way to model time by storing state as a stream of events instead of snapshots.
 
-You do **not** have to use all of them everywhere. The art is picking just enough of them in the places where complexity demands it.
+You do not have to use all of them everywhere. The art is picking just enough of them in the places where complexity demands it.
 
 ### Value Objects: modeling precise, reusable concepts
 
-**Value objects** represent descriptive concepts where **identity doesn’t matter**, only the value does: amounts, ranges, coordinates, dimensions, names. Two value objects are equal if all their attributes are equal.  
+Value objects represent descriptive concepts where identity doesn’t matter, only the value does: amounts, ranges, coordinates, dimensions, names. Two value objects are equal if all their attributes are equal.  
 
 Characteristics:
 
@@ -75,13 +75,13 @@ Good rule of thumb: whenever you have a primitive field that carries non-trivial
 
 ### Entities: modeling identity and lifecycle
 
-**Entities** represent things that **remain the same even as their state changes**: a particular customer, order, or shipment. Two entities can have identical attribute values and still be different because their IDs differ.  
+Entities represent things that remain the same even as their state changes: a particular customer, order, or shipment. Two entities can have identical attribute values and still be different because their IDs differ.  
 
 Key ideas:
 
-* Each entity has a **stable identity** – either a natural key from the domain or a generated ID.  
-* Entities have a **lifecycle** – they move through states: created → confirmed → fulfilled → archived.  
-* Entities should be **behavior-focused**, not just data bags.
+* Each entity has a stable identity – either a natural key from the domain or a generated ID.  
+* Entities have a lifecycle – they move through states: created → confirmed → fulfilled → archived.  
+* Entities should be behavior-focused, not just data bags.
 
 Practical tips:
 
@@ -98,7 +98,7 @@ Listen to the domain language: if people talk about “this specific X over time
 
 ### Aggregates: enforcing invariants and consistency
 
-If value objects and entities are your bricks, **aggregates** are the walls: they are **clusters of entities/value objects with a single consistency boundary**. All changes within an aggregate occur in a single transaction via a single entry point, called the aggregate root.  
+If value objects and entities are your bricks, aggregates are the walls: they are clusters of entities/value objects with a single consistency boundary. All changes within an aggregate occur in a single transaction via a single entry point, called the aggregate root.  
 
 Example:
 
@@ -108,14 +108,14 @@ Example:
 
 Design rules:
 
-* Start from **invariants**: what must never be broken, even temporarily? Put all collaborators in the same aggregate.  
-* Keep aggregates **small** – only include data that must be strongly consistent together.  
-* Reference other aggregates by **ID**, not by direct object references, to avoid massive object graphs.
+* Start from invariants: what must never be broken, even temporarily? Put all collaborators in the same aggregate.  
+* Keep aggregates small – only include data that must be strongly consistent together.  
+* Reference other aggregates by ID, not by direct object references, to avoid massive object graphs.
 
 Trade-offs:
 
 * **Upside:** Clear transactional boundaries; easier concurrency control; local reasoning about rules.  
-* **Downside:** Cross-aggregate rules become **eventually consistent**; you need events or processes to coordinate them.
+* **Downside:** Cross-aggregate rules become eventually consistent; you need events or processes to coordinate them.
 
 If you routinely need to update several aggregates in one transaction, your boundaries are probably wrong—or your business really does need eventual consistency.
 
@@ -123,7 +123,7 @@ If you routinely need to update several aggregates in one transaction, your boun
 
 Some behaviors clearly belong to a single entity or value object. Others don’t.
 
-**Domain services** represent **critical domain operations that don’t naturally fit on one entity**: pricing algorithms, matchmaking, complex eligibility checks, or cross-aggregate calculations. They are stateless, behavior-only, and named in the ubiquitous language.  
+Domain services represent critical domain operations that don’t naturally fit on one entity: pricing algorithms, matchmaking, complex eligibility checks, or cross-aggregate calculations. They are stateless, behavior-only, and named in the ubiquitous language.  
 
 Example:
 
@@ -133,18 +133,18 @@ Example:
 Guidelines:
 
 * Use a domain service when you ask, “Who owns this behavior?” and no entity is a clear, non-awkward answer.  
-* Keep services **stateless** and focused on domain logic, not infrastructure plumbing.  
+* Keep services stateless and focused on domain logic, not infrastructure plumbing.  
 * Don’t dump everything into services, or you’ll create an anemic model. If logic clearly belongs to one entity, put it there.
 
 ### Domain Events: making change explicit
 
-Most domains are naturally **eventful**: orders are placed, payments fail, shipments are dispatched, and contracts expire.
+Most domains are naturally eventful: orders are placed, payments fail, shipments are dispatched, and contracts expire.
 
-**Domain events** make those occurrences explicit in your model:
+Domain events make those occurrences explicit in your model:
 
-* They are **past-tense messages** (“PaymentFailed”, “OrderShipped”).  
+* They are past-tense messages (“PaymentFailed”, “OrderShipped”).  
 * They carry the minimal data needed for others to react.  
-* They are immutable and represent something that **already happened**.  
+* They are immutable and represent something that already happened.  
 
 Uses:
 
@@ -161,11 +161,11 @@ Start small: use domain events for genuinely important happenings, not every min
 
 ### Factories: encapsulating creation
 
-Sometimes creating a valid aggregate is **non-trivial**: you must pull data from services, apply rules, pick one of several implementations, and ensure invariants hold from day one.
+Sometimes creating a valid aggregate is non-trivial: you must pull data from services, apply rules, pick one of several implementations, and ensure invariants hold from day one.
 
-**Factories** centralize that construction logic:
+Factories centralize that construction logic:
 
-* They separate **use from construction**: callers ask for a fully valid object without knowing the construction details.  
+* They separate use from construction: callers ask for a fully valid object without knowing the construction details.  
 * They can live as standalone factory classes or as factory methods on aggregates (`Order.createFor(customer, cart)`, etc.).  
 
 Use a factory when:
@@ -181,12 +181,12 @@ Trade-offs:
 
 ### Repositories: accessing aggregates with intent
 
-**Repositories** are how you **load and save aggregates** without leaking persistence concerns into your domain model. Think of them as type-safe, intention-revealing collections for aggregate roots.  
+Repositories are how you load and save aggregates without leaking persistence concerns into your domain model. Think of them as type-safe, intention-revealing collections for aggregate roots.  
 
 Characteristics:
 
-* They work with **aggregates**, not random rows: `add(order)`, `findById(orderId)`, `remove(order)`.  
-* Methods should be named in the **ubiquitous language** (`findOverdueInvoicesFor(customerId)`), not generic query builders.  
+* They work with aggregates, not random rows: `add(order)`, `findById(orderId)`, `remove(order)`.  
+* Methods should be named in the ubiquitous language (`findOverdueInvoicesFor(customerId)`), not generic query builders.  
 * They hide ORM / SQL / document-store specifics behind a stable domain contract.
 
 Trade-offs:
@@ -194,13 +194,13 @@ Trade-offs:
 * **Upside:** Keeps the domain model independent of the data model; clarifies access patterns.  
 * **Downside:** For simple CRUD contexts, a full repository layer can be unnecessary ceremony; a DAO or direct data access may be enough.  
 
-Use repositories in **rich domain contexts** where aggregates and invariants matter. For reporting and ad hoc queries, go directly against read models instead of tunneling everything through repositories.
+Use repositories in rich domain contexts where aggregates and invariants matter. For reporting and ad hoc queries, go directly against read models instead of tunneling everything through repositories.
 
 ### Event Sourcing: modeling the dimension of time
 
-So far, we’ve assumed you store only the **current state** of aggregates. Sometimes that’s not enough.
+So far, we’ve assumed you store only the current state of aggregates. Sometimes that’s not enough.
 
-**Event sourcing** persists every state change as a **stream of domain events**, and treats that event stream as the source of truth. The aggregate’s current state is just a projection of its event history.  
+Event sourcing persists every state change as a stream of domain events, and treats that event stream as the source of truth. The aggregate’s current state is just a projection of its event history.  
 
 Typical flow:
 
@@ -211,7 +211,7 @@ Typical flow:
 
 Benefits:
 
-* You can **replay history** to reconstruct past states for debugging, audits, or simulations.  
+* You can replay history to reconstruct past states for debugging, audits, or simulations.  
 * You can create new projections later (analytics, specialized read models) from the same event stream.  
 * You get an audit trail “for free” in domains where that really matters.  
 
@@ -221,7 +221,7 @@ Costs:
 * Versioning event schemas is more complicated than migrating tables.  
 * Infrastructure becomes more complex (event store, projections, snapshotting).  
 
-Reach for event sourcing in **core domains** where history, insight, or regulatory traceability justify the complexity—typically not for simple supporting modules.
+Reach for event sourcing in core domains where history, insight, or regulatory traceability justify the complexity—typically not for simple supporting modules.
 
 ## Choosing the right building blocks per context
 
@@ -229,16 +229,16 @@ The biggest mistake with tactical DDD is treating it as an all-or-nothing propos
 
 A more realistic approach:
 
-* In **core subdomains** with complex, high-stakes logic:  
+* **In core subdomains** with complex, high-stakes logic:  
   * Use entities, value objects, aggregates, domain services, and domain events.  
   * Consider event sourcing if time and history are first-class concerns.  
   * Use repositories and factories to protect invariants and keep construction/persistence tame.  
-* In **supporting or generic subdomains**:  
+* **In supporting or generic subdomains**:  
   * Use Transaction Script or Active Record for simple flows.  
   * Reach for a couple of building blocks (e.g., a value object for money) where they pay off.  
   * Don’t force aggregates and repositories everywhere.
 
-You’re not trying to “be pure DDD.” You’re trying to **spend modeling effort where it buys you the most predictability and changeability.**
+> **You’re not trying to “be pure DDD.” You’re trying to spend modeling effort where it buys you the most predictability and changeability.**
 
 ## Summary
 
