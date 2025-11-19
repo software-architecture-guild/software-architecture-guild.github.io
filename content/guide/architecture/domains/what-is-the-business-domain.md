@@ -25,7 +25,7 @@ A few important points:
 * Domains are not permanent. Strategy changes, acquisitions, and regulation can shift or split them over time.
 * The domain defines what “success” means for your system: which outcomes matter and which are noise.
 
-When you say “we are building software for X,” that X is your business domain.
+> **When you say “we are building software for X,” that X is your business domain.**
 
 ### Domains, subdomains, and the problem space
 
@@ -42,7 +42,7 @@ Thinking in subdomains gives you a realistic map of the problem space. Instead o
 
 ## Types of subdomains
 
-Domain-Driven Design adds another crucial distinction: **not all subdomains matter equally**. It classifies them into three types, each with a different strategic value.
+Domain-Driven Design adds another crucial distinction: not all subdomains matter equally. It classifies them into three types, each with a different strategic value.
 
 * **Core subdomains**  
   Where the company competes and differentiates. They are usually complex, full of domain rules, and under constant strategic pressure. This is why you are writing custom software in the first place.
@@ -53,7 +53,7 @@ Domain-Driven Design adds another crucial distinction: **not all subdomains matt
 * **Supporting subdomains**  
   Necessary to deliver the service, but not the reason customers choose you. They tend to be simpler, more CRUD-like, and more stable than the core.
 
-This classification is not about “important vs unimportant.” It is about **where to invest time, money, and attention.**
+> **This classification is not about “important vs unimportant.” It is about where to invest time, money, and attention.**
 
 ### Core subdomains
 
@@ -83,7 +83,7 @@ They usually:
 * Change slowly relative to your core.
 * Don’t differentiate yourself, as long as they are “good enough” and reliable.
 
-Here, your goal is to **buy, integrate, and configure**, not to innovate. You focus on stability, security, and cost.
+Here, your goal is to buy, integrate, and configure, not to innovate. You focus on stability, security, and cost.
 
 ### Supporting subdomains
 
@@ -101,7 +101,7 @@ These should be intentionally “good enough.” Over-engineering them steals ca
 
 ### Comparing subdomains
 
-Classifying subdomains is not a gut-feeling exercise; it is a **strategic analysis tool**. Looking at a domain through four lenses helps: competitive advantage, complexity, volatility, and solution strategy.
+Classifying subdomains is not a gut-feeling exercise; it is a strategic analysis tool. Looking at a domain through four lenses helps: competitive advantage, complexity, volatility, and solution strategy.
 
 * **Competitive advantage**  
   Only core subdomains give you a real edge. Generic and supporting ones must be solid, but they don’t cause customers to switch to you.
@@ -121,7 +121,7 @@ Once you see subdomains through these lenses, it becomes evident that “treat e
 
 ### Finding and refining subdomain boundaries
 
-You rarely get a ready-made list of subdomains from the business. You have to **discover and distill** them.
+You rarely get a ready-made list of subdomains from the business. You have to discover and distill them.
 
 Practical starting points:
 
@@ -157,7 +157,7 @@ If you ignore the domain and jump straight to solution patterns, you end up with
 
 ### Focusing on the core domain
 
-A critical step in domain analysis is to write down **what is actually core** and treat it as a product, not a project.
+A critical step in domain analysis is to write down what is actually core and treat it as a product, not a project.
 
 That means:
 
@@ -177,7 +177,7 @@ The key is to be deliberate: know what you are treating as core today, and revis
 
 You cannot analyze a domain in isolation from the people who live in it.
 
-**Domain experts** are those who actually own or operate the business processes: operations leads, frontline staff, product managers with deep customer context—not just analysts or architects. Their mental models, vocabulary, and stories are your raw material.
+Domain experts are those who actually own or operate the business processes: operations leads, frontline staff, product managers with deep customer context—not just analysts or architects. Their mental models, vocabulary, and stories are your raw material.
 
 Your job as an architect is to:
 

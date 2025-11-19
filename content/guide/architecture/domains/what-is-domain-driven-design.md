@@ -15,7 +15,8 @@ authors:
 
 Domain-Driven Design (DDD) is a way of building software that starts from the business problem, not from frameworks or technology. It helps you keep complex systems understandable and changeable by putting the business domain at the center of your models, code, and architecture.
 
-DDD is not a framework, a set of annotations, or a microservices recipe. It is a set of principles, patterns, and practices that align people, language, and code so that the system reflects how the business really works.
+> **DDD is not a framework, a set of annotations, or a microservices recipe.**  
+> **It is a set of principles, patterns, and practices that align people, language, and code so that the system reflects how the business really works.**
 
 ### Why complex domains hurt
 
@@ -38,20 +39,20 @@ Domain-Driven Design says: if the problem is in the domain, the solution must be
 
 At its heart, DDD asks you to:
 
-* Put the **business domain** at the center of design and architecture.
-* Build and use a **Ubiquitous Language** shared by developers and domain experts.
+* Put the business domain at the center of design and architecture.
+* Build and use a Ubiquitous Language shared by developers and domain experts.
 * Model the domain explicitly and reflect that model directly in the code.
-* Contain models inside well-defined **Bounded Contexts** so they don’t corrupt each other.
-* Focus the best people and efforts on the **core domain** where the business really competes.
+* Contain models inside well-defined Bounded Contexts so they don’t corrupt each other.
+* Focus the best people and efforts on the core domain where the business really competes.
 
 Everything else in DDD — patterns, diagrams, tactical building blocks — exists to support these moves, not the other way around.
 
 ### Problem space vs solution space
 
-DDD draws a sharp line between **problem space** and **solution space**.
+DDD draws a sharp line between problem space and solution space.
 
-* In the **problem space**, you explore how the business works. You identify subdomains, understand workflows and policies, and figure out which parts truly differentiate the business.
-* In the **solution space**, you decide how to implement those insights in software — architecture styles, boundaries, data models, APIs, storage choices, and so on.
+* **In the problem space**, you explore how the business works. You identify subdomains, understand workflows and policies, and figure out which parts truly differentiate the business.
+* **In the solution space**, you decide how to implement those insights in software — architecture styles, boundaries, data models, APIs, storage choices, and so on.
 
 DDD insists that problem space drives solution space:
 
@@ -63,7 +64,7 @@ If your architecture does not mirror your domain's structure, complexity leaks e
 
 ## Strategic patterns: where and how to invest
 
-Strategic DDD patterns help you decide **where** to invest and **how** to structure the system so that complexity stays manageable.
+> **Strategic DDD patterns help you decide where to invest and how to structure the system so that complexity stays manageable.**
 
 ### Distilling the domain and focusing on the core
 
@@ -77,7 +78,7 @@ DDD asks: Where is the real leverage? Then it pushes you to treat the core domai
 
 ### Bounded Contexts and their relationships
 
-A **Bounded Context** is a boundary inside which a particular domain model and Ubiquitous Language apply consistently.
+A Bounded Context is a boundary inside which a particular domain model and Ubiquitous Language apply consistently.
 
 Within a bounded context:
 
@@ -94,7 +95,7 @@ Strategic DDD is about carefully choosing these contexts and mapping their relat
 
 ## Tactical patterns: how to shape the model
 
-Once you know **where** to invest, DDD offers **tactical patterns** to shape code inside a bounded context.
+Once you know where to invest, DDD offers tactical patterns to shape code inside a bounded context.
 
 These include familiar building blocks such as:
 
@@ -155,7 +156,7 @@ It is less suitable when:
 * You are building low-risk utilities or one-off scripts.
 * There is little need for long-term evolution or deep domain understanding.
 
-You do not “adopt DDD” for everything. You deliberately choose where the investment in modeling and collaboration will pay off.
+> **You do not “adopt DDD” for everything. You deliberately choose where the investment in modeling and collaboration will pay off.**
 
 ## Summary
 
