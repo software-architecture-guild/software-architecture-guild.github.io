@@ -17,7 +17,7 @@ Once you’ve mapped your domain and shaped an initial model, you still have a p
 
 Domain model building blocks are the small, repeatable patterns you use to turn domain concepts into concrete, maintainable code: value objects, entities, aggregates, domain services, domain events, factories, repositories, and (sometimes) event sourcing. Used well, they let your model grow in depth without collapsing under its own complexity.  
 
-### Why you need building blocks at all
+### Why do you need building blocks at all
 
 Not all business logic is equal.
 
@@ -32,7 +32,7 @@ But as soon as you hit **complex, evolving logic**—discount rules, underwritin
 * It becomes easy to break invariants with “just one more if”.  
 * You can’t tell where the real behavior lives.
 
-That’s where a rich domain model and its building blocks earn their keep. They give you **places to put behavior**, clear boundaries for consistency, and a way to express rules in the ubiquitous language instead of ad hoc conditionals spread everywhere.  
+That’s where a rich domain model and its building blocks earn their keep. They give you **places to put behavior**, precise boundaries for consistency, and a way to express rules in the ubiquitous language instead of ad hoc conditionals spread everywhere.  
 
 ## The tactical toolbox at a glance
 
@@ -62,7 +62,7 @@ Characteristics:
 
 Examples:
 
-* `Money` with `amount` and `currency`, with operations like `add`, `subtract`, `convertTo`.  
+* `Money` with `amount` and `currency`, with operations like `add`, `subtract`, and `convertTo`.  
 * `DateRange` enforcing `start <= end` and supporting `overlaps` or `intersectionWith`.  
 * `Temperature` that knows units and conversion rules.
 
@@ -92,13 +92,13 @@ Practical tips:
 Trade-offs:
 
 * **Upside:** Entities let you track “this exact thing” across time and use cases.  
-* **Downside:** If you cram every rule and detail into entities, they become bloated and hard to test.
+* **Downside:** If you cram every rule and detail into entities, they become bloated and complicated to test.
 
 Listen to the domain language: if people talk about “this specific X over time”, you probably have an entity.
 
 ### Aggregates: enforcing invariants and consistency
 
-If value objects and entities are your bricks, **aggregates** are the walls: they are **clusters of entities/value objects with a single consistency boundary**. All changes inside an aggregate happen in a single transaction, through a single entry point called the **aggregate root**.  
+If value objects and entities are your bricks, **aggregates** are the walls: they are **clusters of entities/value objects with a single consistency boundary**. All changes within an aggregate occur in a single transaction via a single entry point, called the aggregate root.  
 
 Example:
 
@@ -110,7 +110,7 @@ Design rules:
 
 * Start from **invariants**: what must never be broken, even temporarily? Put all collaborators in the same aggregate.  
 * Keep aggregates **small** – only include data that must be strongly consistent together.  
-* Reference other aggregates by **ID**, not by direct object references, to avoid huge object graphs.
+* Reference other aggregates by **ID**, not by direct object references, to avoid massive object graphs.
 
 Trade-offs:
 
@@ -123,7 +123,7 @@ If you routinely need to update several aggregates in one transaction, your boun
 
 Some behaviors clearly belong to a single entity or value object. Others don’t.
 
-**Domain services** represent **important domain operations that don’t naturally fit on one entity**: pricing algorithms, matchmaking, complex eligibility checks, or cross-aggregate calculations. They are stateless, behavior-only, and named in the ubiquitous language.  
+**Domain services** represent **critical domain operations that don’t naturally fit on one entity**: pricing algorithms, matchmaking, complex eligibility checks, or cross-aggregate calculations. They are stateless, behavior-only, and named in the ubiquitous language.  
 
 Example:
 
@@ -132,13 +132,13 @@ Example:
 
 Guidelines:
 
-* Use a domain service when you ask “who owns this behavior?” and no entity is a clear, non-awkward answer.  
+* Use a domain service when you ask, “Who owns this behavior?” and no entity is a clear, non-awkward answer.  
 * Keep services **stateless** and focused on domain logic, not infrastructure plumbing.  
 * Don’t dump everything into services, or you’ll create an anemic model. If logic clearly belongs to one entity, put it there.
 
 ### Domain Events: making change explicit
 
-Most domains are naturally **eventful**: orders are placed, payments fail, shipments are dispatched, contracts expire.
+Most domains are naturally **eventful**: orders are placed, payments fail, shipments are dispatched, and contracts expire.
 
 **Domain events** make those occurrences explicit in your model:
 
@@ -166,7 +166,7 @@ Sometimes creating a valid aggregate is **non-trivial**: you must pull data from
 **Factories** centralize that construction logic:
 
 * They separate **use from construction**: callers ask for a fully valid object without knowing the construction details.  
-* They can live as standalone factory classes or as factory methods on aggregates (`Order.createFor(customer, cart)` etc.).  
+* They can live as standalone factory classes or as factory methods on aggregates (`Order.createFor(customer, cart)`, etc.).  
 
 Use a factory when:
 
@@ -205,7 +205,7 @@ So far, we’ve assumed you store only the **current state** of aggregates. Some
 Typical flow:
 
 1. Load all events for the aggregate’s stream (or from the latest snapshot).  
-2. Apply them in order to rebuild current state in memory.  
+2. Apply them to rebuild the current state in memory.  
 3. Execute a command, which emits new domain events.  
 4. Append those events to the stream with optimistic concurrency checks.
 
@@ -218,19 +218,19 @@ Benefits:
 Costs:
 
 * The mental model is different from CRUD; teams need time to adapt.  
-* Versioning event schemas is harder than migrating tables.  
+* Versioning event schemas is more complicated than migrating tables.  
 * Infrastructure becomes more complex (event store, projections, snapshotting).  
 
 Reach for event sourcing in **core domains** where history, insight, or regulatory traceability justify the complexity—typically not for simple supporting modules.
 
 ## Choosing the right building blocks per context
 
-The biggest mistake with tactical DDD is treating it as all-or-nothing: either **everything** is a rich domain model, or **nothing** is.
+The biggest mistake with tactical DDD is treating it as an all-or-nothing proposition: either everything is a rich domain model, or nothing is.
 
 A more realistic approach:
 
 * In **core subdomains** with complex, high-stakes logic:  
-  * Use entities, value objects, aggregates, domain services, domain events.  
+  * Use entities, value objects, aggregates, domain services, and domain events.  
   * Consider event sourcing if time and history are first-class concerns.  
   * Use repositories and factories to protect invariants and keep construction/persistence tame.  
 * In **supporting or generic subdomains**:  
@@ -244,7 +244,7 @@ You’re not trying to “be pure DDD.” You’re trying to **spend modeling ef
 
 Domain model building blocks are how you translate your understanding of the business into code that stays coherent over time.  
 
-Value objects and entities capture the core concepts of your domain. Aggregates enforce invariants and define consistency boundaries. Domain services model behaviors that span objects. Domain events and event sourcing let you represent change and time explicitly. Factories and repositories manage lifecycle and persistence without polluting your model.  
+Value objects and entities capture the core concepts of your domain. Aggregates enforce invariants and define consistency boundaries. Domain services model behaviors that span objects. Domain events and event sourcing let you explicitly represent change and time. Factories and repositories manage lifecycle and persistence without polluting your model.  
 
 Used selectively and strategically, these patterns give you a common language with your team and a set of levers to keep complexity under control as your system—and your domain—evolves.
 
@@ -269,7 +269,7 @@ Used selectively and strategically, these patterns give you a common language wi
   * **Chapter 17: Domain Services**\
     Clarifies when a behavior belongs in a domain service and how to avoid an anemic domain model.  
   * **Chapter 18: Domain Events**\
-    Shows how to model important domain occurrences, structure handlers, and separate internal from external events.  
+    Shows how to model essential domain occurrences, structure handlers, and separate internal from external events.  
   * **Chapter 19: Aggregates**\
     Covers designing aggregate boundaries around invariants, managing consistency, and dealing with concurrency and scalability.  
   * **Chapter 20: Factories**\

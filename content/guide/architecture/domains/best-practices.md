@@ -13,7 +13,7 @@ authors:
 
 ## Introduction
 
-DDD isn’t a lifestyle choice. It’s a set of tools for when the domain is tricky, the stakes are high, and you can actually talk to people who know how the business works. Used in the wrong place, it’s ceremony. Used in the right place, it’s how you turn complexity into something your team can reason about and change.  
+DDD isn’t a lifestyle choice. It’s a set of tools for when the domain is tricky, the stakes are high, and you can actually talk to people who know how the business works. Used in the wrong place, it’s a ceremony. Used in the right place, it’s how you turn complexity into something your team can reason about and change.  
 
 This article puts the pieces together: when DDD pays off, how to sell it, how to work with experts, and how to keep your models simple, explicit, and evolvable.
 
@@ -25,9 +25,9 @@ DDD is not for every system, every team, or every feature.
 
 It shines when:
 
-* The domain is non-trivial and important for the business.  
+* The domain is non-trivial and essential for the business.  
 * You have access to real domain experts.  
-* The team is willing to iterate in small steps, not demand a full design up front.  
+* The team is willing to iterate in small steps, not demand a complete design up front.  
 * You can build and refine over time, not in a one-shot project.  
 
 When any of those are missing, lean on simpler patterns:
@@ -51,7 +51,7 @@ So don’t sell “we’re doing DDD.” Sell things like:
 * “We’ll map where complexity really is, and keep everything else simple and cheap.”  
 * “We’ll reduce the risk that one change in billing accidentally blows up onboarding.”
 
-Inside the team, you can talk patterns. Outside, talk risk, speed, and clarity.
+Inside the team, you can talk about patterns. Outside, talk about risk, speed, and clarity.
 
 ### Teach language and context first, patterns second
 
@@ -119,7 +119,7 @@ Without real domain experts, DDD is cosplay.
 Good practice:
 
 * Treat the expert’s time as the rarest resource. Prepare scenarios and questions; don’t show up to “pick their brain.”  
-* Model around concrete scenarios, not abstractions. “Walk me through the last three times this failed” beats “what are the requirements?”  
+* Model around concrete scenarios, not abstractions. “Walk me through the last three times this failed.” beats “What are the requirements?”  
 * Spend joint time on the hard, interesting parts – decisions, exceptions, policies. Don’t drag them through CRUD forms and field names.  
 
 You want deep insight into the core domain, not broad but shallow coverage of everything.
@@ -128,7 +128,7 @@ You want deep insight into the core domain, not broad but shallow coverage of ev
 
 Ambiguity is a design smell.
 
-Good DDD practice treats language refactoring as important as code refactoring:
+Good DDD practice treats language refactoring as crucial as code refactoring:
 
 * When you discover a better term, rename it everywhere—tests, classes, APIs, docs.  
 * When experts use a term repeatedly, give it a real place in the model: a type, an event, a module.  
@@ -138,7 +138,7 @@ Non-technical refactoring (renaming, clarifying, splitting concepts) is a first-
 
 ### Expect to throw away models
 
-If your first model survives untouched, it’s probably wrong and nobody is looking closely.
+If your first model survives untouched, it’s probably wrong, and nobody is looking closely.
 
 Better practice:
 
@@ -155,7 +155,7 @@ Beautiful whiteboard models don’t count until they survive contact with code.
 Principles:
 
 * Implement the model with the same terms you use in conversation—no translation step where “Policy” suddenly becomes “ContractDtoV2”.  
-* Keep code boring and focused. Fancy frameworks, reflection, and meta-programming rarely help with clarity.  
+* Keep code boring and focused. Fancy frameworks, reflection, and metaprogramming rarely improve clarity.  
 * Integrate the model end-to-end early and often: thin vertical slices through UI, app layer, domain, and persistence. See if it still feels right once it’s wired up.  
 
 If it’s hard to test or to explain to a new teammate, it’s probably too clever.
@@ -202,7 +202,7 @@ Signs you’re on the right track:
 
 * Conversations, docs, and code use the same language.  
 * New team members can explain core flows back to domain experts in a couple of days.  
-* Changing a core rule touches a small, obvious part of the system, not ten random services.  
+* Changing a core rule touches a small, prominent part of the system, not ten random services.  
 * Teams talk about subdomains, contexts, and invariants, not just “the microservices architecture.”  
 
 The outcome is not “we did DDD.” The outcome is understandable, maintainable software that reliably reflects the business and can change with it.
@@ -214,7 +214,7 @@ Good DDD practice is less about memorizing patterns and more about disciplined h
 * Use it where the domain is complex and important, not everywhere.  
 * Sell outcomes to the business, not jargon.  
 * Invest in language, subdomains, and bounded contexts before code structures.  
-* Work with domain experts on the hardest parts, using real scenarios.  
+* Work with domain experts on the most complex parts, using real scenarios.  
 * Let language drive code, keep solutions simple, and protect core models from legacy.  
 * Expect to throw away models, refactor continuously, and leave some problems to humans.
 
@@ -226,4 +226,4 @@ Done this way, DDD becomes a way to keep complexity legible, rather than another
 
 * Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
   * **Chapter 10: Applying the Principles, Practices, and Patterns of DDD**\
-    A practical checklist of when to apply DDD, how to work with domain experts, how to keep models simple and explicit, and how to integrate and refactor continuously in real organizations.  
+    A practical checklist of when to apply DDD, how to work with domain experts, how to keep models explicit and straightforward, and how to integrate and refactor continuously in real organizations.  

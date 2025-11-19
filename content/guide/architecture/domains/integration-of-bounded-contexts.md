@@ -25,10 +25,10 @@ Bounded contexts let models and teams evolve independently. That’s the point. 
 * Coordinate workflows that span multiple contexts.  
 * Keep enough consistency that the business doesn’t fall apart.  
 
-Every seam between contexts is a contract. Because each context has its own ubiquitous language, those contracts can’t be left implicit. You have to decide:  
+Every seam between contexts is a contract. Because each context has its own language, those contracts can’t remain implicit. You have to decide:  
 
-* Which language appears at the boundary.  
-* Who owns that language.  
+* Which language appears at the boundary?  
+* Who owns that language?  
 * How changes are negotiated and rolled out.  
 
 If you ignore these questions, you don’t “avoid politics”; you just let them hit you later as breaking changes, integration bugs, and slow delivery.
@@ -46,7 +46,7 @@ Two axes matter a lot:
 * **Collaboration strength**: Do teams talk frequently? Share goals? Plan together?  
 * **Power balance**: Is one side clearly upstream (sets the contract) and the other downstream (follows)?  
 
-DDD’s integration patterns are basically codified answers to “given this relationship, how should we integrate?”
+DDD’s integration patterns are essentially codified answers to the question, “Given this relationship, how should we integrate?”
 
 ## Context maps: making relationships visible
 
@@ -101,9 +101,9 @@ Rules of survival:
 
 * Keep the kernel tiny. The more you share, the more fragile everything becomes.  
 * Run integration tests for every kernel change against all dependent contexts.  
-* Use it when coordination cost is lower than duplication, and usually only between teams that already behave like a partnership.
+* Use it when the coordination cost is lower than duplication, and usually only between teams that already behave like a partnership.
 
-Shared kernels are often temporary: good for navigating legacy modernization or when one team owns multiple contexts. Long term, you usually want to shrink or remove them.
+Shared kernels are often temporary: suitable for navigating legacy modernization or when one team owns multiple contexts. Long term, you usually want to shrink or remove them.
 
 ## Customer–Supplier patterns: who drives the contract?
 
@@ -131,7 +131,7 @@ But if conformism invades your core domain, your own model slowly becomes a mirr
 An Anti-corruption Layer is how a downstream context says “no” politely:
 
 * You wrap the upstream API in a translation layer.  
-* The ACL converts upstream’s model into your own concepts and language.  
+* The ACL converts the upstream model into your own concepts and language.  
 * Your domain model stays clean; only the translator knows about upstream weirdness.  
 
 Use an ACL when:
@@ -140,7 +140,7 @@ Use an ACL when:
 * The upstream model is messy, legacy, or evolving independently.  
 * You need to protect your ubiquitous language from being polluted.
 
-Trade-off: you pay extra implementation and maintenance cost in the translator. But you avoid slow, subtle damage to your core model.
+Trade-off: you pay extra implementation and maintenance costs for the translator. But you avoid slow, subtle damage to your core model.
 
 ### Open-Host Service
 
@@ -172,13 +172,13 @@ Separate Ways is the pattern for explicitly not integrating:
 * You might accept duplicate implementations of a generic function in two contexts.  
 * You keep the contexts independent and revisit later if the trade-off changes.
 
-Rule: this is almost never acceptable in your core domain. But for peripheral or generic areas, it can be the pragmatic move.
+Rule: This is rarely acceptable in your core domain. But for peripheral or generic areas, it can be the pragmatic move.
 
 ## Model translation: how contexts actually talk
 
 Once you know which pattern fits the relationship, you still need the low-level mechanics of translating between models.
 
-There are two broad shapes: stateless and stateful translation.  
+There are two broad categories of translation: stateless and stateful.  
 
 ### Stateless translation
 
@@ -187,7 +187,7 @@ Stateless translators map each request or message individually:
 * **Synchronous**: an ACL or OHS maps incoming/outgoing DTOs on the fly.  
 * **Asynchronous**: a message proxy subscribes to upstream events, transforms them, and republishes filtered, cleaned events.
 
-You can embed this in the codebase or push it out to an API gateway / message gateway:
+You can embed this in the codebase or push it out to an API gateway/message gateway:
 
 * Gateways help with versioning, routing, and security.  
 * But they can’t handle translations that need history or multi-source merges.
@@ -204,7 +204,7 @@ Sometimes translation needs to remember things:
 Here you need a translator with its own persistent store:
 
 * It subscribes to events or calls APIs.  
-* It stores intermediate state.  
+* It stores the intermediate state.  
 * It emits its own events or exposes its own API to consumers.  
 
 Think of it as a mini bounded context dedicated to integration logic—not something you can cram into a gateway configuration file.
@@ -242,7 +242,7 @@ You can’t make this a single distributed transaction, so you need process coor
 A Saga coordinates a linear sequence of steps:
 
 * It listens for events.  
-* For each event, it triggers the next command in the process.  
+* For each event, it triggers the following command in the process.  
 * It may store minimal state (like correlation IDs and current step).  
 
 Use a saga when:
@@ -257,7 +257,7 @@ Pair sagas with an outbox so commands and events are reliably dispatched.
 
 When the workflow has complex branching or decision logic (“if user is enterprise do X, else Y”), a Process Manager fits better:
 
-* It keeps explicit state about the process.  
+* It keeps an explicit state about the process.  
 * It decides what to do next based on a richer internal model.  
 * It may coordinate multiple sagas or command chains.
 
@@ -271,11 +271,11 @@ Typical shifts:
 
 * A *Partnership* can degrade into *Customer–Supplier* when teams are split across time zones or org lines.  
 * A *Customer–Supplier* relation can drift into *Conformist* when downstream stops being involved in upstream planning.  
-* In rough environments, teams retreat to *Separate Ways* because collaboration cost is too high.
+* In rough environments, teams retreat to *Separate Ways* because the collaboration cost is too high.
 
 The context map helps you catch these shifts early:
 
-* If a partnership now behaves like customer–supplier, you probably need ACLs or OHS instead of informal agreements.  
+* If a partnership now behaves like a customer-supplier, you probably need ACLs or OHS instead of informal agreements.  
 * If everyone builds ACLs against the same upstream, maybe that upstream should expose an Open-Host Service.
 
 You design integration once, but you revisit and adjust as reality changes.

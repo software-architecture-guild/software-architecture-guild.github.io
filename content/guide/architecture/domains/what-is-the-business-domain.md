@@ -13,7 +13,7 @@ authors:
 
 ## Definition
 
-When you design software, “the business domain” is the playing field you are actually designing for. It is the part of reality your system touches: the services the company provides, the rules it must respect, and the outcomes it needs to achieve.
+When you design software, “the business domain” is the playing field you are actually designing for. It is the part of reality your system interacts with: the services the company provides, the rules it must respect, and the outcomes it must achieve.
 
 If you can’t clearly describe that domain, every later decision—requirements, architecture, technology—rests on guesswork.
 
@@ -36,19 +36,19 @@ For example, in an online ticketing platform:
 * The domain is ticket sales and event discovery.
 * Subdomains might include search and recommendations, payments, fraud detection, ticket fulfillment, and customer support.
 
-No single subdomain wins the game on its own. They need to collaborate to produce real outcomes, like “customer buys a ticket they actually want and can enter the venue with minimal friction.”
+No single subdomain wins the game on its own. They need to collaborate to produce tangible outcomes, like “customer buys a ticket they actually want and can enter the venue with minimal friction.”
 
 Thinking in subdomains gives you a realistic map of the problem space. Instead of treating “the system” as a single blob, you see it as a set of cooperating capabilities with different characteristics and priorities.
 
 ## Types of subdomains
 
-Domain-Driven Design adds another crucial distinction: **not all subdomains matter equally**. It classifies them into three types, each with different strategic value.
+Domain-Driven Design adds another crucial distinction: **not all subdomains matter equally**. It classifies them into three types, each with a different strategic value.
 
 * **Core subdomains**  
   Where the company competes and differentiates. They are usually complex, full of domain rules, and under constant strategic pressure. This is why you are writing custom software in the first place.
 
 * **Generic subdomains**  
-  Problems that are hard, but already solved by the industry in a reusable way: authentication, invoicing, document storage, off-the-shelf CRM. You rarely win by reinventing these.
+  Complicated problems, but already solved by the industry in a reusable way: authentication, invoicing, document storage, and off-the-shelf CRM. You rarely win by reinventing these.
 
 * **Supporting subdomains**  
   Necessary to deliver the service, but not the reason customers choose you. They tend to be simpler, more CRUD-like, and more stable than the core.
@@ -75,13 +75,13 @@ You build these in-house and treat them like a product inside the product.
 
 ### Generic subdomains
 
-Generic subdomains are hard problems that many companies share—identity, logging, payment gateways, basic accounting, email delivery.
+Generic subdomains are complicated problems that many companies share: identity, logging, payment gateways, basic accounting, and email delivery.
 
 They usually:
 
 * Have mature commercial products or open-source solutions.
 * Change slowly relative to your core.
-* Don’t differentiate you, as long as they are “good enough” and reliable.
+* Don’t differentiate yourself, as long as they are “good enough” and reliable.
 
 Here, your goal is to **buy, integrate, and configure**, not to innovate. You focus on stability, security, and cost.
 
@@ -101,23 +101,23 @@ These should be intentionally “good enough.” Over-engineering them steals ca
 
 ### Comparing subdomains
 
-Classifying subdomains is not a gut feeling exercise; it is a **strategic analysis tool**. Looking at a domain through four lenses helps: competitive advantage, complexity, volatility, and solution strategy.
+Classifying subdomains is not a gut-feeling exercise; it is a **strategic analysis tool**. Looking at a domain through four lenses helps: competitive advantage, complexity, volatility, and solution strategy.
 
 * **Competitive advantage**  
   Only core subdomains give you a real edge. Generic and supporting ones must be solid, but they don’t cause customers to switch to you.
 
 * **Complexity**  
-  Heavy domain rules, optimization algorithms, and nuanced edge cases often indicate core. Straight-line CRUD and basic workflows often indicate supporting.
+  Heavy domain rules, optimization algorithms, and nuanced edge cases often indicate core. Straight-line CRUD and basic workflows often indicate support.
 
 * **Volatility**  
   Core subdomains evolve constantly as product strategy shifts. Generic subdomains evolve at the pace of vendors and standards. Supporting subdomains change slowly unless your internal processes are chaotic.
 
 * **Solution strategy**  
-  Core → build in-house with strong engineering and rich domain models.  
+  Core → built in-house with strong engineering and rich domain models.  
   Generic → buy or adopt OSS; integrate carefully.  
   Supporting → build simply; frameworks, low-code, or outsourcing are fine.
 
-Once you see subdomains through these lenses, it becomes obvious that “treat every part of the system equally” is a bad idea.
+Once you see subdomains through these lenses, it becomes evident that “treat every part of the system equally” is a bad idea.
 
 ### Finding and refining subdomain boundaries
 
@@ -126,7 +126,7 @@ You rarely get a ready-made list of subdomains from the business. You have to **
 Practical starting points:
 
 * Look at existing organizational units (departments, teams, product lines) as coarse candidates.
-* Map out major business processes end to end (e.g., Acquire Customer, Fulfill Order, Collect Payment).
+* Map out major business processes end-to-end (e.g., Acquire Customer, Fulfill Order, Collect Payment).
 * Identify sets of tightly related use cases, data, and actors that hang together.
 
 Then refine:
@@ -135,7 +135,7 @@ Then refine:
 * Watch for a “generic-looking” area that hides a core slice (for example, a “Customer Service” area that actually contains a unique routing algorithm).
 * Stop when further splitting no longer changes architectural or staffing decisions.
 
-The goal is not the perfect taxonomy. The goal is a **useful map** that guides design and investment.
+The goal is not the perfect taxonomy. The goal is a helpful map that guides design and investment.
 
 ### Using domains and subdomains to shape architecture
 
@@ -151,7 +151,7 @@ Subdomains also inform:
 
 * How you split the system into services, modules, or bounded contexts.
 * Where to place anti-corruption layers between clean new models and legacy “mud.”
-* Which parts must be easy to replace instead of reused across the whole system.
+* Which parts must be easy to replace instead of being reused across the whole system?
 
 If you ignore the domain and jump straight to solution patterns, you end up with services and modules whose boundaries reflect your org chart or framework defaults—not the real problem space.
 

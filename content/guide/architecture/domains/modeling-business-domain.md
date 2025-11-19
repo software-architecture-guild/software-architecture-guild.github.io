@@ -13,9 +13,9 @@ authors:
 
 ## Introduction
 
-You can have perfect infrastructure, clean code, and still ship the wrong thing. The usual root cause is simple: the software model and the business model drift apart.  
+You can have perfect infrastructure and clean code and still ship the wrong thing. The usual root cause is simple: the software model and the business model drift apart.  
 
-Modeling the business domain is how you close that gap. It is the discipline of turning fuzzy expert knowledge into precise concepts, language, and code that actually matches how the business thinks and works.
+Modeling the business domain is how you close that gap. It is the discipline of turning fuzzy expert knowledge into precise concepts, language, and code that actually match how the business thinks and works.
 
 ### Why model the business domain at all?
 
@@ -28,7 +28,7 @@ When you skip modeling and jump straight to implementation:
 * The same concept shows up under three different names across modules and teams.
 * Changing a rule becomes dangerous because no one knows where it truly lives.
 
-Modeling the domain is not “extra architecture.” It is the only way to make sure your software actually reflects the business you are serving.
+Modeling the domain is not “extra architecture.” It is the only way to ensure your software accurately reflects the business you serve.
 
 ### From domain knowledge to domain model
 
@@ -39,14 +39,14 @@ Two important consequences:
 * You are always **learning**, not just “implementing requirements.”
 * The value of your model depends on the **quality of knowledge flow** from experts to the team.
 
-Classic lifecycles handle this badly:
+Classic lifecycles mishandle this:
 
 * Analyst talks to domain experts.
 * Analyst writes documents.
 * Developers implement documents.
-* Testers check that implementation matches documents.
+* Testers check that the implementation matches the documents.
 
-Every step translates and compresses the original understanding. By the time code runs in production, no one remembers why a rule exists or when it is allowed to change.  
+Every step translates and compresses the original understanding. By the time the code runs in production, no one remembers why a rule exists or when it is allowed to change.  
 
 Domain modeling pushes you in the opposite direction:
 
@@ -59,13 +59,13 @@ The goal is not to “capture everything” up front. The goal is to create a mo
 
 ## Ubiquitous Language: the backbone of modeling
 
-Domain-Driven Design’s main tool for knowledge flow is the **Ubiquitous Language**: a single shared language for the project’s domain, used by everyone and reflected directly in the code.  
+Domain-Driven Design’s primary tool for knowledge flow is the **Ubiquitous Language**: a single shared language for the project’s domain, used by everyone and reflected directly in the code.  
 
 A good ubiquitous language has a few properties:
 
 * It is **business-first**. Terms describe what the business sees and cares about, not database tables or UI widgets.
 * It lives in **conversations, docs, tests, and code**. Class names, method names, and test scenarios all use the same words.
-* It is comfortable for **domain experts**. They should be able to read scenarios and tests and say “yes, that’s how we talk about it.”
+* It is comfortable for **domain experts**. They should be able to read scenarios and tests and say, “Yes, that’s how we talk about it.”
 
 ### Business-first language, not tech jargon
 
@@ -88,10 +88,10 @@ Ambiguity kills domain models.
 Two common traps:  
 
 * **Ambiguous terms**  
-  One word used for multiple concepts (“policy” as rule vs. “policy” as insurance contract). The fix: split into distinct terms and model them separately.
+  One word used for multiple concepts (“policy” as a rule vs. “policy” as an insurance contract). The fix: split into distinct terms and model them separately.
 
 * **Synonymous terms**  
-  Several words for the same thing (“user,” “customer,” “account,” “seat”) used interchangeably. The fix: pick one name for one concept and stick to it.
+  Several words for the same thing (“user,” “customer,” “account,” “seat”) are used interchangeably. The fix: pick one name for one concept and stick to it.
 
 Simple rule: one meaning per term, one term per meaning. If you cannot say which one you mean, your model is already in trouble.
 
@@ -124,27 +124,27 @@ Those details matter to someone, just not for the problem you are solving today.
 
 ### Domain vs Domain model
 
-The **domain** is the real-world area: shipping, lending, onboarding.  
+The **domain** is the real-world area: shipping, lending, and onboarding.  
 
 The **domain model** is a conceptual structure that helps you solve problems in that domain. It captures entities, behaviors, relationships, and invariants that matter for your use cases.  
 
 You judge a domain model by:
 
 * How well it helps you reason about rules and scenarios.
-* How safely it lets you change behavior when the business changes.
+* How safely does it let you change behavior when the business changes?
 * How clearly it aligns with the ubiquitous language.
 
 You do **not** judge it by how closely it mirrors “how things work in reality” in full detail.
 
 ### Analysis model vs Code model
 
-Teams often produce diagrams, whiteboard sketches, or UML to understand the domain. That is your **analysis model**. The implemented classes, methods, and modules are your **code model**.  
+Teams often produce diagrams, whiteboard sketches, or UML to understand the domain. That is your **analysis model**. The classes, methods, and modules you implemented constitute your **code model**.  
 
 The trap is letting these drift apart:
 
 * The diagram says “Reservation,” the code says “BookingEntityV2.”
 * The diagram shows a rule that never actually got implemented.
-* The code contains new concepts nobody ever fed back into the diagrams.
+* The code contains new concepts that nobody ever fed back into the diagrams.
 
 Model-driven design pushes you to keep **one evolving model** that’s expressed in both places:
 
@@ -168,7 +168,7 @@ In practice, that means:
 
 When architects hand off “finished designs” to developers:
 
-* Developers run into constraints the diagrams ignored.
+* Developers run into constraints that the diagrams ignored.
 * They improvise local fixes that distort the original ideas.
 * Domain terms get replaced with generic “manager/service/util” names.
 * The business changes while you are still implementing the old model.  
@@ -202,7 +202,7 @@ Effective domain models focus on:
 * Invariants: what must always be true.
 * Decisions: who or what decides, based on which inputs.
 
-Data shapes matter, but they are there to support behavior and rules, not to be the model on their own.
+Data shapes matter, but they are meant to support behavior and rules, not serve as the model on their own.
 
 ### When (and where) to apply model-driven design
 
@@ -220,13 +220,13 @@ Keep things lighter when:
 * You can safely buy or outsource the solution.
 * Domain experts are already overloaded and need to focus on the core.
 
-A good starting point is to map domains and subdomains, identify the core, and then deliberately decide where modeling effort goes first.
+A good starting point is to map domains and subdomains, identify the core, and then deliberately decide where to allocate modeling effort first.
 
 ## Implementation patterns for the domain layer
 
-All this thinking has to land in code somewhere. DDD talks about a **domain layer**: the part of the system where business rules live, insulated from UI and infrastructure.  
+All this thinking has to land somewhere in code. DDD talks about a **domain layer**: the part of the system where business rules live, insulated from UI and infrastructure.  
 
-There are multiple implementation patterns you can use there, depending on context.
+There are multiple implementation patterns you can use, depending on the context.
 
 ### Domain Model pattern
 
@@ -251,7 +251,7 @@ Not every subdomain deserves a rich domain model.
 * **Transaction Script**: one procedure per business transaction, often in an application/service class, handling validation and persistence inline.
 * **Table Module**: logic organized around database tables, with classes that encapsulate operations on a table.  
 
-They are useful when:
+They are helpful when:
 
 * Rules are straightforward and mostly linear.
 * You need something simple and explicit for juniors or small teams.
@@ -282,13 +282,13 @@ Large systems almost always mix patterns:
 * Supporting admin module → transaction scripts.
 * Integration glue → simple scripts or table modules.
 
-Modeling the domain includes choosing the right implementation pattern per context, not forcing everything into one mold.  
+Modeling the domain involves choosing the correct implementation pattern for each context, rather than forcing everything into one mold.  
 
 ## Summary
 
 Modeling the business domain is how you turn expert knowledge into software that actually matches reality and can adapt as the business changes.  
 
-You start by improving knowledge flow with domain experts, shape a ubiquitous language, and use it to drive both analysis and code. You treat the domain model as a purpose-driven abstraction, not a perfect mirror of the real world, and you use model-driven design to keep diagrams and code aligned. Finally, you choose implementation patterns that fit each context, reserving rich domain modeling for the places where it truly pays off.
+You start by improving knowledge flow with domain experts, shape a ubiquitous language, and use it to drive both analysis and code. You treat the domain model as a purpose-driven abstraction rather than a perfect mirror of the real world, and you use model-driven design to keep diagrams and code aligned. Finally, you choose implementation patterns that fit each context, reserving rich domain modeling for the places where it truly pays off.
 
 ## Recommended Reading
 
