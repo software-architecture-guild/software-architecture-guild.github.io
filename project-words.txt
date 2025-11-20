@@ -10,6 +10,7 @@ BSUIR
 CCPA
 CEDP
 Cockburn
+chargeback
 Cognos
 colinwilson
 Datastage
@@ -59,9 +60,11 @@ operationalize
 operationalized
 Pais
 parallelizable
+Pereira
 Profitero
 psychographic
 Radioelectronics
+rebalances
 relref
 roadmaps
 Rozanski
@@ -71,6 +74,11 @@ Silverman
 Smartsheet
 solutioning
 Sommerville
+runability
+Schwaber
+Silverman
+Smartsheet
+socio
 Sparx
 SSAS
 SSIS

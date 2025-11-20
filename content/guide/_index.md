@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 1
 title: "Guide"
 description: "Guide to become a Software Architect"
 icon: "menu_book"

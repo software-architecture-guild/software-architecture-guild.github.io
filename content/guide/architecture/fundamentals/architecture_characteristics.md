@@ -1,5 +1,5 @@
 ---
-weight: 320
+weight: 35
 title: "Architecture Characteristics"
 description: "This article explores key architecture characteristics, detailing their definitions, tactics, trade-offs, and role in creating robust and effective software systems."
 icon: "article"
