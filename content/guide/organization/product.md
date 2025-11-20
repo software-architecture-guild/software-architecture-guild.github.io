@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Product development is a multi-faceted process that transforms ideas into tangible products to solve customer needs. A structured approach helps companies navigate this complex process, focusing on reducing waste, iterating quickly, and achieving product-market fit. This article explores key concepts in product development, including core principles, the lean product process, and building and optimizing products.
+Product development is a multi-faceted process that transforms ideas into tangible products to solve customer needs. A structured approach helps companies navigate this complex process, focusing on reducing waste, iterating quickly, and achieving product-market fit. This article explores key concepts in product development, including core principles, the lean product process, and the process of building and optimizing products.
 
 ---
 
@@ -57,7 +57,7 @@ This step involves pinpointing specific customer problems or unmet needs that cu
 
 ##### Step 3: Define Your Value Proposition
 
-Once customer needs are identified, the next step is to define a **value proposition**. This outlines how your product uniquely meets these needs better than competitors. A strong value proposition communicates why customers should choose your product.
+Once customer needs are identified, the next step is to define a value proposition. This outlines how your product uniquely meets these needs better than competitors' products. A strong value proposition communicates why customers should choose your product.
 
 ##### Step 4: Specify Your Minimum Viable Product (MVP) Feature Set
 
@@ -83,7 +83,7 @@ After the MVP is validated and initial product-market fit is achieved, the focus
 
 ##### Agile Development
 
-Agile methodologies, such as **Scrum** or **Kanban**, help manage the development process by breaking tasks into smaller increments (sprints or iterations). These frameworks allow teams to respond quickly to feedback and adapt to changes in the market. By developing the product incrementally, teams stay flexible and can pivot when necessary.
+Agile methodologies, such as Scrum or Kanban, help manage the development process by breaking tasks into smaller increments (sprints or iterations). These frameworks allow teams to respond quickly to feedback and adapt to changes in the market. By developing the product incrementally, teams stay flexible and can pivot when necessary.
 
 Key elements of Agile development include:
 
@@ -111,4 +111,4 @@ Lean product development is not just about getting the product right—it’s ab
 #### Books
 
 * Olsen, Dan. [The Lean Product Playbook: How to Innovate with Minimum Viable Products and Rapid Customer Feedback.](https://leanproductplaybook.com/) Wiley, 2015.
-  * The Lean Product Playbook by Dan Olsen provides a step-by-step framework for developing successful products using lean principles. The book focuses on achieving product-market fit, where a product effectively meets customer needs better than alternatives. Olsen introduces the Product-Market Fit Pyramid, which includes defining the target customer, identifying their unaddressed needs, crafting a value proposition, creating an MVP (Minimum Viable Product), and testing it with real users. A key theme is separating the problem space (understanding customer needs) from the solution space (developing the product), ensuring teams focus on the right issues. The book also covers agile development practices and emphasizes iterative testing, customer feedback, and using data and metrics to continuously optimize and refine the product.
+  * The Lean Product Playbook by Dan Olsen provides a step-by-step framework for developing successful products using lean principles. The book focuses on achieving product-market fit, where a product effectively meets customer needs better than alternatives. Olsen introduces the Product-Market Fit Pyramid, which includes defining the target customer, identifying their unaddressed needs, crafting a value proposition, creating an MVP (Minimum Viable Product), and testing it with real users. A key theme is separating the problem space (understanding customer needs) from the solution space (developing the product), ensuring teams focus on the right issues. The book also covers agile development practices and emphasizes iterative testing, customer feedback, and the use of data and metrics to optimize and refine the product continuously.

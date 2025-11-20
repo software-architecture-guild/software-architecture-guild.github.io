@@ -1,6 +1,9 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
+{{- $size := .Get "size" | default "default" -}}
+
+{{- $class := printf "responsive-image-%s" $size -}}
 
 <div class="image-container">
-  <img src="{{ $src }}" alt="{{ $alt | html }}" class="responsive-image">
+  <img src="{{ $src }}" alt="{{ $alt | html }}" class="{{ $class }}">
 </div>
