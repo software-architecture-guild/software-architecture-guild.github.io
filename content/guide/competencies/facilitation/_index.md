@@ -1,5 +1,5 @@
 ---
-weight: 1300
+weight: 1400
 title: "Facilitation"
 description: "This section explains the process of facilitation and its role in guiding discussions and achieving outcomes."
 icon: "groups"
