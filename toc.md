@@ -12,7 +12,7 @@
 
 ### Domains: 200-249
 
-### Coupling: 250-299
+### Components: 250-299
 
 ## Organization: 400-699
 
