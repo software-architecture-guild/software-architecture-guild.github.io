@@ -15,11 +15,11 @@ Coupling is the invisible wiring of your system. It’s how parts depend on each
 
 ## Why Coupling Matters
 
-Coupling matters because it determines how expensive change is. It defines how far a single modification propagates, how much coordination teams need, and how often “unrelated” parts break together. You cannot remove coupling from a useful system, but you can decide where it lives, how strong it is, and how predictable it feels during day-to-day work.
+Coupling matters because it determines the cost of change. It defines how far a single modification propagates, how much coordination teams need, and how often “unrelated” parts break together. You cannot remove coupling from a system, but you can decide where it lives, how strong it is, and how predictable it feels during day-to-day work.
 
 ### You Can’t Design a System Without Coupling
 
-If two parts of a system never affect each other, they’re not really part of the same system. Some degree of coupling is both inevitable and useful.
+If two parts of a system never affect each other, they’re not really part of the same system. Some degree of coupling is both inevitable and beneficial.
 
 * “Coupled” simply means “connected” – there is shared knowledge, shared lifecycle, or shared effects between two parts.  
 * Zero coupling means zero interaction: no calls, no events, no shared state. That also means no collaboration and no value.  
@@ -29,7 +29,7 @@ When people say “we want loose coupling,” they usually mean “we want chang
 
 ### A Working Definition: Coupling as Change Impact
 
-A useful, architecture-level definition is:
+A practical, architecture-level definition is:
 
 > Two parts of a software system are coupled if a change in one might require a change in the other.
 
@@ -45,11 +45,11 @@ This turns coupling into something you can actively analyze:
 2. List the components you *might* need to touch.  
 3. That set and the relationships between them give you a concrete view of coupling for that scenario.
 
-Instead of arguing in the abstract, you anchor coupling to “how many moving parts are in play when we make this specific change?”
+Instead of arguing in the abstract, you anchor coupling to the question: “How many moving parts are in play when we make this specific change?”
 
 ## What Exactly Is Coupled?
 
-Coupling is not an abstract property floating over the system; it attaches to specific things. To reason clearly, you have to name what can be coupled and where their boundaries sit. Once those units are explicit, you can see which connections are essential to the business and which are just side effects of how you happened to implement something.
+Coupling is not an abstract property floating over the system; it attaches to specific things. To reason clearly, you have to name what can be coupled and where their boundaries sit. Once those units are explicit, you can see which connections are essential to the business and which are just side effects of how you implemented something.
 
 ### Systems, Components, and Boundaries
 
@@ -63,7 +63,7 @@ Most accidental coupling comes from weak or leaky boundaries:
 
 * Interfaces that expose internal structures “temporarily” and never get cleaned up.  
 * Shared database tables where multiple components silently depend on the same schema.  
-* Undocumented string formats or flags that become de-facto contracts across the system.
+* Undocumented string formats or flags that become de facto contracts across the system.
 
 Strong boundaries constrain how components can depend on each other. Good coupling design usually starts with cleaning up these boundaries.
 
@@ -77,7 +77,7 @@ It helps to distinguish:
 Examples of essential coupling:
 
 * Orders have to relate to customers and payments.  
-* Risk decisions need access to certain transaction data.  
+* Risk decisions need access to specific transaction data.  
 * Regulatory reporting needs consistent identities across the system.
 
 Examples of accidental coupling:
@@ -142,7 +142,7 @@ Well-designed coupling narrows the system’s possibility space to “valid and 
 
 Coupling is not just a side effect to minimize; it is a design dimension you can deliberately tune. By deciding where to accept tight coordination and where to insist on separation, you shape team autonomy, deployment flexibility, and failure modes. Treating coupling as a first-class design concern turns vague “good architecture” into specific, testable trade-offs.
 
-### Moving Beyond “Loose is Good”
+### Moving Beyond “Loose is Good.”
 
 Once you stop treating coupling as something you blindly “minimize,” you can start using it intentionally:
 
@@ -187,7 +187,7 @@ Good coupling tends to be:
 
 Bad coupling tends to be:
 
-* Hard to explain: “it’s just always been this way.”  
+* Hard to explain: “It’s just always been this way.”  
 * Hidden (shared tables, global state, undocumented expectations).  
 * Surprising: changes break things that “have nothing to do with it.”  
 * Owned by “everyone and no one.”
@@ -196,9 +196,9 @@ Your design work is mostly about moving connections from the second list to the 
 
 ## Summary
 
-Coupling is the way changes in one part of your system can force changes in others. It shows up in the boundaries between components, in how much behavior they share, and in how many degrees of freedom you let them have. You cannot have a useful system without coupling, but you can decide which dependencies are essential and which are accidents, and you can shift complexity by strengthening, weakening, or moving those connections.
+Coupling is the way changes in one part of your system can force changes in others. It shows up in the boundaries between components, in how much behavior they share, and in how many degrees of freedom you allow them. You cannot have a sound system without coupling, but you can decide which dependencies are essential and which are accidents. You can shift complexity by strengthening, weakening, or moving those connections.
 
-If you can describe coupling in your system in these terms—what is coupled, how strongly, how predictably, and why—you are in a position to redesign it. The rest of the Components section builds on this: we’ll break coupling down into specific dimensions, look at how to balance it across a system, and see how modularity, data ownership, workflows, and contracts all shape where coupling shows up and how painful it feels.
+If you can describe coupling in your system in these terms—what is coupled, how strongly, how predictably, and why—you are in a position to redesign it. The rest of the Components section builds on this: we’ll break coupling down into specific dimensions, examine how to balance it across a system, and see how modularity, data ownership, workflows, and contracts shape where coupling shows up and how painful it feels.
 
 ## Recommended Reading
 

@@ -11,13 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Modularity is how you carve a system into pieces that can change without breaking everything else. When it works, you shrink the blast radius of change, cut the cognitive load for engineers, and create room for the architecture to evolve at the speed of the business. When it fails, you just get the same chaos spread across more files and services.
+Modularity is about carving a system into pieces that can change without breaking the rest of the system. When it works, you shrink the blast radius of change, reduce engineers' cognitive load, and create room for the architecture to evolve at the speed of the business. When it fails, you just get the same chaos spread across more files and services.
 
 ## Why Modularity Matters
 
-Modularity is not about neat diagrams or fashionable patterns; it is about survival under change. A modular system lets you add capabilities, fix bugs, and switch technologies without taking the whole product hostage. A non-modular system might run fine today but becomes slower, riskier, and more expensive to touch over time, until every change feels like defusing a bomb.
+Modularity is not about neat diagrams or fashionable patterns; it is about survival in the face of change. A modular system lets you add capabilities, fix bugs, and switch technologies without taking the whole product hostage. A non-modular system might run fine today, but becomes slower, riskier, and more expensive to touch over time, until every change feels like defusing a bomb.
 
-### Modularity as “Evolvability by Design”
+### Modularity as “Evolvability by Design.”
 
 You can think of modularity as designing a system to evolve:
 
@@ -25,7 +25,7 @@ You can think of modularity as designing a system to evolve:
 * Internal details can change freely as long as that surface stays intact.  
 * The rest of the system does not need to know how the module works, only what it promises.
 
-Done well, this makes future changes “reasonable” in effort: you still have to think, but you are not rewriting the world for each new requirement. Done badly, you just shuffle responsibilities around and keep the same entanglement.
+Done well, this makes future changes “reasonable” in effort: you still have to think, but you are not rewriting the world for each new requirement. Poorly done, you just shuffle responsibilities around and keep the same entanglement.
 
 ### Modularity vs. Complexity
 
@@ -34,7 +34,7 @@ Modularity is supposed to make complexity tractable, not disappear. The real que
 * Does complexity stay local, inside modules and their boundaries?  
 * Or does it leak everywhere, so every change touches many parts?
 
-A highly modular architecture still has complex modules; the difference is that this complexity is contained. A big ball of mud shares knowledge promiscuously: rules are duplicated, state is shared, and every decision seems to depend on everything else.
+A highly modular architecture still has complex modules; the difference is that this complexity is contained within them. A big ball of mud shares knowledge promiscuously: rules are duplicated, state is shared, and every decision seems to depend on everything else.
 
 ## What Exactly Is a Module?
 
@@ -44,14 +44,14 @@ Modularity is about drawing boundaries around self-contained functionality and e
 
 ### Function, Logic, and Context
 
-A useful way to describe any module is through three kinds of knowledge:
+A helpful way to describe any module is through three kinds of knowledge:
 
 * **Function** – what the module does, in terms of its public interface.  
   * Example: a “Payments” module offers “charge customer,” “refund payment,” “capture authorization.”  
 * **Logic** – how it does it internally.  
   * Example: which payment provider it uses, how retries work, how it logs and audits.  
 * **Context** – assumptions about its environment that are not in the interface.  
-  * Example: needs a certain database, expects an authenticated user, assumes a specific currency setup.
+  * Example: needs a specific database, expects an authenticated user, assumes a specific currency setup.
 
 Good modularity exposes *function* clearly, hides *logic* aggressively, and makes *context* either part of the contract or irrelevant to callers. Bad modularity leaks logic and context through “temporary” shortcuts and half-documented assumptions.
 
@@ -67,7 +67,7 @@ Treating modules as knowledge boundaries forces hard questions:
 * What must callers know to use this correctly?  
 * What must never escape, or we’ll be stuck with this internal choice forever?  
 
-If you cannot answer those questions, you do not have modularity—you have accidental groupings of code.
+If you cannot answer those questions, you do not have modularity—you have accidental code groupings.
 
 ### Deep vs Shallow Modules
 
@@ -105,7 +105,7 @@ Good modularity aims for high cohesion:
 * Each module is responsible for a coherent set of behaviors or decisions.  
 * Everything inside the module exists to serve that responsibility.  
 
-Low cohesion modules have grab-bag responsibilities: validation, logging, business rules, UI formatting all mixed together. That usually leads to:
+Low-cohesion modules have grab-bag responsibilities: validation, logging, business rules, and UI formatting, all mixed together. That usually leads to:
 
 * Bigger change scopes (because each change touches this “god module”).  
 * Confusing ownership (“who actually owns this rule?”).  
@@ -139,7 +139,7 @@ At the architectural level, modularity is how you slice the system into:
 
 * Components, services, or bounded contexts.  
 * Each with a specific domain responsibility and clear contracts.  
-* Each with its own deployment, scaling, and failure characteristics.
+* Each has its own deployment, scaling, and failure characteristics.
 
 Architectural modularity matters because it aligns the architecture with business and technology change:
 
@@ -159,7 +159,7 @@ In each case, modularity fails when responsibilities blur and knowledge leaks. T
 
 ## Modularity and Architectural Characteristics
 
-Modularity is not an end in itself. It is a way of improving specific architectural characteristics: maintainability, testability, deployability, scalability, and fault tolerance. If modularity does not move these in the right direction, it is just extra ceremony.
+Modularity is not an end in itself. It is a way of improving specific architectural characteristics: maintainability, testability, deployability, scalability, and fault tolerance. If modularity does not move these in the right direction, it is just an extra ceremony.
 
 ### Maintainability
 
@@ -172,12 +172,12 @@ Modularity helps maintainability when:
 It hurts maintainability when:
 
 * Responsibilities are smeared across many modules (or layers).  
-* Modules are sliced by technical concerns only (UI, business logic, persistence) so every feature crosses all of them.  
+* Modules are sliced by technical concerns only (UI, business logic, persistence), so every feature crosses all of them.  
 * The “module boundary” is just a folder name.
 
 ### Testability
 
-Modular systems are easier to test in depth but only if boundaries are respected:
+Modular systems are easier to test in depth, but only if boundaries are respected:
 
 * Small, focused modules can have small, focused test suites.  
 * Deep modules let you test behavior through a few interfaces instead of poking internals.  
@@ -192,7 +192,7 @@ Testability collapses when:
 Architectural modularity improves deployability when modules are:
 
 * Independently buildable and deployable.  
-* Designed so most changes affect only one or a few modules.  
+* Designed so that most changes affect only one or a few modules.  
 * Loosely coupled enough that you do not need big-bang coordinated releases.
 
 If every meaningful change still requires orchestrating many modules in lockstep, you have distributed deployment pain, not modularity.
@@ -203,7 +203,7 @@ Modularity supports scalability and fault tolerance by:
 
 * Allowing hot modules to scale independently.  
 * Isolating failures so the rest of the system can keep working.  
-* Making it possible to degrade gracefully when certain modules are down.
+* Making it possible to degrade gracefully when specific modules are down.
 
 But simply chopping a system into services is not enough. If every request fans out across many modules, you are still scaling and failing as one big unit—just with more network hops.
 
@@ -232,9 +232,9 @@ Information hiding is the core principle behind modularity:
 * Hide the rest, even if it feels “convenient” to expose now.  
 * Make it cheaper to change internal decisions than to change external contracts.
 
-Every time you leak an internal concept into the outside world “just this once,” you are borrowing against future modularity. The interest eventually comes due as brittle integrations and wide change scopes.
+Every time you leak an internal concept into the outside world, “just this once,” you are borrowing against future modularity. The interest eventually comes due as brittle integrations and broad change scopes.
 
-### Aim for “Reasonable Degrees of Freedom”
+### Aim for “Reasonable Degrees of Freedom.”
 
 Trying to make modules handle every possible variation often backfires:
 
@@ -278,7 +278,7 @@ Modules that “know everything and do everything”:
 * Huge interfaces that reveal internal structure.  
 * Almost every change touches them.
 
-These usually form when teams keep adding “just one more thing” to whatever module feels convenient. The fix is to re-identify core responsibilities and split by purpose, not by convenience.
+These usually form when teams keep adding “just one more thing” to whatever module feels convenient at the time. The fix is to re-identify core responsibilities and split by purpose, not by convenience.
 
 ### Anemic Modules and Fragmentation
 
@@ -301,7 +301,7 @@ This structure makes almost every change “cross-cutting” by design. Real mod
 
 ## Summary
 
-Modularity is how you turn a codebase into a set of knowledge boundaries that can evolve at different speeds without tearing the system apart. A module is more than a directory or a service; it is a bundle of function, logic, and context, with just enough exposed to be useful and the rest hidden so it can change.
+Modularity is how you turn a codebase into a set of knowledge boundaries that can evolve at different speeds without tearing the system apart. A module is more than a directory or a service; it is a bundle of functions, logic, and context, with just enough exposed to be useful and the rest hidden so it can change.
 
 Effective modularity balances coupling and cohesion, applies the same principles from methods to systems, and is judged by what it does to maintainability, testability, deployability, scalability, and fault tolerance—not by how pretty the diagram looks. You will not get the boundaries perfect up front, but if you treat them as design tools and keep refining them based on real change, your architecture can keep moving with the business instead of becoming its anchor.
 

@@ -19,10 +19,10 @@ Trade-off analysis is how you move from “best practices” talk to engineering
 
 ### No Best Practices, Only Context
 
-There is no universally good choice between monolith, modular monolith, microservices, events, or RPC. Each option wins on some dimensions and loses on others:
+There is no universally good choice among monoliths, modular monoliths, microservices, events, or RPC. Each option wins on some dimensions and loses on others:
 
 * A pattern may be great for scale but bad for change cadence.  
-* A messaging style may help extensibility but hurt PII containment.  
+* A messaging style may help extensibility, but hurt PII containment.  
 * A granularity choice may help workflows but complicate ownership.
 
 Without trade-off analysis, those differences stay implicit and political. With it, you can say “for *this* system, *right now*, these dimensions matter most, so we’re choosing X and accepting its downsides.”
@@ -34,13 +34,13 @@ Trade-off analysis forces you to:
 * Name the candidate options you’re comparing.  
 * Pick dimensions that actually matter here (not just generic quality lists).  
 * Rate each option on those dimensions, even if it’s a rough “low/medium/high”.  
-* Look across the table and ask “what are we really optimizing for?”
+* Look across the table and ask, “What are we really optimizing for?”
 
 You still use judgment, but the conversation shifts from “I like microservices” to “we value independent deployability more than transactional simplicity, so we’re taking this hit knowingly.”
 
 ## Building Your Own Trade-Off Matrices
 
-Generic trade-off tables in books and blogs are useful, but they are not your system. Trade-off analysis becomes powerful when you build your own matrices tuned to your domains, constraints, and politics.
+Generic trade-off tables in books and blogs are helpful, but they are not your system. Trade-off analysis becomes powerful when you build your own matrices tuned to your domains, constraints, and politics.
 
 ### Identify the Dimensions that Actually Hurt
 
@@ -52,7 +52,7 @@ Start by asking “What bites us today?” and “What will hurt if we get it wr
 * Performance, latency, throughput.  
 * Compliance, PII, and auditability.
 
-You rarely need more than 5–7 dimensions for a single decision. If you list 20, you’ll treat all of them as equal and the matrix becomes noise.
+You rarely need more than 5–7 dimensions for a single decision. If you list 20, you’ll treat all of them as equal, and the matrix becomes noise.
 
 ### Rate Candidate Options Honestly
 
@@ -68,7 +68,7 @@ For each option, rate it on each dimension:
 * Write a short note for surprising ratings (“pub/sub: ✗ on PII because all consumers see all fields”).  
 * Be consistent across the table; don’t secretly change the meaning of “high complexity” halfway through.
 
-The goal is not to be numerically precise. It’s to make trade-offs *visible* so you can talk about them.
+The goal is not numerical precision. It’s to make trade-offs *visible* so you can talk about them.
 
 ### Consolidate and Look for Patterns
 
@@ -78,7 +78,7 @@ Once you’ve rated options, put them in a single matrix and scan for patterns:
 * Do loose, decoupled options consistently raise implementation complexity?  
 * Are there options that are “good enough” across many dimensions even if they don’t dominate any single one?
 
-These patterns shape your instincts for future decisions. The next time a similar choice appears, you can reuse the dimensions and expected trade-offs instead of starting from scratch.
+These patterns shape your instincts for future decisions. The next time a similar choice arises, you can reuse the dimensions and expected trade-offs rather than starting from scratch.
 
 ## Iterative Architecture: Exploring the Design Space
 
@@ -107,7 +107,7 @@ At each step, build or refine the matrix:
 * Remove options that are now impossible or clearly dominated.  
 * Add new columns if new forces emerge (for example, PII control once legal gets involved).
 
-This keeps the analysis lightweight and focused instead of trying to compare every possible combination at once.
+This keeps the analysis lightweight and focused, rather than trying to compare every possible combination at once.
 
 ### Use Scenarios, Not Just Labels
 
@@ -123,7 +123,7 @@ When people disagree, replay the scenario: “Walk me through exactly what happe
 
 ## Worked Example: Payment Service Granularity
 
-Consider a payment domain with several payment methods: cards, gift cards, vouchers, and alternative payment providers. You have two main options: one Payment service or a service per payment method. The difference is not just style; it’s how you trade off simplicity, extensibility, and workflow complexity.
+Consider a payment domain with several payment methods: cards, gift cards, vouchers, and alternative payment providers. You have two main options: either a single payment service or a service per payment method. The difference is not just style; it’s how you trade off simplicity, extensibility, and workflow complexity.
 
 ### Single Payment Service
 
@@ -204,16 +204,16 @@ Trade-offs:
 * Security/PII: ✓ – least-privilege becomes much easier.  
 * Operational tuning: ✓ – you can scale and monitor consumers independently.
 
-This style shines when security, compliance, and per-consumer SLAs matter more than plug-and-play on-boarding.
+This style shines when security, compliance, and per-consumer SLAs matter more than plug-and-play onboarding.
 
 ### Security and Operational Profiles as Deciders
 
 The trade-off matrix makes the decision concrete:
 
-* If “onboard new consumers in days” is the main business demand, a shared topic is hard to beat.  
+* If “onboard new consumers in days” is the primary business demand, a shared topic is hard to beat.  
 * If you are under strict PII regulation and each consumer has different SLAs, separate queues become more appealing.
 
-Again, the right answer depends on which dimensions your organization chooses to prioritize, not on which style is “modern.”
+Again, the correct answer depends on which dimensions your organization chooses to prioritize, not on which style is “modern.”
 
 ## Turning Trade-Offs into Decisions
 
@@ -229,7 +229,7 @@ Once the matrix is clear, create a short architecture decision record (ADR):
 * Decision – what you chose and why.  
 * Consequences – what becomes easier, what becomes harder.
 
-The ADR is not an essay; it’s a snapshot of your reasoning at the time. When someone asks “Why didn’t we just use queues?” you can point to the trade-off analysis instead of trying to reconstruct the discussion from memory.
+The ADR is not an essay; it’s a snapshot of your reasoning at the time. When someone asks, “Why didn’t we just use queues?” you can point to the trade-off analysis rather than try to reconstruct the discussion from memory.
 
 ### Fitness Functions: Keeping Decisions Honest
 
@@ -238,7 +238,7 @@ Trade-off analysis is a hypothesis: “Given these dimensions, this option will 
 Examples:
 
 * If you accept monorepo risk to gain simpler tooling, add checks that prevent unwanted static coupling between projects.  
-* If you choose pub/sub knowing it weakens PII control, add tests and monitors that detect when sensitive fields leak into topics they shouldn’t.  
+* If you choose pub/sub, knowing it weakens PII control, add tests and monitors that detect when sensitive fields leak into topics they shouldn’t.  
 * If you pick a coarse-grained payment service, track change lead time and failure blast radius to confirm you’re still within tolerance.
 
 Fitness functions turn “we think this will be fine” into continuous verification. If the system drifts or the environment changes, they will tell you when your earlier trade-offs no longer hold.
@@ -247,11 +247,11 @@ Fitness functions turn “we think this will be fine” into continuous verifica
 
 Trade-off analysis also gives you a way out of pattern evangelism:
 
-* When asked “Are you for or against monorepos/microservices/Kubernetes?”, pull the conversation back to trade-offs.  
+* When asked, “Are you for or against monorepos/microservices/Kubernetes?”, pull the conversation back to trade-offs.  
 * Use the matrix to show where a choice wins and where it loses.  
 * Use fitness functions to guard against the known downsides rather than claiming your preferred option has none.
 
-Your job is not to be the loudest advocate for a style. It is to make risks and benefits legible so the organization can choose consciously.
+Your job is not to be the loudest advocate for a style. It is to make risks and benefits legible so the organization can make conscious choices.
 
 ## Summary
 

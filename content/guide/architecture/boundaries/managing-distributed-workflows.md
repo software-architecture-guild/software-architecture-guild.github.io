@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Distributed workflows are how multiple services cooperate to complete a single business task: placing an order, finishing a ticket, provisioning a user. Once you move beyond a monolith, these flows become one of the main sources of complexity and failure, so you need to design them as carefully as any API or data model.
+Distributed workflows are how multiple services collaborate to complete a single business task: placing an order, resolving a ticket, or provisioning a user. Once you move beyond a monolith, these flows become one of the main sources of complexity and failure, so you need to design them as carefully as any API or data model.
 
 ## Understanding Distributed Workflows
 
-Distributed workflows are not just “a bunch of services calling each other.” They are concrete, business-visible sequences where partial failure, retries, and ordering matter. If you ignore their structure, coupling and bugs accumulate in the shadows.
+Distributed workflows are not just “a bunch of services calling each other.” They are concrete, business-visible sequences in which partial failures, retries, and ordering matter. If you ignore their structure, coupling, and bugs accumulate in the shadows.
 
 ### From Local Transactions to Cross-Service Flows
 
@@ -39,7 +39,7 @@ There is no single database transaction spanning all of this. Instead, you have 
 Every workflow has semantic coupling: things that must happen together in the real world.
 
 * You can’t ship before you have a paid order.  
-* You can’t close a ticket before someone has worked it.  
+* You can’t close a ticket before someone has worked on it.  
 
 You cannot remove that coupling. What you *can* choose is how services coordinate:
 
@@ -50,7 +50,7 @@ Those choices change implementation coupling, visibility, and failure modes—bu
 
 ## Orchestration: Centralized Coordination
 
-Orchestration puts one service in charge of the workflow. That service (the orchestrator) does not own all the domain behavior, but it does own the sequence: who gets called, when, and what happens if something goes wrong.
+Orchestration assigns one service to the workflow. That service (the orchestrator) does not own all the domain behavior, but it does own the sequence: who gets called, when, and what happens if something goes wrong.
 
 A well-chosen orchestrator can turn a messy web of interactions into something you can understand, test, and reason about.
 
@@ -59,8 +59,8 @@ A well-chosen orchestrator can turn a messy web of interactions into something y
 In an orchestrated workflow:
 
 * A client calls the orchestrator with a business request.  
-* The orchestrator invokes domain services in the right order.  
-* It tracks which steps completed and which failed.  
+* The orchestrator invokes domain services in the correct order.  
+* It tracks which steps were completed and which failed.  
 * It decides how to recover: retry, compensate, or mark the workflow failed.
 
 For example, an order-orchestration service might:
@@ -76,7 +76,7 @@ The orchestrator owns the workflow state: it knows where each order is in the pr
 
 Orchestration trades some centralization for clarity:
 
-* **Single source of status** – you can ask one place “What’s happening with this workflow?”  
+* **Single source of status** – you can ask one place, “What’s happening with this workflow?”  
 * **Centralized error handling** – retries, backoffs, and compensations live in one service.  
 * **Explicit logic** – the whole flow is visible in a single codebase and diagram.  
 * **Saga-friendly** – many saga variants map naturally to an orchestrator that coordinates local transactions.
@@ -143,7 +143,7 @@ The price you pay is in understanding and failure handling:
 * Status queries (“Where is this order?”) require calling many services or building extra mechanisms.  
 * Adding a new step often means updating multiple services, not just one coordinator.
 
-Choreography is not “simpler” overall; it just moves complexity from a central place into the edges of many services.
+Choreography is not “simpler” overall; it just moves complexity from a central place to the edges of many services.
 
 ## Who Owns Workflow State?
 
@@ -208,7 +208,7 @@ You’ve traded easy state queries for maximum decentralization.
 A middle ground is to pass a state stamp along with workflow messages:
 
 * Each message carries workflow-related state.  
-* Services update both local data and the stamp before sending the next message.  
+* Services update both local data and the stamp before sending the following message.  
 
 Upsides:
 
@@ -218,13 +218,13 @@ Upsides:
 Downsides:
 
 * Messages become heavier, and the stamp must evolve carefully as the workflow changes.  
-* Ad hoc status queries are still awkward—you need to go find a recent stamp or reconstruct from events.  
+* Ad hoc status queries are still awkward—you need to find a recent stamp or reconstruct from events.  
 
-State stamps make sense when you mainly need state during execution, not for arbitrary queries weeks later.
+State stamps make sense when you mainly need the state during execution, not for arbitrary queries weeks later.
 
 ## Sagas: Transactions Across Services
 
-Distributed workflows often involve changes that must remain logically consistent: reserve inventory, charge a card, update a ticket, emit analytics. Sagas are the main tool for coordinating those changes without pretending you still have a single ACID transaction.
+Distributed workflows often involve changes that must remain logically consistent: reserving inventory, charging a card, updating a ticket, and emitting analytics. Sagas are the primary tool for coordinating those changes without pretending you still have a single ACID transaction.
 
 ### What is a Saga?
 
@@ -261,7 +261,7 @@ The point is not to memorize names; it’s to recognize which trade-off bundle y
 
 Patterns that often work well:
 
-* **Orchestrated, eventually consistent sagas** – central state, clear error handling, but no pretense of global ACID.  
+* **Orchestrated, eventually consistent sagas** – central state, precise error handling, but no pretense of global ACID.  
 * **Asynchronous, orchestrated sagas with parallel steps** – good responsiveness and throughput, with centralized coordination.  
 * **Event-driven choreographed sagas** – powerful when you have strong observability and experienced teams.
 
@@ -295,7 +295,7 @@ Orchestration is usually the better fit when:
 * Stakeholders expect easy status queries and audit trails.  
 * You need a clear place to implement and evolve workflow logic.
 
-In these cases, a central orchestrator plus an eventually consistent saga pattern often gives you the best balance between control and responsiveness.
+In these cases, a central orchestrator, combined with an eventually consistent saga pattern, often provides the best balance between control and responsiveness.
 
 ### Signals for Choreography
 
@@ -318,7 +318,7 @@ Most real systems use both styles:
 You can even mix within a single workflow:
 
 * Use orchestration for the backbone steps and error handling.  
-* Let certain steps fan out asynchronously via events.  
+* Let specific steps fan out asynchronously via events.  
 
 The key is to choose styles per workflow and per slice, not based on a blanket preference.
 
@@ -352,7 +352,7 @@ In orchestrated systems, the orchestrator is a natural place to expose this. In 
 
 ### Documenting Decisions
 
-Finally, capture why you picked a certain style for a workflow:
+Finally, capture why you picked a particular style for a workflow:
 
 * Record architectural decision records (ADRs) that list context, options, trade-offs, and the chosen coordination style.  
 * Explicitly justify orchestration when scale might suffer, or choreography when error handling will be harder.
@@ -361,9 +361,9 @@ When requirements change—higher volume, stricter SLAs, new compliance rules—
 
 ## Summary
 
-Distributed workflows are where services, data, and people expectations collide. You cannot remove the semantic coupling of a business process, but you can choose coordination styles and saga patterns that keep that coupling manageable. Orchestration gives you central state, clear error handling, and easy visibility at the cost of centralization; choreography gives you autonomy and scale at the cost of implicit logic and harder failure handling.
+Distributed workflows are where services, data, and people's expectations collide. You cannot remove the semantic coupling in a business process, but you can choose coordination styles and saga patterns that keep it manageable. Orchestration gives you central state, precise error handling, and easy visibility at the cost of centralization; choreography gives you autonomy and scale at the expense of implicit logic and harder failure handling.
 
-By thinking in terms of workflow state ownership, communication style, consistency model, and coordination, you can design workflows that match business risk: orchestrated and strongly visible where correctness matters most, choreographed and event-driven where scale and resilience dominate. Treat sagas and workflows as first-class architectural elements—with names, tags, observability, and ADRs—and your distributed system can evolve without losing track of how work really flows through it.
+By thinking in terms of workflow state ownership, communication style, consistency model, and coordination, you can design workflows that align with business risk: orchestrated and strongly visible when correctness matters most, and choreographed and event-driven when scale and resilience dominate. Treat sagas and workflows as first-class architectural elements—with names, tags, observability, and ADRs—and your distributed system can evolve without losing track of how work really flows through it.
 
 ## Recommended Reading
 

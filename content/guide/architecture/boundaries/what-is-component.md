@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-A component is the basic unit of structure in your architecture. It is the place where you decide what changes together, what can evolve independently, and who owns which decisions. Get components right and everything else—services, modules, deployment topologies—becomes much easier to reason about. Get them wrong and your system slowly turns into a tangle of hidden dependencies and “just this once” hacks.
+A component is the basic unit of structure in your architecture. It is the place where you decide together what changes, what can evolve independently, and who owns which decisions. Get components right and everything else—services, modules, deployment topologies—becomes much easier to reason about. Get them wrong and your system slowly turns into a tangle of hidden dependencies and “just this once” hacks.
 
 ## Why Components Matter
 
@@ -23,7 +23,7 @@ At its core, a component is a unit of responsibility:
 
 * It has a clear purpose in business terms.  
 * It owns a coherent set of behaviors and data.  
-* It is the default home for a certain kind of change.
+* It is the default home for a particular kind of change.
 
 If you cannot answer “what is this component responsible for?” in one short sentence, you do not have a component; you have a bucket.
 
@@ -32,14 +32,14 @@ If you cannot answer “what is this component responsible for?” in one short 
 “Component” is a logical concept. It is independent of:
 
 * Whether you deploy it as a microservice, a library, or a piece of a monolith.  
-* Which language or framework you use.  
-* How many teams work on the codebase.
+* Which language or framework do you use?  
+* How many teams work on the codebase?
 
 You can (and should) do component-based design inside a single deployable application. Microservices without clear component thinking just give you a distributed big ball of mud.
 
 ## What Exactly Is a Component?
 
-A component is a self-contained unit of software with three parts: a responsibility, a contract, and an implementation. The responsibility defines why it exists, the contract defines how others see it, and the implementation is everything it does to keep that promise.
+A component is a self-contained unit of software with three parts: a responsibility, a contract, and an implementation. Responsibility defines why it exists; the contract defines how others see it; and implementation is everything it does to keep that promise.
 
 ### Responsibility, Contract, Implementation
 
@@ -63,7 +63,7 @@ Every time you let an internal decision leak out—“just reuse this table,” 
 
 ### Autonomy and Replaceability
 
-A useful component has enough autonomy that you could replace its implementation without rewriting the whole system:
+A valuable component has enough autonomy that you could replace its implementation without rewriting the whole system:
 
 * It owns its rules and data.  
 * It hides technology choices (database brand, HTTP client, message broker details).  
@@ -80,10 +80,10 @@ Component design is where cohesion and coupling become real. Cohesion is about w
 A cohesive component:
 
 * Has one primary reason to exist (for example, “manage product catalog,” “manage billing accounts”).  
-* Groups behaviors that naturally change together.  
+* Groups of behaviors that naturally change together.  
 * Minimizes “miscellaneous extras” that don’t fit the core story.
 
-Low cohesion shows up as “god components” that do everything: validation, orchestration, reporting, random helper methods. These components attract change from every direction and become painful to touch.
+Low cohesion shows up as “god components” that do everything: validation, orchestration, reporting, and random helper methods. These components attract change from every direction and become painful to touch.
 
 ### Low Coupling: Narrow, Purposeful Connections
 
@@ -103,7 +103,7 @@ The goal is high internal coupling (cohesion) and low external coupling (only wh
 
 ## Boundaries, Contracts, and Data Ownership
 
-Component boundaries only matter if they are backed by clear contracts and strong data ownership. Otherwise they are just boxes on a slide.
+Component boundaries only matter if clear contracts and strong data ownership back them. Otherwise, they are just boxes on a slide.
 
 ### Contracts: Behavior, Not Plumbing
 
@@ -127,7 +127,7 @@ Shared write models are a direct attack on modularity. They force tightly couple
 
 ## Components in an Architecture
 
-Once you have a good definition of component, you can place them into broader architectures without changing what they are.
+Once you have a good definition of a component, you can place them into broader architectures without changing what they are.
 
 ### Logical vs Deployment Components
 
@@ -143,7 +143,7 @@ Sometimes a single deployment unit contains several components (a modular monoli
 Components can interact in different ways:
 
 * **Synchronous**: direct calls (function calls, REST, gRPC) when you need immediate responses and tight SLAs.  
-* **Asynchronous**: messages and events when you want decoupling in time, back-pressure smoothing, or broadcast.
+* **Asynchronous**: messages and events when you want decoupling in time, back-pressure smoothing, or broadcasting.
 
 The interaction style doesn’t change what a component is, but it changes:
 
@@ -197,7 +197,7 @@ As the system grows, you will need to:
 * **Merge** components that only exist because of earlier technical constraints.  
 * **Extract** new components when a subset of logic starts changing on a different cadence.
 
-The right move is usually guided by change patterns:
+Change patterns usually guide the right move:
 
 * If two parts always change together, they probably belong in one component.  
 * If a part changes often while the rest is stable, it may deserve its own component.
@@ -239,7 +239,7 @@ Both problems come from skipping the responsibility question and slicing by tech
 
 ## Summary
 
-A component is a unit of responsibility with a clear contract and hidden implementation. It owns specific behaviors and data, shields the rest of the system from its internal decisions, and gives you a natural place to talk about ownership, change, and risk. Components sit at the heart of modularity: they balance cohesion and coupling, shape how teams work, and define how your system evolves.
+A component is a unit of responsibility with a clear contract and hidden implementation. It owns specific behaviors and data, shields the rest of the system from its internal decisions, and provides a natural place to discuss ownership, change, and risk. Components sit at the heart of modularity: they balance cohesion and coupling, shape how teams work, and define how your system evolves.
 
 If you treat components as first-class citizens—designing their responsibilities, contracts, data ownership, and dependencies deliberately—you can grow your architecture without drowning in complexity. If you treat them as just code folders or service labels, you will eventually ship a distributed tangle with nicer diagrams.
 

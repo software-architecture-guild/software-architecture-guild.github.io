@@ -35,7 +35,7 @@ It is typically:
 
 * Aggregated or reshaped for querying.  
 * Organized by business questions, not by transaction workflows.  
-* Tolerant of small delays but sensitive to completeness and quality.
+* Tolerant of minor delays but sensitive to completeness and quality.
 
 If you treat analytical data as an afterthought—a raw dump of operational tables—you end up with dashboards that are either wrong, late, or too fragile to evolve.
 
@@ -75,7 +75,7 @@ After decomposition, your “simple” report is suddenly built on:
 From the business point of view, it is still one question:  
 “Show me completion time by customer tier and product.”  
 
-From the architecture point of view, it’s many joins across services that never agreed on a shared schema.
+From an architectural point of view, there are many joins across services that never agreed on a shared schema.
 
 The risk is obvious:
 
@@ -84,22 +84,22 @@ The risk is obvious:
 
 ### Pipelines as Hidden Architecture
 
-In distributed systems, data pipelines are architecture:
+In distributed systems, data pipelines are an architecture:
 
 * They encode assumptions about schemas and semantics.  
-* They define blast radius when a source changes.  
+* They define the blast radius when a source changes.  
 * They decide how late and how complete your analytical views are.
 
 If you ignore this and just “set up some ETLs,” you build a second, parallel architecture that is:
 
-* Centralized while your services are decentralized.  
+* Centralized, while your services are decentralized.  
 * Hard to reason about and even harder to safely change.  
 
 Managing analytical data means treating pipelines, datasets, and contracts as first-class design elements, not tools glued on at the end.
 
 ## Classic Approaches: Warehouses and Lakes
 
-Most organizations didn’t start with microservices. They started with **warehouses** and **lakes**. Both still have a place, but they show their limits once you have many independent services and domains.
+Most organizations didn’t start with microservices. They began with **warehouses** and **lakes**. Both still have a place, but they show their limits once you have many independent services and domains.
 
 ### Data Warehouses: One Integrated Schema
 
@@ -229,7 +229,7 @@ Boundaries for analytical products should reflect business questions, not just o
 * A **Ticket Outcomes DPQ** might focus on resolution times, categories, and channels, strictly from the ticketing domain’s viewpoint.  
 * An **Expert Supply DPQ** might combine ticket demand with expert availability and skills to guide hiring and scheduling decisions.
 
-If you try to serve both domains from one product, you risk recreating a mini-warehouse inside a single DPQ.
+If you try to serve both domains from a single product, you risk creating a mini-warehouse within a single DPQ.
 
 ### Contracts and Schemas as Fitness Functions
 
@@ -251,7 +251,7 @@ These fitness checks give you early warning when upstream changes or pipeline is
 
 Analytical data is almost always eventually consistent with operational systems:
 
-* Events or CDC streams can arrive late or out-of-order.  
+* Events or CDC streams can arrive late or out of order.  
 * Some days or periods might be incomplete due to outages or schema changes.  
 
 Instead of pretending everything is perfect, you can:
@@ -259,7 +259,7 @@ Instead of pretending everything is perfect, you can:
 * Mark snapshots as complete or exempt (excluded from trend analysis) based on strict completeness checks.  
 * Make lateness and data gaps visible metrics, not hidden surprises.
 
-The important part is aligning those choices with how the business uses the data:
+The critical part is aligning those choices with how the business uses the data:
 
 * For daily planning, yesterday’s complete snapshot might be enough.  
 * For real-time fraud detection, you may need much tighter bounds on delay and loss.
@@ -288,7 +288,7 @@ Lakes are powerful when:
 
 * You work with raw, unstructured, or semi-structured data.  
 * Data scientists do lots of exploratory work and ML experimentation.  
-* You can tolerate looser governance in early stages of discovery.
+* You can tolerate looser governance in the early stages of discovery.
 
 They struggle when:
 
@@ -320,12 +320,12 @@ In many organizations, the future is not warehouse *or* lake *or* mesh, but a co
 
 Managing analytical data in a distributed system is a design problem, not just a tooling problem. Once you fragment operational data across services, you have to be deliberate about:
 
-* How you define analytical data and separate it from live transactional state.  
+* How do you define analytical data and separate it from live transactional state?  
 * How you evolve beyond centralized warehouses and lakes that can’t keep up with domain-oriented change.  
 * How you adopt domain-owned data products—Data Product Quanta—as the building blocks of your analytical landscape.  
 * How you design contracts, snapshots, and quality checks so analytical data remains trustworthy even as schemas and services evolve.
 
-If you treat analytical data as a first-class part of your architecture, aligned with domains and backed by clear contracts and governance, your reports and models stop being fragile artifacts at the edge. They become stable, evolvable assets that grow with your system instead of holding it back.
+Suppose you treat analytical data as a first-class part of your architecture, aligned with domains and backed by clear contracts and governance. In that case, your reports and models stop being fragile artifacts at the edge. They become stable, evolvable assets that grow with your system instead of holding it back.
 
 ## Recommended Reading
 

@@ -11,13 +11,13 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Coupling is unavoidable, but pain from coupling is not. Systems hurt when the wrong parts are tightly connected across long distances and change all the time. This article shows how to balance coupling across three axes—strength, distance, and volatility—so you can reduce surprise, keep complexity local, and make change a controlled cost instead of a gamble.
+Coupling is unavoidable, but pain from coupling is not. Systems break down when the wrong parts are tightly connected across long distances and keep changing. This article shows how to balance coupling across three axes—strength, distance, and volatility—so you can reduce surprise, keep complexity local, and make change a controlled cost instead of a gamble.
 
 ## Why Balancing Coupling Matters
 
 Balancing coupling is about deciding where you are willing to pay for shared knowledge and coordination. You can’t make everything loosely coupled without losing cohesion, and you can’t make everything tightly coupled without drowning in global complexity. Once you see coupling as three interacting dimensions, you can design seams that are stable enough, cheap enough to change, and modular enough that problems don’t spill everywhere.
 
-### From “Less Coupling” to “Right Coupling”
+### From “Less Coupling” to “Right Coupling.”
 
 The naive goal is “reduce coupling.” The realistic goal is more precise:
 
@@ -39,7 +39,7 @@ Strength is about what knowledge crosses a boundary:
 * In the middle, you share rich models or functional behavior.  
 * At the strong end, integration becomes intrusive: direct table access, scraped HTML, shared internals.  
 
-High strength means changes in one side are more likely to force changes in the other, because more assumptions are shared.
+High strength means changes on one side are more likely to force changes in the other, because more assumptions are shared.
 
 ### Distance: How Far That Knowledge Must Travel
 
@@ -67,7 +67,7 @@ Before using numbers, you can reason in a binary way: each dimension is either h
 
 Stability is about whether a relationship is likely to hold together without constant repairs.
 
-* High volatility and high strength is the dangerous combo: something changes often, and many assumptions are shared.  
+* High volatility and high strength are a dangerous combo: something changes often, and many assumptions are shared.  
 * If either one is low, you’re safer:  
   * Low volatility + high strength: tightly coupled but stable (classic legacy upstream).  
   * High volatility + low strength: lots of change, but little shared knowledge to break.  
@@ -76,13 +76,13 @@ You can summarize it as:
 
 `STABILITY = NOT (VOLATILITY AND STRENGTH)`  
 
-If both are high, stability is low; otherwise you’re okay.
+If both are high, stability is low; otherwise, you’re okay.
 
 ### Change Cost: Volatility vs Distance
 
 Change cost is about how much coordination and ceremony you need when something moves.
 
-* High volatility and high distance means every change triggers cross-team, cross-system work.  
+* High volatility and high distance mean every change triggers cross-team, cross-system work.  
 * If volatility is high but distance is low, teams can change together cheaply.  
 * If distance is high but volatility is low, you rarely need to coordinate at all.  
 
@@ -90,7 +90,7 @@ As a rule:
 
 `CHANGES COST = VOLATILITY AND DISTANCE`  
 
-If both are high, expect expensive change.
+If both are high, expect an expensive change.
 
 ### Modularity vs Complexity: Strength vs Distance
 
@@ -109,7 +109,7 @@ High–low or low–high: good. High–high or low–low: smells like trouble.
 
 ## Numeric Lens: Measuring Balance
 
-Once you get the intuition, you can move from binary categories to a numeric scale from 1–10 for each axis. That lets you compare designs, rank hotspots, and capture “hand-wavy” feelings in a simple score.
+Once you get the intuition, you can move from binary categories to a numeric scale from 1 to 10 for each axis. That lets you compare designs, rank hotspots, and capture “hand-wavy” feelings in a simple score.
 
 ### Scales for Strength, Distance, and Volatility
 
@@ -145,7 +145,7 @@ A big difference says: “Either these things are close and deeply connected, or
 
 ### Balance Score: Letting Volatility Compensate
 
-Then you let low volatility compensate for poor modularity. Even a bad strength–distance combo might be acceptable if almost nothing ever changes there.
+Then you let low volatility compensate for poor modularity. Even an insufficient strength–distance combo might be acceptable if almost nothing ever changes there.
 
 You treat low volatility as a second candidate score:
 
@@ -199,7 +199,7 @@ Pick one lever, apply it deliberately, then re-evaluate. If local tuning isn’t
 
 ## Fractal Design: Same Rules at Every Level
 
-Balanced coupling is fractal: the same ideas apply from methods to classes, from components to services, from services to systems. If boundaries follow the same rules at each level, the whole system grows in a predictable way.
+Balanced coupling is fractal: the same ideas apply from methods to classes, from components to services, from services to systems. If boundaries follow the same rules at each level, the whole system grows predictably.
 
 ### Self-Similarity Across Scales
 
@@ -220,7 +220,7 @@ To keep complexity under control as you add features:
 * Ensure each boundary hides internal detail in the same way as the next level up.  
 * Avoid “shallow” abstractions that leak internals and break the fractal pattern.  
 
-If a boundary pattern would not work at the next scale up or down, it’s probably going to cause trouble as the system grows.
+If a boundary pattern doesn't work at the next scale up or down, it’s likely to cause trouble as the system grows.
 
 ## Summary
 

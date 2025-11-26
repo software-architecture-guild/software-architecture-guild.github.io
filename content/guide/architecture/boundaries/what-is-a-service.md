@@ -27,7 +27,7 @@ A clear idea of “service” lets you separate three decisions:
 * How you package and deploy that logic (services).  
 * How fine-grained those services should be (service granularity).
 
-Once those are distinct, you can tune them independently instead of trying to fix design problems purely by splitting or merging services.
+Once those are distinct, you can tune them independently rather than trying to fix design problems solely by splitting or merging services.
 
 ## Definition of a Service?
 
@@ -47,11 +47,11 @@ If you wouldn’t:
 * page a team specifically for it, or  
 * talk about its SLOs and failure modes,
 
-then you probably don’t have a real service yet — you just have some code in a process.
+Then you probably don’t have a real service yet — you just have some code in a process.
 
 ### The Service Surface: Behavior, Data, Operations
 
-A service is defined by three intertwined contracts:
+Three intertwined contracts define a service:
 
 * **Behavioral contract** – the operations it offers (“register customer”, “assign ticket”, “charge payment”), their invariants, and error conditions.  
 * **Data contract** – which data it *owns*, which data it *exposes* (APIs, events, read models), and which data it merely *consumes*.  
@@ -77,7 +77,7 @@ A **service** is an **operational building block**:
 * It’s a unit of behavior, deployment, and on-call responsibility.  
 * It bundles one or more components into a single runtime unit.  
 * It lives both in your design and in your infrastructure.  
-* It has a distinct operational life: it can be up, down, rolling out, degraded.
+* It has a distinct operational life: it can be up, down, rolling out, or degraded.
 
 You can have:
 
@@ -91,7 +91,7 @@ Component decisions shape *how you carve up logic*. Service decisions shape *how
 
 In a healthy design:
 
-* You define components first: responsibilities, data ownership, contracts.  
+* You define components first: responsibilities, data ownership, and contracts.  
 * You then decide which components sit together inside one service *for now*.  
 * If you later pull a component into its own service, you’re changing its deployment story, not its responsibility.
 
@@ -105,7 +105,7 @@ With that foundation, we can talk about service granularity.
 
 ## Service Granularity and Modularity
 
-Service granularity is about how big each service should be. It builds on modularity but isn’t the same thing.
+Service granularity is the degree to which each service should be sized. It builds on modularity but isn’t the same thing.
 
 ### Modularity vs Granularity
 
@@ -130,7 +130,7 @@ If you always deploy two services together, debug them together, and treat any f
 
 ## Forces That Push Services Apart: Granularity Disintegrators
 
-Granularity disintegrators are forces that say, “this might be too much for one service; consider splitting.”
+Granularity disintegrators are forces that say, “This might be too much for one service; consider splitting.”
 
 ### Service Scope and Function
 
@@ -140,7 +140,7 @@ If a service’s mission statement is vague (“all customer things”, “misc 
 
 ### Code Volatility
 
-When part of a service changes constantly and another part barely moves:
+When part of a service changes constantly, and another part barely moves:
 
 * Every release for the “hot” area drags “cold” areas through testing and deployment.  
 * Bugs in fast-moving code can affect stable behavior that had no reason to be touched.
@@ -154,7 +154,7 @@ When one part sees much more traffic than the others:
 * You end up scaling the entire service for that hotspot.  
 * You pay infrastructure cost and complexity even for rarely used parts.
 
-Splitting lets you scale hot paths separately. If traffic patterns are similar, this force is weaker and shared scaling can be simpler.
+Splitting lets you scale hot paths separately. If traffic patterns are similar, this force is weaker, and shared scaling can be simpler.
 
 ### Fault Tolerance
 
@@ -204,16 +204,16 @@ If two steps:
 * In a fixed order,  
 * And don’t make sense independently,
 
-splitting them is often counterproductive. You add latency, retries, and coordination for little gain.
+Splitting them is often counterproductive. You add latency, retries, and coordination for little gain.
 
 ### Shared Code
 
-If you’d have to duplicate complex logic or push it into a massive shared library to support a split, that’s a warning sign:
+If you have to duplicate complex logic or push it into a massive shared library to support a split, that’s a warning sign:
 
 * Duplicated logic drifts.  
-* Giant shared libraries quietly recouple services at version level.
+* Giant shared libraries quietly recouple services at the version level.
 
-Sometimes the simplest answer is: keep these responsibilities in one service and keep the shared logic internal, but structured as components.
+Sometimes the most straightforward approach is to keep these responsibilities within a single service and keep the shared logic internal, structured as components.
 
 ### Data Relationships
 

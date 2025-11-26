@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Defining components is where architecture becomes real. It is the moment you decide what belongs together, what can evolve independently, and where change will hurt. Once you have a good set of components, services and deployment diagrams are just packaging choices. Without them, every change feels like poking a blob.
+Defining components is where architecture becomes real. It is the moment you decide what belongs together, what can evolve independently, and where change will hurt. Once you have a good set of components, services, and deployment diagrams, they are just packaging choices. Without them, every change feels like poking a blob.
 
 ## Why Defining Components Matters
 
@@ -39,10 +39,10 @@ Many decomposition patterns were written for breaking monoliths, but they are ju
 
 * “Identify and size components” becomes a way to avoid god components on day one.  
 * “Gather common domain components” prevents you from duplicating core concepts in every module.  
-* “Flatten components” keeps structure understandable as the system grows.  
+* “Flatten components” keeps the structure understandable as the system grows.  
 * “Determine component dependencies” stops you from building cycles you’ll regret later.
 
-You can either discover these patterns by suffering for a few years, or apply them deliberately up front.
+You can either discover these patterns by suffering for a few years or apply them deliberately up front.
 
 ## What It Means to Define a Component
 
@@ -239,13 +239,13 @@ Sometimes, data pushes you toward a new component boundary:
 That’s a hint:
 
 * Either you need a dedicated component to own that data.  
-* Or your existing components are too fine-grained or badly scoped.
+* Or your existing components are too fine-grained or poorly scoped.
 
 Use data as a sanity check on your component model: if the data boundaries and the component boundaries don’t roughly align, one of them is wrong.
 
 ## Using Metrics and Feedback Loops
 
-Component design is not a “decide once and forget” activity. This block shows how to use simple metrics and feedback mechanisms to keep boundaries healthy over time.
+Component design is not a “decide once and forget” activity. This block shows how to use simple metrics and feedback mechanisms to maintain healthy boundaries over time.
 
 ### Checking Component Size and Shape
 
@@ -257,13 +257,13 @@ You can’t manage what you never measure. Even simple metrics help:
 
 These metrics don’t tell you what to do, but they tell you where to look:
 
-* Very large components might need splitting or clearer responsibilities.  
+* Huge components might need splitting or clearer responsibilities.  
 * Tiny components might be noise that can be merged.  
-* Components that grow faster than others might be becoming dumping grounds.
+* Components that grow faster than others might become dumping grounds.
 
 ### Abstractness, Instability, and Balance
 
-Two useful dimensions for components are:
+Two practical dimensions for components are:
 
 * **Abstractness** – how much of the code is abstract (interfaces, base classes) vs concrete implementations.  
 * **Instability** – how much a component depends on others vs how much others depend on it.
@@ -274,7 +274,7 @@ Intuitively:
 * Very concrete and very unstable components are volatile and fragile.  
 * Components that are either over-abstracted and unused, or very concrete but depended on by many others, tend to be painful.
 
-You don’t need perfect numbers. The point is to spot weird outliers and ask “why is this component shaped like that?”
+You don’t need perfect numbers. The point is to spot weird outliers and ask, “Why is this component shaped like that?”
 
 ### Fitness Functions and Architecture Stories
 
@@ -283,7 +283,7 @@ To keep component design from decaying quietly:
 * **Define fitness functions**: automated checks that fail builds or raise alerts when components cross certain thresholds (size, cycles, dependency count, etc.).  
 * **Write architecture stories**: small, testable goals like “component X no longer depends on the shared database” or “all customer rules live in the Customer component.”
 
-Fitness functions give you continuous feedback. Architecture stories give you focused refactoring targets. Together they turn “we should keep components clean” into concrete work.
+Fitness functions give you continuous feedback. Architecture stories give you focused refactoring targets. Together, they turn “we should keep components clean” into concrete work.
 
 ## Summary
 

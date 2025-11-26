@@ -146,7 +146,7 @@ The common compromise is:
 
 Eventual consistency is not one thing; there are patterns with different coupling and timeliness profiles. A few useful ones:
 
-* **Background synchronization** – a batch or external process periodically reconciles data between systems. Good for low-urgency alignment, but the sync job quietly becomes a data co-owner and can undermine boundaries.  
+* **Background synchronization** – a batch or external process periodically reconciles data between systems. Suitable for low-urgency alignment, but the sync job quietly becomes a data co-owner, potentially undermining boundaries.  
 * **Orchestrated request-based** – a workflow service calls multiple services during a business operation (for example, profile, contract, billing during registration). You get tighter alignment but a central orchestrator becomes a dependency and complexity magnet.  
 * **Event-based** – services publish events when their state changes; other services consume and update their own local state. This tends to be the default in modern systems: decoupled, near real-time, and scalable, but it demands discipline around event modeling, idempotency, and error handling.
 
@@ -168,9 +168,9 @@ The simplest pattern is: when Service A needs data owned by Service B, it calls 
 
 * Every read pays network latency and is vulnerable to B’s availability and performance.  
 * When many consumers call B, it becomes a hot spot you must scale and protect.  
-* Long call chains can turn a small hiccup into a user-visible outage.
+* Long call chains can turn a minor hiccup into a user-visible outage.
 
-Direct calls are fine when call rates are modest and freshness needs are high. They are a poor fit for high-volume, low-latency read paths.
+Direct calls are fine when call rates are modest, and freshness needs are high. They are a poor fit for high-volume, low-latency read paths.
 
 ### Column or Schema Replication
 
@@ -196,7 +196,7 @@ Instead of calling another service every time, you can replicate a subset of its
 
 ### Replicated Caching
 
-Replicated caching pushes the replica into an in-memory cache instead of a database.
+Replicated caching stores the replica in an in-memory cache rather than a database.
 
 * Consumer services cache data from the owner in a shape optimized for their needs.  
 * Populating and refreshing caches happens via events, polling, or startup warm-up.
@@ -217,10 +217,10 @@ This is a good fit when data is small, relatively static, and read-heavy, and wh
 
 ### Data Domains and Shared Databases
 
-Sometimes the right answer is to share a database within a tightly scoped data domain.
+Sometimes the correct answer is to share a database within a tightly scoped data domain.
 
 * Multiple services in the same domain (for example, customer & expert profiles) share a database or schema.  
-* They keep rich local access and strong consistency where they truly need it.
+* They keep rich local access and strong consistency where they genuinely need it.
 
 **Trade-offs**:
 
@@ -239,7 +239,7 @@ Managing operational data is not a single decision; it is a chain of related cho
 * How to handle **cross-service workflows**, using local ACID where it matters and eventual consistency where the business can live with it.  
 * How to design **data access patterns** so consumers get the data they need without turning every read into a tight runtime dependency on someone else’s service.
 
-If you treat operational data as a first-class design concern, you avoid the trap of “microservices with a monolithic database” and the opposite trap of “database-per-service everywhere, regardless of relationships.” You get a system where data boundaries match business boundaries, responsibilities are clear, and failures and changes are contained instead of contagious.
+Suppose you treat operational data as a first-class design concern. In that case, you avoid the trap of “microservices with a monolithic database” and the opposite trap of “database-per-service everywhere, regardless of relationships.” You get a system where data boundaries match business boundaries, responsibilities are clear, and failures and changes are contained rather than becoming contagious.
 
 ## Recommended Reading
 
