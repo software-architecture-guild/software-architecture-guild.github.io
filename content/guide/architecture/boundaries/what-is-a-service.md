@@ -23,15 +23,15 @@ Services are how your architecture shows up in production. Components give you *
 
 A clear idea of “service” lets you separate three decisions:
 
-* How you **organize logic** (components).  
-* How you **package and deploy** that logic (services).  
-* How **fine-grained** those services should be (service granularity).
+* How you organize logic (components).  
+* How you package and deploy that logic (services).  
+* How fine-grained those services should be (service granularity).
 
 Once those are distinct, you can tune them independently instead of trying to fix design problems purely by splitting or merging services.
 
 ## Definition of a Service?
 
-A service is a **runtime and deployment boundary** wrapped around a coherent set of behaviors and data, with a team accountable for keeping it healthy.
+A service is a runtime and deployment boundary wrapped around a coherent set of behaviors and data, with a team accountable for keeping it healthy.
 
 More concretely, a service:
 
@@ -105,7 +105,7 @@ With that foundation, we can talk about service granularity.
 
 ## Service Granularity and Modularity
 
-Service granularity is about **how big each service should be**. It builds on modularity but isn’t the same thing.
+Service granularity is about how big each service should be. It builds on modularity but isn’t the same thing.
 
 ### Modularity vs Granularity
 
@@ -178,14 +178,14 @@ The trade-off is that you may lose simple local transactions and need to redesig
 
 If you know you’ll keep adding new variants in one area (payment methods, shipping providers, notification channels), you might:
 
-* Keep them in one pluggable service, **or**  
+* Keep them in one pluggable service, or  
 * Split them into separate services when they truly diverge in behavior, cadence, or risk.
 
 Doing this “for future flexibility” with no real signals usually leads to many half-used services you have to maintain forever.
 
 ## Forces That Keep Services Together: Granularity Integrators
 
-Granularity integrators argue for **keeping responsibilities in the same service**. They stop you from splitting things just to be “more micro.”
+Granularity integrators argue for keeping responsibilities in the same service. They stop you from splitting things just to be “more micro.”
 
 ### Database Transactions
 
@@ -236,7 +236,7 @@ Typical pattern:
 * Transactions and data relationships say “keep together.”  
 * Security pulls toward “split”; workflow simplicity pulls toward “keep.”
 
-The useful move is to **name** each force explicitly and then decide which ones matter most for *this* capability, at *this* point in time.
+The useful move is to name each force explicitly and then decide which ones matter most for *this* capability, at *this* point in time.
 
 ### Business-Driven Trade-offs
 
@@ -258,6 +258,6 @@ Service granularity sits on top of that: it’s the art of choosing how big each
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 7: Service Granularity**\
     Introduces disintegrators and integrators as a structured way to reason about service size and demonstrates their use through concrete scenarios and ADR-backed decisions.

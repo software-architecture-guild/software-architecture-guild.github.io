@@ -19,7 +19,7 @@ Components are where business intent meets technical reality. A “Payments” c
 
 ### Components as Units of Responsibility
 
-At its core, a component is a **unit of responsibility**:
+At its core, a component is a unit of responsibility:
 
 * It has a clear purpose in business terms.  
 * It owns a coherent set of behaviors and data.  
@@ -29,17 +29,17 @@ If you cannot answer “what is this component responsible for?” in one short 
 
 ### Components vs Services vs Modules
 
-“Component” is a **logical** concept. It is independent of:
+“Component” is a logical concept. It is independent of:
 
 * Whether you deploy it as a microservice, a library, or a piece of a monolith.  
 * Which language or framework you use.  
 * How many teams work on the codebase.
 
-You can (and should) do component-based design **inside** a single deployable application. Microservices without clear component thinking just give you a distributed big ball of mud.
+You can (and should) do component-based design inside a single deployable application. Microservices without clear component thinking just give you a distributed big ball of mud.
 
 ## What Exactly Is a Component?
 
-A component is a **self-contained unit of software** with three parts: a responsibility, a contract, and an implementation. The responsibility defines why it exists, the contract defines how others see it, and the implementation is everything it does to keep that promise.
+A component is a self-contained unit of software with three parts: a responsibility, a contract, and an implementation. The responsibility defines why it exists, the contract defines how others see it, and the implementation is everything it does to keep that promise.
 
 ### Responsibility, Contract, Implementation
 
@@ -55,15 +55,15 @@ Good components make the first two questions easy to answer and make the third o
 
 Encapsulation is what turns “a pile of code” into a component:
 
-* Internal details (tables, helper classes, network calls) are **hidden**.  
-* Only the contract is **visible** and stable enough for others to rely on.  
+* Internal details (tables, helper classes, network calls) are hidden.  
+* Only the contract is visible and stable enough for others to rely on.  
 * Callers never reach into a component’s internals “just for this one thing.”
 
 Every time you let an internal decision leak out—“just reuse this table,” “just call this internal endpoint”—you are eroding the component boundary and increasing coupling.
 
 ### Autonomy and Replaceability
 
-A useful component has enough autonomy that you **could** replace its implementation without rewriting the whole system:
+A useful component has enough autonomy that you could replace its implementation without rewriting the whole system:
 
 * It owns its rules and data.  
 * It hides technology choices (database brand, HTTP client, message broker details).  
@@ -91,7 +91,7 @@ A well-designed component:
 
 * Exposes a clear contract tailored to its responsibilities.  
 * Avoids leaking internal types or database schemas.  
-* Keeps callers depending on **what** it does, not **how** it does it.
+* Keeps callers depending on what it does, not how it does it.
 
 Coupling sneaks in when:
 
@@ -99,7 +99,7 @@ Coupling sneaks in when:
 * “Shared” libraries start carrying real business rules.  
 * Interfaces are too generic (“executeOperation(request)”) and force callers to know the internal model.
 
-The goal is high **internal** coupling (cohesion) and low **external** coupling (only what’s necessary leaks out).
+The goal is high internal coupling (cohesion) and low external coupling (only what’s necessary leaks out).
 
 ## Boundaries, Contracts, and Data Ownership
 
@@ -109,7 +109,7 @@ Component boundaries only matter if they are backed by clear contracts and stron
 
 A component’s contract is more than a function signature or API path. It should:
 
-* Describe **business behavior**: what does this operation actually do?  
+* Describe business behavior: what does this operation actually do?  
 * Specify inputs, outputs, and error conditions in business terms.  
 * Capture non-functional expectations: latency, idempotency, side effects.
 
@@ -119,7 +119,7 @@ Good contracts let you reason about the system as a set of capabilities: “if I
 
 Data boundaries are component boundaries:
 
-* Each important dataset should have a **single owning component** that writes it.  
+* Each important dataset should have a single owning component that writes it.  
 * Other components consume via APIs, events, or read models—not by writing to the same tables.  
 * Local caches and replicated read models are fine as long as there is one authoritative writer.
 
@@ -136,7 +136,7 @@ Distinguish between:
 * **Logical components** – your conceptual units of responsibility.  
 * **Deployment units** – how you slice binaries, containers, and services.
 
-Sometimes a single deployment unit contains several components (a modular monolith). Sometimes one logical component is split across deployments (not ideal, but reality). You still design **logically** first; deployment comes later.
+Sometimes a single deployment unit contains several components (a modular monolith). Sometimes one logical component is split across deployments (not ideal, but reality). You still design logically first; deployment comes later.
 
 ### Interactions: Synchronous and Asynchronous
 
@@ -167,7 +167,7 @@ Component design is an iterative process. You will not guess the perfect boundar
 
 ### Finding Responsibilities
 
-Start from **business language and workflows**, not from tables and endpoints:
+Start from business language and workflows, not from tables and endpoints:
 
 * Identify capabilities: “User Management,” “Billing,” “Reporting,” “Onboarding.”  
 * Ask what decisions each capability makes and what data it needs to make them.  
@@ -177,14 +177,14 @@ A good litmus test: when discussing a change, can you say “this is clearly a c
 
 ### Shaping the Dependency Profile
 
-Each component has an **incoming** and **outgoing** dependency profile:
+Each component has an incoming and outgoing dependency profile:
 
 * Incoming: who depends on me? How many callers, how critical?  
 * Outgoing: what do I depend on? How many external systems, libraries, and services?
 
 Healthy components:
 
-* High in the call graph: many incoming, **few** outgoing dependencies.  
+* High in the call graph: many incoming, few outgoing dependencies.  
 * Low in the call graph: more outgoing, but still well-structured and acyclic.
 
 Cycles between components (“A depends on B and B depends on A”) are a structural smell. Break them with a shared abstraction, a new component, or events.
@@ -195,7 +195,7 @@ As the system grows, you will need to:
 
 * **Split** components that accumulate too many responsibilities.  
 * **Merge** components that only exist because of earlier technical constraints.  
-* Extract new components when a subset of logic starts changing on a different cadence.
+* **Extract** new components when a subset of logic starts changing on a different cadence.
 
 The right move is usually guided by change patterns:
 
@@ -216,7 +216,7 @@ Certain patterns reliably undermine component-based thinking.
 * Everyone depends on them, but nobody clearly owns them.  
 * Any change risks breaking half the system.
 
-A simple rule: shared components should be **pure utility** (no business decisions), or clearly scoped domain components with real responsibilities.
+A simple rule: shared components should be pure utility (no business decisions), or clearly scoped domain components with real responsibilities.
 
 ### Table-Driven Boundaries
 
@@ -226,7 +226,7 @@ Designing components around database tables (“one service per table”) produc
 * Business rules scattered across many components.  
 * Frequent cross-boundary joins and cross-table updates.
 
-Instead, design around **responsibilities and behaviors**, then decide where data should live to support those responsibilities.
+Instead, design around responsibilities and behaviors, then decide where data should live to support those responsibilities.
 
 ### Over-Fragmentation and God Components
 
@@ -247,9 +247,9 @@ If you treat components as first-class citizens—designing their responsibiliti
 
 #### Books
 
-* Mark Richards & Neal Ford (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. Addison-Wesley.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 8: Component-Based Thinking**\
     Introduces components as encapsulated building blocks of architecture and shows how component-based thinking supports modularity, maintainability, and team scaling.
-* Raju Gandhi (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O'Reilly Media.  
   * **Chapter 4: Logical Components: The Building Blocks**\
     Frames components as units of responsibility and ownership, with practical guidance on finding boundaries, defining contracts, and avoiding common component pitfalls.

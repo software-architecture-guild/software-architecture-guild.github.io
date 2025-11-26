@@ -19,7 +19,7 @@ Modularity is not about neat diagrams or fashionable patterns; it is about survi
 
 ### Modularity as “Evolvability by Design”
 
-You can think of modularity as **designing a system to evolve**:
+You can think of modularity as designing a system to evolve:
 
 * A module has a clear purpose and a stable public surface.  
 * Internal details can change freely as long as that surface stays intact.  
@@ -31,8 +31,8 @@ Done well, this makes future changes “reasonable” in effort: you still have 
 
 Modularity is supposed to make complexity tractable, not disappear. The real question is:
 
-* Does complexity stay **local**, inside modules and their boundaries?  
-* Or does it **leak everywhere**, so every change touches many parts?
+* Does complexity stay local, inside modules and their boundaries?  
+* Or does it leak everywhere, so every change touches many parts?
 
 A highly modular architecture still has complex modules; the difference is that this complexity is contained. A big ball of mud shares knowledge promiscuously: rules are duplicated, state is shared, and every decision seems to depend on everything else.
 
@@ -40,7 +40,7 @@ A highly modular architecture still has complex modules; the difference is that 
 
 To talk about modularity, you need a clear idea of what a module is. Ignore technology for a moment—no “service vs package” debates. Focus on the shape of knowledge and responsibility.
 
-Modularity is about drawing **boundaries around self-contained functionality** and exposing only the knowledge others truly need, while hiding the rest.
+Modularity is about drawing boundaries around self-contained functionality and exposing only the knowledge others truly need, while hiding the rest.
 
 ### Function, Logic, and Context
 
@@ -57,15 +57,15 @@ Good modularity exposes *function* clearly, hides *logic* aggressively, and make
 
 ### Modules as Knowledge Boundaries
 
-A module is a **knowledge boundary**:
+A module is a knowledge boundary:
 
 * Inside, you can afford rich, tangled knowledge because the team controls it.  
 * Outside, you want minimal, precise knowledge crossing the boundary.
 
 Treating modules as knowledge boundaries forces hard questions:
 
-* What **must** callers know to use this correctly?  
-* What **must never** escape, or we’ll be stuck with this internal choice forever?  
+* What must callers know to use this correctly?  
+* What must never escape, or we’ll be stuck with this internal choice forever?  
 
 If you cannot answer those questions, you do not have modularity—you have accidental groupings of code.
 
@@ -80,9 +80,9 @@ A shallow “UserUtils” module that just forwards calls to lower-level librari
 
 ## Modularity, Coupling, and Cohesion
 
-You cannot talk about modularity without talking about **coupling** (relationships between modules) and **cohesion** (how well things inside a module belong together). They are the practical levers that make modularity real.
+You cannot talk about modularity without talking about coupling (relationships between modules) and cohesion (how well things inside a module belong together). They are the practical levers that make modularity real.
 
-Modularity is the shape of the **boxes**; coupling and cohesion describe the **arrows and contents**.
+Modularity is the shape of the boxes; coupling and cohesion describe the arrows and contents.
 
 ### Coupling: What Flows Between Modules
 
@@ -100,7 +100,7 @@ You cannot judge modularity by counting modules. Two modules tightly coupled thr
 
 Cohesion is how strongly the responsibilities inside a module belong together.
 
-Good modularity aims for **high cohesion**:
+Good modularity aims for high cohesion:
 
 * Each module is responsible for a coherent set of behaviors or decisions.  
 * Everything inside the module exists to serve that responsibility.  
@@ -111,7 +111,7 @@ Low cohesion modules have grab-bag responsibilities: validation, logging, busine
 * Confusing ownership (“who actually owns this rule?”).  
 * Difficulty extracting anything clean later.
 
-Modularity is the balance point where **internal coupling (cohesion) is strong** and **external coupling is as weak as possible**.
+Modularity is the balance point where internal coupling (cohesion) is strong and external coupling is as weak as possible.
 
 ## Architectural vs Code Modularity
 
@@ -195,7 +195,7 @@ Architectural modularity improves deployability when modules are:
 * Designed so most changes affect only one or a few modules.  
 * Loosely coupled enough that you do not need big-bang coordinated releases.
 
-If every meaningful change still requires orchestrating many modules in lockstep, you have **distributed deployment pain**, not modularity.
+If every meaningful change still requires orchestrating many modules in lockstep, you have distributed deployment pain, not modularity.
 
 ### Scalability and Fault Tolerance
 
@@ -242,7 +242,7 @@ Trying to make modules handle every possible variation often backfires:
 * Modules become shallow wrappers over a tangle of special cases.  
 * The number of system states explodes, and testing becomes impossible.
 
-A better rule is to support **reasonable degrees of freedom**:
+A better rule is to support reasonable degrees of freedom:
 
 * Enough flexibility to cover real scenarios and expected evolution.  
 * Clear boundaries on what is out of scope.  
@@ -258,7 +258,7 @@ No modular structure is perfect from day one. You will:
 * Find modules that became “god modules” as the system grew.  
 * See duplicated rules across modules that should share an abstraction.
 
-Modularity needs **iterative refinement**:
+Modularity needs iterative refinement:
 
 * Split modules that have grown too broad.  
 * Merge modules that only exist because of past technical constraints.  
@@ -297,7 +297,7 @@ A classic smell is modularity by horizontal layers only:
 * UI module, business logic module, database module.  
 * Domain concepts sliced across all three, mixed with each other.
 
-This structure makes almost every change “cross-cutting” by design. Real modularity emerges when you group around **domain responsibilities** first and use layers inside modules where they help.
+This structure makes almost every change “cross-cutting” by design. Real modularity emerges when you group around domain responsibilities first and use layers inside modules where they help.
 
 ## Summary
 
@@ -309,12 +309,12 @@ Effective modularity balances coupling and cohesion, applies the same principles
 
 #### Books
 
-* Mark Richards & Neal Ford (2020). *[Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
   * **Chapter 3: Modularity**\
     Explores modularity as a driver for agility and competitive advantage through maintainability, testability, deployability, scalability, and fault tolerance.  
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 3: Architectural Modularity**\
     Focuses on modularity at the architecture level, showing how different structures (monoliths, modular monoliths, services) affect change scope and operational characteristics.  
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Self-published.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
   * **Chapter 4: Coupling and Modularity**\
     Defines modules as knowledge boundaries, introduces function/logic/context, and connects modularity directly to coupling, complexity, and information hiding.

@@ -32,16 +32,16 @@ In a distributed system, the same action might involve:
 * A fulfillment service scheduling work.  
 * A notification service informing the user.
 
-There is no single database transaction spanning all of this. Instead, you have a **workflow**: a set of local transactions, in some order, with rules about what to do when one fails.
+There is no single database transaction spanning all of this. Instead, you have a workflow: a set of local transactions, in some order, with rules about what to do when one fails.
 
 ### Semantic vs Implementation Coupling
 
-Every workflow has **semantic coupling**: things that must happen together in the real world.
+Every workflow has semantic coupling: things that must happen together in the real world.
 
 * You can’t ship before you have a paid order.  
 * You can’t close a ticket before someone has worked it.  
 
-You cannot remove that coupling. What you *can* choose is **how** services coordinate:
+You cannot remove that coupling. What you *can* choose is how services coordinate:
 
 * A central orchestrator that calls each service.  
 * A network of services reacting to each other’s events.  
@@ -58,7 +58,7 @@ A well-chosen orchestrator can turn a messy web of interactions into something y
 
 In an orchestrated workflow:
 
-* A client calls the **orchestrator** with a business request.  
+* A client calls the orchestrator with a business request.  
 * The orchestrator invokes domain services in the right order.  
 * It tracks which steps completed and which failed.  
 * It decides how to recover: retry, compensate, or mark the workflow failed.
@@ -91,9 +91,9 @@ This works especially well when:
 
 The same centralization creates risks:
 
-* The orchestrator can become a **bottleneck** for throughput.  
-* It is a **single point of failure** for the workflow.  
-* All participating services become **coupled** to the orchestrator’s API and state model.  
+* The orchestrator can become a bottleneck for throughput.  
+* It is a single point of failure for the workflow.  
+* All participating services become coupled to the orchestrator’s API and state model.  
 * Teams may be tempted to stuff unrelated behavior into the orchestrator “because it’s central.”
 
 You can mitigate some of this with partitioning, horizontal scaling, and careful design, but orchestration always adds a central dependency. The question is whether the workflow’s complexity and risk justify it.
@@ -138,9 +138,9 @@ It works particularly well when:
 
 The price you pay is in understanding and failure handling:
 
-* Workflow logic becomes **implicit** and scattered across many services.  
-* **Error handling** is harder: each service needs to know who to inform and how to react when something goes wrong.  
-* **Status queries** (“Where is this order?”) require calling many services or building extra mechanisms.  
+* Workflow logic becomes implicit and scattered across many services.  
+* Error handling is harder: each service needs to know who to inform and how to react when something goes wrong.  
+* Status queries (“Where is this order?”) require calling many services or building extra mechanisms.  
 * Adding a new step often means updating multiple services, not just one coordinator.
 
 Choreography is not “simpler” overall; it just moves complexity from a central place into the edges of many services.
@@ -159,7 +159,7 @@ Where that state lives, coupling follows.
 
 In orchestration, the answer is straightforward:
 
-* The orchestrator owns a **workflow state store** (often its own database).  
+* The orchestrator owns a workflow state store (often its own database).  
 * Each step updates that state.  
 * Status queries, dashboards, and retries all talk to the orchestrator.
 
@@ -167,7 +167,7 @@ This keeps state and coordination logic together, which is why orchestration wor
 
 ### Front Controller in Choreography
 
-In choreographed systems, one option is to pick a **front controller**:
+In choreographed systems, one option is to pick a front controller:
 
 * A domain service (often the first in the chain) tracks workflow state.  
 * It calls or listens to other services, updating its local state as they respond.  
@@ -186,9 +186,9 @@ You have effectively embedded a mini-orchestrator inside a domain service.
 
 ### Stateless Choreography
 
-Another option is **no dedicated workflow state**:
+Another option is no dedicated workflow state:
 
-* Each service keeps only its **local** state.  
+* Each service keeps only its local state.  
 * To answer “What’s going on with this order?”, you query several services and reconstruct the picture.
 
 This maximizes autonomy:
@@ -198,14 +198,14 @@ This maximizes autonomy:
 
 But:
 
-* Status queries become **expensive and complex**.  
+* Status queries become expensive and complex.  
 * It’s harder to debug, audit, or replay workflows.  
 
 You’ve traded easy state queries for maximum decentralization.
 
 ### Passing a State Stamp
 
-A middle ground is to pass a **state stamp** along with workflow messages:
+A middle ground is to pass a state stamp along with workflow messages:
 
 * Each message carries workflow-related state.  
 * Services update both local data and the stamp before sending the next message.  
@@ -217,7 +217,7 @@ Upsides:
 
 Downsides:
 
-* Messages become **heavier**, and the stamp must evolve carefully as the workflow changes.  
+* Messages become heavier, and the stamp must evolve carefully as the workflow changes.  
 * Ad hoc status queries are still awkward—you need to go find a recent stamp or reconstruct from events.  
 
 State stamps make sense when you mainly need state during execution, not for arbitrary queries weeks later.
@@ -230,13 +230,13 @@ Distributed workflows often involve changes that must remain logically consisten
 
 A saga is:
 
-* A **sequence of local transactions**, each in its own service.  
-* Plus **compensating actions** to undo effects if something fails.  
+* A sequence of local transactions, each in its own service.  
+* Plus compensating actions to undo effects if something fails.  
 
 Instead of a global commit or rollback, sagas accept that:
 
-* Other requests may see **intermediate states**.  
-* Failures are handled by **compensations and reconciliation**, not magic atomicity.
+* Other requests may see intermediate states.  
+* Failures are handled by compensations and reconciliation, not magic atomicity.
 
 This lets you keep services independent, at the cost of living with temporary inconsistency and more explicit failure handling.
 
@@ -281,7 +281,7 @@ There is no universal “best” between orchestration and choreography, or betw
 Ask:
 
 * What goes wrong if a step is skipped, repeated, or delayed?  
-* Do we care more about **never losing a request** or about **handling huge volume**?  
+* Do we care more about never losing a request or about handling huge volume?  
 * How often do we need to query workflow status, and how fresh must it be?  
 
 You cannot make a semantically complex workflow simple with clever coordination. You can only pick an implementation that keeps complexity manageable for your teams.
@@ -290,10 +290,10 @@ You cannot make a semantically complex workflow simple with clever coordination.
 
 Orchestration is usually the better fit when:
 
-* Error handling and compensations are **numerous and nuanced**.  
-* Business demands **strong guarantees** against lost or misrouted work.  
-* Stakeholders expect **easy status queries** and audit trails.  
-* You need a clear place to **implement and evolve** workflow logic.
+* Error handling and compensations are numerous and nuanced.  
+* Business demands strong guarantees against lost or misrouted work.  
+* Stakeholders expect easy status queries and audit trails.  
+* You need a clear place to implement and evolve workflow logic.
 
 In these cases, a central orchestrator plus an eventually consistent saga pattern often gives you the best balance between control and responsiveness.
 
@@ -301,9 +301,9 @@ In these cases, a central orchestrator plus an eventually consistent saga patter
 
 Choreography shines when:
 
-* You have **high-volume, relatively simple** workloads.  
+* You have high-volume, relatively simple workloads.  
 * Error scenarios are rare or local to one service.  
-* You already have strong **event-driven infrastructure and practices**.  
+* You already have strong event-driven infrastructure and practices.  
 * Scale and resilience matter more than central visibility.
 
 Here, choreographed, asynchronous, eventually consistent sagas can give you excellent throughput and fault tolerance—if you invest in good observability.
@@ -330,13 +330,13 @@ Design is not enough; distributed workflows also need to be discoverable, testab
 
 Treat sagas and workflows as first-class citizens:
 
-* Give each significant workflow a **name** (for example, `NEW_TICKET`, `COMPLETE_ORDER`).  
+* Give each significant workflow a name (for example, `NEW_TICKET`, `COMPLETE_ORDER`).  
 * Tag service entry points in code with these saga names.  
 * Build simple tools to list which services participate in which sagas.
 
 This lets you:
 
-* See the **blast radius** of changes before you touch code.  
+* See the blast radius of changes before you touch code.  
 * Plan integration tests by saga, not just by service.  
 * Keep an inventory of live workflows instead of relying on tribal knowledge.
 
@@ -344,7 +344,7 @@ This lets you:
 
 Good workflow observability requires more than logs:
 
-* Use **correlation IDs** to follow a single workflow across services.  
+* Use correlation IDs to follow a single workflow across services.  
 * Emit structured events for key steps and failures.  
 * Build dashboards that show saga progress and failure rates by step.
 
@@ -352,7 +352,7 @@ In orchestrated systems, the orchestrator is a natural place to expose this. In 
 
 ### Documenting Decisions
 
-Finally, capture **why** you picked a certain style for a workflow:
+Finally, capture why you picked a certain style for a workflow:
 
 * Record architectural decision records (ADRs) that list context, options, trade-offs, and the chosen coordination style.  
 * Explicitly justify orchestration when scale might suffer, or choreography when error handling will be harder.
@@ -368,7 +368,8 @@ By thinking in terms of workflow state ownership, communication style, consisten
 ## Recommended Reading
 
 #### Books
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 11: Managing Distributed Workflows**\
     Compares orchestration and choreography in depth, explores workflow state ownership options, and links workflow semantics to coordination choices.  
   * **Chapter 12: Transactional Sagas**\

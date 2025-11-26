@@ -72,8 +72,8 @@ If the answers are fuzzy, your component definition is too.
 
 A component lives or dies by its contract:
 
-* The contract says **what** the component does in terms of operations and guarantees.  
-* It hides **how** it does it: data model, algorithms, APIs of downstream systems.  
+* The contract says what the component does in terms of operations and guarantees.  
+* It hides how it does it: data model, algorithms, APIs of downstream systems.  
 * Callers depend on the contract, not on internal tables, DTOs, or folder structure.
 
 Good component contracts:
@@ -91,7 +91,7 @@ A component should be big enough to contain real complexity, and small enough to
 * **Too big**: one component hoovers up half the system’s logic. You have a god component.  
 * **Too small**: dozens of tiny components that each wrap a couple of functions or tables. You have fragmentation.
 
-The sweet spot is a **deep component**:
+The sweet spot is a deep component:
 
 * A small public surface.  
 * Hides a lot of internal detail behind that surface.  
@@ -111,7 +111,7 @@ Start by sketching candidate components:
 * Map those onto namespaces, packages, or modules in code.  
 * Look at their relative “size” (LOC, statements, number of classes).
 
-Use size as a **signal**, not a target:
+Use size as a signal, not a target:
 
 * A few larger components that own core capabilities are fine.  
 * One or two huge everything-buckets are not.  
@@ -130,7 +130,7 @@ If you’re not careful:
 * Each feature slice grows its own mini-“Customer” or “Product” logic.  
 * Rules diverge, bugs multiply, and you make integration impossible.
 
-Instead, deliberately **gather common domain components**:
+Instead, deliberately gather common domain components:
 
 * Identify concepts that appear in many use cases.  
 * Create dedicated components for them with clear ownership.  
@@ -141,7 +141,7 @@ The trade-off:
 * You avoid behavior duplication and inconsistency.  
 * You risk creating “everything shared” components if you’re sloppy.
 
-The key is to only gather **real domain rules**, not random helpers or low-level utilities.
+The key is to only gather real domain rules, not random helpers or low-level utilities.
 
 ### Pattern: Flatten Component Hierarchies
 
@@ -152,8 +152,8 @@ Deep, irregular hierarchies are hard to reason about:
 
 Flattening components means:
 
-* Choosing a **small set of top-level components** that everyone recognizes.  
-* Using subpackages or submodules only when they mirror meaningful sub-responsibilities.  
+* Choosing a small set of top-level components that everyone recognizes.  
+* Using sub-packages or submodules only when they mirror meaningful sub-responsibilities.  
 * Avoiding long chains of one-child directories that add no information.
 
 A flat, predictable component layout:
@@ -179,7 +179,7 @@ This pattern turns a vague “we’re modular” claim into a concrete picture o
 
 ### Pattern: Create Component Domains
 
-Single components rarely stand alone. You often get **clusters**:
+Single components rarely stand alone. You often get clusters:
 
 * A set of components that collectively deliver a business capability.  
 * Shared language, shared timelines, shared stakeholders.
@@ -202,7 +202,7 @@ Finally, components have to live somewhere at runtime:
 
 The pattern here is simple:
 
-* **Build services from components**, not components from services.  
+* Build services from components, not components from services.  
 * Decide service boundaries based on domains, volatility, and operational needs.  
 * Let components stay as the stable, logical structure underneath.
 
@@ -210,7 +210,7 @@ If you start by drawing service boxes and invent components to fill them, you us
 
 ## Components and Operational Data
 
-Components are not just behavior; they are also about **who owns which data**. This block ties component design to operational data in a lightweight way, without going deep into database patterns.
+Components are not just behavior; they are also about who owns which data. This block ties component design to operational data in a lightweight way, without going deep into database patterns.
 
 ### Data Ownership as a Design Constraint
 
@@ -241,7 +241,7 @@ That’s a hint:
 * Either you need a dedicated component to own that data.  
 * Or your existing components are too fine-grained or badly scoped.
 
-Use data as a **sanity check** on your component model: if the data boundaries and the component boundaries don’t roughly align, one of them is wrong.
+Use data as a sanity check on your component model: if the data boundaries and the component boundaries don’t roughly align, one of them is wrong.
 
 ## Using Metrics and Feedback Loops
 
@@ -255,7 +255,7 @@ You can’t manage what you never measure. Even simple metrics help:
 * Track distribution: which components are growing fastest?  
 * Flag outliers that are way larger or smaller than the rest.
 
-These metrics don’t tell you what to do, but they tell you **where to look**:
+These metrics don’t tell you what to do, but they tell you where to look:
 
 * Very large components might need splitting or clearer responsibilities.  
 * Tiny components might be noise that can be merged.  
@@ -280,8 +280,8 @@ You don’t need perfect numbers. The point is to spot weird outliers and ask �
 
 To keep component design from decaying quietly:
 
-* Define **fitness functions**: automated checks that fail builds or raise alerts when components cross certain thresholds (size, cycles, dependency count, etc.).  
-* Write **architecture stories**: small, testable goals like “component X no longer depends on the shared database” or “all customer rules live in the Customer component.”
+* **Define fitness functions**: automated checks that fail builds or raise alerts when components cross certain thresholds (size, cycles, dependency count, etc.).  
+* **Write architecture stories**: small, testable goals like “component X no longer depends on the shared database” or “all customer rules live in the Customer component.”
 
 Fitness functions give you continuous feedback. Architecture stories give you focused refactoring targets. Together they turn “we should keep components clean” into concrete work.
 
@@ -295,7 +295,7 @@ Operational data and metrics then act as feedback: data ownership keeps boundari
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 4: Architectural Decomposition**\
     Explains why components are the primary building blocks of architecture and how to evaluate whether existing structures are decomposable.  
   * **Chapter 5: Component-Based Decomposition Patterns**\

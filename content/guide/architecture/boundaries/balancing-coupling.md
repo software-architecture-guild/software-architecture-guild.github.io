@@ -21,11 +21,11 @@ Balancing coupling is about deciding where you are willing to pay for shared kno
 
 The naive goal is “reduce coupling.” The realistic goal is more precise:
 
-* Keep **strong coupling** where parts genuinely need to move together.  
-* Keep **long distance** only where shared knowledge is small and stable.  
-* Accept **high volatility** only behind seams that are carefully shaped.  
+* **Keep strong coupling** where parts genuinely need to move together.  
+* **Keep long distance** only where shared knowledge is small and stable.  
+* **Accept high volatility** only behind seams that are carefully shaped.  
 
-In other words, you want **contrast**: if one dimension is high, at least one of the others should be low. When strength, distance, and volatility are all high in the same place, you’ve built a hotspot for pain.
+In other words, you want contrast: if one dimension is high, at least one of the others should be low. When strength, distance, and volatility are all high in the same place, you’ve built a hotspot for pain.
 
 ## Understanding the Three Axes
 
@@ -35,9 +35,9 @@ Balancing coupling assumes three dimensions that you already know from earlier w
 
 Strength is about what knowledge crosses a boundary:
 
-* At the weak end, you share only minimal data in **contract** form.  
-* In the middle, you share rich **models** or functional behavior.  
-* At the strong end, integration becomes **intrusive**: direct table access, scraped HTML, shared internals.  
+* At the weak end, you share only minimal data in contract form.  
+* In the middle, you share rich models or functional behavior.  
+* At the strong end, integration becomes intrusive: direct table access, scraped HTML, shared internals.  
 
 High strength means changes in one side are more likely to force changes in the other, because more assumptions are shared.
 
@@ -61,13 +61,13 @@ High volatility is not inherently bad; it just means you should be careful what 
 
 ## Binary Lens: Simple Rules for Stability, Cost, and Modularity
 
-Before using numbers, you can reason in a binary way: each dimension is either **high** (1) or **low** (0). That’s enough to get useful rules of thumb about stability, change cost, and modularity.
+Before using numbers, you can reason in a binary way: each dimension is either high (1) or low (0). That’s enough to get useful rules of thumb about stability, change cost, and modularity.
 
 ### Stability: Volatility vs Strength
 
 Stability is about whether a relationship is likely to hold together without constant repairs.
 
-* High volatility **and** high strength is the dangerous combo: something changes often, and many assumptions are shared.  
+* High volatility and high strength is the dangerous combo: something changes often, and many assumptions are shared.  
 * If either one is low, you’re safer:  
   * Low volatility + high strength: tightly coupled but stable (classic legacy upstream).  
   * High volatility + low strength: lots of change, but little shared knowledge to break.  
@@ -82,7 +82,7 @@ If both are high, stability is low; otherwise you’re okay.
 
 Change cost is about how much coordination and ceremony you need when something moves.
 
-* High volatility **and** high distance means every change triggers cross-team, cross-system work.  
+* High volatility and high distance means every change triggers cross-team, cross-system work.  
 * If volatility is high but distance is low, teams can change together cheaply.  
 * If distance is high but volatility is low, you rarely need to coordinate at all.  
 
@@ -149,7 +149,8 @@ Then you let low volatility compensate for poor modularity. Even a bad strength�
 
 You treat low volatility as a second candidate score:
 
-* `(10 - VOLATILITY + 1)` means: the more stable something is, the more it contributes to balance.  
+ `(10 - VOLATILITY + 1)`  
+ *means: the more stable something is, the more it contributes to balance.*  
 
 Then you combine both:
 
@@ -162,7 +163,7 @@ Interpretation:
 
 ### Maintenance Effort as a Mental Model
 
-You can also think of **maintenance effort** as a product:
+You can also think of maintenance effort as a product:
 
 `MAINTENANCE EFFORT = STRENGTH * DISTANCE * VOLATILITY`  
 
@@ -215,7 +216,7 @@ The strength–distance–volatility lens works at each level. A method intertwi
 
 To keep complexity under control as you add features:
 
-* Group elements by **responsibility and goal** at each level.  
+* Group elements by responsibility and goal at each level.  
 * Ensure each boundary hides internal detail in the same way as the next level up.  
 * Avoid “shallow” abstractions that leak internals and break the fractal pattern.  
 
@@ -231,7 +232,7 @@ You won’t remove coupling, and you don’t need to. The goal is to ensure that
 
 #### Books
 
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Self-published.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
   * **Chapter 10: Balancing Coupling**\
     Introduces the three-axis model and shows how to reason about stability, cost of change, and modularity using both binary logic and numeric scales.  
   * **Chapter 11: Rebalancing Coupling**\

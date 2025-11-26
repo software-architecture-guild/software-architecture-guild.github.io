@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Every interesting architecture decision is a trade-off. You never get scalability, simplicity, flexibility, and cost all maximized at once—you pick what to sacrifice. Trade-off analysis is the discipline of making those sacrifices *explicit*: naming the options, rating them on the dimensions that matter, and recording why you chose one path over another. :contentReference[oaicite:0]{index=0}  
+Every interesting architecture decision is a trade-off. You never get scalability, simplicity, flexibility, and cost all maximized at once—you pick what to sacrifice. Trade-off analysis is the discipline of making those sacrifices *explicit*: naming the options, rating them on the dimensions that matter, and recording why you chose one path over another.
 
 ## Why Trade-Off Analysis Matters
 
-Trade-off analysis is how you move from “best practices” talk to engineering decisions grounded in your context. Instead of arguing patterns or tools in the abstract, you make the constraints, forces, and winners visible. That discipline is what turns architecture from opinion into a repeatable process your organization can trust. :contentReference[oaicite:1]{index=1}  
+Trade-off analysis is how you move from “best practices” talk to engineering decisions grounded in your context. Instead of arguing patterns or tools in the abstract, you make the constraints, forces, and winners visible. That discipline is what turns architecture from opinion into a repeatable process your organization can trust.
 
 ### No Best Practices, Only Context
 
@@ -31,8 +31,8 @@ Without trade-off analysis, those differences stay implicit and political. With 
 
 Trade-off analysis forces you to:
 
-* Name the **candidate options** you’re comparing.  
-* Pick **dimensions** that actually matter here (not just generic quality lists).  
+* Name the candidate options you’re comparing.  
+* Pick dimensions that actually matter here (not just generic quality lists).  
 * Rate each option on those dimensions, even if it’s a rough “low/medium/high”.  
 * Look across the table and ask “what are we really optimizing for?”
 
@@ -40,7 +40,7 @@ You still use judgment, but the conversation shifts from “I like microservices
 
 ## Building Your Own Trade-Off Matrices
 
-Generic trade-off tables in books and blogs are useful, but they are not your system. Trade-off analysis becomes powerful when you build your own matrices tuned to your domains, constraints, and politics. :contentReference[oaicite:2]{index=2}  
+Generic trade-off tables in books and blogs are useful, but they are not your system. Trade-off analysis becomes powerful when you build your own matrices tuned to your domains, constraints, and politics.
 
 ### Identify the Dimensions that Actually Hurt
 
@@ -76,13 +76,13 @@ Once you’ve rated options, put them in a single matrix and scan for patterns:
 
 * Do high coupling options consistently hurt scale and resilience?  
 * Do loose, decoupled options consistently raise implementation complexity?  
-* Are there options that are “good enough” across many dimensions even if they don’t dominate any single one? :contentReference[oaicite:3]{index=3}  
+* Are there options that are “good enough” across many dimensions even if they don’t dominate any single one?
 
 These patterns shape your instincts for future decisions. The next time a similar choice appears, you can reuse the dimensions and expected trade-offs instead of starting from scratch.
 
 ## Iterative Architecture: Exploring the Design Space
 
-Trade-off analysis is not a one-shot judgment; it’s an iterative exploration. You rarely understand all the forces on day one. Instead, you progressively narrow the design space by combining and pruning dimensions. :contentReference[oaicite:4]{index=4}  
+Trade-off analysis is not a one-shot judgment; it’s an iterative exploration. You rarely understand all the forces on day one. Instead, you progressively narrow the design space by combining and pruning dimensions.
 
 ### Start with a Dominant Dimension
 
@@ -107,7 +107,7 @@ At each step, build or refine the matrix:
 * Remove options that are now impossible or clearly dominated.  
 * Add new columns if new forces emerge (for example, PII control once legal gets involved).
 
-This keeps the analysis lightweight and focused instead of trying to compare every possible combination at once. :contentReference[oaicite:5]{index=5}  
+This keeps the analysis lightweight and focused instead of trying to compare every possible combination at once.
 
 ### Use Scenarios, Not Just Labels
 
@@ -123,7 +123,7 @@ When people disagree, replay the scenario: “Walk me through exactly what happe
 
 ## Worked Example: Payment Service Granularity
 
-Consider a payment domain with several payment methods: cards, gift cards, vouchers, and alternative payment providers. You have two main options: one Payment service or a service per payment method. The difference is not just style; it’s how you trade off simplicity, extensibility, and workflow complexity. :contentReference[oaicite:6]{index=6}  
+Consider a payment domain with several payment methods: cards, gift cards, vouchers, and alternative payment providers. You have two main options: one Payment service or a service per payment method. The difference is not just style; it’s how you trade off simplicity, extensibility, and workflow complexity.
 
 ### Single Payment Service
 
@@ -170,7 +170,7 @@ The matrix doesn’t tell you what to do; it shows you what you’re paying for 
 
 ## Worked Example: Messaging Style for Fan-Out
 
-Now consider distributing bid or event data to multiple consumers: tracking, analytics, history, and maybe future services you haven’t built yet. You can either use a single publish/subscribe topic or separate point-to-point queues. :contentReference[oaicite:7]{index=7}  
+Now consider distributing bid or event data to multiple consumers: tracking, analytics, history, and maybe future services you haven’t built yet. You can either use a single publish/subscribe topic or separate point-to-point queues.
 
 ### Single Publish/Subscribe Topic
 
@@ -217,7 +217,7 @@ Again, the right answer depends on which dimensions your organization chooses to
 
 ## Turning Trade-Offs into Decisions
 
-A trade-off matrix by itself is not a decision. You still need to choose, record, and validate. This is where decision records and fitness functions come in. :contentReference[oaicite:8]{index=8}  
+A trade-off matrix by itself is not a decision. You still need to choose, record, and validate. This is where decision records and fitness functions come in.
 
 ### From Matrix to Decision Record
 
@@ -239,7 +239,7 @@ Examples:
 
 * If you accept monorepo risk to gain simpler tooling, add checks that prevent unwanted static coupling between projects.  
 * If you choose pub/sub knowing it weakens PII control, add tests and monitors that detect when sensitive fields leak into topics they shouldn’t.  
-* If you pick a coarse-grained payment service, track change lead time and failure blast radius to confirm you’re still within tolerance. :contentReference[oaicite:9]{index=9}  
+* If you pick a coarse-grained payment service, track change lead time and failure blast radius to confirm you’re still within tolerance.
 
 Fitness functions turn “we think this will be fine” into continuous verification. If the system drifts or the environment changes, they will tell you when your earlier trade-offs no longer hold.
 
@@ -249,7 +249,7 @@ Trade-off analysis also gives you a way out of pattern evangelism:
 
 * When asked “Are you for or against monorepos/microservices/Kubernetes?”, pull the conversation back to trade-offs.  
 * Use the matrix to show where a choice wins and where it loses.  
-* Use fitness functions to guard against the known downsides rather than claiming your preferred option has none. :contentReference[oaicite:10]{index=10}  
+* Use fitness functions to guard against the known downsides rather than claiming your preferred option has none.
 
 Your job is not to be the loudest advocate for a style. It is to make risks and benefits legible so the organization can choose consciously.
 
@@ -262,6 +262,7 @@ When you capture those analyses in ADRs and back them with fitness functions, yo
 ## Recommended Reading
 
 #### Books
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 15: Build Your Own Trade-Off Analysis**\
     Shows how to build your own trade-off tables and matrices, walks through payment and messaging examples, and connects ADRs and fitness functions to an iterative, evidence-based architecture process.

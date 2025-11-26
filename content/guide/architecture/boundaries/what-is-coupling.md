@@ -31,12 +31,12 @@ When people say “we want loose coupling,” they usually mean “we want chang
 
 A useful, architecture-level definition is:
 
-> Two parts of a software system are coupled if a change in one **might** require a change in the other.
+> Two parts of a software system are coupled if a change in one might require a change in the other.
 
 That small word “might” carries a lot:
 
-* Coupling is about **change**, not just about calls or imports.  
-* It’s about **risk and uncertainty**: you’re not sure whether a change in A will force a change in B.  
+* Coupling is about change, not just about calls or imports.  
+* It’s about risk and uncertainty: you’re not sure whether a change in A will force a change in B.  
 * If you can confidently change A without touching B for a given kind of change, they are weakly coupled (or effectively independent) with respect to that concern.
 
 This turns coupling into something you can actively analyze:
@@ -65,7 +65,7 @@ Most accidental coupling comes from weak or leaky boundaries:
 * Shared database tables where multiple components silently depend on the same schema.  
 * Undocumented string formats or flags that become de-facto contracts across the system.
 
-Strong boundaries **constrain** how components can depend on each other. Good coupling design usually starts with cleaning up these boundaries.
+Strong boundaries constrain how components can depend on each other. Good coupling design usually starts with cleaning up these boundaries.
 
 ### Essential vs Accidental Coupling
 
@@ -98,7 +98,7 @@ Coupling is one of the main levers that controls how complex your system feels. 
 
 ### Local vs Global Complexity
 
-Complexity doesn’t just come from the size of a system; it comes from the **interactions**:
+Complexity doesn’t just come from the size of a system; it comes from the interactions:
 
 * A large system with well-structured, predictable interactions can be relatively easy to work with.  
 * A small system with tangled dependencies can be painful.
@@ -124,7 +124,7 @@ As an architect, you want to:
 
 ### Degrees of Freedom
 
-You can think of a system as having a certain number of **degrees of freedom** – ways in which behavior or state can vary independently:
+You can think of a system as having a certain number of degrees of freedom – ways in which behavior or state can vary independently:
 
 * Replicated data across components adds degrees of freedom: now you can have stale or conflicting states.  
 * Duplicated business rules add degrees of freedom: behavior can diverge between places that “should” behave the same.
@@ -134,7 +134,7 @@ More degrees of freedom mean more possible system states, more edge cases to tes
 Coupling and constraints interact here:
 
 * Exposing lots of internal details through an interface gives consumers more degrees of freedom to depend on you.  
-* Strong invariants and narrow contracts **constrain** what consumers can do, which reduces the number of possible system states.
+* Strong invariants and narrow contracts constrain what consumers can do, which reduces the number of possible system states.
 
 Well-designed coupling narrows the system’s possibility space to “valid and useful” behaviors.
 
@@ -150,19 +150,19 @@ Once you stop treating coupling as something you blindly “minimize,” you can
 * You **weaken** coupling where you want autonomy and independent evolution (for example, between services owned by different teams).  
 * You **move** coupling to different places to change where complexity lives.
 
-In other words, you don’t just want “less coupling.” You want coupling in the **right places**, at the **right strength**, for the **right reasons**.
+In other words, you don’t just want “less coupling.” You want coupling in the right places, at the right strength, for the right reasons.
 
 ### Practical Moves to Shape Coupling
 
 You have several levers:
 
-* Tighten **internal boundaries**:  
+* **Tighten internal boundaries**:  
   * Hide internal data structures behind clear interfaces.  
   * Enforce invariants and validation in one place instead of scattered checks.  
-* Clarify **external boundaries**:  
+* **Clarify external boundaries**:  
   * Replace shared databases with explicit APIs or events.  
   * Introduce dedicated integration components instead of letting everyone call everyone.  
-* Make coupling **visible and observable**:  
+* **Make coupling visible and observable**:  
   * Trace requests across components.  
   * Log at boundaries with identifiers that let you follow flows.  
   * Use contracts and schema validation at interaction points.
@@ -176,7 +176,7 @@ There is no universal “right” answer; it depends on deployment constraints, 
 
 ### Good Coupling vs Bad Coupling
 
-Instead of “tight vs loose,” it’s often better to talk about **good vs bad** coupling.
+Instead of “tight vs loose,” it’s often better to talk about good vs bad coupling.
 
 Good coupling tends to be:
 
@@ -204,14 +204,13 @@ If you can describe coupling in your system in these terms—what is coupled, ho
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 2: Discerning Coupling in Software Architecture**\
     Uses change scenarios and architecture quanta to frame coupling as the core driver of distributed architecture decisions.
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Self-published.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
   * **Chapter 1: Coupling and System Design**\
     Defines coupling around change impact and explains how boundaries and purpose shape useful dependencies.  
   * **Chapter 2: Coupling and Complexity: Cynefin**\
     Connects coupling to different kinds of complexity and decision-making modes using the Cynefin framework.  
   * **Chapter 3: Coupling and Complexity: Interactions**\
     Focuses on interactions and degrees of freedom as the real source of system complexity.
-

@@ -114,14 +114,14 @@ You can look at volatility from two angles:
 
 Volatility shows up in:
 
-* Domain analysis – core subdomains are typically highly volatile, supporting and generic parts less so.  
-* Source control history – how often files change, which modules appear in many commits together, which ones nobody dares touch.
+* **Domain analysis** – core subdomains are typically highly volatile, supporting and generic parts less so.  
+* **Source control history** – how often files change, which modules appear in many commits together, which ones nobody dares touch.
 
 Volatility interacts with the other dimensions:
 
-* High-volatility modules with intrusive or functional coupling at long distance create cascading failures and heavy coordination.  
-* High-volatility modules with contract coupling and short distance can evolve rapidly without harming the rest of the system.  
-* Low-volatility parts sometimes tolerate stronger coupling because they change rarely; the cost of perfection might not be worth it.
+* **High-volatility modules** with intrusive or functional coupling at long distance create cascading failures and heavy coordination.  
+* **High-volatility modules** with contract coupling and short distance can evolve rapidly without harming the rest of the system.  
+* **Low-volatility parts** sometimes tolerate stronger coupling because they change rarely; the cost of perfection might not be worth it.
 
 When thinking about volatility, you should ask:
 
@@ -177,7 +177,7 @@ You will still have coupling—otherwise you would have no system at all. The go
 
 #### Books
 
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Self-published.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
   * **Chapter 5: Structured Design’s Module Coupling**\
     Revisits classic module coupling levels and generalizes them to modern software boundaries, from functions to distributed systems.  
   * **Chapter 6: Connascence**\

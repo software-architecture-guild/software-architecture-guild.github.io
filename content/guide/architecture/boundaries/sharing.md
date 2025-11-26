@@ -10,8 +10,9 @@ toc: true
 authors:
 -  "ilya-hardzeenka.md"
 ---
+{{< md-lint "<!-- markdownlint-disable MD024 -->" >}}
 
-Sharing is where good intentions quietly turn systems into knots. “Let’s reuse this” sounds responsible, but in distributed architectures **how** you reuse and **what** you reuse can either reduce complexity or hard-wire your system into a fragile tangle. This article treats sharing as an architectural decision: a toolbox of patterns with explicit trade-offs, not a moral rule about DRY vs duplication.
+Sharing is where good intentions quietly turn systems into knots. “Let’s reuse this” sounds responsible, but in distributed architectures how you reuse and what you reuse can either reduce complexity or hard-wire your system into a fragile tangle. This article treats sharing as an architectural decision: a toolbox of patterns with explicit trade-offs, not a moral rule about DRY vs duplication.
 
 ## Why Sharing is an Architectural Problem
 
@@ -30,8 +31,8 @@ Local reuse affects a few files. Architectural reuse affects how dozens of servi
 
 “Don’t Repeat Yourself” and “Write Everything Twice” are both extreme slogans. In reality:
 
-* Duplication is sometimes the **cheapest way to stay decoupled**.  
-* Reuse is sometimes the **safest way to stay consistent**.  
+* Duplication is sometimes the cheapest way to stay decoupled.  
+* Reuse is sometimes the safest way to stay consistent.  
 
 The real question is never “Is duplication bad?” It’s:
 
@@ -45,7 +46,7 @@ There are four main ways to share behavior across services. None of them are “
 
 ### Code Replication
 
-Code replication means **copying** a piece of code into multiple services with no shared artifact.
+Code replication means copying a piece of code into multiple services with no shared artifact.
 
 You literally duplicate:
 
@@ -55,28 +56,28 @@ You literally duplicate:
 
 You’d never do this for complex logic, but for tiny, low-volatility code it can be the least harmful option.
 
-*Advantages*
+##### Advantages
 
 * No shared binary or runtime dependency.  
 * Each service can evolve or delete its copy independently.  
 * Keeps bounded contexts and services loosely coupled.
 
-*Disadvantages*
+##### Disadvantages
 
 * Fixing a bug means patching every copy.  
 * High chance of drift: slightly different behavior in each service.  
 * No single place to see “what this thing really does now.”
 
-*When it works*
+##### When it works
 
 * The code is small, boring, and almost never changes.  
 * You’re decomposing a monolith and want to let each new service simplify its own copy over time.  
 
-Replication is a **scalpel**: use it for tiny, stable things when decoupling matters more than central control.
+Replication is a scalpel: use it for tiny, stable things when decoupling matters more than central control.
 
 ### Shared Libraries
 
-A shared library is a **binary artifact** (JAR, DLL, package) many services link to at compile time.
+A shared library is a binary artifact (JAR, DLL, package) many services link to at compile time.
 
 You use it for:
 
@@ -84,34 +85,34 @@ You use it for:
 * Shared formatting, parsing, or calculation logic.  
 * Cross-cutting infrastructure helpers (security, logging, annotations).
 
-The hard part is **granularity**:
+The hard part is granularity:
 
 * One big “kitchen sink” library is easy to depend on but hard to change.  
 * Many small, focused libraries give better change control but make dependency graphs noisy.
 
-*Advantages*
+##### Advantages
 
 * Compile-time guarantees about what version you depend on.  
 * Good fit for homogeneous tech stacks (same language/platform).  
 * Changes are controlled by versioning rather than surprise runtime behavior.
 
-*Disadvantages*
+##### Disadvantages
 
 * Managing versions, deprecations, and upgrades is a non-trivial coordination problem.  
 * A breaking change in a widely used library can force many services to retest and redeploy.  
 * Heterogeneous stacks must duplicate logic anyway; libraries don’t span languages.
 
-*When it works*
+##### When it works
 
 * Your environment is mostly one or two languages.  
 * The shared behavior changes slowly or moderately, not daily.  
 * You’re willing to invest in artifact management and versioning discipline.
 
-Shared libraries are often the **default reuse mechanism**, but in distributed systems you have to be intentional about what goes into them and how fine-grained they are.
+Shared libraries are often the default reuse mechanism, but in distributed systems you have to be intentional about what goes into them and how fine-grained they are.
 
 ### Shared Services
 
-A shared service is a **network-accessible service** that centralizes some capability:
+A shared service is a network-accessible service that centralizes some capability:
 
 * Discount calculation.  
 * Document rendering.  
@@ -119,30 +120,30 @@ A shared service is a **network-accessible service** that centralizes some capab
 
 Instead of linking a library, callers send requests over the network.
 
-*Advantages*
+##### Advantages
 
 * Works across languages and platforms.  
 * Change behavior once; all consumers can see the new behavior without redeploying.  
 * Can encapsulate heavy logic or data that’s painful to ship everywhere.
 
-*Disadvantages*
+##### Disadvantages
 
 * Every call pays network and security overhead.  
-* The shared service becomes a **runtime bottleneck** and a single point of failure.  
+* The shared service becomes a runtime bottleneck and a single point of failure.  
 * API versioning becomes noisy (URL versions, header flags, feature switches).  
 * A bad deployment can break many dependent services at once.
 
-*When it works*
+##### When it works
 
 * You’re in a polyglot environment and a shared library isn’t realistic.  
 * The shared logic changes often and central control is worth the runtime risk.  
 * You have strong operational maturity (monitoring, canaries, rollbacks).
 
-Shared services trade **compile-time safety** for **operational agility**. Treat them like critical infrastructure, not a casual way to avoid duplication.
+Shared services trade compile-time safety for operational agility. Treat them like critical infrastructure, not a casual way to avoid duplication.
 
 ### Sidecars and Service Mesh
 
-Sidecars and meshes target **operational reuse**, not domain reuse.
+Sidecars and meshes target operational reuse, not domain reuse.
 
 * A **sidecar** is a companion process that sits next to your service and handles things like:  
   * TLS, authentication, retries, timeouts.  
@@ -153,26 +154,26 @@ Sidecars and meshes target **operational reuse**, not domain reuse.
   * Route and observe traffic consistently.  
   * Roll out operational changes without touching domain code.
 
-You’re not sharing domain classes in the sidecar; you’re sharing **infrastructure capabilities**.
+You’re not sharing domain classes in the sidecar; you’re sharing infrastructure capabilities.
 
-*Advantages*
+##### Advantages
 
 * Consistent operational behavior across services and languages.  
 * Domain code stays decoupled; operational coupling moves into the mesh.  
 * You can evolve infrastructure independently from business logic.
 
-*Disadvantages*
+##### Disadvantages
 
 * Engineering investment to build or adopt and run the mesh.  
 * Risk of overloading the sidecar with too many responsibilities.  
 * Requires governance: what’s allowed in the mesh vs in the service?
 
-*When it works*
+##### When it works
 
 * You have many services and want standard logging, metrics, auth, and traffic control.  
 * You’re okay with an extra hop in the request path in exchange for consistency.  
 
-Sidecars and meshes are an **orthogonal reuse mechanism**: they cross many services but stay out of their domain models.
+Sidecars and meshes are an orthogonal reuse mechanism: they cross many services but stay out of their domain models.
 
 ## Domain Reuse vs Operational Reuse
 
@@ -186,12 +187,12 @@ Domain reuse touches business rules and models:
 * Customer eligibility checks.  
 * Ticket classification logic.
 
-Coupling here changes the **meaning** of your system. If one shared abstraction tries to cover all domains (“one true Customer for everyone”), it grows until nobody really understands it and every change risks breaking a different context.
+Coupling here changes the meaning of your system. If one shared abstraction tries to cover all domains (“one true Customer for everyone”), it grows until nobody really understands it and every change risks breaking a different context.
 
 Practical rule:
 
 * Be very cautious with shared domain models and services.  
-* Prefer clear bounded contexts with their **own** models, even if names overlap.  
+* Prefer clear bounded contexts with their own models, even if names overlap.  
 * Share narrow, well-understood behaviors, not entire business objects.
 
 ### Operational Coupling and Orthogonal Concerns
@@ -202,21 +203,21 @@ Operational reuse covers:
 * Authentication and authorization.  
 * Transport, retries, backoff, circuit breaking.
 
-These concerns are **orthogonal** to the business. They cut across services, but they don’t belong to any single domain. That makes them ideal for sidecars, meshes, and focused infrastructure libraries.
+These concerns are orthogonal to the business. They cut across services, but they don’t belong to any single domain. That makes them ideal for sidecars, meshes, and focused infrastructure libraries.
 
 Practical rule:
 
-* Domain and operational concerns live on **different axes**.  
+* Domain and operational concerns live on different axes.  
 * Domain reuse should be rare, deliberate, and tightly scoped.  
 * Operational reuse should be broad and centralized, but carefully bounded to infrastructure.
 
 ## Choosing What to Reuse
 
-Even with a good toolbox, the hardest question remains: **what** should you reuse at all?
+Even with a good toolbox, the hardest question remains: what should you reuse at all?
 
 ### Volatility and Reuse
 
-The key variable is **rate of change**.
+The key variable is rate of change.
 
 Fast-changing behavior is a terrible reuse target:
 
@@ -248,7 +249,7 @@ If the answer is “no,” maybe don’t centralize it.
 
 ### Reuse via Platforms
 
-One of the most robust forms of reuse is a **platform**:
+One of the most robust forms of reuse is a platform:
 
 * It exposes a stable API around a capability (payments, messaging, search, identity).  
 * Internally, it can evolve aggressively.  
@@ -268,7 +269,7 @@ Platform reuse aligns three things:
 
 ## Putting It Together
 
-Sharing is unavoidable. The real choice is **how** you share and **what** you’re willing to couple through that sharing.
+Sharing is unavoidable. The real choice is how you share and what you’re willing to couple through that sharing.
 
 * Use **code replication** for tiny, near-static pieces where decoupling beats central control.  
 * Use **shared libraries** for stable, cross-cutting behavior in homogeneous stacks, with careful versioning and scope.  
@@ -281,6 +282,7 @@ If you treat sharing as an architectural decision instead of a reflex against du
 ## Recommended Reading
 
 #### Books
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O’Reilly.  
+
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
   * **Chapter 8: Reuse Patterns**\
     Explores code replication, shared libraries, shared services, and sidecars/meshes as distinct reuse techniques, and reframes reuse around volatility and platform thinking rather than blind DRY.
