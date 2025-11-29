@@ -1,4 +1,5 @@
 # New Words
+adrs
 Anson
 antipattern
 Antipatterns
@@ -25,6 +26,7 @@ goldmark
 Hardzeenka
 HDFS
 Hortonworks
+hotspots
 iiirm
 ilities
 Ilya
@@ -63,6 +65,7 @@ relref
 roadmaps
 Rozanski
 runability
+runbooks
 Schwaber
 Silverman
 Smartsheet
