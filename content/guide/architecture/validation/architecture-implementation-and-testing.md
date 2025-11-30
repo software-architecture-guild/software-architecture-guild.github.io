@@ -19,7 +19,7 @@ Architecture, implementation, and testing are three views of the same system: th
 
 ### Architecture as a Guiding Blueprint
 
-Architecture is a set of decisions about structure, behavior, and constraints that shape how a system should be built and how it is allowed to evolve. It defines major components, their responsibilities, and the allowed ways they can talk to each other. It also encodes constraints, such as “all cross-bounded-context calls go through this API” or “data for this capability must remain in-region.”
+Architecture is a set of decisions about structure, behavior, and constraints that shape how a system should be built and how it is allowed to evolve. It defines the major components, their responsibilities, and the ways they can communicate with each other. It also encodes constraints, such as “all cross-bounded-context calls go through this API” or “data for this capability must remain in-region.”
 
 Implementation is the concrete realization of those decisions in code, configuration, infrastructure, and data schemas. Without a clear architectural blueprint, the codebase tends to grow organically around short-term pressures. With a solid blueprint, engineers can make local decisions that still respect global structure.
 
@@ -53,11 +53,11 @@ Traceability helps you check this alignment in both directions: from architectur
 
 ### Testing as a Way to Validate Architectural Intent
 
-Tests validate not just features but also architectural qualities—properties of the system that are hard to change and matter to stakeholders. These include performance, security, availability, modifiability, and more subtle qualities like observability or testability.
+Tests validate not just features but also architectural qualities—properties of the system that are hard to change and matter to stakeholders. These include performance, security, availability, modifiability, and more subtle qualities such as observability and testability.
 
 Some examples:  
 
-* If the architecture promises that a user-facing operation completes within a certain time, performance tests should check this under realistic load.  
+* If the architecture promises that a user-facing operation completes within a particular time, performance tests should check this under realistic load.  
 * If the architecture relies on redundancy for availability, failure tests should simulate node or network failures and assert that the system still serves requests.  
 * If the architecture is framed around clean boundaries and encapsulation, tests should ensure that external callers use stable interfaces rather than reaching into internal details.  
 
@@ -73,7 +73,7 @@ Consider a few examples:
 * **Redundancy for availability:** Replication, failover clusters, or active-active deployments can keep a system responsive during failures, but they create new failure modes and consistency scenarios. Tests must simulate component loss, network partitions, and recovery behaviors.  
 * **Encapsulation for modifiability:** Strict component boundaries make changes easier but can initially feel slower when extra indirection is introduced. Tests must verify that boundary contracts remain stable and that internal refactoring does not leak out to consumers.  
 
-Alignment means that for each tactic you intentionally apply, the corresponding implementation is clearly visible and there are tests aimed at the specific risks introduced by that tactic.
+Alignment means that for each tactic you intentionally apply, the corresponding implementation is clearly visible, and there are tests aimed at the specific risks introduced by that tactic.
 
 ## Architecture, Testability, and System Complexity
 
@@ -88,17 +88,17 @@ Certain architectural patterns improve testability almost by default:
 * **Well-defined interfaces:** Stable contracts between components make it possible to use fakes and mocks without reconfiguring the entire environment.  
 * **Observability:** Exposing metrics, logs, and traces from key components allows tests and monitoring systems to detect subtle architectural regressions, such as increased coupling or performance degradation.  
 
-Conversely, big-ball-of-mud designs or those with hidden shared state are notoriously hard to test. When the architecture allows any component to reach into any other, it becomes harder to write focused tests and to isolate failures.
+Conversely, big-ball-of-mud designs or those with hidden shared state are notoriously hard to test. When the architecture allows any component to reach into any other component, it becomes harder to write focused tests and isolate failures.
 
 ### Choosing the Right Kinds of Tests for Architectural Concerns
 
-Different test types shine at different levels of architecture:  
+Different test types shine at various levels of architecture:  
 
 * **Unit tests** are great for verifying local behavior of small components and enforcing internal invariants. They help you maintain the integrity of your domain model and utility logic.  
 * **Integration tests** validate the interactions between components or subsystems, such as how a web API talks to a database or how a process orchestrator calls worker services.  
 * **System or end-to-end tests** check that the system as a whole meets functional and quality requirements under realistic scenarios and loads.  
 
-For architectural concerns, you typically need a mix: unit tests to protect key invariants, integration tests to verify structural decisions and interfaces, and system-level tests to validate cross-cutting qualities like performance or resilience. The architecture should make it clear where each type belongs and what it is responsible for validating.
+For architectural concerns, you typically need a mix: unit tests to protect key invariants, integration tests to verify structural decisions and interfaces, and system-level tests to validate cross-cutting qualities such as performance and resilience. The architecture should make it clear where each type belongs and what it is responsible for validating.
 
 ### Continuous Integration as Ongoing Architectural Feedback
 
@@ -118,7 +118,7 @@ Different architectural styles create different alignment and testing challenges
 
 ### Layered Systems
 
-In layered architectures, responsibilities are separated into layers such as presentation, domain, and data access. The main architectural rules are usually about allowed direction of dependencies and responsibilities per layer.
+In layered architectures, responsibilities are separated into layers such as presentation, domain, and data access. The main architectural rules are usually about the allowed direction of dependencies and responsibilities per layer.
 
 Alignment looks like this:  
 
@@ -150,11 +150,11 @@ Here, alignment means:
 * Implementation actually uses events as intended instead of slipping back to direct calls for “quick wins.”  
 * Tests simulate event flows, verify that subscribers react correctly, and ensure that the system behaves predictably under out-of-order, duplicate, or delayed events.  
 
-Testing asynchronous behavior is harder than synchronous calls, but without it you cannot trust that the event-driven architecture delivers the qualities you designed for—like decoupling, scalability, or resilience to bursts.
+Testing asynchronous behavior is more complex than synchronous calls. Still, without it, you cannot trust that the event-driven architecture delivers the qualities you designed for—such as decoupling, scalability, and resilience to bursts.
 
 ## Traceability and Documentation in Everyday Work
 
-Keeping architecture, implementation, and testing in sync is not just a one-off activity; it is daily work. Traceability and lightweight documentation make that ongoing alignment manageable instead of bureaucratic.
+Keeping architecture, implementation, and testing in sync is not just a one-off activity; it is daily work. Traceability and lightweight documentation make ongoing alignment manageable rather than bureaucratic.
 
 ### Keeping Architecture and Code in Sync
 
@@ -171,10 +171,10 @@ When you change architecture decisions—such as splitting a component or moving
 Tests can act as executable documentation for architectural decisions. A few examples:  
 
 * A performance test that asserts “search results must appear within 500 ms for 95% of requests” documents a latency requirement as code.  
-* A test that simulates a primary database failure and asserts that a read-only replica serves traffic documents the failover strategy.  
+* A test that simulates a primary database failure and asserts that a read-only replica serves traffic, documenting the failover strategy.  
 * A contract test that encodes the expected API behavior between two services documents their integration contract.  
 
-Unlike static documents, tests fail when reality changes. This makes them valuable signals: when a test fails, either the architecture decision has been violated or the decision itself has changed and both test and description need updating.
+Unlike static documents, tests fail when reality changes. This makes them valuable signals: when a test fails, either the architecture decision has been violated, or the decision itself has changed, and both the test and the description need updating.
 
 ## Summary
 

@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-System qualities like performance, availability, and security are why most architecture decisions exist in the first place. Measuring them turns hand-wavy “it should be fast and reliable” into concrete evidence that you can use to steer design, refactoring, and operational work.
+System qualities such as performance, availability, and security are why most architectural decisions exist in the first place. Measuring them turns hand-wavy “it should be fast and reliable” into concrete evidence that you can use to steer design, refactoring, and operational work.
 
 ## Why Measuring System Qualities Matters
 
@@ -19,13 +19,13 @@ System qualities determine whether your architecture is actually fit for purpose
 
 ### Architecture Is Mostly About Qualities
 
-Features define *what* the system does, but architecture mostly shapes *how* it behaves under stress: load, failures, attacks, and constant change. Decisions about deployment topology, data ownership, communication patterns, and technology choices all trade off qualities like performance, resilience, and modifiability.
+Features define *what* the system does, but architecture mainly shapes *how* it behaves under stress: load, failures, attacks, and constant change. Decisions about deployment topology, data ownership, communication patterns, and technology choices all trade off qualities like performance, resilience, and modifiability.
 
 If you never measure these qualities, you have no idea whether those trade-offs worked out. You may have over-engineered parts nobody cares about and under-invested in the paths that actually carry revenue or reputation risk.
 
 ### From Gut Feel to Feedback Loops
 
-Many teams treat qualities as one-off checklist items: “We did a performance test once,” “Security signed off the design two years ago.” That’s not enough. Qualities drift over time as traffic grows, features pile up, and infrastructure changes under you.
+Many teams treat qualities as one-off checklist items: “We did a performance test once,” “Security signed off on the design two years ago.” That’s not enough. Qualities drift over time as traffic grows, features pile up, and infrastructure changes under you.
 
 Measurement makes qualities part of everyday engineering. You take snapshots regularly, compare them over time, and react before a slow trend turns into an incident. Measure → decide → change → measure again becomes part of the architecture process, not an afterthought.
 
@@ -43,7 +43,7 @@ Most big, vague words (“reliability”, “security”, “maintainability”)
 
 There are two broad ways to measure qualities: by looking at *artifacts* and by looking at *operational behavior*.  
 
-* Artifact measurements come from designs, code, schemas, configurations, and dependency graphs. They are good for predicting qualities like maintainability and testability, and you can apply them before everything is deployed.  
+* Artifact measurements come from designs, code, schemas, configurations, and dependency graphs. They are suitable for predicting qualities like maintainability and testability, and you can apply them before everything is deployed.  
 * Operational measurements come from running systems: logs, metrics, traces, error reports, and user-observed behavior. They show how the system actually behaves under real workloads and failure modes.  
 
 You need both. Artifact measurements tell you where structural risk is accumulating; operational measurements tell you whether users and the business feel it yet.
@@ -52,10 +52,10 @@ You need both. Artifact measurements tell you where structural risk is accumulat
 
 Each measurement also has a “who cares?” dimension:  
 
-* Internal measurements matter mostly to engineers and operators: CPU usage, queue depth, dependency cycles in code, time to rebuild indexes.  
-* External measurements matter to users and business stakeholders: response time for key journeys, uptime percentages, error rates, failed orders, security incidents.  
+* Internal measurements matter mostly to engineers and operators: CPU usage, queue depth, dependency cycles in code, and time to rebuild indexes.  
+* External measurements matter to users and business stakeholders: response time for key journeys, uptime percentages, error rates, failed orders, and security incidents.  
 
-A healthy architecture measurement strategy covers all four quadrants: internal/external × artifact/operational. That way you see both the internal structural health and the external experience.
+A healthy architecture measurement strategy covers all four quadrants: internal/external × artifact/operational. That way, you see both the internal structural health and the external experience.
 
 ## How to Measure Key System Qualities
 
@@ -107,17 +107,17 @@ Typical inputs are:
 * Configuration and infrastructure checks (open ports, weak ciphers, misconfigurations).  
 * Frequency and impact of actual security incidents.  
 
-These metrics don’t give absolute assurance, but they show how effective your security practices are and where you are exposed. The important part is treating security measurement as continuous work, not a one-time certification.
+These metrics don’t give absolute assurance, but they show how effective your security practices are and where you are exposed. The vital part is treating security measurement as continuous work, not a one-time certification.
 
 ### Maintainability
 
 Maintainability is about how easy it is to understand, change, and safely deploy the system. You can’t measure “ease” directly, but you can track structural and historical proxies:  
 
 * Structural metrics: dependency cycles, propagation cost, size of “god” modules, complexity scores.  
-* Change metrics: how often files change, where bug fixes concentrate, how long it takes to implement changes in different modules.  
-* Behavioral metrics: time to onboard new engineers to a subsystem, number of people needed to safely change a module.  
+* Change metrics: how often files change, where bug fixes concentrate, and how long it takes to implement changes in different modules.  
+* Behavioral metrics: time to onboard new engineers to a subsystem, number of people needed to change a module safely.  
 
-Trends matter more than exact values. If propagation cost and cyclicity keep creeping up, and changes in certain modules always take longer and break more often, you have evidence that maintainability is eroding and architecture attention is overdue.
+Trends matter more than exact values. Suppose propagation costs and cyclicity keep creeping up, and changes in specific modules take longer and break more often. In that case, you have evidence that maintainability is eroding and that architectural attention is overdue.
 
 ## From Metrics to Engineering Decisions
 
@@ -131,23 +131,23 @@ Examples:
 
 * A performance test that fails if p95 latency for checkout exceeds 500 ms.  
 * A structural check that fails the build if new dependency cycles appear between modules.  
-* A resilience test that simulates instance failures and fails if requests are dropped instead of retried or rerouted.  
+* A resilience test that simulates instance failures and fails if requests are dropped instead of being retried or rerouted.  
 
 These checks become quality gates in your CI/CD pipelines. Instead of passively watching dashboards drift, you get fast feedback when a change threatens a quality you care about.
 
 ### Goal–Question–Metric for Fuzzy Qualities
 
-For messy problems—like “reduce risk from our payment provider” or “improve user trust in the system”—it’s hard to pick metrics directly. A simple pattern helps: Goal–Question–Metric (GQM).
+For messy problems—like “reduce risk from our payment provider” or “improve user trust in the system”—it’s hard to pick metrics off the bat. A simple pattern helps: Goal–Question–Metric (GQM).
 
 * **Start with a goal**: for example, “Detect provider failures early enough to protect users from long delays.”  
-* **Derive questions**: “How close are we to hitting rate limits?”, “Are failures coming from us or them?”, “How long do jobs stay in queues?”  
-* **Define metrics** that answer those questions: queue depth, provider error rate, time jobs spend in each stage, usage as a percentage of quota.  
+* **Derive questions**: “How close are we to hitting rate limits?” “Are failures coming from them or us?” “How long do jobs stay in queues?”  
+* **Define metrics** that answer those questions: queue depth, provider error rate, time jobs spend in each stage, and usage as a percentage of quota.  
 
 This structure keeps you honest. You’re not measuring things just because the tool makes them easy; you measure them because they answer specific questions about a clear goal.
 
 ### Choosing Where to Start
 
-You don’t need a huge measurement program to get value. Pick a small number of qualities that matter most right now for your system and context. For example:  
+You don’t need a massive measurement program to get value. Pick a small number of qualities that matter most right now for your system and context. For example:  
 
 * A scaling startup with availability problems might focus on error rates, MTTR, and queue depth on critical flows.  
 * A large enterprise with legacy systems might focus on structural metrics (cycles, propagation cost) and change lead time in the worst modules.  
@@ -157,9 +157,9 @@ The crucial part is to act on what you see. If a metric never changes any priori
 
 ## Summary
 
-Measuring system qualities turns architecture from a one-time design exercise into an ongoing engineering practice. By defining qualities precisely, choosing meaningful measurements, and wiring them into feedback loops, you see how your architecture actually behaves and where it is drifting.
+Measuring system qualities turns architecture into an ongoing engineering practice. By defining qualities precisely, choosing meaningful measurements, and wiring them into feedback loops, you see how your architecture actually behaves and where it is drifting.
 
-Different qualities require different techniques: performance and scalability need realistic workloads, availability cares about failure and recovery, security relies on proxies, and maintainability depends on structural and historical patterns. When you turn those measurements into fitness functions and GQM-driven dashboards, they stop being vanity numbers and start steering design.
+Different qualities require different techniques: performance and scalability require realistic workloads, availability concerns failure and recovery, security relies on proxies, and maintainability depends on structural and historical patterns. When you turn those measurements into fitness functions and GQM-driven dashboards, they stop being vanity numbers and start steering design.
 
 The result is an architecture that evolves intentionally. Instead of arguing from gut feel, you can show how qualities are trending, where risks are highest, and which changes will give you the biggest payoff.
 

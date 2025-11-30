@@ -17,7 +17,7 @@ Architecture is where you make the big, expensive bets: technology choices, stru
 
 Every significant architecture decision introduces risk. Choosing a new technology stack, centralizing a database, integrating with a third-party provider, or pushing more logic to the client—all of these carry uncertainty. If you ignore that uncertainty, it turns into outages, runaway complexity, and projects that stall under their own weight.
 
-Risk analysis makes these dangers visible early. You treat architecture decisions not as “final truths” but as hypotheses to be tested, stressed, and, if necessary, adjusted. That shift—in mindset and practice—is what keeps systems evolvable instead of fragile.
+Risk analysis makes these dangers visible early. You treat architecture decisions not as “final truths” but as hypotheses to be tested, stressed, and, if necessary, adjusted. That shift in mindset and practice is what keeps systems evolvable instead of fragile.
 
 ### Architecture Risk vs Everyday Defects
 
@@ -37,8 +37,8 @@ Architecture risk is the combination of two things:
 
 You cannot eliminate all risk. Instead, you aim to:
 
-* Make major risks visible and understood.  
-* Reduce likelihood or impact where it is worth the effort.  
+* Make significant risks visible and understood.  
+* Reduce the likelihood or impact where it is worth the effort.  
 * Consciously accept low, manageable risks instead of drifting into them.
 
 ### Common Sources of Architecture Risk
@@ -50,7 +50,7 @@ Most architecture risks fall into a few broad categories:
 * **Security risks:** weak boundaries around sensitive data, unclear ownership of security responsibilities, or reliance on external services without robust threat thinking.  
 * **Integration risks:** coupling tightly to partner APIs, underestimating variability in third-party systems, or designing for a “happy path” in complex ecosystems.
 
-Each category shows up differently in code, processes, and production behavior. A good risk analysis makes these categories explicit so you can hunt for them systematically.
+Each category shows up differently in code, processes, and production behavior. A good risk analysis makes these categories explicit so you can systematically hunt for them.
 
 ## Identifying Architecture Risks
 
@@ -65,7 +65,7 @@ Useful sources include:
 * **Past incidents:** analyzing previous outages, performance issues, or failed projects to recognize recurring patterns.  
 * **Prototypes and spikes:** small experiments that reveal whether tricky parts of the design behave as expected.
 
-The goal is to build a candidate list of risks. At this stage you are deliberately broad: you would rather catch too many possibilities than miss a critical one.
+The goal is to build a candidate risk list. At this stage, you are deliberately broad: you would rather catch too many possibilities than miss a critical one.
 
 ### Turning Concerns Into Concrete Risks
 
@@ -80,7 +80,7 @@ For example, instead of “the database worries me,” you might define: “If t
 
 ## Assessing and Prioritizing Risks
 
-Once you have a list, you need to decide which risks deserve attention. You cannot treat everything as top priority.
+Once you have a list, you need to decide which risks deserve attention. You cannot treat everything as a top priority.
 
 ### Likelihood and Impact
 
@@ -96,7 +96,7 @@ Combining these gives you a simple categorization:
 * Low impact, high likelihood → consider small, cheap mitigations.  
 * Low impact, low likelihood → usually acceptable with minimal tracking.
 
-The key is to ground likelihood and impact in evidence where possible: data from prototypes, benchmarks, incident history, or known limitations of technologies.
+The key is to ground likelihood and impact in evidence where possible: data from prototypes, benchmarks, incident history, or known technology limitations.
 
 ### Visualizing Risk: Simple Maps and Lists
 
@@ -165,11 +165,11 @@ Risk blindness is pretending that the future will behave like the past, even whe
 
 Signs of risk blindness include:
 
-* “We have always done it this way and it was fine” used to dismiss new concerns.  
+* “We have always done it this way, and it was fine,” used to dismiss new concerns.  
 * No time allocated for risk analysis in project plans.  
 * Decisions made based purely on feature pressure, without discussion of operational or long-term impact.
 
-The fix is cultural as much as technical: normalize asking “what could go wrong?” as part of everyday design conversations.
+The fix is cultural as much as technical: normalize asking “what could go wrong?” in everyday design conversations.
 
 ### Overconfidence in Technology
 
@@ -179,7 +179,7 @@ New technologies are attractive, but they come with unknowns:
 * Sparse real-world operations experience.  
 * Limited talent pool and support.
 
-Overconfidence shows up as adopting tools on hype or personal preference without serious risk thinking. Good risk analysis asks:
+Overconfidence shows up as adopting tools based on hype or personal preference without serious risk thinking. Good risk analysis asks:
 
 * What is our fallback if this tool fails us?  
 * How will we operate this in production?  
@@ -193,7 +193,7 @@ Integration is where many architectures stumble:
 * Message formats and semantics drift.  
 * Latency, reliability, or rate limits are weaker than expected.
 
-Underestimating integration risk often comes from designing around idealized interfaces instead of messy reality. Better risk analysis:
+Underestimating integration risk often stems from designing around idealized interfaces rather than messy reality. Better risk analysis:
 
 * Involves people who have run integrations before.  
 * Includes scenarios for partner downtime, inconsistent data, and version skew.  
@@ -201,7 +201,7 @@ Underestimating integration risk often comes from designing around idealized int
 
 ### Failure to Revisit Decisions
 
-Architecture decisions are not sacred. As systems and organizations change, earlier choices may become liabilities. Risks evolve too.
+Architecture decisions are not sacred. As systems and organizations change, earlier choices may become liabilities. Risks evolve, too.
 
 Anti-patterns include:
 
@@ -209,11 +209,11 @@ Anti-patterns include:
 * Refusing to reconsider a choice because “we already invested in it.”  
 * Never revisiting risk lists after the initial design phase.
 
-Healthy practice means scheduling periodic reviews of major decisions and their associated risks, especially after significant incidents or context shifts.
+Healthy practice means scheduling periodic reviews of major decisions and their associated risks, especially after significant incidents or shifts in context.
 
 ## Making Risk Analysis Continuous
 
-Risk analysis is most effective when it becomes a habit, not a one-off exercise.
+Risk analysis is most effective when it becomes a habit rather than a one-off exercise.
 
 ### Embedding Risk Thinking in Everyday Work
 
@@ -221,7 +221,7 @@ Practical moves include:
 
 * Adding a small “risk analysis” section to architecture decision records: what could go wrong, how we will mitigate or monitor.  
 * Including risk review as a regular part of architecture forums and design reviews.  
-* Using retrospectives after incidents or big projects to update the risk picture: which risks materialized, which did not, what did we learn.
+* Using retrospectives after incidents or big projects to update the risk picture: which risks materialized, which did not, and what we learn.
 
 Over time, this builds collective intuition about where your architectures tend to fail and what patterns are safer in your context.
 
@@ -233,7 +233,7 @@ A risk radar is a living list of key architectural risks:
 * Links to related design docs, decisions, and mitigation plans.  
 * Regular review cadence—monthly or quarterly—to update status.
 
-The radar is not a burial ground for worries; it is a working tool. Items should move: from identified, to mitigated, to accepted or retired.
+The radar is not a burial ground for worries; it is a working tool. Items should move from identified to mitigated to accepted or retired.
 
 ### Aligning Risk With Business Goals
 
@@ -247,11 +247,11 @@ Good risk analysis connects the technical picture to these business realities. Y
 
 ## Summary
 
-Architecture risk analysis is about making uncertainty explicit and manageable. It starts with identifying where designs, technologies, and integrations might fail under real conditions, then assessing likelihood and impact, and finally choosing how to respond.  
+Architecture risk analysis is about making uncertainty explicit and manageable. It starts by identifying where designs, technologies, and integrations might fail in real conditions, then assessing the likelihood and impact, and finally choosing how to respond.  
 
 Techniques like prototyping, incremental delivery, and deliberate management of technical debt turn abstract worries into concrete engineering work. Avoiding anti-patterns—risk blindness, overconfidence in technology, underestimating integration, and never revisiting decisions—keeps the risk picture honest.  
 
-When risk analysis becomes a regular part of architecture practice, systems are less fragile, trade-offs are clearer, and big decisions are made with eyes open instead of on hope.
+When risk analysis becomes a regular part of architectural practice, systems are less fragile, trade-offs are more apparent, and big decisions are made with eyes open rather than on hope.
 
 ## Recommended Reading
 

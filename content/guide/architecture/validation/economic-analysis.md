@@ -15,7 +15,7 @@ Every architecture decision has a price tag, even if you never write it down. Ec
 
 ## Why Economic Analysis Matters
 
-Economic analysis matters because architecture is about investing resources under uncertainty. You are choosing how to spend money, time, and engineering capacity on qualities like performance, availability, and modifiability. If you do this without an economic lens, you either over-engineer parts that don’t matter or under-invest in parts that later become expensive bottlenecks.
+Economic analysis matters because architecture is about investing resources under uncertainty. You are choosing how to allocate money, time, and engineering capacity to qualities such as performance, availability, and modifiability. If you do this without an economic lens, you either over-engineer parts that don’t matter or under-invest in parts that later become expensive bottlenecks.
 
 A simple example: you can build a highly redundant multi-region deployment from day one, but if your product may never reach that scale, the added complexity and cost might never pay back. Conversely, if you ignore future growth completely, you may lock yourself into an architecture that becomes painfully expensive to change when success finally arrives.
 
@@ -23,7 +23,7 @@ Economic thinking gives you a way to balance these pressures. You accept that yo
 
 ## What Exactly Is Economic Analysis of Architectures?
 
-Economic analysis of architectures is the practice of evaluating structural and technology choices in terms of costs, benefits, and risks over time. It does not replace technical reasoning; it wraps around it and asks, “Given this design, what are we buying and what are we risking?”
+Economic analysis of architectures is the practice of evaluating structural and technological choices in terms of costs, benefits, and risks over time. It does not replace technical reasoning; it wraps around it and asks, “Given this design, what are we buying and what are we risking?”
 
 ### Costs, Benefits, and Risks
 
@@ -43,17 +43,17 @@ Architecture decisions play out over years. Economic analysis always asks “whe
 * When do we see the benefit?  
 * When does the risk become relevant?
 
-For example, a big up-front platform investment may be cheaper over five years than repeated rework on ad-hoc solutions—but only if you survive long enough to enjoy the payoff. Time horizon and discounting (explicit or implicit) shape which architecture looks “better.”
+For example, a significant up-front platform investment may be cheaper over five years than repeated rework on ad-hoc solutions—but only if you survive long enough to enjoy the payoff. Time horizon and discounting (explicit or implicit) shape which architecture looks “better.”
 
 ### Comparing Alternatives, Not Just Evaluating One Design
 
-Economic analysis is comparative. You rarely ask, “Is this design good?” in isolation. Instead you ask:
+Economic analysis is comparative. You rarely ask, “Is this design good?” in isolation. Instead, you ask:
 
 * How does this design compare to a simpler one?  
 * How does this compare to delegating more responsibility to a managed service?  
 * How does this compare to postponing a decision until uncertainty drops?
 
-You then look at cost/benefit/risk profiles for each option and pick the one that best fits your goals and constraints.
+You then review the cost/benefit/risk profiles for each option and select the one that best fits your goals and constraints.
 
 ## Techniques for Economic Analysis
 
@@ -67,11 +67,11 @@ Start by putting rough costs on options, even if they are only ballpark estimate
 * **Operational cost:** expected infrastructure spend, licensing, support, and on-call burden.  
 * **Change cost:** how expensive it will be to modify or extend this part of the system in likely future scenarios.
 
-These estimates will not be perfect, but they force you to think about effort and run-time cost explicitly. You can refine them with data over time (for example, past stories’ effort, real cloud bills, incident records).
+These estimates will not be perfect, but they force you to consider effort and runtime costs explicitly. You can refine them with data over time (for example, past stories’ effort, real cloud bills, and incident records).
 
 ### Valuing Qualities and Capabilities
 
-Benefits are often qualitative: higher availability, faster response, easier integration. To compare them, you need some way to value them:
+Benefits are often qualitative: higher availability, faster response, and easier integration. To compare them, you need some way to value them:
 
 * Tie qualities to business outcomes: for example, “Availability below X% risks losing key customers,” or “Reducing response time on this path correlates with observable conversion gains.”  
 * Use relative value when exact numbers are hard: you might rank scenarios by importance (“must-have vs nice-to-have”) or by impact bands (“small, medium, large”).  
@@ -81,7 +81,7 @@ The point is not to find perfect numbers. It is to avoid treating all benefits a
 
 ### Scenario-Based Cost–Benefit Analysis
 
-Quality attribute scenarios are a natural input to economic analysis. For each important scenario—performance under load, failure recovery, regulatory change—you can ask:
+Quality attribute scenarios are a natural input to economic analysis. For each critical scenario—performance under load, failure recovery, regulatory change—you can ask:
 
 * If we keep the architecture as-is, what happens when this scenario occurs? What costs and risks do we face?  
 * If we adopt an alternative architecture, how does the outcome change?  
@@ -97,14 +97,14 @@ Formal methods sometimes build “utility trees” that rank quality scenarios a
 * For each architectural option, rate how well it supports each scenario (roughly, like low/medium/high).  
 * Combine these ratings with scenario importance to see where each option is strong or weak.
 
-This gives you a structured view of trade-offs: maybe one option excels at availability and performance but hurts modifiability, while another is the reverse. Economic analysis then asks: which trade-offs align better with our strategy and constraints?
+This gives you a structured view of trade-offs: maybe one option excels at availability and performance but hurts modifiability, while another excels at modifiability but hurts availability and performance. Economic analysis then asks: which trade-offs align better with our strategy and constraints?
 
 ### Options Thinking
 
 Many architecture decisions are options, not obligations. You can think of them this way:
 
 * Some designs keep options open: they may cost a bit more now but make it easier to support future needs (for example, retaining a partitioning-friendly data model even if you don’t shard yet).  
-* Others lock you in: they are cheaper now but make certain future changes very expensive or impossible (for example, building strongly coupled integrations around a brittle third-party API).
+* Others lock you in: they are cheaper now, but make specific future changes very expensive or impossible (for example, building strongly coupled integrations around a brittle third-party API).
 
 Options thinking asks: what flexibility is this design buying or selling, and what is that flexibility likely to be worth?
 
@@ -128,10 +128,10 @@ Recording that reasoning in architectural decision records makes future conversa
 Economic analysis provides a bridge between technical and business conversations:
 
 * Product and business leaders understand “costs, benefits, risks, and options” far better than “hexagons vs layers vs microservices.”  
-* You can explain why certain qualities (like observability or modifiability) deserve investment, by connecting them to risk reduction and future velocity.  
+* You can explain why certain qualities (like observability or modifiability) deserve investment by connecting them to risk reduction and future velocity.  
 * You can negotiate scope: if an expensive quality requirement has low business value, maybe it can be relaxed or postponed.
 
-The architecture is still technical, but the reasons for it are expressed in terms stakeholders recognize.
+The architecture is still technical, but the reasons for it are expressed in terms that stakeholders recognize.
 
 ### Learning From Actual Outcomes
 
@@ -149,13 +149,13 @@ There are pitfalls:
 
 * **False precision:** pretending that rough estimates are exact numbers and over-optimizing tiny differences.  
 * **Short-term bias:** always choosing the cheapest option today, regardless of long-term damage.  
-* **Over-engineering:** using economic analysis to justify elaborate architectures on the basis of speculative future gains.
+* **Over-engineering:** using economic analysis to justify elaborate architectures based on speculative future gains.
 
 Healthy practice keeps numbers honest (“ballpark, but better than guessing”), stays transparent about assumptions, and accepts that sometimes a simpler, cheaper design is the right move—even if the more elegant architecture looks nicer on a whiteboard.
 
 ## Summary
 
-Economic analysis of architectures is about treating structural decisions as investments under uncertainty. You look at costs, benefits, risks, timing, and options—not just technical purity—to decide how to shape systems.  
+Economic analysis of architectures treats structural decisions as investments under uncertainty. You look at costs, benefits, risks, timing, and options—not just technical purity—to decide how to shape systems.  
 
 By estimating costs, valuing qualities, analyzing scenarios, and comparing options, you can explain why one architecture is a better bet than another for your specific context. By revisiting those analyses as reality unfolds, you refine your intuition and avoid repeating expensive mistakes.  
 

@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Architecture evaluation is how you find out whether your design will survive contact with reality. Instead of hoping your structure, technology choices, and quality trade-offs will hold up, you use structured techniques to expose risks, test assumptions, and decide what to fix while change is still cheap.
+Architecture evaluation is the process of determining whether your design will withstand contact with reality. Instead of hoping your structure, technology choices, and quality trade-offs will hold up, you use structured techniques to expose risks, test assumptions, and decide what to fix while change is still cheap.
 
 ## Why Architecture Evaluation Matters
 
-Architecture is a pile of decisions about structure and qualities that are hard to change later. If those decisions are wrong, you pay for years—in outages, slow delivery, painful migrations, and security holes. Evaluation gives you a way to test those bets before and during implementation, with the right people in the room.
+Architecture is a pile of decisions about structure and qualities that are hard to change later. If those decisions are wrong, you pay for years in outages, slow delivery, painful migrations, and security holes. Evaluation gives you a way to test those bets before and during implementation, with the right people in the room.
 
 Evaluation also creates a shared understanding. When architects, engineers, and business stakeholders work through scenarios together, they see where the architecture shines, where it struggles, and what trade-offs they are consciously accepting. That shared picture is far more valuable than a “perfect” diagram that nobody believes in.
 
@@ -33,7 +33,7 @@ In these situations, skipping evaluation is effectively betting the organization
 
 ## What Exactly Is Architecture Evaluation?
 
-Architecture evaluation is a structured activity that assesses how well a system’s architecture meets its functional and quality goals, and what risks and trade-offs come with it. It is not a code review, and it is not a design approval ceremony. It is a way to ask tough “what if?” questions and see how the architecture responds.
+Architecture evaluation is a structured activity that assesses how well a system’s architecture meets its functional and quality goals and the risks and trade-offs associated with it. It is not a code review, nor is it a design approval ceremony. It is a way to ask tough “what if?” questions and see how the architecture responds.
 
 ### Core Outcomes of a Good Evaluation
 
@@ -45,17 +45,17 @@ A useful evaluation produces a small number of tangible outcomes:
 * Recognized **trade-offs** between qualities (for example, performance vs. modifiability).  
 * Concrete **recommendations**: what to change now, what to monitor, and what to revisit later.  
 
-If you leave an evaluation with only “looks good” or “needs work” and no specifics, it was a status meeting, not an evaluation.
+If you leave an evaluation with only “looks good” or “needs work” and no specifics, it was a status meeting, not an assessment.
 
 ### Evaluation Across the Lifecycle
 
 Evaluation is not a one-off gate:
 
-* **Early design:** you work mostly with architectural views and quality attribute scenarios; the goal is to catch major structural and technology risks before heavy implementation.  
-* **During implementation:** you revisit the architecture as code and tests emerge, checking whether the design still matches reality and whether new risks appeared.  
+* **Early design:** you work primarily with architectural views and quality attribute scenarios; the goal is to catch significant structural and technology risks before heavy implementation.  
+* **During implementation:** you revisit the architecture as code and tests emerge, checking whether the design still matches reality and whether new risks have appeared.  
 * **On existing systems:** you evaluate the current architecture against new goals—scale, compliance, product directions—and use the results to plan refactors or migrations.  
 
-The questions change over time, but the pattern stays the same: understand drivers, examine architecture, play scenarios, identify risks, decide actions.
+The questions change over time, but the pattern stays the same: understand the drivers, examine the architecture, play through scenarios, identify risks, and decide on actions.
 
 ## Methods and Techniques
 
@@ -71,7 +71,7 @@ Typical activities:
 * Challenge assumptions about load, failure modes, and operational realities.  
 * Ask “why this, compared to realistic alternatives?” for big decisions.  
 
-Expert review is fast and cheap, but subjective. It works best when paired with more structured techniques so the evaluation doesn’t collapse into opinion battles.
+Expert reviews are fast and cheap but subjective. It works best when paired with more structured techniques so the evaluation doesn’t collapse into opinion battles.
 
 ### Checklist-Based Review
 
@@ -98,20 +98,20 @@ A quality attribute scenario usually contains:
 * **Response:** what the system should do (shed load, degrade gracefully, keep latency under a threshold).  
 * **Response measure:** how you will judge success (specific latency, error rate, recovery time, effort to implement the change).  
 
-Scenario-based methods often run as structured workshops. The team presents the architecture, stakeholders list their most important quality concerns, everyone writes scenarios, and then you walk through how the architecture responds to each one. Along the way, you capture risks, non-risks, trade-offs, and sensitivity points.
+Scenario-based methods often run as structured workshops. The team presents the architecture, stakeholders list their most essential quality concerns, everyone writes scenarios, and then you walk through how the architecture responds to each one. Along the way, you capture risks, non-risks, trade-offs, and sensitivity points.
 
 ### Trade-off–Focused Methods
 
-Some evaluation methods go deeper on trade-offs between qualities and costs:
+Some evaluation methods go deeper into trade-offs between qualities and costs:
 
-* Methods that analyze   how a decision affects multiple qualities   at once, such as “synchronous calls vs. asynchronous messaging”, “shared database vs. service-owned data”.  
-* Methods that factor in   cost and benefit of strategies  : for example, comparing the cost of introducing an API gateway against the improvements in security and operability.  
+* Methods that analyze how a decision affects multiple qualities at once, such as “synchronous calls vs. asynchronous messaging”, “shared database vs. service-owned data”.  
+* Methods that factor in the cost and benefit of strategies: for example, comparing the cost of introducing an API gateway against the improvements in security and operability.  
 
 These techniques help you avoid optimizing a single quality (say, performance) at the expense of everything else.
 
 ### Quantitative Evaluation
 
-Qualitative workshops surface where risks probably are. Quantitative methods estimate how big those risks are and how the system might behave.
+Qualitative workshops surface where risks are. Quantitative methods estimate the size of those risks and how the system might behave.
 
 Common quantitative tools:
 
@@ -123,7 +123,7 @@ These models are approximations, but they are more honest than “it should scal
 
 ## Running an Architecture Evaluation
 
-A good evaluation is designed, not improvised. You choose scope, participants, and techniques deliberately.
+A good evaluation is designed, not improvised. You deliberately choose the scope, participants, and techniques.
 
 ### Preparation
 
@@ -133,7 +133,7 @@ Key preparation steps:
 * **Identify stakeholders:** Include people who understand business drivers, operational realities, and implementation details—not just architects.  
 * **Collect artifacts:** Architecture views, context diagrams, quality attribute requirements, key user journeys, and any relevant measurements or prototypes.  
 
-A clear, shared understanding of the system and its goals is a precondition for a useful evaluation.
+A clear, shared understanding of the system and its goals is a precondition for a proper evaluation.
 
 ### Execution
 
@@ -148,7 +148,7 @@ As you go, capture:
 * **Risks:** places where the architecture might not meet goals.  
 * **Non-risks:** concerns that turn out to be handled well.  
 * **Trade-offs:** where improving one quality likely harms another.  
-* **Sensitivity points:** decisions that have outsized impact on qualities.  
+* **Sensitivity points:** decisions that have an outsized impact on qualities.  
 
 The point is not to “defend” the architecture but to reveal its behavior under realistic conditions.
 
@@ -160,7 +160,7 @@ After the workshop or review:
 * **Prioritize actions:** Not all risks are equal. Focus on those with high impact and reasonable mitigation options.  
 * **Feed into roadmaps:** Ensure evaluation results affect backlogs, refactoring plans, and project scopes—not just a slide deck.  
 
-You may also define follow-up evaluations, especially if major changes are proposed.
+You may also define follow-up evaluations, especially if significant changes are proposed.
 
 ## Using Evaluation Results in Practice
 
@@ -172,7 +172,7 @@ For each high-impact risk, decide how you will respond:
 
 * **Mitigate:** change the architecture (for example, introduce caching, partition a hot table, add a queue, split a monolith module).  
 * **Monitor:** accept the risk but add instrumentation and alerts to detect issues early.  
-* **Accept:** explicitly live with the risk when mitigation is too expensive and the impact is low or unlikely.  
+* **Accept:** explicitly live with the risk when mitigation is too expensive, and the impact is low or unlikely.  
 
 Writing these decisions down clarifies accountability and avoids surprise later (“we didn’t know this might happen”).
 
@@ -181,10 +181,10 @@ Writing these decisions down clarifies accountability and avoids surprise later 
 Architecture evaluation is a natural input into governance:
 
 * It gives a **fact base** for approving major initiatives or investments.  
-* It provides **checkpoints** for whether architecture is drifting away from agreed goals.  
+* It provides **checkpoints** for whether the architecture is drifting away from agreed goals.  
 * It creates a **trail of decisions** that later architects can revisit when context changes.  
 
-Over time, evaluations also act as training: teams learn to think in scenarios, trade-offs, and quality attributes, not just features.
+Over time, evaluations also serve as training: teams learn to think in terms of scenarios, trade-offs, and quality attributes, not just features.
 
 ### Evaluating Existing Systems
 
@@ -192,7 +192,7 @@ The same techniques apply to systems already in production:
 
 * You reconstruct enough architecture to run meaningful scenarios.  
 * You compare behavior and structure against new requirements—scale, compliance, integration.  
-* You use the results to plan   incremental change   instead of guessing at where to cut and replace.  
+* You use the results to plan incremental change instead of guessing at where to cut and replace.  
 
 Here, evaluation is less about theoretical risk and more about where reality hurts today and will hurt more tomorrow.
 

@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Architecture governance is how an organization steers its systems over time. It defines who gets to decide what, which principles and standards apply, and how you spot and correct dangerous drift. Done well, it keeps architecture aligned with business goals without drowning teams in process. Done badly, it turns into either chaos or bureaucracy.
+Architecture governance is how an organization steers its systems over time. It defines who gets to decide what, which principles and standards apply, and how you spot and correct dangerous drift. Done well, it keeps architecture aligned with business goals without drowning teams in process. Poorly done, it turns into either chaos or bureaucracy.
 
 ## Why Architecture Governance Matters
 
@@ -28,20 +28,20 @@ You can summarize the goals of governance in four words:
 * **Alignment:** ensure architectures support current and emerging business strategy, not just local team preferences.  
 * **Consistency:** promote compatible practices, standards, and tooling where shared solutions genuinely help.  
 * **Risk management:** surface and mitigate architectural risks like uncontrolled tech sprawl, security gaps, or critical bottlenecks.  
-* **Value delivery:** make sure large architectural investments pay off in real outcomes: reliability, change speed, compliance, and customer impact.
+* **Value delivery:** make sure significant architectural investments pay off in real outcomes: reliability, change speed, compliance, and customer impact.
 
 Everything else—processes, boards, templates—is a means to these ends, not the point.
 
 ## What Exactly Is Architecture Governance?
 
-Architecture governance is the set of roles, policies, and processes that guide architectural decisions and oversee how they are applied in practice.
+Architecture governance is the set of roles, policies, and processes that guide architectural decisions and oversee their application in practice.
 
-It is useful to separate management from governance:
+It is helpful to separate management from governance:
 
 * **Architecture management** is about planning and execution: roadmaps, staffing, coordinating work, tracking progress.  
 * **Architecture governance** is about direction and oversight: what principles we follow, which decisions need escalation, and how we check that reality matches our intent.  
 
-You need both, but they play different roles. Management answers “How will we get this done?” Governance answers “Are we building the right thing in the right way, given our strategy and constraints?”
+You need both, but they play different roles. Management answers, “How will we get this done?” Governance answers “Are we building the right thing in the right way, given our strategy and constraints?”
 
 ### Governance Structures and Roles
 
@@ -52,7 +52,7 @@ Governance becomes real when specific people are accountable. Common structures 
 * An **Architecture Review Board (ARB)** or similar forum that handles big cross-cutting decisions and escalations.  
 * Clearly defined **decision rights**: which decisions teams own, which require consultation, and which require approval.
 
-Titles matter less than clarity. If no one knows who can approve a new platform, or who owns API standards, governance will fail no matter how many documents you produce.
+Titles matter less than clarity. If no one knows who can approve a new platform or who owns API standards, governance will fail, no matter how many documents you produce.
 
 ## Governance Models
 
@@ -65,7 +65,7 @@ In a centralized model, a small group—often an enterprise architecture team or
 * **Strengths:** strong consistency, easier enforcement of cross-cutting concerns (security, compliance, data).  
 * **Weaknesses:** slower decision-making, risk of disconnect from delivery, tendency toward one-size-fits-all solutions.  
 
-Centralized governance fits organizations with heavy regulatory pressure or strong needs for uniformity, but it easily drifts into gatekeeping if not paired with active collaboration.
+Centralized governance suits organizations under heavy regulatory pressure or with strong needs for uniformity, but it can easily drift into gatekeeping if not paired with active collaboration.
 
 ### Decentralized Governance
 
@@ -74,7 +74,7 @@ In a decentralized model, teams own most architectural decisions within their do
 * **Strengths:** high autonomy, faster local decisions, better fit to diverse contexts.  
 * **Weaknesses:** risk of fragmentation, duplicated effort, and incompatible approaches to shared problems.  
 
-This model fits organizations with many independent products or value streams, as long as you invest in cross-team communication and shared guiding principles.
+This model fits organizations with many independent products or value streams, provided you invest in cross-team communication and shared guiding principles.
 
 ### Hybrid Governance
 
@@ -112,9 +112,9 @@ Reviews are the visible part of governance. They are where decisions are tested 
 
 Common review types:
 
-* **Concept reviews:** early-stage discussions of new systems, major changes, or experiments.  
+* **Concept reviews:** early-stage discussions of new systems, significant changes, or experiments.  
 * **Design reviews:** deeper dives into selected views (decomposition, data, deployment) for significant initiatives.  
-* **Implementation / conformance reviews:** checks that key decisions actually made it into code and infrastructure.  
+* **Implementation/conformance reviews:** checks that key decisions actually made it into code and infrastructure.  
 
 Effective reviews are focused, time-boxed, and collaborative. They exist to surface risks and trade-offs, not to show off diagrams or impress a committee.
 
@@ -128,7 +128,7 @@ Architectural decisions decay quickly in people’s memories. Governance relies 
 * Expected impact and risks.  
 * Who made the decision and when.
 
-ADRs support governance in three ways: they make reasoning visible, they clarify who is accountable, and they give future architects a starting point when context changes.
+ADRs support governance in three ways: they make reasoning visible, clarify who is accountable, and provide future architects with a starting point when context changes.
 
 ### Communication and Enablement
 
@@ -142,7 +142,7 @@ When governance is mostly enablement, formal enforcement becomes much lighter.
 
 ## Governance in Agile and DevOps Environments
 
-Agile and DevOps practices change how teams deliver software. Governance must adapt to that reality instead of fighting it.
+Agile and DevOps practices change how teams deliver software. Governance must adapt to that reality rather than fight it.
 
 ### Lightweight Controls, Not Heavy Gates
 
@@ -197,7 +197,7 @@ If teams never say “no” to a standard, they probably are not stretching far 
 Governance that was appropriate for a 3-team startup will not fit a 50-team scale-up. Common failure modes include:
 
 * Governance frozen in time while tech and org structure change.  
-* New domains (like data platforms or ML) operating completely outside existing governance.  
+* New domains (like data platforms or ML) operating entirely outside existing governance.  
 * Legacy rules kept alive “because we’ve always done it this way.”
 
 Healthy governance treats itself as an evolving system: it has retrospectives, sunset mechanisms for old rules, and explicit moments to redesign structures as the organization grows.

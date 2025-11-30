@@ -1,7 +1,7 @@
 ---
 weight: 304
 title: "Architecture Reconstruction and Conformance"
-description: "This article explains what architecture reconstruction and conformance is, and how to recover structure from code and keep implementations aligned with intended architecture."
+description: "This article explains what architecture reconstruction and conformance are, and how to recover structure from code and keep implementations aligned with the intended architecture."
 icon: "article"
 date: "2025-01-19T15:08:52+01:00"
 lastmod: "2025-01-19T15:08:52+01:00"
@@ -17,7 +17,7 @@ Most systems outlive their original diagrams. Code evolves, shortcuts pile up, a
 
 Architecture decisions don’t stay pristine. Teams change, features arrive under pressure, and tools or platforms are replaced. Over time, the implemented system quietly diverges from the intended architecture.  
 
-Reconstruction and conformance let you deal with this reality instead of pretending the original design is still true. Reconstruction recovers architecture from implementation and behavior. Conformance compares that recovered view with the intended one, identifies gaps, and helps you decide whether to fix code, update the architecture, or both.  
+Reconstruction and conformance let you address this reality rather than pretending the original design is still true. Reconstruction recovers architecture from implementation and behavior. Conformance compares that recovered view with the intended one, identifies gaps, and helps you decide whether to fix code, update the architecture, or both.  
 
 Without these activities, you are effectively designing on top of myths: you make decisions assuming certain boundaries, dependencies, and qualities exist, when in fact the system behaves differently in production.
 
@@ -80,7 +80,7 @@ Reconstruction is iterative. Early models will be too noisy or too detailed. You
 * Removing incidental detail that doesn’t help you reason about structure.  
 * Aligning names and boundaries with how teams talk about the system today.  
 
-Often you’ll discover that some “logical” component is actually scattered across multiple services, or that a supposedly isolated subsystem leaks dependencies everywhere. Those insights are exactly why you reconstruct.
+Often, you’ll discover that some “logical” component is actually scattered across multiple services or that a supposedly isolated subsystem leaks dependencies everywhere. Those insights are exactly why you reconstruct.
 
 #### Analysis
 
@@ -91,11 +91,11 @@ Once you have usable models, you can analyze them for:
 * Structural bottlenecks and single points of failure.  
 * Opportunities to extract or merge components.  
 
-This analysis feeds into modernization plans, risk assessments, and eventually into conformance work.
+This analysis feeds into modernization plans, risk assessments, and, eventually, conformance work.
 
 ## What Is Architecture Conformance?
 
-Architecture conformance is about checking whether the implemented system behaves like the architecture you intend. It compares the reconstructed models with the intended architecture—your reference—and highlights where they differ.
+Architecture conformance is about verifying that the implemented system behaves as intended by the architecture. It compares the reconstructed models with the intended architecture—your reference—and highlights where they differ.
 
 ### Intended vs Actual Architecture
 
@@ -110,7 +110,7 @@ Conformance analysis compares these and surfaces deviations—places where the i
 
 You will typically see two patterns:  
 
-* **Drift:** Gradual, often unintentional deviations where the architecture mostly matches the intent but with small violations (extra dependencies, new special cases).  
+* **Drift:** Gradual, often unintentional deviations where the architecture mostly matches the intent but with minor violations (extra dependencies, new exceptional cases).  
 * **Erosion:** Larger, more serious departures where core principles are broken (shared databases between services, bypassed layers, duplicated responsibilities).  
 
 Not all deviations are bad. Sometimes the system has evolved in a sensible direction that the original architecture never anticipated. Conformance is a diagnostic, not a moral judgment: it tells you what changed so you can decide whether to bless it or fix it.
@@ -127,7 +127,7 @@ You begin by capturing the intended architecture in a form that’s precise enou
 * Ownership rules: which components own which data or external contracts.  
 * Interaction rules: which components are allowed to communicate directly and how.  
 
-For legacy systems, this step may require interviews, archaeology in old documents, and making some explicit decisions about what you *now* consider “intended.”
+For legacy systems, this step may require interviews, archival research, and making explicit decisions about what you *now* consider “intended.”
 
 #### Compare Models
 
@@ -137,7 +137,7 @@ You then compare the reconstructed models with the intended rules:
 * Do services hold references or connections to databases they shouldn’t touch?  
 * Are there cross-boundary calls or dependencies that violate the chosen architecture style?  
 
-This can be partly automated (rule-based checks on dependency graphs, static analysis) and partly manual (reviewing critical flows against the intended patterns).
+This can be partly automated (rule-based checks on dependency graphs and static analysis) and partly manual (reviewing critical flows against intended patterns).
 
 #### Assess Impact and Decide Actions
 
@@ -185,7 +185,7 @@ Static conformance tools can run these checks on every build, turning architectu
 
 ### Visualization and Communication
 
-Visualizations—graphs, layered diagrams, heatmaps of dependencies—are crucial for explaining findings to others. They help you:  
+Visualizations—graphs, layered diagrams, and dependency heatmaps—are crucial for explaining findings to others. They help you:  
 
 * Show where the architecture matches intent and where it doesn’t.  
 * Illustrate hotspots of coupling and complexity.  
@@ -215,9 +215,9 @@ Modern systems—microservices fleets, hybrid cloud setups, polyglot stacks—ca
 You can manage this by:  
 
 * Focusing first on critical slices: core business flows, high-risk interfaces, and systems in scope for upcoming change.  
-* Choosing appropriate levels of abstraction: you may group some services or modules together when their internal differences don’t affect the decisions you need to make.  
+* Choosing appropriate levels of abstraction: you may group some services or modules when their internal differences don’t affect the decisions you need to make.  
 
-The goal is to gain actionable understanding, not to capture every last detail.
+The goal is to gain an actionable understanding, not to capture every last detail.
 
 ### Keeping Reconstruction and Conformance Ongoing
 
@@ -233,9 +233,9 @@ Otherwise, you’ll be back to “we don’t trust the diagrams” in a year.
 
 ## Summary
 
-Architecture reconstruction and conformance close the gap between how you think your system is built and how it actually behaves. Reconstruction recovers structure and behavior from code and runtime data, giving you honest architectural views. Conformance compares those views with your intended architecture, surfaces drift and erosion, and forces deliberate decisions about what to fix and what to embrace.  
+Architecture reconstruction and conformance close the gap between how you think your system is built and how it actually behaves. Reconstruction recovers structure and behavior from code and runtime data, giving you honest architectural views. Conformance compares those views with your intended architecture, surfaces drift and erosion, and forces you to deliberate about what to fix and what to embrace.  
 
-Together, they turn legacy and evolving systems from black boxes into understandable, governable assets. Instead of stacking new designs on top of outdated assumptions, you can base your architectural work on reality—and keep it that way as the system continues to change.
+Together, they turn legacy and evolving systems into understandable, governable assets. Instead of stacking new designs on top of outdated assumptions, you can base your architectural work on reality—and keep it that way as the system continues to change.
 
 ## Recommended Reading
 
