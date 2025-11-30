@@ -82,9 +82,9 @@ This structure forces you to think through not just “what” but “why”, �
 
 ADRs are not design docs, RFCs, or tickets:
 
-* A **design doc** often covers a bigger change with many moving parts; it may reference several ADRs.  
-* An **RFC** is usually about reaching agreement; an ADR records the agreement once reached.  
-* A **ticket** tracks work; an ADR tracks the decision the work is implementing.
+* **A design doc** often covers a bigger change with many moving parts; it may reference several ADRs.  
+* **An RFC** is usually about reaching agreement; an ADR records the agreement once reached.  
+* **A ticket** tracks work; an ADR tracks the decision the work is implementing.
 
 Think of ADRs as the index of your architecture’s long-term bets. Other documents can be long and ephemeral; ADRs should be short and durable.
 
@@ -109,7 +109,7 @@ ADRs work best when they are:
 
 * Stored in version control alongside the code they govern.  
 * Plain text (for example, Markdown) to make editing and reviewing easy.  
-* Collected in a **single log** per system or product, with stable IDs and links between related ADRs.
+* Collected in a single log per system or product, with stable IDs and links between related ADRs.
 
 Common patterns include:
 
@@ -215,6 +215,7 @@ By writing focused ADRs for significant decisions, linking them to architecture 
 ## Recommended Reading
 
 #### Books
+
 * Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
   * **Chapter 19: Architecture Decisions**\
     Presents a structured approach to making and documenting architecture decisions, introduces ADRs, and highlights common decision anti-patterns and governance practices.

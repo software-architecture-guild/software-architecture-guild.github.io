@@ -63,7 +63,7 @@ It helps to separate three layers:
 
 * **Architectural models** represent some aspect of the architecture (structure, behavior, deployment) in a structured way.  
 * **Diagrams** are visual renderings of those models at a point in time.  
-* The **architectural description** is the container: it organizes models, diagrams, and explanatory text into a cohesive package.
+* **Architectural description** is the container: it organizes models, diagrams, and explanatory text into a cohesive package.
 
 The description specifies which models matter, why they exist, and how they hang together. It is the difference between a folder full of pictures and a considered narrative about how the system works.
 
@@ -87,7 +87,7 @@ Effective architectural descriptions share a few key properties:
 * **Consistency**: views do not contradict each other. Elements are named consistently, and relationships mean the same thing across diagrams.  
 * **Maintainability**: it is realistic to keep the description up to date. Sections and views can evolve without rewriting everything from scratch.
 
-If your description fails on any of these, people will stop trusting it, and it will quietly become shelfware.
+If your description fails on any of these, people will stop trusting it, and it will quietly become unused.
 
 ## Core Elements of an Architectural Description
 
@@ -142,7 +142,7 @@ Every non-trivial system has a history of decisions:
 * Accepted that risk to meet this deadline.  
 * Introduced this dependency to avoid that complexity.
 
-If these decisions live only in people’s heads, the architecture becomes fragile and hard to evolve. An architectural description should record **significant decisions** and their rationale:
+If these decisions live only in people’s heads, the architecture becomes fragile and hard to evolve. An architectural description should record significant decisions and their rationale:
 
 * What problem did we face?  
 * What options did we consider?  
@@ -171,10 +171,10 @@ Writing an architectural description is not a one-time, big-bang activity. It is
 
 The most common failure mode is starting with diagrams instead of with people. A more robust approach:
 
-1. Identify key stakeholders.  
-2. Capture their main concerns and questions.  
-3. Choose viewpoints and views that can address those concerns.  
-4. Only then start producing models and diagrams.
+* Identify key stakeholders.  
+* Capture their main concerns and questions.  
+* Choose viewpoints and views that can address those concerns.  
+* Only then start producing models and diagrams.
 
 This keeps you from generating views “because the template says so” and instead focuses effort where it will pay off.
 
@@ -232,6 +232,7 @@ By treating the architectural description as a living, stakeholder-driven artifa
 ## Recommended Reading
 
 #### Books
+
 * Nick Rozanski, & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
   * **Chapter 13: Creating the Architectural Description**\
     Provides a structured, view-based approach to building complete, stakeholder-focused architectural descriptions, aligned with common industry standards.
