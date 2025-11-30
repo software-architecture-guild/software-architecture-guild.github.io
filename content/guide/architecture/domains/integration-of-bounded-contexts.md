@@ -1,7 +1,7 @@
 ---
 weight: 206
 title: "Integration of Bounded Contexts"
-description: "This article explains how bounded contexts integrate, which collaboration patterns and communication styles keep models clean, and how to choose the right strategy based on team relationships and technical constraints."
+description: "This article explains how bounded contexts integrate, detailing collaboration patterns and communication styles that maintain clean models. Learn to choose the right integration strategy based on team relationships and technical constraints, ensuring effective and coherent system design across different contexts."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

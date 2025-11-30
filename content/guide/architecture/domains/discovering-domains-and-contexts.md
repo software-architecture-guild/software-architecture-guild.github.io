@@ -1,7 +1,7 @@
 ---
 weight: 207
 title: "Discovering Domains and Contexts"
-description: "This article explains how to discover business domains and bounded contexts using knowledge crunching, EventStorming, and other collaborative techniques that turn messy reality into actionable models."
+description: "This article explains how to discover business domains and bounded contexts using collaborative techniques like knowledge crunching and EventStorming. Learn to transform complex realities into actionable models, ensuring your software architecture aligns with core business functions and evolves effectively."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

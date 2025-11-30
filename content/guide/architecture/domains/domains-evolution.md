@@ -1,7 +1,7 @@
 ---
 weight: 208
 title: "Domains Evolution"
-description: "This article explains how domains, subdomains, and designs evolve, and how to adapt your domain, context, and implementation decisions as strategy, knowledge, and organization change."
+description: "This article explains how business domains, subdomains, and architectural designs evolve, and how to adapt your domain, context, and implementation decisions. Learn to reclassify subdomains, adjust strategic and tactical patterns, and manage organizational changes to ensure your architecture remains aligned with evolving business needs."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"
