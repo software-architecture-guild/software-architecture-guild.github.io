@@ -1,7 +1,7 @@
 ---
 weight: 160
 title: "Service-Based"
-description: "A practical guide to the Service-Based architecture style—coarse-grained business services, contracts and data choices, trade-offs, and how to evolve toward or away from finer-grained services."
+description: "This article explains the Service-Based architecture style, detailing its use of coarse-grained, business-aligned services and explicit contracts. Learn about its benefits, such as improved team autonomy and selective scaling, as well as its trade-offs and practical evolution paths to effectively design and maintain a service-based system."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

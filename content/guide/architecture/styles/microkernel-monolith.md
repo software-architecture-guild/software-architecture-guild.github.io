@@ -1,7 +1,7 @@
 ---
 weight: 155
 title: "Microkernel Monolith"
-description: "A practical guide to the Microkernel Monolith—core vs. plugins, extension points, governance, data and dependency rules, trade-offs, and how to evolve without premature distribution."
+description: "This article explains the Microkernel Monolith architecture style, detailing its core concepts of a minimal kernel and extensible plugins. Learn about its benefits, such as safe customization and extensibility, as well as its trade-offs and practical evolution paths to effectively design and maintain a microkernel-based system."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

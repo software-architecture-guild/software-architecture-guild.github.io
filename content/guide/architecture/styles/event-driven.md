@@ -1,7 +1,7 @@
 ---
 weight: 161
 title: "Event-Driven"
-description: "A practical guide to the Event-Driven architecture style—events, producers/consumers, contracts and schemas, delivery guarantees, trade-offs, and how to mix sync/async safely."
+description: "This article explains the Event-Driven architecture style, covering its core components like events, producers, and consumers. Learn about its benefits, such as loose coupling and scalability, as well as its trade-offs, including eventual consistency and debugging challenges, to effectively design and implement event-driven systems."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

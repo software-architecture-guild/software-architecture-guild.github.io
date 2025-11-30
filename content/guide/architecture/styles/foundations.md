@@ -1,7 +1,7 @@
 ---
 weight: 151
 title: "Foundations"
-description: "This article explains what an Architecture Style is, how style constraints shape structure and interactions, and why those constraints drive qualities such as changeability, reliability, and performance across monolithic and distributed families."
+description: "This article explains the foundational concepts of software architecture styles, detailing how they constrain system structure and interactions to achieve desired qualities like changeability and performance. It explores the trade-offs between monolithic and distributed architecture families, providing a clear guide to understanding and selecting the right approach for your software."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

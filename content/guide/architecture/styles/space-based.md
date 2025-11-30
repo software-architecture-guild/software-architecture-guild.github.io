@@ -1,7 +1,7 @@
 ---
 weight: 162
 title: "Space-Based"
-description: "A practical guide to the Space-Based architecture style—data and processing grids, partitioning and replication, elasticity, trade-offs, and how to operate at high scale with in-memory state."
+description: "This article explains the Space-Based architecture style, detailing its use of data and processing grids to achieve high scalability and elasticity. Learn about its benefits, such as in-memory state management and low latency, as well as its trade-offs and operational considerations for high-scale systems."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"
