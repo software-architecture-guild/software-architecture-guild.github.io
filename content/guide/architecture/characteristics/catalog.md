@@ -8,557 +8,580 @@ lastmod: "2025-10-14T00:00:00+01:00"
 draft: false
 toc: true
 authors:
--  "ilya-hardzeenka.md"
+- "ilya-hardzeenka.md"
 ---
 
 ## Architecture Characteristics Catalog
 
+This catalog gives short, practical definitions of common architecture characteristics and how they interact. Use it as a checklist when you shape architectural decisions or negotiate trade-offs with stakeholders.
+
+Each entry names the characteristic, indicates whether it is usually an explicit requirement (called out directly) or an implicit one (emerges from other choices), and summarizes techniques and typical tensions with other characteristics.
+
+---
+
 ### Abstraction
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-Simplifies complex systems by exposing only essential components and hiding implementation details.
+**Definition:**  
+Reduces apparent complexity by hiding implementation details behind simpler concepts and interfaces.
 
 **Techniques:**
 
-* Clear interfaces and APIs.
-* Design patterns like facade, adapter, or factory.
+* Stable interfaces and APIs that hide internal structure.
+* Design patterns such as facade, adapter, or factory to present simpler views.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Extra abstraction layers may increase latency.
-* **Impact on Modifiability:** Overgeneralized abstractions can hinder future changes.
-* **Impact on Simplicity:** Abstracting too much can complicate debugging.
+* Performance: extra layers in hot paths can add measurable overhead.
+* Modifiability: poorly chosen abstractions can lock you into bad boundaries and make later change harder.
+* Diagnosability: heavy abstraction can make debugging and incident analysis slower if internals are too opaque.
 
 ---
 
 ### Agility
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Measures the ability of a system to adapt to new requirements, technologies, or environments.
+**Definition:**  
+The ability of the system and organization to support frequent, safe change in behavior, technology, and deployment without excessive cost or risk.
 
 **Techniques:**
 
-* Modular and microservices architecture.
-* CI/CD pipelines for rapid updates.
-* Flexible configuration mechanisms.
+* Modular and service-oriented architectures that isolate change.
+* CI/CD pipelines and automated tests for rapid, reliable releases.
+* Configuration and feature flags to enable incremental rollout.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Agile systems may prioritize speed over optimization.
-* **Impact on Security:** Frequent updates can introduce vulnerabilities if security processes are overlooked.
-* **Impact on Simplicity:** Rapid adaptations may lead to a more complex system.
+* Performance: more indirection, configuration, and safety checks can slow hot paths if not managed carefully.
+* Operational simplicity: many small changes and deployments require mature tooling and discipline.
+* Security: fast change increases the risk of shipping flaws if security is not part of the delivery pipeline.
 
 ---
 
 ### Auditability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-The ease with which a system's actions can be examined to ensure policy compliance and detect anomalies.
+**Definition:**  
+The degree to which actions in the system can be reconstructed and attributed to actors for compliance, investigation, and forensics.
 
 **Techniques:**
 
-* Logging and audit trails.
-* Comprehensive documentation.
+* Structured logging, audit trails, and immutable event streams.
+* Clear identifiers for users, sessions, and business entities.
+* Tamper-evident storage and restricted access to audit data.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Generating audit logs may introduce latency.
-* **Impact on Complexity:** Auditability features can add complexity to the system.
+* Performance and cost: storing and processing detailed logs consumes resources.
+* Complexity: designing consistent, tamper-evident audit data adds cross-cutting concerns to many components.
+* Privacy: rich audit data must be reconciled with data protection rules.
 
 ---
 
 ### Availability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Ensures the system remains operational and accessible over a defined period, often measured as uptime percentage.
+**Definition:**  
+The proportion of time the system is able to perform its required functions, often expressed as a target uptime (for example, 99.9%).
 
 **Techniques:**
 
-* Redundancy and failover mechanisms.
-* Graceful degradation and backup systems.
-* Monitoring and alert systems for failure detection.
+* Redundancy, failover, and replication across nodes or regions.
+* Graceful degradation when dependencies fail.
+* Proactive monitoring, alerting, and capacity management.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Higher availability requires redundancy, increasing infrastructure expenses.
-* **Impact on Performance:** Replication and failover can introduce latency.
-* **Impact on Complexity:** Additional components for availability can complicate maintenance and deployment.
+* Cost: redundancy, failover environments, and 24/7 operations are expensive.
+* Complexity: distributed topologies, failover logic, and state synchronization increase design and operational complexity.
+* Performance: synchronous replication and health checks can add latency.
 
 ---
 
 ### Complexity
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-Represents how intricate or complicated the system’s architecture is.
+**Definition:**  
+The inherent difficulty of understanding, changing, and operating the system, driven by structure, behavior, and interactions.
 
-**Techniques:**
+**Techniques (for managing it):**
 
-* Using clear architectural patterns.
-* Reducing unnecessary dependencies.
+* Clear architecture patterns and consistent conventions.
+* Minimizing unnecessary dependencies and special cases.
+* Regular simplification and refactoring.
 
 **Trade-Offs:**
 
-* **Impact on Modifiability:** High complexity may hinder system changes.
-* **Impact on Maintainability:** Complex systems require more effort to understand and maintain.
+* Modifiability: unmanaged complexity makes change risky and slow.
+* Reliability: complex behavior is harder to reason about and test thoroughly.
+* Feature flexibility: aggressive simplification may limit legitimate variation.
 
 ---
 
 ### Configurability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Allows system behavior to be modified without altering the underlying code.
+**Definition:**  
+The extent to which system behavior can be adapted through configuration rather than code changes.
 
 **Techniques:**
 
-* External configuration files (e.g., YAML, JSON).
-* Runtime parameter adjustments.
+* External configuration (files, key–value stores, admin UIs).
+* Hierarchical configuration with sensible defaults and overrides.
+* Validation and typing of configuration values.
 
 **Trade-Offs:**
 
-* **Impact on Simplicity:** Highly configurable systems can become harder to manage.
-* **Impact on Performance:** Dynamic configuration evaluation adds runtime overhead.
-* **Impact on Security:** Misconfigured systems may introduce vulnerabilities.
+* Operational simplicity: many configuration options can overwhelm operators and increase misconfiguration risk.
+* Performance: evaluating configuration at runtime can add overhead if done in hot paths.
+* Security: configuration channels can become powerful, sensitive control surfaces.
 
 ---
 
 ### Cost
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Represents the financial investment required for the system's development, deployment, and maintenance.
+**Definition:**  
+The financial footprint of designing, building, running, and evolving the system.
 
 **Techniques:**
 
-* Optimize resource usage through cloud solutions.
-* Leverage open-source tools and components.
-* Automate workflows to reduce manual effort.
+* Capacity planning and right-sizing of infrastructure.
+* Using managed services and open-source components where appropriate.
+* Automation of repetitive operational tasks and incident handling.
 
 **Trade-Offs:**
 
-* **Impact on Availability:** Budget constraints can reduce redundancy.
-* **Impact on Scalability:** Limited resources may restrict expansion.
-* **Impact on Security:** Cost-saving measures may underfund security solutions.
+* Availability and scalability: aggressive cost optimization can remove redundancy and headroom.
+* Security: under-investing in security controls, reviews, and monitoring saves money short term but increases risk.
+* Evolvability: postponing refactoring and modernization reduces immediate spend but builds technical debt.
 
 ---
 
 ### Deployability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Measures how easily and efficiently a system can be deployed and updated in various environments.
+**Definition:**  
+How easily, reliably, and frequently the system can be deployed, rolled back, and moved between environments.
 
 **Techniques:**
 
-* Containerization (e.g., Docker, Kubernetes).
-* CI/CD pipelines for automated deployments.
-* Feature toggles for controlled releases.
+* Containerization and immutable deployment artifacts.
+* CI/CD pipelines with automated checks and progressive delivery.
+* Versioned, automated infrastructure and configuration.
 
 **Trade-Offs:**
 
-* **Impact on Testability:** Frequent deployments require rigorous automated testing.
-* **Impact on Security:** Rapid updates can introduce vulnerabilities if not thoroughly vetted.
-* **Impact on Modifiability:** Rollback mechanisms and deployment scripts add complexity.
+* Testability: frequent deployments demand strong automated test suites; building them requires time and skills.
+* Complexity: deployment pipelines and tooling add moving parts that must be maintained.
+* Security: powerful automation systems become high-value targets and must be secured.
 
 ---
 
 ### Elasticity
 
-**Type:** Implicit
+**Type:** Explicit  
 
-**Definition:**
-Enables a system to adjust its resources based on workload demands dynamically.
+**Definition:**  
+The ability of the system to automatically adjust resource usage in response to load, scaling up and down as needed.
 
 **Techniques:**
 
-* Auto-scaling in cloud environments.
-* Stateless service designs.
-* Resource monitoring and load balancers.
+* Auto-scaling groups and orchestrators in cloud environments.
+* Stateless services and externalized state.
+* Load balancers and adaptive routing.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Elastic systems may increase costs during peak demand.
-* **Impact on Fault-Tolerance:** Rapid scaling might compromise system reliability temporarily.
-* **Impact on Testability:** Elastic systems require complex load testing scenarios.
+* Cost: poor scaling policies can generate unexpected bills during load spikes.
+* Observability and testability: reproducing production scaling behavior in tests is hard.
+* Consistency and reliability: rapid scaling can stress shared resources or surface race conditions.
 
 ---
 
 ### Evolvability
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-Ensures a system can adapt and grow to meet future requirements and technologies.
+**Definition:**  
+How easily the system’s structure and behavior can be adapted to new requirements, technologies, or constraints over time.
 
 **Techniques:**
 
-* API versioning for backward compatibility.
-* Decoupled architecture to isolate changes.
-* Incremental refactoring practices.
+* Stable contracts and versioning for APIs and events.
+* Modular boundaries that isolate change.
+* Incremental refactoring and strangler patterns instead of big-bang rewrites.
 
 **Trade-Offs:**
 
-* **Impact on Simplicity:** Evolvable designs can add complexity to the initial implementation.
-* **Impact on Performance:** Backward compatibility mechanisms may reduce system efficiency.
-* **Impact on Cost:** Long-term maintenance and evolution require ongoing investment.
+* Initial complexity: designs aimed at future change can feel heavier at the start.
+* Performance: compatibility layers and indirection to support evolution can add overhead.
+* Cost: ongoing investment is required to keep architecture aligned with business direction.
 
 ---
 
 ### Fault-Tolerance
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Ensures the system continues to operate despite failures in components or subsystems.
+**Definition:**  
+The capability to continue operating correctly when components fail, often by masking or isolating faults.
 
 **Techniques:**
 
-* Redundant components and failover systems.
-* Circuit breakers and retry mechanisms.
-* Graceful degradation strategies.
+* Redundant components and failover mechanisms.
+* Circuit breakers, timeouts, and retries with backoff.
+* Bulkheads that limit the spread of failure.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Retry and recovery mechanisms can introduce latency.
-* **Impact on Cost:** Fault-tolerant systems require additional resources.
-* **Impact on Modifiability:** Fault-tolerance mechanisms add complexity to the codebase.
+* Performance: retries and defensive timeouts add latency and load if not tuned.
+* Complexity: failure modes multiply and must be designed, tested, and monitored.
+* Cost: redundancy and defensive mechanisms require extra resources.
 
 ---
 
 ### Integrability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Measures how seamlessly the system can connect and interact with other systems or components.
+**Definition:**  
+How straightforward it is to connect the system to other internal or external systems.
 
 **Techniques:**
 
-* Standardized APIs and protocols.
-* Middleware for compatibility.
-* Consistent data formats and contracts.
+* Well-documented APIs and clear contracts.
+* Event-driven integration and message-based protocols.
+* Consistent data models and versioning policies.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Integrations may introduce communication overhead.
-* **Impact on Security:** Inter-system communication increases attack surfaces.
-* **Impact on Scalability:** Dependence on external systems may restrict growth.
+* Performance: crossing system boundaries adds network overhead and potential contention.
+* Security: each integration surface increases the attack surface and compliance scope.
+* Coupling: tight integration without clear contracts can entangle roadmaps and deployments.
 
 ---
 
 ### Interoperability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Ensures that the system can exchange data and operate with external systems, regardless of platform differences.
+**Definition:**  
+The ability of the system to interoperate with other systems or products in a standards-based way across platforms and vendors.
 
 **Techniques:**
 
-* Adopting open standards (e.g., REST, SOAP).
-* API gateways for managing external interactions.
-* Middleware for data translation.
+* Use of open standards and broadly adopted protocols.
+* Translation and gateway layers for incompatible systems.
+* Careful management of formats, encodings, and semantics.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Translation layers can slow communication.
-* **Impact on Usability:** Misaligned standards can create user friction.
-* **Impact on Cost:** Licensing and tools for interoperability can increase expenses.
+* Performance: generic standards and translation layers can be slower than bespoke protocols.
+* Feature richness: strict adherence to standards may limit use of platform-specific capabilities.
+* Cost: maintaining compatibility with multiple external standards and versions requires ongoing effort.
 
 ---
 
 ### Maintainability
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-The ease with which a system can be maintained to correct defects, improve performance, or adapt to a changing environment.
+**Definition:**  
+The ease with which the system can be understood, corrected, enhanced, and kept operational over its lifetime.
 
 **Techniques:**
 
-* Modular design.
-* Clear and comprehensive documentation.
+* Clear modular structure and consistent coding practices.
+* Up-to-date documentation geared toward practitioners.
+* Automated checks to prevent common regressions.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Maintaining a system requires ongoing investment.
-* **Impact on Complexity:** Poor maintainability can increase technical debt.
+* Cost: investing in maintainability (tests, documentation, refactoring) competes with feature work.
+* Short-term speed: cutting corners can feel faster initially but slows you down later.
+* Complexity: accidental complexity accumulates if maintainability is not guarded.
 
 ---
 
 ### Modifiability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-The ease with which a system can be changed to meet new requirements.
+**Definition:**  
+The ease and safety with which you can change system behavior or structure to meet new requirements.
 
 **Techniques:**
 
-* Modular design.
-* Clear separation of concerns.
+* Separation of concerns and clear ownership of responsibilities.
+* Encapsulation of rules into cohesive components or services.
+* Use of patterns that localize impact (for example, strategy, plugin, or policy).
 
 **Trade-Offs:**
 
-* **Impact on Complexity:** Frequent modifications can increase system complexity.
-* **Impact on Performance:** Modifications may introduce performance overhead.
+* Performance: indirection and loose coupling can add overhead.
+* Simplicity: designing for change may introduce concepts that are not immediately needed.
+* Consistency: frequent localized changes can drift behavior if cross-cutting rules are not enforced.
 
 ---
 
 ### Performance
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Measures the system’s responsiveness and efficiency under various workloads.
+**Definition:**  
+How quickly and efficiently the system responds to requests and processes work under expected and peak loads.
 
 **Techniques:**
 
-* Caching and load balancing.
-* Database query optimization.
-* Asynchronous processing for non-critical tasks.
+* Caching, pooling, and connection management.
+* Efficient data access patterns and query optimization.
+* Asynchronous or batch processing for non-interactive work.
 
 **Trade-Offs:**
 
-* **Impact on Scalability:** Optimized for specific loads, performance may degrade under unexpected scaling.
-* **Impact on Modifiability:** Highly tuned systems can be more complicated to change.
-* **Impact on Availability:** Performance improvements may involve reduced redundancy.
+* Modifiability: heavily optimized code and data structures are harder to change safely.
+* Portability: some optimizations rely on specific platforms or infrastructure.
+* Availability and reliability: aggressive caching or resource usage can increase risk if not paired with safeguards.
 
 ---
 
 ### Reliability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-The ability of a system to perform its required functions under stated conditions for a specified period.
+**Definition:**  
+The probability that the system will deliver correct results for a given duration under specified conditions.
 
 **Techniques:**
 
-* Redundancy and backup mechanisms.
-* Error detection and correction.
+* Error detection, validation, and correction mechanisms.
+* Idempotent operations and retry-safe designs.
+* Defensive handling of partial failure and malformed input.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Ensuring high reliability may increase infrastructure and operational expenses.
-* **Impact on Complexity:** Adding reliability features can complicate the system.
+* Complexity: many failure-handling paths and checks make behavior harder to reason about.
+* Performance: validation and redundancy consume resources.
+* Cost: achieving higher reliability levels often requires more thorough testing and operational maturity.
 
 ---
 
 ### Reusability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Enables components or modules to be reused across different systems or projects.
+**Definition:**  
+The ability to use components, services, or modules in multiple contexts without modification.
 
 **Techniques:**
 
-* Modular and library-based design.
-* Creating shared APIs and frameworks.
-* Centralizing reusable components in repositories.
+* Designing stable interfaces around well-defined responsibilities.
+* Creating shared libraries, services, or platforms with clear boundaries.
+* Establishing internal catalogs or marketplaces for reusable assets.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** General-purpose components may not be optimized for specific use cases.
-* **Impact on Simplicity:** Reusable designs can add abstraction and complexity.
-* **Impact on Cost:** Initial investment in reusable designs may increase upfront expenses.
+* Performance: generic solutions rarely match the efficiency of bespoke code for a single use case.
+* Simplicity: building for reuse introduces additional abstraction and configuration.
+* Delivery speed: investing in reusable assets slows initial work but can accelerate later initiatives.
 
 ---
 
 ### Resilience
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-The ability of a system to recover quickly from difficulties or disruptions.
+**Definition:**  
+The ability of the system to absorb disruptions, recover, and continue providing acceptable service, possibly in a degraded form.
 
 **Techniques:**
 
-* Graceful degradation.
-* Redundant infrastructure.
+* Graceful degradation and fallback behaviors.
+* Chaos testing and game days to exercise recovery paths.
+* Automated recovery and self-healing mechanisms.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Ensuring resilience may increase redundancy costs.
-* **Impact on Performance:** Recovery mechanisms can introduce latency.
+* Cost: resilience requires redundancy, tooling, and practice.
+* Predictability: degraded behavior can surprise users if not designed and communicated carefully.
+* Complexity: more modes of operation must be designed, implemented, and tested.
 
 ---
 
 ### Safety
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Ensures the system operates without causing harm to users, the environment, or other systems.
+**Definition:**  
+The extent to which the system avoids causing harm to people, the environment, or critical assets, even when failures occur.
 
 **Techniques:**
 
-* Input validation to prevent hazardous operations.
-* Fail-safe mechanisms for critical systems.
-* Risk assessment during design.
+* Hazard analysis and safety cases in domains where harm is possible.
+* Fail-safe and fail-secure defaults.
+* Guard rails and validation around operations with high impact.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Safety checks may introduce latency.
-* **Impact on Cost:** Ensuring safety requires investment in thorough testing and certification.
-* **Impact on Simplicity:** Safety features may complicate otherwise simple designs.
+* Performance: extra checks and constraints add latency and resource use.
+* Usability: safety constraints may limit what users can do or how quickly they can act.
+* Cost and time-to-market: safety assurance, certification, and audits take sustained effort.
 
 ---
 
 ### Scalability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Ensures the system can handle increased workloads without degrading performance.
+**Definition:**  
+The ability of the system to handle increased workload by using additional resources without unacceptable loss of performance.
 
 **Techniques:**
 
-* Horizontal scaling (adding instances).
-* Vertical scaling (upgrading existing resources).
-* Distributed databases with sharding.
+* Horizontal scaling (more instances) and vertical scaling (bigger instances).
+* Partitioning and sharding of data and workload.
+* Stateless processing combined with shared, scalable storage.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Scaling infrastructure increases expenses.
-* **Impact on Testability:** Large-scale systems require advanced testing strategies.
-* **Impact on Modifiability:** Scaling mechanisms may limit future architectural changes.
+* Complexity: distributed state, partitioning schemes, and coordination algorithms are harder to reason about.
+* Cost: scaling out can dramatically increase infrastructure and operations costs.
+* Modifiability: once data and behavior are partitioned, changing boundaries and keys is non-trivial.
 
 ---
 
 ### Security
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Protects the system from unauthorized access, breaches, and vulnerabilities.
+**Definition:**  
+The ability of the system to resist unauthorized access, misuse, and data compromise while still enabling legitimate use.
 
 **Techniques:**
 
-* Role-based access control (RBAC).
-* Encryption for data at rest and in transit.
-* Regular vulnerability scans and penetration testing.
+* Strong authentication and authorization (for example, role- or attribute-based).
+* Encryption in transit and at rest; key management practices.
+* Secure coding standards, reviews, and regular vulnerability testing.
 
 **Trade-Offs:**
 
-* **Impact on Performance:** Security measures like encryption add processing overhead.
-* **Impact on Usability:** Stringent security can reduce user convenience.
-* **Impact on Scalability:** Securing distributed systems is more complex.
+* Performance: cryptography and checks add overhead, especially in high-throughput paths.
+* Usability: strict security controls can make workflows slower or more complex.
+* Operability: secure systems demand careful secrets management and incident processes.
 
 ---
 
 ### Simplicity
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-Minimizes unnecessary complexity in the system’s design and implementation.
+**Definition:**  
+The degree to which the architecture avoids unnecessary concepts, indirection, and special cases.
 
 **Techniques:**
 
-* Adopting convention over configuration.
-* Avoiding over-engineering.
-* Clear and concise documentation.
+* Choosing the simplest design that meets current requirements.
+* Standardizing patterns and tools to reduce variation.
+* Regularly pruning unused features and integrations.
 
 **Trade-Offs:**
 
-* **Impact on Evolvability:** Simplistic designs may struggle to adapt to future changes.
-* **Impact on Fault-Tolerance:** Simplicity may not account for edge cases.
-* **Impact on Configurability:** Reducing complexity can limit flexibility.
+* Evolvability: very minimal designs may not leave enough room for foreseeable growth.
+* Resilience and edge cases: overly simple flows may not handle failure modes well.
+* Flexibility: simplicity often means fewer options to customize behavior.
 
 ---
 
 ### Testability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-Measures how easily a system can be tested for correctness, performance, and reliability.
+**Definition:**  
+How easily and reliably you can exercise the system to detect defects, measure behavior, and prevent regressions.
 
 **Techniques:**
 
-* Automated testing frameworks.
-* Mocking dependencies and external systems.
-* Logging and monitoring for observability.
+* Clear separation between domain logic and infrastructure concerns.
+* Automated unit, integration, and end-to-end tests.
+* Test doubles for external systems and good observability for diagnostics.
 
 **Trade-Offs:**
 
-* **Impact on Cost:** Increased testability requires investment in tools and processes.
-* **Impact on Performance:** Logging and observability mechanisms may introduce runtime overhead.
-* **Impact on Complexity:** Test-friendly designs may add abstraction.
+* Complexity: designing for testability introduces seams, interfaces, and scaffolding.
+* Performance and cost: diagnostic logging and instrumentation consume resources.
+* Delivery pace: building and maintaining robust test suites takes effort but pays off over time.
 
 ---
 
 ### Traceability
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-The ability to trace an entity's history, application, or location by means of recorded identifications.
+**Definition:**  
+The ability to follow the path of a request, decision, or change through the system and its lifecycle artifacts.
 
 **Techniques:**
 
-* Logging and traceability tools.
-* Version control systems.
+* Correlation IDs for requests across services.
+* Linking requirements, code changes, tests, and deployments.
+* Distributed tracing and structured logging.
 
 **Trade-Offs:**
 
-* **Impact on Complexity:** Maintaining traceability may add overhead.
-* **Impact on Performance:** Extensive tracing can introduce latency.
+* Performance and storage: detailed traces generate data that must be collected and retained.
+* Complexity: maintaining consistent trace identifiers across components and teams is non-trivial.
+* Privacy and compliance: traces can contain sensitive information if not designed carefully.
 
 ---
 
 ### Usability
 
-**Type:** Implicit
+**Type:** Implicit  
 
-**Definition:**
-Ensures the system provides an intuitive and efficient experience for users.
+**Definition:**  
+The ease with which users can learn, use, and recover from errors when interacting with the system.
 
 **Techniques:**
 
-* Consistent user interface design.
-* Accessibility features.
-* Clear error messaging and feedback loops.
+* Consistent interaction patterns and clear information hierarchy.
+* Accessibility-minded design.
+* Helpful error messages and feedback loops.
 
 **Trade-Offs:**
 
-* **Impact on Security:** Simplified usability may compromise stringent security requirements.
-* **Impact on Configurability:** Usability improvements may reduce customization options.
-* **Impact on Cost:** Extensive usability testing increases development expenses.
+* Security: frictionless flows can conflict with strong security controls.
+* Configurability: simple, opinionated experiences may reduce flexibility for power users.
+* Cost: usability research and iterative UX work require specialized skills and time.
 
 ---
 
 ### Vulnerability
 
-**Type:** Explicit
+**Type:** Explicit  
 
-**Definition:**
-The degree to which a system is susceptible to harm or attack.
+**Definition:**  
+The degree to which the system is exposed to exploitation because of weaknesses in design, implementation, or configuration.
 
-**Techniques:**
+**Techniques (for reducing vulnerability):**
 
-* Regular security assessments.
-* Intrusion detection systems.
+* Threat modeling and regular security assessments.
+* Hardening configurations and minimizing attack surface.
+* Prompt patching and secure defaults.
 
 **Trade-Offs:**
 
-* **Impact on Complexity:** Reducing vulnerabilities may increase system complexity.
-* **Impact on Performance:** Security measures to reduce vulnerabilities may introduce latency.
+* Complexity: additional controls, validations, and isolation increase system complexity.
+* Performance: hardening measures and monitoring can consume resources.
+* Delivery speed: careful security review and change management slow rapid change, but reduce long-term risk.
 
 ---
 
@@ -566,11 +589,9 @@ The degree to which a system is susceptible to harm or attack.
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
-
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O'Reilly Media.  
   * **Part 1: Foundations**\
-    It establishes the foundational concepts of software architecture, focusing on high-level, strategic decisions that shape a system's structure. It emphasizes the importance of **modularity** and **component-based thinking**, where systems are broken down into cohesive, loosely coupled components to enhance flexibility, scalability, and maintainability. The section also highlights **architecture characteristics** (non-functional requirements) such as performance, scalability, and security, which are crucial to the system’s long-term success. The distinction between architecture and design is clarified, with architecture guiding the overall structure, while design focuses on implementation details. Ultimately, Part 1 stresses the importance of **trade-offs** in architectural decision-making, balancing technical requirements with business goals to create adaptable, future-proof systems.
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.
-
+    Introduces core architecture concepts, emphasizing modularity, components, and characteristics, and shows how trade-offs shape long-term system behavior.
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Part 2: Quality Attributes**\
-    Part Two of *Software Architecture in Practice* explores **architecture characteristics**, which define a system’s behavior, structure, and alignment with stakeholder needs. It examines key attributes such as availability, performance, security, scalability, and modifiability, discussing their definitions, tactics, and inherent trade-offs. The section emphasizes the importance of balancing these characteristics to design systems that meet both functional requirements and business objectives effectively.
+    Explores key architecture characteristics in depth and presents tactics and patterns for achieving them while managing their trade-offs.

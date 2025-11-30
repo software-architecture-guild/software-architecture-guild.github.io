@@ -16,6 +16,7 @@ Cognos
 colinwilson
 Datastage
 decisioning
+Diagnosability
 Doerr
 endline
 Eoin
