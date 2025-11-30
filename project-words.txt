@@ -28,6 +28,7 @@ gohugoio
 goldmark
 Hardzeenka
 HDFS
+heatmaps
 Hortonworks
 hotspot
 hotspots
