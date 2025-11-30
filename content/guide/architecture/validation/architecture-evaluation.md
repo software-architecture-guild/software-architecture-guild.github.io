@@ -104,8 +104,8 @@ Scenario-based methods often run as structured workshops. The team presents the 
 
 Some evaluation methods go deeper on trade-offs between qualities and costs:
 
-* Methods that analyze **how a decision affects multiple qualities** at once, such as “synchronous calls vs. asynchronous messaging”, “shared database vs. service-owned data”.  
-* Methods that factor in **cost and benefit of strategies**: for example, comparing the cost of introducing an API gateway against the improvements in security and operability.  
+* Methods that analyze   how a decision affects multiple qualities   at once, such as “synchronous calls vs. asynchronous messaging”, “shared database vs. service-owned data”.  
+* Methods that factor in   cost and benefit of strategies  : for example, comparing the cost of introducing an API gateway against the improvements in security and operability.  
 
 These techniques help you avoid optimizing a single quality (say, performance) at the expense of everything else.
 
@@ -192,7 +192,7 @@ The same techniques apply to systems already in production:
 
 * You reconstruct enough architecture to run meaningful scenarios.  
 * You compare behavior and structure against new requirements—scale, compliance, integration.  
-* You use the results to plan **incremental change** instead of guessing at where to cut and replace.  
+* You use the results to plan   incremental change   instead of guessing at where to cut and replace.  
 
 Here, evaluation is less about theoretical risk and more about where reality hurts today and will hurt more tomorrow.
 
@@ -207,9 +207,10 @@ The payoff is simple: fewer nasty surprises, better trade-offs, and systems that
 ## Recommended Reading
 
 #### Books
-* Rozanski, Nick, and Eoin Woods (2012). *Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives*. Addison-Wesley.  
+
+* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.  
   * **Chapter 14: Evaluating the Architecture**\
     Provides practical guidance on when and how to evaluate architecture using expert review, checklists, and scenario-based techniques across the lifecycle.  
-* Bass, Len, Paul Clements, and Rick Kazman (2012). *Software Architecture in Practice*. Addison-Wesley.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 21: Architecture Evaluation**\
     Describes structured evaluation methods, including scenario-based approaches and quantitative analysis, with a strong focus on identifying and prioritizing architectural risks.

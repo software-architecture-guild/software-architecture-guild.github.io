@@ -240,6 +240,7 @@ Together, they turn legacy and evolving systems from black boxes into understand
 ## Recommended Reading
 
 #### Books
-* Bass, Len, Paul Clements, and Rick Kazman (2012). *Software Architecture in Practice*. Addison-Wesley.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 20: Architecture Reconstruction and Conformance**\
     Describes a complete approach to recovering architecture from existing systems and analyzing how well implementations conform to intended designs, with practical guidance and examples.

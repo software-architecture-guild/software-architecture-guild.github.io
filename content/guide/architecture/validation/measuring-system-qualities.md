@@ -139,9 +139,9 @@ These checks become quality gates in your CI/CD pipelines. Instead of passively 
 
 For messy problems—like “reduce risk from our payment provider” or “improve user trust in the system”—it’s hard to pick metrics directly. A simple pattern helps: Goal–Question–Metric (GQM).
 
-* Start with a **goal**: for example, “Detect provider failures early enough to protect users from long delays.”  
-* Derive **questions**: “How close are we to hitting rate limits?”, “Are failures coming from us or them?”, “How long do jobs stay in queues?”  
-* Define **metrics** that answer those questions: queue depth, provider error rate, time jobs spend in each stage, usage as a percentage of quota.  
+* **Start with a goal**: for example, “Detect provider failures early enough to protect users from long delays.”  
+* **Derive questions**: “How close are we to hitting rate limits?”, “Are failures coming from us or them?”, “How long do jobs stay in queues?”  
+* **Define metrics** that answer those questions: queue depth, provider error rate, time jobs spend in each stage, usage as a percentage of quota.  
 
 This structure keeps you honest. You’re not measuring things just because the tool makes them easy; you measure them because they answer specific questions about a clear goal.
 
@@ -166,7 +166,8 @@ The result is an architecture that evolves intentionally. Instead of arguing fro
 ## Recommended Reading
 
 #### Books
-* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *Software Architecture Metrics*. O’Reilly Media.  
+
+* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://www.oreilly.com/library/view/software-architecture-metrics/9781098112226/)*. O’Reilly Media.  
   * **Chapter 7: The Role of Measurement in Software Architecture**\
     Explains why measurement is central to modern architecture and how to weave it into continuous feedback loops.  
   * **Chapter 8: Progressing from Metrics to Engineering**\
