@@ -1,7 +1,7 @@
 ---
 weight: 164
 title: "Microservices-Based"
-description: "A practical guide to the Microservices-Based style—independently deployable services, data ownership, contracts, trade-offs, and the platform discipline that makes it work."
+description: "This article explains the Microservices-Based architecture style, detailing its core principles of independently deployable services and data ownership. Learn about its benefits, such as team autonomy and selective scaling, as well as its trade-offs and the essential platform discipline required for successful implementation."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

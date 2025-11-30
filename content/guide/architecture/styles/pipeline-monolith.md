@@ -1,7 +1,7 @@
 ---
 weight: 154
 title: "Pipeline Monolith"
-description: "A practical guide to the Pipeline Monolith style—stages, data flow, back-pressure and error handling, trade-offs, and how to scale without premature distribution."
+description: "This article explains the Pipeline Monolith architecture style, detailing its structure of sequential stages and data flows. Learn about its benefits, such as modularity and localized tuning, as well as its trade-offs and practical strategies for scaling and error handling in a pipeline-based system."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"

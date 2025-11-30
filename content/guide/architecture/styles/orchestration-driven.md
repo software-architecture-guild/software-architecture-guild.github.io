@@ -1,7 +1,7 @@
 ---
 weight: 163
 title: "Orchestration-Driven"
-description: "A practical guide to the Orchestration-Driven style—central orchestrators, workflow contracts, data and dependency rules, trade-offs, and when to prefer choreography or a hybrid."
+description: "This article explains the Orchestration-Driven architecture style, detailing its use of central orchestrators and workflow contracts to manage complex business processes. Learn about its benefits, such as visibility and control, as well as its trade-offs and practical implementation strategies to effectively design and maintain an orchestrated system."
 icon: "article"
 date: "2025-11-10T15:08:52+01:00"
 lastmod: "2025-11-10T15:08:52+01:00"
