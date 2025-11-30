@@ -1,7 +1,7 @@
 ---
 weight: 99
 title: "Sample Architecture"
-description: "This article provides a detailed example of the Software Architecture description and creation process."
+description: "This article provides a detailed example of the software architecture description and creation process, showcasing a winning solution from the O'Reilly Architectural Katas. Learn how to apply architectural principles, frameworks like Viewpoints and Perspectives, and the C4 model to design robust systems."
 icon: "visibility"
 date: "2024-09-11T08:35:43+02:00"
 lastmod: "2024-09-11T08:35:43+02:00"

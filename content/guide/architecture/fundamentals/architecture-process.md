@@ -1,7 +1,7 @@
 ---
 weight: 50
 title: "Architecture Process"
-description: "This article explains how the architectural process works to produce architecture."
+description: "This article explains the architectural process, a structured, iterative approach for designing and managing software architecture. Learn the key steps, from engaging stakeholders and defining quality attributes to evaluating risks and ensuring continuous evolution, to produce robust and effective systems."
 icon: "schema"
 date: "2024-09-11T08:35:09+02:00"
 lastmod: "2024-09-11T08:35:09+02:00"

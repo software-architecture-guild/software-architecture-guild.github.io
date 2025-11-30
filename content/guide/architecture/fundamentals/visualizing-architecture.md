@@ -1,7 +1,7 @@
 ---
 weight: 45
 title: "Visualizing Architecture"
-description: "This article explains how to visualize different aspects of architecture."
+description: "This article explains how to visualize software architecture, focusing on key elements like components, connectors, and configurations. Learn about architectural views and viewpoints, such as Context, Functional, and Deployment, and how perspectives like Security and Performance help manage complexity and align with stakeholder concerns."
 icon: "draw"
 date: "2024-09-11T08:35:02+02:00"
 lastmod: "2024-09-11T08:35:02+02:00"

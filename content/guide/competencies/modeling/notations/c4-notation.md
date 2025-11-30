@@ -1,7 +1,7 @@
 ---
 weight: 1170
 title: "C4 Notation"
-description: "This article provides an overview of C4 Notation."
+description: "This article provides an overview of C4 Notation, a clear and simple visual language for representing software architecture. Learn about its core elements—People, Software Systems, Containers, and Components—and how they are used to create hierarchical diagrams that are accessible to both technical and non-technical audiences."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

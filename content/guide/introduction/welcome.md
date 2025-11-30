@@ -1,7 +1,7 @@
 ---
 weight: 11
 title: "Welcome to the Guide"
-description: "This article outlines the purpose and reasons behind the creation of this guide."
+description: "This article outlines the purpose and reasons behind the creation of the Software Architecture Guide. Learn about the Software Architecture Guild, its mission to share knowledge, and how this resource serves as a compass for your architectural journey."
 icon: "article"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 510
 title: "Role Overview"
-description: "This article provides an overview of the Software Architecture role, including expectations, required skills, and responsibilities."
+description: "This article provides an overview of the software architect role, detailing expectations, core responsibilities, and essential skills. Learn about the dynamic nature of software architecture, the importance of strategic thinking, leadership, and communication, and how organizational context shapes the architect's impact."
 icon: "article"
 date: "2024-10-19T14:20:12+02:00"
 lastmod: "2024-10-19T14:20:12+02:00"

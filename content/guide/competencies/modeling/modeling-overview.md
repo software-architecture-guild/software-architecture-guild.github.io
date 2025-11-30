@@ -1,7 +1,7 @@
 ---
 weight: 1110
 title: "Modeling Overview"
-description: "This article gives justification for the importance of the skills listed in the chapter."
+description: "This article explains the importance of architectural modeling, frameworks, and notations in effective system design and communication. Learn how these tools provide a shared understanding, visualize complexity, and ensure alignment between abstract ideas and tangible implementation."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

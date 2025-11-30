@@ -1,7 +1,7 @@
 ---
 weight: 35
 title: "Architecture Characteristics"
-description: "This article explores key architecture characteristics, detailing their definitions, tactics, trade-offs, and role in creating robust and effective software systems."
+description: "This article explains key architecture characteristics (non-functional requirements), detailing their definitions, implementation tactics, and trade-offs. Learn how these attributes, such as scalability, performance, and security, shape the design of robust and effective software systems."
 icon: "article"
 date: "2024-12-15T09:25:26+01:00"
 lastmod: "2024-12-15T09:25:26+01:00"
