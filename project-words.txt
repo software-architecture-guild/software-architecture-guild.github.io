@@ -23,6 +23,7 @@ bursty
 CCPA
 CEDP
 chargeback
+Ciceri
 Cockburn
 Cognos
 colinwilson
