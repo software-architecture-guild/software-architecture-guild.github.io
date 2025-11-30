@@ -10,6 +10,7 @@ BSUIR
 CCPA
 CEDP
 chargeback
+Ciceri
 Cognos
 colinwilson
 Datastage
