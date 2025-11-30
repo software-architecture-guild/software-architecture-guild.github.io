@@ -1,7 +1,7 @@
 ---
 weight: 1320
 title: "How to Collect Requirements?"
-description: "This article explains how to gather requirements."
+description: "This article explains how to effectively collect software requirements, focusing on structured discovery, business events, and testable criteria. Learn techniques like Project Blastoff, scenario walking, and quality gateways to ensure clear, valuable, and well-defined requirements for any project."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

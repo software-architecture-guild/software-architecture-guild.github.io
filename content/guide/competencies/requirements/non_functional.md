@@ -1,7 +1,7 @@
 ---
 weight: 1361
 title: "Non-Functional Requirements"
-description: "This article explains what non-functional requirements are."
+description: "This article explains what non-functional requirements (NFRs) are, why they are critical for system adoption and quality, and how to effectively define and manage them using measurable fit criteria, scoped application, and architectural tactics to ensure a successful product."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

@@ -1,7 +1,7 @@
 ---
 weight: 1340
 title: "Collecting Scenarios"
-description: "This article explains how to collect and use scenarios."
+description: "This article explains how to effectively collect and use scenarios in software development to uncover business rules, edge cases, and quality needs. Learn techniques for event-based scenario writing, stakeholder engagement, and structured documentation to ensure comprehensive and testable requirements."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

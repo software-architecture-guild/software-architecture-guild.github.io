@@ -1,7 +1,7 @@
 ---
 weight: 1355
 title: "Writing Requirements"
-description: "This article explains how to write good and understandable requirements."
+description: "This article explains how to write effective software requirements by translating business events into clear, testable statements. Learn techniques for defining Product Use Cases, writing atomic functional requirements with measurable fit criteria, and managing non-functional requirements and constraints to ensure precise and verifiable product behavior."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

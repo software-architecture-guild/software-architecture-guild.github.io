@@ -1,7 +1,7 @@
 ---
 weight: 1380
 title: "Communicating Requirements"
-description: "This article explains how to use requirements during implementation and quality assurance."
+description: "This article explains how to effectively communicate software requirements to diverse audiences, ensuring clarity, traceability, and testability. Learn techniques for using scenarios, atomic requirements, and quality gateways to reduce rework and improve project alignment."
 icon: "article"
 date: "2025-10-09T18:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

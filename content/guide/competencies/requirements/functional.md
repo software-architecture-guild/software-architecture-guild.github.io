@@ -1,7 +1,7 @@
 ---
 weight: 1360
 title: "Functional Requirements"
-description: "This article explains what functional requirements are."
+description: "This article explains what functional requirements (FRs) are, how they differ from non-functional requirements and constraints, and how to derive, write, and manage them effectively using scenarios and atomic items to ensure precise, testable software behavior."
 icon: "article"
 date: "2025-10-09T18:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

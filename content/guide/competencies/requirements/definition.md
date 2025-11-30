@@ -1,7 +1,7 @@
 ---
 weight: 1310
 title: "What Is a Requirement?"
-description: "This article defines what a requirement is."
+description: "This article explains what a software requirement is, distinguishing between functional, non-functional, and constraints. It covers why clear requirements are crucial for successful architecture, how to discover them, and how they continuously shape and are shaped by architectural decisions."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

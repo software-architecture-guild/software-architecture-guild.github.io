@@ -1,7 +1,7 @@
 ---
 weight: 1330
 title: "Business Use Cases"
-description: "This article explains how to identify Business Use Cases."
+description: "This article explains how to identify and define business use cases (BUCs) to align software development with business goals. Learn techniques for event-based partitioning, stakeholder identification, and goal measurement to ensure clear product boundaries and effective scope management."
 icon: "article"
 date: "2025-10-10T17:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

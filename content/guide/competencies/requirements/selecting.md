@@ -1,7 +1,7 @@
 ---
 weight: 1350
 title: "Selecting Requirements"
-description: "This article explains how to distinguish good requirements from bad."
+description: "This article explains how to effectively select software requirements by focusing on the business problem and measurable outcomes. Learn techniques for tracing symptoms to causes, defining scope, and making success measurable to ensure you build the right product."
 icon: "article"
 date: "2025-10-09T18:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"

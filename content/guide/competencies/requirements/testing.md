@@ -1,7 +1,7 @@
 ---
 weight: 1370
 title: "Testing Requirements"
-description: "This article explains how to use requirements during implementation and quality assurance."
+description: "This article explains how to effectively test software requirements by pairing each with a measurable fit criterion and rationale. Learn techniques for defining clear benchmarks, using quality gateways, and managing trade-offs to ensure provably satisfied and high-quality software."
 icon: "article"
 date: "2025-10-09T18:16:03+01:00"
 lastmod: "2025-10-10T17:16:03+01:00"
