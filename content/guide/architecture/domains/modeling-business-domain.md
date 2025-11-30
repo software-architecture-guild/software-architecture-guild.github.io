@@ -1,7 +1,7 @@
 ---
 weight: 203
 title: "Modeling Business Domain"
-description: "This article explains how to model a business domain, from discovering domain knowledge and shaping a ubiquitous language to using model-driven design and implementation patterns that keep code aligned with the business."
+description: "This article explains how to effectively model a business domain, covering the discovery of domain knowledge, the development of a ubiquitous language, and the application of model-driven design. Learn to use various implementation patterns to keep your code aligned with business needs and ensure maintainable software."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

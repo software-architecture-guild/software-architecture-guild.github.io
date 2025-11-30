@@ -1,7 +1,7 @@
 ---
 weight: 210
 title: "Applying DDD in Practice"
-description: "This article explains how to apply Domain-Driven Design in real-world systems, from brownfield modernization and undercover DDD to aligning microservices, event-driven architecture, and data mesh with domain boundaries."
+description: "This article explains how to apply Domain-Driven Design (DDD) in real-world software development, covering strategies for brownfield modernization, aligning microservices and event-driven architectures with domain boundaries, and extending domain thinking to data mesh for effective system design."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

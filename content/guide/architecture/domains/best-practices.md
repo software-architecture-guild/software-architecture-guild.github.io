@@ -1,7 +1,7 @@
 ---
 weight: 209
 title: "Best Practices"
-description: "This article explains how to apply Domain-Driven Design in practice, from choosing when to invest to working with domain experts, modeling around real scenarios, and evolving code and language safely over time."
+description: "This article explains best practices for applying Domain-Driven Design (DDD), covering when to invest in DDD, how to collaborate with domain experts, model real-world scenarios, and safely evolve code and language over time to manage complexity effectively."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 204
 title: "Domain Model Building Blocks"
-description: "This article explains what domain model building blocks are, how they help you implement simple and complex business logic, and how to choose the right patterns for each part of your domain."
+description: "This article explains the essential domain model building blocks, such as Value Objects, Entities, and Aggregates, and how they facilitate the implementation of simple and complex business logic. Learn to select appropriate patterns for different parts of your domain to create maintainable and scalable software."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

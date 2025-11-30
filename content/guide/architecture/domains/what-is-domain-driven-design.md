@@ -1,7 +1,7 @@
 ---
 weight: 201
 title: "What is Domain Driven Design?"
-description: "This article explains what Domain-Driven Design is, why it matters for complex business domains, and how its strategic and tactical patterns help you manage complexity."
+description: "This article explains Domain-Driven Design (DDD), its importance for complex business domains, and how its strategic and tactical patterns aid in managing software complexity. Learn to align your architecture, code, and collaboration with business needs for more maintainable systems."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 202
 title: "What is the business domain?"
-description: "This article explains what a business domain is, how domains and subdomains structure your problem space, and how that shapes architecture, staffing, and investment decisions."
+description: "This article explains what a business domain is and how domains and subdomains structure your problem space. Learn how this understanding shapes architectural decisions, staffing, and investment strategies, ensuring your software aligns with core business objectives."
 icon: "article"
 date: "2025-11-14T08:34:36+02:00"
 lastmod: "2025-11-14T08:34:36+02:00"
