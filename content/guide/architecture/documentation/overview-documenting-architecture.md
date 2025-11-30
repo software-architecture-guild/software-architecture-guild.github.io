@@ -15,7 +15,7 @@ Architecture documentation is the thread that connects intent, design, and imple
 
 ## Why Architecture Documentation Matters
 
-Architecture documentation exists to reduce uncertainty for everyone who depends on the system. It makes the structure and key decisions visible so that people can reason about impact, risk, and options instead of guessing.
+Architecture documentation exists to reduce uncertainty for everyone who depends on the system. It makes the structure and key decisions visible so people can reason about impact, risk, and options rather than guess.
 
 ### Communication across stakeholders
 
@@ -31,21 +31,21 @@ Architectural models and descriptions are not just status reports; they are deci
 * Which part of the system is most exposed if this dependency fails?
 * What will break if we move this component to another environment?
 
-By documenting structure, responsibilities, and relationships, you can apply tactics, patterns, and evaluation techniques to test whether the architecture can deliver required qualities such as performance, security, or modifiability. Without a documented architecture, these discussions degrade into opinion and guesswork.
+By documenting the structure, responsibilities, and relationships, you can apply tactics, patterns, and evaluation techniques to test whether the architecture delivers the required qualities, such as performance, security, or modifiability. Without a documented architecture, these discussions degrade into opinion and guesswork.
 
 ### Support for implementation and evolution
 
-Teams build and change systems based on what they believe the architecture is. If that belief lives only in a few people’s heads, every new feature risks diverging from the original intent. Architecture documentation gives developers and operators a stable reference: where responsibilities live, how components collaborate at runtime, and which constraints must be preserved.
+Teams build and change systems based on what they believe the architecture is. If that belief lives only in a few people’s heads, every new feature risks diverging from the original intent. Architecture documentation provides developers and operators with a stable reference: where responsibilities reside, how components collaborate at runtime, and which constraints must be preserved.
 
-Over time, the architecture and the documentation will drift unless you maintain both. The goal is not to capture every detail, but to keep enough of the structural and decision context that future changes can be made safely and deliberately.
+Over time, the architecture and the documentation will drift unless you maintain both. The goal is not to capture every detail, but to retain enough of the structural and decision-making context so that future changes can be made safely and deliberately.
 
 ## What Exactly Is Architecture Documentation
 
-Architecture documentation describes the system’s high-level structure, key design decisions, and rationale in a way that is understandable to different stakeholders. It is more than a big diagram and less than a full design spec for every module.
+Architecture documentation describes the system’s high-level structure, key design decisions, and rationale in a way that is understandable to different stakeholders. It is more than a big diagram and less than a complete design spec for every module.
 
 ### Architecture as shared mental model
 
-At its core, software architecture is the organization of a system into components, the relationships between them, and the principles guiding their evolution. Architecture documentation turns the architects’ and senior engineers’ mental model into something concrete: text, diagrams, and models that others can inspect, question, and extend.
+At its core, software architecture is the organization of a system into components, the relationships between them, and the principles guiding their evolution. Architecture documentation turns the architects’ and senior engineers’ mental models into concrete artifacts: text, diagrams, and models that others can inspect, question, and extend.
 
 This shared model should capture:
 
@@ -67,7 +67,7 @@ This separation has two benefits. First, it ensures each view is purposeful rath
 
 ### Perspectives and cross-cutting concerns
 
-Some concerns, such as security, performance, or resilience, cut across many parts of the architecture. These are often handled as **perspectives**: structured ways of thinking about how a particular concern applies across multiple views.
+Some concerns, such as security, performance, and resilience, span many parts of the architecture. These are often handled as **perspectives**: structured ways of thinking about how a particular concern applies across multiple views.
 
 Architecture documentation should make these cross-cutting concerns visible. That might mean:
 
@@ -78,7 +78,7 @@ The key is consistency: if you claim “security is a top concern,” there shou
 
 ## Stakeholders, Views, and Fit-for-Purpose Documentation
 
-There is no single “right” architecture document. The right documentation for a system depends on who will read it and what they need from it. A small set of well-chosen views usually beats a bloated document that nobody trusts.
+There is no single “right” architecture document. The proper documentation for a system depends on who will read it and what they need from it. A small set of well-chosen views usually beats a bloated document that nobody trusts.
 
 ### Different people, different questions
 
@@ -95,18 +95,18 @@ Your architecture documentation should answer these questions with targeted view
 
 Many architectures can be documented effectively by combining three families of views: static, dynamic, and allocation. Each family answers different questions about the same system.
 
-* **Static views** show the structure of the system at rest. They highlight the main parts, their boundaries, and the communication lines between them. This includes component diagrams, module diagrams, context maps, and similar representations. Data models also sit in this category: they describe static elements such as entities, aggregates, or tables, and the relationships between them. Static views are useful when you want to reason about ownership, responsibilities, and coupling between parts of the system.
+* **Static views** show the structure of the system at rest. They highlight the main parts, their boundaries, and the communication lines between them. This includes component diagrams, module diagrams, context maps, and similar representations. Data models also fall into this category: they describe static elements such as entities, aggregates, and tables, along with the relationships between them. Static views are helpful for reasoning about ownership, responsibilities, and coupling between system parts.
 * **Dynamic views** show how the system behaves over time. They visualize processes step by step: which component starts the interaction, which ones respond, and in what order. Sequence diagrams, activity diagrams, and flow diagrams are common examples. Dynamic views help you reason about workflows, latency, failure paths, and the knock-on effects of changes in one part of the process.
 * **Allocation views** show how software elements map onto their environment. They describe which services run in which runtime environments, how they are distributed across nodes or regions, and how they relate to networks, storage, or even teams. Allocation views are essential for understanding deployment, capacity planning, and operational responsibilities.
 
-Each family serves a different slice of stakeholder questions. Static views help people understand “what exists” and “who owns what.” Dynamic views answer “how does this actually work in practice?” Allocation views answer “where does it run, and what does it depend on?” You do not need a full set of every possible view. You need a minimal, focused set across these three families that together answer the important questions for your system.
+Each family serves a different slice of stakeholder questions. Static views help people understand “what exists” and “who owns what.” Dynamic views answer “how does this actually work in practice?” Allocation views answer “where does it run, and what does it depend on?” You do not need a complete set of every possible view. You need a minimal, focused set across these three families that together answer the critical questions for your system.
 
 ### Balancing breadth and depth
 
 Two failure modes are common:
 
 * Documentation that is broad but shallow: many diagrams and sections, none maintained or detailed enough to be trustworthy.
-* Documentation that is deep but narrow: a few extremely detailed diagrams that describe a small part of the system nobody is touching.
+* Documentation that is deep but narrow: a few highly detailed diagrams that describe a small part of the system nobody is touching.
 
 A healthy documentation set deliberately balances breadth and depth. It provides:
 
@@ -140,8 +140,8 @@ Over-documentation and under-documentation are both harmful:
 
 A practical heuristic is to document anything that:
 
-* Changes infrequently but has high impact if misunderstood.
-* Is hard to infer from the implementation or infrastructure alone.
+* Changes infrequently but has a high impact if misunderstood.
+* It is hard to infer from the implementation or infrastructure alone.
 * Represents a significant trade-off or constraint that should be visible to future teams.
 
 This pushes you toward documenting structure, contracts, and decisions rather than every method, class, or configuration flag.
@@ -154,7 +154,7 @@ Tools cannot fix a broken documentation culture, but they can remove friction:
 * Using lightweight text formats and standard diagramming notations makes it easier for many people to contribute.
 * Standard templates for views and decision records keep documentation consistent and help reviewers see what might be missing.
 
-The most important “tool” is agreement in the team about what must be documented, where it lives, and how often it should be reviewed.
+The most important “tool” is team agreement on what must be documented, where it lives, and how often it should be reviewed.
 
 ## Summary
 
@@ -166,7 +166,7 @@ By treating documentation as a living, view-based description tailored to real s
 
 #### Books
 
-* Nick Rozanski, & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
+* Nick Rozanski & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
   * **Chapter 1: Introduction**\
     Introduces core concepts of architecture, stakeholders, viewpoints, and perspectives, with a strong emphasis on communication and documentation.  
   * **Chapter 2: Software Architecture Concepts**\

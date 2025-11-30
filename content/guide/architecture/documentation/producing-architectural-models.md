@@ -59,7 +59,7 @@ You can think of the model as the schema, the diagram as one view of the current
 Architectural models can be grouped into three main types, based on the aspect of the system they focus on.
 
 * **Structural models** show how the system is organized. They highlight components or services, the boundaries between them, and the relationships or communication paths that connect them. Data models sit here too: they capture static elements such as entities, aggregates, or tables, and how those elements relate to one another.  
-* **Behavioral models** describe how the system behaves over time. They capture interactions between components, the order of messages or calls, and the branching of alternative paths in a process. These models are well suited for explaining complex workflows, user journeys, and event flows.  
+* **Behavioral models** describe how the system behaves over time. They capture interactions between components, the order of messages or calls, and the branching of alternative paths in a process. These models are well-suited for explaining complex workflows, user journeys, and event flows.  
 * **Deployment models** show how software elements map onto their operational environment. They describe which components run where, how they are placed across nodes or regions, and how they relate to networks, storage, and other infrastructure. These models help you reason about scalability, resilience, and resource usage.
 
 Most real architectures use all three model types. Together, they help you see what exists, how it behaves, and where it runs.
@@ -68,7 +68,7 @@ Most real architectures use all three model types. Together, they help you see w
 
 Architectural models can be drawn at different abstraction levels:
 
-* **High-level models** show a small number of major elements and are stable over long periods.  
+* **High-level models** show a small number of significant elements and are stable over long periods.  
 * **Mid-level models** focus on subsystems or services and how they collaborate.  
 * **Low-level models** capture details within a component, such as internal modules or detailed data structures.
 
@@ -86,7 +86,7 @@ Structural models show what exists and how it is wired together. Typical example
 * Context diagrams, showing how the system interacts with external actors and systems.  
 * Data models, showing entities, aggregates, or tables and their relationships.
 
-Structural models help you reason about ownership, coupling, and change impact. If a structural model is unclear, you can expect confusion about who owns which behavior, where to place new logic, or how much a change will ripple.
+Structural models help you reason about ownership, coupling, and the impact of change. If a structural model is unclear, you can expect confusion about who owns which behavior, where to place new logic, or how much a change will ripple.
 
 ### Behavioral models: workflows and interactions
 
@@ -112,7 +112,7 @@ Deployment models tie software to the real world:
 * Network topology diagrams showing zones, firewalls, and communication channels.  
 * Environment maps showing how services are distributed across regions, clusters, or availability zones.
 
-These models are crucial for understanding availability, scalability, and operability. They also expose concentration of risk—for example, too many critical services on a single node or region.
+These models are crucial for understanding availability, scalability, and operability. They also expose the risk concentration—for example, too many critical services on a single node or region.
 
 ## Producing Models in Practice
 
@@ -129,14 +129,14 @@ Before drawing anything, ask:
 From there, decide:
 
 * Whether you need structural, behavioral, deployment models, or a combination.  
-* What level of abstraction makes sense for the audience.  
-* How much detail is enough to support the decisions at hand.
+* What level of abstraction makes sense for the audience?  
+* How much detail is enough to support the decisions at hand?
 
 A small set of focused models that each answer a clear question will often be more valuable than a large, unfocused model attempting to show everything.
 
 ### Using modeling notations
 
-Standard notations such as UML give you a shared vocabulary for elements and relationships: classes, components, interactions, deployments. They can help teams avoid reinventing symbols and make diagrams easier to read across teams or organizations.
+Standard notations, such as UML, provide a shared vocabulary for elements and relationships: classes, components, interactions, and deployments. They can help teams avoid reinventing symbols and make diagrams easier to read across teams or organizations.
 
 At the same time, the goal is communication, not conformance. It is usually better to:
 
@@ -148,7 +148,7 @@ If a teammate can understand a model with minimal explanation, you’ve chosen t
 
 ### Using architecture frameworks for consistency
 
-Architecture frameworks define standard sets of views and viewpoints that guide which models you create and how you structure them. They do not replace thinking, but they give you a starting grid so you do not have to invent everything from scratch.
+Architecture frameworks define standard sets of views and viewpoints that guide which models you create and how you structure them. They do not replace thinking, but they provide a starting point so you do not have to reinvent everything from scratch.
 
 Common examples include:
 
@@ -163,7 +163,7 @@ Using these frameworks, you can:
 * Reuse the same kinds of models across systems, making documentation more consistent and comparable.  
 * Avoid gaps where an important concern has no corresponding view.
 
-You do not have to adopt any framework rigidly. It is often enough to pick a framework, adapt its viewpoints to your context, and keep using that adapted set as your standard.
+You do not have to rigidly adopt any framework. It is often enough to pick a framework, adapt its viewpoints to your context, and keep using that adapted set as your standard.
 
 ### Modeling with agile teams
 
@@ -179,7 +179,7 @@ For many teams, this means using simple diagramming tools or even whiteboard sna
 
 ### Keeping models accurate and useful
 
-A model is only useful if people trust it. To keep trust high:
+A model is only helpful if people trust it. To keep trust high:
 
 * Make it clear where models live and which ones are considered “current.”  
 * Add a “last updated” or “last reviewed” note to important models.  
@@ -190,14 +190,14 @@ A simple rule of thumb: if people keep saying “ignore that diagram, it’s out
 
 ## Summary
 
-Architectural models are the backbone of architecture communication. They let you show what exists, how it behaves, and where it runs in ways that different stakeholders can understand. By choosing the right mix of structural, behavioral, and deployment models, you create a multi-angle view that supports better decisions.
+Architectural models are the backbone of architectural communication. They let you show what exists, how it behaves, and where it runs in ways that different stakeholders can understand. By choosing the right mix of structural, behavioral, and deployment models, you create a multi-angle view that supports better decisions.
 
-Architecture frameworks and modeling notations help you create those models consistently, but they are tools, not goals. Producing good models is an ongoing practice: you select the questions that matter, pick the right abstractions, use frameworks and notations consistently, and keep the results current. When you do, your models become living tools for steering the architecture rather than dusty drawings nobody trusts.
+Architecture frameworks and modeling notations help you create those models consistently, but they are tools, not goals. Producing good models is an ongoing practice: you select the questions that matter, pick the right abstractions, use frameworks and notations consistently, and keep the results up to date. When you do, your models become living tools for steering the architecture rather than dusty drawings nobody trusts.
 
 ## Recommended Reading
 
 #### Books
 
-* Nick Rozanski, & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
+* Nick Rozanski & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
   * **Chapter 12: Producing Architectural Models**\
     Explains how to select, construct, and maintain architectural models that match stakeholder concerns and support analysis and decision-making.

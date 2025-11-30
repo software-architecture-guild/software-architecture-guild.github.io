@@ -11,7 +11,7 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-Architectural decisions shape how your system behaves years from now: what it can do, how easily it changes, and where it breaks under stress. Architecture Decision Records (ADRs) make those choices visible, traceable, and governable instead of leaving them buried in conversations and old slide decks.
+Architectural decisions shape how your system behaves years from now: what it can do, how easily it changes, and where it breaks under stress. Architecture Decision Records (ADRs) make those choices visible, traceable, and governable, rather than leaving them buried in conversations and old slide decks.
 
 ## Why Architectural Decision Records Matter
 
@@ -21,7 +21,7 @@ An ADR log becomes the memory of your architecture. It tells a coherent story ac
 
 ### Making trade-offs explicit
 
-Every non-trivial architectural choice is a trade-off: performance versus simplicity, flexibility versus cost, time-to-market versus robustness. Too often these trade-offs live in someone’s head and evaporate when people leave.
+Every non-trivial architectural choice is a trade-off: performance versus simplicity, flexibility versus cost, time-to-market versus robustness. Too often, these trade-offs live in someone’s head and evaporate when people leave.
 
 By writing an ADR, you force yourself to:
 
@@ -52,7 +52,7 @@ They also support evolution. When context changes—new scale, new regulations, 
 
 ## What Exactly Is an Architecture Decision Record
 
-An ADR is a small, focused document that records one architectural decision. It is intentionally lightweight so you can create many of them over the life of a system.
+An ADR is a short, focused document that records a single architectural decision. It is intentionally lightweight so you can create many of them over the life of a system.
 
 ### One decision per record
 
@@ -62,7 +62,7 @@ Each ADR should capture a single decision at a useful level of granularity—for
 * “Adopt PostgreSQL as the primary operational data store.”  
 * “Expose public APIs via an API gateway with token-based auth.”
 
-Trying to cram multiple unrelated decisions into one ADR makes it difficult to understand, govern, or supersede them later.
+Trying to cram multiple unrelated decisions into a single ADR makes it challenging to understand, govern, or supersede them later.
 
 ### Typical structure of an ADR
 
@@ -117,7 +117,7 @@ Common patterns include:
 * Naming ADRs with incremental numbers and short titles.  
 * Tagging or grouping ADRs by domain, subsystem, or concern.
 
-The goal is that any engineer can discover relevant decisions with a quick search.
+The goal is for any engineer to be able to discover relevant decisions with a quick search.
 
 ### Writing effective ADRs
 
@@ -131,12 +131,12 @@ Avoid vague wording like “we will use microservices” without clarifying scop
 
 ### Connecting ADRs to architecture characteristics and views
 
-Every architectural decision exists to support or balance certain characteristics: for example, “we use asynchronous messaging here to improve resilience and decouple workloads.” ADRs should:
+Every architectural decision exists to support or balance specific characteristics: for example, “we use asynchronous messaging here to improve resilience and decouple workloads.” ADRs should:
 
 * Name the characteristics they primarily serve (for example, performance, scalability, security).  
 * Link to relevant architecture views (context, structural, deployment) where the decision is visible.
 
-This makes it clear how decisions and models fit together and helps teams see which decisions to revisit when characteristics need to shift.
+This makes it clear how decisions and models fit together and helps teams identify which decisions to revisit when characteristics shift.
 
 ### Governance: keeping decisions real
 
@@ -184,7 +184,7 @@ If you cannot articulate trade-offs, you are not ready to finalize the ADR.
 
 ### Not involving stakeholders
 
-Architecture decisions made in isolation often miss crucial constraints or create friction later. An ADR written by one person, without input, is a red flag.
+Architecture decisions made in isolation often miss crucial constraints or create friction later. An ADR written by a single person without input is a red flag.
 
 Better practice:
 
