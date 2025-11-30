@@ -74,7 +74,7 @@ These estimates will not be perfect, but they force you to think about effort an
 Benefits are often qualitative: higher availability, faster response, easier integration. To compare them, you need some way to value them:
 
 * Tie qualities to business outcomes: for example, “Availability below X% risks losing key customers,” or “Reducing response time on this path correlates with observable conversion gains.”  
-* Use **relative value** when exact numbers are hard: you might rank scenarios by importance (“must-have vs nice-to-have”) or by impact bands (“small, medium, large”).  
+* Use relative value when exact numbers are hard: you might rank scenarios by importance (“must-have vs nice-to-have”) or by impact bands (“small, medium, large”).  
 * Consider internal value: designs that reduce cognitive load or onboarding time are economically significant, even if they don’t directly show up in revenue.
 
 The point is not to find perfect numbers. It is to avoid treating all benefits as equal.
@@ -101,10 +101,10 @@ This gives you a structured view of trade-offs: maybe one option excels at avail
 
 ### Options Thinking
 
-Many architecture decisions are **options**, not obligations. You can think of them this way:
+Many architecture decisions are options, not obligations. You can think of them this way:
 
-* Some designs **keep options open**: they may cost a bit more now but make it easier to support future needs (for example, retaining a partitioning-friendly data model even if you don’t shard yet).  
-* Others **lock you in**: they are cheaper now but make certain future changes very expensive or impossible (for example, building strongly coupled integrations around a brittle third-party API).
+* Some designs keep options open: they may cost a bit more now but make it easier to support future needs (for example, retaining a partitioning-friendly data model even if you don’t shard yet).  
+* Others lock you in: they are cheaper now but make certain future changes very expensive or impossible (for example, building strongly coupled integrations around a brittle third-party API).
 
 Options thinking asks: what flexibility is this design buying or selling, and what is that flexibility likely to be worth?
 
@@ -119,7 +119,7 @@ For significant architecture decisions, capture at least a lightweight economic 
 * What costs we expect (implementation, operations, change).  
 * What benefits we are aiming for (which qualities, which business outcomes).  
 * What risks we are aware of (and how we plan to mitigate or monitor them).  
-* Why we think, **in this context**, that this is a better bet than plausible alternatives.
+* Why we think, in this context, that this is a better bet than plausible alternatives.
 
 Recording that reasoning in architectural decision records makes future conversations easier. When assumptions change—traffic grows, costs shift, priorities move—you can revisit the decision with the economic context in mind instead of arguing from scratch.
 
@@ -131,7 +131,7 @@ Economic analysis provides a bridge between technical and business conversations
 * You can explain why certain qualities (like observability or modifiability) deserve investment, by connecting them to risk reduction and future velocity.  
 * You can negotiate scope: if an expensive quality requirement has low business value, maybe it can be relaxed or postponed.
 
-The architecture is still technical, but the **reasons** for it are expressed in terms stakeholders recognize.
+The architecture is still technical, but the reasons for it are expressed in terms stakeholders recognize.
 
 ### Learning From Actual Outcomes
 
@@ -164,6 +164,7 @@ The result is not “finance-driven design” but architecture that is technical
 ## Recommended Reading
 
 #### Books
-* Bass, Len, Paul Clements, and Rick Kazman (2012). *Software Architecture in Practice*. Addison-Wesley.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 23: Economic Analysis of Architectures**\
     Introduces practical techniques for evaluating architectural options in terms of cost, benefit, risk, and timing, with examples of how to use economic thinking to guide design decisions.

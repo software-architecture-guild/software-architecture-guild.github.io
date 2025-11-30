@@ -30,6 +30,7 @@ Testing, then, is the mechanism that verifies whether the implementation still r
 Misalignment between architecture, implementation, and testing rarely happens in one big event; it accumulates over many small decisions. A team takes a shortcut around an abstraction. Someone adds a direct database call instead of going through the domain API. A performance test suite quietly stops running in CI.
 
 The result is often invisible until it hurts:  
+
 * Quality attributes degrade, but no test fails.  
 * Architectural diagrams describe a system that no longer exists.  
 * Teams struggle to understand where responsibilities really live.  
@@ -55,6 +56,7 @@ Traceability helps you check this alignment in both directions: from architectur
 Tests validate not just features but also architectural qualities—properties of the system that are hard to change and matter to stakeholders. These include performance, security, availability, modifiability, and more subtle qualities like observability or testability.
 
 Some examples:  
+
 * If the architecture promises that a user-facing operation completes within a certain time, performance tests should check this under realistic load.  
 * If the architecture relies on redundancy for availability, failure tests should simulate node or network failures and assert that the system still serves requests.  
 * If the architecture is framed around clean boundaries and encapsulation, tests should ensure that external callers use stable interfaces rather than reaching into internal details.  
@@ -66,6 +68,7 @@ Without such tests, architectural qualities stay aspirational. With them, qualit
 Architectural tactics are recurring ways to influence qualities—such as caching for performance, authentication and authorization for security, or encapsulation for modifiability. For each tactic, there are concrete implementation choices and non-trivial trade-offs.
 
 Consider a few examples:  
+
 * **Caching for performance:** Caching reduces latency and load but introduces complexity around invalidation, consistency, and memory usage. Tests must verify not just speed but correctness in edge cases (stale data, cache misses, eviction).  
 * **Redundancy for availability:** Replication, failover clusters, or active-active deployments can keep a system responsive during failures, but they create new failure modes and consistency scenarios. Tests must simulate component loss, network partitions, and recovery behaviors.  
 * **Encapsulation for modifiability:** Strict component boundaries make changes easier but can initially feel slower when extra indirection is introduced. Tests must verify that boundary contracts remain stable and that internal refactoring does not leak out to consumers.  
@@ -79,6 +82,7 @@ Testability is itself an architectural quality: some designs make it easy to tes
 ### Decisions That Make Systems Testable
 
 Certain architectural patterns improve testability almost by default:  
+
 * **Modular design:** Splitting the system into components with clear responsibilities allows you to test each part in isolation.  
 * **Separation of concerns:** Decoupling domain logic from user interface and infrastructure means you can test business rules without starting a browser or a database.  
 * **Well-defined interfaces:** Stable contracts between components make it possible to use fakes and mocks without reconfiguring the entire environment.  
@@ -89,6 +93,7 @@ Conversely, big-ball-of-mud designs or those with hidden shared state are notori
 ### Choosing the Right Kinds of Tests for Architectural Concerns
 
 Different test types shine at different levels of architecture:  
+
 * **Unit tests** are great for verifying local behavior of small components and enforcing internal invariants. They help you maintain the integrity of your domain model and utility logic.  
 * **Integration tests** validate the interactions between components or subsystems, such as how a web API talks to a database or how a process orchestrator calls worker services.  
 * **System or end-to-end tests** check that the system as a whole meets functional and quality requirements under realistic scenarios and loads.  
@@ -100,6 +105,7 @@ For architectural concerns, you typically need a mix: unit tests to protect key 
 Continuous integration (CI) pipelines are a natural place to enforce architectural alignment. Every change that reaches a shared branch should trigger tests that exercise critical architectural decisions.
 
 A healthy CI setup for architecture includes:  
+
 * Automated suites that cover architectural qualities (performance thresholds, security checks, resource limits) as well as functionality.  
 * Static analysis or custom checks that enforce constraints, such as allowed dependencies between modules or services.  
 * Regular execution of resilience checks—such as fault injection or chaos experiments—to verify that redundancy and failover strategies behave as expected.  
@@ -115,6 +121,7 @@ Different architectural styles create different alignment and testing challenges
 In layered architectures, responsibilities are separated into layers such as presentation, domain, and data access. The main architectural rules are usually about allowed direction of dependencies and responsibilities per layer.
 
 Alignment looks like this:  
+
 * Code respects dependency rules (for example, UI depends on domain, domain depends on data access, not the other way around).  
 * Tests validate that key flows traverse layers as intended and that domain logic is not bypassed.  
 * Integration tests often focus on entire “vertical slices” across layers, while unit tests focus on behaviors within a single layer.  
@@ -126,6 +133,7 @@ When alignment is lost, you start seeing domain logic in controllers, database s
 In microservice-style systems, each service is a separately deployable unit with its own responsibilities and data. Architectural decisions concern service boundaries, data ownership, and communication patterns.
 
 Alignment in this style means:  
+
 * The codebase and deployment units really match the intended service boundaries.  
 * APIs and message contracts reflect the responsibilities of each service, and consumers do not “reach behind” them via shared databases or backdoor channels.  
 * Tests verify contracts between services (for example, with contract testing), and system-level tests exercise key cross-service flows under load and failure conditions.  
@@ -137,6 +145,7 @@ The main risks are hidden coupling and complex failure modes. Without focused te
 Event-driven systems are built around asynchronous messages and reactions. Components publish events when something significant happens; other components subscribe and react.
 
 Here, alignment means:  
+
 * Events are treated as first-class architectural elements with clear semantics and schemas.  
 * Implementation actually uses events as intended instead of slipping back to direct calls for “quick wins.”  
 * Tests simulate event flows, verify that subscribers react correctly, and ensure that the system behaves predictably under out-of-order, duplicate, or delayed events.  
@@ -150,6 +159,7 @@ Keeping architecture, implementation, and testing in sync is not just a one-off 
 ### Keeping Architecture and Code in Sync
 
 Traceability does not require heavyweight tools. Simple practices can go a long way:  
+
 * Name code artifacts (modules, packages, services) to match architectural concepts.  
 * Maintain a minimal mapping between architectural elements and their implementation (for example, in a short index or an architecture description).  
 * Tag tests or group them in suites according to the architectural concerns they cover (for example, “performance: search flow,” “availability: order placement”).  
@@ -159,6 +169,7 @@ When you change architecture decisions—such as splitting a component or moving
 ### Using Tests as Living Documentation
 
 Tests can act as executable documentation for architectural decisions. A few examples:  
+
 * A performance test that asserts “search results must appear within 500 ms for 95% of requests” documents a latency requirement as code.  
 * A test that simulates a primary database failure and asserts that a read-only replica serves traffic documents the failover strategy.  
 * A contract test that encodes the expected API behavior between two services documents their integration contract.  
@@ -176,6 +187,7 @@ Deliberate alignment—through clear decisions, traceable implementations, and t
 ## Recommended Reading
 
 #### Books
-* Bass, Len, Paul Clements, and Rick Kazman (2012). *Software Architecture in Practice*. Addison-Wesley.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 19: Architecture, Implementation, and Testing**\
     Explores how architectural decisions guide development and how testing can validate that implementation still reflects the intended architecture, with concrete guidance on keeping these activities aligned.

@@ -32,8 +32,8 @@ You can often fix bugs late. Architecture risks, left alone, become entrenched a
 
 Architecture risk is the combination of two things:
 
-* A structural or technology-related **weakness** in the system design.  
-* The **likelihood** that this weakness will be exercised and its **impact** when it is.
+* A structural or technology-related weakness in the system design.  
+* The likelihood that this weakness will be exercised and its impact when it is.
 
 You cannot eliminate all risk. Instead, you aim to:
 
@@ -62,7 +62,7 @@ Useful sources include:
 
 * **Architecture reviews:** structured or informal sessions where architects and senior engineers challenge decisions and ask “what could go wrong?”  
 * **Stakeholder interviews:** talking to product, operations, security, and even legal about their biggest fears and constraints.  
-* **Past incidents:** analysing previous outages, performance issues, or failed projects to recognize recurring patterns.  
+* **Past incidents:** analyzing previous outages, performance issues, or failed projects to recognize recurring patterns.  
 * **Prototypes and spikes:** small experiments that reveal whether tricky parts of the design behave as expected.
 
 The goal is to build a candidate list of risks. At this stage you are deliberately broad: you would rather catch too many possibilities than miss a critical one.
@@ -256,6 +256,7 @@ When risk analysis becomes a regular part of architecture practice, systems are 
 ## Recommended Reading
 
 #### Books
-* Richards, Mark, and Neal Ford (2020). *Fundamentals of Software Architecture*. O’Reilly Media.  
+
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.  
   * **Chapter 20: Analyzing Architecture Risk**\
     Provides a practical framework for identifying, assessing, and mitigating architecture risks, with examples of techniques such as prototyping, incremental delivery, and technical debt management.

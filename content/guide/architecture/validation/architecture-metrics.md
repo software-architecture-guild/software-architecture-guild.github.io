@@ -72,7 +72,7 @@ Over time, you build a portfolio of fitness functions at different levels: cheap
 
 Architecture is also about the internal shape of the system: modules, boundaries, and dependencies. Structural metrics help you see whether your codebase structure supports human cognition and change, or fights it.
 
-One way to bundle structural health into a single view is a **modularity maturity index** or similar composite score. This kind of measure typically looks at:  
+One way to bundle structural health into a single view is a   modularity maturity index   or similar composite score. This kind of measure typically looks at:  
 
 * **Modularity** – how well code is grouped into coherent modules, how strong internal cohesion is versus external coupling, and whether unit sizes are reasonably balanced.  
 * **Hierarchy** – whether dependencies form clear layers or are tangled in cycles across classes, packages, or services.  
@@ -129,7 +129,7 @@ In organizations “doing DevOps” on paper but not in practice, pipelines ofte
 * If **Time to Trunk Stability** is high, breaking the mainline is expensive and recovery is painful.  
 * If **Evitable Integration Issues** are high, teams are pushing broken assumptions downstream instead of catching them where the changes are made.  
 
-One powerful response is to introduce **private builds**: local or isolated builds that run core validation before changes hit the shared trunk. That depends heavily on architecture: you need testable modules, clear APIs, and environments that can be reproduced locally. When private builds become normal, these metrics improve—and so does your ability to evolve the architecture safely.
+One powerful response is to introduce   private builds  : local or isolated builds that run core validation before changes hit the shared trunk. That depends heavily on architecture: you need testable modules, clear APIs, and environments that can be reproduced locally. When private builds become normal, these metrics improve—and so does your ability to evolve the architecture safely.
 
 ## Using Architecture Metrics in Design and Governance
 
@@ -159,7 +159,7 @@ The fastest way to kill useful metrics is to weaponize them in performance manag
 
 To keep metrics healthy:  
 
-* Use them as **learning tools**, not as individual report cards.  
+* Use them as   learning tools  , not as individual report cards.  
 * Discuss them in cross-functional forums (architecture reviews, team retrospectives), not only in leadership status decks.  
 * Pair numbers with narrative: when a metric moves, ask “what changed?” instead of “who is at fault?”  
 * Make definitions, data sources, and dashboards transparent so teams can challenge and improve them.  
@@ -187,7 +187,8 @@ When misused, metrics become vanity numbers or weapons. The difference lies in i
 ## Recommended Reading
 
 #### Books
-* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *Software Architecture Metrics*. O’Reilly Media.  
+
+* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://www.oreilly.com/library/view/software-architecture-metrics/9781098112226/)*. O’Reilly Media.  
   * **Chapter 1: Four Key Metrics Unleashed**\
     Introduces four core flow metrics and shows how they act as a steering mechanism for architecture and delivery.  
   * **Chapter 2: The Fitness Function Testing Pyramid: An Analogy for Architectural Tests and Metrics**\

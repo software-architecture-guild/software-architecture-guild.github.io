@@ -27,6 +27,7 @@ Ciceri
 Cockburn
 Cognos
 colinwilson
+cyclicity
 connascence
 connascent
 Cynefin
@@ -43,6 +44,7 @@ endline
 downstreams
 Eoin
 Excalidraw
+failovers
 Fastly
 flexsearch
 Foote
@@ -88,6 +90,7 @@ metaprogramming
 Microkernel
 Millett
 Misaligning
+misformatted
 misrouted
 misrouting
 misprioritized
@@ -123,6 +126,7 @@ Rozanski
 runability
 Sadalage
 replayable
+revisitable
 roadmaps
 Rollouts
 Rozanski

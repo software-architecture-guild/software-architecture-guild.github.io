@@ -36,7 +36,7 @@ Everything else—processes, boards, templates—is a means to these ends, not t
 
 Architecture governance is the set of roles, policies, and processes that guide architectural decisions and oversee how they are applied in practice.
 
-It is useful to separate **management** from **governance**:
+It is useful to separate management from governance:
 
 * **Architecture management** is about planning and execution: roadmaps, staffing, coordinating work, tracking progress.  
 * **Architecture governance** is about direction and oversight: what principles we follow, which decisions need escalation, and how we check that reality matches our intent.  
@@ -80,9 +80,9 @@ This model fits organizations with many independent products or value streams, a
 
 Most real organizations end up with a hybrid:
 
-* A small set of **global principles and guardrails** (for example, security policies, critical data standards, core platform choices).  
-* Strong **local ownership** of implementation details and internal design within domains.  
-* Shared **forums and practices**—like ARBs, guilds, or communities of practice—to coordinate on cross-cutting topics.  
+* A small set of global principles and guardrails (for example, security policies, critical data standards, core platform choices).  
+* Strong local ownership of implementation details and internal design within domains.  
+* Shared forums and practices—like ARBs, guilds, or communities of practice—to coordinate on cross-cutting topics.  
 
 The art is in choosing what is truly global. The more you centralize, the more capacity and trust you need in the central architecture function.
 
@@ -92,13 +92,13 @@ Governance does not live in org charts; it lives in day-to-day practices. A few 
 
 ### Principles, Policies, and Standards
 
-Start with a concise set of **architecture principles** that express how you want systems to be shaped. Examples:
+Start with a concise set of architecture principles that express how you want systems to be shaped. Examples:
 
 * Prefer loosely coupled services with clear contracts over tight in-process integration.  
 * Treat security, observability, and testability as first-class requirements.  
 * Own data where it is created; avoid hidden shared databases.
 
-From principles, derive **policies and standards** where they genuinely reduce risk or cost:
+From principles, derive policies and standards where they genuinely reduce risk or cost:
 
 * Security and privacy baselines.  
 * API and event design guidelines.  
@@ -120,7 +120,7 @@ Effective reviews are focused, time-boxed, and collaborative. They exist to surf
 
 ### Decision Records
 
-Architectural decisions decay quickly in people’s memories. Governance relies on **Architectural Decision Records (ADRs)** or similar logs to keep an auditable trail:
+Architectural decisions decay quickly in people’s memories. Governance relies on Architectural Decision Records (ADRs) or similar logs to keep an auditable trail:
 
 * The decision and its scope.  
 * Context and constraints.  
@@ -132,7 +132,7 @@ ADRs support governance in three ways: they make reasoning visible, they clarify
 
 ### Communication and Enablement
 
-Governance is not just about saying “no.” It is about **making the right path the easy path**:
+Governance is not just about saying “no.” It is about making the right path the easy path:
 
 * Clear, discoverable documentation of principles, standards, and reference designs.  
 * Office hours and pairing sessions where architects help teams apply them.  
@@ -149,8 +149,8 @@ Agile and DevOps practices change how teams deliver software. Governance must ad
 Long, infrequent design approvals clash with frequent delivery. Instead of big up-front reviews, governance can:
 
 * Use short, focused checkpoints aligned with iteration or increment boundaries.  
-* Emphasize **early engagement** (concept and scenario discussions) rather than late vetoes.  
-* Define **self-service checklists** for teams to run before approaching a review.
+* Emphasize early engagement (concept and scenario discussions) rather than late vetoes.  
+* Define self-service checklists for teams to run before approaching a review.
 
 The rule of thumb: the faster you want teams to move, the lighter and earlier your governance interventions must be.
 
@@ -162,7 +162,7 @@ In continuous delivery environments, many governance checks can be automated:
 * Automated security scans and policy-as-code for infrastructure.  
 * Deployment, reliability, and performance metrics that reveal whether architectural decisions are delivering expected qualities.  
 
-Governance then moves from manual inspection to **monitoring signals** and intervening where metrics show drift or risk.
+Governance then moves from manual inspection to monitoring signals and intervening where metrics show drift or risk.
 
 ## Challenges and Trade-offs
 
@@ -178,17 +178,17 @@ Teams will resist governance that feels like overhead without value:
 
 Counter this by:
 
-* Making governance **transparent**: criteria, process, and decision-makers are clear.  
-* Focusing on **high-risk, high-impact** areas rather than micromanaging every choice.  
+* Making governance transparent: criteria, process, and decision-makers are clear.  
+* Focusing on high-risk, high-impact areas rather than micromanaging every choice.  
 * Regularly pruning standards and processes that no longer earn their keep.
 
 ### Balancing Oversight and Autonomy
 
 Too little oversight leads to chaos; too much kills local ownership. Balancing these requires:
 
-* Clarity on **what is non-negotiable** (for example, security baselines, regulatory constraints).  
-* Freedom in **how teams meet those constraints** within their domains.  
-* Mechanisms for **negotiation** when a team has a strong reason to diverge from a standard.
+* Clarity on what is non-negotiable (for example, security baselines, regulatory constraints).  
+* Freedom in how teams meet those constraints within their domains.  
+* Mechanisms for negotiation when a team has a strong reason to diverge from a standard.
 
 If teams never say “no” to a standard, they probably are not stretching far enough. If they always say “no,” your standards are likely misaligned.
 
@@ -213,6 +213,7 @@ When governance works, teams know the boundaries, trust the process, and can mov
 ## Recommended Reading
 
 #### Books
-* Bass, Len, Paul Clements, and Rick Kazman (2012). *Software Architecture in Practice (3rd ed.).* Addison-Wesley.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 22: Management and Governance**\
     Explores how management structures, roles, and governance practices shape the success of architectural initiatives, with concrete guidance and examples.
