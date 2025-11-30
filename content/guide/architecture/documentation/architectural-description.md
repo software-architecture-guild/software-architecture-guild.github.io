@@ -11,11 +11,11 @@ authors:
 -  "ilya-hardzeenka.md"
 ---
 
-An architectural description is the backbone of your architecture documentation: the structured package that pulls together views, decisions, and definitions into one coherent story. When it is done well, everyone—from engineers to executives—can see how the system is shaped, why it looks this way, and how to evolve it safely.
+An architectural description is the backbone of your architecture documentation: the structured package that pulls together views, decisions, and definitions into one coherent story. When done well, everyone—from engineers to executives—can see how the system is shaped, why it looks the way it does, and how to evolve it safely.
 
 ## Why Architectural Description Matters
 
-An architectural description is the spine that holds your architecture documentation together. You can have good models and clear diagrams, but without a structured description that ties them to stakeholders and decisions, the whole picture stays fragile and ad-hoc.
+An architectural description is the spine that holds your architecture documentation together. You can have good models and clear diagrams, but without a structured description that ties them to stakeholders and decisions, the whole picture remains fragile and ad hoc.
 
 ### Turning scattered artifacts into a system of record
 
@@ -25,7 +25,7 @@ It answers:
 
 * Which views exist and why.  
 * Which decisions were made, where they are recorded, and how they relate to those views.  
-* Which parts of the architecture are considered “current” versus historical.
+* Which parts of the architecture are considered “current” versus historical?
 
 Instead of “ask around to find the latest diagram,” people have a single entry point into the architecture.
 
@@ -39,11 +39,11 @@ It defines:
 * The key architectural decisions and their rationale.  
 * The views that expose risks around security, performance, data, and operations.
 
-This lets you move from opinions (“it seems fine”) to structured evaluation (“for this concern, here is the view and the supporting decision record”). It also makes it possible to repeat governance consistently across systems.
+This lets you move from opinions (“it seems fine”) to structured evaluation (“for this concern, here is the view and the supporting decision record”). It also enables consistent governance across systems.
 
 ### Anchoring evolution and delegation
 
-As systems grow, no single architect controls every change. Teams own parts of the system, new services appear, old ones are retired. Without a maintained architectural description, the architecture becomes whatever the last few projects happened to implement.
+As systems grow, no single architect controls every change. Teams own parts of the system, new services appear, and old ones are retired. Without a maintained architectural description, the architecture becomes whatever the last few projects happened to implement.
 
 A good description anchors evolution by:
 
@@ -55,11 +55,11 @@ That makes it safer to delegate: teams can move fast inside clearly described bo
 
 ## What Exactly Is an Architectural Description
 
-An architectural description is more than a pile of diagrams or a long document. It is a structured set of views, decisions, and supporting material that together describe the architecture of a system for its stakeholders.
+An architectural description is more than a pile of diagrams or a long document. It is a structured set of views, decisions, and supporting material that, together, describe the architecture of a system to its stakeholders.
 
 ### Architecture description vs. models and diagrams
 
-It helps to separate three layers:
+It helps to separate the three layers:
 
 * **Architectural models** represent some aspect of the architecture (structure, behavior, deployment) in a structured way.  
 * **Diagrams** are visual renderings of those models at a point in time.  
@@ -74,13 +74,13 @@ A single diagram cannot answer all questions. The idea of *views* and *viewpoint
 * A **view** is a representation of the system from a particular angle—structural, behavioral, deployment, information, and so on.  
 * A **viewpoint** defines how that view is constructed: which elements appear, which relations matter, and which stakeholder concerns it addresses.
 
-Concerns are the questions stakeholders care about: performance, security, maintainability, data protection, regulatory rules, and so on. A good architectural description makes the mapping explicit: “this view addresses these concerns for these stakeholders.”
+Concerns are the questions stakeholders care about, such as performance, security, maintainability, data protection, regulatory rules, and so on. A good architectural description makes the mapping explicit: “this view addresses these concerns for these stakeholders.”
 
 This is where the description earns its keep. It does not just list views; it shows why each exists and which problems it helps solve.
 
 ### Properties of an effective architectural description
 
-Effective architectural descriptions share a few key properties:
+Compelling architectural descriptions share a few key properties:
 
 * **Clarity**: stakeholders can read it without a tour guide. Terminology is defined, views are scoped, and the structure is easy to follow.  
 * **Comprehensiveness**: it covers the important aspects of the system—both functional capabilities and critical qualities—without trying to describe every line of code.  
@@ -91,7 +91,7 @@ If your description fails on any of these, people will stop trusting it, and it 
 
 ## Core Elements of an Architectural Description
 
-You can structure an architectural description in many ways, but most effective ones share a common set of building blocks.
+You can structure an architectural description in many ways, but the most effective ones share a common set of building blocks.
 
 ### Introduction and context
 
@@ -102,7 +102,7 @@ The introduction sets the scene:
 * What is its scope (and what is out of scope)?  
 * Which major constraints shape the architecture (regulatory, technical, organizational)?
 
-This sounds basic, but skipping it is expensive. Without a clear scope, different readers assume different boundaries, and discussion quickly derails.
+This sounds basic, but skipping it is expensive. Without a clear scope, different readers assume different boundaries, and the discussion quickly derails.
 
 ### Stakeholders and their concerns
 
@@ -138,7 +138,7 @@ This keeps views from becoming random diagrams and makes them easier to review a
 Every non-trivial system has a history of decisions:
 
 * Picked this style over that style.  
-* Chose this integration pattern.  
+* Choose this integration pattern.  
 * Accepted that risk to meet this deadline.  
 * Introduced this dependency to avoid that complexity.
 
@@ -153,7 +153,7 @@ You do not need a novel—lightweight decision records are enough—but they sho
 
 ### Glossary and definitions
 
-Architecture work uses terms that are overloaded across teams and domains: “service”, “module”, “platform”, “tenant”, “customer”, even “user”. A shared glossary is how you avoid arguments that are really just language clashes.
+Architecture work uses terms that are overloaded across teams and domains: “service”, “module”, “platform”, “tenant”, “customer”, and even “user”. A shared glossary is how you avoid arguments that are really just language clashes.
 
 Your architectural description should include:
 
@@ -207,7 +207,7 @@ An architectural description that is painful to update will quickly become obsol
 * Use lightweight formats and tools that fit into existing workflows.  
 * Version the description alongside the system it represents.  
 * Establish simple rules for when updates are required (for example, “major boundary changes”, “new subsystems”, “significant decisions”).  
-* Periodically review and prune: remove or archive views that no longer reflect reality or are no longer useful.
+* Periodically review and prune: remove or archive views that no longer reflect reality or are no longer helpful.
 
 A practical test: if architects and senior engineers are comfortable editing the description as part of their normal work, you probably have the right level of weight.
 
@@ -233,6 +233,6 @@ By treating the architectural description as a living, stakeholder-driven artifa
 
 #### Books
 
-* Nick Rozanski, & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
+* Nick Rozanski & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
   * **Chapter 13: Creating the Architectural Description**\
     Provides a structured, view-based approach to building complete, stakeholder-focused architectural descriptions, aligned with common industry standards.
