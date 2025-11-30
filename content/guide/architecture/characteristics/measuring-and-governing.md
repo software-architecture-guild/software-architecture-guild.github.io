@@ -1,7 +1,7 @@
 ---
 weight: 141
 title: "Measuring and Governing"
-description: "This article explains how to measure and govern Architecture Characteristics."
+description: "This article explains how to measure and govern software architecture characteristics like scalability, performance, and security. Learn to use fitness functions, automated metrics, and Architectural Decision Records (ADRs) to ensure continuous quality and alignment with business goals."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

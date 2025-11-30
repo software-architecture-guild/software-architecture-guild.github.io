@@ -1,7 +1,7 @@
 ---
 weight: 112
 title: "Modifiability"
-description: "This article explains what modifiability is and how to achieve it."
+description: "This article explains software modifiability, its importance for system evolution, and how to achieve it using architectural tactics like encapsulation, dependency management, and late binding, while managing trade-offs."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

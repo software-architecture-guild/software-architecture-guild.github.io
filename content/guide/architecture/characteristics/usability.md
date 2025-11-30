@@ -1,7 +1,7 @@
 ---
 weight: 116
 title: "Usability"
-description: "This article explains what usability is and how to achieve it."
+description: "This article explains software usability, its impact on user experience, and how to achieve it using architectural tactics like supporting user initiative, simplifying interfaces, and managing errors, while balancing trade-offs."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

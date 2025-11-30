@@ -1,7 +1,7 @@
 ---
 weight: 149
 title: "Catalog"
-description: "This article contains comprehensive list of Architecture Characteristics."
+description: "This article explains a comprehensive catalog of software architecture characteristics, including their definitions, techniques, and trade-offs for various quality attributes like availability, performance, and security."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
