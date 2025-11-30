@@ -1,7 +1,7 @@
 ---
 weight: 105
 title: "Identifying Characteristics"
-description: "This article explains how to identify which Architecture Characteristics are important in your context."
+description: "This article explains how to identify, prioritize, and balance architectural characteristics (quality attributes) for software systems. Learn techniques like quality attribute scenarios, stakeholder interviews, and trade-off analysis to align architecture with business goals."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

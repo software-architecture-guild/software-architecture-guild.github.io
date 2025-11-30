@@ -1,7 +1,7 @@
 ---
 weight: 111
 title: "Interoperability"
-description: "This article explains what interoperability is and how to achieve it."
+description: "This article explains software interoperability, its importance for system integration, and how to achieve it using architectural tactics like standardization, adapters, and shared interfaces, while managing trade-offs."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

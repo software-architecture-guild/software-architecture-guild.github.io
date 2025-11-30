@@ -1,7 +1,7 @@
 ---
 weight: 101
 title: "What is an Architecture Characteristic?"
-description: "This article explains what Architecture Characteristics are."
+description: "This article explains what software architecture characteristics (quality attributes) are, why they are critical for system success, and how to define, measure, and trade them off in your architecture, covering key characteristics like performance, scalability, availability, and security."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

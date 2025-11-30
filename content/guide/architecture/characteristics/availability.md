@@ -1,7 +1,7 @@
 ---
 weight: 110
 title: "Availability"
-description: "This article explains what availability is and how to achieve it."
+description: "This article explains how to ensure continuous system operation, covering fault tolerance, detection, and recovery tactics for high availability."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

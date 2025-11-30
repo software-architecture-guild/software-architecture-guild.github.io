@@ -1,7 +1,7 @@
 ---
 weight: 117
 title: "Scalability"
-description: "This article explains what scalability is and how to achieve it."
+description: "This article explains software scalability, its distinction from performance, and how to achieve it using architectural tactics like increasing resources, introducing concurrency, and managing data, while considering trade-offs."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

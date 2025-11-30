@@ -1,7 +1,7 @@
 ---
 weight: 142
 title: "Addressing Characteristics"
-description: "This article explains how to measure and govern Architecture Characteristics."
+description: "This article explains how to implement software architecture characteristics using architectural tactics and patterns. Learn to address quality attributes like performance, availability, and security by combining tactics into effective architectural patterns."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"

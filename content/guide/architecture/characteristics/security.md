@@ -1,7 +1,7 @@
 ---
 weight: 114
 title: "Security"
-description: "This article explains what security is and how to achieve it."
+description: "This article explains software security, its core properties like confidentiality and integrity, and how to achieve it using architectural tactics for resistance, detection, and recovery, while managing trade-offs."
 icon: "article"
 date: "2025-10-14T00:00:00+01:00"
 lastmod: "2025-10-14T00:00:00+01:00"
