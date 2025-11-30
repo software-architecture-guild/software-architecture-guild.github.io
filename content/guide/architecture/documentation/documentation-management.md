@@ -80,7 +80,7 @@ A documentation system is a set of conventions that make knowledge findable, tru
 
 ### Canonical sources and “one place to look”
 
-A core rule: for any category of architecture knowledge, there should be a **single canonical location**. For example:
+A core rule: for any category of architecture knowledge, there should be a single canonical location. For example:
 
 * ADRs live in `/adrs` in the main repo.  
 * Architecture descriptions live in `/architecture` in the same repo.  
@@ -92,8 +92,8 @@ This does not mean one tool for everything. It means one *obvious* place per typ
 
 You need a simple, predictable structure so people can navigate without a guide. Typical patterns:
 
-* Top-level by **product or system** (for example, “Billing Platform”, “Onboarding System”).  
-* Within each, sections for **architecture**, **operations**, **domain**, and **decisions**.  
+* Top-level by product or system (for example, “Billing Platform”, “Onboarding System”).  
+* Within each, sections for architecture, operations, domain, and decisions.  
 * Within architecture, consistent sub-sections: overview, views, decisions, glossary.
 
 Tags and search help, but they do not replace a clear backbone. A good test: a new engineer should be able to find the architecture description for a system in under a minute, starting from your entry point.
@@ -104,9 +104,9 @@ One-off documentation is expensive. You want docs that can be reused and extende
 
 Practical moves:
 
-* Use **templates** for architecture descriptions, ADRs, runbooks, and major views.  
-* Standardize **section headings** so people know where to look for decisions, diagrams, and constraints.  
-* Reuse **glossaries** and domain definitions across systems when they share a domain.
+* **Use templates** for architecture descriptions, ADRs, runbooks, and major views.  
+* **Standardize section headings** so people know where to look for decisions, diagrams, and constraints.  
+* **Reuse glossaries** and domain definitions across systems when they share a domain.
 
 This reduces friction: people spend less time deciding *how* to document and more time capturing what matters.
 
@@ -152,7 +152,7 @@ Documentation management is ongoing care: review, refactor, and, when needed, de
 
 ### Regular review cycles
 
-Stale documentation is a classic antipattern: it looks authoritative, but it lies. A simple management practice is to set **review cadences** for critical documents.
+Stale documentation is a classic antipattern: it looks authoritative, but it lies. A simple management practice is to set review cadences for critical documents.
 
 For example:
 
@@ -186,10 +186,10 @@ Pruning is part of management, not a failure. A smaller, trustworthy body of doc
 
 Tools can make good practices easier:
 
-* Use **version control** so documentation changes are reviewed like code and history is visible.  
-* Use **link checkers** and simple scripts to flag broken links or missing files.  
-* Use **templates and scaffolding** tools to generate new documents with standard structure.  
-* Integrate doc updates into CI/CD where appropriate (for example, fail builds if API docs drift from contracts).
+* **Use version control** so documentation changes are reviewed like code and history is visible.  
+* **Use link checkers** and simple scripts to flag broken links or missing files.  
+* **Use templates and scaffolding** tools to generate new documents with standard structure.  
+* **Integrate doc updates into CI/CD** where appropriate (for example, fail builds if API docs drift from contracts).
 
 Automation does not replace judgment, but it keeps the basics under control so humans can focus on content.
 
@@ -202,6 +202,7 @@ By designing a simple documentation system, building habits that integrate docs 
 ## Recommended Reading
 
 #### Books
+
 * Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)*. O’Reilly Media.  
   * **Chapter 10: Knowledge Management Principles**\
     Explores knowledge as an organizational asset, with practical guidance on avoiding hoarding, silos, and one-off documentation.  

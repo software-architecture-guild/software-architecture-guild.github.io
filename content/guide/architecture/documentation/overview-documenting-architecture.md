@@ -60,8 +60,8 @@ If a new engineer can read the documentation and explain back how the system is 
 
 A single diagram cannot answer all questions about a system. Different stakeholders need different angles. Architecture documentation solves this by using *views* and *viewpoints*.
 
-* A **view** is a concrete representation of the system from a particular angle—for example, how modules depend on each other, how components interact at runtime, or how software maps onto hardware.
-* A **viewpoint** defines how to build that view: what elements to show, which relations matter, which notations to use, and which concerns it addresses.
+* **View** is a concrete representation of the system from a particular angle—for example, how modules depend on each other, how components interact at runtime, or how software maps onto hardware.
+* **Viewpoint** defines how to build that view: what elements to show, which relations matter, which notations to use, and which concerns it addresses.
 
 This separation has two benefits. First, it ensures each view is purposeful rather than a random drawing. Second, it makes documentation reusable: once you define your standard viewpoints (for example, “module structure” or “deployment”), you can apply them consistently across systems.
 

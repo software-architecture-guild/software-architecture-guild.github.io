@@ -48,8 +48,8 @@ An architectural model is a structured representation of some aspect of a system
 
 It helps to distinguish three related ideas:
 
-* An **architectural model** is the conceptual representation: which elements exist, what types they are, and how they relate.  
-* A **diagram** is a concrete visual rendering of a model at a point in time: boxes, lines, labels.  
+* **Architectural model** is the conceptual representation: which elements exist, what types they are, and how they relate.  
+* **Diagram** is a concrete visual rendering of a model at a point in time: boxes, lines, labels.  
 * **Architecture documentation** is the broader package: the models, diagrams, text, and decision records that together explain the system.
 
 You can think of the model as the schema, the diagram as one view of the current data, and the documentation set as the overall database of architectural knowledge.
@@ -68,9 +68,9 @@ Most real architectures use all three model types. Together, they help you see w
 
 Architectural models can be drawn at different abstraction levels:
 
-* High-level models show a small number of major elements and are stable over long periods.  
-* Mid-level models focus on subsystems or services and how they collaborate.  
-* Low-level models capture details within a component, such as internal modules or detailed data structures.
+* **High-level models** show a small number of major elements and are stable over long periods.  
+* **Mid-level models** focus on subsystems or services and how they collaborate.  
+* **Low-level models** capture details within a component, such as internal modules or detailed data structures.
 
 You rarely need detailed models for everything. A useful pattern is to keep high-level models for the whole system and deeper models only where the risk, change rate, or complexity justifies the effort.
 
@@ -171,9 +171,9 @@ In agile environments, architecture changes iteratively, so models must adapt. H
 
 A more effective approach is to:
 
-* Create **lightweight models** that can be updated in minutes, not days.  
+* Create lightweight models that can be updated in minutes, not days.  
 * Focus on scenarios and decisions that are currently in play.  
-* Treat models as **living artifacts** that evolve alongside the code.
+* Treat models as living artifacts that evolve alongside the code.
 
 For many teams, this means using simple diagramming tools or even whiteboard snapshots stored alongside the code. The key is that models are easy to create, change, and delete when they no longer reflect reality.
 
@@ -197,6 +197,7 @@ Architecture frameworks and modeling notations help you create those models cons
 ## Recommended Reading
 
 #### Books
+
 * Nick Rozanski, & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
   * **Chapter 12: Producing Architectural Models**\
     Explains how to select, construct, and maintain architectural models that match stakeholder concerns and support analysis and decision-making.
