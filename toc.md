@@ -12,7 +12,11 @@
 
 ### Domains: 200-249
 
-### Coupling: 250-299
+### Coupling: 250-279
+
+### Documentation 280-299
+
+### Validation 300-319
 
 ## Organization: 400-699
 
