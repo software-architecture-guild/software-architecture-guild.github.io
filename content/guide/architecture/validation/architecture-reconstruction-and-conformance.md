@@ -51,7 +51,7 @@ The output is not just a graph of classes or services. The point is to reach a l
 
 While details differ by tech stack and tooling, most reconstruction efforts follow a similar pattern.
 
-#### Information Extraction
+##### Information Extraction
 
 You start by pulling information from implementation artifacts and runtime behavior:  
 
@@ -62,7 +62,7 @@ You start by pulling information from implementation artifacts and runtime behav
 
 Static analysis tools extract dependency graphs, module relationships, and layering information. Dynamic analysis tools capture which components actually talk to each other at runtime and how often.
 
-#### Model Construction
+##### Model Construction
 
 Next, you turn raw data into architectural views. Common examples are:  
 
@@ -72,7 +72,7 @@ Next, you turn raw data into architectural views. Common examples are:
 
 The key is to group low-level elements into architectural components and subsystems. You don’t want a diagram with 5,000 boxes; you want one with a manageable number of meaningful building blocks.
 
-#### Abstraction and Refinement
+##### Abstraction and Refinement
 
 Reconstruction is iterative. Early models will be too noisy or too detailed. You refine them by:  
 
@@ -82,7 +82,7 @@ Reconstruction is iterative. Early models will be too noisy or too detailed. You
 
 Often, you’ll discover that some “logical” component is actually scattered across multiple services or that a supposedly isolated subsystem leaks dependencies everywhere. Those insights are exactly why you reconstruct.
 
-#### Analysis
+##### Analysis
 
 Once you have usable models, you can analyze them for:  
 
@@ -119,7 +119,7 @@ Not all deviations are bad. Sometimes the system has evolved in a sensible direc
 
 A typical conformance process looks like this.
 
-#### Define and Clarify the Intended Architecture
+##### Define and Clarify the Intended Architecture
 
 You begin by capturing the intended architecture in a form that’s precise enough to compare:  
 
@@ -129,7 +129,7 @@ You begin by capturing the intended architecture in a form that’s precise enou
 
 For legacy systems, this step may require interviews, archival research, and making explicit decisions about what you *now* consider “intended.”
 
-#### Compare Models
+##### Compare Models
 
 You then compare the reconstructed models with the intended rules:  
 
@@ -139,7 +139,7 @@ You then compare the reconstructed models with the intended rules:
 
 This can be partly automated (rule-based checks on dependency graphs and static analysis) and partly manual (reviewing critical flows against intended patterns).
 
-#### Assess Impact and Decide Actions
+##### Assess Impact and Decide Actions
 
 Not every violation deserves the same treatment. For each deviation, you ask:  
 
@@ -239,7 +239,7 @@ Together, they turn legacy and evolving systems into understandable, governable 
 
 ## Recommended Reading
 
-#### Books
+##### Books
 
 * Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
   * **Chapter 20: Architecture Reconstruction and Conformance**\

@@ -57,6 +57,7 @@ goldmark
 handwave
 Hardzeenka
 HDFS
+heatmaps
 Hohpe
 Hortonworks
 hotspot
