@@ -1,7 +1,7 @@
 ---
 weight: 410
 title: "Team"
-description: "This article explains what a team should look like."
+description: "This article explains what constitutes a high-performing team, exploring key attributes like common purpose, complementary skills, and mutual accountability. Learn about different team types, the stages of team building, and how Agile frameworks like Kanban and Scrum foster effective collaboration and continuous delivery."
 icon: "article"
 date: "2024-10-01T16:42:31+02:00"
 lastmod: "2024-10-01T16:42:31+02:00"

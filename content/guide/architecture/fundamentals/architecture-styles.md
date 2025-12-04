@@ -1,7 +1,7 @@
 ---
 weight: 40
 title: "Architecture Styles"
-description: "This article explains the different types of architectures and how to apply them."
+description: "This article explains various software architecture styles, categorized into monolithic and distributed systems. Learn about the characteristics, trade-offs, and use cases of styles like Layered, Microservices, and Event-Driven architecture to choose the right approach for your project."
 icon: "school"
 date: "2024-09-11T08:34:50+02:00"
 lastmod: "2024-09-11T08:34:50+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 13
 title: "Frequently Asked Questions"
-description: "This article addresses frequently asked questions."
+description: "This article addresses frequently asked questions about software architecture, categorized for developers, architects, and managers. Find answers on topics ranging from architectural principles and styles to communication, modeling, and career development."
 icon: "article"
 date: "2024-09-08T10:40:16+02:00"
 lastmod: "2024-09-08T10:40:16+02:00"
@@ -12,33 +12,31 @@ toc: true
 
 ##### What is a software architecture, and why does it matter in development?  
 
-Software architecture defines a system's fundamental structure, guiding its scalability, maintainability, and performance. A well-designed architecture ensures that software can evolve effectively over time.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding-architecture/" %}}).  
 
 ##### What are architecture characteristics, and how do they impact development?  
 
-Architecture characteristics, such as scalability, security, and performance, define the system's non-functional attributes. These characteristics influence critical design decisions and impact how a system meets business and technical goals.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture-characteristics/" %}}).  
 
 ##### What are the main software architecture styles, and how do they affect design?  
 
-Different architecture styles, such as microservices, monoliths, and event-driven systems, shape how applications are structured and how components interact. Choosing the right style affects scalability, maintainability, and development speed.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
+Architecture styles like monoliths, microservices, and event-driven systems, shape how applications are structured and how components interact. Choosing the right style affects scalability, maintainability, and development speed.  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture-styles/" %}}).  
 
 ##### How can visualizing architecture help me understand system components better?  
 
 Visualization techniques like diagrams and modeling help developers and architects understand system structure, dependencies, and workflows, making it easier to communicate design decisions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing-architecture/" %}}).  
 
 ##### How does the architecture process support the development lifecycle?  
 
 The architecture process ensures that design decisions align with business goals and technical requirements, providing a structured approach to system evolution, risk management, and quality assurance.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture-process/" %}}).  
 
 ##### What does good architecture documentation look like for developers?  
 
 Clear and structured architecture documentation helps developers understand design decisions, constraints, and system behavior, improving collaboration and maintainability.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample-architecture/" %}}).  
 
 ##### How can I work better with my team to deliver software?  
 
@@ -73,7 +71,7 @@ For more information, explore [Organization -> Goals]({{% relref "/guide/organiz
 ##### What does a software architect do, and how does it affect me?  
 
 A software architect defines technical direction, ensures system integrity, and bridges development efforts with business goals, impacting the entire software lifecycle.  
-For more information, explore [Role -> Overview]({{% relref "/guide/role/overview/" %}}).  
+For more information, explore [Role -> Overview]({{% relref "/guide/role/role-overview/" %}}).  
 
 ##### What types of architects are there, and how do they affect my role?  
 
@@ -93,7 +91,7 @@ For more information, explore [Competencies]({{% relref "/guide/competencies/" %
 ##### How does modeling help me to design systems?  
 
 Modeling allows architects to represent systems visually, aiding in understanding, decision-making, and communicating design choices with stakeholders.  
-For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/overview/" %}}).  
+For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/modeling-overview/" %}}).  
 
 ##### Which framework should I choose to describe my design?  
 
@@ -138,39 +136,119 @@ For more information, explore [Competencies -> Communication -> Remote]({{% relr
 ##### How can I collaborate with team members from different cultures?  
 
 Cross-cultural collaboration benefits from awareness of different communication styles and cultural sensitivity and fostering an inclusive team environment.  
-For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi_culture/" %}}).  
+For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi-culture/" %}}).  
 
 ## For Architects
 
 ##### What are the key principles of software architecture?  
 
 Software architecture is built on modularity, scalability, maintainability, and flexibility, ensuring that systems are structured for long-term success.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding-architecture/" %}}).  
 
 ##### How can architects prioritize architectural characteristics effectively?  
 
 Prioritizing scalability, security, and performance requires understanding business needs, system constraints, and trade-offs between quality attributes.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture-characteristics/" %}}).  
 
 ##### How do different architecture styles address system requirements?  
 
 Architecture styles like monoliths, microservices, and event-driven designs influence system behavior, performance, and maintainability, each suited to different application needs.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture-styles/" %}}).  
 
 ##### What are the best practices for visualizing software architecture?  
 
 Effective visualization includes using diagrams, flowcharts, and modeling languages to clearly communicate system design, dependencies, and interactions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing-architecture/" %}}).  
 
 ##### What are the steps to defining good architecture?  
 
 A solid architecture process includes requirement analysis, choosing the proper architectural patterns, evaluating trade-offs, and continuously refining designs based on feedback.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture-process/" %}}).  
 
 ##### How should architecture be structured?  
 
 Good architecture consists of clear documentation, well-defined system components, and an approach that balances flexibility, scalability, and maintainability.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample-architecture/" %}}).  
+
+##### What is coupling in software architecture?  
+
+For more information, explore [Architecture -> Coupling -> Overview]({{% relref "/guide/architecture/coupling/overview/" %}}).  
+
+##### How to apply Domain-Driven Design in Software Architecture?  
+
+For more information, explore [Architecture -> Domains -> Overview]({{% relref "/guide/architecture/domains/overview/" %}}).  
+
+##### What are architecture characteristics?  
+
+For more information, explore [Architecture -> Characteristics -> Overview]({{% relref "/guide/architecture/characteristics/overview/" %}}).  
+
+##### What are the different software architecture styles?  
+
+For more information, explore [Architecture -> Styles -> Overview]({{% relref "/guide/architecture/styles/overview/" %}}).  
+
+##### What is facilitation in software architecture?  
+
+For more information, explore [Competencies -> Facilitation -> Overview]({{% relref "/guide/competencies/facilitation/facilitation-overview/" %}}).  
+
+##### What are the fundamentals of leadership in software architecture?  
+
+For more information, explore [Competencies -> Leadership -> Overview]({{% relref "/guide/competencies/leadership/leadership-overview/" %}}).  
+
+##### What are the fundamentals of management in software architecture?  
+
+For more information, explore [Competencies -> Management -> Overview]({{% relref "/guide/competencies/management/management-overview/" %}}).  
+
+##### What is the 4+1 Architectural View Model?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> 4+1]({{% relref "/guide/competencies/modeling/frameworks/4-plus-1/" %}}).  
+
+##### What is the C4 Model for visualizing software architecture?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> C4 Model]({{% relref "/guide/competencies/modeling/frameworks/c4-model/" %}}).  
+
+##### What is the TOGAF Architectural Framework?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> TOGAF]({{% relref "/guide/competencies/modeling/frameworks/togaf/" %}}).  
+
+##### What is the Viewpoints and Perspectives Architectural Framework?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> Viewpoints and Perspectives]({{% relref "/guide/competencies/modeling/frameworks/viewpoints-and-perspectives/" %}}).  
+
+##### What is Archimate?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Archimate]({{% relref "/guide/competencies/modeling/notations/archimate/" %}}).  
+
+##### What is C4 Notation?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> C4 Notation]({{% relref "/guide/competencies/modeling/notations/c4-notation/" %}}).  
+
+##### What is Event Storming?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Event Storming]({{% relref "/guide/competencies/modeling/notations/event-storming/" %}}).  
+
+##### What is a Flowchart?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Flowchart]({{% relref "/guide/competencies/modeling/notations/flowchart/" %}}).  
+
+##### What is UML (Unified Modeling Language)?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> UML]({{% relref "/guide/competencies/modeling/notations/uml/" %}}).  
+
+##### What are the architectural concepts for web applications?  
+
+For more information, explore [Specializations -> Applications -> Overview]({{% relref "/guide/specializations/applications/overview/" %}}).  
+
+##### What are the architectural principles for structuring and leveraging data?  
+
+For more information, explore [Specializations -> Data -> Overview]({{% relref "/guide/specializations/data/overview/" %}}).  
+
+##### What are the foundational principles for building software effectively?  
+
+For more information, explore [Specializations -> Foundation -> Overview]({{% relref "/guide/specializations/foundation/overview/" %}}).  
+
+##### What are the architectural principles for hosting platforms?  
+
+For more information, explore [Specializations -> Platform -> Overview]({{% relref "/guide/specializations/platform/overview/" %}}).  
 
 ##### How can architects and developers collaborate better?  
 
@@ -205,7 +283,7 @@ For more information, explore [Organization -> Goals]({{% relref "/guide/organiz
 ##### What are the responsibilities and expectations of software architects?  
 
 Software architects are responsible for defining system structure, making high-level technical decisions, and ensuring architectural consistency across teams.  
-For more information, explore [Role -> Overview]({{% relref "/guide/role/overview/" %}}).  
+For more information, explore [Role -> Overview]({{% relref "/guide/role/role-overview/" %}}).  
 
 ##### What are the main types of architects?  
 
@@ -225,7 +303,7 @@ For more information, explore [Competencies]({{% relref "/guide/competencies/" %
 ##### How can I model systems effectively?  
 
 Effective system modeling uses appropriate frameworks and notations to represent system components, relationships, and interactions visually.  
-For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/overview/" %}}).  
+For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/modeling-overview/" %}}).  
 
 ##### Which architecture framework to choose?  
 
@@ -270,39 +348,39 @@ For more information, explore [Competencies -> Communication -> Remote]({{% relr
 ##### How should I communicate in a multicultural environment?  
 
 Successful cross-cultural communication involves understanding different perspectives, adapting communication styles, and fostering an inclusive collaboration environment.  
-For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi_culture/" %}}).  
+For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi-culture/" %}}).  
 
 ## For Managers
 
 ##### Why is architecture important?  
 
 Architecture provides a structured approach to designing scalable, maintainable, and efficient systems that meet business and technical requirements.  
-For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}}).  
+For more information, explore [Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding-architecture/" %}}).  
 
 ##### Why do architectural characteristics matter for business goals?  
 
 Architecture characteristics such as performance, security, and scalability directly impact business success by ensuring systems meet operational and strategic needs.  
-For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture_characteristics/" %}}).  
+For more information, explore [Fundamentals -> Architecture Characteristics]({{% relref "/guide/architecture/fundamentals/architecture-characteristics/" %}}).  
 
 ##### How should architecture styles align with business needs?  
 
 Choosing the right architecture style ensures system design supports business objectives, balancing flexibility, cost, and performance requirements.  
-For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture_styles/" %}}).  
+For more information, explore [Fundamentals -> Architecture Styles]({{% relref "/guide/architecture/fundamentals/architecture-styles/" %}}).  
 
 ##### Why is visualizing architecture helpful for teams?  
 
 Visual representations improve collaboration, making it easier for teams to understand system components, dependencies, and interactions.  
-For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing_architecture/" %}}).  
+For more information, explore [Fundamentals -> Visualizing Architecture]({{% relref "/guide/architecture/fundamentals/visualizing-architecture/" %}}).  
 
 ##### How does engaging stakeholders improve architecture outcomes?  
 
 Involving stakeholders ensures architecture decisions align with business goals, reducing risks and increasing team adoption.  
-For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture_process/" %}}).  
+For more information, explore [Fundamentals -> Architecture Process]({{% relref "/guide/architecture/fundamentals/architecture-process/" %}}).  
 
 ##### What should architecture documentation include?  
 
 Good documentation captures key design decisions, system components, dependencies, and trade-offs, making it easier for teams to build and maintain software.  
-For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample_architecture/" %}}).  
+For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample-architecture/" %}}).  
 
 ##### What makes a team?  
 
@@ -337,7 +415,7 @@ For more information, explore [Organization -> Goals]({{% relref "/guide/organiz
 ##### How does an architect's role fit into the team structure?  
 
 Architects provide technical leadership, ensuring that design decisions align with business goals while supporting engineering teams in execution.  
-For more information, explore [Role -> Overview]({{% relref "/guide/role/overview/" %}}).  
+For more information, explore [Role -> Overview]({{% relref "/guide/role/role-overview/" %}}).  
 
 ##### What architects do I need?  
 
@@ -357,7 +435,7 @@ For more information, explore [Competencies]({{% relref "/guide/competencies/" %
 ##### How does modeling help?  
 
 Modeling enables teams to visualize system design, identify potential issues early, and maintain consistency in architecture decision-making.  
-For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/overview/" %}}).  
+For more information, explore [Competencies -> Modeling -> Overview]({{% relref "/guide/competencies/modeling/modeling-overview/" %}}).  
 
 ##### How can frameworks improve team collaboration?  
 
@@ -402,4 +480,8 @@ For more information, explore [Competencies -> Communication -> Remote]({{% relr
 ##### How can I lead a multicultural team effectively?  
 
 Leading multicultural teams requires cultural awareness, adaptability, and inclusive communication strategies to foster a collaborative work environment.  
-For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi_culture/" %}}).  
+For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi-culture/" %}}).  
+
+##### What are value streams and how do they impact software delivery?  
+
+For more information, explore [Organization -> Value Streams]({{% relref "/guide/organization/value-streams/" %}}).  

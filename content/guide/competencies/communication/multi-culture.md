@@ -1,7 +1,7 @@
 ---
 weight: 1270
 title: "Multi Culture"
-description: "This article examines the nuances of multi-cultural communication and its key components."
+description: "This article explains the nuances of multi-cultural communication, exploring key dimensions like low-context vs. high-context communication, direct vs. indirect feedback, and task-based vs. relationship-based trust. Learn how to navigate cultural differences using the Culture Map for effective global collaboration."
 icon: "article"
 date: "2024-12-01T11:37:10+01:00"
 lastmod: "2024-12-01T11:37:10+01:00"

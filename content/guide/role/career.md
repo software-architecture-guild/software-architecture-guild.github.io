@@ -1,7 +1,7 @@
 ---
 weight: 590
 title: "Career"
-description: "This article explores how to develop a career path as a Software Architect."
+description: "This article explores how to develop a career path as a software architect, detailing the transition from developer to architect, various growth tracks, and the importance of self-evolution. Learn about essential technical and soft skills, continuous learning strategies, and how to avoid common pitfalls for long-term success."
 icon: "article"
 date: "2024-10-27T15:41:57+01:00"
 lastmod: "2024-10-27T15:41:57+01:00"

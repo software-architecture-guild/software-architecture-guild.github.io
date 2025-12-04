@@ -1,7 +1,7 @@
 ---
 weight: 415
 title: "Value Streams"
-description: "A practical guide to what value streams are, how to identify them, and how to organize teams and architecture around them."
+description: "This article provides a practical guide to value streams, explaining what they are, how to identify them, and how to organize teams and architecture around them. Learn about the four flow items, measuring flow, and the architectural impact of value stream boundaries for optimal software delivery."
 icon: "article"
 date: "2024-10-01T16:42:31+02:00"
 lastmod: "2025-11-01T10:00:00+02:00"

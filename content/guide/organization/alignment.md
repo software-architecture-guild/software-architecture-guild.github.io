@@ -1,7 +1,7 @@
 ---
 weight: 450
 title: "Alignment"
-description: "This article explores organizational alignment and how organizations can collaborate effectively."
+description: "This article explores organizational alignment through the 'Team of Teams' model, detailing how organizations can collaborate effectively in complex environments. Learn about shared consciousness, decentralized execution, and enabling leadership to foster agility and resilience."
 icon: "article"
 date: "2024-12-02T16:48:43+02:00"
 lastmod: "2024-12-02T16:48:43+02:00"
