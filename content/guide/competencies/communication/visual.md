@@ -1,7 +1,7 @@
 ---
 weight: 1210
 title: "Visual"
-description: "This article outlines the principles and antipatterns for creating effective visualizations (diagrams)."
+description: "This article explains the principles and antipatterns for creating effective visual communication, focusing on diagrams and illustrations. Learn how to simplify complexity, align stakeholders, and improve decision-making through clear, purposeful, and audience-specific visuals."
 icon: "article"
 date: "2024-11-30T18:15:36+01:00"
 lastmod: "2024-11-30T18:15:36+01:00"

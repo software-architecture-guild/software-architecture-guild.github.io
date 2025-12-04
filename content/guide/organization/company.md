@@ -1,7 +1,7 @@
 ---
 weight: 440
 title: "Company"
-description: "This article explains what an enterprise should look like."
+description: "This article explains company structure, business functions, and execution levels within an enterprise. Learn how to design effective organizational structures, manage core business functions like value creation and marketing, and align strategic, tactical, and operational activities for success."
 icon: "article"
 date: "2024-10-01T16:48:43+02:00"
 lastmod: "2024-10-01T16:48:43+02:00"

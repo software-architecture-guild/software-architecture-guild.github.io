@@ -1,7 +1,7 @@
 ---
 weight: 430
 title: "Product"
-description: "This article explains what a product development should look like."
+description: "This article explains the product development process, focusing on achieving product-market fit through lean principles. Learn about the Product-Market Fit Pyramid, the lean product process, and how to build and optimize products using Agile methodologies and data-driven insights."
 icon: "article"
 date: "2024-10-01T16:48:35+02:00"
 lastmod: "2024-10-01T16:48:35+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 1145
 title: "TOGAF"
-description: "This article provides an overview of the TOGAF Architectural Framework."
+description: "This article provides an overview of the TOGAF Architectural Framework, a comprehensive methodology for developing, governing, and maintaining enterprise architecture. Learn about its core components, including the Architecture Development Method (ADM), Content Framework, and Capability Framework, and how they align IT with business goals."
 icon: "article"
 date: "2025-06-11T07:51:12+02:00"
 lastmod: "2025-06-11T07:51:12+02:00"

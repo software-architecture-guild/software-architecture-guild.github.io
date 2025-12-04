@@ -14,7 +14,7 @@ authors:
 draft: false
 ---
 
-**This blog explores themes covered in *[Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding_architecture/" %}})* in our Guide.**
+**This blog explores themes covered in *[Fundamentals -> Understanding Architecture]({{% relref "/guide/architecture/fundamentals/understanding-architecture/" %}})* in our Guide.**
 
 ## Construction vs Software Engineering
 

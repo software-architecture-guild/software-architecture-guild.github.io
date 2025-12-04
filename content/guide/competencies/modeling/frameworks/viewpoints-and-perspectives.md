@@ -1,7 +1,7 @@
 ---
 weight: 1135
 title: "Viewpoints and Perspectives"
-description: "This article provides an overview of Viewpoints and Perspectives Architectural Framework."
+description: "This article provides an overview of the Viewpoints and Perspectives Architectural Framework, a structured approach for capturing and representing software architecture. Learn how viewpoints guide the creation of specific views and how perspectives ensure the architecture meets desired quality requirements like security, performance, and scalability."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

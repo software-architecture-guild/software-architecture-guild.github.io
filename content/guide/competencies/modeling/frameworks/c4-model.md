@@ -1,7 +1,7 @@
 ---
 weight: 1130
 title: "C4 Model"
-description: "This article provides an overview of the C4 Model as an Architectural Framework."
+description: "This article provides an overview of the C4 Model, a hierarchical framework for visualizing software architecture at different levels of abstraction. Learn about its core diagrams—Context, Container, Component, and Code—and how they simplify complex systems for diverse stakeholders."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

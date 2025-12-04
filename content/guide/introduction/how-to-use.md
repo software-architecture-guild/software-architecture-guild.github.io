@@ -1,7 +1,7 @@
 ---
 weight: 12
 title: "How to use this Guide"
-description: "This article explains who should use this guide and how to use it effectively."
+description: "This article explains who should use this Software Architecture Guide and how to navigate its content effectively. Learn how developers, new architects, seasoned architects, and managers can utilize this collaborative resource to master architectural skills and concepts."
 icon: "article"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

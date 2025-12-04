@@ -1,7 +1,7 @@
 ---
 weight: 1140
 title: "4+1"
-description: "This article provides an overview of the 4+1 Architectural Framework."
+description: "This article provides an overview of the 4+1 Architectural View Model, a conceptual framework for describing software architecture from multiple perspectives. Learn about its five interrelated views: Logical, Process, Development, Physical, and Scenarios, and how they address diverse stakeholder concerns."
 icon: "article"
 date: "2025-06-11T07:51:23+02:00"
 lastmod: "2025-06-11T07:51:23+02:00"

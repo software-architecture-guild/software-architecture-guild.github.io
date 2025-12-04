@@ -1,7 +1,7 @@
 ---
 weight: 30
 title: "Understanding Architecture"
-description: "This article will help you to develop a foundational understanding of Architecture and its distinction from design."
+description: "This article explains software architecture, its core principles, and its distinction from design. Learn how strategic decisions, architectural characteristics, and key concepts like modularity and component-based thinking contribute to building robust, scalable, and adaptable systems."
 icon: "article"
 date: "2024-09-11T08:34:36+02:00"
 lastmod: "2024-09-11T08:34:36+02:00"
