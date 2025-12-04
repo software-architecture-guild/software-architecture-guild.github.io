@@ -170,6 +170,86 @@ For more information, explore [Fundamentals -> Architecture Process]({{% relref 
 Good architecture consists of clear documentation, well-defined system components, and an approach that balances flexibility, scalability, and maintainability.  
 For more information, explore [Fundamentals -> Sample Architecture]({{% relref "/guide/architecture/fundamentals/sample-architecture/" %}}).  
 
+##### What is coupling in software architecture?  
+
+For more information, explore [Architecture -> Coupling -> Overview]({{% relref "/guide/architecture/coupling/overview/" %}}).  
+
+##### How to apply Domain-Driven Design in Software Architecture?  
+
+For more information, explore [Architecture -> Domains -> Overview]({{% relref "/guide/architecture/domains/overview/" %}}).  
+
+##### What are architecture characteristics?  
+
+For more information, explore [Architecture -> Characteristics -> Overview]({{% relref "/guide/architecture/characteristics/overview/" %}}).  
+
+##### What are the different software architecture styles?  
+
+For more information, explore [Architecture -> Styles -> Overview]({{% relref "/guide/architecture/styles/overview/" %}}).  
+
+##### What is facilitation in software architecture?  
+
+For more information, explore [Competencies -> Facilitation -> Overview]({{% relref "/guide/competencies/facilitation/facilitation-overview/" %}}).  
+
+##### What are the fundamentals of leadership in software architecture?  
+
+For more information, explore [Competencies -> Leadership -> Overview]({{% relref "/guide/competencies/leadership/leadership-overview/" %}}).  
+
+##### What are the fundamentals of management in software architecture?  
+
+For more information, explore [Competencies -> Management -> Overview]({{% relref "/guide/competencies/management/management-overview/" %}}).  
+
+##### What is the 4+1 Architectural View Model?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> 4+1]({{% relref "/guide/competencies/modeling/frameworks/4-plus-1/" %}}).  
+
+##### What is the C4 Model for visualizing software architecture?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> C4 Model]({{% relref "/guide/competencies/modeling/frameworks/c4-model/" %}}).  
+
+##### What is the TOGAF Architectural Framework?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> TOGAF]({{% relref "/guide/competencies/modeling/frameworks/togaf/" %}}).  
+
+##### What is the Viewpoints and Perspectives Architectural Framework?  
+
+For more information, explore [Competencies -> Modeling -> Frameworks -> Viewpoints and Perspectives]({{% relref "/guide/competencies/modeling/frameworks/viewpoints-and-perspectives/" %}}).  
+
+##### What is Archimate?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Archimate]({{% relref "/guide/competencies/modeling/notations/archimate/" %}}).  
+
+##### What is C4 Notation?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> C4 Notation]({{% relref "/guide/competencies/modeling/notations/c4-notation/" %}}).  
+
+##### What is Event Storming?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Event Storming]({{% relref "/guide/competencies/modeling/notations/event-storming/" %}}).  
+
+##### What is a Flowchart?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> Flowchart]({{% relref "/guide/competencies/modeling/notations/flowchart/" %}}).  
+
+##### What is UML (Unified Modeling Language)?  
+
+For more information, explore [Competencies -> Modeling -> Notations -> UML]({{% relref "/guide/competencies/modeling/notations/uml/" %}}).  
+
+##### What are the architectural concepts for web applications?  
+
+For more information, explore [Specializations -> Applications -> Overview]({{% relref "/guide/specializations/applications/overview/" %}}).  
+
+##### What are the architectural principles for structuring and leveraging data?  
+
+For more information, explore [Specializations -> Data -> Overview]({{% relref "/guide/specializations/data/overview/" %}}).  
+
+##### What are the foundational principles for building software effectively?  
+
+For more information, explore [Specializations -> Foundation -> Overview]({{% relref "/guide/specializations/foundation/overview/" %}}).  
+
+##### What are the architectural principles for hosting platforms?  
+
+For more information, explore [Specializations -> Platform -> Overview]({{% relref "/guide/specializations/platform/overview/" %}}).  
+
 ##### How can architects and developers collaborate better?  
 
 Strong collaboration requires open communication, shared design principles, and alignment on technical decisions to ensure software meets functional and non-functional requirements.  
@@ -401,3 +481,7 @@ For more information, explore [Competencies -> Communication -> Remote]({{% relr
 
 Leading multicultural teams requires cultural awareness, adaptability, and inclusive communication strategies to foster a collaborative work environment.  
 For more information, explore [Competencies -> Communication -> Multi Culture]({{% relref "/guide/competencies/communication/multi-culture/" %}}).  
+
+##### What are value streams and how do they impact software delivery?  
+
+For more information, explore [Organization -> Value Streams]({{% relref "/guide/organization/value-streams/" %}}).  
