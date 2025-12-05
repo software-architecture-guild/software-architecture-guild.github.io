@@ -103,3 +103,22 @@
 body h2 {color: #3a82b2 !important}
 body h3, h4 { color: #375f8b !important}
 body h5, h6 { color: #477797 !important}
+
+.custom-blockquote {
+    background-color: rgba($primary, 0.1); /* Light blue background */
+    border-left: 5px solid $primary; /* Blue left border for emphasis */
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0; /* Adds spacing around the blockquote */
+}
+
+.custom-blockquote p {
+    margin-top: 0; /* Prevents extra top space */
+    margin-bottom: 0.5rem; /* Keeps paragraph spacing */
+}
+
+.custom-blockquote p:last-child {
+    margin-bottom: 0; /* Removes bottom margin from last paragraph */
+}

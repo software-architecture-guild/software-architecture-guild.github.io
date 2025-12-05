@@ -6,6 +6,7 @@ Archi
 archimate
 Architecting
 Asana
+Brandolini
 BSUIR
 CCPA
 CEDP
@@ -16,6 +17,7 @@ colinwilson
 Datastage
 decisioning
 Doerr
+downstreams
 Eoin
 Excalidraw
 Fastly
@@ -40,15 +42,20 @@ Katas
 Katzenbach
 Kazman
 Kersten
+Khononov
 Kiplinger
 Kruchten
 Larman
 lastmod
+Leanpub
 Leffingwell
+lifecycles
 lotusdocs
 Lucidchart
 markdownlint
+metaprogramming
 Microkernel
+Millett
 Misaligning
 MTBF
 Norming
@@ -71,6 +78,7 @@ Rozanski
 runbooks
 Schwaber
 Silverman
+skillset
 Smartsheet
 solutioning
 Sommerville
@@ -105,5 +113,6 @@ webp
 whiteboarding
 Wiegers
 wireframes
+Wrox
 Yoder
 Zubchenko
