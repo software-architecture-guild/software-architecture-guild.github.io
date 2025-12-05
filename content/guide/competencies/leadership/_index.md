@@ -1,5 +1,5 @@
 ---
-weight: 1400
+weight: 1500
 title: "Leadership"
 description: "This section explains how to drive initiatives, set goals, and develop strategies to inspire teams and achieve impactful outcomes. Learn essential leadership qualities, from vision setting and decision-making to fostering innovation and empowering team members."
 icon: "keyboard_double_arrow_up"

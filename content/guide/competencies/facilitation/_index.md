@@ -1,5 +1,5 @@
 ---
-weight: 1300
+weight: 1400
 title: "Facilitation"
 description: "This section explains the process of facilitation, detailing its role in guiding discussions, fostering collaboration, and achieving desired outcomes. Learn essential techniques for effective meetings, workshops, and group interactions."
 icon: "groups"
