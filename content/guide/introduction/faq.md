@@ -180,7 +180,7 @@ For more information, explore [Architecture -> Domains -> Overview]({{% relref "
 
 ##### What are architecture characteristics?  
 
-For more information, explore [Architecture -> Characteristics -> Overview]({{% relref "/guide/architecture/characteristics/overview/" %}}).  
+For more information, explore [Architecture -> Characteristics -> Overview]({{% relref "/guide/architecture/characteristics/what-is-an-architecture-characteristic.md" %}}).  
 
 ##### What are the different software architecture styles?  
 

@@ -6,6 +6,7 @@ Archi
 archimate
 Architecting
 Asana
+autoscale
 BSUIR
 CCPA
 CEDP
@@ -15,7 +16,9 @@ Cognos
 colinwilson
 Datastage
 decisioning
+Diagnosability
 Doerr
+endline
 Eoin
 Excalidraw
 Fastly
@@ -23,6 +26,7 @@ flexsearch
 Foote
 functionals
 Fussell
+gatekeeping
 Gause
 gohugoio
 goldmark
@@ -50,7 +54,9 @@ Lucidchart
 markdownlint
 Microkernel
 Misaligning
+misprioritized
 MTBF
+MTTR
 Norming
 Oleg
 OLTP
@@ -63,9 +69,13 @@ parallelizable
 Pereira
 Profitero
 psychographic
+pytest
+Qube
 Radioelectronics
+rebalance
 rebalances
 relref
+replaceability
 roadmaps
 Rozanski
 runbooks
