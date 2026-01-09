@@ -184,7 +184,7 @@ For more information, explore [Architecture -> Characteristics -> Overview]({{% 
 
 ##### What are the different software architecture styles?  
 
-For more information, explore [Architecture -> Styles -> Overview]({{% relref "/guide/architecture/styles/overview/" %}}).  
+For more information, explore [Architecture -> Styles -> Foundations]({{% relref "/guide/architecture/styles/foundations/" %}}).  
 
 ##### What is facilitation in software architecture?  
 
