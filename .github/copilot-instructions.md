@@ -6,7 +6,7 @@ Hugo-based static website dedicated to sharing software architecture knowledge. 
 
 ## Repository Structure
 
-```
+```bash
 software-architecture-guild.github.io/
 ├── content/
 │   ├── _index.md (homepage)
@@ -41,19 +41,21 @@ software-architecture-guild.github.io/
 ### Guide Section
 
 Structured learning content organized by topic domains:
+
 - Architecture fundamentals and decision-making
 - Competencies (modeling, communication, collaboration)
 - Advanced topics (domain-driven design, organizational patterns)
 
 **Style:** Practical, hands-on resource. Each article serves as an educational roadmap. Not just tips, but structured approaches to concepts, tools, and skills.
 
-**Voice:** See [instructions.md](instructions.md) — Ilya's style: conversational, direct, mentor-to-peer, concise and skimmable.
+**Voice:** See [instructions.md](../instructions.md) — Ilya's style: conversational, direct, mentor-to-peer, concise and skimmable.
 
 ### Blog Section
 
 Space for sharing thoughts, discussing ideas, expressing perspectives on software architecture.
 
 **Content Types:**
+
 - Emerging technology explorations
 - Best practices debates
 - Industry trend reflections
@@ -63,7 +65,7 @@ Space for sharing thoughts, discussing ideas, expressing perspectives on softwar
 
 ## Article Structure (Guide)
 
-Follow [instructions.md](instructions.md) for detailed formatting, but core pattern:
+Follow [instructions.md](../instructions.md) for detailed formatting, but core pattern:
 
 1. **Title** — one-sentence payoff/summary
 2. **What is X?** — 1–2 paragraphs, technology-neutral
@@ -71,7 +73,7 @@ Follow [instructions.md](instructions.md) for detailed formatting, but core patt
 4. **How to do it** — 5–10 bullets with quality attributes or risks tied to each
 5. **Examples / Pitfalls** — 3 items max, each with concrete pass and why it works
 6. **Conclusion** — 3–5 bullet takeaways
-7. **Recommended Reading** — see format in [instructions.md](instructions.md)
+7. **Recommended Reading** — see format in [instructions.md](../instructions.md)
 
 **Length:** Aim for 700–1,100 words. Prioritize clarity over coverage.
 
@@ -86,6 +88,7 @@ Follow [instructions.md](instructions.md) for detailed formatting, but core patt
 ## Images
 
 Stored in `images/` organized by category:
+
 - `architecture/` — Architecture diagrams, decision trees, patterns
 - `authors/` — Profile photos
 - `blog/` — Article-specific images
@@ -127,9 +130,10 @@ hugo build                 # Generate static site in public/
 
 ## Contributing Guidelines
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed process. High-level:
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed process. High-level:
+
 - Propose new topics or major changes before writing
-- Follow Ilya's style guide ([instructions.md](instructions.md))
+- Follow Ilya's style guide ([instructions.md](../instructions.md))
 - Link to source materials and related articles
 - Include examples that are testable/observable when possible
 - Use consistent terminology and cross-link
