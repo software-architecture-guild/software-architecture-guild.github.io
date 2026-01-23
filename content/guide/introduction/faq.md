@@ -176,7 +176,7 @@ For more information, explore [Architecture -> Coupling -> Overview]({{% relref 
 
 ##### How to apply Domain-Driven Design in Software Architecture?  
 
-For more information, explore [Architecture -> Domains -> Overview]({{% relref "/guide/architecture/domains/overview/" %}}).  
+For more information, explore [Architecture -> Domains -> Overview]({{% relref "/guide/architecture/domains/" %}}).  
 
 ##### What are architecture characteristics?  
 
