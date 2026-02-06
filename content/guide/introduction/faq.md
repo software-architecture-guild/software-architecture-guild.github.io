@@ -172,7 +172,7 @@ For more information, explore [Fundamentals -> Sample Architecture]({{% relref "
 
 ##### What is coupling in software architecture?  
 
-For more information, explore [Architecture -> Coupling -> Overview]({{% relref "/guide/architecture/coupling/overview/" %}}).  
+For more information, explore [Architecture -> Coupling -> Overview]({{% relref "/guide/architecture/boundaries/" %}}).  
 
 ##### How to apply Domain-Driven Design in Software Architecture?  
 
