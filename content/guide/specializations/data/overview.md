@@ -1,7 +1,7 @@
 ---
 weight: 2300
 title: "Overview"
-description: "This article explains the key architectural principles for structuring and leveraging data, focusing on warehousing, modeling, advanced analytics, and business intelligence."
+description: "This article explains the key architectural principles for structuring and leveraging data, focusing on warehousing, modeling, advanced analytics, and business intelligence. Learn how to design robust data architectures that support data science, machine learning, and data-driven decision-making."
 icon: "article"
 date: "2025-01-19T15:09:06+01:00"
 lastmod: "2025-01-19T15:09:06+01:00"

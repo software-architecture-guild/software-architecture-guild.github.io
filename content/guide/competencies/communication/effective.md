@@ -1,7 +1,7 @@
 ---
 weight: 1240
 title: "Effective"
-description: "This article explores the importance of effective communication and its key components."
+description: "This article explains the importance of effective communication, exploring its key components through the Rhetoric Triangle (ethos, pathos, logos). Learn how to build credibility, engage emotionally, and structure logical arguments for impactful technical and professional communication."
 icon: "article"
 date: "2024-11-30T18:31:00+01:00"
 lastmod: "2024-11-30T18:31:00+01:00"

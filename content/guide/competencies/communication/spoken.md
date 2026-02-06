@@ -1,7 +1,7 @@
 ---
 weight: 1230
 title: "Spoken"
-description: "This article explores the dynamics of verbal and nonverbal communication and their significance."
+description: "This article explains the dynamics of verbal and nonverbal communication, detailing their significance in professional and technical settings. Learn how to align your spoken words with body language, tone, and pace to build trust, engage audiences, and foster effective collaboration."
 icon: "article"
 date: "2024-11-30T18:15:52+01:00"
 lastmod: "2024-11-30T18:15:52+01:00"

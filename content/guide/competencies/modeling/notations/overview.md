@@ -1,7 +1,7 @@
 ---
 weight: 1165
 title: "Overview"
-description: "This article explains how notations complement architectural frameworks and provide tool-choosing guidance."
+description: "This article explains how architectural notations complement frameworks, providing symbolic languages to visualize software systems. Learn about core elements, characteristics of effective notation, and guidance on choosing diagramming tools to simplify complexity and enhance communication."
 icon: "document_scanner"
 date: "2024-09-08T10:39:56+02:00"
 lastmod: "2024-09-08T10:39:56+02:00"

@@ -1,7 +1,7 @@
 ---
 weight: 460
 title: "Goals"
-description: "This article outlines the importance of setting goals for the organization and how they guide success."
+description: "This article outlines the importance of setting business goals for an organization and how they guide success. Learn about various goal-setting frameworks like SMART goals and OKRs, and how to align efforts, foster accountability, and drive measurable outcomes."
 icon: "article"
 date: "2024-12-02T16:48:43+02:00"
 lastmod: "2024-12-02T16:48:43+02:00"

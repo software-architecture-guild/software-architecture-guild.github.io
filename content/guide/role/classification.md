@@ -1,7 +1,7 @@
 ---
 weight: 520
 title: "Classification"
-description: "This article explains the different types of Architects."
+description: "This article explains the different types of software architects, classifying them by scope, specialization, and seniority. Learn about roles like Enterprise, Solution, and System Architects, and specializations in Application, Data, and Platform architecture, along with their career progression."
 icon: "article"
 date: "2024-10-26T11:26:00+02:00"
 lastmod: "2024-10-26T11:26:00+02:00"

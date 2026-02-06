@@ -1,7 +1,7 @@
 ---
 weight: 1250
 title: "Documentation"
-description: "This article discusses the importance of documentation in communication and its key components."
+description: "This article explains the importance of documentation in communication, detailing its key components, principles, and best practices. Learn how effective documentation fosters knowledge sharing, collaboration, and efficiency in technical environments."
 icon: "article"
 date: "2024-11-30T18:16:03+01:00"
 lastmod: "2024-11-30T18:16:03+01:00"

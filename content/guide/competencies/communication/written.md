@@ -1,7 +1,7 @@
 ---
 weight: 1220
 title: "Written"
-description: "This article examines the essentials of written communication and its effective use."
+description: "This article explains the essentials of written communication and its effective use in technical environments. Learn how to create clear, concise, and audience-tailored content, avoiding jargon and structuring information for maximum impact and understanding."
 icon: "article"
 date: "2024-11-30T18:15:44+01:00"
 lastmod: "2024-11-30T18:15:44+01:00"

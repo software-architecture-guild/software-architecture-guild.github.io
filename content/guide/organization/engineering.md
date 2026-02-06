@@ -1,7 +1,7 @@
 ---
 weight: 420
 title: "Engineering"
-description: "This article explains what an engineering organization should look like."
+description: "This article explains how to structure an engineering organization for optimal software delivery, focusing on Conway's Law, Team Topologies, and Agile frameworks like Scrum@Scale, SAFe, LeSS, and Nexus. Learn how to align teams with value streams to enhance agility, collaboration, and efficiency."
 icon: "article"
 date: "2024-09-29T15:46:32+02:00"
 lastmod: "2024-09-29T15:46:32+02:00"
