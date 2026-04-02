@@ -22,6 +22,7 @@ buildable
 bursty
 CCPA
 CEDP
+CODEOWNERS
 chargeback
 Ciceri
 Cockburn

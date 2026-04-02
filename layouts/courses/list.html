@@ -1,0 +1,248 @@
+{{ define "main" }}
+<style>
+  .courses-page .course-card {
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+  }
+
+  .courses-page .course-card-body {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .courses-page .course-header {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .courses-page .course-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .courses-page .course-title {
+    margin: 0;
+  }
+
+  .courses-page .course-price-inline {
+    min-width: 130px;
+    text-align: right;
+  }
+
+  .courses-page .course-price-inline strong {
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+    color: #102c3a;
+  }
+
+  .courses-page .course-cover-wrap {
+    min-height: 230px;
+    max-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: #edf3f7;
+    border-radius: 0.5rem;
+  }
+
+  .courses-page .course-cover {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  .courses-page .course-theme {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8d5f18;
+    background: #f8eedf;
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+  }
+
+  .courses-page .course-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .courses-page .course-points {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+  }
+
+  .courses-page .course-points li {
+    margin-bottom: 0.45rem;
+  }
+
+  .courses-page .course-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .courses-page .course-actions .btn {
+    white-space: nowrap;
+  }
+
+  .courses-page .course-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 991px) {
+    .courses-page .course-heading-row {
+      flex-wrap: wrap;
+    }
+
+    .courses-page .course-price-inline {
+      min-width: 0;
+      text-align: left;
+    }
+
+    .courses-page .course-cover-wrap {
+      min-height: 0;
+      max-height: none;
+    }
+
+    .courses-page .course-cover {
+      max-height: none;
+    }
+
+    .courses-page .course-actions {
+      width: 100%;
+    }
+
+    .courses-page .course-actions .btn {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+
+<section class="d-table w-100 hero courses-page">
+  <div class="content-wrapper mb-4">
+    <aside class="sidebar"></aside>
+
+    <div class="main-content overflow-hidden">
+      <div class="container-xl">
+        <div class="row row-cols-1 mb-3">
+          <h2 class="text-start my-1">{{ .Title }}</h2>
+        </div>
+
+        <div class="row row-cols-1 g-4">
+          {{ range .Params.courses }}
+          <article class="card course-card">
+            <div class="course-card-body">
+              <header class="course-header">
+                <div class="course-heading-row">
+                  <h3 class="h2 course-title">{{ .title }}</h3>
+                  <div class="course-price-inline">
+                    <strong>{{ .price }}</strong>
+                  </div>
+                </div>
+              </header>
+
+              <div class="row g-3 align-items-start">
+                <div class="col-lg-4 col-md-5">
+                  <div class="course-cover-wrap">
+                    <img class="course-cover" src="{{ .image }}" alt="{{ .image_alt }}">
+                  </div>
+                </div>
+
+                <div class="col-lg-8 col-md-7">
+                  <p class="mb-2">{{ .description }}</p>
+                  <p class="mb-2">{{ .audience }}</p>
+
+                  <ul class="course-points">
+                    {{ range .selling_points }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="course-footer">
+                <div class="course-themes">
+                  {{ range .tags }}
+                  <span class="course-theme">{{ . }}</span>
+                  {{ end }}
+                </div>
+
+                <div class="course-actions">
+                  <a
+                    class="btn btn-primary"
+                    href="{{ .base_url }}/"
+                    data-course-link
+                    data-base-url="{{ .base_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer">Get it for {{ .price }}</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar"></aside>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function buildCouponUrl(baseUrl) {
+      if (typeof generateCouponUrl === "function") {
+        return generateCouponUrl(baseUrl);
+      }
+
+      const now = new Date();
+      const month = now.toLocaleString("en-US", { month: "long" }).toUpperCase();
+      const year = now.getFullYear();
+      return `${baseUrl}/?couponCode=${month}_${year}`;
+    }
+
+    const courseLinks = document.querySelectorAll("[data-course-link]");
+    let couponCode = "";
+
+    courseLinks.forEach(function (link) {
+      const baseUrl = link.getAttribute("data-base-url");
+      if (!baseUrl) return;
+
+      const url = buildCouponUrl(baseUrl);
+      link.setAttribute("href", url);
+
+      try {
+        couponCode = new URL(url).searchParams.get("couponCode") || couponCode;
+      } catch (error) {
+        console.warn("Unable to parse generated coupon URL", error);
+      }
+    });
+
+    if (couponCode) {
+      document.querySelectorAll("[data-coupon-code]").forEach(function (node) {
+        node.textContent = couponCode;
+      });
+    }
+  });
+</script>
+{{ end }}
