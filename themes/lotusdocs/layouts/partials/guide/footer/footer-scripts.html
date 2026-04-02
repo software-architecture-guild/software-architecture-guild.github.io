@@ -51,7 +51,7 @@
 
 {{- if not hugo.IsServer }}
     {{- $js := $js | minify | fingerprint "sha384" }}
-    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- else }}
-    <script type="text/javascript" src="{{ $js.Permalink }}" defer></script>
+    <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 {{- end }}

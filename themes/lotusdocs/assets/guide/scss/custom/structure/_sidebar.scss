@@ -542,6 +542,28 @@
     }
 }
 
+.social-link {
+    .linkedin-follow-slot {
+        width: 128px;
+        min-width: 128px;
+    }
+
+    .linkedin-follow-wrap {
+        width: 128px;
+        min-height: 20px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1300px) {
+    .social-link .linkedin-follow-slot {
+        order: -1;
+        margin-right: 4px;
+    }
+}
+
 .sidebar-footer {
     position: absolute;
     background: var(--sidebar-bg);
