@@ -391,16 +391,17 @@
     }
 
     .linkedin-follow-slot {
-        width: 128px;
-        min-width: 128px;
+        width: 160px;
+        min-width: 160px;
     }
 
     .linkedin-follow-wrap {
-        width: 128px;
+        width: 160px;
         min-height: 20px;
         display: flex;
         align-items: center;
-        overflow: hidden;
+        justify-content: flex-end;
+        overflow: visible;
     }
 }
 

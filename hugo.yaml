@@ -28,7 +28,7 @@ menu:
       identifier: guide
       weight: 10
     - name: Blog
-      url: "https://softwarearchitectureguild.substack.com/archive"
+      url: "https://softwarearchitectureguild.substack.com"
       identifier: blog
       weight: 20
     - name: Courses
@@ -47,6 +47,7 @@ pagination:
 params:
   google_fonts:
     - ["Architects Daughter", "400"]
+    - ["Short Stack", "400"]
   footer:
     copyright: '© :YEAR: Software Architecture Guild | Built with [Lotus Docs](https://github.com/colinwilson/lotusdocs) | [Privacy & Cookies Policy](/privacy-policy/) | <a href="#" id="manage-cookies-link">Manage Cookie Preferences</a>'
     version: true # include git commit info in footer
