@@ -44,9 +44,9 @@
             {{ $flexSearch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/flexsearch.bundle.js") }}
             {{- if not hugo.IsServer }}
                 {{ $flexSearch := $flexSearch | minify | fingerprint "sha384" }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}" integrity="{{ $flexSearch.Data.Integrity }}" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="{{ $flexSearch.RelPermalink }}" integrity="{{ $flexSearch.Data.Integrity }}" crossorigin="anonymous"></script>
                 {{ else }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}"></script>
+                <script type="text/javascript" src="{{ $flexSearch.RelPermalink }}"></script>
             {{ end }}
         {{ end }}
     {{ end }}
@@ -100,5 +100,5 @@
     {{- end -}}
     <!-- Google Analytics v4 Config + Cookies Consent -->
     {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $consentJS.Permalink }}" defer></script>
+    <script src="{{ $consentJS.RelPermalink }}" defer></script>
 </head>

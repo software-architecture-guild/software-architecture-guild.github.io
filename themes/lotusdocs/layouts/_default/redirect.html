@@ -10,14 +10,14 @@
         {{ $app := resources.Get "/js/app.js" }}
         {{- if not hugo.IsServer }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" | minify | fingerprint "sha384" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
         {{- else }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
 
   {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-  <script src="{{ $consentJS.Permalink }}"></script>
+  <script src="{{ $consentJS.RelPermalink }}"></script>
   <!-- Trigger redirect after DOM is ready -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
