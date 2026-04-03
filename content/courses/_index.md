@@ -10,7 +10,7 @@ courses:
     tags:
       - "Visual Modeling"
       - "Architecture Skill"
-    base_url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4"
+    base_url: "https://www.udemy.com/course/architecting-software-modeling-viewpoints-c4?utm_source=website"
     image: "/images/courses/modeling-software-architecture-c4.jpg"
     image_alt: "Modeling Software Architecture course cover"
     price: "$12.99"
@@ -29,7 +29,7 @@ courses:
     tags:
       - "Architecture Foundations"
       - "Architecture Process"
-    base_url: "https://www.udemy.com/course/defining-software-architecture-learn-core-theory"
+    base_url: "https://www.udemy.com/course/defining-software-architecture-learn-core-theory?utm_source=website"
     image: "/images/courses/defining-software-architecture-core-theory.jpg"
     image_alt: "Defining Software Architecture course cover"
     price: "$12.99"

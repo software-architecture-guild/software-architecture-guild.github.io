@@ -422,7 +422,7 @@
     <div class="landing-cards">
       
       {{ range $courses }}
-      <a class="landing-card landing-card-course landing-card-link" href="{{ .base_url }}/" data-course-link data-base-url="{{ .base_url }}" target="_blank" rel="noopener noreferrer">
+      <a class="landing-card landing-card-course landing-card-link" href="{{ .base_url }}" data-course-link data-base-url="{{ .base_url }}" target="_blank" rel="noopener noreferrer">
         {{ if .image }}
         <div class="landing-course-media">
           {{ with resources.Get "images/social/Udemy_logo.png" }}
@@ -481,21 +481,11 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    function buildCouponUrl(baseUrl) {
-      if (typeof generateCouponUrl === "function") {
-        return generateCouponUrl(baseUrl);
-      }
-
-      var now = new Date();
-      var month = now.toLocaleString("en-US", { month: "long" }).toUpperCase();
-      var year = now.getFullYear();
-      return baseUrl + "/?couponCode=" + month + "_" + year;
-    }
-
     document.querySelectorAll("[data-course-link]").forEach(function (link) {
       var baseUrl = link.getAttribute("data-base-url");
       if (!baseUrl) return;
-      link.setAttribute("href", buildCouponUrl(baseUrl));
+      var url = typeof generateCouponUrl === "function" ? generateCouponUrl(baseUrl) : baseUrl;
+      link.setAttribute("href", url);
     });
   });
 </script>
