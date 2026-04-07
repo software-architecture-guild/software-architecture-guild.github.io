@@ -25,13 +25,13 @@ courses:
       - "Choose the right modeling framework for the audience and the problem."
       - "Create diagrams that work across engineering and business roles."
       - "Apply C4 and Viewpoints and Perspectives to build an end-to-end model."
-  - title: "Defining Software Architecture: Learn Core Theory"
+  - title: "Introduction to Software Architecture: Learn Core Theory"
     tags:
       - "Architecture Foundations"
       - "Architecture Process"
     base_url: "https://www.udemy.com/course/defining-software-architecture-learn-core-theory?utm_source=website"
     image: "/images/courses/defining-software-architecture-core-theory.jpg"
-    image_alt: "Defining Software Architecture course cover"
+    image_alt: "Introduction to Software Architecture course cover"
     price: "$12.99"
     rating: "3.5"
     rating_count: "1 rating"
@@ -46,4 +46,4 @@ courses:
       - "Document and validate architecture with views, diagrams, and decision records."
 ---
 
-Choose the course that matches your current problem. Start with **Defining Software Architecture** if you need a stronger decision-making foundation. Start with **Modeling Software Architecture** if you already know the fundamentals and want to communicate architecture visually and precisely.
+Choose the course that matches your current problem. Start with **Introduction to Software Architecture** if you need a stronger decision-making foundation. Start with **Modeling Software Architecture** if you already know the fundamentals and want to communicate architecture visually and precisely.
