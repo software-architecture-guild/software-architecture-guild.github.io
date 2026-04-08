@@ -4,14 +4,15 @@
 
 @media (max-width: 991px) {
     .footer-py {
-        padding: 3px 0 !important;
+        min-height: 60px;
+        padding: 1.5rem 0 !important;
     }
 }
 
 
 .footer {
     background: $footer;
-    //position: relative;
+    position: static;
     color: $footer-text;
 
     .footer-py-60 {
@@ -19,7 +20,21 @@
     }
 
     .footer-py {
-        padding: 15px 0;
+        min-height: 60px;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-shell {
+        max-width: 100%;
+        padding-left: clamp(1rem, 4vw, 3.5rem);
+        padding-right: clamp(1rem, 4vw, 3.5rem);
+    }
+
+    .footer-copy {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .logo-footer {
