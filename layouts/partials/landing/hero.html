@@ -1,10 +1,4 @@
 {{ if .Site.Data.landing.hero.enable }}
-{{ $coursesPage := site.GetPage "/courses" }}
-{{ $courses := slice }}
-{{ if and $coursesPage (isset $coursesPage.Params "courses") }}
-  {{ $courses = first 2 $coursesPage.Params.courses }}
-{{ end }}
-
 <section class="landing-rebuild hero">
   <style>
     .landing-rebuild {
@@ -22,6 +16,23 @@
     .landing-head {
       text-align: center;
       max-width: 1600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .landing-skyline-wrap {
+      margin-top: 0.85rem;
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .landing-skyline {
+      width: min(1120px, 100%);
+      height: auto;
+      display: block;
+      opacity: 0.92;
     }
 
     .landing-title {
@@ -38,7 +49,8 @@
     .landing-description {
       margin-top: 0.6rem;
       color: #494949;
-      font-size: 1.3rem;
+      font-family: "Short Stack";
+      font-size: clamp(1rem, 1.44vw, 1.28rem);
       line-height: 1.35;
       max-width: none;
       margin-left: auto;
@@ -84,6 +96,33 @@
     .landing-resource-cards {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       max-width: 1320px;
+    }
+
+    .landing-cta-row {
+      margin-top: 0;
+      width: min(1120px, 100%);
+      display: grid;
+      gap: 0.7rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .landing-cta-block {
+      margin-top: auto;
+      margin-bottom: auto;
+      display: grid;
+      gap: 0.7rem;
+      width: 100%;
+    }
+
+    .landing-cta-heading {
+      margin: 0 auto;
+      color: #494949;
+      font-family: "Short Stack";
+      font-size: clamp(1.7rem, 3.1vw, 2.45rem);
+      line-height: 1.1;
+      text-align: center;
     }
 
     .landing-card {
@@ -230,6 +269,19 @@
       max-width: 34ch;
     }
 
+    .landing-cta-row .landing-card-course-text .landing-course-content {
+      padding: 0.8rem 0.7rem;
+      gap: 0.6rem;
+      align-content: start;
+    }
+
+    .landing-cta-row .landing-card-course-description {
+      font-size: 0.9rem;
+      line-height: 1.28;
+      max-width: 28ch;
+      min-height: 3.84em;
+    }
+
     .landing-card-course h2 {
       font-size: 1.1rem;
       min-height: 3.1em;
@@ -348,28 +400,32 @@
     .landing-subscribe-row {
       display: flex;
       justify-content: center;
-      margin-top: 0;
+      margin-top: 0.7rem;
     }
 
     .landing-subscribe-frame {
       width: 480px;
       max-width: 100%;
       height: 150px;
-      border: 1px solid #f4faff;
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 8px 18px rgba(19, 59, 84, 0.08);
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     @media (min-width: 1200px) {
       .landing-rebuild {
-        min-height: calc(100vh - 175px);
+        min-height: 100vh;
+        padding-top: 4.8rem;
       }
 
       .landing-rebuild-shell {
-        min-height: calc(100vh - 189px);
-        grid-template-rows: auto auto auto;
+        min-height: calc(100vh - 140px);
         align-content: start;
+      }
+
+      .landing-head {
+        min-height: calc(100vh - 100px);
       }
     }
 
@@ -381,6 +437,17 @@
 
       .landing-resource-cards {
         grid-template-columns: 1fr;
+      }
+
+      .landing-cta-row {
+        margin-top: 1rem;
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+
+      .landing-cta-block {
+        margin-top: 1rem;
+        margin-bottom: 0;
       }
 
       .landing-section-heading {
@@ -405,6 +472,10 @@
       .landing-proof {
         white-space: normal;
       }
+
+      .landing-skyline-wrap {
+        display: none;
+      }
     }
   </style>
 
@@ -413,80 +484,71 @@
       <h1 class="architects-daughter-regular landing-title">{{ .Site.Data.landing.hero.title }}</h1>
       
       <div class="landing-description mt-3">
-        <p>Explore the Compelling World of Software Architecture</p>
-        
+        <p><strong>Software architecture is more than drawing diagrams.</strong></p>
+        <p>It’s about making decisions, managing complexity,<br>and helping teams build systems that actually work.</p>
+
+
       </div>
+
+      <div class="landing-cta-block">
+        <p class="landing-cta-heading">Learn Architecture with Us</p>
+
+        <div class="landing-cta-row">
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL "courses" }}">
+          <div class="landing-course-content">
+            <div class="landing-resource-logo-wrap">
+              {{ with resources.Get "images/social/Udemy_logo.png" }}
+              <img class="landing-resource-logo" src="{{ .RelPermalink }}" alt="Udemy">
+              {{ end }}
+            </div>
+            <p class="landing-card-course-description">Start learning architecture today with practical video courses and monthly discount coupons.</p>
+          </div>
+        </a>
+
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ .Site.Params.social.substack }}" target="_blank" rel="noopener noreferrer">
+          <div class="landing-course-content">
+            <div class="landing-resource-logo-wrap">
+              {{ with resources.Get "images/social/Substack_logo.png" }}
+              <img class="landing-resource-logo" src="{{ .RelPermalink }}" alt="Substack">
+              {{ end }}
+            </div>
+            <p class="landing-card-course-description">Read practical architecture articles, real-world trade-offs, and fresh weekly insights.</p>
+          </div>
+        </a>
+
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (.Site.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}">
+          <div class="landing-course-content">
+            <div class="landing-resource-logo-wrap">
+              {{ with resources.Get "images/social/logo-guide.drawio.png" }}
+              <img class="landing-resource-logo landing-resource-logo-guide" src="{{ .RelPermalink }}" alt="Software Architecture Guide">
+              {{ end }}
+            </div>
+            <p class="landing-card-course-description">Open the Guide and start learning software architecture your own way.</p>
+          </div>
+        </a>
+
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ with .Site.Params.social.linkedin }}{{ . }}{{ else }}https://linkedin.com/company/software-architecture-guild{{ end }}" target="_blank" rel="noopener noreferrer">
+          <div class="landing-course-content">
+            <div class="landing-resource-logo-wrap">
+              {{ with resources.Get "images/social/LinkedIn_logo.png" }}
+              <img class="landing-resource-logo" src="{{ .RelPermalink }}" alt="LinkedIn">
+              {{ end }}
+            </div>
+            <p class="landing-card-course-description">Join our LinkedIn community for architecture discussions and updates.</p>
+          </div>
+        </a>
+      </div>
+      </div>
+
+      <div class="landing-subscribe-row">
+        <iframe class="landing-subscribe-frame" src="https://softwarearchitectureguild.substack.com/embed" frameborder="0" scrolling="no" title="Substack subscribe"></iframe>
+      </div>
+
+      <div class="landing-skyline-wrap" aria-hidden="true">
+        <img class="landing-skyline" src="{{ "images/landing.png" | relURL }}" alt="">
+      </div>
+
     </header>
-
-    <h2 class="landing-section-heading">Courses</h2>
-    <div class="landing-cards">
-      
-      {{ range $courses }}
-      <a class="landing-card landing-card-course landing-card-link" href="{{ .base_url }}" data-course-link data-base-url="{{ .base_url }}" target="_blank" rel="noopener noreferrer">
-        {{ if .image }}
-        <div class="landing-course-media">
-          {{ with resources.Get "images/social/Udemy_logo.png" }}
-          <img class="landing-course-badge" src="{{ .RelPermalink }}" alt="Udemy">
-          {{ end }}
-          <img src="{{ .image }}" alt="{{ .image_alt }}">
-        </div>
-        {{ end }}
-        <div class="landing-course-content">
-          <div class="landing-course-title">{{ replaceRE `:\s*` ":<br>" .title | safeHTML }}</div>
-        </div>
-      </a>
-      {{ end }}
-    </div>
-    <h2 class="landing-section-heading">Keep Learning</h2>
-    <div class="landing-cards landing-resource-cards"> 
-      <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ .Site.Params.social.substack }}" target="_blank" rel="noopener noreferrer">
-        <div class="landing-course-content">
-          <div class="landing-resource-logo-wrap">
-            {{ with resources.Get "images/social/Substack_logo.png" }}
-            <img class="landing-resource-logo" src="{{ .RelPermalink }}" alt="Substack">
-            {{ end }}
-          </div>
-          <p class="landing-card-course-description">Read practical architecture articles and updates on Substack.</p>
-        </div>
-      </a>
-
-      <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (.Site.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}">
-        <div class="landing-course-content">
-          <div class="landing-resource-logo-wrap">
-            {{ with resources.Get "images/social/logo-guide.drawio.png" }}
-            <img class="landing-resource-logo landing-resource-logo-guide" src="{{ .RelPermalink }}" alt="Software Architecture Guide">
-            {{ end }}
-          </div>
-          <p class="landing-card-course-description">Structured path from fundamentals to advanced architecture practice.</p>
-        </div>
-      </a>
-
-      <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ with .Site.Params.social.linkedin }}{{ . }}{{ else }}https://linkedin.com/company/software-architecture-guild{{ end }}" target="_blank" rel="noopener noreferrer">
-        <div class="landing-course-content">
-          <div class="landing-resource-logo-wrap">
-            {{ with resources.Get "images/social/LinkedIn_logo.png" }}
-            <img class="landing-resource-logo" src="{{ .RelPermalink }}" alt="LinkedIn">
-            {{ end }}
-          </div>
-          <p class="landing-card-course-description">Join our LinkedIn community for architecture discussions and updates.</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="landing-subscribe-row">
-      <iframe class="landing-subscribe-frame" src="https://softwarearchitectureguild.substack.com/embed" frameborder="0" scrolling="no" title="Substack subscribe"></iframe>
-    </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("[data-course-link]").forEach(function (link) {
-      var baseUrl = link.getAttribute("data-base-url");
-      if (!baseUrl) return;
-      var url = typeof generateCouponUrl === "function" ? generateCouponUrl(baseUrl) : baseUrl;
-      link.setAttribute("href", url);
-    });
-  });
-</script>
 {{ end }}
