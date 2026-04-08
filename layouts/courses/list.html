@@ -190,7 +190,7 @@
                 <div class="course-actions">
                   <a
                     class="btn btn-primary"
-                    href="{{ .base_url }}/"
+                    href="{{ .base_url }}"
                     data-course-link
                     data-base-url="{{ .base_url }}"
                     target="_blank"
@@ -210,17 +210,6 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    function buildCouponUrl(baseUrl) {
-      if (typeof generateCouponUrl === "function") {
-        return generateCouponUrl(baseUrl);
-      }
-
-      const now = new Date();
-      const month = now.toLocaleString("en-US", { month: "long" }).toUpperCase();
-      const year = now.getFullYear();
-      return `${baseUrl}/?couponCode=${month}_${year}`;
-    }
-
     const courseLinks = document.querySelectorAll("[data-course-link]");
     let couponCode = "";
 
@@ -228,7 +217,7 @@
       const baseUrl = link.getAttribute("data-base-url");
       if (!baseUrl) return;
 
-      const url = buildCouponUrl(baseUrl);
+      const url = typeof generateCouponUrl === "function" ? generateCouponUrl(baseUrl) : baseUrl;
       link.setAttribute("href", url);
 
       try {

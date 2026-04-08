@@ -24,8 +24,21 @@
       const baseUrl = "{{ .Params.base_url }}";
       let destinationUrl = baseUrl;
 
+      try {
+        const destination = new URL(baseUrl, window.location.origin);
+        const incomingParams = new URLSearchParams(window.location.search);
+
+        incomingParams.forEach(function (value, key) {
+          destination.searchParams.set(key, value);
+        });
+
+        destinationUrl = destination.toString();
+      } catch (error) {
+        console.warn("Unable to merge query params into destination URL", error);
+      }
+
       if (typeof generateCouponUrl === "function") {
-        destinationUrl = generateCouponUrl(baseUrl);
+        destinationUrl = generateCouponUrl(destinationUrl);
       }
 
       // Fire GA4 event before redirect
