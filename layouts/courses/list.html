@@ -27,6 +27,11 @@
 
   .courses-page .course-title {
     margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #494949;
   }
 
   .courses-page .course-price-inline {
@@ -36,27 +41,31 @@
 
   .courses-page .course-price-inline strong {
     display: block;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1;
-    color: #102c3a;
+    color: #494949;
   }
 
   .courses-page .course-cover-wrap {
-    min-height: 230px;
-    max-height: 280px;
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem;
-    background: #edf3f7;
-    border-radius: 0.5rem;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
   }
 
   .courses-page .course-cover {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
-    max-height: 250px;
+    max-height: 100%;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 
   .courses-page .course-theme {
@@ -120,12 +129,13 @@
     }
 
     .courses-page .course-cover-wrap {
-      min-height: 0;
-      max-height: none;
+      height: 250px;
+      min-height: 250px;
+      max-height: 250px;
     }
 
     .courses-page .course-cover {
-      max-height: none;
+      max-height: 100%;
     }
 
     .courses-page .course-actions {
@@ -154,14 +164,14 @@
             <div class="course-card-body">
               <header class="course-header">
                 <div class="course-heading-row">
-                  <h3 class="h2 course-title">{{ .title }}</h3>
+                  <p class="course-title">{{ .title }}</p>
                   <div class="course-price-inline">
                     <strong>{{ .price }}</strong>
                   </div>
                 </div>
               </header>
 
-              <div class="row g-3 align-items-start">
+              <div class="row g-3 align-items-center">
                 <div class="col-lg-4 col-md-5">
                   <div class="course-cover-wrap">
                     <img class="course-cover" src="{{ .image }}" alt="{{ .image_alt }}">
