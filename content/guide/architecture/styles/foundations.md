@@ -91,7 +91,7 @@ Styles are not one-way doors. You can strengthen module boundaries inside a mono
 
 #### Web Resources
 
-* Software Architecture Guild, *[Architecture Styles: Monolithic vs Distributed Architecture](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic-vs)*
+* Software Architecture Guild, *[Architecture Styles: Monolithic vs Distributed Architecture](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic-vs?utm_source=website)*
 * Developer to Architect, *[Lesson 196 - Modularity and Architectural Styles](https://developertoarchitect.com/lessons/lesson196.html)*
 
 #### Books

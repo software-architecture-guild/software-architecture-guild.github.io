@@ -22,10 +22,13 @@ buildable
 bursty
 CCPA
 CEDP
+CODEOWNERS
 chargeback
+Ciceri
 Cockburn
 Cognos
 colinwilson
+cyclicity
 connascence
 connascent
 Cynefin
@@ -42,6 +45,7 @@ endline
 downstreams
 Eoin
 Excalidraw
+failovers
 Fastly
 flexsearch
 Foote
@@ -54,6 +58,7 @@ goldmark
 handwave
 Hardzeenka
 HDFS
+heatmaps
 Hohpe
 Hortonworks
 hotspot
@@ -87,6 +92,7 @@ metaprogramming
 Microkernel
 Millett
 Misaligning
+misformatted
 misrouted
 misrouting
 misprioritized
@@ -122,6 +128,7 @@ Rozanski
 runability
 Sadalage
 replayable
+revisitable
 roadmaps
 Rollouts
 Rozanski

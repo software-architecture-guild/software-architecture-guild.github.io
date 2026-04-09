@@ -10,22 +10,35 @@
         {{ $app := resources.Get "/js/app.js" }}
         {{- if not hugo.IsServer }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" | minify | fingerprint "sha384" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
         {{- else }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
 
   {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-  <script src="{{ $consentJS.Permalink }}"></script>
+  <script src="{{ $consentJS.RelPermalink }}"></script>
   <!-- Trigger redirect after DOM is ready -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const baseUrl = "{{ .Params.base_url }}";
       let destinationUrl = baseUrl;
 
+      try {
+        const destination = new URL(baseUrl, window.location.origin);
+        const incomingParams = new URLSearchParams(window.location.search);
+
+        incomingParams.forEach(function (value, key) {
+          destination.searchParams.set(key, value);
+        });
+
+        destinationUrl = destination.toString();
+      } catch (error) {
+        console.warn("Unable to merge query params into destination URL", error);
+      }
+
       if (typeof generateCouponUrl === "function") {
-        destinationUrl = generateCouponUrl(baseUrl);
+        destinationUrl = generateCouponUrl(destinationUrl);
       }
 
       // Fire GA4 event before redirect

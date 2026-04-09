@@ -10,29 +10,29 @@
 
 <html lang="{{ site.LanguageCode }}" dir="ltr">
     {{- partial "head.html" . -}}
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <div>
             {{- partial "header.html" . -}}
         </div>
         
         {{- partial "background.html" . -}}
         
-        <div class="mb-6" id="content mb-6">
+        <main class="flex-grow-1 d-flex flex-column">
+        <div class="mb-6" id="content">
             {{- block "main" . }}{{- end }}
         </div>
+        </main>
         {{- partial "consent.html" . -}}
         {{- partial "footer.html" . -}}
-
-        <div style="height: 3.1rem;"></div>
 
         <!-- Lotus Docs JS -->
         {{ $app := resources.Get "/js/app.js" }}
         {{- if not hugo.IsServer }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" | minify | fingerprint "sha384" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
         {{- else }}
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
         {{ if hugo.Data.landing.image_compare.enable }}
             <script>

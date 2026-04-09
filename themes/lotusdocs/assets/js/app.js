@@ -29,14 +29,29 @@ function toggleMenu() {
     }
 };
 
-// Udemy 
-// Define the function
-function generateCouponUrl(baseUrl) {
+// Build course URL with monthly coupon while preserving existing params
+function generateCouponUrl(sourceUrl) {
   const now = new Date();
   const month = now.toLocaleString('en-US', { month: 'long' }).toUpperCase();
   const year = now.getFullYear();
   const couponCode = `${month}_${year}`;
-  return `${baseUrl}/?couponCode=${couponCode}`;
+
+  try {
+    const url = new URL(sourceUrl);
+    url.searchParams.set('couponCode', couponCode);
+    return url.toString();
+  } catch (error) {
+    const hashIndex = sourceUrl.indexOf('#');
+    const hash = hashIndex === -1 ? '' : sourceUrl.slice(hashIndex);
+    const baseWithoutHash = hashIndex === -1 ? sourceUrl : sourceUrl.slice(0, hashIndex);
+    const queryIndex = baseWithoutHash.indexOf('?');
+    const path = queryIndex === -1 ? baseWithoutHash : baseWithoutHash.slice(0, queryIndex);
+    const query = queryIndex === -1 ? '' : baseWithoutHash.slice(queryIndex + 1);
+    const params = new URLSearchParams(query);
+    params.set('couponCode', couponCode);
+    const nextQuery = params.toString();
+    return nextQuery ? `${path}?${nextQuery}${hash}` : `${path}${hash}`;
+  }
 }
 
 // Expose it globally

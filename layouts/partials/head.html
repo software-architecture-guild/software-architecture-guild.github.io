@@ -60,10 +60,10 @@
         {{ $imagecompare := resources.Get "js/image-compare-viewer.min.js" }}
         {{- if not hugo.IsServer }}
             {{- $js := (slice $imagecompare) | resources.Concat "/js/image-compare.js" | minify | fingerprint "sha384" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
         {{- else }}
             {{- $js := (slice $imagecompare) | resources.Concat "/js/image-compare.js" }}
-            <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
+            <script type="text/javascript" src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
     {{- end }}
     <!-- Plausible Analytics Config -->
@@ -74,5 +74,5 @@
     {{- end -}}
     <!-- Google Analytics v4 Config + Cookies Consent -->
     {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $consentJS.Permalink }}" defer></script>
+    <script src="{{ $consentJS.RelPermalink }}" defer></script>
 </head>

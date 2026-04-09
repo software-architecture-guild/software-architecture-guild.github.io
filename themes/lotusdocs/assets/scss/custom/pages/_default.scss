@@ -16,7 +16,7 @@
     width: 12%;              /* 50% less width */
     max-width: 300px;
     padding: 1rem;
-    height: calc(100vh - 250px);
+    height: auto;
     position: sticky;        /* Stick vertically while scrolling */
     top: calc(70px + 1.6rem + 1.5rem);               /* Maintain a top margin */
     margin-top: calc(1.6rem + 1.5rem);
@@ -96,4 +96,3 @@ of it on small screen             */
         display: none !important;
     }
 }
-

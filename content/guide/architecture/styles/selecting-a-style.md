@@ -119,7 +119,7 @@ Plan for evolution in your ADR: what signal triggers re-evaluation, and what fir
 
 #### Web Resources
 
-* Software Architecture Guild, *[Architecture Process: How to Translate Requirements into a Technical Solution](https://softwarearchitectureguild.substack.com/p/architecture-process-how-to-translate)*  
+* Software Architecture Guild, *[Architecture Process: How to Translate Requirements into a Technical Solution](https://softwarearchitectureguild.substack.com/p/architecture-process-how-to-translate?utm_source=website)*  
 * Developer To Architect, *[Choosing The Right Architecture](https://developertoarchitect.com/training/choosing-architecture.html)*
 
 #### Books
