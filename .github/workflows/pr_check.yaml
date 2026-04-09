@@ -26,7 +26,10 @@ jobs:
     - name: Spell Check
       uses: streetsidesoftware/cspell-action@v6
       with:
+        files: |
+          **
         check_dot_files: false
+        incremental_files_only: false
 
   hugo-build:
     runs-on: ubuntu-latest
