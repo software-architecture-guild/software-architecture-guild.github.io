@@ -1,4 +1,4 @@
-{{ if .Site.Data.landing.hero.enable }}
+{{ if hugo.Data.landing.hero.enable }}
 <section class="landing-rebuild hero">
   <style>
     .landing-rebuild {
@@ -481,7 +481,7 @@
 
   <div class="container-xl landing-rebuild-shell">
     <header class="landing-head mt-3">
-      <h1 class="architects-daughter-regular landing-title">{{ .Site.Data.landing.hero.title }}</h1>
+      <h1 class="architects-daughter-regular landing-title">{{ hugo.Data.landing.hero.title }}</h1>
       
       <div class="landing-description mt-3">
         <p><strong>Software architecture is more than drawing diagrams.</strong></p>
@@ -516,7 +516,7 @@
           </div>
         </a>
 
-        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (.Site.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}">
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (hugo.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}">
           <div class="landing-course-content">
             <div class="landing-resource-logo-wrap">
               {{ with resources.Get "images/social/logo-guide.drawio.png" }}
