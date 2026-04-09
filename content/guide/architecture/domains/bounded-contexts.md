@@ -44,6 +44,8 @@ A **bounded context** is an explicit boundary inside which:
 
 Outside that boundary, the same terms are allowed to mean something else.
 
+{{< image src="/images/architecture/fundamentals/domain.bounded-context.drawio.png" alt="Bounded contexts with local models and language" >}}
+
 Roughly:
 
 > **Domain = problem space.**  
@@ -117,6 +119,8 @@ If you use a single model and schema for both, aggregates tend to grow to match 
 * **One or more read models** — projections optimized for queries and reporting.  
 
 They can share the same database or use separate storage, depending on scale needs.
+
+{{< image src="/images/architecture/fundamentals/domain.cqrs.drawio.png" alt="CQRS inside a bounded context" >}}
 
 ### Command side: intent and invariants
 

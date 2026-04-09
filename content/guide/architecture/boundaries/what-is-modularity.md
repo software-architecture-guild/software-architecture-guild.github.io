@@ -113,6 +113,8 @@ Low-cohesion modules have grab-bag responsibilities: validation, logging, busine
 
 Modularity is the balance point where internal coupling (cohesion) is strong and external coupling is as weak as possible.
 
+{{< image src="/images/architecture/fundamentals/coupling-cohesion-light.svg" alt="Coupling and cohesion across modular boundaries" >}}
+
 ## Architectural vs Code Modularity
 
 Modularity exists at many levels, and the rules are fractal: the same patterns apply from functions to entire systems.

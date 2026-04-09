@@ -75,8 +75,7 @@ Choose deliberately based on what you need to be great at—and what you can aff
 
 *Illustrative matrix for comparing common styles across selected quality attributes. Created by Mark Richards, DeveloperToArchitect.com. Treat the stars as directional, not absolute; confirm with scenarios and experiments in your context.*
 
-{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
-\
+{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics-2.jpg" alt="Architecture style scorecard across quality attributes" msg="*Source inspiration: DeveloperToArchitect.com.*" href="https://developertoarchitect.com/resources.html" size="big">}}
 
 ### Anti-patterns that derail selection
 

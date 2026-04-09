@@ -41,6 +41,8 @@ More concretely, a service:
 * Exposes a clear external surface: APIs, messages, and events that other parts of the system rely on.  
 * Has a team responsible for its correctness, performance, and availability.
 
+{{< image src="/images/architecture/fundamentals/boundaries.service.drawio.png" alt="Service as a deployment and runtime boundary">}}
+
 If you wouldn’t:
 
 * deploy it on its own,  

@@ -10,6 +10,6 @@
   <img src="{{ $src }}" alt="{{ $alt | html }}" class="{{ $class }}" loading="lazy" />
   <br>
   <a href="{{ $href }}">
-    <small>{{ $msg }}</small>
+    <small>{{ $msg | $.Page.RenderString }}</small>
   </a>
 </div>

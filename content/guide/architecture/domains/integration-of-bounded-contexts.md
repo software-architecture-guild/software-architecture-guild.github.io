@@ -90,6 +90,8 @@ Use it when:
 
 Risk: if communication degrades, you silently slide into a customer–supplier relationship without adjusting your technical patterns.
 
+{{< image src="/images/architecture/fundamentals/domain.context-map.partnership.drawio.png" alt="Partnership relationship on a context map" >}}
+
 ### Shared Kernel
 
 A Shared Kernel means two contexts share a small, identical slice of the model:
@@ -105,11 +107,15 @@ Rules of survival:
 
 Shared kernels are often temporary: suitable for navigating legacy modernization or when one team owns multiple contexts. Long term, you usually want to shrink or remove them.
 
+{{< image src="/images/architecture/fundamentals/domain.context-map.shared-kernel.drawio.png" alt="Shared kernel relationship on a context map" >}}
+
 ## Customer–Supplier patterns: who drives the contract?
 
 Most cross-team relationships are not equal. One context is upstream (supplier), the other downstream (customer). Upstream sets the contract and release rhythm; downstream feels the impact.
 
 DDD offers three main patterns here: Conformist, Anti-corruption Layer, and Open-Host Service.  
+
+{{< image src="/images/architecture/fundamentals/domain.context-map.customer-supplier.drawio.png" alt="Customer-supplier relationship on a context map" >}}
 
 ### Conformist
 
@@ -125,6 +131,8 @@ This is fine when:
 * The area is non-core for you, so some distortion is acceptable.
 
 But if conformism invades your core domain, your own model slowly becomes a mirror of somebody else’s problems.
+
+{{< image src="/images/architecture/fundamentals/domain.context-map.conformist.drawio.png" alt="Conformist relationship on a context map" >}}
 
 ### Anti-corruption Layer
 
@@ -142,6 +150,8 @@ Use an ACL when:
 
 Trade-off: you pay extra implementation and maintenance costs for the translator. But you avoid slow, subtle damage to your core model.
 
+{{< image src="/images/architecture/fundamentals/domain.context-map.anticorruption.drawio.png" alt="Anti-corruption layer on a context map" >}}
+
 ### Open-Host Service
 
 An Open-Host Service is the “reverse ACL” from the supplier’s side:
@@ -158,6 +168,8 @@ You choose OHS when:
 
 OHS plus published language is the cleanest way to scale integrations around a central service.
 
+{{< image src="/images/architecture/fundamentals/domain.context-map.open-host.drawio.png" alt="Open-host service on a context map" >}}
+
 ### Separate Ways
 
 Sometimes the cost of integrating two contexts is higher than the value they’d get:
@@ -173,6 +185,8 @@ Separate Ways is the pattern for explicitly not integrating:
 * You keep the contexts independent and revisit later if the trade-off changes.
 
 Rule: This is rarely acceptable in your core domain. But for peripheral or generic areas, it can be the pragmatic move.
+
+{{< image src="/images/architecture/fundamentals/domain.context-map.separate-ways.drawio.png" alt="Separate ways relationship on a context map" >}}
 
 ## Model translation: how contexts actually talk
 
@@ -228,6 +242,8 @@ Result:
 
 Without an outbox, every event-driven integration is sitting on a subtle race condition.
 
+{{< image src="/images/architecture/fundamentals/domain.workflow.outbox.drawio.png" alt="Outbox pattern for reliable event publishing" >}}
+
 ## Cross-context workflows
 
 Some business flows span multiple bounded contexts and aggregates:
@@ -253,6 +269,8 @@ Use a saga when:
 
 Pair sagas with an outbox so commands and events are reliably dispatched.
 
+{{< image src="/images/architecture/fundamentals/domain.workflow.saga.drawio.png" alt="Saga workflow across bounded contexts" >}}
+
 ### Process Manager: when the flow branches
 
 When the workflow has complex branching or decision logic (“if user is enterprise do X, else Y”), a Process Manager fits better:
@@ -262,6 +280,8 @@ When the workflow has complex branching or decision logic (“if user is enterpr
 * It may coordinate multiple sagas or command chains.
 
 Rule of thumb: if your saga starts sprouting `if` and `switch` logic, you probably need a process manager instead.
+
+{{< image src="/images/architecture/fundamentals/domain.workflow.process-manager.drawio.png" alt="Process manager coordinating multiple sagas" >}}
 
 ## Integration patterns evolve with the org
 

@@ -18,6 +18,8 @@ A company structure refers to how a business organizes its activities and person
 
 While no single company structure is universally applicable, every organization must design a structure that aligns with its goals, strategy, and size.
 
+{{< image src="../../../images/organization/business.structure.drawio.png" alt="Business structure across customer segments, product lines, and value streams" >}}
+
 ### Basic elements
 
 * **Roles and Responsibilities** \
@@ -173,6 +175,14 @@ Accounting is responsible for recording, tracking, and reporting the company’s
 * **Tax Management and Compliance**: Ensuring the company complies with tax regulations and manages tax obligations efficiently.
 * **Accounts Payable and Receivable**: Managing money flow in and out of the business, ensuring payments are made and received on time.
 * **Budgeting and Forecasting**: Supporting the financial planning process by providing data and analysis to help management allocate resources effectively.
+
+### Combining Functions with Value Streams
+
+As companies grow, business functions alone are usually not enough to explain how work is organized. Functions such as marketing, sales, finance, and operations still matter, but they increasingly need to be combined with customer-facing value streams and product lines.
+
+This creates a practical matrix: one dimension represents shared business functions and enabling capabilities, while the other represents the value streams or customer segments that turn those capabilities into delivered value. The point is not to create reporting confusion; it is to make sure functional excellence supports end-to-end outcomes instead of becoming a silo.
+
+{{< image src="../../../images/organization/company.matrix.drawio.png" alt="Business functions combined with value streams and product lines" >}}
 
 ---
 

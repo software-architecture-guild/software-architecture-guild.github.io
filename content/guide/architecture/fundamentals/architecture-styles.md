@@ -96,7 +96,7 @@ Understanding the system's **functional** and **non-functional requirements** is
 * **Scalability**: If the system must handle growing traffic or user demand, **microservices** or **space-based architectures** might be better suited, as they allow independent scaling of components.
 * **Security and Reliability**: Systems handling sensitive data or requiring high availability may need architecture styles like **microkernel** or **orchestration-driven** architecture, which centralizes control and maintains strong security measures.
 
-{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics.png" alt="Key Characteristics" href="https://developertoarchitect.com/resources.html" msg="Source: https://developertoarchitect.com/" >}}
+{{< image-external src="/images/architecture/fundamentals/styles.key-characteristics-2.jpg" alt="Architecture style scorecard across quality attributes" msg="*Source inspiration: DeveloperToArchitect.com.*" href="https://developertoarchitect.com/resources.html" size="big">}}
 
 ### Team Expertise and Resources
 
