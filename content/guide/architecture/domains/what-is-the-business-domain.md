@@ -44,6 +44,8 @@ Thinking in subdomains gives you a realistic map of the problem space. Instead o
 
 Domain-Driven Design adds another crucial distinction: not all subdomains matter equally. It classifies them into three types, each with a different strategic value.
 
+{{< image src="/images/architecture/fundamentals/domains.types.drawio.png" alt="Core, supporting, and generic subdomain types" >}}
+
 * **Core subdomains**  
   Where the company competes and differentiates. They are usually complex, full of domain rules, and under constant strategic pressure. This is why you are writing custom software in the first place.
 

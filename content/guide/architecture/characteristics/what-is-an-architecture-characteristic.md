@@ -32,6 +32,8 @@ Architecture characteristics operate at multiple levels. Making scope explicit p
 - **System level** — global policies and guarantees; for example, 99.99% availability or single sign-on across all services.  
 - **Cross-system/enterprise level** — spanning multiple systems; for example, organization-wide encryption and data-integrity policies.
 
+{{< image src="/images/architecture/fundamentals/characteristics.scope.drawio.png" alt="Architecture characteristic scope across component, subsystem, system, and cross-system levels" size="big">}}
+
 Governance connects these scopes: defining standards (e.g., encryption requirements), monitoring compliance, and allowing justified variances when local performance or cost constraints apply.
 
 ## How to Specify Them

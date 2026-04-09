@@ -49,6 +49,8 @@ At the code level, tactical DDD gives you a vocabulary:
 
 You do not have to use all of them everywhere. The art is picking just enough of them in the places where complexity demands it.
 
+{{< image src="/images/architecture/fundamentals/domain.blocks.toolbox.drawio.png" alt="Domain model building blocks toolbox" >}}
+
 ### Value Objects: modeling precise, reusable concepts
 
 Value objects represent descriptive concepts where identity doesn’t matter, only the value does: amounts, ranges, coordinates, dimensions, names. Two value objects are equal if all their attributes are equal.  
@@ -222,6 +224,12 @@ Costs:
 * Infrastructure becomes more complex (event store, projections, snapshotting).  
 
 Reach for event sourcing in core domains where history, insight, or regulatory traceability justify the complexity—typically not for simple supporting modules.
+
+### Example Domain Model: Viewing the order
+
+The diagram below shows how several building blocks can work together in one domain model: factory methods create the aggregate, domain services handle cross-cutting business calculations, the aggregate protects state transitions and invariants, and event sourcing preserves the order lifecycle as a stream of domain events.
+
+{{< image src="/images/architecture/fundamentals/domain.blocks.order4.drawio.png" alt="Order domain model with aggregate, services, repositories, and event history" size="big">}}
 
 ## Choosing the right building blocks per context
 

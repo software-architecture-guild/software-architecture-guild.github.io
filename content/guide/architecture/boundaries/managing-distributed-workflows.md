@@ -48,6 +48,8 @@ You cannot remove that coupling. What you *can* choose is how services coordinat
 
 Those choices change implementation coupling, visibility, and failure modes—but not the underlying business dependencies.
 
+{{< image src="/images/architecture/fundamentals/boundaries.orchestration-vs-choreography.png" alt="Orchestration versus choreography workflow comparison" size="medium">}}
+
 ## Orchestration: Centralized Coordination
 
 Orchestration assigns one service to the workflow. That service (the orchestrator) does not own all the domain behavior, but it does own the sequence: who gets called, when, and what happens if something goes wrong.

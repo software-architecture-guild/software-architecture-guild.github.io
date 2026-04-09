@@ -41,6 +41,8 @@ You can (and should) do component-based design inside a single deployable applic
 
 A component is a self-contained unit of software with three parts: a responsibility, a contract, and an implementation. Responsibility defines why it exists; the contract defines how others see it; and implementation is everything it does to keep that promise.
 
+{{< image src="/images/architecture/fundamentals/boundaries.component.drawio.png" alt="Component boundary with responsibility, contract, and implementation" >}}
+
 ### Responsibility, Contract, Implementation
 
 You can describe any component with three questions:
@@ -73,7 +75,7 @@ You may never actually swap it out, but designing for replaceability forces you 
 
 ## Components, Cohesion, and Coupling
 
-Component design is where cohesion and coupling become real. Cohesion is about what belongs inside; coupling is about what flows across.
+Component design is where cohesion and coupling become concrete. Cohesion is about whether the responsibilities inside a component belong together. Coupling is about how much knowledge, coordination, and dependency leak across component boundaries.
 
 ### High Cohesion: One Reason to Exist
 
@@ -83,7 +85,33 @@ A cohesive component:
 * Groups of behaviors that naturally change together.  
 * Minimizes “miscellaneous extras” that don’t fit the core story.
 
-Low cohesion shows up as “god components” that do everything: validation, orchestration, reporting, and random helper methods. These components attract change from every direction and become painful to touch.
+{{< image src="/images/architecture/fundamentals/boundaries.cohesion.high.drawio.png" alt="High cohesion example across modules" >}}
+
+High cohesion makes ownership clearer: when a business rule changes, you know which component should absorb the change. It keeps reasoning local and reduces the need to understand half the system to make one safe modification.
+
+### Low Cohesion: A Grab-Bag of Responsibilities
+
+Low cohesion shows up when one component becomes a dumping ground for unrelated concerns:
+
+* Validation, orchestration, reporting, and helper logic all end up mixed together.  
+* Different kinds of changes keep landing in the same place.  
+* Nobody can describe the component’s responsibility in one short sentence.
+
+{{< image src="/images/architecture/fundamentals/boundaries.cohesion.low.drawio.png" alt="Low cohesion example across modules" >}}
+
+These “god components” attract change from every direction. They are hard to test, hard to split later, and usually signal that the boundary was drawn around convenience rather than responsibility.
+
+### High Coupling: Leaky and Fragile Connections
+
+High coupling means components know too much about each other or depend on each other too directly:
+
+* One component depends on another’s internal data structures or workflows.  
+* Several components need to change together for one business change.  
+* Shared tables, shared flags, or implicit assumptions become part of the real contract.
+
+{{< image src="/images/architecture/fundamentals/boundaries.coupling.high.drawio.png" alt="High coupling example between modules" >}}
+
+High coupling makes change propagation unpredictable. A local refactor stops being local because callers rely on hidden details they were never supposed to know.
 
 ### Low Coupling: Narrow, Purposeful Connections
 
@@ -93,13 +121,9 @@ A well-designed component:
 * Avoids leaking internal types or database schemas.  
 * Keeps callers depending on what it does, not how it does it.
 
-Coupling sneaks in when:
+{{< image src="/images/architecture/fundamentals/boundaries.coupling.low.drawio.png" alt="Low coupling example between modules" >}}
 
-* Multiple components write to the same tables.  
-* “Shared” libraries start carrying real business rules.  
-* Interfaces are too generic (“executeOperation(request)”) and force callers to know the internal model.
-
-The goal is high internal coupling (cohesion) and low external coupling (only what’s necessary leaks out).
+Low coupling does not mean no coupling. Components still collaborate, but they do so through narrow, intentional interfaces. The design goal is high cohesion inside the component and low coupling across the boundary: keep what belongs together together, and let only what is necessary leak out.
 
 ## Boundaries, Contracts, and Data Ownership
 
