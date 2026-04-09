@@ -1,4 +1,4 @@
-{{ with .Site.Data.landing.hero.backgroundImage }}
+{{ with hugo.Data.landing.hero.backgroundImage }}
     {{ $path := .path | default "images" }}
     {{ $filename := .filename }}
     {{ $pathDesktop := printf "%s/%s" $path $filename.desktop }}

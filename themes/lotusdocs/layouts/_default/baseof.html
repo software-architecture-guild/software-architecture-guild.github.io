@@ -34,12 +34,12 @@
             {{- $js := (slice $app) | resources.Concat "/js/bundle.js" }}
             <script type="text/javascript" src="{{ $js.Permalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
-        {{ if .Site.Data.landing.image_compare.enable }}
+        {{ if hugo.Data.landing.image_compare.enable }}
             <script>
                 // Image Compare Viewer
                 const viewers = document.querySelectorAll(".image-compare");
                 let configs = [
-                    {{ range .Site.Data.landing.image_compare.items }}
+                    {{ range hugo.Data.landing.image_compare.items }}
                         {{ if .config }}
                             {{ .config | jsonify | safeJS }},
                         {{ end }}
