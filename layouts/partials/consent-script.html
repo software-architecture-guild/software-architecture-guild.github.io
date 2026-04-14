@@ -1,0 +1,8 @@
+{{ $params := dict "gaID" (.Site.Config.Services.GoogleAnalytics.ID | default "") }}
+{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+{{ $consentJS := resources.Get "js/consent.js" | js.Build $opts }}
+{{ if hugo.IsProduction }}
+    {{ $consentJS = $consentJS | fingerprint "sha384" }}
+{{ end }}
+<script src="{{ $consentJS.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $consentJS.Data.Integrity }}"{{ end -}} defer></script>

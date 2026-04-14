@@ -73,6 +73,6 @@
     {{- end -}}
     {{- end -}}
     <!-- Google Analytics v4 Config + Cookies Consent -->
-    {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $consentJS.RelPermalink }}" defer></script>
+    {{- partialCached "consent-script.html" . }}
+    {{- partialCached "analytics-script.html" . }}
 </head>

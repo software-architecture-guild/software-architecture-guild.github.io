@@ -1,0 +1,8 @@
+{{ $analytics := resources.Get "/js/analytics.js" }}
+{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" }}
+{{ $analytics = $analytics | js.Build $opts }}
+{{ if hugo.IsProduction }}
+    {{ $analytics = $analytics | fingerprint "sha384" }}
+{{ end }}
+<script src="{{ $analytics.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $analytics.Data.Integrity }}"{{ end -}} defer></script>

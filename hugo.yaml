@@ -44,6 +44,10 @@ menu:
 pagination:
   pagerSize: 10
 
+services:
+  googleAnalytics:
+    ID: G-C8MGZDZY1J
+
 params:
   google_fonts:
     - ["Architects Daughter", "400"]
@@ -67,6 +71,12 @@ params:
     descriptions: true
 
     intLinkTooltip: true
+
+  feedback:
+    enabled: true
+    emoticonTpl: true
+    eventDest:
+      - google
 
   flexsearch:
     enabled: true
