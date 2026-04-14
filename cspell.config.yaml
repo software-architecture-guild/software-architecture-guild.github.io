@@ -10,6 +10,7 @@ dictionaries:
   - project-words
 ignorePaths:
   - 'node_modules'
+  - 'assets'
   - 'themes'
   - 'public'
   - 'resources'
@@ -18,3 +19,6 @@ ignorePaths:
   - '/project-words.txt'
   - '/go.sum'
   - '/go.mod'
+ignoreRegExpList:
+  # Ignore GA4 measurement IDs such as G-C8MGZDZY1J while still spellchecking hugo.yaml text.
+  - '/G-[A-Z0-9]+/'
