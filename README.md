@@ -9,40 +9,74 @@ This website is dedicated to sharing our knowledge with the world. It consists o
 ## Table of Contents
 
 * [Site Structure](#repository-structure)
+* [Theme Split](#theme-split)
+* [Development](#development)
 * [Contributing](#contributing)
 * [License](#license)
 
 ## Repository Structure
 
-Repository follows the basic structure of Hugo site with the Lotus Docs theme is as follows:
+Repository follows the basic structure of a Hugo site with the Lotus Docs theme:
 
 ```bash
-software-architecture-guild/
+software-architecture-guild.github.io/
 ├── content/
-|   ├── authors/
+│   ├── authors/
 │   ├── blog/
+│   ├── courses/
 │   ├── guide/
-│   └── _index.md
+│   └── ...
+├── assets/
+│   └── scss/
 ├── data/
 ├── images/
 ├── layouts/
-├── static/
 ├── themes/
 │   └── lotusdocs/
 ├── hugo.yaml
+├── AGENTS.md
 └── README.md
 ```
 
-* content/authors: Markdown files with author profiles.
-* content/blog: Markdown files with blog.
-* content/guide: Markdown files with guide articles.
-* data/: Configuration file for landing page.
-* images/: Images published as static files and are referenced from Markdown files.
-* layouts/: Custom layout files.
-* static/: Static files like images, CSS, and JavaScript.
-* themes/lotusdocs/: The Lotus Docs theme files.
-* hugo.yaml: Configuration file for your site.
-* README.md: This file.
+* `content/authors/`: Markdown files with author profiles.
+* `content/blog/`: Markdown files with blog posts.
+* `content/courses/`: Course overview and outbound course links.
+* `content/guide/`: Guide articles and learning-path content.
+* `data/`: Structured data for the landing page and other Hugo data files.
+* `images/`: Reusable site images referenced from content and layouts.
+* `layouts/`: All non-guide templates, including landing page, blog, authors, courses, shared partials, and shortcodes.
+* `assets/scss/`: All non-guide SCSS compiled for the landing page and the rest of the custom site chrome.
+* `themes/lotusdocs/`: Theme source, now used primarily for guide-specific layouts and guide assets.
+* `hugo.yaml`: Site configuration.
+* `AGENTS.md`: Repository-specific working conventions for coding agents.
+
+## Theme Split
+
+The repository intentionally separates guide behavior from the rest of the site.
+
+* Guide-only templates live in `themes/lotusdocs/layouts/guide/` and `themes/lotusdocs/layouts/partials/guide/`.
+* Guide-only assets live in `themes/lotusdocs/assets/guide/`.
+* All non-guide templates live in root `layouts/`.
+* All non-guide SCSS lives in root `assets/scss/`.
+
+When editing templates or styles:
+
+* Keep guide changes inside the theme guide paths.
+* Keep landing page, blog, authors, courses, and shared site chrome changes in root `layouts/` and `assets/scss/`.
+* Avoid inline CSS in templates; add styles to the appropriate SCSS partial instead.
+
+## Development
+
+Use Hugo locally:
+
+```bash
+hugo server --buildDrafts
+hugo build --gc --minify --baseURL http://localhost/
+```
+
+`hugo server --buildDrafts` runs the local preview at `http://localhost:1313/`.
+
+`hugo build --gc --minify --baseURL http://localhost/` validates that the site renders successfully and matches the repository build settings.
 
 ## Contributing
 

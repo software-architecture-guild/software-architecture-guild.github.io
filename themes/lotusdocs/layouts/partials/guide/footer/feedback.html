@@ -79,13 +79,13 @@
         try {
             {{ if .Site.Config.Services.GoogleAnalytics.ID -}}
             {{ if not .Site.Params.feedback.eventDest | or (in .Site.Params.feedback.eventDest "google") -}}
-            gtag('event', '{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.emoticonEventName | default "feedback" | lower) }}',
+            window.trackEvent('{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.emoticonEventName | default "feedback" | lower) }}',
                 {
                     'rating': rating.replace(/\s+/g, '_').toLowerCase(),
                     'message': message,
                     'event_callback': success
                 }
-            ),
+            );
             {{ end -}}
             {{ end -}}
             {{ if .Site.Params.plausible.dataDomain -}}
@@ -255,13 +255,13 @@
             if (formType == "positive") {
                 {{ if .Site.Config.Services.GoogleAnalytics.ID -}}
                 {{ if not .Site.Params.feedback.eventDest | or (in .Site.Params.feedback.eventDest "google") -}}
-                gtag('event', '{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.positiveEventName | default "Positive Feedback" | lower) }}',
+                window.trackEvent('{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.positiveEventName | default "Positive Feedback" | lower) }}',
                     {
                         'rating': rating,
                         'message': message,
                         'event_callback': success
                     }
-                ),
+                );
                 {{ end -}}
                 {{ end -}}
                 {{ if .Site.Params.plausible.dataDomain -}}
@@ -281,13 +281,13 @@
             } else if (formType == "negative") {
                 {{ if .Site.Config.Services.GoogleAnalytics.ID -}}
                 {{ if not .Site.Params.feedback.eventDest | or (in .Site.Params.feedback.eventDest "google") -}}
-                gtag('event', '{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.negativeEventName | default "Positive Feedback" | lower) }}',
+                window.trackEvent('{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.negativeEventName | default "Negative Feedback" | lower) }}',
                     {
                         'rating': rating,
                         'message': message,
                         'event_callback': success
                     }
-                ),
+                );
                 {{ end -}}
                 {{ end -}}
                 {{ if .Site.Params.plausible.dataDomain -}}

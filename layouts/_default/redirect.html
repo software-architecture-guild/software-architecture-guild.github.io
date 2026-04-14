@@ -16,8 +16,8 @@
             <script type="text/javascript" src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}></script>
         {{- end }}
 
-  {{ $consentJS := resources.Get "js/consent.js" | resources.Minify | resources.Fingerprint }}
-  <script src="{{ $consentJS.RelPermalink }}"></script>
+  {{- partialCached "consent-script.html" . }}
+  {{- partialCached "analytics-script.html" . }}
   <!-- Trigger redirect after DOM is ready -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -42,14 +42,17 @@
       }
 
       // Fire GA4 event before redirect
-      if (typeof gtag === "function") {
-        gtag('event', 'funnel_redirect', {
-          'event_category': 'Funnel',
-          'event_label': 'Udemy Course Landing',
-          'destination_url': destinationUrl || 'Unknown'
+      if (typeof window.trackEvent === "function") {
+        window.trackEvent('udemy_outbound_click', {
+          'event_label': '{{ .Title }}',
+          'entry_point': 'redirect_page',
+          'destination_platform': 'udemy',
+          'destination_type': 'course',
+          'course_title': '{{ .Title }}',
+          'link_url': destinationUrl || 'Unknown'
         });
       } else {
-        console.warn("gtag not defined yet");
+        console.warn("trackEvent not defined yet");
       }
 
       // Wait briefly to ensure event is sent, then redirect

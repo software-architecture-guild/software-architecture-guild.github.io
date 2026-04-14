@@ -51,7 +51,10 @@
                 <!-- Navigation Menu -->
                 <ul class="navigation-menu nav-right">
                     {{- range .Site.Menus.primary }}
-                    <li><a href="{{ relLangURL .URL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ relLangURL .URL }}"
+                        {{- if eq .Identifier "guide" }} data-track-event="guide_entry_click" data-track-label="guide_header_guide_menu" data-track-param-entry-point="guide_header_menu"{{ end -}}
+                        {{- if eq .Identifier "courses" }} data-track-event="courses_navigation_click" data-track-label="guide_header_courses_menu" data-track-param-entry-point="guide_header_menu"{{ end -}}
+                        {{- if eq .Identifier "blog" }} data-track-label="guide_header_blog_menu" data-track-param-entry-point="guide_header_menu" data-track-param-destination-type="newsletter"{{ end -}}>{{ .Name }}</a></li>
                     {{ end }}
                 </ul><!--end navigation menu-->
             </div><!--end navigation-->
@@ -62,7 +65,9 @@
                 {{ range . }}
                     {{ $path := printf "images/social/%s.%s" . "svg" }}
                     <li class="list-inline-item mb-0">
-                        <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else }} {{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank">
+                        <a href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else }} {{ index site.Params.social . }} {{ end }}" alt="{{ . }}" rel="noopener noreferrer" target="_blank"
+                            {{- if eq . "substack" }} data-track-label="guide_header_substack_social" data-track-param-entry-point="guide_header_social" data-track-param-destination-type="newsletter"{{ end -}}
+                            {{- if eq . "udemy" }} data-track-label="guide_header_udemy_social" data-track-param-entry-point="guide_header_social" data-track-param-destination-type="instructor_profile"{{ end -}}>
                             <div class="btn btn-icon btn-landing border-0">
                                 {{ with resources.Get $path }}
                                     {{ .Content | safeHTML }}

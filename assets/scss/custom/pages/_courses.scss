@@ -1,0 +1,146 @@
+.courses-page .course-card {
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+.courses-page .course-card-body {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.courses-page .course-header {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.courses-page .course-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.courses-page .course-title {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #494949;
+}
+
+.courses-page .course-price-inline {
+    min-width: 130px;
+    text-align: right;
+}
+
+.courses-page .course-price-inline strong {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #494949;
+}
+
+.courses-page .course-cover-wrap {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.courses-page .course-cover {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.courses-page .course-theme {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8d5f18;
+    background: #f8eedf;
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+}
+
+.courses-page .course-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.courses-page .course-points {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.courses-page .course-points li {
+    margin-bottom: 0.45rem;
+}
+
+.courses-page .course-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.courses-page .course-actions .btn {
+    white-space: nowrap;
+}
+
+.courses-page .course-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+    padding-top: 1rem;
+}
+
+@media (max-width: 991px) {
+    .courses-page .course-heading-row {
+        flex-wrap: wrap;
+    }
+
+    .courses-page .course-price-inline {
+        min-width: 0;
+        text-align: left;
+    }
+
+    .courses-page .course-cover-wrap {
+        height: 250px;
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .courses-page .course-cover {
+        max-height: 100%;
+    }
+
+    .courses-page .course-actions {
+        width: 100%;
+    }
+
+    .courses-page .course-actions .btn {
+        flex: 1 1 100%;
+    }
+}

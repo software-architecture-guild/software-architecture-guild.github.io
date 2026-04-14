@@ -23,15 +23,15 @@
     {{- with .Description | default ($.Param "description") }}
     <meta name="description" content="{{ . }}">
     {{- end }}
-    <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
-    <meta name="author" content="Colin Wilson - Lotus Labs" />
-    <meta name="email" content="support@aigis.uk" />
-    <meta name="website" content="https://lotusdocs.dev" />
+    <meta name="keywords" content="Software Architecture Guild, Architecture, Software Architecture, Architect, Software Architect, Solution Architect, System Design" />
+    <meta name="author" content="Software Architecture Guild" />
+    <meta name="email" content="software.architecture.guild@gmail.com" />
+    <meta name="website" content="https://software-architecture-guild.com" />
     <meta name="Version" content="v0.1.0" />
     <!-- favicon -->
-    {{ block "favicon" . }}{{ partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "head/favicon.html") . }}{{ end }}
-    {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head/opengraph") . }}
-    {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head/twitter_cards") . }}
+    {{ block "head/favicon" . }}{{ partialCached "head/favicon.html" . }}{{ end }}
+    {{- partial "head/opengraph.html" . }}
+    {{- partial "head/twitter_cards.html" . }}
     <!-- Dark Mode -->
     {{ if eq .Site.Params.docs.darkMode true -}}
         {{ $darkModeInit := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-init.js") | js.Build | minify -}}
@@ -44,9 +44,9 @@
             {{ $flexSearch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/flexsearch.bundle.js") }}
             {{- if not hugo.IsServer }}
                 {{ $flexSearch := $flexSearch | minify | fingerprint "sha384" }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}" integrity="{{ $flexSearch.Data.Integrity }}" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="{{ $flexSearch.RelPermalink }}" integrity="{{ $flexSearch.Data.Integrity }}" crossorigin="anonymous"></script>
                 {{ else }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}"></script>
+                <script type="text/javascript" src="{{ $flexSearch.RelPermalink }}"></script>
             {{ end }}
         {{ end }}
     {{ end }}
@@ -95,13 +95,10 @@
     <!-- Plausible Analytics Config -->
     {{- if not hugo.IsServer }}
     {{ if and (.Site.Params.plausible.scriptURL | default "https://plausible.io") (.Site.Params.plausible.dataDomain) -}}
-        {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "head/plausible") . }}
+        {{- partialCached "head/plausible" . }}
     {{- end -}}
     {{- end -}}
-    <!-- Google Analytics v4 Config -->
-    {{- if not hugo.IsServer }}
-    {{- if .Site.Config.Services.GoogleAnalytics.ID }}
-        {{- template "_internal/google_analytics.html" . -}}
-    {{- end -}}
-    {{- end -}}
+    <!-- Google Analytics v4 Config + Cookies Consent -->
+    {{- partialCached "consent-script.html" . }}
+    {{- partialCached "analytics-script.html" . }}
 </head>

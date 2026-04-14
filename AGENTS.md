@@ -2,7 +2,16 @@
 
 ## Project Structure & Module Organization
 
-This repository is a Hugo site for the Software Architecture Guild. Most work happens in `content/`, split by section: `content/guide/` for structured learning content, `content/blog/` for posts, `content/authors/` for contributor profiles, and `content/courses/` for course pages. Shared site data lives in `data/`, reusable images in `images/`, custom overrides in `layouts/`, and site configuration in `hugo.yaml`. The generated site output is written to `public/` and should not be hand-edited.
+This repository is a Hugo site for the Software Architecture Guild. Most work happens in `content/`, split by section: `content/guide/` for structured learning content, `content/blog/` for posts, `content/authors/` for contributor profiles, and `content/courses/` for course pages. Shared site data lives in `data/`, reusable images in `images/`, site configuration in `hugo.yaml`, and the generated site output is written to `public/` and should not be hand-edited.
+
+The layout and asset split is intentional:
+
+- `themes/lotusdocs/layouts/guide/` and `themes/lotusdocs/layouts/partials/guide/` contain the guide-only Lotus Docs templates.
+- `themes/lotusdocs/assets/guide/` contains guide-only SCSS and JS.
+- `layouts/` contains all non-guide site templates: landing page, default pages, blog, authors, courses, shared partials, and shortcodes.
+- `assets/scss/` contains non-guide SCSS for the landing page and the rest of the custom site chrome.
+
+When editing templates or styles, keep guide-specific changes inside the theme guide paths and keep non-guide changes in the root `layouts/` and `assets/scss/` paths.
 
 ## Build, Test, and Development Commands
 
@@ -22,7 +31,22 @@ cspell lint .
 
 ## Coding Style & Naming Conventions
 
-This is a Markdown-first repo. Match the existing Hugo front matter style: YAML between `---`, 2-space indentation for nested values, and fields such as `title`, `description`, `date`, `lastmod`, `draft`, and `authors`. Keep filenames descriptive and lowercase with hyphens where practical for assets, for example `images/architecture/microservices-tradeoffs.png`. Follow the structure and tone in `instructions.md` for guide articles: clear headings, short paragraphs, explicit trade-offs, and skimmable bullets.
+This is a Markdown-first repo. Match the existing Hugo front matter style: YAML between `---`, 2-space indentation for nested values, and fields such as `title`, `description`, `date`, `lastmod`, `draft`, and `authors`. Keep filenames descriptive and lowercase with hyphens where practical for assets, for example `images/architecture/microservices-tradeoffs.png`.
+
+For templates and styles:
+
+- Prefer the smallest correct change.
+- Avoid inline CSS in templates; add non-guide styles to `assets/scss/` and guide styles to `themes/lotusdocs/assets/guide/scss/`.
+- Preserve the current split between guide and non-guide files instead of duplicating the same concern in both places.
+
+For analytics instrumentation:
+
+- Keep analytics event names meaningful and funnel-oriented, for example `guide_entry_click`, `courses_navigation_click`, `substack_outbound_click`, `udemy_outbound_click`, and `guide_feedback_submitted`.
+- Keep guide and non-guide event taxonomy aligned when they represent the same user intent.
+- For tracked template links, prefer `data-track-event`, `data-track-label`, and `data-track-param-*` attributes over inline JavaScript.
+- Always write `data-track-param-*` names in kebab-case, for example `data-track-param-entry-point` and `data-track-param-course-title`, so the built tracker emits consistent snake_case GA parameters like `entry_point` and `course_title`.
+
+Follow the structure and tone in `instructions.md` for guide articles: clear headings, short paragraphs, explicit trade-offs, and skimmable bullets.
 
 ## Testing Guidelines
 
