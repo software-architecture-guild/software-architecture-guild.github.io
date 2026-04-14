@@ -15,7 +15,7 @@
         <p class="landing-cta-heading">Learn Architecture with Us</p>
 
         <div class="landing-cta-row">
-        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL "courses" }}">
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL "courses" }}" data-track-event="courses_navigation_click" data-track-label="landing_courses_cta" data-track-param-entry-point="landing_hero" data-track-param-destination-type="courses">
           <div class="landing-course-content">
             <div class="landing-resource-logo-wrap">
               {{ with resources.Get "images/social/Udemy_logo.png" }}
@@ -26,7 +26,7 @@
           </div>
         </a>
 
-        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ .Site.Params.social.substack }}" target="_blank" rel="noopener noreferrer">
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ .Site.Params.social.substack }}" target="_blank" rel="noopener noreferrer" data-track-label="landing_substack_cta" data-track-param-entry-point="landing_hero" data-track-param-destination-type="newsletter">
           <div class="landing-course-content">
             <div class="landing-resource-logo-wrap">
               {{ with resources.Get "images/social/Substack_logo.png" }}
@@ -37,7 +37,7 @@
           </div>
         </a>
 
-        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (hugo.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}">
+        <a class="landing-card landing-card-course landing-card-course-text landing-card-link" href="{{ relLangURL (hugo.Data.landing.hero.cta2Button.url | default "guide/introduction/welcome") }}" data-track-event="guide_entry_click" data-track-label="landing_guide_cta" data-track-param-entry-point="landing_hero" data-track-param-destination-type="guide">
           <div class="landing-course-content">
             <div class="landing-resource-logo-wrap">
               {{ with resources.Get "images/social/logo-guide.drawio.png" }}

@@ -43,10 +43,13 @@
 
       // Fire GA4 event before redirect
       if (typeof window.trackEvent === "function") {
-        window.trackEvent('funnel_redirect', {
-          'event_category': 'Funnel',
-          'event_label': 'Udemy Course Landing',
-          'destination_url': destinationUrl || 'Unknown'
+        window.trackEvent('udemy_outbound_click', {
+          'event_label': '{{ .Title }}',
+          'entry_point': 'redirect_page',
+          'destination_platform': 'udemy',
+          'destination_type': 'course',
+          'course_title': '{{ .Title }}',
+          'link_url': destinationUrl || 'Unknown'
         });
       } else {
         console.warn("trackEvent not defined yet");

@@ -39,6 +39,13 @@ For templates and styles:
 - Avoid inline CSS in templates; add non-guide styles to `assets/scss/` and guide styles to `themes/lotusdocs/assets/guide/scss/`.
 - Preserve the current split between guide and non-guide files instead of duplicating the same concern in both places.
 
+For analytics instrumentation:
+
+- Keep analytics event names meaningful and funnel-oriented, for example `guide_entry_click`, `courses_navigation_click`, `substack_outbound_click`, `udemy_outbound_click`, and `guide_feedback_submitted`.
+- Keep guide and non-guide event taxonomy aligned when they represent the same user intent.
+- For tracked template links, prefer `data-track-event`, `data-track-label`, and `data-track-param-*` attributes over inline JavaScript.
+- Always write `data-track-param-*` names in kebab-case, for example `data-track-param-entry-point` and `data-track-param-course-title`, so the built tracker emits consistent snake_case GA parameters like `entry_point` and `course_title`.
+
 Follow the structure and tone in `instructions.md` for guide articles: clear headings, short paragraphs, explicit trade-offs, and skimmable bullets.
 
 ## Testing Guidelines

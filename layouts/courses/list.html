@@ -54,6 +54,11 @@
                     href="{{ .base_url }}"
                     data-course-link
                     data-base-url="{{ .base_url }}"
+                    data-track-label="{{ .title }}"
+                    data-track-param-entry-point="courses_page"
+                    data-track-param-course-title="{{ .title }}"
+                    data-track-param-course-price="{{ .price }}"
+                    data-track-param-destination-type="course"
                     target="_blank"
                     rel="noopener noreferrer">Get it for {{ .price }}</a>
                 </div>

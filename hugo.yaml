@@ -75,6 +75,7 @@ params:
   feedback:
     enabled: true
     emoticonTpl: true
+    emoticonEventName: Guide Feedback Submitted
     eventDest:
       - google
 
