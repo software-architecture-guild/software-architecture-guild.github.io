@@ -1,6 +1,10 @@
 ////////////////////////////////////
 /* Common Page Styling            */
 ////////////////////////////////////
+body {
+    background-color: #f4faff;
+}
+
 @media (max-width: 1200px) {
     .sidebar {
         display: none;      /* Hide the sidebar */
