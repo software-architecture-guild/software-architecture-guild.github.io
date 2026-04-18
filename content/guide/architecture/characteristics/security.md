@@ -86,6 +86,6 @@ Security protects system assets and services from malicious attacks and accident
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.
   - **Chapter 9: Security**\
     Defines security and its general scenario structure, then organizes architectural tactics into resistance, detection, and recovery, with guidance on trade-offs and a checklist for evaluating designs against security goals.

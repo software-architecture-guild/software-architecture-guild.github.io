@@ -208,9 +208,9 @@ The payoff is simple: fewer nasty surprises, better trade-offs, and systems that
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.  
   * **Chapter 14: Evaluating the Architecture**\
     Provides practical guidance on when and how to evaluate architecture using expert review, checklists, and scenario-based techniques across the lifecycle.  
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
   * **Chapter 21: Architecture Evaluation**\
     Describes structured evaluation methods, including scenario-based approaches and quantitative analysis, with a strong focus on identifying and prioritizing architectural risks.

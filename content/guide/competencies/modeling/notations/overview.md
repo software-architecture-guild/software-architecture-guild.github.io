@@ -140,10 +140,10 @@ These tools are versatile and can be used for various diagramming needs. While t
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 21: Diagramming and Presenting Architecture**\
     General Guidance on the diagramming process and overview of existing diagramming
     tools and frameworks.
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
   * **Chapter 5: Notation**\
     Chapter 5 of *Communication Patterns* emphasizes the importance of selecting appropriate notation to create clear, practical diagrams tailored to the audience's needs. It highlights common pitfalls, such as overusing icons, breaking conventions, and failing to include legends, which can lead to confusion and miscommunication. The chapter advises balancing simplicity and detail, maintaining consistency, and layering information to make diagrams accessible and valuable for diverse stakeholders.

@@ -37,7 +37,7 @@ An architecture framework provides structured guidance for the creation, impleme
 Examples include:
 
 * The **[C4 model](https://c4model.com/introduction)** is a modern approach to diagramming software architectures, focusing on hierarchical views. The framework is lightweight and tools-agnostic, making it fast to apply.
-* The **[Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)** framework organizes software architecture through viewpoints capture the **structural aspects** of the solution and perspectives to address additional, **cross-cutting concerns** like security, performance, scalability.
+* The **[Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)** framework organizes software architecture through viewpoints capture the **structural aspects** of the solution and perspectives to address additional, **cross-cutting concerns** like security, performance, scalability.
 * The **[4+1 view model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)** is a well-established framework that focuses on four primary views: logical, process, physical, and development, along with  **scenario-based use cases** to capture system behavior. It provides a structured approach to understanding and documenting complex software systems.
 * The **[Open Group Architecture Framework a.k.a. TOGAF](https://pubs.opengroup.org/togaf-standard/)** is a comprehensive framework for enterprise architecture that provides a set of guidelines and tools for designing, planning, and implementing IT systems. It is beneficial for large organizations that need to manage **complex IT landscapes**.
 
@@ -91,7 +91,7 @@ Architecture modeling, frameworks, and notations form the backbone of effective 
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 21: Diagramming and Presenting Architecture**\
     General Guidance on the diagramming process and overview of existing diagramming
     tools and frameworks.

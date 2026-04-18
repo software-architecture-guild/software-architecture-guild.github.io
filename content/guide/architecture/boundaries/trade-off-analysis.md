@@ -263,6 +263,6 @@ When you capture those analyses in ADRs and back them with fitness functions, yo
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
   * **Chapter 15: Build Your Own Trade-Off Analysis**\
     Shows how to build your own trade-off tables and matrices, walks through payment and messaging examples, and connects ADRs and fitness functions to an iterative, evidence-based architecture process.

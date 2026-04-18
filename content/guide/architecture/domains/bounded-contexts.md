@@ -212,7 +212,7 @@ Done well, bounded contexts turn “we have conflicting definitions” from a so
     Explains CQRS as a way to have multiple models in a single context, separating write correctness from read efficiency with command and read models.  
   * **Chapter 10: Design Heuristics**\
     Offers practical rules of thumb for sizing bounded contexts, selecting business-logic patterns, and aligning architecture and testing strategy with domain needs.
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
   * **Chapter 6: Maintaining the Integrity of Domain Models with Bounded Contexts**\
     Defines bounded contexts formally and discusses how to keep models cohesive and language consistent within each boundary.  
   * **Chapter 24: CQRS – An Architecture of a Bounded Context**\

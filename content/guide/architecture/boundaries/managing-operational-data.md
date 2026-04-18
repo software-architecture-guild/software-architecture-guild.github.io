@@ -245,7 +245,7 @@ Suppose you treat operational data as a first-class design concern. In that case
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
   * **Chapter 6: Pulling Apart Operational Data**\
     Introduces data disintegrators and integrators, then walks through a stepwise process for decomposing a monolithic operational database into data domains.  
   * **Chapter 9: Data Ownership and Distributed Transactions**\

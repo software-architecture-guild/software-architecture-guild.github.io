@@ -317,7 +317,7 @@ Done deliberately, integration lets each bounded context keep a clean, local mod
     Classifies integration patterns (Partnership, Shared Kernel, Customer–Supplier, ACL, OHS, Separate Ways) and shows how to choose them based on team collaboration and power balance.  
   * **Chapter 9: Communication Patterns**\
     Describes model translation, stateless/stateful proxies, outbox, sagas, and process managers as a toolkit for reliable communication across bounded contexts.
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
   * **Chapter 7: Context Mapping (pp. 91–104)**\
     Introduces context maps as reality diagrams that capture technical and organizational relationships, helping you reason about integration risk and strategy.  
   * **Chapter 11: Introduction to Bounded Context Integration**\

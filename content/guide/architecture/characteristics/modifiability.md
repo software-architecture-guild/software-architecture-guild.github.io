@@ -74,6 +74,6 @@ Modifiability ensures systems can evolve efficiently, cost-effectively, and pred
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.
   - **Chapter 7: Modifiability**\
     Defines modifiability and its scenario structure, then catalogs tactics—localize changes, limit/manage dependencies, defer binding, anticipate change—with guidance on trade-offs and how to evaluate designs against modifiability goals.

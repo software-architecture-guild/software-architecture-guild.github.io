@@ -68,6 +68,6 @@ Usability determines how effectively users can engage with and benefit from a sy
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.
   - **Chapter 11: Usability**\
     Defines usability and uses scenario-based specification (stimulus, source, environment, artifact, response, response measure) to make it testable. Summarizes tactics—support user initiative, simplify interfaces, enhance learnability, manage errors, improve responsiveness, enable customization—along with key trade-offs and a checklist for evaluation.

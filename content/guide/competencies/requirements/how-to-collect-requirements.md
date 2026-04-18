@@ -112,7 +112,7 @@ Fit-criteria pass rates, risks retired, stakeholder outcomes achieved. Feed into
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 2 — The Requirements Process**  
     A practical discovery loop that plugs into any delivery method: start with Project Blastoff (purpose, scope, stakeholders, constraints), organize by business events and trawl for real rules, sketch quick models, walk scenarios to derive Product Use Cases, and write atomic, testable requirements with fit criteria. Guard quality with a gateway, reuse proven requirements, run focused reviews, iterate in thin slices, keep artifacts lean (Volere template, Snow Card), tailor formality to risk, and treat the process as a toolkit—not dogma.
   - **Chapter 14 — Requirements and Iterative Development**  

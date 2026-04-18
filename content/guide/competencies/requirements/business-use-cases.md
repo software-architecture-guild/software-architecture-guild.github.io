@@ -99,7 +99,7 @@ When a BUC implies qualities (latency, accuracy, throughput), record measurable 
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 3 — Scoping the Business Problem**\
     Establishes the “Project Blastoff”: defines the *work* to be improved, its boundaries, stakeholders, constraints, and measurable goals. Uses a work/context diagram to separate the work from its environment, identifies stakeholder classes (sponsor, customer, users, others), frames goals via Purpose–Advantage–Measurement, records constraints and naming conventions, estimates cost, assesses risks, and makes an objective go/no-go decision.
 

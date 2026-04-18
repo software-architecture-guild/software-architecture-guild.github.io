@@ -210,10 +210,10 @@ The Chief Architect or Chief Technology Officer (CTO) is an executive role that 
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 19: Architecture Decisions**\
     It highlights the importance of documenting architecture decisions using Architecture Decision Records (ADRs). It emphasizes balancing trade-offs, managing constraints, and avoiding anti-patterns like decision paralysis. A structured decision-making process ensures well-informed, adaptable choices that support long-term system goals.
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
   * **Chapter 5: The Role of the Software Architect**\
     The chapter defines the software architect's role in designing the system’s overall structure, ensuring it aligns with business goals and meets functional and non-functional requirements. Architects engage stakeholders, create architecture descriptions, and guide development teams, balancing technical trade-offs and focusing on quality attributes like scalability and security. Success in this role requires a blend of technical expertise, strategic thinking, and effective communication.
 * Richter, G. (2020). *[The software architect elevator: Redefining the architect's role in the digital enterprise](https://architectelevator.com/book/)* . Addison-Wesley Professional.

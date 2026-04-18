@@ -216,6 +216,6 @@ By writing focused ADRs for significant decisions, linking them to architecture 
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)*. O’Reilly Media.  
   * **Chapter 19: Architecture Decisions**\
     Presents a structured approach to making and documenting architecture decisions, introduces ADRs, and highlights common decision anti-patterns and governance practices.

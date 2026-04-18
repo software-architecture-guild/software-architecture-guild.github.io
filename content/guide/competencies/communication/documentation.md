@@ -131,6 +131,6 @@ Investing in good documentation practices ensures that valuable knowledge is pre
 
 #### Books
 
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
   * **Part III: Communicating Knowledge**\
     Part III, *Communicating Knowledge*, focuses on the importance of practical knowledge management in technical and organizational settings. It highlights the need for clear, accessible, and well-maintained documentation to preserve institutional knowledge, align teams, and improve decision-making. Fundamental principles include tailoring content to the audience, maintaining consistency, and ensuring regular updates to keep information accurate and relevant. The section also emphasizes collaborative practices, automation tools, and feedback loops to improve documentation quality and usability continuously. Avoiding pitfalls like knowledge silos, outdated content, and overly complex writing ensures that knowledge remains a valuable and actionable asset for the organization.

@@ -104,6 +104,6 @@ Developing a career as a software architect requires **deliberate planning, cont
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 24 - Developing a Career Path**\
     The chapter focuses on developing a career path as a software architect, emphasizing the importance of continuous learning, strategic skills development, and adaptability. It highlights key areas such as technical and soft skills, networking, personal branding, and maintaining work-life balance to ensure long-term career success. Architects are encouraged to embrace leadership roles, stay updated with emerging technologies, and pursue growth through deliberate planning and self-improvement.

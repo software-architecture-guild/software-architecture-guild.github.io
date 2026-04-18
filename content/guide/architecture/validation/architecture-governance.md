@@ -214,6 +214,6 @@ When governance works, teams know the boundaries, trust the process, and can mov
 
 #### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
   * **Chapter 22: Management and Governance**\
     Explores how management structures, roles, and governance practices shape the success of architectural initiatives, with concrete guidance and examples.

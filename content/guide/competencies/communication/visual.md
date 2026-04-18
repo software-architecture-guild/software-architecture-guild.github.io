@@ -142,6 +142,6 @@ Mastering visual communication is not just about creating attractive diagrams â€
 
 #### Books
 
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
   * **Part I: Visual Communication**\
     Part 1 of Communication Patterns focuses on the importance of visual communication in conveying complex technical concepts effectively. It emphasizes creating clear, structured diagrams tailored to the audience, using levels of abstraction, and avoiding clutter or over-complication. Key practices include ensuring accessibility, maintaining a logical narrative, and leveraging consistent visual styles while avoiding common antipatterns like mixing abstraction levels or relying solely on color for differentiation.

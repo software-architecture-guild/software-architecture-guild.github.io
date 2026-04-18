@@ -96,6 +96,6 @@ Re-evaluate when the orchestrator CPU and queue depth dominate latency, when mos
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 16: Orchestration-Driven Service-Oriented Architecture**\
     Defines orchestrators, workflow definitions, synchronous and asynchronous communication, benefits and challenges, and contrasts orchestration with choreography.

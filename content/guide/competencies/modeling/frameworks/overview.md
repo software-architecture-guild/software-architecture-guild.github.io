@@ -101,7 +101,7 @@ Balancing rigor with flexibility is essential to reap the benefits of architectu
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
   * **Part 3 - Viewpoint Framework**\
     Part 3 of the book outlines the Viewpoint Framework, which organizes architectural descriptions through viewpoints, enabling a structured approach to address stakeholder concerns. It emphasizes the separation of concerns by dividing the architecture into multiple interrelated views, such as Context, Functional, Information, Concurrency, Development, Deployment, and Operational viewpoints, each catering to specific aspects of the system. This framework provides a systematic way to capture reusable architectural knowledge, facilitating communication among stakeholders and managing complexity effectively. The chapter also addresses challenges like inconsistency and fragmentation, proposing careful selection and integration of views to ensure coherence. Lastly, it underscores the importance of iterative refinement and customization of views based on the architecture’s unique context and stakeholder needs
   * **Part 4 - Perspective Framework**\

@@ -331,7 +331,7 @@ Suppose you treat analytical data as a first-class part of your architecture, al
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
   * **Chapter 14: Managing Analytical Data**\
     Discusses how analytics changes in a microservices world, introduces Data Mesh ideas, and defines the Data Product Quantum as a practical unit for domain-aligned analytical data.  
 * Zhamak Dehghani (2022). *[Data Mesh: Delivering Data-Driven Value at Scale](https://www.oreilly.com/library/view/data-mesh/9781492092386/)*. O'Reilly Media.  

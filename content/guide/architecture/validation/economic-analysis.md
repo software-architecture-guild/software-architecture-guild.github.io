@@ -165,6 +165,6 @@ The result is not “finance-driven design” but architecture that is technical
 
 #### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
   * **Chapter 23: Economic Analysis of Architectures**\
     Introduces practical techniques for evaluating architectural options in terms of cost, benefit, risk, and timing, with examples of how to use economic thinking to guide design decisions.

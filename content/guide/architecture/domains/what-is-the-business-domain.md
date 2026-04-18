@@ -202,6 +202,6 @@ When you let domains and subdomains drive boundaries, staffing, and technical ch
 * Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 1: Analyzing Business Domains**\
     Introduces domains and subdomains, shows how to classify them as core/generic/supporting, and explains how this analysis anchors all later design decisions.  
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
   * **Chapter 3: Focusing on the Core Domain**\
     Explains how to distill the problem domain into subdomains, identify what is truly core, and align architecture, staffing, and quality levels with that analysis.

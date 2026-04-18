@@ -104,10 +104,10 @@ Architecture characteristics **define success beyond features**. They demand exp
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
   - **Chapter 4: Understanding Quality Attributes**\
     Introduces quality attributes and the scenario-based method (stimulus, environment, response) for specifying and evaluating them.
-- Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (1st ed.). O’Reilly Media, 2020.  
+- Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)*. O'Reilly Media.  
   - **Chapter 4: Architecture Characteristics Defined**\
     Defines architecture characteristics (“-ilities”) with core examples and explains why they drive architectural decisions.  
   - **Chapter 7: Scope of Architecture Characteristics**\

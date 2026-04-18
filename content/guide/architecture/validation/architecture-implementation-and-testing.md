@@ -188,6 +188,6 @@ Deliberate alignment—through clear decisions, traceable implementations, and t
 
 #### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
   * **Chapter 19: Architecture, Implementation, and Testing**\
     Explores how architectural decisions guide development and how testing can validate that implementation still reflects the intended architecture, with concrete guidance on keeping these activities aligned.

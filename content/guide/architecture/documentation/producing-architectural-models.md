@@ -198,6 +198,6 @@ Architecture frameworks and modeling notations help you create those models cons
 
 #### Books
 
-* Nick Rozanski & Eoin Woods (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://www.viewpoints-and-perspectives.info/home/book/)*. Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.  
   * **Chapter 12: Producing Architectural Models**\
     Explains how to select, construct, and maintain architectural models that match stakeholder concerns and support analysis and decision-making.

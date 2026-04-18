@@ -243,9 +243,9 @@ Agile methodologies like Scrum and Extreme Programming (XP) are becoming increas
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 1: Introduction**\
     The chapter outlines the evolving role of software architects, emphasizing adaptability, strategic decision-making, and the need to balance technical skills with business understanding. It defines architecture as a dynamic combination of system structure, key characteristics, and guiding principles.
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
   * **Chapter 5: The Role of the Software Architect**\
     The chapter defines the software architect's role in designing the system’s overall structure, ensuring it aligns with business goals and meets functional and non-functional requirements. Architects engage stakeholders, create architecture descriptions, and guide development teams, balancing technical trade-offs and focusing on quality attributes like scalability and security. Success in this role requires a blend of technical expertise, strategic thinking, and effective communication.

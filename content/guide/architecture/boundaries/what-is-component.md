@@ -271,9 +271,9 @@ If you treat components as first-class citizens—designing their responsibiliti
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 8: Component-Based Thinking**\
     Introduces components as encapsulated building blocks of architecture and shows how component-based thinking supports modularity, maintainability, and team scaling.
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O'Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change)*. O'Reilly Media.  
   * **Chapter 4: Logical Components: The Building Blocks**\
     Frames components as units of responsibility and ownership, with practical guidance on finding boundaries, defining contracts, and avoiding common component pitfalls.

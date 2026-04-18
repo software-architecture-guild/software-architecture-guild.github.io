@@ -589,9 +589,9 @@ The degree to which the system is exposed to exploitation because of weaknesses 
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O'Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)*. O'Reilly Media.  
   * **Part 1: Foundations**\
     Introduces core architecture concepts, emphasizing modularity, components, and characteristics, and shows how trade-offs shape long-term system behavior.
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.
   * **Part 2: Quality Attributes**\
     Explores key architecture characteristics in depth and presents tactics and patterns for achieving them while managing their trade-offs.

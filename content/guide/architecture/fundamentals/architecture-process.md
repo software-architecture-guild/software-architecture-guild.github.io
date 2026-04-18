@@ -198,10 +198,10 @@ The **Architecture Definition Process** is a comprehensive and adaptive practice
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
   * **Part II - The Process of Software Architecture**\
     It covers the **software architecture process** , focusing on how architects define, design, and maintain architecture throughout a project’s lifecycle. It highlights the importance of addressing both **problem- and solution-focused concerns** , engaging with **stakeholders** , and using **scenarios** to explore requirements and validate decisions. The use of **architectural styles, patterns** , and **models** ensures that the system structure is clearly communicated. Additionally, the process includes creating thorough **architectural descriptions** and **evaluating** the architecture to ensure it meets both functional and non-functional needs. This section emphasizes an iterative, stakeholder-driven approach to architecture.
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 19: Architecture Decisions**\
     It highlights the importance of documenting architecture decisions using Architecture Decision Records (ADRs). It emphasizes balancing trade-offs, managing constraints, and avoiding anti-patterns like decision paralysis. A structured decision-making process ensures well-informed, adaptable choices that support long-term system goals.
   * **Chapter 20 - Analyzing Architecture Risk**\

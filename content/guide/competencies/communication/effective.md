@@ -125,6 +125,6 @@ The Rhetoric Triangle provides a powerful framework for crafting effective commu
 
 #### Books
 
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
   * **Chapter 9: The Rhetoric Triangle**
     Chapter 9 explores the Rhetoric Triangle—ethos (credibility), pathos (emotion), and logos (logic)—as a framework for effective communication. It emphasizes building trust through expertise (ethos), connecting emotionally with the audience (pathos), and presenting logical, evidence-based arguments (logos). Balancing these elements ensures persuasive, engaging, and impactful communication in professional and technical contexts.

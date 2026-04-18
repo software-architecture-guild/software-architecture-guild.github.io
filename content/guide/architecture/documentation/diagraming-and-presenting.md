@@ -270,6 +270,6 @@ By tailoring diagrams to the audience and purpose, using layered, consistent vie
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)*. O’Reilly Media.  
   * **Chapter 21: Diagramming and Presenting Architecture**\
     Covers practical techniques, diagram types, and presentation strategies for communicating architecture clearly to both technical and non-technical stakeholders.

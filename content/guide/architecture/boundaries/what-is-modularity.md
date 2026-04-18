@@ -311,10 +311,10 @@ Effective modularity balances coupling and cohesion, applies the same principles
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
   * **Chapter 3: Modularity**\
     Explores modularity as a driver for agility and competitive advantage through maintainability, testability, deployability, scalability, and fault tolerance.  
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
   * **Chapter 3: Architectural Modularity**\
     Focuses on modularity at the architecture level, showing how different structures (monoliths, modular monoliths, services) affect change scope and operational characteristics.  
 * Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  

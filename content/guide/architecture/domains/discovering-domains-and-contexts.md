@@ -259,7 +259,7 @@ From there, domains and subdomains become clearer, bounded contexts emerge from 
 * Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 12: EventStorming**\
     Explains how to run big-picture and process-level EventStorming sessions, turning domain events and flows into concrete subdomains and candidate bounded contexts.
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
   * **Chapter 2: Distilling the Problem Domain**\
     Shows how to separate core and supporting concerns, crunch knowledge with experts, and use language and scenarios to carve out domains and subdomains.
 * Brandolini, A. (n.d.). *[Introducing EventStorming](https://www.eventstorming.com/book/)*. Leanpub.  
