@@ -1,0 +1,9 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    ".opencode/memory/project-guidelines.md",
+    ".opencode/memory/guide-index.md",
+    ".opencode/memory/substack-archive.md",
+    ".opencode/memory/reading-list.md"
+  ]
+}
