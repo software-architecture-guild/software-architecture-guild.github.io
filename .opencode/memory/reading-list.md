@@ -1,8 +1,10 @@
 # Project Memory: Reading References
 
-Canonical source: `books.md`.
+Canonical source: guide `Recommended Reading` sections under `content/guide/` and this memory file.
 
 Use this memory when adding or checking `Recommended Reading` sections, connecting a guide page to its source literature, or finding book reviews to link from content.
+
+When a referenced book has a matching Software Architecture Guild review, prefer linking to the Substack review inside guide content while keeping the real book/store URL as the canonical book source in memory.
 
 ## Architecture Fundamentals, Qualities, And Styles
 
@@ -54,4 +56,24 @@ Use this memory when adding or checking `Recommended Reading` sections, connecti
 
 ## Book Review Links
 
-Several references have Substack book reviews. Before adding a new external recommendation, check `books.md` for an existing review link and reuse it when relevant.
+Reviewed books currently include:
+
+- *Communication Patterns: A Guide for Developers and Architects* -> `https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns`
+- *Fundamentals of Software Architecture: An Engineering Approach* -> `https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals`
+- *Head First Software Architecture* -> `https://softwarearchitectureguild.substack.com/p/book-review-design-around-change`
+- *Mastering the Requirements Process: Getting Requirements Right* -> `https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements`
+- *Patterns, Principles, and Practices of Domain-Driven Design* -> `https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd`
+- *Software Architecture Metrics* -> `https://softwarearchitectureguild.substack.com/p/book-review-software-architecture-metrics`
+- *Software Architecture in Practice* -> `https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software`
+- *Software Architecture: The Hard Parts* -> `https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts`
+- *Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives* -> `https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with`
+- *The Personal MBA* -> `https://softwarearchitectureguild.substack.com/p/book-review-do-you-really-need-an`
+
+High-signal reference mappings from guide content include:
+
+- *Fundamentals of Software Architecture: An Engineering Approach* supports architecture fundamentals, many style pages, risk analysis, modeling overview, and role pages.
+- *Software Architecture in Practice* supports architecture characteristics, documentation overview, architecture evaluation, governance, economic analysis, implementation/testing, and requirement framing.
+- *Software Architecture: The Hard Parts* supports boundaries pages covering coupling, services, data, workflows, contracts, and trade-off analysis.
+- *Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives* supports visualizing architecture, architecture process, architectural descriptions, architectural models, evaluation, viewpoints and perspectives, and role pages.
+- *Mastering the Requirements Process* supports all major requirements pages including definition, collection, scenarios, selection, writing, testing, and communication.
+- *Communication Patterns: A Guide for Developers and Architects* supports architecture documentation management plus visual, written, spoken, effective, remote, and documentation communication pages.

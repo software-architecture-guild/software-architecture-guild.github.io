@@ -1,17 +1,17 @@
 # Project Memory: Guide Index
 
-Canonical source: `toc-guide.md`.
+Canonical source: `content/guide/`, its `_index.md` files, and page front matter descriptions.
 
 Use this memory when choosing where guide content belongs, checking nearby pages before editing, or deciding how a new article should fit into the information architecture. The root guide is "A guide to becoming a software architect."
 
 ## Top-Level Map
 
-- `content/guide/introduction/`: welcome, how to use the guide, and FAQ.
-- `content/guide/architecture/`: software architecture as a practical hard skill.
-- `content/guide/organization/`: organizational context in which architects operate.
-- `content/guide/role/`: architect responsibilities, classifications, collaboration, and career growth.
-- `content/guide/competencies/`: hard and soft skills architects need.
-- `content/guide/specializations/`: major architecture specialization tracks.
+- `content/guide/introduction/`: explains the guide's purpose, audience, and navigation.
+- `content/guide/architecture/`: covers software architecture as a practical hard skill.
+- `content/guide/organization/`: explains the organizational context in which architects operate.
+- `content/guide/role/`: defines architect responsibilities, classifications, collaboration, and career growth.
+- `content/guide/competencies/`: covers the hard and soft skills architects need.
+- `content/guide/specializations/`: introduces major architecture specialization tracks.
 
 ## Architecture
 
@@ -131,4 +131,4 @@ Specializations currently include:
 - Data: warehousing, analytics, AI/ML, and business intelligence.
 - Platform: hosting, security, and DevOps.
 
-Before adding new guide pages, check `toc-guide.md` for exact neighboring titles, descriptions, and paths.
+Before adding new guide pages, check the nearest section folder, its `_index.md`, and neighboring pages in `content/guide/` for exact titles, descriptions, and paths.
