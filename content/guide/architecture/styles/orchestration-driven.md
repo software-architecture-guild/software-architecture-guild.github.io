@@ -92,10 +92,11 @@ Re-evaluate when the orchestrator CPU and queue depth dominate latency, when mos
 #### Web Resources
 
 * Developer To Architect, *[Lesson 43 - Microservices Orchestration Pattern](https://developertoarchitect.com/lessons/lesson43.html)*
+
 * Developer To Architect, *[Lesson 23 - Orchestration vs. Choreography](https://developertoarchitect.com/lessons/lesson23.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 16: Orchestration-Driven Service-Oriented Architecture**\
     Defines orchestrators, workflow definitions, synchronous and asynchronous communication, benefits and challenges, and contrasts orchestration with choreography.

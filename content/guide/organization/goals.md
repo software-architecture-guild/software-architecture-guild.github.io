@@ -198,9 +198,18 @@ Ultimately, achieving business goals requires a disciplined approach, regular pr
 
 #### Articles
 
+* Software Architecture Guild. *[How Architecture Actually Drives the Business](https://softwarearchitectureguild.substack.com/p/how-architecture-actually-drives?utm_source=website)*\
+  Shows how architecture affects cost, reliability, scalability, and ultimately business outcomes.
+
+* Software Architecture Guild. *[Architecture Process: What Those Business Guys Want from Us, Technical People](https://softwarearchitectureguild.substack.com/p/architecture-process-what-those-business?utm_source=website)*\
+  Explains how to interpret business language and translate it into architectural intent and delivery priorities.
+
 * Smartsheet. "[Business Goals 101: How to Set, Track, and Achieve Your Organization’s Goals with Examples](https://www.smartsheet.com/content/business-goals)" *Smartsheet*.
+
 * Kiplinger. "[Five Strategies for Maximizing Your Business' Profitability](https://www.kiplinger.com/business/strategies-for-maximizing-business-profitability)" *Kiplinger*.
+
 * Asana. "[65 strategic goals for your company (with examples).](https://asana.com/resources/strategic-goals-objectives)" *Asana*.
+
 * Ninety.io. "[Real-World Business Goal Examples for Your Company's Success.](https://www.ninety.io/blog/real-world-business-goal-examples-for-your-companys-success)" *Ninety.io Blog*.
 
 #### Books

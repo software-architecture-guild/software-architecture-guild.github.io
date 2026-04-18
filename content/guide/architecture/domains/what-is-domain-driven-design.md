@@ -168,6 +168,6 @@ Most importantly, DDD is a long-term habit of working with domain experts, refin
 
 #### Books
 
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd?utm_source=website)*. Wrox/Wiley.
   * **Chapter 1: What Is Domain-Driven Design?**\
     A clear high-level introduction to DDD, explaining the core challenges of complex domains, the split between strategic and tactical patterns, and common misconceptions.

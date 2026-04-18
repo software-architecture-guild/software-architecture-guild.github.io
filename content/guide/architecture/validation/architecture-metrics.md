@@ -188,7 +188,7 @@ When misused, metrics become vanity numbers or weapons. The difference lies in i
 
 #### Books
 
-* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://softwarearchitectureguild.substack.com/p/book-review-software-architecture-metrics)*. O’Reilly Media.  
+* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://softwarearchitectureguild.substack.com/p/book-review-software-architecture-metrics?utm_source=website)*. O’Reilly Media.
   * **Chapter 1: Four Key Metrics Unleashed**\
     Introduces four core flow metrics and shows how they act as a steering mechanism for architecture and delivery.  
   * **Chapter 2: The Fitness Function Testing Pyramid: An Analogy for Architectural Tests and Metrics**\

@@ -199,23 +199,34 @@ The Chief Architect or Chief Technology Officer (CTO) is an executive role that 
 
 #### Articles
 
-* Red Hat. (n.d.). *[What Type of IT Architect Are You?](https://www.redhat.com/architect/what-type-it-architect-are-you)*
+* Software Architecture Guild. *[How to Hire a Software Architect?](https://softwarearchitectureguild.substack.com/p/how-to-hire-a-software-architect?utm_source=website)*\
+  Explains how to evaluate architects for judgment, communication, and business impact rather than relying on superficial checklists.
+
+* Software Architecture Guild. *[How Do You Know You’re Ready to Be an Architect?](https://softwarearchitectureguild.substack.com/p/how-do-you-know-youre-ready-to-be?utm_source=website)*\
+  Frames readiness in terms of responsibility, trade-off thinking, and architectural judgment rather than title alone.
+
+* Red Hat. (n.d.). *[What Type of IT Architect Are You?](https://www.redhat.com/architect/what-type-it-architect-are-you)*\
   The article outlines IT architect roles, including application, data, integration, and infrastructure architects. It explains their key responsibilities, areas of focus, and how each role contributes to the overall IT strategy, helping professionals align their skills with organizational needs.
-* Scaled Agile, Inc. (n.d.). *[System Architect.](https://scaledagileframework.com/system-architect/)*
+
+* Scaled Agile, Inc. (n.d.). *[System Architect.](https://scaledagileframework.com/system-architect/)*\
   The Scaled Agile article *System Architect* defines the role of a System Architect within an Agile framework, focusing on their responsibilities in designing and maintaining the architecture of specific systems. It emphasizes their role in ensuring system integrity, scalability, and alignment with business requirements. The article also highlights how System Architects collaborate with teams to guide technical decisions, manage technical debt, and facilitate the integration of new features.
-* Scaled Agile, Inc. (n.d.). *[Solution Architect.](https://scaledagileframework.com/solution-architect/)*
+
+* Scaled Agile, Inc. (n.d.). *[Solution Architect.](https://scaledagileframework.com/solution-architect/)*\
   The Scaled Agile article *Solution Architect* outlines the role of a Solution Architect in Agile environments, emphasizing their responsibility for designing and implementing architecture for complex solutions that span multiple systems. It highlights their role in ensuring solution scalability, performance, and alignment with business goals while facilitating collaboration between technical teams and stakeholders to deliver integrated, effective solutions.
-* Scaled Agile, Inc. (n.d.). *[Enterprise Architect.](https://scaledagileframework.com/enterprise-architect/)*
+
+* Scaled Agile, Inc. (n.d.). *[Enterprise Architect.](https://scaledagileframework.com/enterprise-architect/)*\
   The Scaled Agile article *Enterprise Architect* describes the role of an Enterprise Architect within an Agile framework, focusing on their responsibility to align technology strategies with business objectives across the organization. It highlights their role in guiding long-term technical vision, setting architectural standards, and facilitating the integration of various solutions and systems. The article also emphasizes collaboration with other architects and leadership to ensure coherent, scalable, and strategic technology decisions.
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 19: Architecture Decisions**\
     It highlights the importance of documenting architecture decisions using Architecture Decision Records (ADRs). It emphasizes balancing trade-offs, managing constraints, and avoiding anti-patterns like decision paralysis. A structured decision-making process ensures well-informed, adaptable choices that support long-term system goals.
-* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
+
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 5: The Role of the Software Architect**\
     The chapter defines the software architect's role in designing the system’s overall structure, ensuring it aligns with business goals and meets functional and non-functional requirements. Architects engage stakeholders, create architecture descriptions, and guide development teams, balancing technical trade-offs and focusing on quality attributes like scalability and security. Success in this role requires a blend of technical expertise, strategic thinking, and effective communication.
+
 * Richter, G. (2020). *[The software architect elevator: Redefining the architect's role in the digital enterprise](https://architectelevator.com/book/)* . Addison-Wesley Professional.
   * **Part I: Architects**\
     Part I emphasizes the architect's role as a connector who navigates between technical and business levels within an organization. Architects must blend technical expertise, organizational influence, and leadership skills to effectively align IT systems with business strategies. They play multiple roles, such as planners, guides, and leaders, to drive innovation and ensure systems are designed to adapt to change.

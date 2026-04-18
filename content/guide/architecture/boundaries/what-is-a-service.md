@@ -260,6 +260,6 @@ Service granularity sits on top of that: it’s the art of choosing how big each
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 7: Service Granularity**\
     Introduces disintegrators and integrators as a structured way to reason about service size and demonstrates their use through concrete scenarios and ADR-backed decisions.

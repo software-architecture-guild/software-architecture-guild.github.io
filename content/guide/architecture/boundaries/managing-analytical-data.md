@@ -329,12 +329,18 @@ Suppose you treat analytical data as a first-class part of your architecture, al
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Importance of Data in Architecture](https://softwarearchitectureguild.substack.com/p/importance-of-data-in-architecture?utm_source=website)*\
+  Explains why operational and analytical data create different architectural forces and need different solutions.
+
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 14: Managing Analytical Data**\
     Discusses how analytics changes in a microservices world, introduces Data Mesh ideas, and defines the Data Product Quantum as a practical unit for domain-aligned analytical data.  
-* Zhamak Dehghani (2022). *[Data Mesh: Delivering Data-Driven Value at Scale](https://www.oreilly.com/library/view/data-mesh/9781492092386/)*. O'Reilly Media.  
+
+* Zhamak Dehghani (2022). *[Data Mesh: Delivering Data-Driven Value at Scale](https://www.oreilly.com/library/view/data-mesh/9781492092386/)*. O'Reilly Media.
   * **Part I: Why Data Mesh**\
     Explains the limits of centralized warehouses and lakes and motivates domain-oriented, product-based analytical data.  
   * **Part II: The Principles of Data Mesh**\

@@ -97,8 +97,13 @@ Use a glossary/data dictionary for names, units, and ranges. If a term isn’t d
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[Architecture Process: Getting Requirements from Tech Teams](https://softwarearchitectureguild.substack.com/p/architecture-process-getting-requirements-011?utm_source=website)*\
+  Explains how to gather engineering feedback and turn it into business-aligned architectural input.
+
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 16: Communicating the Requirements**\
     Practical guidance for tailoring the same truths to different audiences; using scenarios as the shared backbone; choosing the lightest effective medium (one-pagers, walkthroughs, prototypes); treating the specification as a navigable index, not a monolith; running focused, mixed-role reviews; keeping change visible through thin, proper traceability; managing baselines without freezing learning; enforcing clear style with a shared glossary and data dictionary.

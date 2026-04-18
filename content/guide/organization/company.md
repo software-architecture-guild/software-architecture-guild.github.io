@@ -271,14 +271,21 @@ Organizations can take actionable steps to build and maintain a strong culture:
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Understanding Structures of the Business](https://softwarearchitectureguild.substack.com/p/understanding-structures-of-the-business?utm_source=website)*\
+  Explains how customers, products, value streams, and functions fit together as the operating structure of a company.
+
 #### Web Resources
 
 * [Future CIO Club Blog on Organizational Planning](https://www.futurecioclub.com/blog/organizational-planning-and-execution-in-three-levels-strategic-tactical-operational)
+
 * [Harry’s Head Blog on Strategic, Tactical, Operational Levels](https://harryshead.wordpress.com/2020/05/29/strategic-tactical-operational-level/)
 
 #### Books
 
-* Kaufman, J. [The Personal MBA: Master the art of business.](https://softwarearchitectureguild.substack.com/p/book-review-do-you-really-need-an) Portfolio, 2010
+* Kaufman, J. [The Personal MBA: Master the art of business.](https://softwarearchitectureguild.substack.com/p/book-review-do-you-really-need-an?utm_source=website) Portfolio, 2010
   * *The Personal MBA* by Josh Kaufman provides a comprehensive overview of essential business concepts without needing a formal MBA. The book breaks down the business into five core areas: value creation, marketing, sales, delivery, and finance. Kaufman emphasizes the importance of understanding how these functions work together and the role of systems and mental models in improving decision-making. He encourages self-education and practical learning, arguing that real-world experience and focused reading can be more effective than traditional business schooling. Throughout the book, Kaufman provides actionable insights for entrepreneurs and business professionals looking to optimize their business strategies.
+
 * Coyle, Daniel. [The Culture Code: The Secrets of Highly Successful Groups.](https://danielcoyle.com/the-culture-code/) Bantam Books, 2018.
   * *The Culture Code* explores the key elements that create highly successful group cultures, focusing on building safety, sharing vulnerability, and establishing purpose. Daniel Coyle examines how these behaviors foster trust, collaboration, and innovation in teams across diverse industries. Through real-world examples and actionable insights, the book demonstrates how leaders can cultivate solid and cohesive cultures that drive high performance.

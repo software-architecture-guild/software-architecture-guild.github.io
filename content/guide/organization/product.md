@@ -108,6 +108,14 @@ Lean product development is not just about getting the product right—it’s ab
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Process: Searching for Value](https://softwarearchitectureguild.substack.com/p/architecture-process-searching-for?utm_source=website)*\
+  Shows how to model value across markets, users, and roles before committing to structure or solutions.
+
+* Software Architecture Guild. *[Understanding Structures of the Business](https://softwarearchitectureguild.substack.com/p/understanding-structures-of-the-business?utm_source=website)*\
+  Explains how customers, products, value streams, and functions fit together as the operating structure of a company.
+
 #### Books
 
 * Olsen, Dan. [The Lean Product Playbook: How to Innovate with Minimum Viable Products and Rapid Customer Feedback.](https://leanproductplaybook.com/) Wiley, 2015.

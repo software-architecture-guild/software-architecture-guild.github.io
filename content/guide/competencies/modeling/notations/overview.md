@@ -135,15 +135,16 @@ These tools are versatile and can be used for various diagramming needs. While t
 
 #### Articles
 
-* Brown, S. *["Choose Tooling"](https://c4model.com/tooling)*.
+* Brown, S. *["Choose Tooling"](https://c4model.com/tooling)*.\
   List of tools suitable for diagrams.
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 21: Diagramming and Presenting Architecture**\
     General Guidance on the diagramming process and overview of existing diagramming
     tools and frameworks.
-* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
+
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns?utm_source=website)*. O'Reilly Media.
   * **Chapter 5: Notation**\
     Chapter 5 of *Communication Patterns* emphasizes the importance of selecting appropriate notation to create clear, practical diagrams tailored to the audience's needs. It highlights common pitfalls, such as overusing icons, breaking conventions, and failing to include legends, which can lead to confusion and miscommunication. The chapter advises balancing simplicity and detail, maintaining consistency, and layering information to make diagrams accessible and valuable for diverse stakeholders.

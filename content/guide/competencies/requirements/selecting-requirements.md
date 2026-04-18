@@ -89,8 +89,13 @@ Replace adjectives (“fast,” “intuitive”) with measurable fit criteria ti
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[Architecture Process: What Those Business Guys Want from Us, Technical People](https://softwarearchitectureguild.substack.com/p/architecture-process-what-those-business?utm_source=website)*\
+  Explains how to interpret business language and translate it into architectural intent and delivery priorities.
+
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 7: Understanding the Real Problem**\
     Focus on defining the business situation before selecting features: describe the current work, pains, and desired advantages. Separate symptoms from causes by tracing to rules, data, handoffs, and constraints. Express the essence of the work (what/why) before implementation, define the scope with a simple context and interfaces, and make success measurable with fit criteria and owners. Distinguish policies from procedures, explore “what if” improvements only after goals are clear, and avoid traps like jumping to UI, copying the current system, or using vague adjectives.

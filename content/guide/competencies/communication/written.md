@@ -125,6 +125,6 @@ Mastering written communication requires deliberate effort, continuous practice,
 
 #### Books
 
-* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns?utm_source=website)*. O'Reilly Media.
   * **Chapter 7: Written Communication**\
     Chapter 7 highlights the importance of clear, concise, and audience-tailored written communication in technical environments. It emphasizes structuring content logically, avoiding jargon, and providing sufficient context to ensure clarity and engagement. Essential practices include adapting the tone and detail to the audience, leveraging formatting for readability, and avoiding antipatterns like unstructured writing, jargon overload, and missing context.

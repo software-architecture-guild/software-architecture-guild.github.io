@@ -212,8 +212,16 @@ When governance works, teams know the boundaries, trust the process, and can mov
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Decisions, Not Diagrams: The Real Job of a Software Architect](https://softwarearchitectureguild.substack.com/p/decisions-not-diagrams-the-real-job?utm_source=website)*\
+  Explains architecture as a discipline of constraints, seams, governance, and decision-making rather than diagram production.
+
+* Software Architecture Guild. *[Every System Has an Architecture—The Problem Is When It’s Accidental](https://softwarearchitectureguild.substack.com/p/every-system-has-an-architecturethe?utm_source=website)*\
+  Explains why unintentional architecture becomes a hidden tax on cost, safety, and delivery speed.
+
 #### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   * **Chapter 22: Management and Governance**\
     Explores how management structures, roles, and governance practices shape the success of architectural initiatives, with concrete guidance and examples.

@@ -166,11 +166,12 @@ By treating documentation as a living, view-based description tailored to real s
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 1: Introduction**\
     Introduces core concepts of architecture, stakeholders, viewpoints, and perspectives, with a strong emphasis on communication and documentation.  
   * **Chapter 2: Software Architecture Concepts**\
     Defines key architecture concepts and terminology, providing a shared vocabulary for describing and documenting complex systems.
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   * **Chapter 18: Documenting Software Architectures**\
     Provides a practical, view-based approach to architectural documentation, including templates, stakeholder needs, and common pitfalls.

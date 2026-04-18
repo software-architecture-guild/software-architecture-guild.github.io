@@ -203,7 +203,7 @@ By designing a simple documentation system, building habits that integrate docs 
 
 #### Books
 
-* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns)*. O'Reilly Media.  
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns?utm_source=website)*. O'Reilly Media.
   * **Chapter 10: Knowledge Management Principles**\
     Explores knowledge as an organizational asset, with practical guidance on avoiding hoarding, silos, and one-off documentation.  
   * **Chapter 11: Knowledge and People**\

@@ -193,15 +193,25 @@ The **Architecture Definition Process** is a comprehensive and adaptive practice
 
 #### Articles
 
-* Rozanski, Nick and Woods, Eoin. *["Stakeholders in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/stakeholders/)*.
+* Software Architecture Guild. *[Architecture Process: Who Is the Stakeholder and How to Find One](https://softwarearchitectureguild.substack.com/p/architecture-process-who-is-the-stakeholder?utm_source=website)*\
+  Explains how to identify the real stakeholders whose concerns should shape architectural decisions.
+
+* Software Architecture Guild. *[Architecture Process: How to Translate Requirements into a Technical Solution](https://softwarearchitectureguild.substack.com/p/architecture-process-how-to-translate?utm_source=website)*\
+  Shows how to turn requirements into architecture by moving from needs and constraints to technical structure.
+
+* Software Architecture Guild. *[Decisions, Not Diagrams: The Real Job of a Software Architect](https://softwarearchitectureguild.substack.com/p/decisions-not-diagrams-the-real-job?utm_source=website)*\
+  Explains architecture as a discipline of constraints, seams, governance, and decision-making rather than diagram production.
+
+* Rozanski, Nick and Woods, Eoin. *["Stakeholders in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/stakeholders/)*.\
   This article provides an in-depth exploration of identifying and managing stakeholder concerns, crucial for the success of any architectural project. It covers how to engage with stakeholders effectively and addresses their varying perspectives to ensure the architecture meets diverse requirements.
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Part II - The Process of Software Architecture**\
     It covers the **software architecture process** , focusing on how architects define, design, and maintain architecture throughout a project’s lifecycle. It highlights the importance of addressing both **problem- and solution-focused concerns** , engaging with **stakeholders** , and using **scenarios** to explore requirements and validate decisions. The use of **architectural styles, patterns** , and **models** ensures that the system structure is clearly communicated. Additionally, the process includes creating thorough **architectural descriptions** and **evaluating** the architecture to ensure it meets both functional and non-functional needs. This section emphasizes an iterative, stakeholder-driven approach to architecture.
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 19: Architecture Decisions**\
     It highlights the importance of documenting architecture decisions using Architecture Decision Records (ADRs). It emphasizes balancing trade-offs, managing constraints, and avoiding anti-patterns like decision paralysis. A structured decision-making process ensures well-informed, adaptable choices that support long-term system goals.
   * **Chapter 20 - Analyzing Architecture Risk**\

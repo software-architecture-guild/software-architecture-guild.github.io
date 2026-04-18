@@ -91,23 +91,33 @@ Re-evaluate boundaries when you see coordinated deploys across “independent”
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Distributed](https://softwarearchitectureguild.substack.com/p/architecture-styles-distributed?utm_source=website)*\
+  Explains distributed architecture as a story of separation, scaling, and the cost of coordinating independent parts.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 162 - Microservices Architecture](https://developertoarchitect.com/lessons/lesson162.html)*
+
 * Developer To Architect, *[Microservices Lessons](https://developertoarchitect.com/lessons-microservices.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 17: Microservices Architecture**\
     Frames microservices as independently deployable capability slices with owned data, and walks through platform needs, contracts, data consistency, and trade-offs.  
-* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
+
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.
   * **Chapter 6: Microservices Architecture**\
     Explains topology (edge, discovery, observability), contrasts sync vs. async integration, and warns against shared databases and distributed layers.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change)*. O’Reilly Media.  
+
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change?utm_source=website)*. O’Reilly Media.
   * **Chapter 10: Microservices Architecture — Bit by Bit**\
     Uses a concrete monitoring domain to show boundary finding, service sizing, orchestration vs. choreography, and resilience patterns in practice.  
-* Newman, S. (2021). *[Building Microservices (2nd ed.)](https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/)*. O’Reilly Media.  
+
+* Newman, S. (2021). *[Building Microservices (2nd ed.)](https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/)*. O’Reilly Media.
   * Pragmatic guidance on service boundaries, team ownership, testing strategies, contract evolution, and organizational alignment across the lifecycle.
-* Nadareishvili, I., Mitra, R., McLarty, M., & Amundsen, M. (2016). *[Microservice Architecture](https://www.oreilly.com/library/view/microservice-architecture/9781491956328/)*. O’Reilly Media.  
+
+* Nadareishvili, I., Mitra, R., McLarty, M., & Amundsen, M. (2016). *[Microservice Architecture](https://www.oreilly.com/library/view/microservice-architecture/9781491956328/)*. O’Reilly Media.
   * Organizational alignment, Conway’s Law in practice, API design and governance, and migration patterns from monoliths to microservices at scale.

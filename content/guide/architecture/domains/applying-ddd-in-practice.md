@@ -264,6 +264,7 @@ Done this way, DDD becomes a steady force nudging your systems toward clarity an
     Connects DDD patterns with event-driven integration, clarifying event types, public vs private events, and how to avoid over-coupled event meshes.  
   * **Chapter 16: Data Mesh**\
     Describes how to extend domain thinking into analytics via domain-aligned data products, ownership, and platform-supported autonomy.
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
+
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd?utm_source=website)*. Wrox/Wiley.
   * **Chapter 10: Applying the Principles, Practices, and Patterns of DDD**\
     Provides pragmatic guidance on where to use DDD, how to collaborate with domain experts, and how to integrate DDD into existing organizations and codebases.

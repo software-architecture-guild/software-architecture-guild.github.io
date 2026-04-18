@@ -88,18 +88,25 @@ Re-evaluate when you notice core churn due to business variation (move logic to 
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic?utm_source=website)*\
+  Explains monolithic architecture as a viable way to grow systems from the inside out with simpler operational trade-offs.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 160 - Microkernel Architecture](https://developertoarchitect.com/lessons/lesson160.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 12: Microkernel Architecture Style**\
     Defines core vs. plugins, contracts, and extension points, and compares monolithic vs. distributed plugin deployment models with guidance on performance and governance.  
-* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
+
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.
   * **Chapter 4: Microkernel Architecture**\
     Explains topology (kernel + plugins), standard product and enterprise use cases, and pitfalls such as bloated cores and cross-plugin coupling.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change)*. O’Reilly Media.  
+
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change?utm_source=website)*. O’Reilly Media.
   * **Chapter 8: Microkernel Architecture — Crafting Customizations**\
     Shows how to design extension points, govern discovery/activation/versioning, and craft replaceable plugins with precise error semantics and upgrade paths.

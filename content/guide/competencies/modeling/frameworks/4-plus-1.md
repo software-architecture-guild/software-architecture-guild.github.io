@@ -111,5 +111,7 @@ The 4+1 View Model of Software Architecture provides a rigorous, structured meth
 #### Articles
 
 * Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*. Detailed description of the "4+1" architecture framework.
+
 * Wikipedia. *["4+1 architectural view model"](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)*. Overview of the "4+1" architecture framework, its structure, and practical applications.
+
 * Visual Paradigm Guides. *["4 + 1 Views in Modeling System Architecture with UML"](https://guides.visual-paradigm.com/4-1-views-in-modeling-system-architecture-with-uml/)*. Overview of applying the “4+1” architectural view model through UML diagrams, covering logical, process, physical, development, and use-case perspectives.

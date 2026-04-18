@@ -231,8 +231,13 @@ By treating the architectural description as a living, stakeholder-driven artifa
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Every System Has an Architecture—The Problem Is When It’s Accidental](https://softwarearchitectureguild.substack.com/p/every-system-has-an-architecturethe?utm_source=website)*\
+  Explains why unintentional architecture becomes a hidden tax on cost, safety, and delivery speed.
+
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 13: Creating the Architectural Description**\
     Provides a structured, view-based approach to building complete, stakeholder-focused architectural descriptions, aligned with common industry standards.

@@ -99,5 +99,5 @@ C4 diagrams are hierarchical, with elements at each level of abstraction buildin
 
 #### Articles
 
-* Brown, S. *["C4 Notation"](https://c4model.com/diagrams/notation)*.
+* Brown, S. *["C4 Notation"](https://c4model.com/diagrams/notation)*.\
   Detailed description of the C4 Notation.

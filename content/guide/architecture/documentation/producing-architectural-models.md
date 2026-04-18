@@ -196,8 +196,19 @@ Architecture frameworks and modeling notations help you create those models cons
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Modeling Software Architecture: C4, Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/modeling-software-architecture-c4?utm_source=website)*\
+  Introduces practical architecture modeling with C4 plus viewpoints and perspectives.
+
+* Software Architecture Guild. *[Structure, Behavior, and Use Cases: Making Architecture Real](https://softwarearchitectureguild.substack.com/p/structure-behavior-and-use-cases?utm_source=website)*\
+  Shows how structure, runtime behavior, and use cases combine to make architecture concrete and testable.
+
+* Software Architecture Guild. *[What Software Behavior Really Means (and Why Architects Live There)](https://softwarearchitectureguild.substack.com/p/what-software-behavior-really-means?utm_source=website)*\
+  Explains why architecture must be validated through runtime behavior, scenarios, and system outcomes.
+
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with)*. Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 12: Producing Architectural Models**\
     Explains how to select, construct, and maintain architectural models that match stakeholder concerns and support analysis and decision-making.

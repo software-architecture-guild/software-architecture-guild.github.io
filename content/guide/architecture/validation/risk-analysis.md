@@ -257,6 +257,6 @@ When risk analysis becomes a regular part of architectural practice, systems are
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 20: Analyzing Architecture Risk**\
     Provides a practical framework for identifying, assessing, and mitigating architecture risks, with examples of techniques such as prototyping, incremental delivery, and technical debt management.

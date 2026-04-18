@@ -309,14 +309,21 @@ Effective modularity balances coupling and cohesion, applies the same principles
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[What “Software Structure” Actually Means (and Why It Decides Everything)](https://softwarearchitectureguild.substack.com/p/what-software-structure-actually?utm_source=website)*\
+  Explains software structure as the strategic arrangement of parts that shapes quality, changeability, and delivery.
+
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 3: Modularity**\
     Explores modularity as a driver for agility and competitive advantage through maintainability, testability, deployability, scalability, and fault tolerance.  
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts)*. O'Reilly Media.  
+
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 3: Architectural Modularity**\
     Focuses on modularity at the architecture level, showing how different structures (monoliths, modular monoliths, services) affect change scope and operational characteristics.  
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
+
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.
   * **Chapter 4: Coupling and Modularity**\
     Defines modules as knowledge boundaries, introduces function/logic/context, and connects modularity directly to coupling, complexity, and information hiding.

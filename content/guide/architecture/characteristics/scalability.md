@@ -81,6 +81,6 @@ Scalability is less about raw horsepower and more about shaping work so addition
 
 #### Books
 
-- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software)*. Addison-Wesley.
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 12: Other Quality Attributes**\
     Position scalability among related operational characteristics and clarifies its relationship to attributes like performance and availability. This framing informed the article’s emphasis on distinguishing scalability from neighboring concerns and on surfacing trade-offs that arise at higher loads.

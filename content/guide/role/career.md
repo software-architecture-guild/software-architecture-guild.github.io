@@ -102,8 +102,19 @@ Developing a career as a software architect requires **deliberate planning, cont
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[How to Become a Software Architect](https://softwarearchitectureguild.substack.com/p/how-to-become-a-software-architect?utm_source=website)*\
+  Shows how architects grow by taking broader ownership, thinking in systems, and guiding technical direction beyond implementation.
+
+* Software Architecture Guild. *[How Do You Know You’re Ready to Be an Architect?](https://softwarearchitectureguild.substack.com/p/how-do-you-know-youre-ready-to-be?utm_source=website)*\
+  Frames readiness in terms of responsibility, trade-off thinking, and architectural judgment rather than title alone.
+
+* Software Architecture Guild. *[How to Pass an Architect Interview?](https://softwarearchitectureguild.substack.com/p/how-to-pass-an-architect-interview?utm_source=website)*\
+  Explains how to present architectural judgment, leadership, and technical depth clearly in architect interviews.
+
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 24 - Developing a Career Path**\
     The chapter focuses on developing a career path as a software architect, emphasizing the importance of continuous learning, strategic skills development, and adaptability. It highlights key areas such as technical and soft skills, networking, personal branding, and maintaining work-life balance to ensure long-term career success. Architects are encouraged to embrace leadership roles, stay updated with emerging technologies, and pursue growth through deliberate planning and self-improvement.

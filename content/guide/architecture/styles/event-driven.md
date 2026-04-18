@@ -93,26 +93,38 @@ Re-evaluate when users need answers **now**, but you rely on asynchronous chains
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Distributed](https://softwarearchitectureguild.substack.com/p/architecture-styles-distributed?utm_source=website)*\
+  Explains distributed architecture as a story of separation, scaling, and the cost of coordinating independent parts.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 165 - Event-Driven Architecture](https://developertoarchitect.com/lessons/lesson165.html)*
+
 * Developer To Architect, *[Event-Driven Architecture Lessons](https://developertoarchitect.com/lessons-eda.html)*
+
 * Enterprise Integration Patterns, *[Messaging Patterns Library](https://www.enterpriseintegrationpatterns.com/patterns/messaging/toc.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 14: Event-Driven Architecture Style**\
     Defines events, producers/consumers, and channels; contrasts queues vs. topics; and outlines delivery guarantees, back-pressure, and error-handling patterns.  
-* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
+
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.
   * **Chapter 5: Event-Driven Architecture**\
     Explains notification vs. event-carried state transfer, shows typical topologies, and highlights pitfalls like over-generic events and hidden coupling.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change)*. O’Reilly Media.  
+
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change?utm_source=website)*. O’Reilly Media.
   * **Chapter 11: Event-Driven Architecture — Asynchronous Adventures**\
     Uses concrete scenarios to contrast sync vs. async, model-initiating vs. derived events, and practice idempotency, retries, and compensation design.  
-* Bellemare, A. (2020). *[Building Event-Driven Microservices](https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/)*. O’Reilly Media.  
+
+* Bellemare, A. (2020). *[Building Event-Driven Microservices](https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/)*. O’Reilly Media.
   * Practical guidance on event modeling, topic design, consumer scaling, and replay.  
-* Stopford, B. (2018). *[Designing Event-Driven Systems](https://www.confluent.io/designing-event-driven-systems/)*. Confluent.  
+
+* Stopford, B. (2018). *[Designing Event-Driven Systems](https://www.confluent.io/designing-event-driven-systems/)*. Confluent.
   * Event streaming fundamentals, log-centric thinking, and schema evolution with real-world Kafka patterns.  
-* Hohpe, G., & Woolf, B. (2003). *[Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)*. Addison-Wesley.  
+
+* Hohpe, G., & Woolf, B. (2003). *[Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)*. Addison-Wesley.
   * The classic catalog of messaging patterns (pub-sub, message channels, routing, correlation) that underpin robust event-driven designs.

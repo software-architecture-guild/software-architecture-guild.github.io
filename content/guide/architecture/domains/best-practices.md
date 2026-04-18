@@ -224,6 +224,6 @@ Done this way, DDD becomes a way to keep complexity legible, rather than another
 
 #### Books
 
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd)*. Wrox/Wiley.
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd?utm_source=website)*. Wrox/Wiley.
   * **Chapter 10: Applying the Principles, Practices, and Patterns of DDD**\
     A practical checklist of when to apply DDD, how to work with domain experts, how to keep models explicit and straightforward, and how to integrate and refactor continuously in real organizations.  
