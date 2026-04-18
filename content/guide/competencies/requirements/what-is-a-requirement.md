@@ -150,12 +150,12 @@ Requirements shape architecture, and architecture refines requirements. The rela
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley, 2012.\
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 1: Some Fundamental Truths**\
     Establishes that requirements are discovered—not invented—and must start from the real business problem. Optimizes for the owner’s value, separates *what* from *how well*, and warns that shipping software isn’t the same as solving the problem. Advocates write only when it adds clarity and traceability, treating stakeholder input as partial truths, following an orderly but adaptable process, blending discovery with iteration, and rejecting “silver bullets.” The text emphasizes measurability through fit criteria and notes that modeling and shared vocabulary reshape stakeholder thinking. Includes a clear definition of requirements across three axes—functional behavior, quality attributes, and constraints—with guidance to justify each by intrinsic need or owner value.\
   - **Volere Requirements Process (preview)**\
     Presents a deliverable-driven, tailorable process for discovering, verifying, and documenting requirements. The emphasis is on outcomes over procedures: use the outline as a map, adjust sequence and depth to risk and context, and let deliverables steer effort and fidelity.
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.\
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 16: Architecture and Requirements**\
     Explores the two-way relationship between requirements and architecture. Requirements (functional and quality attributes) shape structure and behavior; architectural decisions, in turn, clarify and constrain requirements. This text introduces quality-attribute scenarios (stimulus, environment, response, and measurable criteria) and utility trees to prioritize competing qualities. Stresses continuous alignment, explicit trade-offs (e.g., security vs. usability), and maintaining an architectural decision log that traces choices back to their driving requirements. Includes concrete alignment examples (e-commerce performance; healthcare compliance) with acknowledged trade-offs.

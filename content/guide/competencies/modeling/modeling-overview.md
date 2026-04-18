@@ -87,11 +87,12 @@ Architecture modeling, frameworks, and notations form the backbone of effective 
 #### Articles
 
 * Wikipedia contributors. "[Architecture framework.](https://en.wikipedia.org/wiki/Architecture_framework)" Wikipedia, The Free Encyclopedia.
+
 * Wikipedia contributors. "[Architecture description language.](https://en.wikipedia.org/wiki/Architecture_description_language)" Wikipedia, The Free Encyclopedia.
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 21: Diagramming and Presenting Architecture**\
     General Guidance on the diagramming process and overview of existing diagramming
     tools and frameworks.

@@ -145,13 +145,20 @@ These perspectives form a crucial part of architectural design, ensuring that es
 
 #### Articles
 
-* Rozanski, Nick and Woods, Eoin.*["Viewpoints in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.
+* Software Architecture Guild. *[Structure, Behavior, and Use Cases: Making Architecture Real](https://softwarearchitectureguild.substack.com/p/structure-behavior-and-use-cases?utm_source=website)*\
+  Shows how structure, runtime behavior, and use cases combine to make architecture concrete and testable.
+
+* Software Architecture Guild. *[Introduction to Software Architecture: Learn Core Theory](https://softwarearchitectureguild.substack.com/p/defining-software-architecture-learn?utm_source=website)*\
+  Introduces the core theory behind software architecture for readers building a solid foundation.
+
+* Rozanski, Nick and Woods, Eoin.*["Viewpoints in Software Systems Architecture."](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.\
   This article offers a comprehensive explanation of viewpoints in software architecture, defining their role in addressing stakeholder concerns and providing guidance on how to apply them effectively in structuring system architecture. It includes detailed descriptions of key viewpoints such as Functional, Information, and Deployment.
-* Rozanski, Nick and Woods, Eoin. *["Perspectives in Software Systems Architecture"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.
+
+* Rozanski, Nick and Woods, Eoin. *["Perspectives in Software Systems Architecture"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.\
   This article explores the role of perspectives in addressing cross-cutting concerns like security, performance, and scalability in software architecture. It explains how perspectives complement viewpoints by ensuring that crucial quality attributes are applied across all system architecture aspects.
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Part I - Architecture Fundamentals**\
     Part I introduces the core concepts of **software architecture** , including components, connectors, and configurations, as well as the importance of addressing **stakeholder concerns** . It explains how **viewpoints and views** are used to manage architectural complexity by providing multiple perspectives on the system. The section also covers **architectural perspectives** like security and performance, which influence various views, and defines the key responsibilities of the software architect in guiding the system's development.

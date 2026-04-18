@@ -295,7 +295,7 @@ Operational data and metrics then act as feedback: data ownership keeps boundari
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 4: Architectural Decomposition**\
     Explains why components are the primary building blocks of architecture and how to evaluate whether existing structures are decomposable.  
   * **Chapter 5: Component-Based Decomposition Patterns**\

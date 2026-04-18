@@ -243,16 +243,22 @@ Suppose you treat operational data as a first-class design concern. In that case
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Importance of Data in Architecture](https://softwarearchitectureguild.substack.com/p/importance-of-data-in-architecture?utm_source=website)*\
+  Explains why operational and analytical data create different architectural forces and need different solutions.
+
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 6: Pulling Apart Operational Data**\
     Introduces data disintegrators and integrators, then walks through a stepwise process for decomposing a monolithic operational database into data domains.  
   * **Chapter 9: Data Ownership and Distributed Transactions**\
     Explores single, common, and joint ownership, techniques for resolving shared tables, and patterns for moving from global ACID to eventual consistency.  
   * **Chapter 10: Distributed Data Access**\
     Covers interservice calls, column replication, replicated caching, and data domains as concrete patterns for reading data you don’t own.  
-* Martin Kleppmann (2017). *[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)*. O'Reilly Media.  
+
+* Martin Kleppmann (2017). *[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)*. O'Reilly Media.
   * **Part I: Foundations of Data Systems**\
     Lays out core concepts like data models, storage engines, and replication that underpin operational and analytical data design.  
   * **Part II: Distributed Data**\

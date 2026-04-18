@@ -102,9 +102,14 @@ Run short workshops mixing roles to reconcile vocab and contradictions; time-box
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[What Software Behavior Really Means (and Why Architects Live There)](https://softwarearchitectureguild.substack.com/p/what-software-behavior-really-means?utm_source=website)*\
+  Explains why architecture must be validated through runtime behavior, scenarios, and system outcomes.
+
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 5: Investigating the Work**\
     Why investigate: study the work—not the current system—to uncover policies, rules, events, outcomes, and measurable goals. How to prepare and collect evidence: pick a Business Use Case slice, plan sessions, apprentice and observe real tasks, run focused interviews and mixed-role workshops, and record atomic findings with provenance. Use scenarios, lightweight models, and the Brown Cow lens (NOW/HOW vs WHAT/WHY) to separate essence from implementation, surface quality attributes early, and avoid tool-driven bias.
   - **Chapter 6: Scenarios**\

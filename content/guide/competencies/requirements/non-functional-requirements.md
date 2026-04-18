@@ -100,7 +100,7 @@ Distributed/regulated work gets fuller specs; small co-located teams can be ligh
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 11: Non-functional Requirements**\
     Explains why qualities (usability, performance, security, operability, etc.) decide adoption, and how to scale rigor without skipping the thinking. Shows where NFRs attach (step, use-case, product), uses Volere’s eight families (10–17) as a discovery checklist, and warns against writing solutions instead of verifiable quality responsibilities. Emphasizes recording NFRs where teams work (use cases, template) and tracing each to the originating work.
   - **Chapter 12: Fit Criteria**\

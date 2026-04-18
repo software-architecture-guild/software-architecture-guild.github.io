@@ -146,6 +146,6 @@ Speaking clearly, using appropriate tone and pace, and aligning your nonverbal c
 
 #### Books
 
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns?utm_source=website)*. O'Reilly Media.
   * **Chapter 8: Verbal and Nonverbal Communication**\
     Chapter 8 emphasizes the importance of both verbal and nonverbal communication in technical and professional settings. Verbal communication focuses on clarity, tone, and adapting language to the audience, while nonverbal communication includes body language, facial expressions, and gestures to reinforce messages. Effective communication requires aligning verbal and nonverbal cues, avoiding pitfalls like monotone delivery or closed body language, and practicing empathy to build trust, engagement, and collaboration.

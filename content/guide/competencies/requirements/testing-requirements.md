@@ -91,7 +91,7 @@ Keep the checks; tune the paperwork—from lightweight peer review to staged app
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)*. 3rd ed. Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 12: Fit Criteria and Rationale**\
   Explains how to make each requirement testable with a precise fit criterion and to record the rationale so stakeholders understand why the number matters. Provides practical guidance on choosing measurement scales, deriving thresholds from “what’s unacceptable,” and attaching criteria to scenarios to eliminate ambiguity.
   - **Chapter 13: The Quality Gateway**\

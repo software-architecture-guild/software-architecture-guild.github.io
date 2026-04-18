@@ -175,22 +175,39 @@ Component size, or **granularity**, is an important factor in architecture. Smal
 
 ## Recommended Reading
 
-#### Blogs
-
-* Software Architecture Guild, *[What is Software Architecture? IMHO]({{% relref "/blog/2025/what_is_architecture" %}})*
-
 #### Articles
+
+* Software Architecture Guild. *[Software Architecture in a Nutshell](https://softwarearchitectureguild.substack.com/p/software-architecture-in-a-nutshell?utm_source=website)*\
+  Provides a compact overview of software architecture through concrete structures, decisions, and trade-offs.
+
+* Software Architecture Guild. *[Every System Has an Architecture—The Problem Is When It’s Accidental](https://softwarearchitectureguild.substack.com/p/every-system-has-an-architecturethe?utm_source=website)*\
+  Explains why unintentional architecture becomes a hidden tax on cost, safety, and delivery speed.
+
+* Software Architecture Guild. *[What “Software Structure” Actually Means (and Why It Decides Everything)](https://softwarearchitectureguild.substack.com/p/what-software-structure-actually?utm_source=website)*\
+  Explains software structure as the strategic arrangement of parts that shapes quality, changeability, and delivery.
+
+* Software Architecture Guild. *[Software vs Traditional Architecture](https://softwarearchitectureguild.substack.com/p/software-vs-traditional-architecture?utm_source=website)*\
+  Explains how software architecture differs from traditional architecture through changeability, behavior, and iteration.
+
+* Software Architecture Guild. *[Introduction to Software Architecture: Learn Core Theory](https://softwarearchitectureguild.substack.com/p/defining-software-architecture-learn?utm_source=website)*\
+  Introduces the core theory behind software architecture for readers building a solid foundation.
+
+* Software Architecture Guild. *[The Laws of Software Architecture](https://softwarearchitectureguild.substack.com/p/the-laws-of-software-architecture?utm_source=website)*\
+  A practical tour of architecture laws centered on trade-offs, technical debt, and long-term system evolution.
+
+* Software Architecture Guild. *[What Software Behavior Really Means (and Why Architects Live There)](https://softwarearchitectureguild.substack.com/p/what-software-behavior-really-means?utm_source=website)*\
+  Explains why architecture must be validated through runtime behavior, scenarios, and system outcomes.
 
 * Fowler, M. *[Software Architecture Guide](https://martinfowler.com/architecture/)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 1: Introduction**\
     The definition of software architecture and the principles of architecture are explained here
   * **Part 1: Foundations**\
     It establishes the foundational concepts of software architecture, focusing on high-level, strategic decisions that shape a system's structure. It emphasizes the importance of **modularity** and **component-based thinking**, where systems are broken down into cohesive, loosely coupled components to enhance flexibility, scalability, and maintainability. The section also highlights **architecture characteristics** (non-functional requirements) such as performance, scalability, and security, which are crucial to the system’s long-term success. The distinction between architecture and design is clarified, with architecture guiding the overall structure, while design focuses on implementation details. Ultimately, Part 1 stresses the importance of **trade-offs** in architectural decision-making, balancing technical requirements with business goals to create adaptable, future-proof systems.
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   * **Part 1: Introduction**\
-  Part One of *Software Architecture in Practice* introduces the fundamental concepts of software architecture, emphasizing its role as a blueprint for a system's structure and behavior. It highlights the importance of architecture in aligning technical decisions with business goals, addressing quality attributes, and facilitating communication among stakeholders. The section lays the groundwork for understanding architecture’s impact on system design, evolution, and success.
+   Part One of *Software Architecture in Practice* introduces the fundamental concepts of software architecture, emphasizing its role as a blueprint for a system's structure and behavior. It highlights the importance of architecture in aligning technical decisions with business goals, addressing quality attributes, and facilitating communication among stakeholders. The section lays the groundwork for understanding architecture’s impact on system design, evolution, and success.

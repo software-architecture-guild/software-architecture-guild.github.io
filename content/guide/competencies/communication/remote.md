@@ -138,6 +138,6 @@ Mastering remote communication enables organizations to harness the full potenti
 
 #### Books
 
-* Read, Jacqui. *[Communication Patterns: A Guide for Developers and Architects](https://communicationpatternsbook.com/)* . O'Reilly Media, 2024.
+* Read, Jacqui. (2024). *[Communication Patterns: A Guide for Developers and Architects](https://softwarearchitectureguild.substack.com/p/book-review-communication-patterns?utm_source=website)*. O'Reilly Media.
   * **Part IV: Communicating Remotely**\
     Part IV, *Communicating Remotely*, emphasizes strategies for effective collaboration in distributed teams. It highlights the importance of balancing synchronous and asynchronous communication, being mindful of time zones, and using appropriate tools like video conferencing and project management platforms. Key practices include establishing clear communication norms, fostering inclusivity, and maintaining regular rhythms like check-ins and updates. The section also warns against common pitfalls such as neglecting time zone differences, overloading meetings, and relying on a single communication channel, stressing the need for clarity, empathy, and adaptability in remote work settings.

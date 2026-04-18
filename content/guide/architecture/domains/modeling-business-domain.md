@@ -297,7 +297,8 @@ You start by improving knowledge flow with domain experts, shape a ubiquitous la
 * Khononov, V. (2021). *[Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)*. O’Reilly Media.
   * **Chapter 2: Discovering Domain Knowledge**\
     Explores how to work with domain experts, build a ubiquitous language, and treat modeling as a continuous learning process rather than a one-off phase.  
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd?utm_source=website)*. Wrox/Wiley.
   * **Chapter 4: Model-Driven Design**\
     Describes how to bind analysis and code through a shared model and language, and why the code model should be treated as the primary expression of the domain.  
   * **Chapter 5: Domain Model Implementation Patterns**\

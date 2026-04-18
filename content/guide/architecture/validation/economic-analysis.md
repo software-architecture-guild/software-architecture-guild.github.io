@@ -163,8 +163,13 @@ The result is not “finance-driven design” but architecture that is technical
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[How Architecture Actually Drives the Business](https://softwarearchitectureguild.substack.com/p/how-architecture-actually-drives?utm_source=website)*\
+  Shows how architecture affects cost, reliability, scalability, and ultimately business outcomes.
+
 #### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   * **Chapter 23: Economic Analysis of Architectures**\
     Introduces practical techniques for evaluating architectural options in terms of cost, benefit, risk, and timing, with examples of how to use economic thinking to guide design decisions.

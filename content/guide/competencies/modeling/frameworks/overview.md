@@ -92,16 +92,18 @@ Balancing rigor with flexibility is essential to reap the benefits of architectu
 
 #### Articles
 
-* Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.
+* Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.\
   Detailed description of the C4 architecture framework.
-* Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*.
+
+* Kruchten, P. *["Architectural Blueprints—The "4+1" View Model of Software Architecture"](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*.\
   Detailed description of the "4+1" architecture framework.
-* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.
+
+* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.\
   Detailed description of the "TOGAF" architecture framework.
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Part 3 - Viewpoint Framework**\
     Part 3 of the book outlines the Viewpoint Framework, which organizes architectural descriptions through viewpoints, enabling a structured approach to address stakeholder concerns. It emphasizes the separation of concerns by dividing the architecture into multiple interrelated views, such as Context, Functional, Information, Concurrency, Development, Deployment, and Operational viewpoints, each catering to specific aspects of the system. This framework provides a systematic way to capture reusable architectural knowledge, facilitating communication among stakeholders and managing complexity effectively. The chapter also addresses challenges like inconsistency and fragmentation, proposing careful selection and integration of views to ensure coherence. Lastly, it underscores the importance of iterative refinement and customization of views based on the architecture’s unique context and stakeholder needs
   * **Part 4 - Perspective Framework**\

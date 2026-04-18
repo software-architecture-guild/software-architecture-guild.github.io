@@ -166,7 +166,7 @@ Modeling and analysis make quality attributes actionable by tying measurable sce
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 14: Quality Attribute Modeling and Analysis**\
     This chapter informs the end-to-end flow for eliciting scenarios, selecting views, choosing techniques, and iterating analysis and refinement across performance, availability, modifiability, security, and usability.  
   - **Chapter 12: Other Quality Attributes**\

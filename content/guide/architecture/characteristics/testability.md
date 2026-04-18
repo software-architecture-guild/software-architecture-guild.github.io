@@ -68,6 +68,6 @@ Testability makes verification efficient and effective by improving observabilit
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 10: Testability**\
     Defines testability and its scenario elements, then catalogs tactics to improve it—enhancing observability and controllability, simplifying test design, automating, and isolating units. Summarizes common trade-offs and provides a checklist for evaluating designs against testability goals.

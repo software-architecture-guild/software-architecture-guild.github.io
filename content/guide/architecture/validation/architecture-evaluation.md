@@ -206,11 +206,17 @@ The payoff is simple: fewer nasty surprises, better trade-offs, and systems that
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[What Software Behavior Really Means (and Why Architects Live There)](https://softwarearchitectureguild.substack.com/p/what-software-behavior-really-means?utm_source=website)*\
+  Explains why architecture must be validated through runtime behavior, scenarios, and system outcomes.
+
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.  
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 14: Evaluating the Architecture**\
     Provides practical guidance on when and how to evaluate architecture using expert review, checklists, and scenario-based techniques across the lifecycle.  
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   * **Chapter 21: Architecture Evaluation**\
     Describes structured evaluation methods, including scenario-based approaches and quantitative analysis, with a strong focus on identifying and prioritizing architectural risks.

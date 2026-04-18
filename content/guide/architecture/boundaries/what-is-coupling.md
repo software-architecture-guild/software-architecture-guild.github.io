@@ -204,10 +204,11 @@ If you can describe coupling in your system in these terms—what is coupled, ho
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 2: Discerning Coupling in Software Architecture**\
     Uses change scenarios and architecture quanta to frame coupling as the core driver of distributed architecture decisions.
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
+
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.
   * **Chapter 1: Coupling and System Design**\
     Defines coupling around change impact and explains how boundaries and purpose shape useful dependencies.  
   * **Chapter 2: Coupling and Complexity: Cynefin**\

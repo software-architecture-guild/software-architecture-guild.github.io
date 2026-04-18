@@ -214,8 +214,13 @@ By writing focused ADRs for significant decisions, linking them to architecture 
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Decisions, Not Diagrams: The Real Job of a Software Architect](https://softwarearchitectureguild.substack.com/p/decisions-not-diagrams-the-real-job?utm_source=website)*\
+  Explains architecture as a discipline of constraints, seams, governance, and decision-making rather than diagram production.
+
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)*. O’Reilly Media.  
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)*. O’Reilly Media.
   * **Chapter 19: Architecture Decisions**\
     Presents a structured approach to making and documenting architecture decisions, introduces ADRs, and highlights common decision anti-patterns and governance practices.

@@ -283,6 +283,6 @@ If you treat sharing as an architectural decision instead of a reflex against du
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 8: Reuse Patterns**\
     Explores code replication, shared libraries, shared services, and sidecars/meshes as distinct reuse techniques, and reframes reuse around volatility and platform thinking rather than blind DRY.

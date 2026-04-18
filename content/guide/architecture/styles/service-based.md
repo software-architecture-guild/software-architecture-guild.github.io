@@ -104,14 +104,21 @@ Re-evaluate boundaries when you observe persistent cross-service changes that ne
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Distributed](https://softwarearchitectureguild.substack.com/p/architecture-styles-distributed?utm_source=website)*\
+  Explains distributed architecture as a story of separation, scaling, and the cost of coordinating independent parts.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 114 - Microservices vs Service-Based Architecture](https://developertoarchitect.com/lessons/lesson114.html)*
+
 * Developer To Architect, *[Lesson 163 - Service-Based Architecture](https://developertoarchitect.com/lessons/lesson163.html)*
+
 * Developer To Architect, *[Lesson 153 - Service-Based Architecture vs. SOA](https://developertoarchitect.com/lessons/lesson153.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 13: Service-Based Architecture Style**\
     Frames service-based as coarse-grained, business-aligned services with pragmatic data choices; contrasts it with microservices and discusses scaling, contracts, and governance.

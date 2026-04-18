@@ -161,6 +161,6 @@ Tactics and patterns translate architectural characteristics into concrete struc
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 13: Architectural Tactics and Patterns**  
     This chapter defines and describes the roles of tactics and patterns, catalogs tactics by quality attribute, outlines common architectural patterns with their attribute implications, and emphasizes the selection and combination of these tactics while managing trade-offs.

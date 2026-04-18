@@ -87,18 +87,25 @@ Plan a review when you observe sustained trends, such as rising change lead time
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic?utm_source=website)*\
+  Explains monolithic architecture as a viable way to grow systems from the inside out with simpler operational trade-offs.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 158 - Layered Architecture](https://developertoarchitect.com/lessons/lesson158.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 10: Layered Architecture Style**\
     Establishes the canonical four-layer structure, explains closed versus open layers with examples, and relates the style to modular monoliths and service-based decompositions.  
-* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.  
+
+* Richards, M. (2024). *[Software Architecture Patterns (2nd ed.)](https://www.oreilly.com/library/view/software-architecture-patterns/9781098134280/)*. O’Reilly Media.
   * **Chapter 3: Layered Architecture**\
     Breaks down responsibilities per layer, analyzes the cost of layer-skipping and pass-through code, and contrasts in-process layering with N-tier distribution.  
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
+
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change?utm_source=website)*. O’Reilly Media.
   * **Chapter 6: Layered Architecture — Separating Concerns**\
     Presents a step-by-step “Naan & Pop” scenario showing request flow, transaction boundaries, and practical checks that prevent responsibility leaks across layers.

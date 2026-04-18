@@ -100,6 +100,6 @@ Rabbits can keep FRs in well-written stories, while elephants require a complete
 
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley Professional.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 10: Functional Requirements**\
   Defines functional requirements as small, testable, technology-neutral statements of what the product must do, derived step-by-step from Product Use Case (PUC) scenarios. Emphasizes right-sizing formality, writing atomic items with clear rationale and measurable fit criteria, and using data models plus a data dictionary to surface CRUD, validations, and consistent language. Covers alternatives vs. exceptions, explicit conditional rules (e.g., decision tables), removing ambiguity, separating technological constraints from behavior, grouping for comprehension while preserving traceability, when to express behavior via scenarios/stories/process models, and how to specify deltas when buying COTS.

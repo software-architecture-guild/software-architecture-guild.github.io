@@ -102,10 +102,13 @@ The **Deployment** diagram adds a **physical** perspective to the C4 Model by sh
 
 #### Articles
 
-- Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.
+- Software Architecture Guild. *[Modeling Software Architecture: C4, Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/modeling-software-architecture-c4?utm_source=website)*\
+  Introduces practical architecture modeling with C4 plus viewpoints and perspectives.
+
+- Brown, S. *["Introduction to C4 Model"](https://c4model.com/introduction)*.\
   Detailed description of the C4 architecture framework.
 
 #### Books
 
-- Simon Brown. *["The C4 model for visualizing software architecture"](https://leanpub.com/visualising-software-architecture)*.  
+- Simon Brown. *["The C4 model for visualizing software architecture"](https://leanpub.com/visualising-software-architecture)*.\
   Guide to communicating software architecture using the C4 model—a pragmatic visual framework covering context, containers, components, and code .

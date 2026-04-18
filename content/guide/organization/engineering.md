@@ -407,12 +407,27 @@ Nexus is built on the foundation of Scrum and is designed to scale Scrum for 3 t
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Your Team Structure Is Your Architecture](https://softwarearchitectureguild.substack.com/p/your-team-structure-is-your-architecture?utm_source=website)*\
+  Explains how organization design and value-stream alignment directly shape the architecture teams can deliver.
+
+* Software Architecture Guild. *[From Streams to Teams: Draw Boundaries You Can Staff](https://softwarearchitectureguild.substack.com/p/from-streams-to-teams-draw-boundaries?utm_source=website)*\
+  Explains how team boundaries should follow flow and staffing reality instead of arbitrary org charts.
+
+* Software Architecture Guild. *[Value Streams at work: How Onboardly Scales](https://softwarearchitectureguild.substack.com/p/value-streams-at-work-how-onboardly?utm_source=website)*\
+  Shows how value streams, shared services, and clearer ownership reduce coordination costs as systems grow.
+
 #### Web Resources
 
 * [Scrum@Scale Guide](https://www.scrumatscale.com/scrum-at-scale-guide-online/)
+
 * [LeSS Framework](https://less.works/less/framework)
+
 * [Scaled Agile Framework (SAFe)](https://scaledagileframework.com/)
+
 * [Nexus Guide](https://www.scrum.org/resources/nexus-guide)
+
 * [Team Topologies](https://teamtopologies.com/)
 
 #### Books

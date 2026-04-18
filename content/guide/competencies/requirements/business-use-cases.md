@@ -97,9 +97,20 @@ When a BUC implies qualities (latency, accuracy, throughput), record measurable 
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[Structure, Behavior, and Use Cases: Making Architecture Real](https://softwarearchitectureguild.substack.com/p/structure-behavior-and-use-cases?utm_source=website)*\
+  Shows how structure, runtime behavior, and use cases combine to make architecture concrete and testable.
+
+- Software Architecture Guild. *[Architecture Process: Getting Requirements from Business](https://softwarearchitectureguild.substack.com/p/architecture-process-getting-requirements?utm_source=website)*\
+  Explains how to ask business-focused questions that uncover goals, constraints, and buildable requirements.
+
+- Software Architecture Guild. *[Architecture Process: Who Is the Stakeholder and How to Find One](https://softwarearchitectureguild.substack.com/p/architecture-process-who-is-the-stakeholder?utm_source=website)*\
+  Explains how to identify the real stakeholders whose concerns should shape architectural decisions.
+
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 3 — Scoping the Business Problem**\
     Establishes the “Project Blastoff”: defines the *work* to be improved, its boundaries, stakeholders, constraints, and measurable goals. Uses a work/context diagram to separate the work from its environment, identifies stakeholder classes (sponsor, customer, users, others), frames goals via Purpose–Advantage–Measurement, records constraints and naming conventions, estimates cost, assesses risks, and makes an objective go/no-go decision.
 

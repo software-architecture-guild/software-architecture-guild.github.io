@@ -165,9 +165,14 @@ The result is an architecture that evolves intentionally. Instead of arguing fro
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Characteristics: More Than Just SLAs](https://softwarearchitectureguild.substack.com/p/architecture-characteristics-more?utm_source=website)*\
+  Explains how architecture characteristics emerge from structure and how to shape them with metrics and deliberate design.
+
 #### Books
 
-* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://www.oreilly.com/library/view/software-architecture-metrics/9781098112226/)*. O’Reilly Media.  
+* Ciceri, Christian, Dave Farley, and Neal Ford (2022). *[Software Architecture Metrics](https://softwarearchitectureguild.substack.com/p/book-review-software-architecture-metrics?utm_source=website)*. O’Reilly Media.
   * **Chapter 7: The Role of Measurement in Software Architecture**\
     Explains why measurement is central to modern architecture and how to weave it into continuous feedback loops.  
   * **Chapter 8: Progressing from Metrics to Engineering**\

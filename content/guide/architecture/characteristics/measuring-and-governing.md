@@ -168,8 +168,13 @@ Measuring and governing architecture characteristics keeps quality goals actiona
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[Architecture Characteristics: More Than Just SLAs](https://softwarearchitectureguild.substack.com/p/architecture-characteristics-more?utm_source=website)*\
+  Explains how architecture characteristics emerge from structure and how to shape them with metrics and deliberate design.
+
 #### Books
 
-- Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (2nd ed.). O’Reilly Media, 2024.  
+- Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (2nd ed.). O’Reilly Media, 2024.
   - **Chapter 6: Measuring and Governing Architecture Characteristics**\
     This chapter focuses on defining attribute-specific metrics, implementing automated fitness functions, integrating measurements into CI/CD, and using lightweight governance (ADRs and variances) to balance enforcement with flexibility—applied exactly as outlined in the provided notes.

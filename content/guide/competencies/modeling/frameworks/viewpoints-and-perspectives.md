@@ -234,14 +234,18 @@ The framework provides a comprehensive overview of the architecture from differe
 
 #### Articles
 
-* Nick Rozanski and Eoin Woods. *["Viewpoints"](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.  
+* Software Architecture Guild. *[Modeling Software Architecture: C4, Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/modeling-software-architecture-c4?utm_source=website)*\
+  Introduces practical architecture modeling with C4 plus viewpoints and perspectives.
+
+* Nick Rozanski and Eoin Woods. *["Viewpoints"](https://www.viewpoints-and-perspectives.info/home/viewpoints/)*.\
   Catalog of seven core architectural viewpoints (Context, Functional, Information, Concurrency, Development, Deployment, and Operational), defining templates, stakeholders, concerns, and guidance for modeling system architecture.
-* Nick Rozanski and Eoin Woods. *["Perspectives"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.  
+
+* Nick Rozanski and Eoin Woods. *["Perspectives"](https://www.viewpoints-and-perspectives.info/home/perspectives/)*.\
   Discussion of architectural **perspectives** - a set of quality-driven, cross-view guidelines (e.g., Security, Usability, Performance & Scalability, Availability & Resilience, Evolution, Development Resource, Location, Regulation, Accessibility): used to enhance and validate each architectural viewpoint within system design.
 
 #### Books
 
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Part 3 - Viewpoint Framework**\
     Part 3 of the book outlines the Viewpoint Framework, which organizes architectural descriptions through viewpoints, enabling a structured approach to address stakeholder concerns. It emphasizes the separation of concerns by dividing the architecture into multiple interrelated views, such as Context, Functional, Information, Concurrency, Development, Deployment, and Operational viewpoints, each catering to specific aspects of the system. This framework provides a systematic way to capture reusable architectural knowledge, facilitating communication among stakeholders and managing complexity effectively. The chapter also addresses challenges like inconsistency and fragmentation, proposing careful selection and integration of views to ensure coherence. Lastly, it underscores the importance of iterative refinement and customization of views based on the architecture’s unique context and stakeholder needs
   * **Part 4 - Perspective Framework**\

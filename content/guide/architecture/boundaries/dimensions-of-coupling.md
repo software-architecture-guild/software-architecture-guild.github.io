@@ -177,7 +177,7 @@ You will still have coupling—otherwise you would have no system at all. The go
 
 #### Books
 
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.
   * **Chapter 5: Structured Design’s Module Coupling**\
     Revisits classic module coupling levels and generalizes them to modern software boundaries, from functions to distributed systems.  
   * **Chapter 6: Connascence**\

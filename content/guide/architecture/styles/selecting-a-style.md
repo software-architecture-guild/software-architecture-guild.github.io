@@ -117,13 +117,19 @@ Plan for evolution in your ADR: what signal triggers re-evaluation, and what fir
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic vs Distributed Architecture](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic-vs?utm_source=website)*\
+  Explains how to compare monolithic and distributed architectures through trade-offs rather than fashion.
+
 #### Web Resources
 
 * Software Architecture Guild, *[Architecture Process: How to Translate Requirements into a Technical Solution](https://softwarearchitectureguild.substack.com/p/architecture-process-how-to-translate?utm_source=website)*  
+
 * Developer To Architect, *[Choosing The Right Architecture](https://developertoarchitect.com/training/choosing-architecture.html)*
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 18: Choosing the Appropriate Architecture Style**\
     A concise, scenario-driven approach to selecting styles by quality attributes, risk, and organizational context.

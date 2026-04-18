@@ -309,6 +309,6 @@ Different relationships call for different contract styles: strict and type-heav
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 13: Contracts**\
     Explores contract strictness as a coupling lever, discusses stamp coupling and contract evolution, and shows how consumer-driven contracts and fitness functions help keep distributed systems changeable without constant breakage.

@@ -371,7 +371,7 @@ By thinking in terms of workflow state ownership, communication style, consisten
 
 #### Books
 
-* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888/)*. O'Reilly Media.  
+* Neal Ford, Mark Richards, Pramod J. Sadalage, & Zhamak Dehghani (2021). *[Software Architecture: The Hard Parts](https://softwarearchitectureguild.substack.com/p/book-review-addressing-the-hard-parts?utm_source=website)*. O'Reilly Media.
   * **Chapter 11: Managing Distributed Workflows**\
     Compares orchestration and choreography in depth, explores workflow state ownership options, and links workflow semantics to coordination choices.  
   * **Chapter 12: Transactional Sagas**\

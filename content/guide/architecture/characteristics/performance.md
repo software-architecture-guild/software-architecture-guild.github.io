@@ -77,6 +77,6 @@ Performance ensures a system can meet timing and capacity goals under expected c
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 8: Performance**\
     Defines performance and the scenario elements for specifying it, then groups tactics into reducing demand, managing resources, and reducing latency. Highlights key factors, typical trade-offs, and a checklist for evaluating designs against performance goals.

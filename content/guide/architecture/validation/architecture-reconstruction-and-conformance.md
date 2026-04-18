@@ -241,6 +241,6 @@ Together, they turn legacy and evolving systems into understandable, governable 
 
 ##### Books
 
-* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice](https://www.amazon.pl/Software-Architecture-Practice-Len-Bass/dp/0321815734)*. Addison-Wesley Professional.  
+* Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.  
   * **Chapter 20: Architecture Reconstruction and Conformance**\
     Describes a complete approach to recovering architecture from existing systems and analyzing how well implementations conform to intended designs, with practical guidance and examples.

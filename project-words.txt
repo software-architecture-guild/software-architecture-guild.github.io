@@ -101,7 +101,9 @@ OLAP
 Oleg
 OLTP
 Oozie
+Onboardly
 Opengraph
+opencode
 operationalize
 operationalized
 Pais
@@ -159,6 +161,7 @@ unloadable
 upsell
 Vercel
 Visio
+Visualising
 Vodde
 Volere
 Vonage

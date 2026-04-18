@@ -158,8 +158,22 @@ Choosing the right architecture involves balancing many factors, including syste
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Distributed](https://softwarearchitectureguild.substack.com/p/architecture-styles-distributed?utm_source=website)*\
+  Explains distributed architecture as a story of separation, scaling, and the cost of coordinating independent parts.
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic?utm_source=website)*\
+  Explains monolithic architecture as a viable way to grow systems from the inside out with simpler operational trade-offs.
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic vs Distributed Architecture](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic-vs?utm_source=website)*\
+  Explains how to compare monolithic and distributed architectures through trade-offs rather than fashion.
+
+* Software Architecture Guild. *[Software Architecture in a Nutshell](https://softwarearchitectureguild.substack.com/p/software-architecture-in-a-nutshell?utm_source=website)*\
+  Provides a compact overview of software architecture through concrete structures, decisions, and trade-offs.
+
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Part 2: Architecture Styles**\
     It focuses on various architectural styles, providing an overview of how different approaches can be used to structure software systems. It categorizes these styles into **monolithic** (e.g., layered, pipeline, and microkernel) and **distributed** (e.g., microservices, event-driven, service-oriented, and space-based) architectures. The section highlights the strengths, weaknesses, and trade-offs of each style, offering guidance on selecting the most appropriate architecture based on system requirements, scalability, complexity, and long-term maintainability. The emphasis is on making informed decisions that align with business and technical needs.

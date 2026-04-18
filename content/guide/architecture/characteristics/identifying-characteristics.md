@@ -76,6 +76,6 @@ Identifying architectural characteristics is a collaborative, context-driven act
 
 #### Books
 
-- Richards, Mark, and Neal Ford. *Fundamentals of Software Architecture* (1st ed.). O’Reilly Media, 2020.  
+- Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)*. O'Reilly Media.
   - **Chapter 5: Identifying Architectural Characteristics**\
     This chapter focuses on collaborative identification with stakeholders, context-driven emphasis by domain, and structured techniques such as quality attribute scenarios, interviews, surveys, and checklists. It also covers explicit prioritization methods (e.g., MoSCoW, weighted scoring), trade-off analysis, documentation via ADRs, and the need to revisit characteristics as systems evolve.

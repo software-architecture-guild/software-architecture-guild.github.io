@@ -283,9 +283,28 @@ Design shared versus owned capabilities deliberately, seal seams with explicit c
 
 Organize funding and work around streams—not projects—and use the flow metrics to continuously steer the customer journey toward outcomes that matter.
 
-## Recommended reading
+## Recommended Reading
 
-- Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.  
+#### Articles
+
+- Software Architecture Guild. *[Start With the Stream: Let Value Flows Draw Your Boundaries](https://softwarearchitectureguild.substack.com/p/start-with-the-stream-let-value-flows?utm_source=website)*\
+  Shows why value flows should be mapped first and then used to shape architecture and team boundaries.
+
+- Software Architecture Guild. *[Architecture Process: Identifying Value Streams](https://softwarearchitectureguild.substack.com/p/architecture-process-identifying?utm_source=website)*\
+  Explains how architects can identify value streams and use them to navigate business and engineering boundaries.
+
+- Software Architecture Guild. *[Value Streams at work: How Onboardly Scales](https://softwarearchitectureguild.substack.com/p/value-streams-at-work-how-onboardly?utm_source=website)*\
+  Shows how value streams, shared services, and clearer ownership reduce coordination costs as systems grow.
+
+- Software Architecture Guild. *[Internal Value Streams: When Shared Platforms Accelerate Architecture—and When They Don’t](https://softwarearchitectureguild.substack.com/p/internal-value-streams-when-shared?utm_source=website)*\
+  Explains when internal value streams and shared platforms help flow, and when they simply add coordination overhead.
+
+- Software Architecture Guild. *[From Streams to Teams: Draw Boundaries You Can Staff](https://softwarearchitectureguild.substack.com/p/from-streams-to-teams-draw-boundaries?utm_source=website)*\
+  Explains how team boundaries should follow flow and staffing reality instead of arbitrary org charts.
+
+#### Books
+
+- Kersten, M. (2018). [Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework](https://flowframework.org/ffc-project-to-product-book/). IT Revolution Press.
   - **Chapter 3: Introducing the Flow Framework**\
     Provides the core framing of value streams and the four flow items, shifting attention from activity management to value flow and alignment with business outcomes.
   - **Chapter 4: Capturing Flow Metrics**\
@@ -293,7 +312,7 @@ Organize funding and work around streams—not projects—and use the flow metri
   - **Chapter 9: Value Stream Management**\
     Emphasizes continuous improvement, the value stream network, and the product model to keep streams aligned with evolving business goals.
 
-- Pereira, S., & Davis, A. (2024). [Flow Engineering: From Value Stream Mapping to Effective Action](https://flowengineering.org/).  
+- Pereira, S., & Davis, A. (2024). [Flow Engineering: From Value Stream Mapping to Effective Action](https://flowengineering.org/).
   - **Chapter 5: Outcome Mapping**\
     Aligns teams on measurable outcomes and signals of success before modifying the system, thereby anchoring all subsequent maps.
   - **Chapter 6: Current State Value Stream Mapping**\

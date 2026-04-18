@@ -232,7 +232,7 @@ You won’t remove coupling, and you don’t need to. The goal is to ensure that
 
 #### Books
 
-* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.  
+* Vlad Khononov (2024). *[Balancing Coupling in Software Design](https://coupling.dev/)*. Addison-Wesley Professional.
   * **Chapter 10: Balancing Coupling**\
     Introduces the three-axis model and shows how to reason about stability, cost of change, and modularity using both binary logic and numeric scales.  
   * **Chapter 11: Rebalancing Coupling**\

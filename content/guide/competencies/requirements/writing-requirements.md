@@ -105,9 +105,14 @@ Harvest proven wording, data contracts, decision tables, and standard NFR packs;
 
 ## Recommended Reading
 
+#### Articles
+
+- Software Architecture Guild. *[Architecture Process: How to Translate Requirements into a Technical Solution](https://softwarearchitectureguild.substack.com/p/architecture-process-how-to-translate?utm_source=website)*\
+  Shows how to turn requirements into architecture by moving from needs and constraints to technical structure.
+
 #### Books
 
-- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://www.amazon.com/Mastering-Requirements-Process-Suzanne-Robertson/dp/0137969503)* (3rd ed.). Addison-Wesley Professional, 2012.
+- Robertson, Suzanne, and James Robertson. *[Mastering the Requirements Process: Getting Requirements Right](https://softwarearchitectureguild.substack.com/p/book-review-mastering-the-requirements?utm_source=website)* (3rd ed.). Addison-Wesley Professional, 2012.
   - **Chapter 8: Starting the Solution**\
     The process moves from understanding the work to allocating responsibilities to the product. Introduces Product Use Cases (PUCs), clarifies actors and guarantees, and writes atomic functional requirements with rationale and fit criteria. Attaches qualities and constraints where they matter, sketches interfaces and data contracts, prototypes to reduce risk, reuses proven assets, prioritizes by value/risk/dependency, and applies a quality gate before backlog.
   - **Chapter 9: Strategies for Today’s Business Analyst**\

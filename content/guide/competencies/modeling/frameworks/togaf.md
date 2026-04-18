@@ -156,7 +156,8 @@ TOGAF offers a comprehensive and adaptable framework for enterprise architecture
 
 #### Articles
 
-* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.
+* The Open Group. *[The Open Group Architecture Framework - Introduction](https://pubs.opengroup.org/togaf-standard/)*.\
   Detailed description of the "TOGAF" architecture framework.
-* Visual Paradigm. *[TOGAF Guide](https://guides.visual-paradigm.com/category/togaf/)*.  
+
+* Visual Paradigm. *[TOGAF Guide](https://guides.visual-paradigm.com/category/togaf/)*.\
   A collection of practical tutorials and explanations for applying the TOGAF framework using Visual Paradigm tools.

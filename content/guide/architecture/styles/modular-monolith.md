@@ -84,12 +84,17 @@ Re-evaluate boundaries or consider extraction when you observe sustained cross-m
 
 ## Recommended Reading
 
+#### Articles
+
+* Software Architecture Guild. *[Architecture Styles: Monolithic](https://softwarearchitectureguild.substack.com/p/architecture-styles-monolithic?utm_source=website)*\
+  Explains monolithic architecture as a viable way to grow systems from the inside out with simpler operational trade-offs.
+
 #### Web Resources
 
 * Developer To Architect, *[Lesson 159 - Modular Monolith Architecture](https://developertoarchitect.com/lessons/lesson159.html)*
 
 #### Books
 
-* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://www.oreilly.com/library/view/head-first-software/9781098134341/)*. O’Reilly Media.  
+* Bain, D., O’Dea, M., & Ford, N. (2024). *[Head First Software Architecture](https://softwarearchitectureguild.substack.com/p/book-review-design-around-change?utm_source=website)*. O’Reilly Media.
   * **Chapter 7: Modular Monoliths — Driven by the Domain**\
     Shows how to slice by capability, assign ownership, and design contracts/events that reflect business language. Includes boundary-enforcement patterns and a performance/maintainability/testability lens.

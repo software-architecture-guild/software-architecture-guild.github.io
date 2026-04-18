@@ -267,7 +267,8 @@ Used selectively and strategically, these patterns give you a common language wi
     Presents the rich domain model pattern and the core building blocks—value objects, entities, aggregates, and domain services—for managing complex rules.  
   * **Chapter 7: Modeling the Dimension of Time**\
     Shows how event sourcing models time explicitly by treating event streams as the source of truth and building projections from them.
-* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://www.wiley.com/Patterns%2C%2BPrinciples%2C%2Band%2BPractices%2Bof%2BDomain%2BDriven%2BDesign-p-9781118714706)*. Wrox/Wiley.
+
+* Millett, S., & Tune, N. (2015). *[Patterns, Principles, and Practices of Domain-Driven Design](https://softwarearchitectureguild.substack.com/p/patterns-principles-of-ddd?utm_source=website)*. Wrox/Wiley.
   * **Chapter 14: Introducing the Domain Modeling Building Blocks**\
     Provides an overview of entities, value objects, domain services, modules, aggregates, factories, repositories, domain events, and event sourcing as a cohesive toolkit.  
   * **Chapter 15: Value Objects**\

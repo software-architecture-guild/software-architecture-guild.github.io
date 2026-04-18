@@ -65,6 +65,6 @@ Availability ensures a system continues to provide its services despite faults o
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 5: Availability**\
     Defines availability as a system’s readiness to deliver service and uses scenario-based specifications (stimulus, source, environment, response) to express and evaluate how a system continues operating in the presence of faults.

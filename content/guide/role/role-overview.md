@@ -236,16 +236,30 @@ Agile methodologies like Scrum and Extreme Programming (XP) are becoming increas
 
 #### Articles
 
+* Software Architecture Guild. *[How to Hire a Software Architect?](https://softwarearchitectureguild.substack.com/p/how-to-hire-a-software-architect?utm_source=website)*\
+  Explains how to evaluate architects for judgment, communication, and business impact rather than relying on superficial checklists.
+
+* Software Architecture Guild. *[How to Pass an Architect Interview?](https://softwarearchitectureguild.substack.com/p/how-to-pass-an-architect-interview?utm_source=website)*\
+  Explains how to present architectural judgment, leadership, and technical depth clearly in architect interviews.
+
+* Software Architecture Guild. *[How to Become a Software Architect](https://softwarearchitectureguild.substack.com/p/how-to-become-a-software-architect?utm_source=website)*\
+  Shows how architects grow by taking broader ownership, thinking in systems, and guiding technical direction beyond implementation.
+
+* Software Architecture Guild. *[How Architecture Actually Drives the Business](https://softwarearchitectureguild.substack.com/p/how-architecture-actually-drives?utm_source=website)*\
+  Shows how architecture affects cost, reliability, scalability, and ultimately business outcomes.
+
 * Red Hat. (n.d.). *[The Agile Architect.](https://www.redhat.com/en/blog/agile-architect)*\
   The article explores the role of architects in Agile environments, emphasizing adaptability, collaboration, and continuous improvement. It discusses how architects can balance long-term vision with the flexibility to respond to changing requirements, promoting practices that support incremental development, team autonomy, and cross-functional collaboration. The article outlines IT architect roles, including application, data, integration, and infrastructure architects. It explains their key responsibilities, areas of focus, and how each role contributes to the overall IT strategy, helping professionals align their skills with organizational needs.
+
 * Scaled Agile, Inc. (n.d.). *[Agile Architecture.](https://scaledagileframework.com/agile-architecture/)*\
   The Scaled Agile article *Agile Architecture* discusses how architecture practices adapt within Agile frameworks, emphasizing flexibility, collaboration, and incremental development. It explains the role of architects in guiding the evolution of systems, aligning technical design with business goals, and enabling continuous delivery. The article highlights principles such as emergent design, intentional architecture, and fostering a culture of shared responsibility across teams.
 
 #### Books
 
-* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/)* . O'Reilly Media.
+* Richards, M., & Ford, N. (2020). *[Fundamentals of Software Architecture: An Engineering Approach](https://softwarearchitectureguild.substack.com/p/book-review-a-field-guide-to-fundamentals?utm_source=website)* . O'Reilly Media.
   * **Chapter 1: Introduction**\
     The chapter outlines the evolving role of software architects, emphasizing adaptability, strategic decision-making, and the need to balance technical skills with business understanding. It defines architecture as a dynamic combination of system structure, key characteristics, and guiding principles.
-* Rozanski, N., & Woods, E. (2011). *[Software systems architecture: Working with stakeholders using viewpoints and perspectives](https://www.viewpoints-and-perspectives.info/home/book/)* . Addison-Wesley.
+
+* Rozanski, N., & Woods, E. (2011). *[Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives](https://softwarearchitectureguild.substack.com/p/book-review-design-what-matters-with?utm_source=website)*. Addison-Wesley.
   * **Chapter 5: The Role of the Software Architect**\
     The chapter defines the software architect's role in designing the system’s overall structure, ensuring it aligns with business goals and meets functional and non-functional requirements. Architects engage stakeholders, create architecture descriptions, and guide development teams, balancing technical trade-offs and focusing on quality attributes like scalability and security. Success in this role requires a blend of technical expertise, strategic thinking, and effective communication.

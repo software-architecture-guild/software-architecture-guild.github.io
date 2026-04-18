@@ -110,6 +110,8 @@ either of these shortcodes in conjunction with this render hook.
 
 {{- /* Set common message. */}}
 {{- $msg := printf "The %q render hook was unable to resolve the destination %q in %s" $renderHookName $u.String $contentPath }}
+{{- $guidePage := or .Page.Params.slug (and .Page.File .Page.File.TranslationBaseName) .Page.Title | anchorize }}
+{{- $isSubstackLink := and $u.IsAbs (strings.Contains ($u.Host | lower) "substack.com") }}
 
 {{- /* Set attributes for anchor element. */}}
 {{- $attrs := dict "href" $u.String }}
@@ -200,6 +202,17 @@ either of these shortcodes in conjunction with this render hook.
 {{- end }}
 {{- with .Title }}
   {{- $attrs = merge $attrs (dict "title" .) }}
+{{- end -}}
+{{- if $isSubstackLink }}
+  {{- $attrs = merge $attrs (dict
+    "data-track-event" "substack_outbound_click"
+    "data-track-label" .PlainText
+    "data-track-param-destination-platform" "substack"
+    "data-track-param-destination-host" ($u.Host | lower)
+    "data-track-param-entry-point" "guide_content"
+    "data-track-param-guide-page" $guidePage
+    "data-track-param-link-title" .PlainText
+  ) }}
 {{- end -}}
 
 {{- /* Render anchor element. */ -}}

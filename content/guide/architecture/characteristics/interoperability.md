@@ -90,6 +90,6 @@ Interoperability ensures that systems communicate and cooperate effectively, ena
 
 #### Books
 
-- Bass, Len, Paul Clements, and Rick Kazman. *Software Architecture in Practice* (3rd ed.). Addison-Wesley, 2012.  
+- Bass, L., Clements, P., & Kazman, R. (2012). *[Software Architecture in Practice (3rd ed.)](https://softwarearchitectureguild.substack.com/p/book-review-from-theoretical-to-software?utm_source=website)*. Addison-Wesley.
   - **Chapter 6: Interoperability**\
     Defines interoperability and its general scenario elements. Surveys tactics (standardization, adapters/bridges, shared interfaces, transformation, service orientation, protocols, testing) and highlights trade-offs (performance, security, cost, complexity) with a design checklist for evaluation.
