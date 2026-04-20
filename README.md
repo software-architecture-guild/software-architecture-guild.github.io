@@ -1,87 +1,60 @@
-# Software Architecture Guild Web Site
+# Software Architecture Guild Website
 
-This website is dedicated to sharing our knowledge with the world. It consists of three main sections:
+This repository contains the public Software Architecture Guild website built with Hugo.
 
-* **Guide** : A practical, hands-on resource designed to empower developers, architects, and managers. Its primary goal is to serve as an educational roadmap for those eager to learn. More than just a collection of tips and tricks, this guide provides a structured approach to understanding key concepts, tools, and skills essential to software architecture. Think of it as a compass directing you toward the best resources, frameworks, and practices to support your growth.
-* **Blog** : A space for sharing thoughts, discussing new ideas, and expressing perspectives on various topics related to software architecture. Whether it’s exploring emerging technologies, debating best practices, or reflecting on industry trends, our blog serves as a platform for insightful discussions and knowledge exchange.
-* **Authors** : A section dedicated to the individuals who contribute to the creation and promotion of this website. Here, you can learn more about our contributors—their backgrounds, expertise, and passion for software architecture. These professionals help shape the content and ensure that the knowledge shared is valuable, relevant, and engaging.
+## What Is In This Repo
 
-## Table of Contents
+- `content/` contains the guide, blog posts, course pages, author pages, and other published page content.
+- `data/` contains shared structured data used by the site.
+- `images/` contains reusable site images.
+- `layouts/` contains site templates, partials, and shortcodes for the non-guide parts of the site.
+- `assets/scss/` contains non-guide styles.
+- `themes/lotusdocs/` contains the guide-specific theme implementation.
+- `public/` contains generated output and should not be edited by hand.
 
-* [Site Structure](#repository-structure)
-* [Theme Split](#theme-split)
-* [Development](#development)
-* [Contributing](#contributing)
-* [License](#license)
+## Working Here
 
-## Repository Structure
+- Edit page content in `content/`.
+- Edit shared data in `data/`.
+- Keep reusable images in `images/`.
+- Keep non-guide templates in `layouts/` and non-guide SCSS in `assets/scss/`.
+- Keep guide-only templates and assets in `themes/lotusdocs/layouts/guide/`, `themes/lotusdocs/layouts/partials/guide/`, and `themes/lotusdocs/assets/guide/`.
+- Do not hand-edit `public/`.
 
-Repository follows the basic structure of a Hugo site with the Lotus Docs theme:
+## Site Structure
+
+The repository intentionally splits the guide from the rest of the site:
+
+- Guide-specific layouts, partials, SCSS, and JavaScript stay under `themes/lotusdocs/`.
+- Landing pages, blog pages, author pages, course pages, and other non-guide site chrome stay in root `layouts/` and `assets/scss/`.
+
+Keep that split intact when making template or styling changes.
+
+## Local Development
+
+Run the local preview server:
 
 ```bash
-software-architecture-guild.github.io/
-├── content/
-│   ├── authors/
-│   ├── blog/
-│   ├── courses/
-│   ├── guide/
-│   └── ...
-├── assets/
-│   └── scss/
-├── data/
-├── images/
-├── layouts/
-├── themes/
-│   └── lotusdocs/
-├── hugo.yaml
-├── AGENTS.md
-└── README.md
+hugo server --buildDrafts
 ```
 
-* `content/authors/`: Markdown files with author profiles.
-* `content/blog/`: Markdown files with blog posts.
-* `content/courses/`: Course overview and outbound course links.
-* `content/guide/`: Guide articles and learning-path content.
-* `data/`: Structured data for the landing page and other Hugo data files.
-* `images/`: Reusable site images referenced from content and layouts.
-* `layouts/`: All non-guide templates, including landing page, blog, authors, courses, shared partials, and shortcodes.
-* `assets/scss/`: All non-guide SCSS compiled for the landing page and the rest of the custom site chrome.
-* `themes/lotusdocs/`: Theme source, now used primarily for guide-specific layouts and guide assets.
-* `hugo.yaml`: Site configuration.
-* `AGENTS.md`: Repository-specific working conventions for coding agents.
+The site is then available at `http://localhost:1313/`.
 
-## Theme Split
+Use the production-style build when you want to validate rendered output more strictly:
 
-The repository intentionally separates guide behavior from the rest of the site.
+```bash
+hugo build --gc --minify --baseURL http://localhost/
+```
 
-* Guide-only templates live in `themes/lotusdocs/layouts/guide/` and `themes/lotusdocs/layouts/partials/guide/`.
-* Guide-only assets live in `themes/lotusdocs/assets/guide/`.
-* All non-guide templates live in root `layouts/`.
-* All non-guide SCSS lives in root `assets/scss/`.
-
-When editing templates or styles:
-
-* Keep guide changes inside the theme guide paths.
-* Keep landing page, blog, authors, courses, and shared site chrome changes in root `layouts/` and `assets/scss/`.
-* Avoid inline CSS in templates; add styles to the appropriate SCSS partial instead.
-
-## Development
-
-Use Hugo locally:
+## Validation
 
 ```bash
 hugo server --buildDrafts
 hugo build --gc --minify --baseURL http://localhost/
+markdownlint-cli2 "**/*.md" "#themes"
+cspell lint .
 ```
 
-`hugo server --buildDrafts` runs the local preview at `http://localhost:1313/`.
+Run `hugo build` for layout, navigation, image, or other Hugo-behavior changes. Use markdown linting for Markdown changes and `cspell lint .` for broad content or vocabulary changes.
 
-`hugo build --gc --minify --baseURL http://localhost/` validates that the site renders successfully and matches the repository build settings.
-
-## Contributing
-
-Please review the **[CONTRIBUTING.md](CONTRIBUTING.md)**  for information on how to get started contributing to the project.
-
-## License
-
-All content in repository is licensed under [MIT license](LICENSE).
+See `CONTRIBUTING.md` for contribution flow.
