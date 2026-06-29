@@ -174,3 +174,5 @@ Wrox
 Yoder
 Zhamak
 Zubchenko
+Gregor
+Irakli
