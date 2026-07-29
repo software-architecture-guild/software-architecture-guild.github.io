@@ -1,6 +1,6 @@
 # Website Repo Index
 
-Use this file as the routing map and catalog for the Hugo website repository. 
+Use this file as the routing map and catalog for the Hugo website repository.
 
 *Note: Cross-repo thematic mappings (like the guide-index, reading-index, and substack-index) live in the workspace root `.opencode/memory/` directory.*
 
@@ -21,5 +21,6 @@ This is a static site built with Hugo.
 ## Workflows
 
 When editing content in this repository:
+
 1. Focus purely on Hugo-specific rendering, shortcodes, and site layout.
 2. If adding new conceptual links to Substack articles or materials, remember to update the cross-repo indexes at the workspace root.
