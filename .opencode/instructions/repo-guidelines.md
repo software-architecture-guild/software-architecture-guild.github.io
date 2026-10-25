@@ -1,6 +1,6 @@
 # Website Guidelines
 
-Repository: `software-architecture-guild.github.io/`
+Repository: `website/`
 
 This repository is a Hugo site for the Software Architecture Guild. Treat it as a Markdown-first knowledge site with Hugo templates and SCSS around it.
 
@@ -25,7 +25,13 @@ Keep the guide and non-guide split intact instead of duplicating the same concer
 - For tracked links, prefer `data-track-event`, `data-track-label`, and `data-track-param-*` attributes over inline JavaScript.
 - Keep `data-track-param-*` names in kebab-case.
 - Use meaningful, funnel-oriented analytics event names such as `guide_entry_click`, `courses_navigation_click`, `substack_outbound_click`, `udemy_outbound_click`, and `guide_feedback_submitted`.
-- Use workspace memory files under the workspace root `.opencode/memory/`; do not create repo-local `.opencode/memory/` files in this repository.
+- Read the repo-local `.opencode/memory/repo-index.md` for routing and maintain
+  guide book-to-topic mappings in `.opencode/memory/reading-index.md`.
+- For published article and review URLs, follow the reading index's link to
+  `social-posts/.opencode/memory/substack-index.md` (workspace-relative). Maintain
+  Substack publication metadata in that canonical catalog.
+- Use the repo-local `.opencode/memory/guide-index.md` for guide information
+  architecture. Keep repository-specific catalogs in this repository's `.opencode/memory/`.
 
 ## Validation
 
