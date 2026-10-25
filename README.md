@@ -19,7 +19,7 @@ This website is dedicated to sharing our knowledge with the world. It consists o
 Repository follows the basic structure of a Hugo site with the Lotus Docs theme:
 
 ```bash
-software-architecture-guild.github.io/
+website/
 ├── content/
 │   ├── authors/
 │   ├── blog/

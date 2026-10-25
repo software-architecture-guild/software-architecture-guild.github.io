@@ -26,8 +26,8 @@ Before contributing, you need access to the repository. Follow these steps to jo
 1. **Clone the Repository**: Once you have access, clone the repository to your local machine:
 
    ```bash
-   git clone git@github.com:software-architecture-guild/software-architecture-guild.github.io.git
-   cd software-architecture-guild.github.io
+   git clone git@github.com:software-architecture-guild/software-architecture-guild.github.io.git website
+   cd website
    ```
 
 2. **README.md**: Familiarize yourself with repository structure.
